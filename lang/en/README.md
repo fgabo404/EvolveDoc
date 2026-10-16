@@ -1,5 +1,7 @@
 # Evolve — Design and Simulation Reference
 
+[Complete diagrams for every catalog](catalog-diagrams.md)
+
 [Simple visual reference](visual-reference.md)
 
 Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).

@@ -9,3 +9,5 @@ Reservado para definir grano, madera, piedra y fibras. Todavía no existe catál
 No resource JSON exists yet, so no resource object structure or yields are asserted. A complete bilingual reference must accompany the first resource catalog.
 
 Todavía no existe JSON de recursos: no se afirma una estructura ni rendimientos. El primer catálogo debe incluir su referencia completa en ambos idiomas.
+
+[Complete catalog diagrams](DIAGRAMS.md) · [Diagramas completos del catálogo](DIAGRAMS.es.md)

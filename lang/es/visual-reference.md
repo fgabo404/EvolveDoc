@@ -1,5 +1,7 @@
 # Referencia visual
 
+[Diagramas completos de cada catálogo](catalog-diagrams.md)
+
 Diagramas sencillos para consultar el diseño. Están guardados como bloques Mermaid dentro de Markdown: en GitHub, abrir este archivo en la vista normal para verlos; `Raw` muestra el texto editable.
 
 [Documentación principal](README.md) · [Campos JSON y ejemplos](json-structures.md) · [English](../en/visual-reference.md)

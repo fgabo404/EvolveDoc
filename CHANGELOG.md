@@ -21,3 +21,11 @@
 - Added three compact Mermaid diagrams in English and Spanish: an illustrative plant/resource/technology example, existing world catalog references, and research definitions versus per-game progress.
 - Linked diagrams from the main README, language entrypoints, world/agriculture documentation and JSON reference indexes.
 - Diagrams are manual summaries; conceptual crop outputs are explicitly illustrative and no data definitions or simulation behavior changed.
+
+## 2026-10-16 — Complete per-catalog reference diagrams
+
+- Added dedicated DIAGRAMS.md / DIAGRAMS.es.md files beside every data catalog and bilingual indexes.
+- Covered all 23 technologies with exact all/any prerequisite logic, scope, research/usage parameters and eurekas.
+- Included every plant, animal, geological and crop candidate, plus every regional source occurrence in supporting tables. World diagrams include all biome variants and source counts.
+- Kept resources explicitly pending and did not invent species evolution, products or processing chains.
+- Added a reproducible diagram generator and stale-documentation checks; no JSON definitions or simulation behavior changed.

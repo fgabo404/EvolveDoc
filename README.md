@@ -31,6 +31,7 @@ EvolveDoc/
 
 | Reference | English | Español |
 | --- | --- | --- |
+| Complete catalog diagrams | [All catalogs](lang/en/catalog-diagrams.md) | [Todos los catálogos](lang/es/catalog-diagrams.md) |
 | Visual reference | [Diagrams](lang/en/visual-reference.md) | [Diagramas](lang/es/visual-reference.md) |
 | Architecture and repository layout | [Structure](lang/en/repository.md) | [Estructura](lang/es/repository.md) |
 | Stable ID and tag conventions | [Identifiers](lang/en/identifiers.md) | [Identificadores](lang/es/identifiers.md) |
