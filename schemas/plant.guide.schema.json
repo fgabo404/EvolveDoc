@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "plant_catalog_design_guide envelope",
+  "description": "Preliminary structural envelope only; not a full field-level or semantic schema.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "runtimePolicy",
+    "speciesCandidates",
+    "agriculturalCropCandidates"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "kind": {
+      "const": "plant_catalog_design_guide"
+    },
+    "runtimePolicy": {
+      "type": "object",
+      "required": [
+        "loadAsGameDefinitions"
+      ],
+      "properties": {
+        "loadAsGameDefinitions": {
+          "const": false
+        }
+      }
+    },
+    "speciesCandidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "agriculturalCropCandidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Future Evolve definition identity",
+  "description": "Proposed future identifier envelope. Existing legacy catalogs are not migrated and do not conform to this envelope. Not a complete entity schema.",
+  "type": "object",
+  "required": [
+    "id",
+    "tag"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(BIO|VAR|REG|TER|SOL|GEO|PLT|ANM|FNG|RES|DEP|DST|TEC|ITM|RCP|BLD|IMP|CAP|EUR)#[0-9]{6}$",
+      "not": {
+        "pattern": "#000000$"
+      }
+    },
+    "tag": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "0.1.0",
+  "kind": "example_game_state",
+  "status": "illustrative_fixture_not_a_save_contract",
+  "turn": 0,
+  "speciesBindings": {
+    "wheat": "Illustrative crop-group alias, not an exact botanical species.",
+    "maize": "Illustrative crop-group alias, not a resolved native spawn definition."
+  },
+  "civilizations": [
+    {
+      "id": "example_civilization_one",
+      "discoveredSpeciesIds": [
+        "wheat"
+      ],
+      "accessibleMaterialSpeciesIds": [
+        "wheat"
+      ],
+      "research": [
+        {
+          "technologyId": "initial_sowing",
+          "speciesId": null,
+          "started": true,
+          "completed": true,
+          "points": 100,
+          "pointsPerTurn": 0,
+          "status": "completed"
+        },
+        {
+          "technologyId": "seed_handling",
+          "speciesId": "wheat",
+          "started": true,
+          "completed": true,
+          "points": 100,
+          "pointsPerTurn": 0,
+          "status": "completed"
+        },
+        {
+          "technologyId": "seed_handling",
+          "speciesId": "maize",
+          "started": true,
+          "completed": true,
+          "points": 100,
+          "pointsPerTurn": 0,
+          "status": "completed"
+        },
+        {
+          "technologyId": "species_cultivation",
+          "speciesId": "wheat",
+          "started": false,
+          "completed": false,
+          "points": 0,
+          "pointsPerTurn": 40,
+          "status": "pending"
+        },
+        {
+          "technologyId": "species_cultivation",
+          "speciesId": "maize",
+          "started": false,
+          "completed": false,
+          "points": 0,
+          "pointsPerTurn": 40,
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "example_civilization_two",
+      "discoveredSpeciesIds": [
+        "maize"
+      ],
+      "accessibleMaterialSpeciesIds": [
+        "maize"
+      ],
+      "research": [
+        {
+          "technologyId": "initial_sowing",
+          "speciesId": null,
+          "started": true,
+          "completed": true,
+          "points": 100,
+          "pointsPerTurn": 0,
+          "status": "completed"
+        },
+        {
+          "technologyId": "seed_handling",
+          "speciesId": "wheat",
+          "started": true,
+          "completed": true,
+          "points": 100,
+          "pointsPerTurn": 0,
+          "status": "completed"
+        },
+        {
+          "technologyId": "seed_handling",
+          "speciesId": "maize",
+          "started": true,
+          "completed": true,
+          "points": 100,
+          "pointsPerTurn": 0,
+          "status": "completed"
+        },
+        {
+          "technologyId": "species_cultivation",
+          "speciesId": "wheat",
+          "started": false,
+          "completed": false,
+          "points": 0,
+          "pointsPerTurn": 25,
+          "status": "pending"
+        },
+        {
+          "technologyId": "species_cultivation",
+          "speciesId": "maize",
+          "started": false,
+          "completed": false,
+          "points": 0,
+          "pointsPerTurn": 25,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
