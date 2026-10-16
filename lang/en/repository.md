@@ -1,5 +1,7 @@
 # Repository structure and responsibilities
 
+Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
+
 This is a documentation repository with structured design catalogs and small educational simulations. Its root represents `evolve/`; no redundant nested `evolve` directory is needed.
 
 | Directory | Responsibility |

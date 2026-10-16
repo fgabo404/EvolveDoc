@@ -1,5 +1,7 @@
 # Evolve — Configuración de tecnologías agrícolas
 
+Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
+
 Referencia de `agriculture.technologies.json`. Versión de estructura: `2.0.0`. Versión de contenido: `0.3.0`.
 
 Estado: prototipo. Los costes, cantidades y bonificaciones son provisionales. Este archivo contiene definiciones; todavía no incluye un motor de simulación ni un esquema formal JSON Schema.

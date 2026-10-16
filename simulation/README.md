@@ -17,3 +17,5 @@ python simulation/examples/research_progress.py --output /tmp/evolve-research-st
 ```
 
 Generated `output/` and `saves/` directories are ignored by Git. Only intentional examples belong in version control.
+
+[Complete JSON structures and examples](../lang/en/json-structures.md) · [Estructuras JSON completas y ejemplos](../lang/es/json-structures.md)

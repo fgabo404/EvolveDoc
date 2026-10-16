@@ -33,6 +33,7 @@ EvolveDoc/
 | --- | --- | --- |
 | Architecture and repository layout | [Structure](lang/en/repository.md) | [Estructura](lang/es/repository.md) |
 | Stable ID and tag conventions | [Identifiers](lang/en/identifiers.md) | [Identificadores](lang/es/identifiers.md) |
+| Complete JSON field references | [All JSON structures](lang/en/json-structures.md) | [Todas las estructuras JSON](lang/es/json-structures.md) |
 | Agriculture contract | [Agriculture](lang/en/agriculture.technologies.md) | [Agricultura](lang/es/agriculture.technologies.md) |
 | World and species guide | [World guide](lang/en/world.catalog.guide.md) | [Guía del mundo](lang/es/world.catalog.guide.md) |
 | Simulation examples | [Examples](lang/en/simulation.md) | [Ejemplos](lang/es/simulation.md) |
@@ -52,6 +53,7 @@ Candidates are not scientifically finalized species. Unknown values remain `null
 Requires Python 3.10 or later, with no third-party packages.
 
 ```sh
+python tools/generate_json_reference.py --check
 python tools/validate_repository.py
 python simulation/examples/research_progress.py
 python simulation/examples/research_progress.py --output /tmp/evolve-research-state.json

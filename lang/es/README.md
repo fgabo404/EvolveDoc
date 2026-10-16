@@ -1,5 +1,7 @@
 # Evolve — Referencia de diseño y simulación
 
+Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
+
 Última actualización documentada: 2026-10-16 (America/Guatemala).
 
 Esta carpeta es la referencia compartida para diseñar, implementar y revisar el proyecto. Los Markdown sirven tanto para personas como para herramientas de desarrollo; no existe un archivo de instrucciones exclusivo para agentes.

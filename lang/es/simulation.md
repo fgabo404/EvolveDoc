@@ -1,5 +1,7 @@
 # Ejemplo de simulación de investigación
 
+Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
+
 ## Propósito
 
 Ejecutar `python simulation/examples/research_progress.py` desde la raíz. Requiere Python 3.10+, sin paquetes externos. Lee la definición real `species_cultivation` y el escenario separado `simulation/examples/research.initial-state.json`.

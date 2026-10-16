@@ -1,5 +1,7 @@
 # Research simulation example
 
+Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
+
 ## Purpose
 
 Run `python simulation/examples/research_progress.py` from the repository root. Python 3.10+ is sufficient; no external packages are required. The example reads the actual `species_cultivation` definition and a separate fixture in `simulation/examples/research.initial-state.json`.

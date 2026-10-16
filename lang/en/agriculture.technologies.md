@@ -1,5 +1,7 @@
 # Evolve — Agriculture Technology Configuration
 
+Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
+
 Technical reference for `agriculture.technologies.json`.
 
 - Configuration schema version: `2.0.0`.

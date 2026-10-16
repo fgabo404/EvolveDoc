@@ -1,5 +1,7 @@
 # Estructura y responsabilidades del repositorio
 
+Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
+
 Este repositorio reúne documentación, catálogos de diseño y simulaciones educativas pequeñas. La raíz equivale a `evolve/`; no se agrega otra carpeta `evolve` adentro.
 
 | Carpeta | Responsabilidad |

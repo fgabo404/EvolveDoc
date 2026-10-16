@@ -1,5 +1,7 @@
 # Evolve — World Catalog Design Guide
 
+Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
+
 Structured conversion of the supplied Documentacion Evolve snapshot. The original document was read for extraction and was not modified.
 
 ## Repository packaging

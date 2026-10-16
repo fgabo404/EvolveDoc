@@ -1,5 +1,7 @@
 # Evolve — Design and Simulation Reference
 
+Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
+
 Last documented update: 2026-10-16 (America/Guatemala).
 
 This folder is the shared project reference for design, implementation and review. These Markdown documents are written for people and development tools alike; there is no separate agent-specific instruction file.

@@ -1,5 +1,7 @@
 # Identificadores y tags
 
+Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
+
 Estado: nomenclatura acordada; los catálogos existentes TODAVÍA NO están migrados. Los números de ejemplo no reservan IDs.
 
 Una definición final tendrá `id: "PLT#000001"` y `tag: "triticum_aestivum"`. El prefijo contiene exactamente tres letras mayúsculas en inglés. El sufijo tiene seis dígitos desde 000001, con correlativo independiente por prefijo. `#` forma parte del ID; no es un ancla de URL.

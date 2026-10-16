@@ -1,5 +1,7 @@
 # Evolve — Guía de diseño del catálogo del mundo
 
+Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
+
 Conversión estructurada de la copia adjunta de Documentacion Evolve. El documento original se leyó para extraer su contenido y no se modificó.
 
 ## Organización en el repositorio

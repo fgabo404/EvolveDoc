@@ -8,3 +8,10 @@
 - Documented three-letter ID prefixes and a future migration plan; no existing ID has been renamed.
 - Added preliminary envelope schemas, reference checks and a small species-specific research demonstration.
 - Candidate taxonomy, ecology, yields, evolutionary relationships and numerical balance remain unresolved. This is not a completed game engine.
+
+## 2026-10-16 — Complete JSON structure references
+
+- Added English and Spanish field-by-field references for all 11 source JSON files, including nested objects, union variants, observed types, meanings and valid JSON examples.
+- Included all configured condition types and eureka event examples, as well as proposed tile/deposit field names with unresolved types clearly marked.
+- Linked references from catalog READMEs and conceptual documentation. Added a reproducible generator and stale-reference checks.
+- No game definitions, IDs, costs, schemas or simulation behavior changed. References describe observed fields; they do not infer requiredness or invent structures for unresolved null values.

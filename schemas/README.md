@@ -19,3 +19,5 @@ Full agriculture and save-state schemas, ID allocation registry, external catalo
 Los esquemas son contratos estructurales iniciales, no esquemas completos del dominio. El esquema de identificadores describe el formato futuro; no debe aplicarse todavía a los IDs actuales.
 
 El verificador propio comprueba formato JSON, unicidad, referencias del mundo, conteos, traducciones, orden/importaciones/ciclos tecnológicos y enlaces Markdown. No ejecuta validación JSON Schema, no comprueba todos los campos ni valida taxonomía, tecnologías externas o balance. Los esquemas completos de agricultura y partidas y la integración con un validador formal quedan pendientes.
+
+[Complete JSON structures and examples](../lang/en/json-structures.md) · [Estructuras JSON completas y ejemplos](../lang/es/json-structures.md)

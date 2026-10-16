@@ -1,5 +1,7 @@
 # Identifiers and tags
 
+Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
+
 Status: accepted naming direction; existing catalogs have NOT been migrated. Example numbers do not reserve IDs.
 
 A final definition has `id: "PLT#000001"` and `tag: "triticum_aestivum"`. The prefix is exactly three uppercase English letters. The suffix is six decimal digits starting at 000001, allocated independently per prefix. `#` is part of the ID; it is not a URL anchor.

@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import re
+from generate_json_reference import expected_documents
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,6 +34,10 @@ def leaves(value):
 
 
 def main():
+    for relative, expected in expected_documents().items():
+        document = ROOT / relative
+        require(document.exists() and document.read_text(encoding="utf-8") == expected,
+                f"Missing or outdated JSON documentation: {relative}. Run tools/generate_json_reference.py")
     files = list(ROOT.rglob("*.json"))
     for path in files:
         json.loads(path.read_text(encoding="utf-8"))
