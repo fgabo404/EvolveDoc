@@ -1,5 +1,7 @@
 # Referencia completa de estructuras JSON
 
+[Referencia gráfica sencilla](visual-reference.md)
+
 Cada JSON actual de `data`, `simulation` y `schemas` tiene una referencia con todos los campos internos, tipos observados, significado y ejemplos. Se genera desde los archivos actuales; estructuras internas de `null` y tipos de arreglos vacíos siguen explícitamente pendientes.
 
 - [`data/animals/animals.catalog.guide.json`](json/data--animals--animals.catalog.guide.md)

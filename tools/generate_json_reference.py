@@ -418,6 +418,7 @@ def expected_documents():
     result={}
     for lang in ['en','es']:
         index=('# Complete JSON structure reference\n\n' if lang=='en' else '# Referencia completa de estructuras JSON\n\n')
+        index+=('[Simple visual reference](visual-reference.md)\n\n' if lang=='en' else '[Referencia gráfica sencilla](visual-reference.md)\n\n')
         index+=('Every JSON source currently tracked under `data`, `simulation` and `schemas` has a reference below, with all nested fields, observed types, meaning and examples. This is generated from current files; `null` internals and empty-array element types remain explicitly unresolved.\n\n' if lang=='en' else 'Cada JSON actual de `data`, `simulation` y `schemas` tiene una referencia con todos los campos internos, tipos observados, significado y ejemplos. Se genera desde los archivos actuales; estructuras internas de `null` y tipos de arreglos vacíos siguen explícitamente pendientes.\n\n')
         for path in SOURCES:
             target=f'lang/{lang}/json/{slug(path)}.md'

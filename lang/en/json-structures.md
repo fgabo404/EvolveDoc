@@ -1,5 +1,7 @@
 # Complete JSON structure reference
 
+[Simple visual reference](visual-reference.md)
+
 Every JSON source currently tracked under `data`, `simulation` and `schemas` has a reference below, with all nested fields, observed types, meaning and examples. This is generated from current files; `null` internals and empty-array element types remain explicitly unresolved.
 
 - [`data/animals/animals.catalog.guide.json`](json/data--animals--animals.catalog.guide.md)

@@ -1,5 +1,7 @@
 # Evolve — Referencia de diseño y simulación
 
+[Referencia gráfica sencilla](visual-reference.md)
+
 Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
 
 Última actualización documentada: 2026-10-16 (America/Guatemala).

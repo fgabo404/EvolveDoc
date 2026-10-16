@@ -31,6 +31,7 @@ EvolveDoc/
 
 | Reference | English | Español |
 | --- | --- | --- |
+| Visual reference | [Diagrams](lang/en/visual-reference.md) | [Diagramas](lang/es/visual-reference.md) |
 | Architecture and repository layout | [Structure](lang/en/repository.md) | [Estructura](lang/es/repository.md) |
 | Stable ID and tag conventions | [Identifiers](lang/en/identifiers.md) | [Identificadores](lang/es/identifiers.md) |
 | Complete JSON field references | [All JSON structures](lang/en/json-structures.md) | [Todas las estructuras JSON](lang/es/json-structures.md) |

@@ -1,5 +1,7 @@
 # Evolve — Design and Simulation Reference
 
+[Simple visual reference](visual-reference.md)
+
 Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
 
 Last documented update: 2026-10-16 (America/Guatemala).

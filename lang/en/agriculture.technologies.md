@@ -1,5 +1,7 @@
 # Evolve — Agriculture Technology Configuration
 
+[Simple visual reference](visual-reference.md)
+
 Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
 
 Technical reference for `agriculture.technologies.json`.
