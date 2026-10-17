@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.2.0",
-  "contentVersion": "0.3.0",
+  "schemaVersion": "1.3.0",
+  "contentVersion": "0.4.0",
   "kind": "world_catalog_design_guide",
   "status": "source_converted_requires_species_resolution",
   "defaultLanguage": "en",
@@ -6882,7 +6882,9 @@
     "plantCandidates": "../plants/plants.catalog.guide.json",
     "animalCandidates": "../animals/animals.catalog.guide.json",
     "geologicalCandidates": "../minerals/minerals.catalog.guide.json",
-    "resources": "../resources/resources.catalog.guide.json"
+    "resources": "../resources/resources.catalog.guide.json",
+    "plantBiology": "../plants/plants.biological.catalog.json",
+    "animalBiology": "../animals/animals.biological.catalog.json"
   },
   "repositoryPackaging": {
     "layout": "flat_linked_catalogs",

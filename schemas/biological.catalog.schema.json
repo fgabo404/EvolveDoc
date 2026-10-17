@@ -1,0 +1,494 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evolve biological reference catalog",
+  "description": "Complete structural contract for biology catalog 1.0.0. References and scientific interpretation require separate validation.",
+  "type": "object",
+  "properties": {
+    "biologicalForms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidenceSourceKeys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "formKind": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^FRM#[0-9]{6}$"
+          },
+          "literatureName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "object",
+            "required": [
+              "en",
+              "es"
+            ],
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "es": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "runtimeEnabled": {
+            "type": "boolean",
+            "const": false
+          },
+          "status": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          },
+          "taxonId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidenceSourceKeys",
+          "formKind",
+          "id",
+          "literatureName",
+          "name",
+          "runtimeEnabled",
+          "status",
+          "tag",
+          "taxonId"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "contentVersion": {
+      "type": "string"
+    },
+    "defaultLanguage": {
+      "type": "string"
+    },
+    "evidenceSources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "checkedOn": {
+            "type": "string"
+          },
+          "sourceKey": {
+            "type": "string"
+          },
+          "supports": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "checkedOn",
+          "sourceKey",
+          "supports",
+          "title",
+          "url"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "excludedLineageRelations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "childFormId": {
+            "type": "string"
+          },
+          "evidenceSourceKeys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "parentFormId": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "object",
+            "properties": {
+              "en": {
+                "type": "string"
+              },
+              "es": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "en",
+              "es"
+            ],
+            "additionalProperties": false
+          },
+          "runtimeEnabled": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "childFormId",
+          "evidenceSourceKeys",
+          "parentFormId",
+          "reason",
+          "runtimeEnabled"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "kind": {
+      "type": "string"
+    },
+    "lineageRelations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "childFormIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "object",
+            "properties": {
+              "en": {
+                "type": "string"
+              },
+              "es": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "en",
+              "es"
+            ],
+            "additionalProperties": false
+          },
+          "evidenceSourceKeys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "exactAncestralPopulationResolved": {
+            "type": "boolean"
+          },
+          "parentFormIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "relationType": {
+            "type": "string"
+          },
+          "runtimeEnabled": {
+            "type": "boolean"
+          },
+          "supportLevel": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "childFormIds",
+          "description",
+          "evidenceSourceKeys",
+          "exactAncestralPopulationResolved",
+          "parentFormIds",
+          "relationType",
+          "runtimeEnabled",
+          "supportLevel"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reviewIssues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "resolution": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "resolution"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "runtimePolicy": {
+      "type": "object",
+      "properties": {
+        "floraClassification": {
+          "type": "string"
+        },
+        "identityPolicy": {
+          "type": "string"
+        },
+        "lineagePolicy": {
+          "type": "string"
+        },
+        "loadAsGameDefinitions": {
+          "type": "boolean",
+          "const": false
+        },
+        "resourceInheritance": {
+          "type": "string"
+        },
+        "sourceInterpretation": {
+          "type": "string"
+        },
+        "unknownValues": {
+          "type": "string"
+        },
+        "varietyPolicy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "floraClassification",
+        "identityPolicy",
+        "lineagePolicy",
+        "loadAsGameDefinitions",
+        "resourceInheritance",
+        "sourceInterpretation",
+        "unknownValues",
+        "varietyPolicy"
+      ],
+      "additionalProperties": false
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "biologicalFormCount": {
+          "type": "integer"
+        },
+        "cropCandidateCount": {
+          "type": "integer"
+        },
+        "excludedLineageRelationCount": {
+          "type": "integer"
+        },
+        "lineageRelationCount": {
+          "type": "integer"
+        },
+        "sourceCandidateCount": {
+          "type": "integer"
+        },
+        "taxonCount": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "biologicalFormCount",
+        "cropCandidateCount",
+        "excludedLineageRelationCount",
+        "lineageRelationCount",
+        "sourceCandidateCount",
+        "taxonCount"
+      ],
+      "additionalProperties": false
+    },
+    "supportedLanguages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "taxa": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(PLT|ANM|ALG|FNG)#[0-9]{6}$"
+          },
+          "name": {
+            "type": "object",
+            "required": [
+              "en",
+              "es"
+            ],
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "es": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "nativeRangeReviewStatus": {
+            "type": "string"
+          },
+          "organismGroup": {
+            "type": "string"
+          },
+          "reviewStatus": {
+            "type": "string"
+          },
+          "runtimeEnabled": {
+            "type": "boolean",
+            "const": false
+          },
+          "scientificName": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          },
+          "taxonRank": {
+            "type": "string",
+            "enum": [
+              "SPECIES",
+              "SUBSPECIES",
+              "VARIETY"
+            ]
+          },
+          "taxonomy": {
+            "type": "object",
+            "properties": {
+              "family": {
+                "type": "string"
+              },
+              "genus": {
+                "type": "string"
+              },
+              "kingdom": {
+                "type": "string"
+              },
+              "matchEvidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "checkedOn": {
+                      "type": "string"
+                    },
+                    "confidence": {
+                      "type": "integer"
+                    },
+                    "matchStatus": {
+                      "type": "string"
+                    },
+                    "matchType": {
+                      "type": "string"
+                    },
+                    "matchedScientificName": {
+                      "type": "string"
+                    },
+                    "queriedName": {
+                      "type": "string"
+                    },
+                    "requestUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "checkedOn",
+                    "confidence",
+                    "matchStatus",
+                    "matchType",
+                    "matchedScientificName",
+                    "queriedName",
+                    "requestUrl"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "provider": {
+                "type": "string"
+              },
+              "providerTaxonKey": {
+                "type": "string"
+              },
+              "referenceUrl": {
+                "type": "string"
+              },
+              "taxonomicStatus": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "family",
+              "genus",
+              "kingdom",
+              "matchEvidence",
+              "provider",
+              "providerTaxonKey",
+              "referenceUrl",
+              "taxonomicStatus"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "nativeRangeReviewStatus",
+          "organismGroup",
+          "reviewStatus",
+          "runtimeEnabled",
+          "scientificName",
+          "tag",
+          "taxonRank",
+          "taxonomy"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "biologicalForms",
+    "contentVersion",
+    "defaultLanguage",
+    "evidenceSources",
+    "excludedLineageRelations",
+    "kind",
+    "lineageRelations",
+    "reviewIssues",
+    "runtimePolicy",
+    "schemaVersion",
+    "status",
+    "summary",
+    "supportedLanguages",
+    "taxa"
+  ],
+  "additionalProperties": false
+}

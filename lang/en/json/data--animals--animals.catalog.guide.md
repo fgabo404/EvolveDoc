@@ -16,14 +16,15 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.1.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.2.0"` |
+| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.2.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.3.0"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Language codes available in this document. | `["en", "es"]` |
 | `runtimePolicy` | `object` | 1/1 | Rules and restrictions for interpreting this guide. | `—` |
 | `kind` | `string` | 1/1 | Discriminator identifying this document or candidate category. | `"animal_catalog_design_guide"` |
 | `speciesCandidates` | `array<object>` | 1/1 | Flat candidate records; broad groups are not yet accepted exact species. | `—` |
+| `biologicalCatalogFile` | `string` | 1/1 | Sibling biological catalog file; legacy candidate IDs remain unchanged. | `"animals.biological.catalog.json"` |
 
 ### `$.runtimePolicy`
 
@@ -51,6 +52,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `cultivationResearch` | `null` | 134/134 | Illustrative link to per-species research; null means no binding specified. | `null` |
 | `sourceLabel` | `string` | 134/134 | Exact Spanish source label for provenance, not a localized UI field. | `"Alce euroasiático"` |
 | `initialPresencePolicy` | `string` | 134/134 | Constraints to resolve before initial spawning. | `"resolve_native_region_and_habitat_before_spawning"` |
+| `taxonResolution` | `object` | 134/134 | Explicit source-to-taxon and reference-form selection; not a spawn or production rule. | `—` |
 
 ### `$.speciesCandidates[].name`
 
@@ -63,9 +65,9 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `scientificName` | `null \| string` | 134/134 | Scientific name only when provided by the source; null means unresolved and does not identify a taxon. | `"Gallus gallus"` |
+| `scientificName` | `null \| string` | 134/134 | Scientific name in the source or accepted provider record; null in a legacy source means unresolved there. | `"Gallus gallus"` |
 | `nameEvidence` | `string` | 134/134 | Evidence supporting the recorded scientific name or its absence. | `"not_supplied"` |
-| `resolutionStatus` | `string` | 134/134 | Task still required to resolve a candidate or regional restriction. | `"named_taxon_requires_verification"` |
+| `resolutionStatus` | `string` | 134/134 | Task still required to resolve a candidate or regional restriction. | `"linked_to_taxon_catalog_source_interpretation_still_requires_review"` |
 | `verified` | `boolean` | 134/134 | Whether scientific verification has been performed; current candidates are not verified. | `false` |
 
 ### `$.speciesCandidates[].ecology`
@@ -105,14 +107,24 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `yield` | `null` | 295/295 | Output yield; units, formula and amount remain unresolved. | `null` |
 | `resourceId` | `string` | 264/295 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000029"` |
 
+### `$.speciesCandidates[].taxonResolution`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `taxonIds` | `array<string>` | 134/134 | References to the selected taxon definitions; group selections are non-exhaustive. | `["ANM#000001"]` |
+| `formIds` | `array<string>` | 134/134 | Related biological reference forms; not the forms approved to spawn at this source occurrence. | `[]` |
+| `selectionMode` | `string` | 134/134 | Whether a label is interpreted specifically or split into representative species/crop taxa. | `"specific_name_interpretation"` |
+| `interpretationStatus` | `string` | 134/134 | Review state of the original label interpretation, independent of scientific name matching. | `"proposed_requires_native_range_and_habitat_review"` |
+| `inheritResourceBindings` | `boolean` | 134/134 | False: selected taxa/forms do not inherit candidate resource outputs automatically. | `false` |
+
 ## Complete example document with reduced repeated arrays
 
 Valid JSON copied from actual records. Repeated object arrays are shortened for readability; object keys and scalar lists of the retained records are preserved. This sample does not guarantee cross-reference closure because records may refer to omitted entries. Use the source JSON and sibling catalogs for loading or validation.
 
 ```json
 {
-  "schemaVersion": "1.1.0",
-  "contentVersion": "0.2.0",
+  "schemaVersion": "1.2.0",
+  "contentVersion": "0.3.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -135,7 +147,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -175,8 +187,18 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
       ],
       "cultivationResearch": null,
       "sourceLabel": "Alce euroasiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000001"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     }
-  ]
+  ],
+  "biologicalCatalogFile": "animals.biological.catalog.json"
 }
 ```

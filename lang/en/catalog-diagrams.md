@@ -14,3 +14,7 @@ Current coverage: 23 technologies, 9 external technology imports, 7 biomes, 27 r
 Diagrams show relationships; accompanying tables retain parameters and repeated occurrences. They do not invent biological evolution, domestication, outputs or processing. Field-by-field structures remain in the [JSON reference](json-structures.md).
 
 Update with `python tools/generate_catalog_diagrams.py`; verify with `--check`.
+
+- [Biology: plants](../../data/plants/BIOLOGY.md)
+
+- [Biology: animals](../../data/animals/BIOLOGY.md)

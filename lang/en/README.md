@@ -1,5 +1,7 @@
 # Evolve — Design and Simulation Reference
 
+[Plants, animals and biological forms](biology.md)
+
 [Resource catalog and relationships](resources.md)
 
 [Complete diagrams for every catalog](catalog-diagrams.md)
@@ -125,3 +127,5 @@ Agriculture schema `2.0.0` removes technology node containers. Explicit prerequi
 ## Repository examples
 
 [Simulation examples](../../simulation/README.md) demonstrate independent research by species using the real agriculture definition. They are educational fixtures, not a complete engine. The world guide is split into linked catalogs as described in [repository structure](repository.md).
+
+The biology catalog specifies names and selected relations; unreviewed distribution, habitat and ancestry remain pending. See [biology](biology.md).

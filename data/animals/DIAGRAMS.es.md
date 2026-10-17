@@ -1729,3 +1729,6 @@ Esta tabla conserva cada vínculo regional y método de extracción aunque el di
 | occurrence_0479 | animal_walia_ibex | alpine | alpine_african | None | Íbice de Walia, macizo de Simien [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza] |
 | occurrence_0480 | animal_ethiopian_wolf | alpine | alpine_african | None | Lobo etíope, tierras altas de Etiopía [terrestre · piel (lujo) · caza; no ganadería] |
 | occurrence_0481 | animal_rock_hyraxes | alpine | alpine_african | None | Damanes de roca [terrestre · carne, piel (lujo) · fauna silvestre] |
+
+
+[Biological identities and relationships / Identidades y relaciones biológicas](BIOLOGY.es.md)

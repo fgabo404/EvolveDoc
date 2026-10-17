@@ -16,8 +16,8 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.2.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.3.0"` |
+| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.3.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.4.0"` |
 | `kind` | `string` | 1/1 | Discriminator identifying this document or candidate category. | `"world_catalog_design_guide"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"source_converted_requires_species_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
@@ -207,6 +207,8 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `animalCandidates` | `string` | 1/1 | Relative path to the animal guide. | `"../animals/animals.catalog.guide.json"` |
 | `geologicalCandidates` | `string` | 1/1 | Relative path to the geological guide. | `"../minerals/minerals.catalog.guide.json"` |
 | `resources` | `string` | 1/1 | Resource records at the root, or the relative resource-catalog path inside catalogFiles. | `"../resources/resources.catalog.guide.json"` |
+| `plantBiology` | `string` | 1/1 | Relative path from the world manifest to the flora biological catalog. | `"../plants/plants.biological.catalog.json"` |
+| `animalBiology` | `string` | 1/1 | Relative path from the world manifest to the animal biological catalog. | `"../animals/animals.biological.catalog.json"` |
 
 ### `$.repositoryPackaging`
 
@@ -222,8 +224,8 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 
 ```json
 {
-  "schemaVersion": "1.2.0",
-  "contentVersion": "0.3.0",
+  "schemaVersion": "1.3.0",
+  "contentVersion": "0.4.0",
   "kind": "world_catalog_design_guide",
   "status": "source_converted_requires_species_resolution",
   "defaultLanguage": "en",
@@ -470,7 +472,9 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
     "plantCandidates": "../plants/plants.catalog.guide.json",
     "animalCandidates": "../animals/animals.catalog.guide.json",
     "geologicalCandidates": "../minerals/minerals.catalog.guide.json",
-    "resources": "../resources/resources.catalog.guide.json"
+    "resources": "../resources/resources.catalog.guide.json",
+    "plantBiology": "../plants/plants.biological.catalog.json",
+    "animalBiology": "../animals/animals.biological.catalog.json"
   },
   "repositoryPackaging": {
     "layout": "flat_linked_catalogs",

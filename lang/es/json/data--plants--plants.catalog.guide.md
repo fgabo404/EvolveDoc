@@ -16,15 +16,16 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.1.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.2.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.2.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.3.0"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Códigos de idioma disponibles. | `["en", "es"]` |
 | `runtimePolicy` | `object` | 1/1 | Reglas y restricciones para interpretar esta guía. | `—` |
 | `kind` | `string` | 1/1 | Discriminador que identifica el documento o categoría del candidato. | `"plant_catalog_design_guide"` |
 | `speciesCandidates` | `array<object>` | 1/1 | Candidatos al mismo nivel; los grupos generales todavía no son especies exactas aceptadas. | `—` |
-| `agriculturalCropCandidates` | `array<object>` | 1/1 | Grupos agrícolas pendientes de especie exacta, ancestros y producción. | `—` |
+| `agriculturalCropCandidates` | `array<object>` | 1/1 | Grupos agrícolas vinculados a taxones/formas seleccionados; ancestros y reglas productivas siguen parcialmente pendientes. | `—` |
+| `biologicalCatalogFile` | `string` | 1/1 | Archivo biológico relacionado; conserva los IDs de candidatos anteriores. | `"plants.biological.catalog.json"` |
 
 ### `$.runtimePolicy`
 
@@ -52,6 +53,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `cultivationResearch` | `object` | 129/129 | Relación ilustrativa con investigación por especie; null indica vínculo no definido. | `—` |
 | `sourceLabel` | `string` | 129/129 | Etiqueta original en español para trazabilidad, no texto localizado de interfaz. | `"Abedul enano"` |
 | `initialPresencePolicy` | `string` | 129/129 | Restricciones que deben resolverse antes de la aparición inicial. | `"resolve_native_region_and_habitat_before_spawning"` |
+| `taxonResolution` | `object` | 129/129 | Selección explícita de taxones y formas de referencia; no es regla de aparición ni producción. | `—` |
 
 ### `$.speciesCandidates[].name`
 
@@ -64,9 +66,9 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `scientificName` | `null \| string` | 129/129 | Nombre científico si aparece en la fuente; null significa pendiente y no identifica un taxón. | `"Nothofagus dombeyi"` |
+| `scientificName` | `null \| string` | 129/129 | Nombre científico de la fuente o del registro aceptado del proveedor; null en la fuente original significa pendiente allí. | `"Nothofagus dombeyi"` |
 | `nameEvidence` | `string` | 129/129 | Evidencia del nombre científico registrado o de su ausencia. | `"not_supplied"` |
-| `resolutionStatus` | `string` | 129/129 | Tarea pendiente para resolver el candidato o restricción regional. | `"named_taxon_requires_verification"` |
+| `resolutionStatus` | `string` | 129/129 | Tarea pendiente para resolver el candidato o restricción regional. | `"linked_to_taxon_catalog_source_interpretation_still_requires_review"` |
 | `verified` | `boolean` | 129/129 | Indica si existe verificación científica; los candidatos actuales no están verificados. | `false` |
 
 ### `$.speciesCandidates[].ecology`
@@ -104,6 +106,16 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `speciesId` | `string` | 129/129 | Vínculo de especie/cultivo; $speciesId se resuelve desde la investigación actual; null indica ámbito de civilización. | `"plant_dwarf_birch"` |
 | `eligibility` | `string` | 129/129 | Elegibilidad del candidato para este mecanismo y revisión necesaria. | `"Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultu…` |
 
+### `$.speciesCandidates[].taxonResolution`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `taxonIds` | `array<string>` | 129/129 | Referencias de taxones elegidos; las selecciones de grupos no son exhaustivas. | `["PLT#000025"]` |
+| `formIds` | `array<string>` | 129/129 | Formas biológicas relacionadas; no son las formas aprobadas para aparecer en esa ubicación. | `[]` |
+| `selectionMode` | `string` | 129/129 | Indica interpretación específica o selección representativa de especies/cultivos. | `"specific_name_interpretation"` |
+| `interpretationStatus` | `string` | 129/129 | Estado de interpretación de la etiqueta original, independiente del cotejo del nombre científico. | `"proposed_requires_native_range_and_habitat_review"` |
+| `inheritResourceBindings` | `boolean` | 129/129 | False: los taxones/formas no heredan automáticamente productos del candidato. | `false` |
+
 ### `$.speciesCandidates[].potentialProducts[]`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
@@ -121,13 +133,14 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `name` | `object` | 21/21 | Nombre visible mediante claves de idioma. | `—` |
 | `cropUseTag` | `string` | 21/21 | Grupo de uso agrícola del juego, no especie botánica. | `"cereal"` |
 | `sourceOriginHint` | `null \| string` | 21/21 | Indicación de origen de la fuente, no una regla verificada de distribución nativa. | `"Southwest Asia"` |
-| `scientificName` | `null` | 21/21 | Nombre científico si aparece en la fuente; null significa pendiente y no identifica un taxón. | `null` |
+| `scientificName` | `null` | 21/21 | Nombre científico de la fuente o del registro aceptado del proveedor; null en la fuente original significa pendiente allí. | `null` |
 | `resolutionStatus` | `string` | 21/21 | Tarea pendiente para resolver el candidato o restricción regional. | `"select_exact_species_and_wild_ancestor"` |
 | `wildAncestorCandidateIds` | `array<?>` | 21/21 | Posibles ancestros pendientes de revisión científica. | `[]` |
 | `cultivationResearch` | `object` | 21/21 | Relación ilustrativa con investigación por especie; null indica vínculo no definido. | `—` |
 | `products` | `array<object>` | 21/21 | Productos agrícolas pendientes de recursos y recetas. | `—` |
 | `ecologicalConstraints` | `null` | 21/21 | Reglas ambientales del cultivo pendientes de formalización. | `null` |
 | `sourceSection` | `string` | 21/21 | Sección de la fuente de la que se extrajo la entrada. | `"5. Initial agricultural and plant catalog"` |
+| `taxonResolution` | `object` | 21/21 | Selección explícita de taxones y formas de referencia; no es regla de aparición ni producción. | `—` |
 
 ### `$.agriculturalCropCandidates[].name`
 
@@ -152,14 +165,24 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `requiredTechnologyIds` | `null` | 24/24 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
 | `yield` | `null` | 24/24 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
 
+### `$.agriculturalCropCandidates[].taxonResolution`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `taxonIds` | `array<string>` | 21/21 | Referencias de taxones elegidos; las selecciones de grupos no son exhaustivas. | `["PLT#000173", "PLT#000175", "PLT#000176"]` |
+| `formIds` | `array<string>` | 21/21 | Formas biológicas relacionadas; no son las formas aprobadas para aparecer en esa ubicación. | `["FRM#000001", "FRM#000002", "FRM#000003"]` |
+| `selectionMode` | `string` | 21/21 | Indica interpretación específica o selección representativa de especies/cultivos. | `"explicit_crop_taxa_selection"` |
+| `interpretationStatus` | `string` | 21/21 | Estado de interpretación de la etiqueta original, independiente del cotejo del nombre científico. | `"crop_group_resolved_to_selected_taxa_ancestry_review_not_complete"` |
+| `inheritResourceBindings` | `boolean` | 21/21 | False: los taxones/formas no heredan automáticamente productos del candidato. | `false` |
+
 ## Ejemplo de documento completo con arreglos repetidos reducidos
 
 JSON válido copiado de registros reales. Los arreglos repetidos de objetos se reducen para lectura; se conservan claves y listas escalares de los registros elegidos. El ejemplo no garantiza referencias completas porque puede apuntar a entradas omitidas. Para cargar o validar, utilizar el JSON fuente y catálogos relacionados.
 
 ```json
 {
-  "schemaVersion": "1.1.0",
-  "contentVersion": "0.2.0",
+  "schemaVersion": "1.2.0",
+  "contentVersion": "0.3.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -182,7 +205,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -216,7 +239,16 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Abedul enano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000025"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     }
   ],
   "agriculturalCropCandidates": [
@@ -244,8 +276,26 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000173",
+          "PLT#000175",
+          "PLT#000176",
+          "PLT#000171"
+        ],
+        "formIds": [
+          "FRM#000001",
+          "FRM#000002",
+          "FRM#000003",
+          "FRM#000004"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     }
-  ]
+  ],
+  "biologicalCatalogFile": "plants.biological.catalog.json"
 }
 ```

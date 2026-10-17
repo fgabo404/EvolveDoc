@@ -5,6 +5,8 @@ import re
 from generate_json_reference import expected_documents
 from generate_catalog_diagrams import documents as expected_diagrams
 from validate_resources import validate_resources
+from validate_biology import validate_biology
+from generate_biology_reference import documents as expected_biology
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -37,7 +39,8 @@ def leaves(value):
 
 def main():
     resource_summary = validate_resources()
-    for relative, expected in {**expected_documents(), **expected_diagrams()}.items():
+    biology_summary = validate_biology()
+    for relative, expected in {**expected_documents(), **expected_diagrams(), **expected_biology()}.items():
         document = ROOT / relative
         require(document.exists() and document.read_text(encoding="utf-8") == expected,
                 f"Missing or outdated documentation: {relative}. Regenerate JSON references and catalog diagrams.")
@@ -109,7 +112,8 @@ def main():
             require((path.parent / target).exists(), f"Broken document link: {path.relative_to(ROOT)} -> {target}")
     print(f"Validated {len(files)} JSON files, {len(technologies)} flat technologies and {len(occurrences)} linked source occurrences.")
     print(f"Validated {resource_summary['resourceCount']} resources and {resource_summary['sourceBindingCount']} source/product bindings.")
-    print("External technology imports are declared, not implemented. Taxonomy, ecology, balance and full JSON Schema validation are outside this check.")
+    print(f"Validated {biology_summary['taxonCount']} taxon references, {biology_summary['biologicalFormCount']} forms and {biology_summary['lineageRelationCount']} lineage summaries.")
+    print("External technology imports are declared, not implemented. Live taxonomy verification, source interpretation, ecology, balance and full JSON Schema validation are outside this check.")
 
 
 if __name__ == "__main__":

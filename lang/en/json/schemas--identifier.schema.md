@@ -19,8 +19,8 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `$schema` | `string` | 1/1 | JSON Schema dialect URI; not a reference to game data. | `"https://json-schema.org/draft/2020-12/schema"` |
-| `title` | `string` | 1/1 | Document or schema title. | `"Future Evolve definition identity"` |
-| `description` | `string` | 1/1 | Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text. | `"Proposed future identifier envelope. Existing legacy catalogs are not migrated and do not conform to this envel…` |
+| `title` | `string` | 1/1 | Document or schema title. | `"Evolve definition identity"` |
+| `description` | `string` | 1/1 | Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text. | `"Identity envelope for allocated new definitions and future legacy migration. Not a complete entity schema."` |
 | `type` | `string` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `"object"` |
 | `required` | `array<string>` | 1/1 | Property names required by this schema; presence in an example alone does not make a field required. | `["id", "tag"]` |
 | `properties` | `object` | 1/1 | Schemas for named properties; does not forbid other fields without additionalProperties. | `—` |
@@ -37,7 +37,7 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `"string"` |
-| `pattern` | `string` | 1/1 | Regular expression constraining strings; not a global uniqueness guarantee. | `"^(BIO\|VAR\|REG\|TER\|SOL\|GEO\|PLT\|ANM\|FNG\|RES\|DEP\|DST\|TEC\|ITM\|RCP\|BLD\|IMP\|CAP\|EUR)#[0-9]{6}$"` |
+| `pattern` | `string` | 1/1 | Regular expression constraining strings; not a global uniqueness guarantee. | `"^(BIO\|VAR\|REG\|TER\|SOL\|GEO\|PLT\|ANM\|ALG\|FNG\|FRM\|RES\|DEP\|DST\|TEC\|ITM\|RCP\|BLD\|IMP\|CAP\|EUR)#[0-9]{6}$"` |
 | `not` | `object` | 1/1 | Subschema that must not validate; rejects the reserved zero ID here. | `—` |
 
 ### `$.properties.id.not`
@@ -60,8 +60,8 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Future Evolve definition identity",
-  "description": "Proposed future identifier envelope. Existing legacy catalogs are not migrated and do not conform to this envelope. Not a complete entity schema.",
+  "title": "Evolve definition identity",
+  "description": "Identity envelope for allocated new definitions and future legacy migration. Not a complete entity schema.",
   "type": "object",
   "required": [
     "id",
@@ -70,7 +70,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^(BIO|VAR|REG|TER|SOL|GEO|PLT|ANM|FNG|RES|DEP|DST|TEC|ITM|RCP|BLD|IMP|CAP|EUR)#[0-9]{6}$",
+      "pattern": "^(BIO|VAR|REG|TER|SOL|GEO|PLT|ANM|ALG|FNG|FRM|RES|DEP|DST|TEC|ITM|RCP|BLD|IMP|CAP|EUR)#[0-9]{6}$",
       "not": {
         "pattern": "#000000$"
       }

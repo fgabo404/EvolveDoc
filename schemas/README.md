@@ -4,7 +4,7 @@ These JSON Schema Draft 2020-12 files describe initial envelopes, not complete d
 
 | Schema | Target | Scope |
 | --- | --- | --- |
-| `identifier.schema.json` | Future migrated definitions only | ID prefix/number and English tag shape; existing catalogs still use legacy IDs. |
+| `identifier.schema.json` | Future migrated definitions only | ID prefix/number and English tag shape; new resources/taxa/forms use allocations; original catalogs retain legacy IDs. |
 | `world.guide.schema.json` | `data/world/world.catalog.guide.json` | Required envelope and collections. |
 | `plant.guide.schema.json` | `data/plants/plants.catalog.guide.json` | Required envelope and collections. |
 | `animal.guide.schema.json` | `data/animals/animals.catalog.guide.json` | Required envelope and collections. |
@@ -29,3 +29,9 @@ El verificador propio comprueba formato JSON, unicidad, referencias del mundo, c
 The standard-library checker does not execute a general JSON Schema engine; `tools/validate_resources.py` instead checks resource identity, cross-catalog references, inverse links, services, review boundaries and counts. Structural schema validation by an external validator remains separate; chemistry, taxonomy and balance are not verified.
 
 `resource.guide.schema.json` define la estructura completa de la guía actual de recursos, incluidos objetos internos. A diferencia de los esquemas anteriores de envoltura, cubre el detalle del catálogo. El verificador propio comprueba identidad, referencias, vínculos inversos, servicios, límites pendientes y conteos; no ejecuta un motor general JSON Schema ni verifica química, taxonomía o balance.
+
+## Biological catalog structural schema / Esquema estructural biológico
+
+`biological.catalog.schema.json` covers the complete current nested structure of both biology reference catalogs (schema 1.0.0), including taxon match evidence, forms, lineage/exclusion endpoints, bibliography and review fields. Runtime flags stay false. `tools/validate_biology.py` checks cross-file identities, reference coverage, exact stored match evidence and lineage boundaries; it does not query a live authority or prove source-label interpretation. General JSON Schema execution remains separate.
+
+El esquema cubre todos los objetos internos de ambos catálogos biológicos. El verificador comprueba identidades, referencias, cobertura, evidencia almacenada y límites de linaje; no consulta autoridades en vivo ni demuestra la interpretación de etiquetas originales. La ejecución general de JSON Schema sigue separada.

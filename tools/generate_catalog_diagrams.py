@@ -234,6 +234,13 @@ def documents():
         index=index.replace('Resources has no catalog yet.',f"Resources: {len(resource_data['resources'])} materials, {len(resource_data['sourceBindings'])} source bindings and {len(resource_data['processingLinks'])} transformation guides pending review.")
         index+=('\nActualizar con `python tools/generate_catalog_diagrams.py`; verificar con `--check`.\n' if es else '\nUpdate with `python tools/generate_catalog_diagrams.py`; verify with `--check`.\n')
         output[f'lang/{lang}/catalog-diagrams.md']=index
+    for lang in ['en','es']:
+        suffix='.es' if lang=='es' else ''
+        for folder in ['plants','animals']:
+            link=f'\n[Biological identities and relationships / Identidades y relaciones biológicas](BIOLOGY{suffix}.md)\n'
+            output[f'data/{folder}/DIAGRAMS{suffix}.md']+=link
+        for folder in ['plants','animals']:
+            output[f'lang/{lang}/catalog-diagrams.md']+=f'\n- [Biology: {folder}](../../data/{folder}/BIOLOGY{suffix}.md)\n'
     return {path: content.rstrip()+'\n' for path,content in output.items()}
 
 

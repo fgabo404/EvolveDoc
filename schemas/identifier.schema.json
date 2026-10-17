@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Future Evolve definition identity",
-  "description": "Proposed future identifier envelope. Existing legacy catalogs are not migrated and do not conform to this envelope. Not a complete entity schema.",
+  "title": "Evolve definition identity",
+  "description": "Identity envelope for allocated new definitions and future legacy migration. Not a complete entity schema.",
   "type": "object",
   "required": [
     "id",
@@ -10,7 +10,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^(BIO|VAR|REG|TER|SOL|GEO|PLT|ANM|FNG|RES|DEP|DST|TEC|ITM|RCP|BLD|IMP|CAP|EUR)#[0-9]{6}$",
+      "pattern": "^(BIO|VAR|REG|TER|SOL|GEO|PLT|ANM|ALG|FNG|FRM|RES|DEP|DST|TEC|ITM|RCP|BLD|IMP|CAP|EUR)#[0-9]{6}$",
       "not": {
         "pattern": "#000000$"
       }

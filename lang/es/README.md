@@ -1,5 +1,7 @@
 # Evolve — Referencia de diseño y simulación
 
+[Plantas, animales y formas biológicas](biology.md)
+
 [Catálogo de recursos y relaciones](resources.md)
 
 [Diagramas completos de cada catálogo](catalog-diagrams.md)
@@ -124,3 +126,5 @@ La versión estructural `2.0.0` elimina los contenedores de nodos tecnológicos.
 ## Ejemplos del repositorio
 
 Los [ejemplos de simulación](../../simulation/README.md) muestran investigación independiente por especie con la definición agrícola real. Son ejemplos educativos, no un motor completo. La guía del mundo está dividida en catálogos relacionados; consulta la [estructura](repository.md).
+
+El catálogo biológico precisa nombres y relaciones seleccionadas; distribución, hábitat y ancestros todavía no revisados siguen pendientes. Ver [biología](biology.md).

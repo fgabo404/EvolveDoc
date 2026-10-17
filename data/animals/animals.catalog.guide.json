@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.1.0",
-  "contentVersion": "0.2.0",
+  "schemaVersion": "1.2.0",
+  "contentVersion": "0.3.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -23,7 +23,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -76,7 +76,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Alce euroasiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000001"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_north_american_moose",
@@ -88,7 +97,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -141,7 +150,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Alce norteamericano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000002"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_small_antelopes",
@@ -153,7 +171,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -206,7 +224,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Antílopes pequeños regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000140",
+          "ANM#000139"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_antelopes",
@@ -218,7 +246,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -271,7 +299,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Antílopes regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000037",
+          "ANM#000156"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_australian_scrub_birds",
@@ -283,7 +321,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -328,7 +366,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Aves de matorral australiano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000009"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_birds_of_paradise",
@@ -340,7 +387,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -380,7 +427,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Aves del paraíso",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000123"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_shorebirds_and_waterbirds",
@@ -392,7 +448,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -447,7 +503,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Aves limícolas y acuáticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000008",
+          "ANM#000102"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_chacma_baboon",
@@ -459,7 +525,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -489,7 +555,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Babuino chacma en zonas compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000122"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_baboons",
@@ -501,7 +576,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -531,7 +606,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Babuinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000121"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_atlantic_cod",
@@ -543,7 +627,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -590,7 +674,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Bacalao del Atlántico, Atlántico norte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000059"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_migratory_whales",
@@ -602,7 +695,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -656,7 +749,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ballenas migratorias, según región",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000093",
+          "ANM#000011"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_american_bison",
@@ -668,7 +771,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -722,7 +825,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Bisonte americano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000012"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_muskox",
@@ -734,7 +846,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -786,7 +898,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Buey almizclero",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000112"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_african_buffalo",
@@ -798,7 +919,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -852,7 +973,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Búfalo africano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000150"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_snowy_owl",
@@ -864,7 +994,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -902,7 +1032,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Búho nival",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000021"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_przewalski_horse",
@@ -914,7 +1053,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -959,7 +1098,18 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Caballo de Przewalski, Asia central",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000055"
+        ],
+        "formIds": [
+          "FRM#000073"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_cockatoos_and_savanna_birds",
@@ -971,7 +1121,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1011,7 +1161,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cacatúas y aves de sabana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000022",
+          "ANM#000053"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_wild_bactrian_camel",
@@ -1023,7 +1183,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1075,7 +1235,18 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Camello bactriano salvaje, regiones remotas de Asia central",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000025"
+        ],
+        "formIds": [
+          "FRM#000075"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_coastal_crabs",
@@ -1087,7 +1258,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1128,7 +1299,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cangrejos costeros",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000103"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_mangrove_crabs",
@@ -1140,7 +1320,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1181,7 +1361,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cangrejos de manglar (costas tropicales)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000146"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_antilopine_kangaroo",
@@ -1193,7 +1382,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1240,7 +1429,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Canguro antilopino, norte de Australia",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000108"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_western_grey_kangaroo",
@@ -1252,7 +1450,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1299,7 +1497,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Canguro gris occidental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000090"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_red_kangaroo",
@@ -1311,7 +1518,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1358,7 +1565,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Canguro rojo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000109"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_new_guinea_tree_kangaroos",
@@ -1370,7 +1586,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1417,7 +1633,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Canguros arborícolas de Nueva Guinea",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000048"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_capybara",
@@ -1429,7 +1654,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1476,7 +1701,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Capibara, cerca de agua",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000075"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_woodland_caribou",
@@ -1488,7 +1722,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1553,7 +1787,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Caribú de bosque",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000137"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_tundra_caribou",
@@ -1565,7 +1808,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1630,7 +1873,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Caribú de tundra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000138"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_southern_cassowary",
@@ -1642,7 +1894,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1703,7 +1955,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Casuario del sur, Nueva Guinea y norte de Australia",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000036"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_plains_zebra",
@@ -1715,7 +1976,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1766,7 +2027,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Cebra de llanura",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000056"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_chimpanzee",
@@ -1778,7 +2048,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1808,7 +2078,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Chimpancé, zonas compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000116"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_chital",
@@ -1820,7 +2099,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1873,7 +2152,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ciervo axis, India y Sri Lanka",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000010"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_red_deer",
@@ -1885,7 +2173,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1938,7 +2226,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ciervo rojo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000038"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_sika_deer",
@@ -1950,7 +2247,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2003,7 +2300,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ciervo sika",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000039"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_european_rabbit",
@@ -2015,7 +2321,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2062,7 +2368,19 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Conejo europeo, área nativa ibérica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000106"
+        ],
+        "formIds": [
+          "FRM#000054",
+          "FRM#000055"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_roadrunner",
@@ -2074,7 +2392,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2119,7 +2437,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Correcaminos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000064"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_coyote",
@@ -2131,7 +2458,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2172,7 +2499,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Coyote",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000026"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_cuscuses_and_other_arboreal_marsupials",
@@ -2184,7 +2520,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2231,7 +2567,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cuscús y otros marsupiales arborícolas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000147"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_andean_condor",
@@ -2243,7 +2588,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2281,7 +2626,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Cóndor andino",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000168"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_rock_hyraxes",
@@ -2293,7 +2647,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2338,7 +2692,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Damanes de roca",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000130"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_dingo",
@@ -2350,7 +2713,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2390,7 +2753,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Dingo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000028"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_introduced_domestic_or_feral_dromedary",
@@ -2402,7 +2774,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2460,7 +2832,18 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Dromedario doméstico o asilvestrado: solo si fue introducido",
-      "initialPresencePolicy": "introduced_only_not_native_wild_spawn"
+      "initialPresencePolicy": "introduced_only_not_native_wild_spawn",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000024"
+        ],
+        "formIds": [
+          "FRM#000077"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_african_forest_elephant",
@@ -2472,7 +2855,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2517,7 +2900,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Elefante africano de bosque",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000085"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_african_savanna_elephant",
@@ -2529,7 +2921,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2574,7 +2966,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Elefante africano de sabana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000084"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_african_savanna_elephant_in_dry_forest_mosaics",
@@ -2586,7 +2987,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2631,7 +3032,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Elefante africano de sabana, mosaicos de bosque seco",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000084"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_asian_elephant",
@@ -2643,7 +3053,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2695,7 +3105,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Elefante asiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000052"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_asian_elephant_in_suitable_forests",
@@ -2707,7 +3126,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2759,7 +3178,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Elefante asiático en bosques apropiados",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000052"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_coastal_elephant_seals",
@@ -2771,7 +3199,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2818,7 +3246,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Elefantes marinos en costas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000096"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_emu",
@@ -2830,7 +3267,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2891,7 +3328,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Emú, zonas abiertas compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000051"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_short_beaked_echidna",
@@ -2903,7 +3349,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2949,7 +3395,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Equidna de hocico corto",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000151"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_seals",
@@ -2961,7 +3416,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3015,7 +3470,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Focas de especies regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000133",
+          "ANM#000081"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_coastal_seals_and_sea_lions",
@@ -3027,7 +3492,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3081,7 +3546,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Focas y lobos marinos en costas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000126",
+          "ANM#000111"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_mongolian_gazelle",
@@ -3093,7 +3568,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3146,7 +3621,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Gacela de Mongolia, Gobi",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000129"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_desert_gazelles",
@@ -3158,7 +3642,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3211,7 +3695,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Gacelas desérticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000062",
+          "ANM#000063"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_red_junglefowl",
@@ -3223,7 +3717,7 @@
       "taxonomy": {
         "scientificName": "Gallus gallus",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3275,7 +3769,18 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Gallina roja de la jungla (Gallus gallus)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000060"
+        ],
+        "formIds": [
+          "FRM#000057"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_gelada",
@@ -3287,7 +3792,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3317,7 +3822,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Gelada, altiplano etíope",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000155"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_subarctic_wolverine",
@@ -3329,7 +3843,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3369,7 +3883,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Glotón en transición subártica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000071"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_western_gorilla",
@@ -3381,7 +3904,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3411,7 +3934,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Gorila occidental, África central occidental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000070"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_macaws",
@@ -3423,7 +3955,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3463,7 +3995,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Guacamayas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000007",
+          "ANM#000006"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_guanaco_in_coastal_deserts_and_foothills",
@@ -3475,7 +4017,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3530,7 +4072,18 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Guanaco en desiertos costeros y piedemonte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000079"
+        ],
+        "formIds": [
+          "FRM#000058"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_guanaco_at_suitable_elevations",
@@ -3542,7 +4095,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3597,7 +4150,18 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Guanaco en pisos adecuados",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000079"
+        ],
+        "formIds": [
+          "FRM#000058"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_huemul",
@@ -3609,7 +4173,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3662,7 +4226,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Huemul en bosques andino-patagónicos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000074"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_wild_boar",
@@ -3674,7 +4247,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3728,7 +4301,18 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jabalí",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000148"
+        ],
+        "formIds": [
+          "FRM#000050"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_eurasian_wild_boar",
@@ -3740,7 +4324,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3794,7 +4378,18 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jabalí euroasiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000148"
+        ],
+        "formIds": [
+          "FRM#000050"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_jaguar",
@@ -3806,7 +4401,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3846,7 +4441,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jaguar",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000118"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_jerboas_and_gerbils",
@@ -3858,7 +4462,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3905,7 +4509,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jerbos y gerbillos regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000050",
+          "ANM#000095"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_giraffe",
@@ -3917,7 +4531,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3964,7 +4578,19 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jirafa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000065",
+          "ANM#000067",
+          "ANM#000068",
+          "ANM#000066"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_antarctic_krill",
@@ -3976,7 +4602,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4008,7 +4634,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Krill antártico, océano Austral",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000058"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_lemming",
@@ -4020,7 +4655,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4067,7 +4702,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lemming",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000080"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_snow_leopard",
@@ -4079,7 +4723,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4119,7 +4763,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Leopardo de las nieves",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000120"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_lion",
@@ -4131,7 +4784,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4171,7 +4824,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "León",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000117"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_arctic_hare",
@@ -4183,7 +4845,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4230,7 +4892,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Liebre ártica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000082"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_eurasian_lynx",
@@ -4242,7 +4913,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4282,7 +4953,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lince euroasiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000088"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_maned_wolf",
@@ -4294,7 +4974,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4334,7 +5014,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lobo de crin, Cerrado",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000042"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_ethiopian_wolf",
@@ -4346,7 +5035,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4386,7 +5075,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lobo etíope, tierras altas de Etiopía",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000030"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_grey_wolf",
@@ -4398,7 +5096,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4438,7 +5136,18 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lobo gris",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000027"
+        ],
+        "formIds": [
+          "FRM#000052"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_alpine_marmot",
@@ -4450,7 +5159,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4497,7 +5206,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Marmota alpina",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000092"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_steppe_marmots",
@@ -4509,7 +5227,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4556,7 +5274,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Marmotas de estepa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000091"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_mussels_and_oysters",
@@ -4568,7 +5295,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4615,7 +5342,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Mejillones y ostras, según región",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000099",
+          "ANM#000110"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_tropical_mollusks_and_bivalves",
@@ -4627,7 +5364,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4674,7 +5411,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Moluscos y bivalvos tropicales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000157",
+          "ANM#000127"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_howler_monkey",
@@ -4686,7 +5433,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4716,7 +5463,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Mono aullador",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000003"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_okapi",
@@ -4728,7 +5484,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4775,7 +5531,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Okapi, cuenca del Congo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000105"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_giant_anteater",
@@ -4787,7 +5552,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4841,7 +5606,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Oso hormiguero gigante",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000098"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_american_black_bear",
@@ -4853,7 +5627,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4908,7 +5682,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Oso negro americano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000158"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_asian_black_bear",
@@ -4920,7 +5703,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4974,7 +5757,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Oso negro asiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000161"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_brown_bear",
@@ -4986,7 +5778,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5041,7 +5833,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Oso pardo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000159"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_coastal_and_sea_ice_polar_bear",
@@ -5053,7 +5854,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5107,7 +5908,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Oso polar solo en costas y hielo marino",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000160"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_estuarine_oysters_and_other_bivalves",
@@ -5119,7 +5929,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5166,7 +5976,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ostras y otros bivalvos de estuario",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000044"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_ocellated_turkey",
@@ -5178,7 +5997,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5230,7 +6049,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Pavo ocelado, Yucatán y zonas vecinas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000094"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_indian_peafowl",
@@ -5242,7 +6070,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5294,7 +6122,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Pavo real azul, subcontinente indio",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000124"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_collared_peccary",
@@ -5306,7 +6143,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5360,7 +6197,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pecarí de collar",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000125"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_reef_fish",
@@ -5372,7 +6218,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5419,7 +6265,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Peces arrecifales, especies regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000086",
+          "ANM#000083"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_juvenile_estuarine_fish",
@@ -5431,7 +6287,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5478,7 +6334,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Peces juveniles de estuario",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000097"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_polar_fish",
@@ -5490,7 +6355,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5537,7 +6402,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Peces polares regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000013",
+          "ANM#000128"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_perentie",
@@ -5549,7 +6424,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5596,7 +6471,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Perentie (varano gigante)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000162"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_prairie_dog",
@@ -5608,7 +6492,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5655,7 +6539,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Perrito de la pradera",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000047"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_island_petrels_and_albatrosses",
@@ -5667,7 +6560,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5714,7 +6607,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Petreles y albatros en islas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000089",
+          "ANM#000049"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_island_coastal_penguins",
@@ -5726,7 +6629,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5774,7 +6677,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pingüinos en costas de islas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000004"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_southern_regional_penguins",
@@ -5786,7 +6698,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5834,7 +6746,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pingüinos únicamente en regiones australes apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000134",
+          "ANM#000135"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_pudu",
@@ -5846,7 +6768,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5899,7 +6821,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pudú",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000131"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_puma",
@@ -5911,7 +6842,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5952,7 +6883,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Puma",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000132"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_bearded_vulture",
@@ -5964,7 +6904,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6002,7 +6942,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Quebrantahuesos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000072"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_bearded_vulture_in_suitable_mountains",
@@ -6014,7 +6963,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6052,7 +7001,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Quebrantahuesos en cordilleras apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000072"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_chamois",
@@ -6064,7 +7022,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6117,7 +7075,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Rebeco",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000142"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_reindeer",
@@ -6129,7 +7096,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6195,7 +7162,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Reno",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000136"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_eurasian_saiga",
@@ -6207,7 +7183,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6260,7 +7236,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Saiga, estepas euroasiáticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000143"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_sardines",
@@ -6272,7 +7257,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6319,7 +7304,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Sardinas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000144",
+          "ANM#000145"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_rattlesnakes",
@@ -6331,7 +7326,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6378,7 +7373,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Serpientes de cascabel regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000045",
+          "ANM#000046"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_himalayan_tahr",
@@ -6390,7 +7395,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6443,7 +7448,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tahr del Himalaya",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000073"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_amazonian_or_central_american_tapir",
@@ -6455,7 +7469,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6502,7 +7516,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tapir amazónico o centroamericano, según zona",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000154",
+          "ANM#000152"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_malayan_tapir",
@@ -6514,7 +7538,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6561,7 +7585,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tapir malayo, península malaya y Sumatra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000153"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_tiger",
@@ -6573,7 +7606,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6613,7 +7646,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tigre, en hábitats adecuados",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000119"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_desert_tortoise",
@@ -6625,7 +7667,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6680,7 +7722,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tortuga del desierto",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000069"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_sea_turtles",
@@ -6692,7 +7743,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6747,7 +7798,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tortugas marinas en zonas de alimentación y anidación",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000040",
+          "ANM#000057"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_land_tortoises",
@@ -6759,7 +7820,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6814,7 +7875,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tortugas terrestres regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000041"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_regional_wallabies",
@@ -6826,7 +7896,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6874,7 +7944,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ualabíes regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000100",
+          "ANM#000101"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_white_tailed_deer",
@@ -6886,7 +7966,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6939,7 +8019,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Venado cola blanca",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000104"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_mesoamerican_white_tailed_deer",
@@ -6951,7 +8040,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7004,7 +8093,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Venado cola blanca, Mesoamérica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000104"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_pampas_deer",
@@ -7016,7 +8114,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7069,7 +8167,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Venado de las pampas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000115"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_vicuna",
@@ -7081,7 +8188,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7136,7 +8243,18 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Vicuña",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000164"
+        ],
+        "formIds": [
+          "FRM#000060"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_andean_viscacha",
@@ -7148,7 +8266,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7195,7 +8313,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Vizcacha andina",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000076"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_rock_dwelling_viscachas",
@@ -7207,7 +8334,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7254,7 +8381,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Vizcachas en roquedos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000077"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_wild_yak",
@@ -7266,7 +8402,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7318,7 +8454,18 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Yak salvaje, altiplano tibetano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000016"
+        ],
+        "formIds": [
+          "FRM#000062"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_corsac_fox",
@@ -7330,7 +8477,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7370,7 +8517,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Zorro corsac",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000165"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_culpeo_fox",
@@ -7382,7 +8538,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7422,7 +8578,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Zorro culpeo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000087"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_culpeo_fox_in_arid_habitats",
@@ -7434,7 +8599,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7474,7 +8639,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Zorro culpeo en ambientes áridos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000087"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_fennec_fox",
@@ -7486,7 +8660,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7526,7 +8700,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Zorro fénec, Sáhara",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000167"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_arctic_fox",
@@ -7538,7 +8721,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7579,7 +8762,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Zorro ártico",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000166"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_golden_eagle",
@@ -7591,7 +8783,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7629,7 +8821,16 @@
       "potentialUseMethods": [],
       "cultivationResearch": null,
       "sourceLabel": "Águila real",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000005"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_alpine_ibex",
@@ -7641,7 +8842,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7694,7 +8895,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Íbice alpino, Alpes",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000033"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_walia_ibex",
@@ -7706,7 +8916,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7759,7 +8969,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Íbice de Walia, macizo de Simien",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000035"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_siberian_ibex",
@@ -7771,7 +8990,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7824,7 +9043,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Íbice siberiano, Asia central",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000034"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_greater_rhea",
@@ -7836,7 +9064,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7897,7 +9125,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ñandú común, Pampas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000141"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_wildebeest",
@@ -7909,7 +9146,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -7962,7 +9199,16 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ñu",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000043"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "animal_arabian_oryx",
@@ -7974,7 +9220,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -8027,7 +9273,17 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Órix de Arabia, Arabia",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ANM#000107"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     }
-  ]
+  ],
+  "biologicalCatalogFile": "animals.biological.catalog.json"
 }

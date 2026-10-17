@@ -4,7 +4,7 @@
 
 Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
 
-Estado: nomenclatura acordada; los catálogos existentes TODAVÍA NO están migrados. Los números de ejemplo no reservan IDs.
+Estado: recursos y nuevos taxones/formas ya tienen asignaciones permanentes. Los IDs de candidatos, mundo y tecnologías anteriores siguen vigentes. Los ejemplos de esta tabla no reservan IDs.
 
 Una definición final tendrá `id: "PLT#000001"` y `tag: "triticum_aestivum"`. El prefijo contiene exactamente tres letras mayúsculas en inglés. El sufijo tiene seis dígitos desde 000001, con correlativo independiente por prefijo. `#` forma parte del ID; no es un ancla de URL.
 
@@ -18,6 +18,8 @@ Una definición final tendrá `id: "PLT#000001"` y `tag: "triticum_aestivum"`. E
 | Geological Formation | `GEO` | `GEO#000001` | `alluvial_deposit` |
 | Plant Species | `PLT` | `PLT#000001` | `triticum_aestivum` |
 | Animal Species | `ANM` | `ANM#000001` | `capra_aegagrus` |
+| Alga Taxon | `ALG` | `ALG#000001` | `laminaria_hyperborea` |
+| Biological Form | `FRM` | `FRM#000001` | `cultivated_wheat_reference` |
 | Fungus Species | `FNG` | `FNG#000001` | `agaricus_bisporus` |
 | Resource | `RES` | `RES#000001` | `wheat_grain` |
 | Deposit Type | `DEP` | `DEP#000001` | `copper_ore_deposit` |
@@ -48,8 +50,12 @@ Una definición final tendrá `id: "PLT#000001"` y `tag: "triticum_aestivum"`. E
 4. Cambiar definiciones y referencias juntas; verificar unicidad, referencias y ciclos tecnológicos.
 5. Versionar los esquemas afectados y documentar compatibilidad. Las migraciones de partidas se introducirán cuando existan partidas reales.
 
-Mientras tanto, los IDs actuales como `species_cultivation`, `plant_dwarf_birch` y `tropical_forest` siguen siendo válidos. No mezclar los IDs ilustrativos nuevos con los catálogos. Versiones, códigos de idioma, tipos de evento, claves de revisión y niveles numéricos de elevación no son definiciones de entidades y no requieren estos prefijos.
+Mientras tanto, los IDs actuales como `species_cultivation`, `plant_dwarf_birch` y `tropical_forest` siguen siendo válidos. No copiar IDs ilustrativos como asignaciones; usar los registros reales de recursos y biología. Versiones, códigos de idioma, tipos de evento, claves de revisión y niveles numéricos de elevación no son definiciones de entidades y no requieren estos prefijos.
 
 ## Asignaciones de recursos existentes
 
 Los nuevos recursos ya usan IDs RES. `data/resources/resources.catalog.guide.json` registra las 104 asignaciones iniciales. Esto no migra IDs anteriores de especies o tecnologías ni reserva los ejemplos de la tabla anterior. Conservar IDs asignados; no reasignarlos según posición del arreglo.
+
+## Asignaciones biológicas
+
+`ALG` identifica algas y `FRM` formas biológicas. Los catálogos `plants.biological.catalog.json` y `animals.biological.catalog.json` registran las asignaciones reales PLT/ANM/ALG/FNG/FRM. La secuencia FRM es global entre ambas carpetas. No reutilizar los ejemplos de la tabla ni recalcular IDs por orden alfabético. `VAR` sigue siendo variante regional, no variedad de cultivo. Los taxones incluyen rangos de especie y subespecie explícitos. Ver [biología](biology.md).

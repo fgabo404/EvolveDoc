@@ -19,8 +19,8 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `$schema` | `string` | 1/1 | URI del dialecto JSON Schema; no referencia a datos del juego. | `"https://json-schema.org/draft/2020-12/schema"` |
-| `title` | `string` | 1/1 | Título del documento o esquema. | `"Future Evolve definition identity"` |
-| `description` | `string` | 1/1 | Explicación; en definiciones visibles es un mapa de idiomas y en esquemas es texto técnico. | `"Proposed future identifier envelope. Existing legacy catalogs are not migrated and do not conform to this envel…` |
+| `title` | `string` | 1/1 | Título del documento o esquema. | `"Evolve definition identity"` |
+| `description` | `string` | 1/1 | Explicación; en definiciones visibles es un mapa de idiomas y en esquemas es texto técnico. | `"Identity envelope for allocated new definitions and future legacy migration. Not a complete entity schema."` |
 | `type` | `string` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `"object"` |
 | `required` | `array<string>` | 1/1 | Propiedades obligatorias según esquema; aparecer en un ejemplo no vuelve obligatorio un campo. | `["id", "tag"]` |
 | `properties` | `object` | 1/1 | Esquemas por propiedad; no prohíbe campos extra sin additionalProperties. | `—` |
@@ -37,7 +37,7 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `"string"` |
-| `pattern` | `string` | 1/1 | Expresión regular para cadenas; no garantiza unicidad global. | `"^(BIO\|VAR\|REG\|TER\|SOL\|GEO\|PLT\|ANM\|FNG\|RES\|DEP\|DST\|TEC\|ITM\|RCP\|BLD\|IMP\|CAP\|EUR)#[0-9]{6}$"` |
+| `pattern` | `string` | 1/1 | Expresión regular para cadenas; no garantiza unicidad global. | `"^(BIO\|VAR\|REG\|TER\|SOL\|GEO\|PLT\|ANM\|ALG\|FNG\|FRM\|RES\|DEP\|DST\|TEC\|ITM\|RCP\|BLD\|IMP\|CAP\|EUR)#[0-9]{6}$"` |
 | `not` | `object` | 1/1 | Subesquema que no debe cumplirse; aquí rechaza ID cero reservado. | `—` |
 
 ### `$.properties.id.not`
@@ -60,8 +60,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Future Evolve definition identity",
-  "description": "Proposed future identifier envelope. Existing legacy catalogs are not migrated and do not conform to this envelope. Not a complete entity schema.",
+  "title": "Evolve definition identity",
+  "description": "Identity envelope for allocated new definitions and future legacy migration. Not a complete entity schema.",
   "type": "object",
   "required": [
     "id",
@@ -70,7 +70,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^(BIO|VAR|REG|TER|SOL|GEO|PLT|ANM|FNG|RES|DEP|DST|TEC|ITM|RCP|BLD|IMP|CAP|EUR)#[0-9]{6}$",
+      "pattern": "^(BIO|VAR|REG|TER|SOL|GEO|PLT|ANM|ALG|FNG|FRM|RES|DEP|DST|TEC|ITM|RCP|BLD|IMP|CAP|EUR)#[0-9]{6}$",
       "not": {
         "pattern": "#000000$"
       }

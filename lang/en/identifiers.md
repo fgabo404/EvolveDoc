@@ -4,7 +4,7 @@
 
 Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
 
-Status: accepted naming direction; existing catalogs have NOT been migrated. Example numbers do not reserve IDs.
+Status: resources and new taxa/forms have permanent allocations. Legacy candidate, world and technology IDs remain valid. Table examples do not reserve IDs.
 
 A final definition has `id: "PLT#000001"` and `tag: "triticum_aestivum"`. The prefix is exactly three uppercase English letters. The suffix is six decimal digits starting at 000001, allocated independently per prefix. `#` is part of the ID; it is not a URL anchor.
 
@@ -18,6 +18,8 @@ A final definition has `id: "PLT#000001"` and `tag: "triticum_aestivum"`. The pr
 | Geological Formation | `GEO` | `GEO#000001` | `alluvial_deposit` |
 | Plant Species | `PLT` | `PLT#000001` | `triticum_aestivum` |
 | Animal Species | `ANM` | `ANM#000001` | `capra_aegagrus` |
+| Alga Taxon | `ALG` | `ALG#000001` | `laminaria_hyperborea` |
+| Biological Form | `FRM` | `FRM#000001` | `cultivated_wheat_reference` |
 | Fungus Species | `FNG` | `FNG#000001` | `agaricus_bisporus` |
 | Resource | `RES` | `RES#000001` | `wheat_grain` |
 | Deposit Type | `DEP` | `DEP#000001` | `copper_ore_deposit` |
@@ -53,3 +55,7 @@ Until this migration is complete, existing IDs such as `species_cultivation`, `p
 ## Resource allocations now present
 
 New resource definitions already use RES IDs. `data/resources/resources.catalog.guide.json` records the 104 initial allocations. This does not migrate the legacy species or technology IDs and does not reserve the illustrative IDs in the table above. Preserve allocated IDs; do not rerun allocation from array positions.
+
+## Biological allocations
+
+`ALG` identifies algae and `FRM` biological forms. The `plants.biological.catalog.json` and `animals.biological.catalog.json` files record actual PLT/ANM/ALG/FNG/FRM allocations. The FRM sequence is shared across both folders. Do not reuse table examples or recalculate IDs alphabetically. `VAR` remains a regional variant, not a cultivar. Taxa explicitly record species/subspecies ranks. See [biology](biology.md).

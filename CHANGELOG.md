@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17 — Biological identities and reference lineages
+
+- Added 367 provider-matched taxon records, 77 biological reference forms, 25 documented lineage summaries and two explicitly excluded direct ancestry assumptions.
+- Linked all 129 flora candidates, 134 fauna candidates and 21 crop groups to concrete taxon selections. Broad-group choices are representative and non-exhaustive; name matching does not validate original interpretation, native ranges, habitats or outputs.
+- Added stable PLT/ANM/ALG/FNG/FRM allocations while retaining legacy candidate IDs, all 485 source occurrences and all resource/technology definitions. No implicit resource inheritance.
+- Added bilingual complete mappings, biological reference diagrams, field-by-field JSON documentation, a nested structural schema and offline consistency checks.
+- Plant/animal guide schema/content is 1.2.0/0.3.0; biological catalogs 1.0.0/0.1.0; world manifest 1.3.0/0.4.0. Runtime remains disabled; no quantities, durations, yields, balance or simulation behavior changes.
+- Añadidos taxones y formas con evidencia, referencias bilingües y comprobaciones. Las selecciones representativas, distribución nativa y relaciones todavía no documentadas requieren revisión; no se afirma un árbol evolutivo completo.
+
 ## 2026-10-16 — Documentation repository migration
 
 - Made Git the primary documentation reference and organized English/Spanish Markdown under `lang`.

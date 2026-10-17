@@ -1316,3 +1316,6 @@ Esta tabla conserva cada vínculo regional y método de extracción aunque el di
 | occurrence_0483 | plant_giant_groundsels | alpine | alpine_african | None | Senecios gigantes (Dendrosenecio spp.) |
 | occurrence_0484 | plant_afroalpine_grasses | alpine | alpine_african | None | Pastos afroalpinos |
 | occurrence_0485 | plant_ethiopian_highland_ensete | alpine | alpine_african | None | Ensete en tierras altas etíopes apropiadas |
+
+
+[Biological identities and relationships / Identidades y relaciones biológicas](BIOLOGY.es.md)

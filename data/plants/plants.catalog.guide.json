@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.1.0",
-  "contentVersion": "0.2.0",
+  "schemaVersion": "1.2.0",
+  "contentVersion": "0.3.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -23,7 +23,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -57,7 +57,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Abedul enano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000025"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_birches",
@@ -69,7 +78,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -103,7 +112,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Abedules",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000026",
+          "PLT#000027"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_african_acacias",
@@ -115,7 +134,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -150,7 +169,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Acacias africanas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000181",
+          "PLT#000180"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_australian_acacias",
@@ -162,7 +191,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -197,7 +226,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Acacias australianas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000002",
+          "PLT#000001"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_desert_acacias",
@@ -209,7 +248,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -243,7 +282,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Acacias del desierto",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000002"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_arid_land_acacias",
@@ -255,7 +303,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -289,7 +337,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Acacias desérticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000181"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_olive",
@@ -301,7 +358,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -342,7 +399,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Acebuche",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000104"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_agaves",
@@ -354,7 +420,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -388,7 +454,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Agaves",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000010",
+          "PLT#000011"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_american_larch",
@@ -400,7 +476,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -434,7 +510,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Alerce americano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000087"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_siberian_larches",
@@ -446,7 +531,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -480,7 +565,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Alerces siberianos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000088",
+          "PLT#000086"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_polar_marine_algae",
@@ -492,7 +587,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -526,7 +621,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Algas marinas polares",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ALG#000005"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_tropical_marine_algae",
@@ -538,7 +642,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -572,7 +676,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Algas marinas tropicales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ALG#000007"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_regional_brown_and_red_algae",
@@ -584,7 +697,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -618,7 +731,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Algas pardas y rojas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ALG#000006",
+          "ALG#000005"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_halophytic_shrubs",
@@ -630,7 +753,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -664,7 +787,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos halófitos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000075"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_australian_saltbushes",
@@ -676,7 +808,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -710,7 +842,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos salinos australianos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000018"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_xerophytic_shrubs",
@@ -722,7 +863,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -756,7 +897,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos xerófitos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000166"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_shrubs_and_cushion_plants",
@@ -768,7 +918,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -802,7 +952,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos y plantas almohadilladas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000014"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_maples",
@@ -814,7 +973,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -848,7 +1007,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arces",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000005",
+          "PLT#000004"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wormwoods",
@@ -860,7 +1029,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -894,7 +1063,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Artemisas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000017"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wormwoods_703907",
@@ -906,7 +1084,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -940,7 +1118,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Artemisas (Artemisia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000016"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_arctic_blueberries",
@@ -952,7 +1139,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -986,7 +1173,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arándanos árticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000178"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_hazel",
@@ -998,7 +1194,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1032,7 +1228,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Avellano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000048"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_dry_forest_bamboos",
@@ -1044,7 +1249,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1078,7 +1283,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bambúes de bosque seco",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000054"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_asian_tropical_bamboos",
@@ -1090,7 +1304,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1124,7 +1338,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bambúes tropicales asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000022"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_bananas",
@@ -1136,7 +1359,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1170,7 +1393,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bananos silvestres (Musa spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000098"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_new_guinea_wild_bananas",
@@ -1182,7 +1414,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1216,7 +1448,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bananos silvestres de Nueva Guinea",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000099"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_banksias",
@@ -1228,7 +1469,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1262,7 +1503,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Banksias",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000023"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_african_baobab",
@@ -1274,7 +1524,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1309,7 +1559,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Baobab africano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000007"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_tundra_berries",
@@ -1321,7 +1580,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1355,7 +1614,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bayas de tundra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000179",
+          "PLT#000060"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_temperate_kelp_forests",
@@ -1367,7 +1636,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1401,7 +1670,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bosques de kelp en costas templadas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ALG#000003",
+          "ALG#000004"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_cape_bulbs_and_geophytes",
@@ -1413,7 +1692,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1447,7 +1726,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bulbos y geófitas del Cabo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000186"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_cacao",
@@ -1459,7 +1747,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1500,7 +1788,18 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Cacao silvestre, en su distribución nativa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000168"
+        ],
+        "formIds": [
+          "FRM#000028"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_south_american_cacti",
@@ -1512,7 +1811,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1546,7 +1845,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Cactáceas sudamericanas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000057"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_squashes",
@@ -1558,7 +1866,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1599,7 +1907,20 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Calabazas silvestres (Cucurbita spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000052",
+          "PLT#000049"
+        ],
+        "formIds": [
+          "FRM#000020",
+          "FRM#000023"
+        ],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_brazil_nut",
@@ -1611,7 +1932,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1645,7 +1966,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Castaña de Brasil, Amazonía",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000024"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_asian_chestnuts",
@@ -1657,7 +1987,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1691,7 +2021,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Castaños asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000036",
+          "PLT#000035"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_barley",
@@ -1703,7 +2043,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1744,7 +2084,18 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Cebada silvestre, en sus regiones nativas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000078"
+        ],
+        "formIds": [
+          "FRM#000039"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_coigue",
@@ -1756,7 +2107,7 @@
       "taxonomy": {
         "scientificName": "Nothofagus dombeyi",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1797,7 +2148,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Coigüe (Nothofagus dombeyi)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000101"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_patagonian_tussock_grasses",
@@ -1809,7 +2169,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1843,7 +2203,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Coirones patagónicos (Festuca y afines)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000068"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_edelweiss",
@@ -1855,7 +2224,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1889,7 +2258,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Edelweiss",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000092"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_californian_oaks",
@@ -1901,7 +2279,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1942,7 +2320,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Encinas y robles californianos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000132",
+          "PLT#000134"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_mountain_junipers",
@@ -1954,7 +2342,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -1988,7 +2376,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Enebros de montaña",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000082",
+          "PLT#000083"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_ethiopian_highland_ensete",
@@ -2000,7 +2398,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2034,7 +2432,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Ensete en tierras altas etíopes apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000061"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_heaths",
@@ -2046,7 +2453,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2080,7 +2487,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Erica spp.",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000062"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_cordgrasses_and_saltmarsh_grasses",
@@ -2092,7 +2508,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2126,7 +2542,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Espartina y otros pastos de marisma (regiones compatibles)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000160",
+          "PLT#000161"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_mediterranean_eucalypts",
@@ -2138,7 +2564,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2172,7 +2598,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Eucaliptos de clima mediterráneo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000064"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_tropical_savanna_eucalypts",
@@ -2184,7 +2619,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2218,7 +2653,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Eucaliptos de sabana tropical",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000065"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_arid_land_eucalypts",
@@ -2230,7 +2674,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2264,7 +2708,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Eucaliptos de zonas áridas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000063"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_marine_phytoplankton",
@@ -2276,7 +2729,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2310,7 +2763,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Fitoplancton marino",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ALG#000002"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_beans",
@@ -2322,7 +2784,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2363,7 +2825,20 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Frijoles silvestres (Phaseolus spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000116",
+          "PLT#000115"
+        ],
+        "formIds": [
+          "FRM#000015",
+          "FRM#000016"
+        ],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_gentians",
@@ -2375,7 +2850,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2409,7 +2884,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gencianas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000070"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_blue_grama",
@@ -2421,7 +2905,7 @@
       "taxonomy": {
         "scientificName": "Bouteloua gracilis",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2455,7 +2939,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Grama azul (Bouteloua gracilis)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000028"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_cerrado_grasses",
@@ -2467,7 +2960,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2501,7 +2994,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas del Cerrado",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000094"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_ephemeral_rainfall_grasses",
@@ -2513,7 +3015,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2547,7 +3049,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas efímeras tras lluvias",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000164"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_northern_australian_native_grasses",
@@ -2559,7 +3070,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2593,7 +3104,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas nativas del norte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000159"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_pampas_grasses",
@@ -2605,7 +3125,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2639,7 +3159,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas pampeanas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000114"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_european_beech",
@@ -2651,7 +3180,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2692,7 +3221,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Haya europea",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000066"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_ichu_grass",
@@ -2704,7 +3242,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2738,7 +3276,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Ichu",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000080"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_creosote_bushes",
@@ -2750,7 +3297,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2784,7 +3331,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Jarillas (Larrea spp.), Monte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000089"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_shea_tree",
@@ -2796,7 +3352,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2830,7 +3386,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Karité, sabanas de África occidental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000183"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_subantarctic_kelp",
@@ -2842,7 +3407,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2876,7 +3441,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Kelp subantártico en costas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "ALG#000001"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_lenga_beech",
@@ -2888,7 +3462,7 @@
       "taxonomy": {
         "scientificName": "Nothofagus pumilio",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2929,7 +3503,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Lenga (Nothofagus pumilio)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000102"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_east_african_giant_lobelias",
@@ -2941,7 +3524,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -2975,7 +3558,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Lobelias gigantes, montañas de África oriental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000093"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_lichens",
@@ -2987,7 +3579,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3022,7 +3614,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Líquenes",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "FNG#000001",
+          "FNG#000002"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_reindeer_lichens",
@@ -3034,7 +3636,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3068,7 +3670,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Líquenes de reno",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "FNG#000001"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_tropical_mangroves",
@@ -3080,7 +3691,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3114,7 +3725,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Manglares en litorales tropicales compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000142",
+          "PLT#000019"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_red_mangrove_and_other_native_mangroves",
@@ -3126,7 +3747,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3160,7 +3781,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000141"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_manzanitas",
@@ -3172,7 +3802,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3206,7 +3836,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Manzanitas (Arctostaphylos spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000015"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_mesquites",
@@ -3218,7 +3857,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3252,7 +3891,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Mezquites",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000129",
+          "PLT#000130"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_cloudberry",
@@ -3264,7 +3913,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3298,7 +3947,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Mora de los pantanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000144"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_mosses",
@@ -3310,7 +3968,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3346,7 +4004,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Musgos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000128",
+          "PLT#000150"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_prickly_pears",
@@ -3358,7 +4026,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3392,7 +4060,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Nopales (Opuntia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000106",
+          "PLT#000105"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_kola_trees",
@@ -3404,7 +4082,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3438,7 +4116,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Nuez de cola (Cola spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000046",
+          "PLT#000045"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_african_oil_palm",
@@ -3450,7 +4138,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3484,7 +4172,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palma aceitera africana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000058"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_regional_savanna_palms",
@@ -3496,7 +4193,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3530,7 +4227,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palmas de sabana regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000030",
+          "PLT#000006"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_regional_palms_and_dipterocarps",
@@ -3542,7 +4249,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3576,7 +4283,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palmas y dipterocarpáceas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000153",
+          "PLT#000034"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_palms_and_pandanus",
@@ -3588,7 +4305,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3622,7 +4339,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palmas y pandanus",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000096",
+          "PLT#000112"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_date_palm",
@@ -3634,7 +4361,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3668,7 +4395,18 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palmera datilera en oasis y áreas de cultivo",
-      "initialPresencePolicy": "cultivation_or_wild_status_requires_review"
+      "initialPresencePolicy": "cultivation_or_wild_status_requires_review",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000117"
+        ],
+        "formIds": [
+          "FRM#000027"
+        ],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wetland_pandanus",
@@ -3680,7 +4418,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3714,7 +4452,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pandanus en zonas húmedas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000111"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_sugarcane_relatives",
@@ -3726,7 +4473,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3760,7 +4507,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres de caña de azúcar (Saccharum spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000146"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_potato_relatives",
@@ -3772,7 +4528,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3806,7 +4562,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres de la papa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000155"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_quinoa_relatives",
@@ -3818,7 +4583,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3852,7 +4617,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres de la quinua",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000039"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_sahelian_wild_pearl_millet_relatives",
@@ -3864,7 +4638,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3898,7 +4672,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres del mijo perla, Sahel",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000038"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_afroalpine_grasses",
@@ -3910,7 +4693,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3944,7 +4727,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos afroalpinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000067"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_alpine_grasses",
@@ -3956,7 +4748,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -3990,7 +4782,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos alpinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000031",
+          "PLT#000100"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_asian_alpine_grasses",
@@ -4002,7 +4804,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4036,7 +4838,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos alpinos asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000085"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_big_bluestem",
@@ -4048,7 +4859,7 @@
       "taxonomy": {
         "scientificName": "Andropogon gerardii",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4082,7 +4893,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos altos (Andropogon gerardii)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000013"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_regional_desert_grasses",
@@ -4094,7 +4914,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4128,7 +4948,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos desérticos regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000163"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_eurasian_steppe_grasses",
@@ -4140,7 +4969,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4174,7 +5003,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos esteparios euroasiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000162"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_regional_seagrasses",
@@ -4186,7 +5024,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4220,7 +5058,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos marinos (Thalassia y otros géneros regionales)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000167",
+          "PLT#000053"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_subantarctic_grasses",
@@ -4232,7 +5080,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4266,7 +5114,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos subantárticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000125"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_pequi",
@@ -4278,7 +5135,7 @@
       "taxonomy": {
         "scientificName": "Caryocar brasiliense",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4312,7 +5169,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pequi (Caryocar brasiliense), Cerrado",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000033"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_scots_pine",
@@ -4324,7 +5190,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4365,7 +5231,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pino silvestre",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000123"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_mountain_pines",
@@ -4377,7 +5252,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4418,7 +5293,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pinos de montaña",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000122"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_cushion_plants",
@@ -4430,7 +5314,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4464,7 +5348,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Plantas almohadilladas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000021"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_andean_cushion_plants",
@@ -4476,7 +5369,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4510,7 +5403,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Plantas almohadilladas andinas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000020"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_atacama_coastal_fog_plants",
@@ -4522,7 +5424,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4556,7 +5458,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Plantas de niebla costera, sectores de Atacama",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000169"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_estuarine_halophytes",
@@ -4568,7 +5479,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4602,7 +5513,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Plantas halófitas de estuario",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000147"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_proteas",
@@ -4614,7 +5534,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4648,7 +5568,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Proteas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000131"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_white_spruce",
@@ -4660,7 +5589,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4701,7 +5630,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pícea blanca",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000119"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_black_spruce",
@@ -4713,7 +5651,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4754,7 +5692,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pícea negra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000120"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_eurasian_spruces",
@@ -4766,7 +5713,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4807,7 +5754,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Píceas euroasiáticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000118",
+          "PLT#000121"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_queuna_trees",
@@ -4819,7 +5776,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4853,7 +5810,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Queñua (Polylepis spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000127",
+          "PLT#000126"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_soapbark_tree",
@@ -4865,7 +5832,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4899,7 +5866,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Quillay",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000139"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_african_raffia_palms",
@@ -4911,7 +5887,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4945,7 +5921,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Rafia africana (Raphia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000140"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_restios",
@@ -4957,7 +5942,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -4991,7 +5976,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Restios",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000059"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_european_oaks",
@@ -5003,7 +5997,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5044,7 +6038,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Robles europeos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000137",
+          "PLT#000136"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_north_american_oaks",
@@ -5056,7 +6060,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5097,7 +6101,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Robles norteamericanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000133",
+          "PLT#000138"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_asian_oaks_and_maples",
@@ -5109,7 +6123,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5143,7 +6157,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Robles y arces asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000135",
+          "PLT#000003"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_high_altitude_rhododendrons",
@@ -5155,7 +6179,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5189,7 +6213,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Rododendros de altura",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000143"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_sonoran_saguaro",
@@ -5201,7 +6234,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5235,7 +6268,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Saguaro, Sonora",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000032"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_dwarf_willows",
@@ -5247,7 +6289,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5281,7 +6323,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Sauces enanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000148"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_arctic_willows",
@@ -5293,7 +6344,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5327,7 +6378,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Sauces árticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000149"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_saxaul",
@@ -5339,7 +6399,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5373,7 +6433,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Saxaúl (Haloxylon spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000076"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_giant_groundsels",
@@ -5385,7 +6454,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5419,7 +6488,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Senecios gigantes (Dendrosenecio spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000056",
+          "PLT#000055"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_african_wild_sorghums",
@@ -5431,7 +6510,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5465,7 +6544,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Sorgos silvestres africanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000158"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_spinifex_grasses",
@@ -5477,7 +6565,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5511,7 +6599,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Spinifex (Triodia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000170"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_wild_taro",
@@ -5523,7 +6620,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5557,7 +6654,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Taro silvestre en su área nativa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000047"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_taro_and_regional_aroids",
@@ -5569,7 +6675,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5603,7 +6709,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Taro y otras aráceas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000047",
+          "PLT#000012"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_native_teak",
@@ -5615,7 +6731,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5656,7 +6772,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Teca en su distribución nativa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000165"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_mesoamerican_teosinte",
@@ -5668,7 +6793,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5702,7 +6827,20 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Teosinte, en su distribución mesoamericana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000189",
+          "PLT#000188"
+        ],
+        "formIds": [
+          "FRM#000040",
+          "FRM#000041"
+        ],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_southwest_asian_wild_wheat",
@@ -5714,7 +6852,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5755,7 +6893,20 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Trigo silvestre, solo en sus regiones nativas del sudoeste asiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000172",
+          "PLT#000174"
+        ],
+        "formIds": [
+          "FRM#000036",
+          "FRM#000037"
+        ],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_mesoamerican_vanilla",
@@ -5767,7 +6918,7 @@
       "taxonomy": {
         "scientificName": "Vanilla planifolia",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5801,7 +6952,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Vainilla (Vanilla planifolia), Mesoamérica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000182"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_native_wild_grapevine",
@@ -5813,7 +6973,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5854,7 +7014,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Vid silvestre en hábitats nativos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000185"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_eelgrass_and_other_seagrasses",
@@ -5866,7 +7035,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5900,7 +7069,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Zostera y otros pastos marinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000190"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_amazonian_rubber_tree",
@@ -5912,7 +7090,7 @@
       "taxonomy": {
         "scientificName": "Hevea brasiliensis",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "named_taxon_requires_verification",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5946,7 +7124,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árbol del caucho (Hevea brasiliensis), Amazonía",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000077"
+        ],
+        "formIds": [],
+        "selectionMode": "specific_name_interpretation",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_regional_tropical_timber_trees",
@@ -5958,7 +7145,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -5999,7 +7186,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árboles de maderas tropicales regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000097",
+          "PLT#000084"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_miombo_trees",
@@ -6011,7 +7208,7 @@
       "taxonomy": {
         "scientificName": null,
         "nameEvidence": "not_supplied",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6045,7 +7242,17 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árboles de miombo (Brachystegia spp.), donde corresponda",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000029",
+          "PLT#000081"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "plant_sal_trees",
@@ -6057,7 +7264,7 @@
       "taxonomy": {
         "scientificName": "Shorea robusta",
         "nameEvidence": "explicit_in_source",
-        "resolutionStatus": "group_requires_species_resolution",
+        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
         "verified": false
       },
       "definitionStatus": "design_guide_only",
@@ -6091,7 +7298,16 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árboles de sal (Shorea robusta), regiones adecuadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning"
+      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000154"
+        ],
+        "formIds": [],
+        "selectionMode": "representative_species_selection",
+        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "inheritResourceBindings": false
+      }
     }
   ],
   "agriculturalCropCandidates": [
@@ -6125,7 +7341,24 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000173",
+          "PLT#000175",
+          "PLT#000176",
+          "PLT#000171"
+        ],
+        "formIds": [
+          "FRM#000001",
+          "FRM#000002",
+          "FRM#000003",
+          "FRM#000004"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "barley",
@@ -6157,7 +7390,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000079"
+        ],
+        "formIds": [
+          "FRM#000005"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "rice",
@@ -6189,7 +7433,20 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000110",
+          "PLT#000108"
+        ],
+        "formIds": [
+          "FRM#000006",
+          "FRM#000007"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "maize",
@@ -6215,7 +7472,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000187"
+        ],
+        "formIds": [
+          "FRM#000008"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "sorghum",
@@ -6241,7 +7509,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000157"
+        ],
+        "formIds": [
+          "FRM#000009"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "millet",
@@ -6267,7 +7546,22 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000037",
+          "PLT#000113",
+          "PLT#000151"
+        ],
+        "formIds": [
+          "FRM#000010",
+          "FRM#000011",
+          "FRM#000012"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "potato",
@@ -6293,7 +7587,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000156"
+        ],
+        "formIds": [
+          "FRM#000013"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "cassava",
@@ -6319,7 +7624,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000095"
+        ],
+        "formIds": [
+          "FRM#000014"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "beans",
@@ -6345,7 +7661,20 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000116",
+          "PLT#000115"
+        ],
+        "formIds": [
+          "FRM#000015",
+          "FRM#000016"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "lentils",
@@ -6371,7 +7700,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000090"
+        ],
+        "formIds": [
+          "FRM#000017"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "chickpeas",
@@ -6397,7 +7737,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000040"
+        ],
+        "formIds": [
+          "FRM#000018"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "peas",
@@ -6423,7 +7774,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000124"
+        ],
+        "formIds": [
+          "FRM#000019"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "squash",
@@ -6449,7 +7811,24 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000052",
+          "PLT#000050",
+          "PLT#000051",
+          "PLT#000049"
+        ],
+        "formIds": [
+          "FRM#000020",
+          "FRM#000021",
+          "FRM#000022",
+          "FRM#000023"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "grapevine",
@@ -6475,7 +7854,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000184"
+        ],
+        "formIds": [
+          "FRM#000024"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "olive",
@@ -6501,7 +7891,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000103"
+        ],
+        "formIds": [
+          "FRM#000025"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "fig",
@@ -6527,7 +7928,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000069"
+        ],
+        "formIds": [
+          "FRM#000026"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "date_palm",
@@ -6553,7 +7965,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000117"
+        ],
+        "formIds": [
+          "FRM#000027"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "cacao",
@@ -6579,7 +8002,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000168"
+        ],
+        "formIds": [
+          "FRM#000028"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "coffee",
@@ -6605,7 +8039,20 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000042",
+          "PLT#000043"
+        ],
+        "formIds": [
+          "FRM#000029",
+          "FRM#000030"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "sugarcane",
@@ -6631,7 +8078,18 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000145"
+        ],
+        "formIds": [
+          "FRM#000031"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     },
     {
       "id": "cotton",
@@ -6657,7 +8115,25 @@
         }
       ],
       "ecologicalConstraints": null,
-      "sourceSection": "5. Initial agricultural and plant catalog"
+      "sourceSection": "5. Initial agricultural and plant catalog",
+      "taxonResolution": {
+        "taxonIds": [
+          "PLT#000074",
+          "PLT#000072",
+          "PLT#000071",
+          "PLT#000073"
+        ],
+        "formIds": [
+          "FRM#000032",
+          "FRM#000033",
+          "FRM#000034",
+          "FRM#000035"
+        ],
+        "selectionMode": "explicit_crop_taxa_selection",
+        "interpretationStatus": "crop_group_resolved_to_selected_taxa_ancestry_review_not_complete",
+        "inheritResourceBindings": false
+      }
     }
-  ]
+  ],
+  "biologicalCatalogFile": "plants.biological.catalog.json"
 }

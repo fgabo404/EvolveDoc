@@ -14,3 +14,7 @@ Cobertura actual: 23 tecnologías, 9 importaciones tecnológicas, 7 biomas, 27 v
 Los diagramas muestran relaciones; las tablas que los acompañan conservan parámetros y apariciones repetidas. No inventan evolución biológica, domesticación, productos ni procesamiento. Las estructuras campo por campo siguen en la [referencia de JSON](json-structures.md).
 
 Actualizar con `python tools/generate_catalog_diagrams.py`; verificar con `--check`.
+
+- [Biology: plants](../../data/plants/BIOLOGY.es.md)
+
+- [Biology: animals](../../data/animals/BIOLOGY.es.md)

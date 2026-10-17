@@ -25,10 +25,10 @@ description|Explanation; in game definitions visible descriptions are language m
 en|English visible text.|Texto visible en inglés.
 es|Spanish visible text.|Texto visible en español.
 speciesCandidates|Flat candidate records; broad groups are not yet accepted exact species.|Candidatos al mismo nivel; los grupos generales todavía no son especies exactas aceptadas.
-agriculturalCropCandidates|Crop groups awaiting exact species, ancestors and production definitions.|Grupos agrícolas pendientes de especie exacta, ancestros y producción.
+agriculturalCropCandidates|Crop groups linked to selected taxa/forms; ancestry coverage and production rules remain partial.|Grupos agrícolas vinculados a taxones/formas seleccionados; ancestros y reglas productivas siguen parcialmente pendientes.
 geologicalResourceCandidates|Source materials and geological forms awaiting deposit and processing design.|Materiales y formas geológicas pendientes de yacimientos y procesamiento.
 taxonomy|Scientific identity, evidence and review information.|Identidad científica, evidencia y revisión.
-scientificName|Scientific name only when provided by the source; null means unresolved and does not identify a taxon.|Nombre científico si aparece en la fuente; null significa pendiente y no identifica un taxón.
+scientificName|Scientific name in the source or accepted provider record; null in a legacy source means unresolved there.|Nombre científico de la fuente o del registro aceptado del proveedor; null en la fuente original significa pendiente allí.
 nameEvidence|Evidence supporting the recorded scientific name or its absence.|Evidencia del nombre científico registrado o de su ausencia.
 resolutionStatus|Task still required to resolve a candidate or regional restriction.|Tarea pendiente para resolver el candidato o restricción regional.
 verified|Whether scientific verification has been performed; current candidates are not verified.|Indica si existe verificación científica; los candidatos actuales no están verificados.
@@ -305,8 +305,70 @@ enum|Explicit set of allowed JSON values.|Conjunto explícito de valores JSON ad
 minimum|Inclusive numeric lower bound.|Límite numérico inferior inclusivo.
 minLength|Minimum permitted string length.|Longitud mínima de una cadena.
 '''
+TEXT += "\n" + r'''
+biologicalCatalogFile|Sibling biological catalog file; legacy candidate IDs remain unchanged.|Archivo biológico relacionado; conserva los IDs de candidatos anteriores.
+plantBiology|Relative path from the world manifest to the flora biological catalog.|Ruta relativa del manifiesto mundial al catálogo biológico de flora.
+animalBiology|Relative path from the world manifest to the animal biological catalog.|Ruta relativa del manifiesto mundial al catálogo biológico de fauna.
+taxonResolution|Explicit source-to-taxon and reference-form selection; not a spawn or production rule.|Selección explícita de taxones y formas de referencia; no es regla de aparición ni producción.
+taxonIds|References to the selected taxon definitions; group selections are non-exhaustive.|Referencias de taxones elegidos; las selecciones de grupos no son exhaustivas.
+formIds|Related biological reference forms; not the forms approved to spawn at this source occurrence.|Formas biológicas relacionadas; no son las formas aprobadas para aparecer en esa ubicación.
+selectionMode|Whether a label is interpreted specifically or split into representative species/crop taxa.|Indica interpretación específica o selección representativa de especies/cultivos.
+interpretationStatus|Review state of the original label interpretation, independent of scientific name matching.|Estado de interpretación de la etiqueta original, independiente del cotejo del nombre científico.
+inheritResourceBindings|False: selected taxa/forms do not inherit candidate resource outputs automatically.|False: los taxones/formas no heredan automáticamente productos del candidato.
+sourceInterpretation|Boundary between representative design choices and uniquely identified source records.|Distingue selecciones representativas de diseño e identificaciones únicas de la fuente.
+resourceInheritance|Policy blocking automatic transfer of broad-group resource links to species/forms.|Política que impide heredar automáticamente productos de grupos generales.
+lineagePolicy|Evidence-based ancestry is separate from automatic gameplay transformations.|La ascendencia documentada es independiente de transformaciones automáticas del juego.
+varietyPolicy|Distinguishes species, reference forms, cultivar groups and named breeds/cultivars.|Distingue especies, formas de referencia, grupos de cultivo y cultivares/razas con nombre.
+floraClassification|Explains that the flora folder includes algae and lichenized fungi with explicit classification.|Aclara que flora incluye algas y hongos liquenizados clasificados explícitamente.
+taxa|Flat accepted taxon records; provider-specific species, subspecies or botanical varieties.|Taxones aceptados al mismo nivel; especies, subespecies o variedades botánicas según proveedor.
+biologicalForms|Flat reference populations, domesticated forms and cultivar groups; not live instances.|Poblaciones de referencia, formas domesticadas y grupos de cultivo; no instancias vivas.
+lineageRelations|Evidence-backed historical ancestry/selection summaries; not executable game recipes.|Resúmenes históricos de ascendencia/selección con evidencia; no recetas ejecutables.
+excludedLineageRelations|Explicit cautions against unsupported direct ancestor assumptions.|Advertencias explícitas contra relaciones directas de ascendencia no justificadas.
+evidenceSources|Bibliography supporting selected lineage claims and taxonomic rules.|Bibliografía que respalda relaciones seleccionadas y reglas taxonómicas.
+taxonCount|Number of distinct provider taxon identities in this catalog.|Cantidad de identidades taxonómicas distintas del proveedor en este catálogo.
+biologicalFormCount|Number of biological reference forms in this catalog.|Cantidad de formas biológicas de referencia en este catálogo.
+lineageRelationCount|Number of accepted reference lineage relations.|Cantidad de relaciones de linaje de referencia registradas.
+excludedLineageRelationCount|Number of explicitly excluded direct ancestry assumptions.|Cantidad de supuestos de ascendencia directa explícitamente descartados.
+sourceCandidateCount|Number of covered original species/group candidates.|Cantidad de candidatos originales de especies/grupos cubiertos.
+cropCandidateCount|Number of covered crop group candidates.|Cantidad de grupos agrícolas cubiertos.
+taxonRank|Provider rank: species, subspecies or variety; a form is a separate entity.|Rango del proveedor: especie, subespecie o variedad; una forma es otra entidad.
+organismGroup|Explicit animal, plant, alga or lichenized fungus classification.|Clasificación explícita de animal, planta, alga u hongo liquenizado.
+nativeRangeReviewStatus|Name validation does not validate native distribution.|Validar un nombre no valida la distribución nativa.
+kingdom|Biological kingdom reported by the named taxonomy provider.|Reino biológico según el proveedor taxonómico indicado.
+family|Family reported by the taxonomy provider; null if unavailable.|Familia según el proveedor taxonómico; null si no está disponible.
+genus|Genus reported by the taxonomy provider.|Género según el proveedor taxonómico.
+provider|Taxonomic authority dataset used for this snapshot.|Conjunto taxonómico utilizado para esta versión.
+providerTaxonKey|Provider-specific accepted taxon key stored as string; not an Evolve ID.|Clave de taxón aceptado del proveedor como cadena; no es un ID de Evolve.
+taxonomicStatus|Accepted status of the stored taxon under the stated provider.|Estado aceptado del taxón según el proveedor indicado.
+referenceUrl|Public provider record for the accepted taxon.|Registro público del proveedor para el taxón aceptado.
+matchEvidence|Scientific-name lookup evidence; does not identify an ambiguous original common name.|Evidencia de cotejo científico; no identifica de forma única un nombre común ambiguo.
+queriedName|Scientific name submitted to the taxonomic service.|Nombre científico enviado al servicio taxonómico.
+matchedScientificName|Name matched before synonym resolution; accepted identity is stored separately.|Nombre cotejado antes de resolver sinónimos; la identidad aceptada se registra aparte.
+matchType|Exact/fuzzy/higher-rank result; this reference accepts only EXACT.|Resultado exacto/aproximado/rango superior; esta referencia solo admite EXACT.
+matchStatus|Matched query status, which may be SYNONYM even when the stored taxon is ACCEPTED.|Estado del nombre consultado; puede ser SYNONYM aunque el taxón guardado sea ACCEPTED.
+confidence|Provider match score, not a percentage certainty of the original source interpretation.|Puntuación del proveedor; no es certeza porcentual de la interpretación original.
+requestUrl|Reproducible taxonomy query URL; results can change with provider updates.|URL reproducible de consulta; los resultados pueden cambiar al actualizarse el proveedor.
+checkedOn|Date of the consulted reference snapshot; not publication date.|Fecha de consulta de la referencia; no es fecha de publicación.
+taxonId|Reference to the taxon underlying this biological form.|Referencia al taxón de esta forma biológica.
+formKind|Reference form category; does not imply a new species, breed or unlocked capability.|Categoría de forma; no implica especie nueva, raza ni capacidad desbloqueada.
+literatureName|Scientific or historical label used for the reference form; may differ from accepted provider naming.|Nombre científico/histórico de la forma; puede diferir del nombre aceptado del proveedor.
+evidenceSourceKeys|Keys into this catalog bibliography; empty means no specific lineage claim is asserted here.|Claves de bibliografía; vacío indica que aquí no se afirma un linaje específico.
+relationType|Historical relation: domestication, selection, hybrid origin, ancestral contribution or introgression.|Relación histórica: domesticación, selección, origen híbrido, aporte ancestral o introgresión.
+parentFormIds|Joint ancestral inputs for a hybrid origin; otherwise contributing/reference ancestor forms.|Aportes conjuntos de origen híbrido; en otras relaciones, formas ancestrales/de referencia.
+childFormIds|Resulting/receiving reference forms, never automatically generated populations.|Formas resultantes/receptoras; nunca poblaciones generadas automáticamente.
+supportLevel|Evidence summary strength/category; a proxy does not identify an exact founding population.|Categoría de evidencia; un representante no identifica una población fundadora exacta.
+exactAncestralPopulationResolved|False: exact historical founding populations are not specified.|False: no se especifican poblaciones fundadoras históricas exactas.
+parentFormId|Reference ancestor form in an excluded direct-lineage assumption.|Forma ancestral de referencia en un supuesto directo descartado.
+childFormId|Reference descendant form in an excluded direct-lineage assumption.|Forma descendiente de referencia en un supuesto directo descartado.
+sourceKey|Stable bibliography key local to a biological catalog, not an entity ID.|Clave bibliográfica estable local al catálogo; no es ID de entidad.
+url|Public source URL.|URL pública de la fuente.
+supports|Scope of the claim supported by this bibliography entry.|Alcance de la afirmación respaldada por esta entrada bibliográfica.
+'''
+
 DESCRIPTIONS={}
 for line in TEXT.strip().splitlines():
+    if not line.strip():
+        continue
     key,en,es=line.split('|',2)
     if key in DESCRIPTIONS:
         raise ValueError(f'Duplicate field explanation: {key}')
