@@ -1,5 +1,7 @@
 # Repository structure and responsibilities
 
+[Resource catalog and relationships](resources.md)
+
 Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
 
 This is a documentation repository with structured design catalogs and small educational simulations. Its root represents `evolve/`; no redundant nested `evolve` directory is needed.
@@ -11,7 +13,7 @@ This is a documentation repository with structured design catalogs and small edu
 | `data/animals` | Animal candidates; future exact species, populations, domestication and products. |
 | `data/plants` | Plant and crop candidates; future exact species, ancestors, varieties, propagation and products. |
 | `data/minerals` | Geological candidates; future deposits, extraction, processing and requirements. |
-| `data/resources` | Future harvested/extracted resources shared by production and recipes. Currently a documented placeholder, not an empty playable catalog. |
+| `data/resources` | 104 material definitions with source links and proposed transformation endpoints; quantities and recipes remain unresolved. |
 | `data/technologies` | Flat technology definitions, requirements, research costs and eurekas. |
 | `schemas` | Initial structural contracts and their explicit limits. |
 | `simulation` | Fixtures and runnable demonstrations; not the production engine. |
@@ -21,7 +23,7 @@ This is a documentation repository with structured design catalogs and small edu
 
 Load `data/world/world.catalog.guide.json` for world design. Resolve its `catalogFiles` relative to that file. Plant and animal files contain `speciesCandidates`; the plants file also contains `agriculturalCropCandidates`. The minerals file contains `geologicalResourceCandidates`. The world file retains all 485 `resourceOccurrences`; their `definitionId` references resolve across these catalogs.
 
-The split preserves every source candidate and occurrence without duplicating a second canonical full catalog. World schema/content changed to 1.1.0/0.2.0 for this packaging change. Agriculture remains 2.0.0/0.3.0 unchanged.
+The split preserves every source candidate and occurrence without duplicating a second canonical full catalog. The initial split used world schema/content 1.1.0/0.2.0. Resource linking now uses world 1.2.0/0.3.0, plant/animal/mineral guides 1.1.0/0.2.0 and resource guide 1.0.0/0.1.0. Agriculture remains 2.0.0/0.3.0 unchanged.
 
 `null` means unresolved. An empty mapping is not worldwide distribution. All guide catalogs remain runtime-disabled. Candidate classification follows the source: for example, lichens remain under flora pending scientific review.
 

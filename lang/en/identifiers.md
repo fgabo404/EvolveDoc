@@ -1,5 +1,7 @@
 # Identifiers and tags
 
+[Resource catalog and relationships](resources.md)
+
 Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
 
 Status: accepted naming direction; existing catalogs have NOT been migrated. Example numbers do not reserve IDs.
@@ -47,3 +49,7 @@ A final definition has `id: "PLT#000001"` and `tag: "triticum_aestivum"`. The pr
 5. Version the affected schemas and document compatibility. Only introduce save migrations when real saved games exist.
 
 Until this migration is complete, existing IDs such as `species_cultivation`, `plant_dwarf_birch` and `tropical_forest` remain authoritative. Do not mix illustrative new IDs into active catalogs. Not every record needs this prefix system: schema versions, language codes, event type enums, review issue keys and elevation numbers are not entity definitions.
+
+## Resource allocations now present
+
+New resource definitions already use RES IDs. `data/resources/resources.catalog.guide.json` records the 104 initial allocations. This does not migrate the legacy species or technology IDs and does not reserve the illustrative IDs in the table above. Preserve allocated IDs; do not rerun allocation from array positions.

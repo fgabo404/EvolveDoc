@@ -9,7 +9,7 @@ One dedicated file beside each catalog JSON, divided into small diagrams. GitHub
 - [minerals](../../data/minerals/DIAGRAMS.md)
 - [resources](../../data/resources/DIAGRAMS.md)
 
-Current coverage: 23 technologies, 9 external technology imports, 7 biomes, 27 regional variants, 129 plant candidates, 134 animal candidates, 57 geological candidates, 21 crop candidates and all 485 source occurrences. Resources has no catalog yet.
+Current coverage: 23 technologies, 9 external technology imports, 7 biomes, 27 regional variants, 129 plant candidates, 134 animal candidates, 57 geological candidates, 21 crop candidates and all 485 source occurrences. Resources: 104 materials, 365 source bindings and 25 transformation guides pending review.
 
 Diagrams show relationships; accompanying tables retain parameters and repeated occurrences. They do not invent biological evolution, domestication, outputs or processing. Field-by-field structures remain in the [JSON reference](json-structures.md).
 

@@ -1,11 +1,17 @@
 # Plants
 
-129 source plant candidates and 21 crop candidates. Exact taxa, wild ancestors, selected varieties and resource outputs remain unresolved.
+129 source plant candidates and 21 crop candidates. Exact taxa, wild ancestors, selected varieties and yields remain unresolved; selected plants and crops now link to proposed resource outputs.
 
-129 candidatos vegetales y 21 candidatos agrícolas. Faltan especies exactas, ancestros silvestres, variedades y recursos obtenidos.
+129 candidatos vegetales y 21 candidatos agrícolas. Faltan especies exactas, ancestros silvestres, variedades y rendimientos; plantas seleccionadas y cultivos ya enlazan recursos propuestos.
 
 [English structure](../../lang/en/repository.md) · [Estructura en español](../../lang/es/repository.md)
 
 [Complete JSON structures and examples](../../lang/en/json-structures.md) · [Estructuras JSON completas y ejemplos](../../lang/es/json-structures.md)
 
 [Complete catalog diagrams](DIAGRAMS.md) · [Diagramas completos del catálogo](DIAGRAMS.es.md)
+
+[Resource relationships](../../lang/en/resources.md) · [Relaciones de recursos](../../lang/es/resources.md)
+
+Schema/content: 1.1.0/0.2.0. Explicit resource references have been added; taxonomy, amounts and executable actions remain unresolved.
+
+Esquema/contenido: 1.1.0/0.2.0. Se agregaron referencias explícitas de recursos; taxonomía, cantidades y acciones ejecutables siguen pendientes.

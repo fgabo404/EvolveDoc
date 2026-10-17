@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -23,7 +23,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arcilla"
+      "sourceLabel": "Arcilla",
+      "extractedResourceId": "RES#000047"
     },
     {
       "id": "geological_alluvial_clay",
@@ -35,7 +36,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arcilla aluvial"
+      "sourceLabel": "Arcilla aluvial",
+      "extractedResourceId": "RES#000047"
     },
     {
       "id": "geological_estuarine_clay",
@@ -47,7 +49,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arcilla estuarina"
+      "sourceLabel": "Arcilla estuarina",
+      "extractedResourceId": "RES#000047"
     },
     {
       "id": "geological_fluvial_clay",
@@ -59,7 +62,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arcilla fluvial"
+      "sourceLabel": "Arcilla fluvial",
+      "extractedResourceId": "RES#000047"
     },
     {
       "id": "geological_glacial_clay",
@@ -71,7 +75,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arcilla glacial"
+      "sourceLabel": "Arcilla glacial",
+      "extractedResourceId": "RES#000047"
     },
     {
       "id": "geological_sand",
@@ -83,7 +88,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arena"
+      "sourceLabel": "Arena",
+      "extractedResourceId": "RES#000048"
     },
     {
       "id": "geological_calcareous_sand",
@@ -95,7 +101,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arena calcárea"
+      "sourceLabel": "Arena calcárea",
+      "extractedResourceId": "RES#000049"
     },
     {
       "id": "geological_silica_sand",
@@ -107,7 +114,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arena silícea"
+      "sourceLabel": "Arena silícea",
+      "extractedResourceId": "RES#000050"
     },
     {
       "id": "geological_sandstone",
@@ -119,7 +127,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arenisca"
+      "sourceLabel": "Arenisca",
+      "extractedResourceId": "RES#000051"
     },
     {
       "id": "geological_limestone",
@@ -131,7 +140,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Caliza"
+      "sourceLabel": "Caliza",
+      "extractedResourceId": "RES#000052"
     },
     {
       "id": "geological_limestone_in_carbonate_formations",
@@ -143,7 +153,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Caliza (donde exista formación carbonatada)"
+      "sourceLabel": "Caliza (donde exista formación carbonatada)",
+      "extractedResourceId": "RES#000052"
     },
     {
       "id": "geological_coastal_limestone",
@@ -155,7 +166,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Caliza costera"
+      "sourceLabel": "Caliza costera",
+      "extractedResourceId": "RES#000052"
     },
     {
       "id": "geological_bituminous_coal",
@@ -167,7 +179,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Carbón mineral (hulla)"
+      "sourceLabel": "Carbón mineral (hulla)",
+      "extractedResourceId": "RES#000053"
     },
     {
       "id": "geological_copper_bearing_deposit",
@@ -179,7 +192,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Cobre"
+      "sourceLabel": "Cobre",
+      "extractedResourceId": "RES#000054"
     },
     {
       "id": "geological_chalcopyrite_copper_ore",
@@ -191,7 +205,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Cobre (calcopirita)"
+      "sourceLabel": "Cobre (calcopirita)",
+      "extractedResourceId": "RES#000055"
     },
     {
       "id": "geological_sulfide_copper_ore",
@@ -203,7 +218,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Cobre (sulfuros)"
+      "sourceLabel": "Cobre (sulfuros)",
+      "extractedResourceId": "RES#000055"
     },
     {
       "id": "geological_seashells",
@@ -215,7 +231,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Conchas marinas"
+      "sourceLabel": "Conchas marinas",
+      "extractedResourceId": "RES#000044"
     },
     {
       "id": "geological_tin_bearing_deposit",
@@ -227,7 +244,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Estaño"
+      "sourceLabel": "Estaño",
+      "extractedResourceId": "RES#000056"
     },
     {
       "id": "geological_vein_cassiterite_tin_ore",
@@ -239,7 +257,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Estaño (casiterita en veta)"
+      "sourceLabel": "Estaño (casiterita en veta)",
+      "extractedResourceId": "RES#000057"
     },
     {
       "id": "geological_alluvial_cassiterite",
@@ -251,7 +270,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Estaño aluvial (casiterita)"
+      "sourceLabel": "Estaño aluvial (casiterita)",
+      "extractedResourceId": "RES#000057"
     },
     {
       "id": "geological_phosphorite",
@@ -263,7 +283,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Fosforita"
+      "sourceLabel": "Fosforita",
+      "extractedResourceId": "RES#000058"
     },
     {
       "id": "geological_apatite_phosphorite",
@@ -275,7 +296,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Fosforita (apatita)"
+      "sourceLabel": "Fosforita (apatita)",
+      "extractedResourceId": "RES#000058"
     },
     {
       "id": "geological_granite",
@@ -287,7 +309,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Granito"
+      "sourceLabel": "Granito",
+      "extractedResourceId": "RES#000059"
     },
     {
       "id": "geological_gravel",
@@ -299,7 +322,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Grava"
+      "sourceLabel": "Grava",
+      "extractedResourceId": "RES#000060"
     },
     {
       "id": "geological_coastal_gravel",
@@ -311,7 +335,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Grava costera"
+      "sourceLabel": "Grava costera",
+      "extractedResourceId": "RES#000060"
     },
     {
       "id": "geological_iron_bearing_deposit",
@@ -323,7 +348,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Hierro"
+      "sourceLabel": "Hierro",
+      "extractedResourceId": "RES#000061"
     },
     {
       "id": "geological_hematite_iron_ore",
@@ -335,7 +361,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Hierro (hematita)"
+      "sourceLabel": "Hierro (hematita)",
+      "extractedResourceId": "RES#000062"
     },
     {
       "id": "geological_magnetite_iron_ore",
@@ -347,7 +374,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Hierro (magnetita)"
+      "sourceLabel": "Hierro (magnetita)",
+      "extractedResourceId": "RES#000062"
     },
     {
       "id": "geological_iron_rich_laterite",
@@ -359,7 +387,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Laterita ferruginosa"
+      "sourceLabel": "Laterita ferruginosa",
+      "extractedResourceId": "RES#000063"
     },
     {
       "id": "geological_manganese_bearing_deposit",
@@ -371,7 +400,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Manganeso"
+      "sourceLabel": "Manganeso",
+      "extractedResourceId": "RES#000064"
     },
     {
       "id": "geological_pyrolusite_manganese_ore",
@@ -383,7 +413,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Manganeso (pirolusita)"
+      "sourceLabel": "Manganeso (pirolusita)",
+      "extractedResourceId": "RES#000065"
     },
     {
       "id": "geological_nickel_bearing_deposit",
@@ -395,7 +426,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Níquel"
+      "sourceLabel": "Níquel",
+      "extractedResourceId": "RES#000066"
     },
     {
       "id": "geological_nickeliferous_laterite",
@@ -407,7 +439,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Níquel (laterita niquelífera)"
+      "sourceLabel": "Níquel (laterita niquelífera)",
+      "extractedResourceId": "RES#000067"
     },
     {
       "id": "geological_sulfide_nickel_ore",
@@ -419,7 +452,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Níquel (sulfuros)"
+      "sourceLabel": "Níquel (sulfuros)",
+      "extractedResourceId": "RES#000068"
     },
     {
       "id": "geological_polymetallic_nodules",
@@ -431,7 +465,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Nódulos polimetálicos (manganeso, níquel y cobre)"
+      "sourceLabel": "Nódulos polimetálicos (manganeso, níquel y cobre)",
+      "extractedResourceId": "RES#000069"
     },
     {
       "id": "geological_volcanic_obsidian",
@@ -443,7 +478,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Obsidiana en zonas volcánicas"
+      "sourceLabel": "Obsidiana en zonas volcánicas",
+      "extractedResourceId": "RES#000070"
     },
     {
       "id": "geological_gold_bearing_quartz",
@@ -455,7 +491,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Oro (cuarzo aurífero)"
+      "sourceLabel": "Oro (cuarzo aurífero)",
+      "extractedResourceId": "RES#000071"
     },
     {
       "id": "geological_alluvial_gold",
@@ -467,7 +504,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Oro aluvial"
+      "sourceLabel": "Oro aluvial",
+      "extractedResourceId": "RES#000072"
     },
     {
       "id": "geological_vein_gold",
@@ -479,7 +517,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Oro en veta"
+      "sourceLabel": "Oro en veta",
+      "extractedResourceId": "RES#000073"
     },
     {
       "id": "geological_pumice",
@@ -491,7 +530,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Piedra pómez"
+      "sourceLabel": "Piedra pómez",
+      "extractedResourceId": "RES#000074"
     },
     {
       "id": "geological_slate",
@@ -503,7 +543,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Pizarra"
+      "sourceLabel": "Pizarra",
+      "extractedResourceId": "RES#000075"
     },
     {
       "id": "geological_silver_bearing_deposit",
@@ -515,7 +556,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Plata"
+      "sourceLabel": "Plata",
+      "extractedResourceId": "RES#000076"
     },
     {
       "id": "geological_argentite_silver_ore",
@@ -527,7 +569,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Plata (argentita)"
+      "sourceLabel": "Plata (argentita)",
+      "extractedResourceId": "RES#000077"
     },
     {
       "id": "geological_lead_bearing_deposit",
@@ -539,7 +582,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Plomo"
+      "sourceLabel": "Plomo",
+      "extractedResourceId": "RES#000078"
     },
     {
       "id": "geological_galena_lead_ore",
@@ -551,7 +595,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Plomo (galena)"
+      "sourceLabel": "Plomo (galena)",
+      "extractedResourceId": "RES#000079"
     },
     {
       "id": "geological_basalt",
@@ -563,7 +608,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Roca basáltica"
+      "sourceLabel": "Roca basáltica",
+      "extractedResourceId": "RES#000080"
     },
     {
       "id": "geological_volcanic_rock",
@@ -575,7 +621,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Roca volcánica"
+      "sourceLabel": "Roca volcánica",
+      "extractedResourceId": "RES#000081"
     },
     {
       "id": "geological_rock_salt",
@@ -587,7 +634,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Sal gema"
+      "sourceLabel": "Sal gema",
+      "extractedResourceId": "RES#000082"
     },
     {
       "id": "geological_deep_rock_salt",
@@ -599,7 +647,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Sal gema (en depósitos profundos apropiados)"
+      "sourceLabel": "Sal gema (en depósitos profundos apropiados)",
+      "extractedResourceId": "RES#000082"
     },
     {
       "id": "geological_sea_salt",
@@ -611,7 +660,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Sal marina"
+      "sourceLabel": "Sal marina",
+      "extractedResourceId": "RES#000083"
     },
     {
       "id": "geological_sea_salt_in_suitable_saltworks",
@@ -623,7 +673,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Sal marina (en salinas apropiadas)"
+      "sourceLabel": "Sal marina (en salinas apropiadas)",
+      "extractedResourceId": "RES#000083"
     },
     {
       "id": "geological_flint",
@@ -635,7 +686,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Sílex"
+      "sourceLabel": "Sílex",
+      "extractedResourceId": "RES#000084"
     },
     {
       "id": "geological_peat",
@@ -647,7 +699,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Turba"
+      "sourceLabel": "Turba",
+      "extractedResourceId": "RES#000085"
     },
     {
       "id": "geological_gypsum_in_evaporite_deposits",
@@ -659,7 +712,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Yeso (en depósitos evaporíticos)"
+      "sourceLabel": "Yeso (en depósitos evaporíticos)",
+      "extractedResourceId": "RES#000086"
     },
     {
       "id": "geological_deep_gypsum",
@@ -671,7 +725,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Yeso (en yacimientos profundos)"
+      "sourceLabel": "Yeso (en yacimientos profundos)",
+      "extractedResourceId": "RES#000086"
     },
     {
       "id": "geological_coastal_gypsum",
@@ -683,7 +738,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Yeso costero"
+      "sourceLabel": "Yeso costero",
+      "extractedResourceId": "RES#000086"
     },
     {
       "id": "geological_surface_opal",
@@ -695,7 +751,8 @@
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Ópalo superficial"
+      "sourceLabel": "Ópalo superficial",
+      "extractedResourceId": "RES#000087"
     }
   ]
 }

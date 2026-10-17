@@ -1,5 +1,7 @@
 # Identificadores y tags
 
+[Catálogo de recursos y relaciones](resources.md)
+
 Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
 
 Estado: nomenclatura acordada; los catálogos existentes TODAVÍA NO están migrados. Los números de ejemplo no reservan IDs.
@@ -47,3 +49,7 @@ Una definición final tendrá `id: "PLT#000001"` y `tag: "triticum_aestivum"`. E
 5. Versionar los esquemas afectados y documentar compatibilidad. Las migraciones de partidas se introducirán cuando existan partidas reales.
 
 Mientras tanto, los IDs actuales como `species_cultivation`, `plant_dwarf_birch` y `tropical_forest` siguen siendo válidos. No mezclar los IDs ilustrativos nuevos con los catálogos. Versiones, códigos de idioma, tipos de evento, claves de revisión y niveles numéricos de elevación no son definiciones de entidades y no requieren estos prefijos.
+
+## Asignaciones de recursos existentes
+
+Los nuevos recursos ya usan IDs RES. `data/resources/resources.catalog.guide.json` registra las 104 asignaciones iniciales. Esto no migra IDs anteriores de especies o tecnologías ni reserva los ejemplos de la tabla anterior. Conservar IDs asignados; no reasignarlos según posición del arreglo.

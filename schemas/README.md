@@ -21,3 +21,11 @@ Los esquemas son contratos estructurales iniciales, no esquemas completos del do
 El verificador propio comprueba formato JSON, unicidad, referencias del mundo, conteos, traducciones, orden/importaciones/ciclos tecnológicos y enlaces Markdown. No ejecuta validación JSON Schema, no comprueba todos los campos ni valida taxonomía, tecnologías externas o balance. Los esquemas completos de agricultura y partidas y la integración con un validador formal quedan pendientes.
 
 [Complete JSON structures and examples](../lang/en/json-structures.md) · [Estructuras JSON completas y ejemplos](../lang/es/json-structures.md)
+
+## Resource guide structural schema
+
+`resource.guide.schema.json` is a full structural schema for the current resource guide (schema 1.0.0), including localized text, inventory metadata, source bindings, tag mappings, process endpoints and review fields. It uses reusable `$defs`, disallows unknown fields and keeps unapproved recipe quantities null. Unlike the earlier catalog envelopes, it covers nested resource structure.
+
+The standard-library checker does not execute a general JSON Schema engine; `tools/validate_resources.py` instead checks resource identity, cross-catalog references, inverse links, services, review boundaries and counts. Structural schema validation by an external validator remains separate; chemistry, taxonomy and balance are not verified.
+
+`resource.guide.schema.json` define la estructura completa de la guía actual de recursos, incluidos objetos internos. A diferencia de los esquemas anteriores de envoltura, cubre el detalle del catálogo. El verificador propio comprueba identidad, referencias, vínculos inversos, servicios, límites pendientes y conteos; no ejecuta un motor general JSON Schema ni verifica química, taxonomía o balance.

@@ -1,5 +1,7 @@
 # Estructura y responsabilidades del repositorio
 
+[Catálogo de recursos y relaciones](resources.md)
+
 Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
 
 Este repositorio reúne documentación, catálogos de diseño y simulaciones educativas pequeñas. La raíz equivale a `evolve/`; no se agrega otra carpeta `evolve` adentro.
@@ -11,7 +13,7 @@ Este repositorio reúne documentación, catálogos de diseño y simulaciones edu
 | `data/animals` | Candidatos de fauna; después especies exactas, poblaciones, domesticación y productos. |
 | `data/plants` | Candidatos de flora y cultivos; después especies, ancestros, variedades, reproducción y productos. |
 | `data/minerals` | Candidatos geológicos; después yacimientos, extracción, procesamiento y requisitos. |
-| `data/resources` | Recursos recolectados o extraídos para producción y recetas. Es una carpeta documentada pendiente, no un catálogo jugable vacío. |
+| `data/resources` | 104 materiales con vínculos de origen y extremos de transformación; cantidades y recetas pendientes. |
 | `data/technologies` | Tecnologías al mismo nivel, requisitos, costos de investigación y eurekas. |
 | `schemas` | Contratos estructurales iniciales y sus límites. |
 | `simulation` | Datos de ejemplo y demostraciones ejecutables; no el motor definitivo. |
@@ -21,7 +23,7 @@ Este repositorio reúne documentación, catálogos de diseño y simulaciones edu
 
 La guía principal es `data/world/world.catalog.guide.json`. Sus rutas `catalogFiles` se resuelven respecto de ese archivo. Plantas y animales tienen `speciesCandidates`; plantas también tiene `agriculturalCropCandidates`. Minerales contiene `geologicalResourceCandidates`. El mundo conserva las 485 `resourceOccurrences`, cuyos `definitionId` apuntan a esos catálogos.
 
-La separación conserva todos los registros originales sin otra copia combinada que compita como fuente principal. El esquema/contenido del mundo pasa a 1.1.0/0.2.0 por este cambio de organización. Agricultura permanece sin cambios en 2.0.0/0.3.0.
+La separación conserva todos los registros originales sin otra copia combinada que compita como fuente principal. La separación inicial usó mundo 1.1.0/0.2.0. Los vínculos de recursos usan ahora mundo 1.2.0/0.3.0, guías de plantas/animales/minerales 1.1.0/0.2.0 y guía de recursos 1.0.0/0.1.0. Agricultura permanece sin cambios en 2.0.0/0.3.0.
 
 `null` significa pendiente. Una lista regional vacía no permite aparición mundial. Los catálogos guía siguen deshabilitados para generación real. Se conserva la clasificación del documento: por ejemplo, los líquenes permanecen en flora hasta revisarlos.
 

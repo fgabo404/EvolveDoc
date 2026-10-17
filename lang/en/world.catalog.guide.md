@@ -1,5 +1,7 @@
 # Evolve — World Catalog Design Guide
 
+[Resource catalog and relationships](resources.md)
+
 [Simple visual reference](visual-reference.md)
 
 Complete nested JSON structures, types and examples: [JSON reference](json-structures.md).
@@ -54,7 +56,7 @@ The original source document is represented by its exact connector file ID and s
 
 Every occurrence has `runtimeEnabled: false`, `guaranteedPresence: false` and an unknown spawn probability. No abundance, growth rate, fertility range, domestication duration or yield was invented.
 
-Fauna product tags only transcribe potential uses in the document. They are not confirmed yields or automatic unlocks. `antlers_or_horns` must be resolved by species; never grant both by default. Plant products remain unresolved because the regional lists do not consistently specify outputs.
+Fauna product tags only transcribe potential uses in the document. They are not confirmed yields or automatic unlocks. `antlers_or_horns` must be resolved by species; never grant both by default. Selected plant products and all crop products now have proposed resource links; exact species, acquisition requirements and quantities remain unresolved. These proposals are additional design data, not verbatim source claims.
 
 ## 6. World-generation rules
 
@@ -96,3 +98,7 @@ Checked source occurrence coverage, translation-map coverage, unique candidate I
   "agriculturalCropCandidateCount": 21
 }
 ```
+
+## Resource integration update
+
+World schema/content is now 1.2.0/0.3.0; `catalogFiles.resources` references the resource guide. Plant, animal and mineral guides are 1.1.0/0.2.0 with additive output references. The original 485 source occurrences and candidate IDs are unchanged. `extractedResourceId` identifies a collected/extracted material, not automatically refined metal.

@@ -16,8 +16,8 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.1.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.1.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.2.0"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Códigos de idioma disponibles. | `["en", "es"]` |
@@ -43,6 +43,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `refinedOutputResourceId` | `null` | 57/57 | Referencia al recurso procesado; extraer no concede metal refinado directamente. | `null` |
 | `surfaceAndOreDistinction` | `string` | 57/57 | Regla que distingue material superficial, mena y producto procesado. | `"No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate."` |
 | `sourceLabel` | `string` | 57/57 | Etiqueta original en español para trazabilidad, no texto localizado de interfaz. | `"Arcilla"` |
+| `extractedResourceId` | `string` | 57/57 | Material obtenido mediante futura acción; nunca metal refinado automático. | `"RES#000047"` |
 
 ### `$.geologicalResourceCandidates[].name`
 
@@ -57,8 +58,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 
 ```json
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -81,7 +82,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
       "geologyConstraints": null,
       "refinedOutputResourceId": null,
       "surfaceAndOreDistinction": "No refined metal is granted directly by a deposit. Extraction and processing recipes remain separate.",
-      "sourceLabel": "Arcilla"
+      "sourceLabel": "Arcilla",
+      "extractedResourceId": "RES#000047"
     }
   ]
 }

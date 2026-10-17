@@ -104,6 +104,8 @@ def technologies(lang,data):
 def candidate_catalog(folder,lang,data,world):
     es=lang=='es';mineral=folder=='minerals';key='geologicalResourceCandidates' if mineral else 'speciesCandidates';records=data[key]
     source=f'{folder}.catalog.guide.json';text=header(folder,lang,source)
+    resource_file=DATA/'resources/resources.catalog.guide.json'
+    resource_by_id={r['id']:r for r in json.loads(resource_file.read_text())['resources']} if resource_file.exists() else {}
     text+=('Candidatos sin taxonomía, ecología, productos o procesos definitivos. Solo se dibujan relaciones existentes. Las etiquetas de productos potenciales no son IDs de recursos ni cantidades producidas.\n\n' if es else 'Candidates do not have finalized taxonomy, ecology, products or processes. Only existing relationships are drawn. Potential product tags are not resource IDs or confirmed production quantities.\n\n')
     variants={v['id']:v for v in world['regionalVariants']};biomes={b['id']:b for b in world['biomes']}
     occurrences=[o for o in world['resourceOccurrences'] if o['definitionId'] in {r['id'] for r in records}]
@@ -123,7 +125,12 @@ def candidate_catalog(folder,lang,data,world):
                 define(vn,name(variant,lang)+' / '+vid);define(bn,name(biomes[bid],lang)+' / '+bid)
                 edges.add((rid,vn,'source occurrence'));edges.add((vn,bn,'biomeId'))
             for j,product in enumerate(record.get('potentialProducts') or []):
-                pid=f'o{i}_{j}';define(pid,product['resourceTag']+' / potential');edges.add((rid,pid,'potentialProducts'))
+                product_id=product.get('resourceId')
+                title=(name(resource_by_id[product_id],lang)+' / '+product_id) if product_id in resource_by_id else product.get('resourceTag','unresolved')
+                pid=f'o{i}_{j}';define(pid,title+' / potential');edges.add((rid,pid,'potentialProducts'))
+            if record.get('extractedResourceId'):
+                material=resource_by_id[record['extractedResourceId']]
+                define('r'+str(i),name(material,lang)+' / '+material['id']);edges.add((rid,'r'+str(i),'extractedResourceId / proposed'))
         for a,b,k in sorted(edges):lines.append(f'    {a} -->|{k}| {b}')
         text+=mermaid(lines,'LR')+'\n'
     if folder=='plants':
@@ -137,6 +144,9 @@ def candidate_catalog(folder,lang,data,world):
                 tag=crop['cropUseTag']
                 if tag not in tags:tags[tag]='g'+str(len(tags));lines.append(node(tags[tag],tag))
                 lines.append(f'    c{i} -->|cropUseTag| {tags[tag]}')
+                for j,product in enumerate(crop.get('products') or []):
+                    resource=resource_by_id[product['resourceId']]
+                    lines.append(node(f'r{i}_{j}',name(resource,lang)+' / '+resource['id']));lines.append(f'    c{i} -->|products / proposed| r{i}_{j}')
             text+=mermaid(lines,'LR')+'\n'
         text+=table(['id','Nombre' if es else 'Name','cropUseTag','sourceOriginHint'],[(c['id'],name(c,lang),c['cropUseTag'],c['sourceOriginHint']) for c in crops])+'\n'
     text+=('## Todas las apariciones de la fuente\n\n' if es else '## Every source occurrence\n\n')
@@ -167,6 +177,44 @@ def world_catalog(lang,world):
     return text
 
 
+def resource_catalog(lang,data):
+    es=lang=='es';text=header('resources',lang,'resources.catalog.guide.json');resources=data['resources'];by_id={r['id']:r for r in resources}
+    text+=('Los recursos son materiales de inventario; árboles, animales y yacimientos son sus posibles orígenes. Las relaciones están deshabilitadas hasta revisar acciones, especies y cantidades. Las transformaciones son guías de extremos, no recetas completas.\n\n' if es else 'Resources are inventory materials; trees, animals and deposits are possible sources. Relations remain disabled pending action, species and quantity review. Transformations are endpoint guides, not complete recipes.\n\n')
+    text+=table(['id','tag','Nombre' if es else 'Name','category','stage'],[(r['id'],r['tag'],name(r,lang),r['category'],r['stage']) for r in resources])+'\n'
+    text+=('## Todos los recursos\n\n' if es else '## Every resource\n\n')
+    for number,group in enumerate(chunks(resources),1):
+        text+=f'### '+('Grupo' if es else 'Group')+f' {number}\n\n';lines=[];sources={};categories={}
+        for i,r in enumerate(group):
+            lines.append(node('r'+str(i),name(r,lang)+' / '+r['id']))
+            category=r['category']
+            if category not in categories:categories[category]='k'+str(len(categories));lines.append(node(categories[category],category))
+            lines.append(f'    r{i} -->|category| {categories[category]}')
+            origins=sorted({b['sourceCollection'] for b in data['sourceBindings'] if b['resourceId']==r['id']})
+            for origin in origins:
+                if origin not in sources:sources[origin]='s'+str(len(sources));lines.append(node(sources[origin],origin))
+                lines.append(f'    {sources[origin]} -->|possible source| r{i}')
+        text+=mermaid(lines,'LR')+'\n'
+    text+=('## Transformaciones propuestas\n\nCada caja processTag agrupa sus entradas conocidas; pueden faltar combustible, agua, instalaciones y otras entradas. No es una receta operativa.\n\n' if es else '## Proposed transformations\n\nEach processTag groups its known input endpoints; fuel, water, facilities and other inputs may still be missing. This is not an operational recipe.\n\n')
+    for number,group in enumerate(chunks(data['processingLinks'],3),1):
+        text+=f'### '+('Procesos' if es else 'Processes')+f' {number}\n\n';lines=[];defined={}
+        for i,process in enumerate(group):
+            lines.append(node('p'+str(i),process['processTag']+' / guide'))
+            for key,direction in [('inputResourceIds','input'),('outputResourceIds','output')]:
+                for rid in process[key]:
+                    if rid not in defined:
+                        defined[rid]='r'+str(len(defined));lines.append(node(defined[rid],name(by_id[rid],lang)+' / '+rid))
+                    if direction=='input':lines.append(f'    {defined[rid]} -->|input endpoint| p{i}')
+                    else:lines.append(f'    p{i} -->|output endpoint| {defined[rid]}')
+        text+=mermaid(lines,'LR')+'\n'
+    text+=('## Todos los vínculos de origen\n\n' if es else '## All source bindings\n\n')
+    text+=table(['sourceCollection','sourceId','resourceId','requiresProcessing','reviewStatus'],[(b['sourceCollection'],b['sourceId'],b['resourceId'],str(b['requiresProcessing']).lower(),b['reviewStatus']) for b in data['sourceBindings']])+'\n'
+    text+=('## Tags de la fuente animal\n\n' if es else '## Animal source tags\n\n')
+    text+=table(['sourceTag','targetKind','resourceIds','resolutionStatus'],[(m['sourceTag'],m['targetKind'],', '.join(m['resourceIds']) or 'none',m['resolutionStatus']) for m in data['sourceTagMappings']])+'\n'
+    text+=('## Orígenes pendientes\n\n' if es else '## Unresolved sources\n\n')
+    text+=table(['resourceId','reason'],[(x['resourceId'],x['reason']) for x in data['unresolvedSources']])+'\n'
+    return text
+
+
 def documents():
     world=read('data/world/world.catalog.guide.json');tech=read('data/technologies/agriculture.technologies.json');output={}
     for lang in ['en','es']:
@@ -175,12 +223,15 @@ def documents():
         output[f'data/world/{filename}']=world_catalog(lang,world)
         for folder in ['plants','animals','minerals']:
             output[f'data/{folder}/{filename}']=candidate_catalog(folder,lang,read(f'data/{folder}/{folder}.catalog.guide.json'),world)
-        output[f'data/resources/{filename}']=header('resources',lang,None)+( 'No existe un JSON de recursos todavía. Madera, piedra y grano son ejemplos de recursos futuros, no definiciones ya implementadas. No se dibujan productos, recetas ni rendimientos inventados. El catálogo tendrá su diagrama completo cuando se definan sus registros.\n' if es else 'No resource JSON exists yet. Wood, stone and grain are examples of future resources, not implemented definitions. No invented outputs, recipes or yields are drawn. A complete catalog diagram will accompany its definitions.\n')
+        resource_data=read('data/resources/resources.catalog.guide.json')
+        output[f'data/resources/{filename}']=resource_catalog(lang,resource_data)
         index=('# Diagramas completos por catálogo\n\n' if es else '# Complete diagrams by catalog\n\n')
         index+=('Un archivo específico junto a cada JSON, dividido en diagramas pequeños. GitHub los representa en la vista normal del Markdown.\n\n' if es else 'One dedicated file beside each catalog JSON, divided into small diagrams. GitHub renders them in the normal Markdown view.\n\n')
         for folder in ['technologies','world','plants','animals','minerals','resources']:
             index+=f'- [{folder}](../../data/{folder}/{filename})\n'
         index+=('\nCobertura actual: 23 tecnologías, 9 importaciones tecnológicas, 7 biomas, 27 variantes regionales, 129 candidatos vegetales, 134 animales, 57 geológicos, 21 candidatos agrícolas y las 485 apariciones de la fuente. Recursos sigue sin catálogo.\n\nLos diagramas muestran relaciones; las tablas que los acompañan conservan parámetros y apariciones repetidas. No inventan evolución biológica, domesticación, productos ni procesamiento. Las estructuras campo por campo siguen en la [referencia de JSON](json-structures.md).\n' if es else '\nCurrent coverage: 23 technologies, 9 external technology imports, 7 biomes, 27 regional variants, 129 plant candidates, 134 animal candidates, 57 geological candidates, 21 crop candidates and all 485 source occurrences. Resources has no catalog yet.\n\nDiagrams show relationships; accompanying tables retain parameters and repeated occurrences. They do not invent biological evolution, domestication, outputs or processing. Field-by-field structures remain in the [JSON reference](json-structures.md).\n')
+        index=index.replace('Recursos sigue sin catálogo.',f"Recursos: {len(resource_data['resources'])} materiales, {len(resource_data['sourceBindings'])} vínculos de origen y {len(resource_data['processingLinks'])} guías de transformación pendientes de revisión.")
+        index=index.replace('Resources has no catalog yet.',f"Resources: {len(resource_data['resources'])} materials, {len(resource_data['sourceBindings'])} source bindings and {len(resource_data['processingLinks'])} transformation guides pending review.")
         index+=('\nActualizar con `python tools/generate_catalog_diagrams.py`; verificar con `--check`.\n' if es else '\nUpdate with `python tools/generate_catalog_diagrams.py`; verify with `--check`.\n')
         output[f'lang/{lang}/catalog-diagrams.md']=index
     return {path: content.rstrip()+'\n' for path,content in output.items()}

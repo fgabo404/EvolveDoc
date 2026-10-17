@@ -16,8 +16,8 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.1.0"` |
+| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.1.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.2.0"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Language codes available in this document. | `["en", "es"]` |
@@ -103,6 +103,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `status` | `string` | 295/295 | Maturity, review state or current example research status; read the containing object. | `"potential_from_source"` |
 | `requiredTechnologyIds` | `null` | 295/295 | Technology references needed for this output; null means unresolved, not none. | `null` |
 | `yield` | `null` | 295/295 | Output yield; units, formula and amount remain unresolved. | `null` |
+| `resourceId` | `string` | 264/295 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000029"` |
 
 ## Complete example document with reduced repeated arrays
 
@@ -110,8 +111,8 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 
 ```json
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -165,7 +166,8 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
           "resourceTag": "meat",
           "status": "potential_from_source",
           "requiredTechnologyIds": null,
-          "yield": null
+          "yield": null,
+          "resourceId": "RES#000029"
         }
       ],
       "potentialUseMethods": [

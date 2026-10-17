@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -327,7 +327,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000021",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -1478,7 +1485,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000024",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -1570,7 +1584,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000019",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -1708,7 +1729,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000008",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -1754,7 +1782,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -1892,7 +1927,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -2306,7 +2348,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000015",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -2628,7 +2677,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -2858,7 +2914,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -4287,7 +4350,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -4333,7 +4403,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -4609,7 +4686,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -4655,7 +4739,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -4701,7 +4792,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -4931,7 +5029,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -4977,7 +5082,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -5529,7 +5641,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -5621,7 +5740,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000007",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -5713,7 +5839,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000020",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -5851,7 +5984,14 @@
         "domesticatedFormId": null,
         "criteria": null
       },
-      "potentialProducts": null,
+      "potentialProducts": [
+        {
+          "resourceId": "RES#000001",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "potentialUseMethods": [],
       "cultivationResearch": {
         "technologyId": "species_cultivation",
@@ -5970,7 +6110,20 @@
         "technologyId": "species_cultivation",
         "speciesId": "wheat"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000007",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        },
+        {
+          "resourceId": "RES#000028",
+          "status": "proposed_byproduct_requires_harvest_method_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -5989,7 +6142,20 @@
         "technologyId": "species_cultivation",
         "speciesId": "barley"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000008",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        },
+        {
+          "resourceId": "RES#000028",
+          "status": "proposed_byproduct_requires_harvest_method_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6008,7 +6174,20 @@
         "technologyId": "species_cultivation",
         "speciesId": "rice"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000009",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        },
+        {
+          "resourceId": "RES#000028",
+          "status": "proposed_byproduct_requires_harvest_method_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6027,7 +6206,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "maize"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000010",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6046,7 +6232,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "sorghum"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000011",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6065,7 +6258,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "millet"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000012",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6084,7 +6284,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "potato"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000013",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6103,7 +6310,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "cassava"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000014",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6122,7 +6336,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "beans"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000015",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6141,7 +6362,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "lentils"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000016",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6160,7 +6388,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "chickpeas"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000017",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6179,7 +6414,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "peas"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000018",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6198,7 +6440,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "squash"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000019",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6217,7 +6466,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "grapevine"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000020",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6236,7 +6492,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "olive"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000021",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6255,7 +6518,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "fig"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000022",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6274,7 +6544,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "date_palm"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000023",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6293,7 +6570,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "cacao"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000024",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6312,7 +6596,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "coffee"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000025",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6331,7 +6622,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "sugarcane"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000026",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     },
@@ -6350,7 +6648,14 @@
         "technologyId": "species_cultivation",
         "speciesId": "cotton"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000027",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     }

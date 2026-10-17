@@ -16,8 +16,8 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.1.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.1.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.2.0"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Códigos de idioma disponibles. | `["en", "es"]` |
@@ -47,7 +47,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `ecology` | `object` | 129/129 | Requisitos ambientales; los valores cuantitativos están pendientes. | `—` |
 | `propagation` | `object` | 129/129 | Métodos de reproducción y materiales requeridos, todavía en diseño. | `—` |
 | `domestication` | `object` | 129/129 | Elegibilidad, relaciones con ancestros/formas y criterios de selección. | `—` |
-| `potentialProducts` | `null` | 129/129 | Usos potenciales de la fuente; no son productos, cantidades o desbloqueos confirmados. | `null` |
+| `potentialProducts` | `array<object> \| null` | 129/129 | Usos potenciales de la fuente; no son productos, cantidades o desbloqueos confirmados. | `—` |
 | `potentialUseMethods` | `array<?>` | 129/129 | Métodos de uso potenciales de la fuente, no acciones ya autorizadas del juego. | `[]` |
 | `cultivationResearch` | `object` | 129/129 | Relación ilustrativa con investigación por especie; null indica vínculo no definido. | `—` |
 | `sourceLabel` | `string` | 129/129 | Etiqueta original en español para trazabilidad, no texto localizado de interfaz. | `"Abedul enano"` |
@@ -104,6 +104,15 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `speciesId` | `string` | 129/129 | Vínculo de especie/cultivo; $speciesId se resuelve desde la investigación actual; null indica ámbito de civilización. | `"plant_dwarf_birch"` |
 | `eligibility` | `string` | 129/129 | Elegibilidad del candidato para este mecanismo y revisión necesaria. | `"Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultu…` |
 
+### `$.speciesCandidates[].potentialProducts[]`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `resourceId` | `string` | 20/20 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000021"` |
+| `status` | `string` | 20/20 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"proposed_requires_species_and_action_review"` |
+| `requiredTechnologyIds` | `null` | 20/20 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
+| `yield` | `null` | 20/20 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
+
 ### `$.agriculturalCropCandidates[]`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
@@ -116,7 +125,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `resolutionStatus` | `string` | 21/21 | Tarea pendiente para resolver el candidato o restricción regional. | `"select_exact_species_and_wild_ancestor"` |
 | `wildAncestorCandidateIds` | `array<?>` | 21/21 | Posibles ancestros pendientes de revisión científica. | `[]` |
 | `cultivationResearch` | `object` | 21/21 | Relación ilustrativa con investigación por especie; null indica vínculo no definido. | `—` |
-| `products` | `null` | 21/21 | Productos agrícolas pendientes de recursos y recetas. | `null` |
+| `products` | `array<object>` | 21/21 | Productos agrícolas pendientes de recursos y recetas. | `—` |
 | `ecologicalConstraints` | `null` | 21/21 | Reglas ambientales del cultivo pendientes de formalización. | `null` |
 | `sourceSection` | `string` | 21/21 | Sección de la fuente de la que se extrajo la entrada. | `"5. Initial agricultural and plant catalog"` |
 
@@ -134,14 +143,23 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `technologyId` | `string` | 21/21 | Referencia a una definición tecnológica o importación externa declarada. | `"species_cultivation"` |
 | `speciesId` | `string` | 21/21 | Vínculo de especie/cultivo; $speciesId se resuelve desde la investigación actual; null indica ámbito de civilización. | `"wheat"` |
 
+### `$.agriculturalCropCandidates[].products[]`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `resourceId` | `string` | 24/24 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000007"` |
+| `status` | `string` | 24/24 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"proposed_requires_species_and_action_review"` |
+| `requiredTechnologyIds` | `null` | 24/24 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
+| `yield` | `null` | 24/24 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
+
 ## Ejemplo de documento completo con arreglos repetidos reducidos
 
 JSON válido copiado de registros reales. Los arreglos repetidos de objetos se reducen para lectura; se conservan claves y listas escalares de los registros elegidos. El ejemplo no garantiza referencias completas porque puede apuntar a entradas omitidas. Para cargar o validar, utilizar el JSON fuente y catálogos relacionados.
 
 ```json
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -217,7 +235,14 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         "technologyId": "species_cultivation",
         "speciesId": "wheat"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000007",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     }

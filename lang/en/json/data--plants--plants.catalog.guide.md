@@ -16,8 +16,8 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.1.0"` |
+| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.1.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.2.0"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Language codes available in this document. | `["en", "es"]` |
@@ -47,7 +47,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `ecology` | `object` | 129/129 | Environmental requirements; quantitative values remain unresolved. | `—` |
 | `propagation` | `object` | 129/129 | Reproduction/propagation methods and required materials, still under design. | `—` |
 | `domestication` | `object` | 129/129 | Eligibility, ancestor/form relationships and selection criteria. | `—` |
-| `potentialProducts` | `null` | 129/129 | Potential source uses; not confirmed outputs, quantities or unlocks. | `null` |
+| `potentialProducts` | `array<object> \| null` | 129/129 | Potential source uses; not confirmed outputs, quantities or unlocks. | `—` |
 | `potentialUseMethods` | `array<?>` | 129/129 | Potential source use methods, not authorized gameplay actions. | `[]` |
 | `cultivationResearch` | `object` | 129/129 | Illustrative link to per-species research; null means no binding specified. | `—` |
 | `sourceLabel` | `string` | 129/129 | Exact Spanish source label for provenance, not a localized UI field. | `"Abedul enano"` |
@@ -104,6 +104,15 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `speciesId` | `string` | 129/129 | Species/crop binding; $speciesId resolves from the current research instance; null denotes civilization scope. | `"plant_dwarf_birch"` |
 | `eligibility` | `string` | 129/129 | Whether and under what review a candidate may use this mechanism. | `"Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultu…` |
 
+### `$.speciesCandidates[].potentialProducts[]`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `resourceId` | `string` | 20/20 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000021"` |
+| `status` | `string` | 20/20 | Maturity, review state or current example research status; read the containing object. | `"proposed_requires_species_and_action_review"` |
+| `requiredTechnologyIds` | `null` | 20/20 | Technology references needed for this output; null means unresolved, not none. | `null` |
+| `yield` | `null` | 20/20 | Output yield; units, formula and amount remain unresolved. | `null` |
+
 ### `$.agriculturalCropCandidates[]`
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
@@ -116,7 +125,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `resolutionStatus` | `string` | 21/21 | Task still required to resolve a candidate or regional restriction. | `"select_exact_species_and_wild_ancestor"` |
 | `wildAncestorCandidateIds` | `array<?>` | 21/21 | Possible ancestor links pending scientific review. | `[]` |
 | `cultivationResearch` | `object` | 21/21 | Illustrative link to per-species research; null means no binding specified. | `—` |
-| `products` | `null` | 21/21 | Crop outputs awaiting resource definitions and recipes. | `null` |
+| `products` | `array<object>` | 21/21 | Crop outputs awaiting resource definitions and recipes. | `—` |
 | `ecologicalConstraints` | `null` | 21/21 | Crop environmental rules awaiting formalization. | `null` |
 | `sourceSection` | `string` | 21/21 | Source section from which this entry was extracted. | `"5. Initial agricultural and plant catalog"` |
 
@@ -134,14 +143,23 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `technologyId` | `string` | 21/21 | Reference to a technology definition or declared external import. | `"species_cultivation"` |
 | `speciesId` | `string` | 21/21 | Species/crop binding; $speciesId resolves from the current research instance; null denotes civilization scope. | `"wheat"` |
 
+### `$.agriculturalCropCandidates[].products[]`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `resourceId` | `string` | 24/24 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000007"` |
+| `status` | `string` | 24/24 | Maturity, review state or current example research status; read the containing object. | `"proposed_requires_species_and_action_review"` |
+| `requiredTechnologyIds` | `null` | 24/24 | Technology references needed for this output; null means unresolved, not none. | `null` |
+| `yield` | `null` | 24/24 | Output yield; units, formula and amount remain unresolved. | `null` |
+
 ## Complete example document with reduced repeated arrays
 
 Valid JSON copied from actual records. Repeated object arrays are shortened for readability; object keys and scalar lists of the retained records are preserved. This sample does not guarantee cross-reference closure because records may refer to omitted entries. Use the source JSON and sibling catalogs for loading or validation.
 
 ```json
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -217,7 +235,14 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
         "technologyId": "species_cultivation",
         "speciesId": "wheat"
       },
-      "products": null,
+      "products": [
+        {
+          "resourceId": "RES#000007",
+          "status": "proposed_requires_species_and_action_review",
+          "requiredTechnologyIds": null,
+          "yield": null
+        }
+      ],
       "ecologicalConstraints": null,
       "sourceSection": "5. Initial agricultural and plant catalog"
     }

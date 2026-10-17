@@ -36,16 +36,18 @@ EvolveDoc/
 | Architecture and repository layout | [Structure](lang/en/repository.md) | [Estructura](lang/es/repository.md) |
 | Stable ID and tag conventions | [Identifiers](lang/en/identifiers.md) | [Identificadores](lang/es/identifiers.md) |
 | Complete JSON field references | [All JSON structures](lang/en/json-structures.md) | [Todas las estructuras JSON](lang/es/json-structures.md) |
+| Resource catalog | [Resources](lang/en/resources.md) | [Recursos](lang/es/resources.md) |
 | Agriculture contract | [Agriculture](lang/en/agriculture.technologies.md) | [Agricultura](lang/es/agriculture.technologies.md) |
 | World and species guide | [World guide](lang/en/world.catalog.guide.md) | [Guía del mundo](lang/es/world.catalog.guide.md) |
 | Simulation examples | [Examples](lang/en/simulation.md) | [Ejemplos](lang/es/simulation.md) |
 
 ## Current content
 
+- 104 resources, 365 possible source links and 25 transformation endpoint guides; units, yields and recipes remain unresolved.
 - 23 flat agriculture technologies; their existing IDs and gameplay configuration are preserved.
 - 7 biomes, 27 regional variants and 485 source occurrences.
 - 129 plant candidates, 134 animal candidates, 57 geological candidates and 21 agricultural crop candidates.
-- Nomenclature contract: three-letter English prefix plus six digits, with a separate English `snake_case` tag. Migration of existing IDs is pending.
+- Nomenclature contract: three-letter English prefix plus six digits, with a separate English `snake_case` tag. New resources already use RES IDs; migration of legacy species/technology IDs is pending.
 - A runnable research example, structural validation and bilingual documentation.
 
 Candidates are not scientifically finalized species. Unknown values remain `null`, and guide catalogs are disabled for runtime generation. Evolution, domestication, yields, mineral processing and world-generation formulas still require design. No full engine or graphics is included.

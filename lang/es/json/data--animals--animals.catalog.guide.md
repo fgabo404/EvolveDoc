@@ -16,8 +16,8 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.1.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.1.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.2.0"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Códigos de idioma disponibles. | `["en", "es"]` |
@@ -103,6 +103,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `status` | `string` | 295/295 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"potential_from_source"` |
 | `requiredTechnologyIds` | `null` | 295/295 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
 | `yield` | `null` | 295/295 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
+| `resourceId` | `string` | 264/295 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000029"` |
 
 ## Ejemplo de documento completo con arreglos repetidos reducidos
 
@@ -110,8 +111,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 
 ```json
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -165,7 +166,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
           "resourceTag": "meat",
           "status": "potential_from_source",
           "requiredTechnologyIds": null,
-          "yield": null
+          "yield": null,
+          "resourceId": "RES#000029"
         }
       ],
       "potentialUseMethods": [

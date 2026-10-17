@@ -1,0 +1,451 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evolve resource design guide",
+  "description": "Structural contract for the resource guide. Does not validate cross-file references, scientific evidence, processing feasibility, quantities or gameplay balance.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "contentVersion",
+    "kind",
+    "status",
+    "defaultLanguage",
+    "supportedLanguages",
+    "identityPolicy",
+    "runtimePolicy",
+    "resources",
+    "sourceBindings",
+    "sourceTagMappings",
+    "processingLinks",
+    "unresolvedSources",
+    "reviewIssues",
+    "summary"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "contentVersion": {
+      "type": "string"
+    },
+    "kind": {
+      "const": "resource_catalog_design_guide"
+    },
+    "status": {
+      "type": "string"
+    },
+    "defaultLanguage": {
+      "const": "en"
+    },
+    "supportedLanguages": {
+      "const": [
+        "en",
+        "es"
+      ]
+    },
+    "identityPolicy": {
+      "type": "string"
+    },
+    "runtimePolicy": {
+      "$ref": "#/$defs/runtimePolicy"
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/resource"
+      }
+    },
+    "sourceBindings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sourceBinding"
+      }
+    },
+    "sourceTagMappings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sourceTagMapping"
+      }
+    },
+    "processingLinks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/processingLink"
+      }
+    },
+    "unresolvedSources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/unresolvedSource"
+      }
+    },
+    "reviewIssues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/reviewIssue"
+      }
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "required": [
+        "en",
+        "es"
+      ],
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "resourceId": {
+      "type": "string",
+      "pattern": "^RES#[0-9]{6}$",
+      "not": {
+        "pattern": "#000000$"
+      }
+    },
+    "inventory": {
+      "type": "object",
+      "required": [
+        "storable",
+        "quantityUnit",
+        "perishable",
+        "storageRules"
+      ],
+      "properties": {
+        "storable": {
+          "const": true
+        },
+        "quantityUnit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "perishable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "storageRules": {
+          "type": "null"
+        }
+      },
+      "additionalProperties": false
+    },
+    "resource": {
+      "type": "object",
+      "required": [
+        "id",
+        "tag",
+        "name",
+        "description",
+        "category",
+        "stage",
+        "tags",
+        "inventory",
+        "definitionStatus"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/resourceId"
+        },
+        "tag": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+        },
+        "name": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "description": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "category": {
+          "type": "string"
+        },
+        "stage": {
+          "enum": [
+            "raw",
+            "intermediate",
+            "processed",
+            "refined"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inventory": {
+          "$ref": "#/$defs/inventory"
+        },
+        "definitionStatus": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceBinding": {
+      "type": "object",
+      "required": [
+        "sourceCollection",
+        "sourceId",
+        "resourceId",
+        "acquisitionTag",
+        "reviewStatus",
+        "quantityPerAction",
+        "runtimeEnabled",
+        "requiresProcessing"
+      ],
+      "properties": {
+        "sourceCollection": {
+          "enum": [
+            "plantSpeciesCandidates",
+            "animalSpeciesCandidates",
+            "agriculturalCropCandidates",
+            "geologicalResourceCandidates"
+          ]
+        },
+        "sourceId": {
+          "type": "string"
+        },
+        "resourceId": {
+          "$ref": "#/$defs/resourceId"
+        },
+        "acquisitionTag": {
+          "type": "string"
+        },
+        "reviewStatus": {
+          "type": "string"
+        },
+        "quantityPerAction": {
+          "type": "null"
+        },
+        "runtimeEnabled": {
+          "const": false
+        },
+        "requiresProcessing": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceTagMapping": {
+      "type": "object",
+      "required": [
+        "sourceTag",
+        "targetKind",
+        "resourceIds",
+        "resolutionStatus",
+        "note"
+      ],
+      "properties": {
+        "sourceTag": {
+          "type": "string"
+        },
+        "targetKind": {
+          "enum": [
+            "resource",
+            "service",
+            "unresolved_anatomical_alternative"
+          ]
+        },
+        "resourceIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resourceId"
+          }
+        },
+        "resolutionStatus": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "processingLink": {
+      "type": "object",
+      "required": [
+        "processTag",
+        "inputResourceIds",
+        "outputResourceIds",
+        "description",
+        "requiredTechnologyIds",
+        "inputQuantities",
+        "outputQuantities",
+        "facilities",
+        "byproducts",
+        "recipeId",
+        "runtimeEnabled"
+      ],
+      "properties": {
+        "processTag": {
+          "type": "string"
+        },
+        "inputResourceIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resourceId"
+          }
+        },
+        "outputResourceIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resourceId"
+          }
+        },
+        "description": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "requiredTechnologyIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "inputQuantities": {
+          "type": "null"
+        },
+        "outputQuantities": {
+          "type": "null"
+        },
+        "facilities": {
+          "type": "null"
+        },
+        "byproducts": {
+          "type": "null"
+        },
+        "recipeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "runtimeEnabled": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "unresolvedSource": {
+      "type": "object",
+      "required": [
+        "resourceId",
+        "reason"
+      ],
+      "properties": {
+        "resourceId": {
+          "$ref": "#/$defs/resourceId"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "reviewIssue": {
+      "type": "object",
+      "required": [
+        "id",
+        "resolution"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "resolution": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "runtimePolicy": {
+      "type": "object",
+      "required": [
+        "loadAsGameDefinitions",
+        "unknownValues",
+        "sourceBindings",
+        "processingLinks",
+        "services",
+        "provenance"
+      ],
+      "properties": {
+        "loadAsGameDefinitions": {
+          "const": false
+        },
+        "unknownValues": {
+          "type": "string"
+        },
+        "sourceBindings": {
+          "type": "string"
+        },
+        "processingLinks": {
+          "type": "string"
+        },
+        "services": {
+          "type": "string"
+        },
+        "provenance": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "resourceCount",
+        "sourceBindingCount",
+        "processingLinkCount",
+        "sourceTagMappingCount",
+        "geologicalSourceCount",
+        "cropSourceCount"
+      ],
+      "properties": {
+        "resourceCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceBindingCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "processingLinkCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceTagMappingCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "geologicalSourceCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cropSourceCount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

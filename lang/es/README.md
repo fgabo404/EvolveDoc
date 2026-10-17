@@ -1,12 +1,14 @@
 # Evolve — Referencia de diseño y simulación
 
+[Catálogo de recursos y relaciones](resources.md)
+
 [Diagramas completos de cada catálogo](catalog-diagrams.md)
 
 [Referencia gráfica sencilla](visual-reference.md)
 
 Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
 
-Última actualización documentada: 2026-10-16 (America/Guatemala).
+Última actualización documentada: 2026-10-17 (America/Guatemala).
 
 Esta carpeta es la referencia compartida para diseñar, implementar y revisar el proyecto. Los Markdown sirven tanto para personas como para herramientas de desarrollo; no existe un archivo de instrucciones exclusivo para agentes.
 
@@ -66,7 +68,7 @@ Conocer una técnica, disponer de materiales y operar una instalación son compr
 
 - Costes, umbrales de eurekas y balance numérico.
 - JSON Schema formal.
-- Catálogos de especies, recursos, objetos, recetas y lugares.
+- Catálogos ejecutables aprobados: especies, balance/almacenamiento de recursos, objetos, recetas y lugares; las guías no completan su comportamiento operativo.
 - Tecnologías externas y validación completa entre ramas.
 - Código del simulador, guardado/carga y migraciones.
 - Cálculos de suelo, reproducción, domesticación y producción.

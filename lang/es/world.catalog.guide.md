@@ -1,5 +1,7 @@
 # Evolve — Guía de diseño del catálogo del mundo
 
+[Catálogo de recursos y relaciones](resources.md)
+
 [Referencia gráfica sencilla](visual-reference.md)
 
 Estructuras JSON completas, tipos y ejemplos: [referencia de JSON](json-structures.md).
@@ -54,7 +56,7 @@ La procedencia incluye el ID exacto del documento y la huella de la copia adjunt
 
 Todas las apariciones tienen `runtimeEnabled: false`, `guaranteedPresence: false` y probabilidad desconocida. No se inventaron abundancias, crecimiento, rangos de fertilidad, tiempos de domesticación ni rendimientos.
 
-Los productos animales solo transcriben aprovechamientos potenciales del documento. No son desbloqueos ni rendimientos garantizados. `antlers_or_horns` debe concretarse según especie, sin conceder ambos por defecto. Los productos vegetales quedan pendientes porque las listas regionales no los detallan sistemáticamente.
+Los productos animales solo transcriben aprovechamientos potenciales del documento. No son desbloqueos ni rendimientos garantizados. `antlers_or_horns` debe concretarse según especie, sin conceder ambos por defecto. Algunos productos vegetales y todos los cultivos ya tienen vínculos propuestos de recursos; especie exacta, requisitos de obtención y cantidades siguen pendientes. Son propuestas adicionales de diseño, no afirmaciones textuales de la fuente.
 
 ## 6. Reglas del mundo
 
@@ -96,3 +98,7 @@ Se comprobó cobertura de apariciones, traducciones, IDs únicos, referencias, r
   "agriculturalCropCandidateCount": 21
 }
 ```
+
+## Actualización de recursos
+
+El esquema/contenido del mundo es ahora 1.2.0/0.3.0; `catalogFiles.resources` enlaza la guía de recursos. Plantas, animales y minerales usan 1.1.0/0.2.0 con referencias adicionales de productos. Las 485 apariciones y los IDs originales se conservan. `extractedResourceId` identifica material obtenido, no metal refinado automático.

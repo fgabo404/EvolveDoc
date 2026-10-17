@@ -29,3 +29,12 @@
 - Included every plant, animal, geological and crop candidate, plus every regional source occurrence in supporting tables. World diagrams include all biome variants and source counts.
 - Kept resources explicitly pending and did not invent species evolution, products or processing chains.
 - Added a reproducible diagram generator and stale-documentation checks; no JSON definitions or simulation behavior changed.
+
+## 2026-10-17 — Initial linked resource catalog
+
+- Added 104 bilingual material definitions with permanent RES IDs, 365 source bindings, 23 classified animal source tags and 25 proposed transformation endpoint guides.
+- Linked every crop candidate and geological candidate, selected wild plants/trees, and unambiguous existing animal product tags. Preserved source tags, existing candidate IDs and all 485 regional source occurrences.
+- Kept animal services and antlers-or-horns ambiguity outside inventory grants. Added requiresProcessing for processed source relations. No automatic refined-metal extraction, quantities, recipes or production unlocks.
+- Added a complete resource structural schema, bilingual field reference, conceptual examples, full diagrams and domain reference checks.
+- Versions: resources schema/content 1.0.0/0.1.0; plants/animals/minerals 1.1.0/0.2.0; world 1.2.0/0.3.0. Agriculture and simulation behavior are unchanged.
+- Runtime remains disabled pending exact species, acquisition conditions, units, storage rules and scientific/balance review. Material provenance and seed viability must be preserved in future inventory lots.

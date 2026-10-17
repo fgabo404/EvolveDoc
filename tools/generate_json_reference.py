@@ -258,6 +258,52 @@ const|Exact allowed JSON value for the property.|Valor JSON exacto admitido para
 pattern|Regular expression constraining strings; not a global uniqueness guarantee.|Expresión regular para cadenas; no garantiza unicidad global.
 not|Subschema that must not validate; rejects the reserved zero ID here.|Subesquema que no debe cumplirse; aquí rechaza ID cero reservado.
 tag|English snake_case technical label; future IDs and tags are not yet applied to legacy catalogs.|Etiqueta técnica en inglés snake_case; IDs y tags futuros aún no aplicados a catálogos actuales.
+resources|Resource records at the root, or the relative resource-catalog path inside catalogFiles.|Registros de recursos en la raíz, o ruta relativa al catálogo dentro de catalogFiles.
+sourceBindings|Possible source-to-resource links; never automatic production or a complete acquisition recipe.|Posibles vínculos de origen a recurso; nunca producción automática ni receta completa.
+processingLinks|Proposed transformation endpoints; additional inputs and actual recipes are still unresolved.|Extremos propuestos de transformación; insumos adicionales y recetas reales pendientes.
+sourceTagMappings|Explicit mappings of existing animal-product tags; services and ambiguous anatomy remain separate.|Equivalencias explícitas de tags animales; servicios y anatomía ambigua permanecen separados.
+unresolvedSources|Resources whose exact acquisition source or subsystem remains undefined.|Recursos cuyo origen exacto o sistema de obtención está pendiente.
+resourceCount|Number of resource definitions.|Cantidad de definiciones de recursos.
+sourceBindingCount|Number of possible source-to-resource relations.|Cantidad de relaciones posibles de origen a recurso.
+processingLinkCount|Number of proposed transformation guides.|Cantidad de guías propuestas de transformación.
+sourceTagMappingCount|Number of original animal tags explicitly classified or mapped.|Cantidad de tags animales originales clasificados o vinculados.
+geologicalSourceCount|Number of geological candidates with material mappings.|Cantidad de candidatos geológicos vinculados con materiales.
+cropSourceCount|Number of agricultural candidates with proposed products.|Cantidad de candidatos agrícolas con productos propuestos.
+resourceId|Reference to a resource definition, distinct from a species or deposit ID.|Referencia a un recurso, distinta del ID de especie o yacimiento.
+extractedResourceId|Material obtained through a future acquisition action; never an automatic refined metal output.|Material obtenido mediante futura acción; nunca metal refinado automático.
+category|English resource category used for organizing the catalog.|Categoría del recurso en inglés para organizar el catálogo.
+stage|Material stage: raw, intermediate, processed or refined; does not encode a numeric technology level.|Estado del material: raw, intermediate, processed o refined; no es nivel tecnológico numérico.
+tags|English classification tags; compatibility and substitution still require explicit action rules.|Tags de clasificación en inglés; compatibilidad y sustitución requieren reglas explícitas.
+inventory|Inventory eligibility and unresolved storage metadata, not current stock amounts.|Elegibilidad para inventario y almacenamiento pendiente, no existencias actuales.
+storable|True identifies a material eligible for inventory; services are excluded.|True identifica un material apto para inventario; excluye servicios.
+quantityUnit|Inventory measurement unit; null means the unit is not yet chosen.|Unidad de medida de inventario; null indica unidad pendiente.
+perishable|Whether deterioration applies; null means unresolved, not nonperishable.|Indica deterioro; null significa pendiente, no imperecedero.
+storageRules|Storage requirements and deterioration rules, still undefined.|Requisitos de almacenamiento y deterioro pendientes.
+sourceCollection|Symbolic collection key resolving to plants, animals, crops or geology; not a resource ID.|Clave de colección para plantas, animales, cultivos o geología; no es ID de recurso.
+sourceId|Existing source candidate ID, preserved without migrating its identity.|ID actual del candidato de origen, conservado sin migración.
+acquisitionTag|Descriptive acquisition guide tag; not an implemented action or recipe ID.|Tag descriptivo de obtención; no es ID de acción o receta implementada.
+reviewStatus|Review still required before a source output is authorized.|Revisión pendiente antes de autorizar un producto del origen.
+quantityPerAction|Output per action, still unresolved; not zero or guaranteed yield.|Cantidad por acción pendiente; no significa cero ni rendimiento garantizado.
+requiresProcessing|True means this source relation includes further processing; it is not a direct harvesting output.|True indica procesamiento posterior en la relación; no es producto directo de recolección.
+sourceTag|Original animal-product or service tag retained for traceability.|Tag original de producto animal o servicio conservado para trazabilidad.
+targetKind|Whether the original tag represents a resource, service or unresolved anatomical alternative.|Indica si el tag representa recurso, servicio o alternativa anatómica pendiente.
+resourceIds|Explicit linked resource IDs; empty for services or unresolved alternatives.|IDs de recursos vinculados; vacío para servicios o alternativas pendientes.
+processTag|Unique technical name of a proposed transformation guide; not a recipe implementation.|Nombre técnico único de guía de transformación; no es receta implementada.
+inputResourceIds|Resource endpoints entering the guide; this is not a complete list of required recipe inputs.|Recursos de entrada de la guía; no son una lista completa de insumos de receta.
+outputResourceIds|Resource endpoints produced after the still-undefined process, not automatic outputs.|Recursos finales del proceso pendiente, no productos automáticos.
+inputQuantities|Input amounts still undefined; stoichiometry and recipe balance are not supplied.|Cantidades de entrada pendientes; no define estequiometría ni balance de receta.
+outputQuantities|Output amounts and recovery still undefined.|Cantidades de salida y recuperación pendientes.
+facilities|Required facilities and equipment, still undefined.|Instalaciones y equipo requeridos pendientes.
+byproducts|Secondary outputs, residues and losses, still undefined.|Productos secundarios, residuos y pérdidas pendientes.
+recipeId|Future recipe reference; null means this guide is not an executable recipe.|Referencia futura de receta; null indica que la guía no es receta ejecutable.
+services|Policy excluding work, draft and transport services from stored inventory.|Política que excluye trabajo, tracción y transporte del inventario.
+provenance|Keep species, original material, viability and quality in future inventory lots.|Conservar especie, material original, viabilidad y calidad en futuros lotes.
+$defs|Named reusable subschemas within this JSON Schema document.|Subesquemas reutilizables con nombre dentro de este esquema.
+$ref|Reference to a reusable subschema, not a game entity reference.|Referencia a un subesquema reutilizable, no a una entidad del juego.
+additionalProperties|Whether properties not declared by the object schema are allowed.|Indica si admite propiedades no declaradas en el esquema del objeto.
+enum|Explicit set of allowed JSON values.|Conjunto explícito de valores JSON admitidos.
+minimum|Inclusive numeric lower bound.|Límite numérico inferior inclusivo.
+minLength|Minimum permitted string length.|Longitud mínima de una cadena.
 '''
 DESCRIPTIONS={}
 for line in TEXT.strip().splitlines():
@@ -301,7 +347,7 @@ def field_type(values):
 
 def describe(key,lang,path):
     # Schema property-map keys name a subschema, rather than being game values.
-    if path.endswith('.properties'):
+    if path.endswith('.properties') or path.endswith('.$defs'):
         return (f'Subschema describing `{key}`; see its nested fields below.' if lang=='en' else f'Subesquema que describe `{key}`; ver sus campos internos más abajo.')
     if key not in DESCRIPTIONS:
         raise ValueError(f'Undocumented field: {path}.{key}')

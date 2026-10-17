@@ -188,10 +188,12 @@ flowchart LR
     c2["Acebuche / plant_wild_olive"]
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
     b1["Bosque templado / temperate_forest"]
+    o2_0["Aceituna / RES#000021 / potential"]
     c3["Agaves / plant_agaves"]
     v15["Americano (Norteamérica y Sudamérica) / desert_american"]
     c0 -->|source occurrence| v18
     c1 -->|source occurrence| v16
+    c2 -->|potentialProducts| o2_0
     c2 -->|source occurrence| v4
     c3 -->|source occurrence| v15
     v15 -->|biomeId| b4
@@ -339,9 +341,11 @@ flowchart LR
     c3["Cacao silvestre, en su distribución nativa / plant_wild_cacao"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     b0["Bosque tropical / tropical_forest"]
+    o3_0["Semillas de cacao / RES#000024 / potential"]
     c0 -->|source occurrence| v9
     c1 -->|source occurrence| v20
     c2 -->|source occurrence| v6
+    c3 -->|potentialProducts| o3_0
     c3 -->|source occurrence| v0
     v0 -->|biomeId| b0
     v20 -->|biomeId| b5
@@ -359,11 +363,13 @@ flowchart LR
     c1["Calabazas silvestres (Cucurbita spp.) / plant_wild_squashes"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     b0["Bosque tropical / tropical_forest"]
+    o1_0["Fruto de calabaza / RES#000019 / potential"]
     c2["Castaña de Brasil, Amazonía / plant_brazil_nut"]
     c3["Castaños asiáticos / plant_asian_chestnuts"]
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
     b1["Bosque templado / temperate_forest"]
     c0 -->|source occurrence| v15
+    c1 -->|potentialProducts| o1_0
     c1 -->|source occurrence| v0
     c2 -->|source occurrence| v0
     c3 -->|source occurrence| v4
@@ -379,15 +385,19 @@ flowchart LR
     c0["Cebada silvestre, en sus regiones nativas / plant_wild_barley"]
     v13["Euroasiática (praderas y estepas) / savanna_eurasian"]
     b3["Sabana / savanna"]
+    o0_0["Grano de cebada / RES#000008 / potential"]
     c1["Coigüe (Nothofagus dombeyi) / plant_coigue"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
     b1["Bosque templado / temperate_forest"]
+    o1_0["Madera / RES#000001 / potential"]
     c2["Coirones patagónicos (Festuca y afines) / plant_patagonian_tussock_grasses"]
     v12["Americana (sabanas y praderas) / savanna_american"]
     c3["Edelweiss / plant_edelweiss"]
     v25["Europeo (Alpes y Pirineos) / alpine_european"]
     b6["Alta montaña y pisos alpinos / alpine"]
+    c0 -->|potentialProducts| o0_0
     c0 -->|source occurrence| v13
+    c1 -->|potentialProducts| o1_0
     c1 -->|source occurrence| v5
     c2 -->|source occurrence| v12
     c3 -->|source occurrence| v25
@@ -404,6 +414,7 @@ flowchart LR
     c0["Encinas y robles californianos / plant_californian_oaks"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
     b1["Bosque templado / temperate_forest"]
+    o0_0["Madera / RES#000001 / potential"]
     c1["Enebros de montaña / plant_mountain_junipers"]
     v24["Asiático (Himalaya y Tíbet) / alpine_asian"]
     b6["Alta montaña y pisos alpinos / alpine"]
@@ -411,6 +422,7 @@ flowchart LR
     v26["Africano (Etiopía y África oriental) / alpine_african"]
     c3["Erica spp. / plant_heaths"]
     v6["Sudafricano y australiano (matorrales y bosques regionales) / temperate_forest_south_african_and_australian"]
+    c0 -->|potentialProducts| o0_0
     c0 -->|source occurrence| v5
     c1 -->|source occurrence| v24
     c2 -->|source occurrence| v26
@@ -457,6 +469,7 @@ flowchart LR
     c1["Frijoles silvestres (Phaseolus spp.) / plant_wild_beans"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     b0["Bosque tropical / tropical_forest"]
+    o1_0["Semilla de frijol / RES#000015 / potential"]
     c2["Gencianas / plant_gentians"]
     v25["Europeo (Alpes y Pirineos) / alpine_european"]
     b6["Alta montaña y pisos alpinos / alpine"]
@@ -464,6 +477,7 @@ flowchart LR
     v12["Americana (sabanas y praderas) / savanna_american"]
     b3["Sabana / savanna"]
     c0 -->|source occurrence| v21
+    c1 -->|potentialProducts| o1_0
     c1 -->|source occurrence| v0
     c2 -->|source occurrence| v25
     c3 -->|source occurrence| v12
@@ -502,6 +516,7 @@ flowchart LR
     c0["Haya europea / plant_european_beech"]
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
     b1["Bosque templado / temperate_forest"]
+    o0_0["Madera / RES#000001 / potential"]
     c1["Ichu / plant_ichu_grass"]
     v23["Andino / alpine_andean"]
     b6["Alta montaña y pisos alpinos / alpine"]
@@ -511,6 +526,7 @@ flowchart LR
     c3["Karité, sabanas de África occidental / plant_shea_tree"]
     v11["Africana (sabanas tropicales) / savanna_african"]
     b3["Sabana / savanna"]
+    c0 -->|potentialProducts| o0_0
     c0 -->|source occurrence| v4
     c1 -->|source occurrence| v23
     c2 -->|source occurrence| v15
@@ -531,6 +547,7 @@ flowchart LR
     c1["Lenga (Nothofagus pumilio) / plant_lenga_beech"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
     b1["Bosque templado / temperate_forest"]
+    o1_0["Madera / RES#000001 / potential"]
     c2["Lobelias gigantes, montañas de África oriental / plant_east_african_giant_lobelias"]
     v26["Africano (Etiopía y África oriental) / alpine_african"]
     b6["Alta montaña y pisos alpinos / alpine"]
@@ -539,6 +556,7 @@ flowchart LR
     b2["Tundra / tundra"]
     v10["Subantártica / tundra_subantarctic"]
     c0 -->|source occurrence| v21
+    c1 -->|potentialProducts| o1_0
     c1 -->|source occurrence| v5
     c2 -->|source occurrence| v26
     c3 -->|source occurrence| v10
@@ -725,15 +743,19 @@ flowchart LR
     c0["Pino silvestre / plant_scots_pine"]
     v7["Boreal (taiga de Eurasia y Norteamérica) / temperate_forest_boreal"]
     b1["Bosque templado / temperate_forest"]
+    o0_0["Madera / RES#000001 / potential"]
     c1["Pinos de montaña / plant_mountain_pines"]
     v25["Europeo (Alpes y Pirineos) / alpine_european"]
     b6["Alta montaña y pisos alpinos / alpine"]
+    o1_0["Madera / RES#000001 / potential"]
     c2["Plantas almohadilladas / plant_cushion_plants"]
     v10["Subantártica / tundra_subantarctic"]
     b2["Tundra / tundra"]
     c3["Plantas almohadilladas andinas / plant_andean_cushion_plants"]
     v23["Andino / alpine_andean"]
+    c0 -->|potentialProducts| o0_0
     c0 -->|source occurrence| v7
+    c1 -->|potentialProducts| o1_0
     c1 -->|source occurrence| v25
     c2 -->|source occurrence| v10
     c3 -->|source occurrence| v23
@@ -758,9 +780,11 @@ flowchart LR
     b1["Bosque templado / temperate_forest"]
     c3["Pícea blanca / plant_white_spruce"]
     v7["Boreal (taiga de Eurasia y Norteamérica) / temperate_forest_boreal"]
+    o3_0["Madera / RES#000001 / potential"]
     c0 -->|source occurrence| v15
     c1 -->|source occurrence| v22
     c2 -->|source occurrence| v6
+    c3 -->|potentialProducts| o3_0
     c3 -->|source occurrence| v7
     v15 -->|biomeId| b4
     v22 -->|biomeId| b5
@@ -775,13 +799,17 @@ flowchart LR
     c0["Pícea negra / plant_black_spruce"]
     v7["Boreal (taiga de Eurasia y Norteamérica) / temperate_forest_boreal"]
     b1["Bosque templado / temperate_forest"]
+    o0_0["Madera / RES#000001 / potential"]
     c1["Píceas euroasiáticas / plant_eurasian_spruces"]
+    o1_0["Madera / RES#000001 / potential"]
     c2["Queñua (Polylepis spp.) / plant_queuna_trees"]
     v23["Andino / alpine_andean"]
     b6["Alta montaña y pisos alpinos / alpine"]
     c3["Quillay / plant_soapbark_tree"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
+    c0 -->|potentialProducts| o0_0
     c0 -->|source occurrence| v7
+    c1 -->|potentialProducts| o1_0
     c1 -->|source occurrence| v7
     c2 -->|source occurrence| v23
     c3 -->|source occurrence| v5
@@ -802,11 +830,15 @@ flowchart LR
     b1["Bosque templado / temperate_forest"]
     c2["Robles europeos / plant_european_oaks"]
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
+    o2_0["Madera / RES#000001 / potential"]
     c3["Robles norteamericanos / plant_north_american_oaks"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
+    o3_0["Madera / RES#000001 / potential"]
     c0 -->|source occurrence| v1
     c1 -->|source occurrence| v6
+    c2 -->|potentialProducts| o2_0
     c2 -->|source occurrence| v4
+    c3 -->|potentialProducts| o3_0
     c3 -->|source occurrence| v5
     v1 -->|biomeId| b0
     v4 -->|biomeId| b1
@@ -879,9 +911,11 @@ flowchart LR
     c2["Taro y otras aráceas regionales / plant_taro_and_regional_aroids"]
     v3["Oceánico (Nueva Guinea y Melanesia) / tropical_forest_oceanian"]
     c3["Teca en su distribución nativa / plant_native_teak"]
+    o3_0["Madera / RES#000001 / potential"]
     c0 -->|source occurrence| v18
     c1 -->|source occurrence| v2
     c2 -->|source occurrence| v3
+    c3 -->|potentialProducts| o3_0
     c3 -->|source occurrence| v2
     v18 -->|biomeId| b4
     v2 -->|biomeId| b0
@@ -898,13 +932,17 @@ flowchart LR
     c1["Trigo silvestre, solo en sus regiones nativas del sudoeste asiático / plant_southwest_asian_wild_wheat"]
     v13["Euroasiática (praderas y estepas) / savanna_eurasian"]
     b3["Sabana / savanna"]
+    o1_0["Grano de trigo / RES#000007 / potential"]
     c2["Vainilla (Vanilla planifolia), Mesoamérica / plant_mesoamerican_vanilla"]
     c3["Vid silvestre en hábitats nativos / plant_native_wild_grapevine"]
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
     b1["Bosque templado / temperate_forest"]
+    o3_0["Uva / RES#000020 / potential"]
     c0 -->|source occurrence| v0
+    c1 -->|potentialProducts| o1_0
     c1 -->|source occurrence| v13
     c2 -->|source occurrence| v0
+    c3 -->|potentialProducts| o3_0
     c3 -->|source occurrence| v4
     v0 -->|biomeId| b0
     v13 -->|biomeId| b3
@@ -923,9 +961,11 @@ flowchart LR
     b0["Bosque tropical / tropical_forest"]
     c2["Árboles de maderas tropicales regionales / plant_regional_tropical_timber_trees"]
     v1["Africano (selvas y bosques secos) / tropical_forest_african"]
+    o2_0["Madera / RES#000001 / potential"]
     c3["Árboles de miombo (Brachystegia spp.), donde corresponda / plant_miombo_trees"]
     c0 -->|source occurrence| v20
     c1 -->|source occurrence| v0
+    c2 -->|potentialProducts| o2_0
     c2 -->|source occurrence| v1
     c3 -->|source occurrence| v1
     v0 -->|biomeId| b0
@@ -957,15 +997,29 @@ flowchart LR
     c0 -->|cultivationResearch.technologyId| tech
     g0["cereal"]
     c0 -->|cropUseTag| g0
+    r0_0["Grano de trigo / RES#000007"]
+    c0 -->|products / proposed| r0_0
+    r0_1["Paja de cereal / RES#000028"]
+    c0 -->|products / proposed| r0_1
     c1["Cebada / barley"]
     c1 -->|cultivationResearch.technologyId| tech
     c1 -->|cropUseTag| g0
+    r1_0["Grano de cebada / RES#000008"]
+    c1 -->|products / proposed| r1_0
+    r1_1["Paja de cereal / RES#000028"]
+    c1 -->|products / proposed| r1_1
     c2["Arroz / rice"]
     c2 -->|cultivationResearch.technologyId| tech
     c2 -->|cropUseTag| g0
+    r2_0["Grano de arroz / RES#000009"]
+    c2 -->|products / proposed| r2_0
+    r2_1["Paja de cereal / RES#000028"]
+    c2 -->|products / proposed| r2_1
     c3["Maíz / maize"]
     c3 -->|cultivationResearch.technologyId| tech
     c3 -->|cropUseTag| g0
+    r3_0["Grano de maíz / RES#000010"]
+    c3 -->|products / proposed| r3_0
 ```
 
 ### Cultivos 2
@@ -977,16 +1031,24 @@ flowchart LR
     c0 -->|cultivationResearch.technologyId| tech
     g0["cereal"]
     c0 -->|cropUseTag| g0
+    r0_0["Grano de sorgo / RES#000011"]
+    c0 -->|products / proposed| r0_0
     c1["Mijo / millet"]
     c1 -->|cultivationResearch.technologyId| tech
     c1 -->|cropUseTag| g0
+    r1_0["Grano de mijo / RES#000012"]
+    c1 -->|products / proposed| r1_0
     c2["Papa / potato"]
     c2 -->|cultivationResearch.technologyId| tech
     g1["root_or_tuber"]
     c2 -->|cropUseTag| g1
+    r2_0["Tubérculo de papa / RES#000013"]
+    c2 -->|products / proposed| r2_0
     c3["Yuca / cassava"]
     c3 -->|cultivationResearch.technologyId| tech
     c3 -->|cropUseTag| g1
+    r3_0["Raíz de yuca / RES#000014"]
+    c3 -->|products / proposed| r3_0
 ```
 
 ### Cultivos 3
@@ -998,15 +1060,23 @@ flowchart LR
     c0 -->|cultivationResearch.technologyId| tech
     g0["pulse"]
     c0 -->|cropUseTag| g0
+    r0_0["Semilla de frijol / RES#000015"]
+    c0 -->|products / proposed| r0_0
     c1["Lentejas / lentils"]
     c1 -->|cultivationResearch.technologyId| tech
     c1 -->|cropUseTag| g0
+    r1_0["Semilla de lenteja / RES#000016"]
+    c1 -->|products / proposed| r1_0
     c2["Garbanzos / chickpeas"]
     c2 -->|cultivationResearch.technologyId| tech
     c2 -->|cropUseTag| g0
+    r2_0["Semilla de garbanzo / RES#000017"]
+    c2 -->|products / proposed| r2_0
     c3["Guisantes / peas"]
     c3 -->|cultivationResearch.technologyId| tech
     c3 -->|cropUseTag| g0
+    r3_0["Semilla de arveja / RES#000018"]
+    c3 -->|products / proposed| r3_0
 ```
 
 ### Cultivos 4
@@ -1018,17 +1088,25 @@ flowchart LR
     c0 -->|cultivationResearch.technologyId| tech
     g0["vegetable"]
     c0 -->|cropUseTag| g0
+    r0_0["Fruto de calabaza / RES#000019"]
+    c0 -->|products / proposed| r0_0
     c1["Vid / grapevine"]
     c1 -->|cultivationResearch.technologyId| tech
     g1["fruit_crop"]
     c1 -->|cropUseTag| g1
+    r1_0["Uva / RES#000020"]
+    c1 -->|products / proposed| r1_0
     c2["Olivo / olive"]
     c2 -->|cultivationResearch.technologyId| tech
     g2["oil_crop"]
     c2 -->|cropUseTag| g2
+    r2_0["Aceituna / RES#000021"]
+    c2 -->|products / proposed| r2_0
     c3["Higuera / fig"]
     c3 -->|cultivationResearch.technologyId| tech
     c3 -->|cropUseTag| g1
+    r3_0["Higo / RES#000022"]
+    c3 -->|products / proposed| r3_0
 ```
 
 ### Cultivos 5
@@ -1040,16 +1118,24 @@ flowchart LR
     c0 -->|cultivationResearch.technologyId| tech
     g0["fruit_crop"]
     c0 -->|cropUseTag| g0
+    r0_0["Dátil / RES#000023"]
+    c0 -->|products / proposed| r0_0
     c1["Cacao / cacao"]
     c1 -->|cultivationResearch.technologyId| tech
     g1["special_crop"]
     c1 -->|cropUseTag| g1
+    r1_0["Semillas de cacao / RES#000024"]
+    c1 -->|products / proposed| r1_0
     c2["Café / coffee"]
     c2 -->|cultivationResearch.technologyId| tech
     c2 -->|cropUseTag| g1
+    r2_0["Frutos de café / RES#000025"]
+    c2 -->|products / proposed| r2_0
     c3["Caña de azúcar / sugarcane"]
     c3 -->|cultivationResearch.technologyId| tech
     c3 -->|cropUseTag| g1
+    r3_0["Tallo de caña de azúcar / RES#000026"]
+    c3 -->|products / proposed| r3_0
 ```
 
 ### Cultivos 6
@@ -1061,6 +1147,8 @@ flowchart LR
     c0 -->|cultivationResearch.technologyId| tech
     g0["fiber_crop"]
     c0 -->|cropUseTag| g0
+    r0_0["Fibra de algodón / RES#000027"]
+    c0 -->|products / proposed| r0_0
 ```
 
 | id | Nombre | cropUseTag | sourceOriginHint |

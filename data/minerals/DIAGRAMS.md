@@ -91,15 +91,20 @@ flowchart LR
     v23["Andean / alpine_andean"]
     b6["High Mountain and Alpine / alpine"]
     v26["African / alpine_african"]
+    r0["Clay / RES#000047"]
     c1["Alluvial Clay / geological_alluvial_clay"]
     v0["American / tropical_forest_american"]
     v3["Oceanian / tropical_forest_oceanian"]
     v11["African / savanna_african"]
+    r1["Clay / RES#000047"]
     c2["Estuarine Clay / geological_estuarine_clay"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
     b5["Marine / marine"]
+    r2["Clay / RES#000047"]
     c3["Fluvial Clay / geological_fluvial_clay"]
     v2["Asian / tropical_forest_asian"]
+    r3["Clay / RES#000047"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v1
     c0 -->|source occurrence| v12
     c0 -->|source occurrence| v13
@@ -110,10 +115,13 @@ flowchart LR
     c0 -->|source occurrence| v5
     c0 -->|source occurrence| v6
     c0 -->|source occurrence| v7
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v0
     c1 -->|source occurrence| v11
     c1 -->|source occurrence| v3
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v22
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v2
     v0 -->|biomeId| b0
     v1 -->|biomeId| b0
@@ -139,6 +147,7 @@ flowchart LR
     c0["Glacial Clay / geological_glacial_clay"]
     v9["Eurasian / tundra_eurasian"]
     b2["Tundra / tundra"]
+    r0["Clay / RES#000047"]
     c1["Sand / geological_sand"]
     v15["American / desert_american"]
     b4["Desert / desert"]
@@ -148,18 +157,25 @@ flowchart LR
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
     b5["Marine / marine"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
+    r1["Sand / RES#000048"]
     c2["Calcareous Sand / geological_calcareous_sand"]
     v19["Tropical Coast / marine_tropical_coast"]
+    r2["Calcareous sand / RES#000049"]
     c3["Silica Sand / geological_silica_sand"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
+    r3["Silica sand / RES#000050"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v9
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v15
     c1 -->|source occurrence| v16
     c1 -->|source occurrence| v17
     c1 -->|source occurrence| v18
     c1 -->|source occurrence| v21
     c1 -->|source occurrence| v22
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v19
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v20
     v15 -->|biomeId| b4
     v16 -->|biomeId| b4
@@ -185,6 +201,7 @@ flowchart LR
     b4["Desert / desert"]
     v16["African and Arabian / desert_african_and_arabian"]
     v18["Australian / desert_australian"]
+    r0["Sandstone / RES#000051"]
     c1["Limestone / geological_limestone"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
@@ -194,25 +211,32 @@ flowchart LR
     v13["Eurasian / savanna_eurasian"]
     v25["European / alpine_european"]
     b6["High Mountain and Alpine / alpine"]
+    r1["Limestone / RES#000052"]
     c2["Limestone in Carbonate Formations / geological_limestone_in_carbonate_formations"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
     b5["Marine / marine"]
+    r2["Limestone / RES#000052"]
     c3["Coastal Limestone / geological_coastal_limestone"]
     v19["Tropical Coast / marine_tropical_coast"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
+    r3["Limestone / RES#000052"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v14
     c0 -->|source occurrence| v15
     c0 -->|source occurrence| v16
     c0 -->|source occurrence| v18
     c0 -->|source occurrence| v6
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v0
     c1 -->|source occurrence| v11
     c1 -->|source occurrence| v13
     c1 -->|source occurrence| v2
     c1 -->|source occurrence| v25
     c1 -->|source occurrence| v4
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v22
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v19
     c3 -->|source occurrence| v20
     c3 -->|source occurrence| v21
@@ -242,6 +266,7 @@ flowchart LR
     b1["Temperate Forest / temperate_forest"]
     v13["Eurasian / savanna_eurasian"]
     b3["Savanna and Grasslands / savanna"]
+    r0["Bituminous coal / RES#000053"]
     c1["Copper-Bearing Deposit / geological_copper_bearing_deposit"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
@@ -268,10 +293,15 @@ flowchart LR
     v24["Asian / alpine_asian"]
     v25["European / alpine_european"]
     v26["African / alpine_african"]
+    r1["Copper-bearing material / RES#000054"]
     c2["Chalcopyrite Copper Ore / geological_chalcopyrite_copper_ore"]
+    r2["Copper ore / RES#000055"]
     c3["Sulfide Copper Ore / geological_sulfide_copper_ore"]
+    r3["Copper ore / RES#000055"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v13
     c0 -->|source occurrence| v4
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v0
     c1 -->|source occurrence| v1
     c1 -->|source occurrence| v10
@@ -295,6 +325,7 @@ flowchart LR
     c1 -->|source occurrence| v7
     c1 -->|source occurrence| v8
     c1 -->|source occurrence| v9
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v10
     c2 -->|source occurrence| v12
     c2 -->|source occurrence| v15
@@ -306,6 +337,7 @@ flowchart LR
     c2 -->|source occurrence| v5
     c2 -->|source occurrence| v6
     c2 -->|source occurrence| v9
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v0
     v0 -->|biomeId| b0
     v1 -->|biomeId| b0
@@ -339,6 +371,7 @@ flowchart LR
     c0["Seashells / geological_seashells"]
     v19["Tropical Coast / marine_tropical_coast"]
     b5["Marine / marine"]
+    r0["Animal shell / RES#000044"]
     c1["Tin-Bearing Deposit / geological_tin_bearing_deposit"]
     v2["Asian / tropical_forest_asian"]
     b0["Tropical Forest / tropical_forest"]
@@ -348,14 +381,21 @@ flowchart LR
     b4["Desert / desert"]
     v23["Andean / alpine_andean"]
     b6["High Mountain and Alpine / alpine"]
+    r1["Tin-bearing material / RES#000056"]
     c2["Vein Cassiterite Tin Ore / geological_vein_cassiterite_tin_ore"]
+    r2["Tin ore / RES#000057"]
     c3["Alluvial Cassiterite / geological_alluvial_cassiterite"]
+    r3["Tin ore / RES#000057"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v19
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v13
     c1 -->|source occurrence| v17
     c1 -->|source occurrence| v2
     c1 -->|source occurrence| v23
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v2
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v2
     v13 -->|biomeId| b3
     v17 -->|biomeId| b4
@@ -371,7 +411,9 @@ flowchart LR
     c0["Phosphorite / geological_phosphorite"]
     v16["African and Arabian / desert_african_and_arabian"]
     b4["Desert / desert"]
+    r0["Phosphorite / RES#000058"]
     c1["Apatite Phosphorite / geological_apatite_phosphorite"]
+    r1["Phosphorite / RES#000058"]
     c2["Granite / geological_granite"]
     v5["American / temperate_forest_american"]
     b1["Temperate Forest / temperate_forest"]
@@ -386,11 +428,16 @@ flowchart LR
     b6["High Mountain and Alpine / alpine"]
     v24["Asian / alpine_asian"]
     v25["European / alpine_european"]
+    r2["Granite / RES#000059"]
     c3["Gravel / geological_gravel"]
     v10["Subantarctic / tundra_subantarctic"]
     v17["Central Asian / desert_central_asian"]
+    r3["Gravel / RES#000060"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v16
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v16
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v12
     c2 -->|source occurrence| v23
     c2 -->|source occurrence| v24
@@ -400,6 +447,7 @@ flowchart LR
     c2 -->|source occurrence| v7
     c2 -->|source occurrence| v8
     c2 -->|source occurrence| v9
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v10
     c3 -->|source occurrence| v17
     c3 -->|source occurrence| v8
@@ -426,6 +474,7 @@ flowchart LR
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
     b5["Marine / marine"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
+    r0["Gravel / RES#000060"]
     c1["Iron-Bearing Deposit / geological_iron_bearing_deposit"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
@@ -454,10 +503,15 @@ flowchart LR
     b6["High Mountain and Alpine / alpine"]
     v25["European / alpine_european"]
     v26["African / alpine_african"]
+    r1["Iron-bearing material / RES#000061"]
     c2["Hematite Iron Ore / geological_hematite_iron_ore"]
+    r2["Iron ore / RES#000062"]
     c3["Magnetite Iron Ore / geological_magnetite_iron_ore"]
+    r3["Iron ore / RES#000062"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v20
     c0 -->|source occurrence| v21
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v0
     c1 -->|source occurrence| v1
     c1 -->|source occurrence| v10
@@ -479,6 +533,7 @@ flowchart LR
     c1 -->|source occurrence| v7
     c1 -->|source occurrence| v8
     c1 -->|source occurrence| v9
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v0
     c2 -->|source occurrence| v1
     c2 -->|source occurrence| v11
@@ -487,6 +542,7 @@ flowchart LR
     c2 -->|source occurrence| v15
     c2 -->|source occurrence| v16
     c2 -->|source occurrence| v18
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v10
     c3 -->|source occurrence| v13
     c3 -->|source occurrence| v17
@@ -532,8 +588,11 @@ flowchart LR
     b0["Tropical Forest / tropical_forest"]
     v14["Australian / savanna_australian"]
     b3["Savanna and Grasslands / savanna"]
+    r0["Iron-rich laterite / RES#000063"]
     c1["Manganese-Bearing Deposit / geological_manganese_bearing_deposit"]
+    r1["Manganese-bearing material / RES#000064"]
     c2["Pyrolusite Manganese Ore / geological_pyrolusite_manganese_ore"]
+    r2["Manganese ore / RES#000065"]
     c3["Nickel-Bearing Deposit / geological_nickel_bearing_deposit"]
     v3["Oceanian / tropical_forest_oceanian"]
     v7["Boreal / temperate_forest_boreal"]
@@ -541,10 +600,15 @@ flowchart LR
     v8["North American and Greenland / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     v9["Eurasian / tundra_eurasian"]
+    r3["Nickel-bearing material / RES#000066"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v1
     c0 -->|source occurrence| v14
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v1
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v1
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v3
     c3 -->|source occurrence| v7
     c3 -->|source occurrence| v8
@@ -564,24 +628,32 @@ flowchart LR
     c0["Nickeliferous Laterite / geological_nickeliferous_laterite"]
     v3["Oceanian / tropical_forest_oceanian"]
     b0["Tropical Forest / tropical_forest"]
+    r0["Nickel-bearing laterite / RES#000067"]
     c1["Sulfide Nickel Ore / geological_sulfide_nickel_ore"]
     v7["Boreal / temperate_forest_boreal"]
     b1["Temperate Forest / temperate_forest"]
     v8["North American and Greenland / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
+    r1["Nickel ore / RES#000068"]
     c2["Polymetallic Nodules / geological_polymetallic_nodules"]
     v19["Tropical Coast / marine_tropical_coast"]
     b5["Marine / marine"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
+    r2["Polymetallic nodules / RES#000069"]
     c3["Volcanic Obsidian / geological_volcanic_obsidian"]
     v5["American / temperate_forest_american"]
+    r3["Obsidian / RES#000070"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v3
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v7
     c1 -->|source occurrence| v8
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v19
     c2 -->|source occurrence| v20
     c2 -->|source occurrence| v21
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v5
     v19 -->|biomeId| b5
     v20 -->|biomeId| b5
@@ -606,6 +678,7 @@ flowchart LR
     b4["Desert / desert"]
     v26["African / alpine_african"]
     b6["High Mountain and Alpine / alpine"]
+    r0["Gold-bearing quartz / RES#000071"]
     c1["Alluvial Gold / geological_alluvial_gold"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
@@ -613,20 +686,26 @@ flowchart LR
     v3["Oceanian / tropical_forest_oceanian"]
     v12["American / savanna_american"]
     v23["Andean / alpine_andean"]
+    r1["Gold-bearing sediment / RES#000072"]
     c2["Vein Gold / geological_vein_gold"]
     v24["Asian / alpine_asian"]
+    r2["Gold ore / RES#000073"]
     c3["Pumice / geological_pumice"]
+    r3["Pumice / RES#000074"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v11
     c0 -->|source occurrence| v14
     c0 -->|source occurrence| v18
     c0 -->|source occurrence| v26
     c0 -->|source occurrence| v6
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v0
     c1 -->|source occurrence| v1
     c1 -->|source occurrence| v11
     c1 -->|source occurrence| v12
     c1 -->|source occurrence| v23
     c1 -->|source occurrence| v3
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v0
     c2 -->|source occurrence| v11
     c2 -->|source occurrence| v14
@@ -635,6 +714,7 @@ flowchart LR
     c2 -->|source occurrence| v26
     c2 -->|source occurrence| v3
     c2 -->|source occurrence| v6
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v26
     v0 -->|biomeId| b0
     v1 -->|biomeId| b0
@@ -661,6 +741,7 @@ flowchart LR
     v24["Asian / alpine_asian"]
     b6["High Mountain and Alpine / alpine"]
     v25["European / alpine_european"]
+    r0["Slate / RES#000075"]
     c1["Silver-Bearing Deposit / geological_silver_bearing_deposit"]
     v5["American / temperate_forest_american"]
     v12["American / savanna_american"]
@@ -668,18 +749,25 @@ flowchart LR
     v15["American / desert_american"]
     b4["Desert / desert"]
     v23["Andean / alpine_andean"]
+    r1["Silver-bearing material / RES#000076"]
     c2["Argentite Silver Ore / geological_argentite_silver_ore"]
+    r2["Silver ore / RES#000077"]
     c3["Lead-Bearing Deposit / geological_lead_bearing_deposit"]
     v4["Eurasian / temperate_forest_eurasian"]
+    r3["Lead-bearing material / RES#000078"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v24
     c0 -->|source occurrence| v25
     c0 -->|source occurrence| v7
     c0 -->|source occurrence| v8
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v12
     c1 -->|source occurrence| v15
     c1 -->|source occurrence| v23
     c1 -->|source occurrence| v5
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v23
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v25
     c3 -->|source occurrence| v4
     v12 -->|biomeId| b3
@@ -700,26 +788,34 @@ flowchart LR
     c0["Galena Lead Ore / geological_galena_lead_ore"]
     v25["European / alpine_european"]
     b6["High Mountain and Alpine / alpine"]
+    r0["Lead ore / RES#000079"]
     c1["Basalt / geological_basalt"]
     v10["Subantarctic / tundra_subantarctic"]
     b2["Tundra / tundra"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
     b5["Marine / marine"]
+    r1["Basalt / RES#000080"]
     c2["Volcanic Rock / geological_volcanic_rock"]
     v3["Oceanian / tropical_forest_oceanian"]
     b0["Tropical Forest / tropical_forest"]
     v26["African / alpine_african"]
+    r2["Volcanic rock / RES#000081"]
     c3["Rock Salt / geological_rock_salt"]
     v15["American / desert_american"]
     b4["Desert / desert"]
     v16["African and Arabian / desert_african_and_arabian"]
     v17["Central Asian / desert_central_asian"]
     v24["Asian / alpine_asian"]
+    r3["Rock salt / RES#000082"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v25
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v10
     c1 -->|source occurrence| v21
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v26
     c2 -->|source occurrence| v3
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v15
     c3 -->|source occurrence| v16
     c3 -->|source occurrence| v17
@@ -742,19 +838,27 @@ flowchart LR
     c0["Deep Rock Salt / geological_deep_rock_salt"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
     b5["Marine / marine"]
+    r0["Rock salt / RES#000082"]
     c1["Sea Salt / geological_sea_salt"]
     v19["Tropical Coast / marine_tropical_coast"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
+    r1["Sea salt / RES#000083"]
     c2["Sea Salt in Suitable Saltworks / geological_sea_salt_in_suitable_saltworks"]
+    r2["Sea salt / RES#000083"]
     c3["Flint / geological_flint"]
     v4["Eurasian / temperate_forest_eurasian"]
     b1["Temperate Forest / temperate_forest"]
     v13["Eurasian / savanna_eurasian"]
     b3["Savanna and Grasslands / savanna"]
+    r3["Flint / RES#000084"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v22
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v19
     c1 -->|source occurrence| v20
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v22
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v13
     c3 -->|source occurrence| v4
     v13 -->|biomeId| b3
@@ -771,17 +875,25 @@ flowchart LR
     c0["Peat / geological_peat"]
     v10["Subantarctic / tundra_subantarctic"]
     b2["Tundra / tundra"]
+    r0["Peat / RES#000085"]
     c1["Gypsum in Evaporite Deposits / geological_gypsum_in_evaporite_deposits"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
     b5["Marine / marine"]
+    r1["Gypsum / RES#000086"]
     c2["Deep Gypsum / geological_deep_gypsum"]
+    r2["Gypsum / RES#000086"]
     c3["Coastal Gypsum / geological_coastal_gypsum"]
     v19["Tropical Coast / marine_tropical_coast"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
+    r3["Gypsum / RES#000086"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v10
+    c1 -->|extractedResourceId / proposed| r1
     c1 -->|source occurrence| v22
+    c2 -->|extractedResourceId / proposed| r2
     c2 -->|source occurrence| v22
+    c3 -->|extractedResourceId / proposed| r3
     c3 -->|source occurrence| v19
     c3 -->|source occurrence| v20
     c3 -->|source occurrence| v21
@@ -799,6 +911,8 @@ flowchart LR
     c0["Surface Opal / geological_surface_opal"]
     v18["Australian / desert_australian"]
     b4["Desert / desert"]
+    r0["Opal / RES#000087"]
+    c0 -->|extractedResourceId / proposed| r0
     c0 -->|source occurrence| v18
     v18 -->|biomeId| b4
 ```

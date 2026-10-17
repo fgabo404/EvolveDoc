@@ -16,8 +16,8 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.1.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.2.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.2.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.3.0"` |
 | `kind` | `string` | 1/1 | Discriminador que identifica el documento o categoría del candidato. | `"world_catalog_design_guide"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"source_converted_requires_species_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
@@ -206,6 +206,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `plantCandidates` | `string` | 1/1 | Ruta relativa a la guía de plantas y cultivos. | `"../plants/plants.catalog.guide.json"` |
 | `animalCandidates` | `string` | 1/1 | Ruta relativa a la guía de animales. | `"../animals/animals.catalog.guide.json"` |
 | `geologicalCandidates` | `string` | 1/1 | Ruta relativa a la guía geológica. | `"../minerals/minerals.catalog.guide.json"` |
+| `resources` | `string` | 1/1 | Registros de recursos en la raíz, o ruta relativa al catálogo dentro de catalogFiles. | `"../resources/resources.catalog.guide.json"` |
 
 ### `$.repositoryPackaging`
 
@@ -221,8 +222,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 
 ```json
 {
-  "schemaVersion": "1.1.0",
-  "contentVersion": "0.2.0",
+  "schemaVersion": "1.2.0",
+  "contentVersion": "0.3.0",
   "kind": "world_catalog_design_guide",
   "status": "source_converted_requires_species_resolution",
   "defaultLanguage": "en",
@@ -468,7 +469,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
   "catalogFiles": {
     "plantCandidates": "../plants/plants.catalog.guide.json",
     "animalCandidates": "../animals/animals.catalog.guide.json",
-    "geologicalCandidates": "../minerals/minerals.catalog.guide.json"
+    "geologicalCandidates": "../minerals/minerals.catalog.guide.json",
+    "resources": "../resources/resources.catalog.guide.json"
   },
   "repositoryPackaging": {
     "layout": "flat_linked_catalogs",
