@@ -1,5 +1,7 @@
 # Evolve — Referencia de diseño y simulación
 
+[Pendientes y avances — consultar al retomar](../../ROADMAP.es.md)
+
 [Plantas y animales: categorías del juego](biology.md)
 
 [Catálogo de recursos y relaciones](resources.md)

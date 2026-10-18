@@ -1,5 +1,7 @@
 # Evolve — Design and Simulation Reference
 
+[Roadmap and pending work — read when resuming](../../ROADMAP.md)
+
 [Plants and animals: gameplay categories](biology.md)
 
 [Resource catalog and relationships](resources.md)

@@ -4,6 +4,8 @@ Documentation and data contracts for a historical civilization simulation. This 
 
 **[English documentation](lang/en/README.md) · [Documentación en español](lang/es/README.md)**
 
+**Current work and pending tasks: [Roadmap](ROADMAP.md) · [Pendientes y avances](ROADMAP.es.md)**
+
 ## Repository structure
 
 ```text

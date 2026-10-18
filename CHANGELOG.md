@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-17 — Shared roadmap and task tracking
+
+- Add English/Spanish roadmaps with one current focus, next design work, later simulation, deferred ideas and completed foundations.
+- Link both versions from the project entrypoints and record the agreement to update them with each completed task, new pending item or changed decision.
+- Track partial design separately from completed gameplay; no data or simulation behavior changes.
+- Se añade una lista compartida de pendientes y avances para retomar el proyecto sin perder el enfoque.
+
 ## 2026-10-17 — General gameplay entity categories
 
 - Follow the simpler entity scope: foxes provide hide without separate Arctic/corsac/fennec gameplay species. Group 18 animal cases and 15 plant cases only where existing output profiles match. Retain meaningful crop and wild/domestic distinctions.
