@@ -12,6 +12,14 @@ This is the shared list of current work, pending work and completed milestones. 
 
 References: [entity categories](lang/en/biology.md), [plants](data/plants/DIAGRAMS.md), [animals](data/animals/DIAGRAMS.md), [resources](lang/en/resources.md).
 
+### Current-focus decisions
+
+Work one decision at a time: offer options, record the choice, then update data/documentation and this list.
+
+- [x] Foxes: detailed option C — hide, meat, bones and animal fat. Add `RES#000105` for bones.
+- [ ] Choose material acquisition: direct output after hunting or a subsequent carcass-processing action.
+- [ ] Continue with other entities; the fox decision does not apply to all animals.
+
 ## Next — Finish the initial design
 
 - [ ] Define useful wild/domestic relationships at gameplay category level. Preserve relevant crop differences; scientific species and exhaustive varieties are not required.

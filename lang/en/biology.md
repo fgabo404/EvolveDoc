@@ -1,6 +1,6 @@
 # Plants and animals: gameplay categories
 
-Use the detail needed for gameplay. **Foxes** are one entity providing **hide**: Arctic, red, corsac and fennec foxes do not need separate gameplay entries. Color, region or scientific name alone does not require another definition.
+Use the detail needed for gameplay. **Foxes** are one entity providing **hide, meat, bones and animal fat**: Arctic, red, corsac and fennec foxes do not need separate gameplay entries. Color, region or scientific name alone does not require another definition.
 
 ## When to group and when to retain distinctions
 
@@ -37,20 +37,41 @@ Excerpt of the actual record’s main fields; the complete JSON and nested objec
   "potentialProducts": [
     {
       "resourceTag": "hide",
-      "status": "potential_from_source",
+      "status": "gameplay_output_selected_acquisition_method_pending",
       "requiredTechnologyIds": null,
       "yield": null,
       "resourceId": "RES#000031"
+    },
+    {
+      "resourceTag": "meat",
+      "status": "gameplay_output_selected_acquisition_method_pending",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000029"
+    },
+    {
+      "resourceTag": "bones",
+      "status": "gameplay_output_selected_acquisition_method_pending",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000105"
+    },
+    {
+      "resourceTag": "animal_fat",
+      "status": "gameplay_output_selected_acquisition_method_pending",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000032"
     }
   ]
 }
 ```
 
-The five previous fox IDs map to `ANM#000169`. Their occurrences in six regional habitat variants remain intact. There is only one output binding to `RES#000031` (hide). Grouping creates neither new animals nor permission to place them everywhere.
+The five previous fox IDs map to `ANM#000169`. Their occurrences in six regional habitat variants remain intact. The detailed option selected for foxes links hide (`RES#000031`), meat (`RES#000029`), bones (`RES#000105`) and animal fat (`RES#000032`). The acquisition workflow remains undecided. Grouping creates neither new animals nor permission to place them everywhere.
 
 ## Compatibility and scope
 
-Old IDs are retired and never reused. Every world occurrence keeps its ID and original text; `definitionId` references the general category and `sourceDefinitionId` preserves the previous identity when grouping occurred. Resource links were redirected and deduplicated: 298 current bindings for the same 104 materials.
+Old IDs are retired and never reused. Every world occurrence keeps its ID and original text; `definitionId` references the general category and `sourceDefinitionId` preserves the previous identity when grouping occurred. Resource links were redirected and deduplicated: 301 current bindings for 105 materials.
 
 There are 109 plant entities, 101 animal entities and the same 21 crop groups. All 485 original occurrences, crops, resources and technologies are retained. No yields, durations, costs or recipes were added. Pending operational design keeps these catalogs runtime-disabled.
 
@@ -64,3 +85,5 @@ Previous scientific catalogs remain optional background. They do not determine e
 
 - [Optional science: plants](../../data/plants/BIOLOGY.md)
 - [Optional science: animals](../../data/animals/BIOLOGY.md)
+
+Design decision: detailed option C for foxes. This does not automatically apply to other animals or yet define bone/fat uses, amounts or durations.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.3.0",
   "kind": "resource_catalog_design_guide",
   "status": "prototype_requires_species_action_and_balance_review",
   "defaultLanguage": "en",
@@ -2535,6 +2535,30 @@
         "storageRules": null
       },
       "definitionStatus": "design_guide_requires_review"
+    },
+    {
+      "id": "RES#000105",
+      "tag": "bones",
+      "name": {
+        "en": "Bones",
+        "es": "Huesos"
+      },
+      "description": {
+        "en": "Raw animal bones selected as a gameplay material. Acquisition method, processing uses and amounts remain pending.",
+        "es": "Huesos animales sin procesar elegidos como material del juego. Forma de obtención, usos de transformación y cantidades pendientes."
+      },
+      "category": "animal_material",
+      "stage": "raw",
+      "tags": [
+        "bones"
+      ],
+      "inventory": {
+        "storable": true,
+        "quantityUnit": null,
+        "perishable": null,
+        "storageRules": null
+      },
+      "definitionStatus": "design_guide_requires_review"
     }
   ],
   "sourceBindings": [
@@ -4100,16 +4124,6 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "ANM#000169",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
       "sourceId": "ANM#000186",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
@@ -5517,6 +5531,46 @@
       "quantityPerAction": null,
       "runtimeEnabled": false,
       "requiresProcessing": false
+    },
+    {
+      "sourceCollection": "animalSpeciesCandidates",
+      "sourceId": "ANM#000169",
+      "resourceId": "RES#000031",
+      "acquisitionTag": "fox_resource_acquisition_method_pending",
+      "reviewStatus": "gameplay_output_selected_acquisition_method_pending",
+      "quantityPerAction": null,
+      "runtimeEnabled": false,
+      "requiresProcessing": false
+    },
+    {
+      "sourceCollection": "animalSpeciesCandidates",
+      "sourceId": "ANM#000169",
+      "resourceId": "RES#000029",
+      "acquisitionTag": "fox_resource_acquisition_method_pending",
+      "reviewStatus": "gameplay_output_selected_acquisition_method_pending",
+      "quantityPerAction": null,
+      "runtimeEnabled": false,
+      "requiresProcessing": false
+    },
+    {
+      "sourceCollection": "animalSpeciesCandidates",
+      "sourceId": "ANM#000169",
+      "resourceId": "RES#000105",
+      "acquisitionTag": "fox_resource_acquisition_method_pending",
+      "reviewStatus": "gameplay_output_selected_acquisition_method_pending",
+      "quantityPerAction": null,
+      "runtimeEnabled": false,
+      "requiresProcessing": false
+    },
+    {
+      "sourceCollection": "animalSpeciesCandidates",
+      "sourceId": "ANM#000169",
+      "resourceId": "RES#000032",
+      "acquisitionTag": "fox_resource_acquisition_method_pending",
+      "reviewStatus": "gameplay_output_selected_acquisition_method_pending",
+      "quantityPerAction": null,
+      "runtimeEnabled": false,
+      "requiresProcessing": false
     }
   ],
   "sourceTagMappings": [
@@ -5718,6 +5772,15 @@
       "resourceIds": [],
       "resolutionStatus": "not_an_inventory_resource",
       "note": "An action or service belongs to a future service/animal-use system, not a stack of inventory."
+    },
+    {
+      "sourceTag": "bones",
+      "targetKind": "resource",
+      "resourceIds": [
+        "RES#000105"
+      ],
+      "resolutionStatus": "gameplay_output_selected_acquisition_method_pending",
+      "note": "Selected for foxes through a user design decision; not automatically assigned to other animal categories."
     }
   ],
   "processingLinks": [
@@ -6257,10 +6320,10 @@
     }
   ],
   "summary": {
-    "resourceCount": 104,
-    "sourceBindingCount": 298,
+    "resourceCount": 105,
+    "sourceBindingCount": 301,
     "processingLinkCount": 25,
-    "sourceTagMappingCount": 23,
+    "sourceTagMappingCount": 24,
     "geologicalSourceCount": 57,
     "cropSourceCount": 21
   }

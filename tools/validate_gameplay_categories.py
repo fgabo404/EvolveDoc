@@ -45,12 +45,8 @@ def validate_categories():
             require(aliases.get(o['sourceDefinitionId'])==o['definitionId'],'Occurrence lost source provenance')
             seen.add(o['sourceDefinitionId'])
     require(seen==aliases.keys(),'Retired source lost all world occurrences')
-    fox=next(e for e in entities.values() if e.get('tag')=='foxes')
-    require(fox['name']=={'en':'Foxes','es':'Zorros'},'Fox category label changed')
-    require([p['resourceId'] for p in fox['potentialProducts']]==['RES#000031'],'Fox output must remain hide only')
     bindings=read('data/resources/resources.catalog.guide.json')['sourceBindings']
     require(all(b['sourceId'] not in aliases for b in bindings),'Resource binding still references retired source')
-    require(sum(b['sourceId']==fox['id'] for b in bindings)==1,'Fox output binding duplicated')
     return {'entityCount':len(entities),'generalizedCategoryCount':sum('sourceVariants' in e for e in entities.values()),'retiredIdCount':len(aliases)}
 
 

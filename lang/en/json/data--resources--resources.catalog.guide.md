@@ -17,7 +17,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.2.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.3.0"` |
 | `kind` | `string` | 1/1 | Discriminator identifying this document or candidate category. | `"resource_catalog_design_guide"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"prototype_requires_species_action_and_balance_review"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
@@ -47,61 +47,61 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `id` | `string` | 104/104 | Stable identity of this definition or fixture civilization; never use a translated name as identity. | `"RES#000001"` |
-| `tag` | `string` | 104/104 | English snake_case technical label; future IDs and tags are not yet applied to legacy catalogs. | `"wood"` |
-| `name` | `object` | 104/104 | Player-visible label using language keys. | `—` |
-| `description` | `object` | 104/104 | Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text. | `—` |
-| `category` | `string` | 104/104 | English resource category used for organizing the catalog. | `"plant_material"` |
-| `stage` | `string` | 104/104 | Material stage: raw, intermediate, processed or refined; does not encode a numeric technology level. | `"raw"` |
-| `tags` | `array<string>` | 104/104 | English classification tags; compatibility and substitution still require explicit action rules. | `["wood", "fuel_candidate"]` |
-| `inventory` | `object` | 104/104 | Inventory eligibility and unresolved storage metadata, not current stock amounts. | `—` |
-| `definitionStatus` | `string` | 104/104 | Readiness of this record; source candidates are not runtime definitions. | `"design_guide_requires_review"` |
+| `id` | `string` | 105/105 | Stable identity of this definition or fixture civilization; never use a translated name as identity. | `"RES#000001"` |
+| `tag` | `string` | 105/105 | English snake_case technical label; future IDs and tags are not yet applied to legacy catalogs. | `"wood"` |
+| `name` | `object` | 105/105 | Player-visible label using language keys. | `—` |
+| `description` | `object` | 105/105 | Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text. | `—` |
+| `category` | `string` | 105/105 | English resource category used for organizing the catalog. | `"plant_material"` |
+| `stage` | `string` | 105/105 | Material stage: raw, intermediate, processed or refined; does not encode a numeric technology level. | `"raw"` |
+| `tags` | `array<string>` | 105/105 | English classification tags; compatibility and substitution still require explicit action rules. | `["wood", "fuel_candidate"]` |
+| `inventory` | `object` | 105/105 | Inventory eligibility and unresolved storage metadata, not current stock amounts. | `—` |
+| `definitionStatus` | `string` | 105/105 | Readiness of this record; source candidates are not runtime definitions. | `"design_guide_requires_review"` |
 
 ### `$.resources[].name`
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `en` | `string` | 104/104 | English visible text. | `"Wood"` |
-| `es` | `string` | 104/104 | Spanish visible text. | `"Madera"` |
+| `en` | `string` | 105/105 | English visible text. | `"Wood"` |
+| `es` | `string` | 105/105 | Spanish visible text. | `"Madera"` |
 
 ### `$.resources[].description`
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `en` | `string` | 104/104 | English visible text. | `"Wood: a material definition for inventory and future production rules; amounts and processing requirements rema…` |
-| `es` | `string` | 104/104 | Spanish visible text. | `"Madera: definición de material para inventario y futuras reglas de producción; cantidades y requisitos de proce…` |
+| `en` | `string` | 105/105 | English visible text. | `"Wood: a material definition for inventory and future production rules; amounts and processing requirements rema…` |
+| `es` | `string` | 105/105 | Spanish visible text. | `"Madera: definición de material para inventario y futuras reglas de producción; cantidades y requisitos de proce…` |
 
 ### `$.resources[].inventory`
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `storable` | `boolean` | 104/104 | True identifies a material eligible for inventory; services are excluded. | `true` |
-| `quantityUnit` | `null` | 104/104 | Inventory measurement unit; null means the unit is not yet chosen. | `null` |
-| `perishable` | `null` | 104/104 | Whether deterioration applies; null means unresolved, not nonperishable. | `null` |
-| `storageRules` | `null` | 104/104 | Storage requirements and deterioration rules, still undefined. | `null` |
+| `storable` | `boolean` | 105/105 | True identifies a material eligible for inventory; services are excluded. | `true` |
+| `quantityUnit` | `null` | 105/105 | Inventory measurement unit; null means the unit is not yet chosen. | `null` |
+| `perishable` | `null` | 105/105 | Whether deterioration applies; null means unresolved, not nonperishable. | `null` |
+| `storageRules` | `null` | 105/105 | Storage requirements and deterioration rules, still undefined. | `null` |
 
 ### `$.sourceBindings[]`
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `sourceCollection` | `string` | 298/298 | Symbolic collection key resolving to plants, animals, crops or geology; not a resource ID. | `"agriculturalCropCandidates"` |
-| `sourceId` | `string` | 298/298 | Existing source candidate ID, preserved without migrating its identity. | `"wheat"` |
-| `resourceId` | `string` | 298/298 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000007"` |
-| `acquisitionTag` | `string` | 298/298 | Descriptive acquisition guide tag; not an implemented action or recipe ID. | `"crop_harvesting"` |
-| `reviewStatus` | `string` | 298/298 | Review still required before a source output is authorized. | `"proposed_requires_species_and_action_review"` |
-| `quantityPerAction` | `null` | 298/298 | Output per action, still unresolved; not zero or guaranteed yield. | `null` |
-| `runtimeEnabled` | `boolean` | 298/298 | Whether this occurrence may be used by generation; currently false. | `false` |
-| `requiresProcessing` | `boolean` | 298/298 | True means this source relation includes further processing; it is not a direct harvesting output. | `false` |
+| `sourceCollection` | `string` | 301/301 | Symbolic collection key resolving to plants, animals, crops or geology; not a resource ID. | `"agriculturalCropCandidates"` |
+| `sourceId` | `string` | 301/301 | Existing source candidate ID, preserved without migrating its identity. | `"wheat"` |
+| `resourceId` | `string` | 301/301 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000007"` |
+| `acquisitionTag` | `string` | 301/301 | Descriptive acquisition guide tag; not an implemented action or recipe ID. | `"crop_harvesting"` |
+| `reviewStatus` | `string` | 301/301 | Review still required before a source output is authorized. | `"proposed_requires_species_and_action_review"` |
+| `quantityPerAction` | `null` | 301/301 | Output per action, still unresolved; not zero or guaranteed yield. | `null` |
+| `runtimeEnabled` | `boolean` | 301/301 | Whether this occurrence may be used by generation; currently false. | `false` |
+| `requiresProcessing` | `boolean` | 301/301 | True means this source relation includes further processing; it is not a direct harvesting output. | `false` |
 
 ### `$.sourceTagMappings[]`
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `sourceTag` | `string` | 23/23 | Original animal-product or service tag retained for traceability. | `"animal_fat"` |
-| `targetKind` | `string` | 23/23 | Whether the original tag represents a resource, service or unresolved anatomical alternative. | `"resource"` |
-| `resourceIds` | `array<string>` | 23/23 | Explicit linked resource IDs; empty for services or unresolved alternatives. | `["RES#000032"]` |
-| `resolutionStatus` | `string` | 23/23 | Task still required to resolve a candidate or regional restriction. | `"tag_linked_species_and_use_review_pending"` |
-| `note` | `string` | 23/23 | Developer clarification; not localized UI text. | `"A linked source possibility is not a verified yield or permission to harvest."` |
+| `sourceTag` | `string` | 24/24 | Original animal-product or service tag retained for traceability. | `"animal_fat"` |
+| `targetKind` | `string` | 24/24 | Whether the original tag represents a resource, service or unresolved anatomical alternative. | `"resource"` |
+| `resourceIds` | `array<string>` | 24/24 | Explicit linked resource IDs; empty for services or unresolved alternatives. | `["RES#000032"]` |
+| `resolutionStatus` | `string` | 24/24 | Task still required to resolve a candidate or regional restriction. | `"tag_linked_species_and_use_review_pending"` |
+| `note` | `string` | 24/24 | Developer clarification; not localized UI text. | `"A linked source possibility is not a verified yield or permission to harvest."` |
 
 ### `$.processingLinks[]`
 
@@ -144,10 +144,10 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `resourceCount` | `integer` | 1/1 | Number of resource definitions. | `104` |
-| `sourceBindingCount` | `integer` | 1/1 | Number of possible source-to-resource relations. | `298` |
+| `resourceCount` | `integer` | 1/1 | Number of resource definitions. | `105` |
+| `sourceBindingCount` | `integer` | 1/1 | Number of possible source-to-resource relations. | `301` |
 | `processingLinkCount` | `integer` | 1/1 | Number of proposed transformation guides. | `25` |
-| `sourceTagMappingCount` | `integer` | 1/1 | Number of original animal tags explicitly classified or mapped. | `23` |
+| `sourceTagMappingCount` | `integer` | 1/1 | Number of original animal tags explicitly classified or mapped. | `24` |
 | `geologicalSourceCount` | `integer` | 1/1 | Number of geological candidates with material mappings. | `57` |
 | `cropSourceCount` | `integer` | 1/1 | Number of agricultural candidates with proposed products. | `21` |
 
@@ -158,7 +158,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 ```json
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "0.2.0",
+  "contentVersion": "0.3.0",
   "kind": "resource_catalog_design_guide",
   "status": "prototype_requires_species_action_and_balance_review",
   "defaultLanguage": "en",
@@ -272,10 +272,10 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
     }
   ],
   "summary": {
-    "resourceCount": 104,
-    "sourceBindingCount": 298,
+    "resourceCount": 105,
+    "sourceBindingCount": 301,
     "processingLinkCount": 25,
-    "sourceTagMappingCount": 23,
+    "sourceTagMappingCount": 24,
     "geologicalSourceCount": 57,
     "cropSourceCount": 21
   }

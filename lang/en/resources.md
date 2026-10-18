@@ -4,7 +4,7 @@
 
 ## Purpose
 
-This catalog defines storable materials. A plant or animal is a source; a resource is an acquired material; a process relates input and output materials. It contains **104 resources**, **298 source bindings**, **25 transformation guides** and **23 classified animal source tags**.
+This catalog defines storable materials. A plant or animal is a source; a resource is an acquired material; a process relates input and output materials. It contains **105 resources**, **301 source bindings**, **25 transformation guides** and **24 classified animal source tags**.
 
 Scientific review and balance are not complete. Added crop/tree products are design proposals; amounts, exact conditions and recipes remain unresolved. The catalog and every relation are runtime-disabled.
 
@@ -126,3 +126,5 @@ python tools/generate_json_reference.py --check
 python tools/generate_catalog_diagrams.py --check
 python tools/validate_repository.py
 ```
+
+Foxes: confirmed detailed outputs are hide, meat, bones and animal fat. Bones use new permanent allocation `RES#000105`. Acquisition and later uses remain pending; this choice does not extend to other entities.

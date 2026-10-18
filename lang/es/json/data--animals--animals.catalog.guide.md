@@ -17,7 +17,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.3.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.4.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.5.0"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Códigos de idioma disponibles. | `["en", "es"]` |
@@ -105,11 +105,11 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `resourceTag` | `string` | 219/219 | Tag en inglés de categoría del recurso; no es ID resuelto. | `"meat"` |
-| `status` | `string` | 219/219 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"potential_from_source"` |
-| `requiredTechnologyIds` | `null` | 219/219 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
-| `yield` | `null` | 219/219 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
-| `resourceId` | `string` | 202/219 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000029"` |
+| `resourceTag` | `string` | 222/222 | Tag en inglés de categoría del recurso; no es ID resuelto. | `"meat"` |
+| `status` | `string` | 222/222 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"potential_from_source"` |
+| `requiredTechnologyIds` | `null` | 222/222 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
+| `yield` | `null` | 222/222 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
+| `resourceId` | `string` | 205/222 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000029"` |
 
 ### `$.speciesCandidates[].taxonResolution`
 
@@ -151,7 +151,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 ```json
 {
   "schemaVersion": "1.3.0",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [

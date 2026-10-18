@@ -12,6 +12,6 @@
 
 [Optional scientific background](BIOLOGY.md) · [Antecedentes científicos opcionales](BIOLOGY.es.md)
 
-Source guide schema/content: 1.3.0/0.4.0. Optional scientific reference schema/content: 1.1.0/0.2.0. Entity aliases preserve retired IDs. Amounts and durations are deferred; runtime remains disabled.
+Source guide schema/content: 1.3.0/0.5.0. Optional scientific reference schema/content: 1.1.0/0.2.0. Entity aliases preserve retired IDs. Amounts and durations are deferred; runtime remains disabled.
 
-Guía del juego esquema/contenido: 1.3.0/0.4.0. Referencia científica opcional: 1.1.0/0.2.0. Los alias conservan los IDs retirados. Cantidades y tiempos se dejan para después; ejecución deshabilitada.
+Guía del juego esquema/contenido: 1.3.0/0.5.0. Referencia científica opcional: 1.1.0/0.2.0. Los alias conservan los IDs retirados. Cantidades y tiempos se dejan para después; ejecución deshabilitada.

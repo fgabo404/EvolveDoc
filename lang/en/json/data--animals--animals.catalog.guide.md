@@ -17,7 +17,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.3.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.4.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.5.0"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Language codes available in this document. | `["en", "es"]` |
@@ -105,11 +105,11 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `resourceTag` | `string` | 219/219 | English resource-category tag; not a resolved resource ID. | `"meat"` |
-| `status` | `string` | 219/219 | Maturity, review state or current example research status; read the containing object. | `"potential_from_source"` |
-| `requiredTechnologyIds` | `null` | 219/219 | Technology references needed for this output; null means unresolved, not none. | `null` |
-| `yield` | `null` | 219/219 | Output yield; units, formula and amount remain unresolved. | `null` |
-| `resourceId` | `string` | 202/219 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000029"` |
+| `resourceTag` | `string` | 222/222 | English resource-category tag; not a resolved resource ID. | `"meat"` |
+| `status` | `string` | 222/222 | Maturity, review state or current example research status; read the containing object. | `"potential_from_source"` |
+| `requiredTechnologyIds` | `null` | 222/222 | Technology references needed for this output; null means unresolved, not none. | `null` |
+| `yield` | `null` | 222/222 | Output yield; units, formula and amount remain unresolved. | `null` |
+| `resourceId` | `string` | 205/222 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000029"` |
 
 ### `$.speciesCandidates[].taxonResolution`
 
@@ -151,7 +151,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 ```json
 {
   "schemaVersion": "1.3.0",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.5.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [

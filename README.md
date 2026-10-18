@@ -47,7 +47,7 @@ EvolveDoc/
 ## Current content
 
 - General gameplay categories: 33 selected animal/plant groups replace regional/species variants, with 86 explicit retired-ID aliases. Scientific background is optional.
-- 104 resources, 298 possible source links and 25 transformation endpoint guides; units, yields and recipes remain unresolved.
+- 105 resources, 301 possible source links and 25 transformation endpoint guides; units, yields and recipes remain unresolved.
 - 23 flat agriculture technologies; their existing IDs and gameplay configuration are preserved.
 - 7 biomes, 27 regional variants and 485 source occurrences.
 - 109 plant entity candidates, 101 animal entity candidates, 57 geological candidates and 21 agricultural crop candidates.

@@ -56,7 +56,7 @@ La procedencia incluye el ID exacto del documento y la huella de la copia adjunt
 
 Todas las apariciones tienen `runtimeEnabled: false`, `guaranteedPresence: false` y probabilidad desconocida. No se inventaron abundancias, crecimiento, rangos de fertilidad, tiempos de domesticación ni rendimientos.
 
-Los productos animales solo transcriben aprovechamientos potenciales del documento. No son desbloqueos ni rendimientos garantizados. `antlers_or_horns` requiere decidir el recurso del juego, sin conceder ambos por defecto. Algunos productos vegetales y todos los cultivos ya tienen vínculos propuestos de recursos; los requisitos de obtención y cantidades siguen pendientes; no se exige especie científica exacta. Son propuestas adicionales de diseño, no afirmaciones textuales de la fuente.
+Los productos animales registran posibilidades de la fuente y decisiones explícitas del juego, como los productos detallados de zorros. No son desbloqueos ni rendimientos garantizados. `antlers_or_horns` requiere decidir el recurso del juego, sin conceder ambos por defecto. Algunos productos vegetales y todos los cultivos ya tienen vínculos propuestos de recursos; los requisitos de obtención y cantidades siguen pendientes; no se exige especie científica exacta. Son propuestas adicionales de diseño, no afirmaciones textuales de la fuente.
 
 ## 6. Reglas del mundo
 

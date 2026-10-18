@@ -38,6 +38,6 @@ El esquema cubre todos los objetos internos de ambos catálogos biológicos. El 
 
 ## General gameplay categories / Categorías generales
 
-Plant/animal guides 1.3.0 add optional `sourceVariants`, allocated group `tag` values and root `entityAliases`. World manifest 1.4.0 adds original `sourceDefinitionId` where an occurrence was remapped. Existing guide schemas remain preliminary envelopes; generated JSON references describe every current nested field and example. `tools/validate_gameplay_categories.py` checks alias targets, retired IDs, regional provenance and the single fox/hide binding. Scientific reference identities are not gameplay requirements.
+Plant/animal guides 1.3.0 add optional `sourceVariants`, allocated group `tag` values and root `entityAliases`. World manifest 1.4.0 adds original `sourceDefinitionId` where an occurrence was remapped. Existing guide schemas remain preliminary envelopes; generated JSON references describe every current nested field and example. `tools/validate_gameplay_categories.py` checks alias targets, retired IDs, regional provenance and retired source references. Scientific reference identities are not gameplay requirements.
 
 Las guías 1.3.0 agrupan entidades mediante alias y conservan procedencia regional. Las referencias JSON documentan todos los campos nuevos; el verificador propio comprueba identidades y vínculos. La taxonomía es opcional y no exige nuevas entidades.

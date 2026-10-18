@@ -12,6 +12,14 @@ Esta es la lista compartida de trabajo actual, pendientes y avances completados.
 
 Referencias: [categorías de entidades](lang/es/biology.md), [plantas](data/plants/DIAGRAMS.es.md), [animales](data/animals/DIAGRAMS.es.md), [recursos](lang/es/resources.md).
 
+### Decisiones del enfoque actual
+
+Trabajamos una decisión a la vez: presentar opciones, registrar la elección y actualizar datos/documentación y esta lista.
+
+- [x] Zorros: opción C detallada — piel, carne, huesos y grasa animal. Añadido `RES#000105` para huesos.
+- [ ] Elegir cómo se obtienen esos materiales: entrega directa tras cazar o una acción posterior de aprovechamiento.
+- [ ] Continuar con las demás entidades; la elección de zorros no se aplica a todos los animales.
+
 ## Después — Terminar el diseño inicial
 
 - [ ] Definir relaciones silvestres/domésticas útiles con las categorías del juego. Conservar diferencias relevantes entre cultivos; no se exigen especies científicas ni variedades exhaustivas.

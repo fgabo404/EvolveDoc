@@ -114,6 +114,7 @@ Resources are inventory materials; trees, animals and deposits are possible sour
 | RES#000102 | cotton_cloth | Cotton cloth | textile_material | processed |
 | RES#000103 | olive_oil | Olive oil | food_ingredient | processed |
 | RES#000104 | leather | Leather | animal_material | processed |
+| RES#000105 | bones | Bones | animal_material | raw |
 
 ## Every resource
 
@@ -637,6 +638,17 @@ flowchart LR
     r3 -->|category| k2
 ```
 
+### Group 27
+
+```mermaid
+flowchart LR
+    r0["Bones / RES#000105"]
+    k0["animal_material"]
+    r0 -->|category| k0
+    s0["animalSpeciesCandidates"]
+    s0 -->|possible source| r0
+```
+
 ## Proposed transformations
 
 Each processTag groups its known input endpoints; fuel, water, facilities and other inputs may still be missing. This is not an operational recipe.
@@ -978,7 +990,6 @@ flowchart LR
 | animalSpeciesCandidates | animal_andean_viscacha | RES#000031 | false | source_potential_use_requires_species_and_action_review |
 | animalSpeciesCandidates | animal_rock_dwelling_viscachas | RES#000031 | false | source_potential_use_requires_species_and_action_review |
 | animalSpeciesCandidates | animal_wild_yak | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000169 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
 | animalSpeciesCandidates | ANM#000186 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
 | animalSpeciesCandidates | animal_greater_rhea | RES#000031 | false | source_potential_use_requires_species_and_action_review |
 | animalSpeciesCandidates | animal_wildebeest | RES#000031 | false | source_potential_use_requires_species_and_action_review |
@@ -1120,6 +1131,10 @@ flowchart LR
 | geologicalResourceCandidates | geological_deep_gypsum | RES#000086 | false | source_material_mapping_requires_extraction_and_processing_review |
 | geologicalResourceCandidates | geological_coastal_gypsum | RES#000086 | false | source_material_mapping_requires_extraction_and_processing_review |
 | geologicalResourceCandidates | geological_surface_opal | RES#000087 | false | source_material_mapping_requires_extraction_and_processing_review |
+| animalSpeciesCandidates | ANM#000169 | RES#000031 | false | gameplay_output_selected_acquisition_method_pending |
+| animalSpeciesCandidates | ANM#000169 | RES#000029 | false | gameplay_output_selected_acquisition_method_pending |
+| animalSpeciesCandidates | ANM#000169 | RES#000105 | false | gameplay_output_selected_acquisition_method_pending |
+| animalSpeciesCandidates | ANM#000169 | RES#000032 | false | gameplay_output_selected_acquisition_method_pending |
 
 ## Animal source tags
 
@@ -1148,6 +1163,7 @@ flowchart LR
 | tusks | resource | RES#000045 | tag_linked_species_and_use_review_pending |
 | whale_oil | resource | RES#000035 | tag_linked_species_and_use_review_pending |
 | work_service | service | none | not_an_inventory_resource |
+| bones | resource | RES#000105 | gameplay_output_selected_acquisition_method_pending |
 
 ## Unresolved sources
 

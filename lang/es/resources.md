@@ -4,7 +4,7 @@
 
 ## Qué define
 
-Este catálogo define materiales almacenables. Una planta o animal es el origen; un recurso es el material obtenido; un proceso relaciona materiales de entrada y salida. Hay **104 recursos**, **298 vínculos de origen**, **25 guías de transformación** y **23 tags animales clasificados**.
+Este catálogo define materiales almacenables. Una planta o animal es el origen; un recurso es el material obtenido; un proceso relaciona materiales de entrada y salida. Hay **105 recursos**, **301 vínculos de origen**, **25 guías de transformación** y **24 tags animales clasificados**.
 
 No son datos científicos o de balance terminados. Los productos agregados de cultivos y árboles son propuestas de diseño; las cantidades, condiciones específicas y recetas quedan pendientes. El catálogo y todos sus vínculos tienen la ejecución deshabilitada.
 
@@ -126,3 +126,5 @@ python tools/generate_json_reference.py --check
 python tools/generate_catalog_diagrams.py --check
 python tools/validate_repository.py
 ```
+
+Zorros: opción detallada confirmada con piel, carne, huesos y grasa animal. Huesos usa la nueva asignación permanente `RES#000105`. Método de obtención y usos posteriores siguen pendientes; no se extiende esta decisión a otras entidades.

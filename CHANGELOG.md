@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-17 — Detailed fox resource choice
+
+- Record user-selected option C for foxes: hide, meat, bones and animal fat. Allocate RES#000105 for bones; no changes to other animal outputs.
+- Animal content becomes 0.5.0; resource content 0.3.0 (105 resources, 301 source bindings, 24 animal source tags). Structural versions remain unchanged.
+- Acquisition workflow is the next open decision; quantities, timing, technology requirements and processing uses remain unresolved. Runtime stays disabled.
+- Update bilingual references, diagrams and roadmap; remove the obsolete hide-only restriction from category validation.
+- Elección confirmada: zorros con piel, carne, huesos y grasa; registrar el avance sin dar por terminada la forma de obtención ni el resto de animales.
+
 ## 2026-10-17 — Shared roadmap and task tracking
 
 - Add English/Spanish roadmaps with one current focus, next design work, later simulation, deferred ideas and completed foundations.

@@ -1180,6 +1180,9 @@ flowchart LR
     v16["Africano y arábigo / desert_african_and_arabian"]
     v17["Asiático central / desert_central_asian"]
     o3_0["Piel sin curtir / RES#000031 / potential"]
+    o3_1["Carne / RES#000029 / potential"]
+    o3_2["Huesos / RES#000105 / potential"]
+    o3_3["Grasa animal / RES#000032 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|source occurrence| v23
@@ -1191,6 +1194,9 @@ flowchart LR
     c2 -->|potentialProducts| o2_2
     c2 -->|source occurrence| v24
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v15
     c3 -->|source occurrence| v16
     c3 -->|source occurrence| v17

@@ -54,7 +54,7 @@ Mientras tanto, los IDs actuales como `species_cultivation`, `plant_dwarf_birch`
 
 ## Asignaciones de recursos existentes
 
-Los nuevos recursos ya usan IDs RES. `data/resources/resources.catalog.guide.json` registra las 104 asignaciones iniciales. Esto no migra IDs anteriores de especies o tecnologías ni reserva los ejemplos de la tabla anterior. Conservar IDs asignados; no reasignarlos según posición del arreglo.
+Los nuevos recursos ya usan IDs RES. `data/resources/resources.catalog.guide.json` registra las 105 asignaciones actuales. Esto no migra IDs anteriores de especies o tecnologías ni reserva los ejemplos de la tabla anterior. Conservar IDs asignados; no reasignarlos según posición del arreglo.
 
 ## Asignaciones biológicas
 

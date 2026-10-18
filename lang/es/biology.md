@@ -1,6 +1,6 @@
 # Plantas y animales: categorías del juego
 
-Usamos el detalle necesario para jugar. **Zorros** es una entidad que proporciona **piel**: no hace falta crear zorro ártico, rojo, corsac o fénec como entidades distintas. Una diferencia de color, región o nombre científico no exige otra ficha.
+Usamos el detalle necesario para jugar. **Zorros** es una entidad que proporciona **piel, carne, huesos y grasa animal**: no hace falta crear zorro ártico, rojo, corsac o fénec como entidades distintas. Una diferencia de color, región o nombre científico no exige otra ficha.
 
 ## Cuándo agrupar y cuándo conservar diferencias
 
@@ -37,20 +37,41 @@ Fragmento de los campos principales del registro real; el JSON completo y todos 
   "potentialProducts": [
     {
       "resourceTag": "hide",
-      "status": "potential_from_source",
+      "status": "gameplay_output_selected_acquisition_method_pending",
       "requiredTechnologyIds": null,
       "yield": null,
       "resourceId": "RES#000031"
+    },
+    {
+      "resourceTag": "meat",
+      "status": "gameplay_output_selected_acquisition_method_pending",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000029"
+    },
+    {
+      "resourceTag": "bones",
+      "status": "gameplay_output_selected_acquisition_method_pending",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000105"
+    },
+    {
+      "resourceTag": "animal_fat",
+      "status": "gameplay_output_selected_acquisition_method_pending",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000032"
     }
   ]
 }
 ```
 
-Los cinco IDs anteriores de zorros apuntan a `ANM#000169`. Sus seis variantes regionales de hábitat conservan sus apariciones. Solo existe un vínculo de producto hacia `RES#000031` (piel sin curtir). Agrupar no crea animales nuevos ni permite colocarlos en todo el mapa.
+Los cinco IDs anteriores de zorros apuntan a `ANM#000169`. Sus seis variantes regionales de hábitat conservan sus apariciones. La opción detallada elegida para zorros enlaza piel (`RES#000031`), carne (`RES#000029`), huesos (`RES#000105`) y grasa animal (`RES#000032`). La forma de obtención sigue pendiente. Agrupar no crea animales nuevos ni permite colocarlos en todo el mapa.
 
 ## Compatibilidad y alcance
 
-Los IDs antiguos quedan retirados y no se reutilizan. Cada aparición mundial conserva su ID y texto original; `definitionId` apunta a la categoría general y `sourceDefinitionId` conserva la identidad anterior cuando hubo agrupación. Los vínculos de recursos se redirigieron y se eliminaron duplicados: 298 vínculos vigentes para los mismos 104 materiales.
+Los IDs antiguos quedan retirados y no se reutilizan. Cada aparición mundial conserva su ID y texto original; `definitionId` apunta a la categoría general y `sourceDefinitionId` conserva la identidad anterior cuando hubo agrupación. Los vínculos de recursos se redirigieron y se eliminaron duplicados: 301 vínculos vigentes para 105 materiales.
 
 Hay 109 entidades vegetales, 101 animales y los mismos 21 grupos agrícolas. Se conservan las 485 apariciones del documento y todos los cultivos, recursos y tecnologías. No se añadieron rendimientos, tiempos, costes ni recetas. Las reglas operativas pendientes mantienen los catálogos deshabilitados para ejecución.
 
@@ -64,3 +85,5 @@ Los catálogos científicos anteriores se conservan como antecedentes opcionales
 
 - [Optional science: plants](../../data/plants/BIOLOGY.es.md)
 - [Optional science: animals](../../data/animals/BIOLOGY.es.md)
+
+Decisión de diseño: opción C detallada para zorros. No se aplica automáticamente a otros animales ni define todavía usos de huesos/grasa, cantidades o tiempos.

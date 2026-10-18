@@ -56,7 +56,7 @@ The original source document is represented by its exact connector file ID and s
 
 Every occurrence has `runtimeEnabled: false`, `guaranteedPresence: false` and an unknown spawn probability. No abundance, growth rate, fertility range, domestication duration or yield was invented.
 
-Fauna product tags only transcribe potential uses in the document. They are not confirmed yields or automatic unlocks. `antlers_or_horns` requires a gameplay resource decision; never grant both by default. Selected plant products and all crop products now have proposed resource links; acquisition requirements and quantities remain unresolved; exact scientific species are not required. These proposals are additional design data, not verbatim source claims.
+Fauna product tags record source possibilities and explicit gameplay decisions, such as detailed fox outputs. They are not confirmed yields or automatic unlocks. `antlers_or_horns` requires a gameplay resource decision; never grant both by default. Selected plant products and all crop products now have proposed resource links; acquisition requirements and quantities remain unresolved; exact scientific species are not required. These proposals are additional design data, not verbatim source claims.
 
 ## 6. World-generation rules
 

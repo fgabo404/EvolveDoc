@@ -54,7 +54,7 @@ Until this migration is complete, existing IDs such as `species_cultivation`, `p
 
 ## Resource allocations now present
 
-New resource definitions already use RES IDs. `data/resources/resources.catalog.guide.json` records the 104 initial allocations. This does not migrate the legacy species or technology IDs and does not reserve the illustrative IDs in the table above. Preserve allocated IDs; do not rerun allocation from array positions.
+New resource definitions already use RES IDs. `data/resources/resources.catalog.guide.json` records 105 current allocations. This does not migrate the legacy species or technology IDs and does not reserve the illustrative IDs in the table above. Preserve allocated IDs; do not rerun allocation from array positions.
 
 ## Biological allocations
 

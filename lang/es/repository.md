@@ -13,7 +13,7 @@ Este repositorio reúne documentación, catálogos de diseño y simulaciones edu
 | `data/animals` | Categorías generales de fauna, hábitats, distinciones domésticas útiles y productos. |
 | `data/plants` | Categorías generales de flora y cultivos, reproducción, formas útiles y productos. |
 | `data/minerals` | Candidatos geológicos; después yacimientos, extracción, procesamiento y requisitos. |
-| `data/resources` | 104 materiales con vínculos de origen y extremos de transformación; cantidades y recetas pendientes. |
+| `data/resources` | 105 materiales con vínculos de origen y extremos de transformación; cantidades y recetas pendientes. |
 | `data/technologies` | Tecnologías al mismo nivel, requisitos, costos de investigación y eurekas. |
 | `schemas` | Contratos estructurales iniciales y sus límites. |
 | `simulation` | Datos de ejemplo y demostraciones ejecutables; no el motor definitivo. |
@@ -23,7 +23,7 @@ Este repositorio reúne documentación, catálogos de diseño y simulaciones edu
 
 La guía principal es `data/world/world.catalog.guide.json`. Sus rutas `catalogFiles` se resuelven respecto de ese archivo. Plantas y animales tienen `speciesCandidates`; plantas también tiene `agriculturalCropCandidates`. Minerales contiene `geologicalResourceCandidates`. El mundo conserva las 485 `resourceOccurrences`, cuyos `definitionId` apuntan a esos catálogos.
 
-Mundo usa esquema/contenido 1.4.0/0.5.0; plantas y animales 1.3.0/0.4.0; minerales conservan 1.1.0/0.2.0; recursos usan 1.0.0/0.2.0. Las categorías agrupadas conservan alias de IDs y apariciones originales. Agricultura permanece sin cambios en 2.0.0/0.3.0.
+Mundo usa esquema/contenido 1.4.0/0.5.0; plantas y animales 1.3.0/0.4.0; minerales conservan 1.1.0/0.2.0; recursos usan 1.0.0/0.3.0. Las categorías agrupadas conservan alias de IDs y apariciones originales. Agricultura permanece sin cambios en 2.0.0/0.3.0.
 
 `null` significa pendiente. Una lista regional vacía no permite aparición mundial. Los catálogos guía siguen deshabilitados para generación real. Se conserva la clasificación del documento: por ejemplo, los líquenes permanecen en flora hasta revisarlos.
 
@@ -38,3 +38,5 @@ Linaje biológico, selección/domesticación y mejoras técnicas deben ser relac
 Git es la referencia principal desde esta migración. Drive no se sincroniza automáticamente. Actualizar ambos idiomas juntos y registrar propósito, validación y compatibilidad en los commits. Conservar dudas explícitas en lugar de inventar taxonomía o balance. No subir partidas reales, credenciales ni cachés generadas.
 
 La granularidad actual usa [categorías generales](biology.md). La taxonomía científica es opcional; los IDs agrupados conservan alias y procedencia.
+
+Contenido de animales: 0.5.0 tras elegir productos detallados para zorros; estructura 1.3.0 sin cambios.
