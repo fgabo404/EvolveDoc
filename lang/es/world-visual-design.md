@@ -42,13 +42,22 @@ El catálogo existente `data/world/world.catalog.guide.json` conserva sus cuatro
 
 ## Reglas visuales
 
-- Paisaje continuo y cuadrícula hexagonal de baja prominencia; intensificar la cuadrícula al seleccionar, construir o mover.
-- Relieve volumétrico con numerosas cotas, laderas, mesetas, barrancos, valles y cordilleras; evitar que los niveles se vean como plataformas artificiales salvo donde el relieve lo amerite.
+- **Cuadrícula hexagonal siempre visible y reconocible** sobre tierra y agua, también en la vista normal. Líneas continuas, finas y con contraste suficiente para identificar cada hexágono; pueden intensificarse en acciones tácticas, pero no desaparecer. Evitar que vegetación, texturas o efectos oculten sistemáticamente la malla.
+- **Relieve progresivo claramente marcado** con diferencias de alturas legibles, perfiles, paredes y pendientes isométricas. Numerosas cotas crean laderas, mesetas, barrancos, valles y cordilleras; no limitar el mundo a cuatro alturas ni convertir todos los desniveles en plataformas artificiales.
+- **Mapa despejado y no saturado:** vegetación, rocas, fauna y otros elementos dibujados en grupos representativos con espacios libres, sin tapar la cuadrícula ni impedir identificar relieve y tipo de terreno.
 - Biomas diferenciados por vegetación, densidad, color y textura, con transiciones naturales.
 - Ríos y caminos continuos; costas irregulares; geografía conectada.
 - Recursos visibles como indicios representativos, con detalle consultable mediante selección y capas temáticas.
 - Asentamientos y actividades humanas modifican progresivamente el paisaje.
 - No confundir la representación visual con las cantidades lógicas de árboles, depósitos o animales.
+
+## Revisión visual aprobada — grid y relieve (v0.3, 18 de octubre de 2026)
+
+La última revisión visual aprobada de la referencia enfatiza **hexágonos delineados claramente en toda la superficie** (incluyendo el océano), con relieve de alturas múltiples bien visible y un paisaje sin sobrecarga de detalles. La prioridad visual es: **lectura de cada hexágono → lectura de alturas → lectura del bioma y sus elementos**. Se mantiene el estilo *Hand-Drawn Isometric Hex World with Progressive Elevation*.
+
+Esta regla **sustituye** la sugerencia anterior de hacer casi invisible la grilla en la vista normal. El primer subtipo ecológico usado para calibrar el estilo es *Selva tropical lluviosa de tierras bajas*; los ejemplos que mezclan otros biomas son pruebas de estilo generales, no representaciones definitivas de un solo subtipo.
+
+**Referencia PNG generada en la conversación:** `g_evolve_hexagonal_tropical_world_map.png` (pendiente de incorporación binaria al repositorio). La aprobación del estilo y su registro textual no equivalen a subir la imagen.
 
 ## Referencia artística aprobada
 
