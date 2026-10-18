@@ -1,0 +1,363 @@
+{
+  "kind": "ecological_subtype_proposal",
+  "schemaVersion": "0.1.0",
+  "status": "design_proposal_not_runtime_enabled",
+  "decisionDate": "2026-10-17",
+  "principles": [
+    "Ecological subtype classification is independent from continent.",
+    "Biogeographic region constrains native species independently.",
+    "Absolute elevation alone does not determine biome.",
+    "Existing 27 regionalVariant IDs and 485 occurrence links remain unchanged until validated migration.",
+    "Some candidates overlap or may warrant reassignment to other parent biomes after ecological review."
+  ],
+  "biomeGroups": [
+    {
+      "biomeId": "tropical_forest",
+      "nameEs": "Bosque tropical",
+      "subtypeIds": [
+        "tropical_forest_lowland_rainforest",
+        "tropical_forest_seasonal_dry_forest",
+        "tropical_forest_montane_cloud_forest",
+        "tropical_forest_flooded_tropical_forest"
+      ]
+    },
+    {
+      "biomeId": "temperate_forest",
+      "nameEs": "Bosque templado",
+      "subtypeIds": [
+        "temperate_forest_temperate_deciduous",
+        "temperate_forest_temperate_mixed",
+        "temperate_forest_temperate_evergreen",
+        "temperate_forest_boreal_coniferous"
+      ]
+    },
+    {
+      "biomeId": "tundra",
+      "nameEs": "Tundra",
+      "subtypeIds": [
+        "tundra_arctic_shrub_tundra",
+        "tundra_arctic_moss_lichen",
+        "tundra_subantarctic_tundra"
+      ]
+    },
+    {
+      "biomeId": "savanna",
+      "nameEs": "Sabana y praderas",
+      "subtypeIds": [
+        "savanna_humid_savanna",
+        "savanna_dry_savanna",
+        "savanna_temperate_grassland",
+        "savanna_steppe"
+      ]
+    },
+    {
+      "biomeId": "desert",
+      "nameEs": "Desierto",
+      "subtypeIds": [
+        "desert_hot_sandy_desert",
+        "desert_rocky_desert",
+        "desert_cold_desert",
+        "desert_hyperarid_desert"
+      ]
+    },
+    {
+      "biomeId": "marine",
+      "nameEs": "Marino",
+      "subtypeIds": [
+        "marine_tropical_shallow_coast",
+        "marine_temperate_coastal_sea",
+        "marine_polar_sea",
+        "marine_coastal_wetland"
+      ]
+    },
+    {
+      "biomeId": "alpine",
+      "nameEs": "Alta montaña y pisos alpinos",
+      "subtypeIds": [
+        "alpine_subalpine",
+        "alpine_alpine_meadow",
+        "alpine_alpine_tundra",
+        "alpine_nival_summit"
+      ]
+    }
+  ],
+  "subtypes": [
+    {
+      "id": "tropical_forest_lowland_rainforest",
+      "biomeId": "tropical_forest",
+      "name": {
+        "es": "Selva tropical lluviosa de tierras bajas",
+        "en": "Lowland tropical rainforest"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "tropical_forest_seasonal_dry_forest",
+      "biomeId": "tropical_forest",
+      "name": {
+        "es": "Bosque tropical estacional o seco",
+        "en": "Seasonal or dry tropical forest"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "tropical_forest_montane_cloud_forest",
+      "biomeId": "tropical_forest",
+      "name": {
+        "es": "Bosque tropical montano o nuboso",
+        "en": "Tropical montane or cloud forest"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "tropical_forest_flooded_tropical_forest",
+      "biomeId": "tropical_forest",
+      "name": {
+        "es": "Bosque tropical inundable",
+        "en": "Flooded tropical forest"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "temperate_forest_temperate_deciduous",
+      "biomeId": "temperate_forest",
+      "name": {
+        "es": "Bosque templado caducifolio",
+        "en": "Temperate deciduous forest"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "temperate_forest_temperate_mixed",
+      "biomeId": "temperate_forest",
+      "name": {
+        "es": "Bosque templado mixto",
+        "en": "Temperate mixed forest"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "temperate_forest_temperate_evergreen",
+      "biomeId": "temperate_forest",
+      "name": {
+        "es": "Bosque templado siempreverde",
+        "en": "Temperate evergreen forest"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "temperate_forest_boreal_coniferous",
+      "biomeId": "temperate_forest",
+      "name": {
+        "es": "Bosque boreal de coníferas (taiga)",
+        "en": "Boreal conifer forest (taiga)"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "tundra_arctic_shrub_tundra",
+      "biomeId": "tundra",
+      "name": {
+        "es": "Tundra arbustiva ártica",
+        "en": "Arctic shrub tundra"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "tundra_arctic_moss_lichen",
+      "biomeId": "tundra",
+      "name": {
+        "es": "Tundra de musgos y líquenes",
+        "en": "Moss and lichen tundra"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "tundra_subantarctic_tundra",
+      "biomeId": "tundra",
+      "name": {
+        "es": "Tundra subantártica",
+        "en": "Subantarctic tundra"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "savanna_humid_savanna",
+      "biomeId": "savanna",
+      "name": {
+        "es": "Sabana húmeda",
+        "en": "Humid savanna"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "savanna_dry_savanna",
+      "biomeId": "savanna",
+      "name": {
+        "es": "Sabana seca",
+        "en": "Dry savanna"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "savanna_temperate_grassland",
+      "biomeId": "savanna",
+      "name": {
+        "es": "Pradera templada",
+        "en": "Temperate grassland"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "savanna_steppe",
+      "biomeId": "savanna",
+      "name": {
+        "es": "Estepa semiárida",
+        "en": "Semi-arid steppe"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "desert_hot_sandy_desert",
+      "biomeId": "desert",
+      "name": {
+        "es": "Desierto cálido arenoso",
+        "en": "Hot sandy desert"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "desert_rocky_desert",
+      "biomeId": "desert",
+      "name": {
+        "es": "Desierto rocoso",
+        "en": "Rocky desert"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "desert_cold_desert",
+      "biomeId": "desert",
+      "name": {
+        "es": "Desierto frío",
+        "en": "Cold desert"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "desert_hyperarid_desert",
+      "biomeId": "desert",
+      "name": {
+        "es": "Desierto hiperárido",
+        "en": "Hyperarid desert"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "marine_tropical_shallow_coast",
+      "biomeId": "marine",
+      "name": {
+        "es": "Costa tropical somera",
+        "en": "Tropical shallow coast"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "marine_temperate_coastal_sea",
+      "biomeId": "marine",
+      "name": {
+        "es": "Mar costero templado",
+        "en": "Temperate coastal sea"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "marine_polar_sea",
+      "biomeId": "marine",
+      "name": {
+        "es": "Mar polar o subpolar",
+        "en": "Polar or subpolar sea"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "marine_coastal_wetland",
+      "biomeId": "marine",
+      "name": {
+        "es": "Humedal costero (manglar o marisma)",
+        "en": "Coastal wetland (mangrove or salt marsh)"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "alpine_subalpine",
+      "biomeId": "alpine",
+      "name": {
+        "es": "Piso subalpino",
+        "en": "Subalpine belt"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "alpine_alpine_meadow",
+      "biomeId": "alpine",
+      "name": {
+        "es": "Pradera alpina",
+        "en": "Alpine meadow"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "alpine_alpine_tundra",
+      "biomeId": "alpine",
+      "name": {
+        "es": "Tundra alpina",
+        "en": "Alpine tundra"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    },
+    {
+      "id": "alpine_nival_summit",
+      "biomeId": "alpine",
+      "name": {
+        "es": "Piso nival y cumbres",
+        "en": "Nival belt and summits"
+      },
+      "status": "design_candidate",
+      "numericThresholds": null
+    }
+  ],
+  "legacyRegionalVariantsPreserved": true,
+  "notes": [
+    "Boreal forest may warrant its own major biome when revisiting the original 7-biome taxonomy.",
+    "Mangroves and salt marshes represent transitional coastal ecosystems, not exclusively marine water habitats.",
+    "Alpine tundra is classified under the alpine group to avoid duplicating tundra by altitude.",
+    "Desert landform (sandy/rocky) and aridity (hyperarid) are different axes: this shortlist is for visual design, not a final mutually exclusive scientific classification."
+  ]
+}
