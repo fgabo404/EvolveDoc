@@ -12,18 +12,20 @@ Esta es la lista compartida de trabajo actual, pendientes y avances completados.
 
 Referencias: [categorías de entidades](lang/es/biology.md), [plantas](data/plants/DIAGRAMS.es.md), [animales](data/animals/DIAGRAMS.es.md), [recursos](lang/es/resources.md).
 
-### Decisiones del enfoque actual
+### Decisiones y avances del enfoque actual
 
-Trabajamos una decisión a la vez: presentar opciones, registrar la elección y actualizar datos/documentación y esta lista.
+El usuario puede elegir entre opciones o delegar el llenado según la realidad. Actualizar datos, documentación y esta lista tras cada avance.
 
-- [x] Zorros: opción C detallada — piel, carne, huesos y grasa animal. Añadido `RES#000105` para huesos.
-- [ ] Elegir cómo se obtienen esos materiales: entrega directa tras cazar o una acción posterior de aprovechamiento.
-- [ ] Continuar con las demás entidades; la elección de zorros no se aplica a todos los animales.
+- [x] Aplicar el criterio detallado a todos los animales actuales, no solo a zorros: materiales según anatomía y condiciones de obtención.
+- [x] Completar la referencia de los 101 animales: 498 asociaciones de materiales y 17 métodos. Separar 7 candidatos de servicio sin aprobarlos como habilidades.
+- [x] Distinguir materiales del cuerpo, recolección en vida/desprendida y derivados procesados; registrar astas/cuernos, leche condicionada, huevos, perlas y excepciones.
+- [ ] Completar el bloque equivalente de plantas: entidad → recurso → forma de obtención.
+- [ ] Concretar después requisitos de herramientas/tecnologías y la resolución operativa de las acciones; no asignar cantidades, tiempos ni regeneración todavía.
 
 ## Después — Terminar el diseño inicial
 
 - [ ] Definir relaciones silvestres/domésticas útiles con las categorías del juego. Conservar diferencias relevantes entre cultivos; no se exigen especies científicas ni variedades exhaustivas.
-- [ ] Completar cadenas de transformación y requisitos de obtención de materiales, incluyendo extracción y refinado de minerales. Las 25 guías actuales relacionan materiales, pero no son recetas terminadas.
+- [ ] Completar cadenas de transformación y requisitos de obtención de materiales, incluyendo extracción y refinado de minerales. Las 28 guías actuales relacionan materiales, pero no son recetas terminadas.
 - [ ] Definir herramientas, recipientes, recetas e instalaciones necesarias y relacionarlas con recursos y tecnologías. Las referencias externas existentes no equivalen a catálogos completos.
 - [ ] Revisar hábitats regionales y reglas de presencia inicial. Distinguir presencia silvestre, animales introducidos y cultivos establecidos; todavía sin emular el mundo.
 - [ ] Revisar IDs, referencias faltantes entre catálogos y documentación después de esas decisiones de diseño.
@@ -51,7 +53,7 @@ Trabajamos una decisión a la vez: presentar opciones, registrar la elección y 
 - [x] Extraer la guía inicial del mundo: 7 biomas, 27 variantes regionales y 485 apariciones originales conservadas.
 - [x] Crear guías iniciales de plantas, animales, cultivos, minerales y recursos; son referencias de diseño, no catálogos listos para ejecución.
 - [x] Generalizar 33 casos vegetales/animales con 86 alias de IDs retirados; conservar diferencias útiles para jugar. Hay 109 entidades vegetales, 101 animales y 21 grupos agrícolas.
-- [x] Definir 104 recursos iniciales, 298 vínculos actuales de origen y 25 guías de transformación. Obtención y procesamiento completos siguen pendientes.
+- [x] Crear la base de recursos, vínculos de origen y guías de transformación. La cobertura vigente está en [recursos](lang/es/resources.md); recetas y reglas operativas siguen pendientes.
 - [x] Añadir referencias de todos los campos JSON actuales, ejemplos, diagramas de catálogos y comprobaciones de consistencia.
 - [x] Añadir una pequeña demostración de progreso de investigación sin gráficos; no hay un motor de simulación completo.
 - [x] Crear esta lista compartida y enlazar ambos idiomas desde el README.

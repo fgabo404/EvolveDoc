@@ -12,18 +12,20 @@ This is the shared list of current work, pending work and completed milestones. 
 
 References: [entity categories](lang/en/biology.md), [plants](data/plants/DIAGRAMS.md), [animals](data/animals/DIAGRAMS.md), [resources](lang/en/resources.md).
 
-### Current-focus decisions
+### Current-focus decisions and progress
 
-Work one decision at a time: offer options, record the choice, then update data/documentation and this list.
+The user may choose among options or delegate reality-based completion. Update data, documentation and this list after each advance.
 
-- [x] Foxes: detailed option C — hide, meat, bones and animal fat. Add `RES#000105` for bones.
-- [ ] Choose material acquisition: direct output after hunting or a subsequent carcass-processing action.
-- [ ] Continue with other entities; the fox decision does not apply to all animals.
+- [x] Apply the detailed approach to all current animals, not only foxes: anatomy-based materials and acquisition constraints.
+- [x] Complete the reference for 101 animals: 498 material associations and 17 methods. Separate 7 service candidates without granting trained abilities.
+- [x] Distinguish carcass, living/shed collection and processed derivatives; record antlers/horns, conditional milk, eggs, pearls and exceptions.
+- [ ] Complete the equivalent plant block: entity → resource → acquisition method.
+- [ ] Later specify equipment/technology and operational action resolution; do not assign quantities, durations or regeneration yet.
 
 ## Next — Finish the initial design
 
 - [ ] Define useful wild/domestic relationships at gameplay category level. Preserve relevant crop differences; scientific species and exhaustive varieties are not required.
-- [ ] Complete material transformation chains and acquisition requirements, including mineral extraction versus refining. The 25 current process guides are endpoints, not finished recipes.
+- [ ] Complete material transformation chains and acquisition requirements, including mineral extraction versus refining. The 28 current process guides are endpoints, not finished recipes.
 - [ ] Define the necessary tools, containers, recipes and facilities and link them to resources and technologies. Existing external references are not completed catalogs.
 - [ ] Review regional habitats and initial presence rules for entities. Keep wild presence, introduced animals and established crops distinct; no world emulation yet.
 - [ ] Review cross-catalog IDs, missing references and documentation after those design decisions.
@@ -51,7 +53,7 @@ Work one decision at a time: offer options, record the choice, then update data/
 - [x] Extract the initial world guide: 7 biomes, 27 regional variants and 485 preserved source occurrences.
 - [x] Create initial plant, animal, crop, mineral and resource guides; these are design references, not runtime-ready catalogs.
 - [x] Generalize 33 selected plant/animal cases with 86 retired-ID aliases; keep meaningful gameplay distinctions. Current guides contain 109 plant entities, 101 animal entities and 21 crop groups.
-- [x] Define 104 initial resources, 298 current source links and 25 transformation endpoint guides. Full acquisition/processing rules remain pending.
+- [x] Create the resource/source-binding and transformation-guide foundation. See [resources](lang/en/resources.md) for current coverage; recipes and operational rules remain pending.
 - [x] Add complete current JSON field references, examples, catalog diagrams and consistency checks.
 - [x] Add a small research-progress demonstration without graphics; no full simulation engine is implemented.
 - [x] Create this shared roadmap and link both language versions from the README.

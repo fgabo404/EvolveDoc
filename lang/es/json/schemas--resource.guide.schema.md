@@ -51,7 +51,7 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `const` | `string` | 1/1 | Valor JSON exacto admitido para la propiedad. | `"1.0.0"` |
+| `const` | `string` | 1/1 | Valor JSON exacto admitido para la propiedad. | `"1.1.0"` |
 
 ### `$.properties.contentVersion`
 
@@ -387,6 +387,7 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | `quantityPerAction` | `object` | 1/1 | Subesquema que describe `quantityPerAction`; ver sus campos internos más abajo. | `—` |
 | `runtimeEnabled` | `object` | 1/1 | Subesquema que describe `runtimeEnabled`; ver sus campos internos más abajo. | `—` |
 | `requiresProcessing` | `object` | 1/1 | Subesquema que describe `requiresProcessing`; ver sus campos internos más abajo. | `—` |
+| `processingTag` | `object` | 1/1 | Subesquema que describe `processingTag`; ver sus campos internos más abajo. | `—` |
 
 ### `$.$defs.sourceBinding.properties.sourceCollection`
 
@@ -435,6 +436,12 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `"boolean"` |
+
+### `$.$defs.sourceBinding.properties.processingTag`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `type` | `array<string>` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `["string", "null"]` |
 
 ### `$.$defs.sourceTagMapping`
 
@@ -516,6 +523,7 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | `byproducts` | `object` | 1/1 | Subesquema que describe `byproducts`; ver sus campos internos más abajo. | `—` |
 | `recipeId` | `object` | 1/1 | Subesquema que describe `recipeId`; ver sus campos internos más abajo. | `—` |
 | `runtimeEnabled` | `object` | 1/1 | Subesquema que describe `runtimeEnabled`; ver sus campos internos más abajo. | `—` |
+| `inputProvenancePolicy` | `object` | 1/1 | Subesquema que describe `inputProvenancePolicy`; ver sus campos internos más abajo. | `—` |
 
 ### `$.$defs.processingLink.properties.processTag`
 
@@ -603,6 +611,12 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `const` | `boolean` | 1/1 | Valor JSON exacto admitido para la propiedad. | `false` |
+
+### `$.$defs.processingLink.properties.inputProvenancePolicy`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `type` | `string` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `"string"` |
 
 ### `$.$defs.unresolvedSource`
 
@@ -807,7 +821,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
   ],
   "properties": {
     "schemaVersion": {
-      "const": "1.0.0"
+      "const": "1.1.0"
     },
     "contentVersion": {
       "type": "string"
@@ -1024,6 +1038,12 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         },
         "requiresProcessing": {
           "type": "boolean"
+        },
+        "processingTag": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "additionalProperties": false
@@ -1126,6 +1146,9 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         },
         "runtimeEnabled": {
           "const": false
+        },
+        "inputProvenancePolicy": {
+          "type": "string"
         }
       },
       "additionalProperties": false

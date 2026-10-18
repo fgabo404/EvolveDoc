@@ -124,34 +124,60 @@ flowchart LR
     v7["Boreal / temperate_forest_boreal"]
     b1["Temperate Forest / temperate_forest"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
-    o0_2["antlers_or_horns / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Antlers / RES#000036 / potential"]
+    o0_5["Raw tendons / RES#000106 / potential"]
     c1["Antelopes / ANM#000171"]
     v1["African / tropical_forest_african"]
     b0["Tropical Forest / tropical_forest"]
     v6["South African and Australian / temperate_forest_south_african_and_australian"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
-    o1_2["antlers_or_horns / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Horns / RES#000037 / potential"]
+    o1_5["Raw tendons / RES#000106 / potential"]
     c2["Australian Scrub Birds / animal_australian_scrub_birds"]
-    o2_0["Eggs / RES#000039 / potential"]
-    o2_1["Feathers / RES#000040 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Feathers / RES#000040 / potential"]
+    o2_4["Eggs / RES#000039 / potential"]
     c3["Birds of Paradise / animal_birds_of_paradise"]
     v3["Oceanian / tropical_forest_oceanian"]
-    o3_0["Feathers / RES#000040 / potential"]
+    o3_0["Meat / RES#000029 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Feathers / RES#000040 / potential"]
+    o3_4["Eggs / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v7
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v1
     c1 -->|source occurrence| v6
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v6
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v3
     v1 -->|biomeId| b0
     v3 -->|biomeId| b0
@@ -167,34 +193,56 @@ flowchart LR
     v22["Coastal Wetlands / marine_coastal_wetlands"]
     b5["Marine / marine"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Eggs / RES#000039 / potential"]
-    o0_2["Feathers / RES#000040 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Baboons / ANM#000172"]
     v1["African / tropical_forest_african"]
     b0["Tropical Forest / tropical_forest"]
     v6["South African and Australian / temperate_forest_south_african_and_australian"]
     b1["Temperate Forest / temperate_forest"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Atlantic Cod / animal_atlantic_cod"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
-    o2_0["Fish oil / RES#000034 / potential"]
-    o2_1["Fish meat / RES#000030 / potential"]
+    o2_0["Fish meat / RES#000030 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Hide / RES#000031 / potential"]
+    o2_3["Animal fat / RES#000032 / potential"]
+    o2_4["Fish oil / RES#000034 / potential"]
     c3["Regional Migratory Whales / animal_regional_migratory_whales"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Whale oil / RES#000035 / potential"]
-    o3_2["Baleen / RES#000038 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Whale oil / RES#000035 / potential"]
+    o3_4["Baleen / RES#000038 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v22
+    c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v1
     c1 -->|source occurrence| v6
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v20
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v21
     v1 -->|biomeId| b0
     v20 -->|biomeId| b5
@@ -211,35 +259,65 @@ flowchart LR
     v12["American / savanna_american"]
     b3["Savanna and Grasslands / savanna"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
-    o0_2["Horns / RES#000037 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Horns / RES#000037 / potential"]
+    o0_5["Raw tendons / RES#000106 / potential"]
+    o0_6["Animal fiber / RES#000041 / potential"]
     c1["Muskox / animal_muskox"]
     v8["North American and Greenland / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
-    o1_2["Animal fiber / RES#000041 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Horns / RES#000037 / potential"]
+    o1_5["Raw tendons / RES#000106 / potential"]
+    o1_6["Animal fiber / RES#000041 / potential"]
     c2["African Buffalo / animal_african_buffalo"]
     v11["African / savanna_african"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
-    o2_2["Horns / RES#000037 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
+    o2_4["Horns / RES#000037 / potential"]
+    o2_5["Raw tendons / RES#000106 / potential"]
     c3["Snowy Owl / animal_snowy_owl"]
     v9["Eurasian / tundra_eurasian"]
-    o3_0["Feathers / RES#000040 / potential"]
+    o3_0["Meat / RES#000029 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Feathers / RES#000040 / potential"]
+    o3_4["Eggs / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
+    c0 -->|potentialProducts| o0_6
     c0 -->|source occurrence| v12
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
+    c1 -->|potentialProducts| o1_6
     c1 -->|source occurrence| v8
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v11
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v9
     v11 -->|biomeId| b3
     v12 -->|biomeId| b3
@@ -255,31 +333,53 @@ flowchart LR
     v13["Eurasian / savanna_eurasian"]
     b3["Savanna and Grasslands / savanna"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Raw tendons / RES#000106 / potential"]
     c1["Cockatoos and Savanna Birds / animal_cockatoos_and_savanna_birds"]
     v14["Australian / savanna_australian"]
-    o1_0["Feathers / RES#000040 / potential"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Feathers / RES#000040 / potential"]
+    o1_4["Eggs / RES#000039 / potential"]
     c2["Wild Bactrian Camel / animal_wild_bactrian_camel"]
     v17["Central Asian / desert_central_asian"]
     b4["Desert / desert"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
-    o2_2["Animal fiber / RES#000041 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
+    o2_4["Raw tendons / RES#000106 / potential"]
+    o2_5["Animal fiber / RES#000041 / potential"]
     c3["Crabs / ANM#000173"]
     v19["Tropical Coast / marine_tropical_coast"]
     b5["Marine / marine"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
     o3_0["Meat / RES#000029 / potential"]
+    o3_1["Shell or carapace / RES#000044 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v13
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v14
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v17
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
     c3 -->|source occurrence| v19
     c3 -->|source occurrence| v22
     v13 -->|biomeId| b3
@@ -303,46 +403,58 @@ flowchart LR
     v18["Australian / desert_australian"]
     b4["Desert / desert"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
     c1["Capybara / animal_capybara"]
     v12["American / savanna_american"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Woodland Caribou / animal_woodland_caribou"]
     v7["Boreal / temperate_forest_boreal"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
-    o2_2["Antlers / RES#000036 / potential"]
-    o2_3["Milk / RES#000042 / potential"]
-    o2_4["draft_service / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
+    o2_4["Antlers / RES#000036 / potential"]
+    o2_5["Raw tendons / RES#000106 / potential"]
     c3["Tundra Caribou / animal_tundra_caribou"]
     v8["North American and Greenland / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["Antlers / RES#000036 / potential"]
-    o3_3["Milk / RES#000042 / potential"]
-    o3_4["draft_service / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Antlers / RES#000036 / potential"]
+    o3_5["Raw tendons / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v14
     c0 -->|source occurrence| v18
     c0 -->|source occurrence| v3
     c0 -->|source occurrence| v6
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v12
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
     c2 -->|potentialProducts| o2_3
     c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v7
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
     c3 -->|potentialProducts| o3_3
     c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v8
     v12 -->|biomeId| b3
     v14 -->|biomeId| b3
@@ -361,17 +473,25 @@ flowchart LR
     v3["Oceanian / tropical_forest_oceanian"]
     b0["Tropical Forest / tropical_forest"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
-    o0_2["Eggs / RES#000039 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
     o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
+    o0_5["Hide / RES#000031 / potential"]
     c1["Plains Zebra / animal_plains_zebra"]
     v11["African / savanna_african"]
     b3["Savanna and Grasslands / savanna"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
-    o1_2["draft_service / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Raw tendons / RES#000106 / potential"]
     c2["Chimpanzee / animal_chimpanzee"]
     v1["African / tropical_forest_african"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Deer / ANM#000175"]
     v0["American / tropical_forest_american"]
     v2["Asian / tropical_forest_asian"]
@@ -380,21 +500,35 @@ flowchart LR
     v5["American / temperate_forest_american"]
     v12["American / savanna_american"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Antlers / RES#000036 / potential"]
+    o3_5["Raw tendons / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
     c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v3
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v11
+    c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v1
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v0
     c3 -->|source occurrence| v12
     c3 -->|source occurrence| v2
@@ -418,31 +552,51 @@ flowchart LR
     v4["Eurasian / temperate_forest_eurasian"]
     b1["Temperate Forest / temperate_forest"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
     c1["Roadrunner / animal_roadrunner"]
     v15["American / desert_american"]
     b4["Desert / desert"]
-    o1_0["Eggs / RES#000039 / potential"]
-    o1_1["Feathers / RES#000040 / potential"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Feathers / RES#000040 / potential"]
+    o1_4["Eggs / RES#000039 / potential"]
     c2["Coyote / animal_coyote"]
     v5["American / temperate_forest_american"]
-    o2_0["Hide / RES#000031 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Cuscuses and Other Arboreal Marsupials / animal_cuscuses_and_other_arboreal_marsupials"]
     v3["Oceanian / tropical_forest_oceanian"]
     b0["Tropical Forest / tropical_forest"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v4
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v15
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v15
     c2 -->|source occurrence| v5
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v3
     v15 -->|biomeId| b4
     v3 -->|biomeId| b0
@@ -457,32 +611,58 @@ flowchart LR
     c0["Andean Condor / animal_andean_condor"]
     v23["Andean / alpine_andean"]
     b6["High Mountain and Alpine / alpine"]
-    o0_0["Feathers / RES#000040 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Rock Hyraxes / animal_rock_hyraxes"]
     v26["African / alpine_african"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Dingo / animal_dingo"]
     v18["Australian / desert_australian"]
     b4["Desert / desert"]
-    o2_0["Hide / RES#000031 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Introduced Domestic or Feral Dromedary / animal_introduced_domestic_or_feral_dromedary"]
     v16["African and Arabian / desert_african_and_arabian"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["Milk / RES#000042 / potential"]
-    o3_3["transport_service / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Raw tendons / RES#000106 / potential"]
+    o3_5["Animal fiber / RES#000041 / potential"]
+    o3_6["Milk / RES#000042 / potential"]
+    o3_7["Livestock manure / RES#000006 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v23
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v26
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v18
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
     c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
+    c3 -->|potentialProducts| o3_6
+    c3 -->|potentialProducts| o3_7
     c3 -->|source occurrence| v16
     v16 -->|biomeId| b4
     v18 -->|biomeId| b4
@@ -499,39 +679,67 @@ flowchart LR
     b0["Tropical Forest / tropical_forest"]
     v11["African / savanna_african"]
     b3["Savanna and Grasslands / savanna"]
-    o0_0["Hide / RES#000031 / potential"]
-    o0_1["Ivory material / RES#000046 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Tusks / RES#000045 / potential"]
+    o0_5["Ivory material / RES#000046 / potential"]
+    o0_6["Raw tendons / RES#000106 / potential"]
     c1["Asian elephants / ANM#000177"]
     v2["Asian / tropical_forest_asian"]
-    o1_0["Ivory material / RES#000046 / potential"]
-    o1_1["transport_service / potential"]
-    o1_2["work_service / potential"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Tusks / RES#000045 / potential"]
+    o1_5["Ivory material / RES#000046 / potential"]
+    o1_6["Raw tendons / RES#000106 / potential"]
     c2["Coastal Elephant Seals / animal_coastal_elephant_seals"]
     v10["Subantarctic / tundra_subantarctic"]
     b2["Tundra / tundra"]
-    o2_0["Hide / RES#000031 / potential"]
-    o2_1["Animal oil / RES#000033 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
+    o2_4["Animal oil / RES#000033 / potential"]
     c3["Emu / animal_emu"]
     v14["Australian / savanna_australian"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["Eggs / RES#000039 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
     o3_3["Feathers / RES#000040 / potential"]
+    o3_4["Eggs / RES#000039 / potential"]
+    o3_5["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
+    c0 -->|potentialProducts| o0_6
     c0 -->|source occurrence| v1
     c0 -->|source occurrence| v11
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
+    c1 -->|potentialProducts| o1_6
     c1 -->|source occurrence| v2
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v10
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
     c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v14
     v1 -->|biomeId| b0
     v10 -->|biomeId| b2
@@ -550,39 +758,59 @@ flowchart LR
     v18["Australian / desert_australian"]
     b4["Desert / desert"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Regional Seals / animal_regional_seals"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
     b5["Marine / marine"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
     o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Animal oil / RES#000033 / potential"]
     c2["Coastal Seals and Sea Lions / animal_coastal_seals_and_sea_lions"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
     o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
+    o2_4["Animal oil / RES#000033 / potential"]
     c3["Gazelles / ANM#000178"]
     v16["African and Arabian / desert_african_and_arabian"]
     v17["Central Asian / desert_central_asian"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Horns / RES#000037 / potential"]
+    o3_5["Raw tendons / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v18
     c0 -->|source occurrence| v6
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v21
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v20
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v16
     c3 -->|source occurrence| v17
     v16 -->|biomeId| b4
@@ -601,24 +829,50 @@ flowchart LR
     v2["Asian / tropical_forest_asian"]
     b0["Tropical Forest / tropical_forest"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Eggs / RES#000039 / potential"]
-    o0_2["Feathers / RES#000040 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Gelada / animal_gelada"]
     v26["African / alpine_african"]
     b6["High Mountain and Alpine / alpine"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Subarctic Wolverine / animal_subarctic_wolverine"]
     v9["Eurasian / tundra_eurasian"]
     b2["Tundra / tundra"]
-    o2_0["Hide / RES#000031 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Western Gorilla / animal_western_gorilla"]
     v1["African / tropical_forest_african"]
+    o3_0["Meat / RES#000029 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v2
+    c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v26
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v9
+    c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v1
     v1 -->|biomeId| b0
     v2 -->|biomeId| b0
@@ -633,35 +887,61 @@ flowchart LR
     c0["Macaws / animal_macaws"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
-    o0_0["Feathers / RES#000040 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Guanacos / ANM#000179"]
     v15["American / desert_american"]
     b4["Desert / desert"]
     v23["Andean / alpine_andean"]
     b6["High Mountain and Alpine / alpine"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
-    o1_2["Animal fiber / RES#000041 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Raw tendons / RES#000106 / potential"]
+    o1_5["Animal fiber / RES#000041 / potential"]
     c2["Wild boars / ANM#000180"]
     v4["Eurasian / temperate_forest_eurasian"]
     b1["Temperate Forest / temperate_forest"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
-    o2_2["Tusks / RES#000045 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
+    o2_4["Tusks / RES#000045 / potential"]
+    o2_5["Raw tendons / RES#000106 / potential"]
     c3["Jaguar / animal_jaguar"]
-    o3_0["Hide / RES#000031 / potential"]
+    o3_0["Meat / RES#000029 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v0
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v15
     c1 -->|source occurrence| v23
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v4
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v0
     v0 -->|biomeId| b0
     v15 -->|biomeId| b4
@@ -677,29 +957,47 @@ flowchart LR
     v17["Central Asian / desert_central_asian"]
     b4["Desert / desert"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
     c1["Giraffe / animal_giraffe"]
     v11["African / savanna_african"]
     b3["Savanna and Grasslands / savanna"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Raw tendons / RES#000106 / potential"]
     c2["Antarctic Krill / animal_antarctic_krill"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
     b5["Marine / marine"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Shell or carapace / RES#000044 / potential"]
     c3["Lemming / animal_lemming"]
     v9["Eurasian / tundra_eurasian"]
     b2["Tundra / tundra"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v17
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v11
+    c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
     c2 -->|source occurrence| v21
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v9
     v11 -->|biomeId| b3
     v17 -->|biomeId| b4
@@ -714,28 +1012,50 @@ flowchart LR
     c0["Snow Leopard / animal_snow_leopard"]
     v24["Asian / alpine_asian"]
     b6["High Mountain and Alpine / alpine"]
-    o0_0["Hide / RES#000031 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
     c1["Lion / animal_lion"]
     v11["African / savanna_african"]
     b3["Savanna and Grasslands / savanna"]
-    o1_0["Hide / RES#000031 / potential"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Arctic Hare / animal_arctic_hare"]
     v8["North American and Greenland / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Eurasian Lynx / animal_eurasian_lynx"]
     v7["Boreal / temperate_forest_boreal"]
     b1["Temperate Forest / temperate_forest"]
-    o3_0["Hide / RES#000031 / potential"]
+    o3_0["Meat / RES#000029 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v24
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v11
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v8
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v7
     v11 -->|biomeId| b3
     v24 -->|biomeId| b6
@@ -750,26 +1070,48 @@ flowchart LR
     c0["Maned Wolf / animal_maned_wolf"]
     v12["American / savanna_american"]
     b3["Savanna and Grasslands / savanna"]
-    o0_0["Hide / RES#000031 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
     c1["Ethiopian Wolf / animal_ethiopian_wolf"]
     v26["African / alpine_african"]
     b6["High Mountain and Alpine / alpine"]
-    o1_0["Hide / RES#000031 / potential"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Grey Wolf / animal_grey_wolf"]
     v13["Eurasian / savanna_eurasian"]
-    o2_0["Hide / RES#000031 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Marmots / ANM#000181"]
     v25["European / alpine_european"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v12
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v26
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v13
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v13
     c3 -->|source occurrence| v25
     v12 -->|biomeId| b3
@@ -785,28 +1127,46 @@ flowchart LR
     c0["Regional Mussels and Oysters / animal_regional_mussels_and_oysters"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
     b5["Marine / marine"]
-    o0_0["Animal shell / RES#000044 / potential"]
-    o0_1["Pearls / RES#000043 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Shell or carapace / RES#000044 / potential"]
+    o0_2["Pearls / RES#000043 / potential"]
     c1["Tropical Mollusks and Bivalves / animal_tropical_mollusks_and_bivalves"]
     v19["Tropical Coast / marine_tropical_coast"]
-    o1_0["Animal shell / RES#000044 / potential"]
-    o1_1["Pearls / RES#000043 / potential"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Shell or carapace / RES#000044 / potential"]
+    o1_2["Pearls / RES#000043 / potential"]
     c2["Howler Monkey / animal_howler_monkey"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Okapi / animal_okapi"]
     v1["African / tropical_forest_african"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Raw tendons / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
     c0 -->|source occurrence| v20
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
     c1 -->|source occurrence| v19
+    c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v0
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v1
     v0 -->|biomeId| b0
     v1 -->|biomeId| b0
@@ -822,8 +1182,9 @@ flowchart LR
     v12["American / savanna_american"]
     b3["Savanna and Grasslands / savanna"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
     o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
     c1["Bears / ANM#000182"]
     v4["Eurasian / temperate_forest_eurasian"]
     b1["Temperate Forest / temperate_forest"]
@@ -832,36 +1193,45 @@ flowchart LR
     v8["North American and Greenland / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
     o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Estuarine Oysters and Other Bivalves / animal_estuarine_oysters_and_other_bivalves"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
     b5["Marine / marine"]
-    o2_0["Animal shell / RES#000044 / potential"]
-    o2_1["Pearls / RES#000043 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Shell or carapace / RES#000044 / potential"]
+    o2_2["Pearls / RES#000043 / potential"]
     c3["Ocellated Turkey / animal_ocellated_turkey"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Eggs / RES#000039 / potential"]
-    o3_2["Feathers / RES#000040 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Feathers / RES#000040 / potential"]
+    o3_4["Eggs / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v12
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v4
     c1 -->|source occurrence| v5
     c1 -->|source occurrence| v7
     c1 -->|source occurrence| v8
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
     c2 -->|source occurrence| v22
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v0
     v0 -->|biomeId| b0
     v12 -->|biomeId| b3
@@ -880,35 +1250,55 @@ flowchart LR
     v2["Asian / tropical_forest_asian"]
     b0["Tropical Forest / tropical_forest"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Eggs / RES#000039 / potential"]
-    o0_2["Feathers / RES#000040 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Collared Peccary / animal_collared_peccary"]
     v0["American / tropical_forest_american"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
-    o1_2["Tusks / RES#000045 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Tusks / RES#000045 / potential"]
     c2["Regional Reef Fish / animal_regional_reef_fish"]
     v19["Tropical Coast / marine_tropical_coast"]
     b5["Marine / marine"]
-    o2_0["Fish oil / RES#000034 / potential"]
-    o2_1["Fish meat / RES#000030 / potential"]
+    o2_0["Fish meat / RES#000030 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Hide / RES#000031 / potential"]
+    o2_3["Animal fat / RES#000032 / potential"]
+    o2_4["Fish oil / RES#000034 / potential"]
     c3["Juvenile Estuarine Fish / animal_juvenile_estuarine_fish"]
     v22["Coastal Wetlands / marine_coastal_wetlands"]
-    o3_0["Fish oil / RES#000034 / potential"]
-    o3_1["Fish meat / RES#000030 / potential"]
+    o3_0["Fish meat / RES#000030 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Hide / RES#000031 / potential"]
+    o3_3["Animal fat / RES#000032 / potential"]
+    o3_4["Fish oil / RES#000034 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v2
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v0
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v19
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v22
     v0 -->|biomeId| b0
     v19 -->|biomeId| b5
@@ -923,34 +1313,56 @@ flowchart LR
     c0["Regional Polar Fish / animal_regional_polar_fish"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
     b5["Marine / marine"]
-    o0_0["Fish oil / RES#000034 / potential"]
-    o0_1["Fish meat / RES#000030 / potential"]
+    o0_0["Fish meat / RES#000030 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Hide / RES#000031 / potential"]
+    o0_3["Animal fat / RES#000032 / potential"]
+    o0_4["Fish oil / RES#000034 / potential"]
     c1["Perentie / animal_perentie"]
     v18["Australian / desert_australian"]
     b4["Desert / desert"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Eggs / RES#000039 / potential"]
     c2["Prairie Dog / animal_prairie_dog"]
     v12["American / savanna_american"]
     b3["Savanna and Grasslands / savanna"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Island Petrels and Albatrosses / animal_island_petrels_and_albatrosses"]
     v10["Subantarctic / tundra_subantarctic"]
     b2["Tundra / tundra"]
-    o3_0["Eggs / RES#000039 / potential"]
-    o3_1["Feathers / RES#000040 / potential"]
+    o3_0["Meat / RES#000029 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Feathers / RES#000040 / potential"]
+    o3_4["Eggs / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v21
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v18
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v12
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v10
     v10 -->|biomeId| b2
     v12 -->|biomeId| b3
@@ -967,35 +1379,61 @@ flowchart LR
     b2["Tundra / tundra"]
     v21["Polar and Subpolar / marine_polar_and_subpolar"]
     b5["Marine / marine"]
-    o0_0["Eggs / RES#000039 / potential"]
-    o0_1["Animal fat / RES#000032 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Puma / animal_puma"]
     v5["American / temperate_forest_american"]
     b1["Temperate Forest / temperate_forest"]
     v23["Andean / alpine_andean"]
     b6["High Mountain and Alpine / alpine"]
-    o1_0["Hide / RES#000031 / potential"]
+    o1_0["Meat / RES#000029 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Bearded vultures / ANM#000184"]
     v24["Asian / alpine_asian"]
     v25["European / alpine_european"]
-    o2_0["Feathers / RES#000040 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Feathers / RES#000040 / potential"]
+    o2_4["Eggs / RES#000039 / potential"]
     c3["Chamois / animal_chamois"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Horns / RES#000037 / potential"]
+    o3_5["Raw tendons / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v10
     c0 -->|source occurrence| v21
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v23
     c1 -->|source occurrence| v5
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v24
     c2 -->|source occurrence| v25
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v25
     v10 -->|biomeId| b2
     v21 -->|biomeId| b5
@@ -1015,42 +1453,64 @@ flowchart LR
     v9["Eurasian / tundra_eurasian"]
     b2["Tundra / tundra"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
-    o0_2["Antlers / RES#000036 / potential"]
-    o0_3["Milk / RES#000042 / potential"]
-    o0_4["draft_service / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Antlers / RES#000036 / potential"]
+    o0_5["Raw tendons / RES#000106 / potential"]
+    o0_6["Milk / RES#000042 / potential"]
+    o0_7["Livestock manure / RES#000006 / potential"]
     c1["Eurasian Saiga / animal_eurasian_saiga"]
     v13["Eurasian / savanna_eurasian"]
     b3["Savanna and Grasslands / savanna"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
-    o1_2["antlers_or_horns / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Horns / RES#000037 / potential"]
+    o1_5["Raw tendons / RES#000106 / potential"]
     c2["Regional Sardines / animal_regional_sardines"]
     v20["Temperate Coast and Sea / marine_temperate_coast_and_sea"]
     b5["Marine / marine"]
-    o2_0["Fish oil / RES#000034 / potential"]
-    o2_1["Fish meat / RES#000030 / potential"]
+    o2_0["Fish meat / RES#000030 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Hide / RES#000031 / potential"]
+    o2_3["Animal fat / RES#000032 / potential"]
+    o2_4["Fish oil / RES#000034 / potential"]
     c3["Regional Rattlesnakes / animal_regional_rattlesnakes"]
     v15["American / desert_american"]
     b4["Desert / desert"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
     c0 -->|potentialProducts| o0_3
     c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
+    c0 -->|potentialProducts| o0_6
+    c0 -->|potentialProducts| o0_7
     c0 -->|source occurrence| v7
     c0 -->|source occurrence| v9
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v13
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v20
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v15
     v13 -->|biomeId| b3
     v15 -->|biomeId| b4
@@ -1067,35 +1527,59 @@ flowchart LR
     v24["Asian / alpine_asian"]
     b6["High Mountain and Alpine / alpine"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
-    o0_2["antlers_or_horns / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Horns / RES#000037 / potential"]
+    o0_5["Raw tendons / RES#000106 / potential"]
     c1["Tapirs / ANM#000185"]
     v0["American / tropical_forest_american"]
     b0["Tropical Forest / tropical_forest"]
     v2["Asian / tropical_forest_asian"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Raw tendons / RES#000106 / potential"]
     c2["Tiger / animal_tiger"]
-    o2_0["Hide / RES#000031 / potential"]
+    o2_0["Meat / RES#000029 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Desert Tortoise / animal_desert_tortoise"]
     v15["American / desert_american"]
     b4["Desert / desert"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Eggs / RES#000039 / potential"]
-    o3_2["Animal shell / RES#000044 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Shell or carapace / RES#000044 / potential"]
+    o3_5["Eggs / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v24
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v0
     c1 -->|source occurrence| v2
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v2
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v15
     v0 -->|biomeId| b0
     v15 -->|biomeId| b4
@@ -1111,40 +1595,62 @@ flowchart LR
     v19["Tropical Coast / marine_tropical_coast"]
     b5["Marine / marine"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Eggs / RES#000039 / potential"]
-    o0_2["Animal shell / RES#000044 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Shell or carapace / RES#000044 / potential"]
+    o0_5["Eggs / RES#000039 / potential"]
     c1["Regional Land Tortoises / animal_regional_land_tortoises"]
     v6["South African and Australian / temperate_forest_south_african_and_australian"]
     b1["Temperate Forest / temperate_forest"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Eggs / RES#000039 / potential"]
-    o1_2["Animal shell / RES#000044 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Shell or carapace / RES#000044 / potential"]
+    o1_5["Eggs / RES#000039 / potential"]
     c2["Regional Wallabies / animal_regional_wallabies"]
     v14["Australian / savanna_australian"]
     b3["Savanna and Grasslands / savanna"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
     c3["Vicuna / animal_vicuna"]
     v23["Andean / alpine_andean"]
     b6["High Mountain and Alpine / alpine"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["Animal fiber / RES#000041 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Raw tendons / RES#000106 / potential"]
+    o3_5["Animal fiber / RES#000041 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v19
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v6
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v14
     c2 -->|source occurrence| v6
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v23
     v14 -->|biomeId| b3
     v19 -->|biomeId| b5
@@ -1160,17 +1666,25 @@ flowchart LR
     v23["Andean / alpine_andean"]
     b6["High Mountain and Alpine / alpine"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
     c1["Rock-Dwelling Viscachas / animal_rock_dwelling_viscachas"]
     v15["American / desert_american"]
     b4["Desert / desert"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
     c2["Wild Yak / animal_wild_yak"]
     v24["Asian / alpine_asian"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
-    o2_2["Animal fiber / RES#000041 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
+    o2_3["Hide / RES#000031 / potential"]
+    o2_4["Horns / RES#000037 / potential"]
+    o2_5["Raw tendons / RES#000106 / potential"]
+    o2_6["Animal fiber / RES#000041 / potential"]
     c3["Foxes / ANM#000169"]
     v5["American / temperate_forest_american"]
     b1["Temperate Forest / temperate_forest"]
@@ -1179,19 +1693,27 @@ flowchart LR
     v9["Eurasian / tundra_eurasian"]
     v16["African and Arabian / desert_african_and_arabian"]
     v17["Central Asian / desert_central_asian"]
-    o3_0["Hide / RES#000031 / potential"]
-    o3_1["Meat / RES#000029 / potential"]
-    o3_2["Bones / RES#000105 / potential"]
-    o3_3["Animal fat / RES#000032 / potential"]
+    o3_0["Meat / RES#000029 / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v23
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v15
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
+    c2 -->|potentialProducts| o2_6
     c2 -->|source occurrence| v24
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
@@ -1220,30 +1742,49 @@ flowchart LR
     c0["Golden Eagle / animal_golden_eagle"]
     v25["European / alpine_european"]
     b6["High Mountain and Alpine / alpine"]
-    o0_0["Feathers / RES#000040 / potential"]
+    o0_0["Meat / RES#000029 / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Feathers / RES#000040 / potential"]
+    o0_4["Eggs / RES#000039 / potential"]
     c1["Ibexes / ANM#000186"]
     v24["Asian / alpine_asian"]
     v26["African / alpine_african"]
     o1_0["Meat / RES#000029 / potential"]
-    o1_1["Hide / RES#000031 / potential"]
-    o1_2["antlers_or_horns / potential"]
+    o1_1["Bones / RES#000105 / potential"]
+    o1_2["Animal fat / RES#000032 / potential"]
+    o1_3["Hide / RES#000031 / potential"]
+    o1_4["Horns / RES#000037 / potential"]
+    o1_5["Raw tendons / RES#000106 / potential"]
     c2["Greater Rhea / animal_greater_rhea"]
     v12["American / savanna_american"]
     b3["Savanna and Grasslands / savanna"]
     o2_0["Meat / RES#000029 / potential"]
-    o2_1["Hide / RES#000031 / potential"]
-    o2_2["Eggs / RES#000039 / potential"]
+    o2_1["Bones / RES#000105 / potential"]
+    o2_2["Animal fat / RES#000032 / potential"]
     o2_3["Feathers / RES#000040 / potential"]
+    o2_4["Eggs / RES#000039 / potential"]
+    o2_5["Hide / RES#000031 / potential"]
     c3["Wildebeest / animal_wildebeest"]
     v11["African / savanna_african"]
     o3_0["Meat / RES#000029 / potential"]
-    o3_1["Hide / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Bones / RES#000105 / potential"]
+    o3_2["Animal fat / RES#000032 / potential"]
+    o3_3["Hide / RES#000031 / potential"]
+    o3_4["Horns / RES#000037 / potential"]
+    o3_5["Raw tendons / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v25
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v24
     c1 -->|source occurrence| v25
     c1 -->|source occurrence| v26
@@ -1251,10 +1792,15 @@ flowchart LR
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
     c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v12
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v11
     v11 -->|biomeId| b3
     v12 -->|biomeId| b3
@@ -1271,14 +1817,23 @@ flowchart LR
     v16["African and Arabian / desert_african_and_arabian"]
     b4["Desert / desert"]
     o0_0["Meat / RES#000029 / potential"]
-    o0_1["Hide / RES#000031 / potential"]
-    o0_2["antlers_or_horns / potential"]
+    o0_1["Bones / RES#000105 / potential"]
+    o0_2["Animal fat / RES#000032 / potential"]
+    o0_3["Hide / RES#000031 / potential"]
+    o0_4["Horns / RES#000037 / potential"]
+    o0_5["Raw tendons / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v16
     v16 -->|biomeId| b4
 ```
+
+
+[Materiales y obtención / Materials and acquisition](PRODUCTS.md)
 
 ## General categories and compatibility
 

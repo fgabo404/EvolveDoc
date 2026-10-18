@@ -1,5 +1,7 @@
 # Evolve — Referencia de diseño y simulación
 
+[Animales: materiales y obtención](animal-products.md)
+
 [Pendientes y avances — consultar al retomar](../../ROADMAP.es.md)
 
 [Plantas y animales: categorías del juego](biology.md)

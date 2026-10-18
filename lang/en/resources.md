@@ -4,7 +4,7 @@
 
 ## Purpose
 
-This catalog defines storable materials. A plant or animal is a source; a resource is an acquired material; a process relates input and output materials. It contains **105 resources**, **301 source bindings**, **25 transformation guides** and **24 classified animal source tags**.
+This catalog defines storable materials. A plant or animal is a source; a resource is an acquired material; a process relates input and output materials. It contains **106 resources**, **594 source bindings**, **28 transformation guides** and **21 classified animal source tags**.
 
 Scientific review and balance are not complete. Added crop/tree products are design proposals; amounts, exact conditions and recipes remain unresolved. The catalog and every relation are runtime-disabled.
 
@@ -14,7 +14,7 @@ Scientific review and balance are not complete. Added crop/tree products are des
 | --- | --- |
 | `resources` | Identity, translations, category, material stage and unresolved storage metadata. |
 | `sourceBindings` | Explicit candidate-to-resource possibilities, without guaranteed amounts. |
-| `sourceTagMappings` | Maps existing animal tags to resources, services or unresolved alternatives. |
+| `sourceTagMappings` | Maps current animal material tags to resources; services are separate and anatomical alternatives resolved. |
 | `processingLinks` | Proposed transformation endpoints; not complete recipes. |
 | `unresolvedSources` | Water, manure and generic plant fiber still need acquisition systems. |
 | `reviewIssues` | Material compatibility, food preparation and historical scope. |
@@ -110,7 +110,7 @@ Wheat also has straw as a proposed byproduct; flour links to water and bread. Me
 
 - `null` means unresolved, never zero or no requirement. Units, perishability, storage and amounts are not balanced.
 - `draft_service`, `transport_service` and `work_service` are not inventory materials.
-- `antlers_or_horns` has no resource ID until species anatomy is resolved. Never grant both. `shell` and `shells` explicitly map to one resource; animal `fiber` remains separate from plant fiber.
+- The old `antlers_or_horns` ambiguity is resolved into actual antlers or horns by gameplay anatomy. Animal shell/carapace uses `animal_shell`; textile animal fiber uses `animal_fiber`, separate from plant fiber.
 - Generic material IDs do not imply automatic substitution of species, ores or seeds. Future GameState lots must retain source species/material, viability and quality. Do not combine different species of seed as interchangeable stock.
 - Grain is not automatically viable for propagation or safe to eat without preparation.
 - Process guides do not define amounts, duration, technologies, facilities, fuels or byproducts. Listed inputs may be incomplete. Do not execute these as recipes.
@@ -127,4 +127,6 @@ python tools/generate_catalog_diagrams.py --check
 python tools/validate_repository.py
 ```
 
-Foxes: confirmed detailed outputs are hide, meat, bones and animal fat. Bones use new permanent allocation `RES#000105`. Acquisition and later uses remain pending; this choice does not extend to other entities.
+Foxes: confirmed detailed outputs are hide, meat, bones and animal fat. Bones use new permanent allocation `RES#000105`. Acquisition is documented and later material uses remain under design; the detailed approach extends to all current animals.
+
+The detailed reference now covers all animals: [materials and acquisition](animal-products.md). Services are separate from material tags, antler/horn alternatives resolve by anatomy, and `RES#000106` adds raw tendons. Oils and ivory retain processing/provenance constraints.

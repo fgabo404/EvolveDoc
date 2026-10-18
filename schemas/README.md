@@ -24,7 +24,7 @@ El verificador propio comprueba formato JSON, unicidad, referencias del mundo, c
 
 ## Resource guide structural schema
 
-`resource.guide.schema.json` is a full structural schema for the current resource guide (schema 1.0.0), including localized text, inventory metadata, source bindings, tag mappings, process endpoints and review fields. It uses reusable `$defs`, disallows unknown fields and keeps unapproved recipe quantities null. Unlike the earlier catalog envelopes, it covers nested resource structure.
+`resource.guide.schema.json` is a full structural schema for the current resource guide (schema 1.1.0), including localized text, inventory metadata, source bindings, tag mappings, process endpoints and review fields. It uses reusable `$defs`, disallows unknown fields and keeps unapproved recipe quantities null. Unlike the earlier catalog envelopes, it covers nested resource structure.
 
 The standard-library checker does not execute a general JSON Schema engine; `tools/validate_resources.py` instead checks resource identity, cross-catalog references, inverse links, services, review boundaries and counts. Structural schema validation by an external validator remains separate; chemistry, taxonomy and balance are not verified.
 
@@ -41,3 +41,13 @@ El esquema cubre todos los objetos internos de ambos catálogos biológicos. El 
 Plant/animal guides 1.3.0 add optional `sourceVariants`, allocated group `tag` values and root `entityAliases`. World manifest 1.4.0 adds original `sourceDefinitionId` where an occurrence was remapped. Existing guide schemas remain preliminary envelopes; generated JSON references describe every current nested field and example. `tools/validate_gameplay_categories.py` checks alias targets, retired IDs, regional provenance and retired source references. Scientific reference identities are not gameplay requirements.
 
 Las guías 1.3.0 agrupan entidades mediante alias y conservan procedencia regional. Las referencias JSON documentan todos los campos nuevos; el verificador propio comprueba identidades y vínculos. La taxonomía es opcional y no exige nuevas entidades.
+
+## Animal material acquisition / Obtención de materiales animales
+
+Animal guide schema/content 1.4.0/0.6.0 adds acquisition method references, qualitative availability constraints, localized notes, product bibliography and separate service candidates. The animal JSON Schema remains a preliminary envelope; generated bilingual field references cover all current nested objects and examples.
+
+Resource schema/content 1.1.0/0.4.0 adds optional `processingTag` to source bindings and `inputProvenancePolicy` to process guides. These fields distinguish raw-material acquisition from processed derivatives and preserve source restrictions. No new quantities or executable recipes are approved.
+
+`tools/validate_animal_products.py` checks every animal/material association, methods, anatomy boundaries, translations, provenance restrictions and coverage counts; it does not certify historical feasibility or food suitability.
+
+La guía animal documenta todos los objetos y ejemplos actuales, pero su esquema formal sigue siendo de envoltura. El esquema de recursos incorpora referencias de procesos y restricciones de origen. El verificador comprueba coherencia de vínculos y límites anatómicos; no demuestra factibilidad histórica, rendimientos ni aptitud alimentaria.

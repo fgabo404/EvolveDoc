@@ -124,34 +124,60 @@ flowchart LR
     v7["Boreal (taiga de Eurasia y Norteamérica) / temperate_forest_boreal"]
     b1["Bosque templado / temperate_forest"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
-    o0_2["antlers_or_horns / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Astas / RES#000036 / potential"]
+    o0_5["Tendones sin preparar / RES#000106 / potential"]
     c1["Antílopes / ANM#000171"]
     v1["Africano (selvas y bosques secos) / tropical_forest_african"]
     b0["Bosque tropical / tropical_forest"]
     v6["Sudafricano y australiano (matorrales y bosques regionales) / temperate_forest_south_african_and_australian"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
-    o1_2["antlers_or_horns / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Cuernos / RES#000037 / potential"]
+    o1_5["Tendones sin preparar / RES#000106 / potential"]
     c2["Aves de matorral australiano / animal_australian_scrub_birds"]
-    o2_0["Huevos / RES#000039 / potential"]
-    o2_1["Plumas / RES#000040 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Plumas / RES#000040 / potential"]
+    o2_4["Huevos / RES#000039 / potential"]
     c3["Aves del paraíso / animal_birds_of_paradise"]
     v3["Oceánico (Nueva Guinea y Melanesia) / tropical_forest_oceanian"]
-    o3_0["Plumas / RES#000040 / potential"]
+    o3_0["Carne / RES#000029 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Plumas / RES#000040 / potential"]
+    o3_4["Huevos / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v7
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v1
     c1 -->|source occurrence| v6
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v6
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v3
     v1 -->|biomeId| b0
     v3 -->|biomeId| b0
@@ -167,34 +193,56 @@ flowchart LR
     v22["Humedales costeros (manglares y marismas) / marine_coastal_wetlands"]
     b5["Marinos / marine"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Huevos / RES#000039 / potential"]
-    o0_2["Plumas / RES#000040 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Babuinos / ANM#000172"]
     v1["Africano (selvas y bosques secos) / tropical_forest_african"]
     b0["Bosque tropical / tropical_forest"]
     v6["Sudafricano y australiano (matorrales y bosques regionales) / temperate_forest_south_african_and_australian"]
     b1["Bosque templado / temperate_forest"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Bacalao del Atlántico, Atlántico norte / animal_atlantic_cod"]
     v20["Costero y mar templado / marine_temperate_coast_and_sea"]
-    o2_0["Aceite de pescado / RES#000034 / potential"]
-    o2_1["Carne de pescado / RES#000030 / potential"]
+    o2_0["Carne de pescado / RES#000030 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Piel sin curtir / RES#000031 / potential"]
+    o2_3["Grasa animal / RES#000032 / potential"]
+    o2_4["Aceite de pescado / RES#000034 / potential"]
     c3["Ballenas migratorias, según región / animal_regional_migratory_whales"]
     v21["Polar y subpolar / marine_polar_and_subpolar"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Aceite de ballena / RES#000035 / potential"]
-    o3_2["Barbas de ballena / RES#000038 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Aceite de ballena / RES#000035 / potential"]
+    o3_4["Barbas de ballena / RES#000038 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v22
+    c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v1
     c1 -->|source occurrence| v6
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v20
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v21
     v1 -->|biomeId| b0
     v20 -->|biomeId| b5
@@ -211,35 +259,65 @@ flowchart LR
     v12["Americana (sabanas y praderas) / savanna_american"]
     b3["Sabana / savanna"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
-    o0_2["Cuernos / RES#000037 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Cuernos / RES#000037 / potential"]
+    o0_5["Tendones sin preparar / RES#000106 / potential"]
+    o0_6["Fibra animal / RES#000041 / potential"]
     c1["Buey almizclero / animal_muskox"]
     v8["Norteamérica y Groenlandia / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
-    o1_2["Fibra animal / RES#000041 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Cuernos / RES#000037 / potential"]
+    o1_5["Tendones sin preparar / RES#000106 / potential"]
+    o1_6["Fibra animal / RES#000041 / potential"]
     c2["Búfalo africano / animal_african_buffalo"]
     v11["Africana (sabanas tropicales) / savanna_african"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
-    o2_2["Cuernos / RES#000037 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
+    o2_4["Cuernos / RES#000037 / potential"]
+    o2_5["Tendones sin preparar / RES#000106 / potential"]
     c3["Búho nival / animal_snowy_owl"]
     v9["Euroasiática / tundra_eurasian"]
-    o3_0["Plumas / RES#000040 / potential"]
+    o3_0["Carne / RES#000029 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Plumas / RES#000040 / potential"]
+    o3_4["Huevos / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
+    c0 -->|potentialProducts| o0_6
     c0 -->|source occurrence| v12
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
+    c1 -->|potentialProducts| o1_6
     c1 -->|source occurrence| v8
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v11
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v9
     v11 -->|biomeId| b3
     v12 -->|biomeId| b3
@@ -255,31 +333,53 @@ flowchart LR
     v13["Euroasiática (praderas y estepas) / savanna_eurasian"]
     b3["Sabana / savanna"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Tendones sin preparar / RES#000106 / potential"]
     c1["Cacatúas y aves de sabana / animal_cockatoos_and_savanna_birds"]
     v14["Australiana (sabanas tropicales) / savanna_australian"]
-    o1_0["Plumas / RES#000040 / potential"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Plumas / RES#000040 / potential"]
+    o1_4["Huevos / RES#000039 / potential"]
     c2["Camello bactriano salvaje, regiones remotas de Asia central / animal_wild_bactrian_camel"]
     v17["Asiático central / desert_central_asian"]
     b4["Desierto / desert"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
-    o2_2["Fibra animal / RES#000041 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
+    o2_4["Tendones sin preparar / RES#000106 / potential"]
+    o2_5["Fibra animal / RES#000041 / potential"]
     c3["Cangrejos / ANM#000173"]
     v19["Costero tropical / marine_tropical_coast"]
     b5["Marinos / marine"]
     v22["Humedales costeros (manglares y marismas) / marine_coastal_wetlands"]
     o3_0["Carne / RES#000029 / potential"]
+    o3_1["Concha o caparazón / RES#000044 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v13
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v14
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v17
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
     c3 -->|source occurrence| v19
     c3 -->|source occurrence| v22
     v13 -->|biomeId| b3
@@ -303,46 +403,58 @@ flowchart LR
     v18["Australiano / desert_australian"]
     b4["Desierto / desert"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
     c1["Capibara, cerca de agua / animal_capybara"]
     v12["Americana (sabanas y praderas) / savanna_american"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Caribú de bosque / animal_woodland_caribou"]
     v7["Boreal (taiga de Eurasia y Norteamérica) / temperate_forest_boreal"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
-    o2_2["Astas / RES#000036 / potential"]
-    o2_3["Leche / RES#000042 / potential"]
-    o2_4["draft_service / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
+    o2_4["Astas / RES#000036 / potential"]
+    o2_5["Tendones sin preparar / RES#000106 / potential"]
     c3["Caribú de tundra / animal_tundra_caribou"]
     v8["Norteamérica y Groenlandia / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["Astas / RES#000036 / potential"]
-    o3_3["Leche / RES#000042 / potential"]
-    o3_4["draft_service / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Astas / RES#000036 / potential"]
+    o3_5["Tendones sin preparar / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v14
     c0 -->|source occurrence| v18
     c0 -->|source occurrence| v3
     c0 -->|source occurrence| v6
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v12
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
     c2 -->|potentialProducts| o2_3
     c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v7
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
     c3 -->|potentialProducts| o3_3
     c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v8
     v12 -->|biomeId| b3
     v14 -->|biomeId| b3
@@ -361,17 +473,25 @@ flowchart LR
     v3["Oceánico (Nueva Guinea y Melanesia) / tropical_forest_oceanian"]
     b0["Bosque tropical / tropical_forest"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
-    o0_2["Huevos / RES#000039 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
     o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
+    o0_5["Piel sin curtir / RES#000031 / potential"]
     c1["Cebra de llanura / animal_plains_zebra"]
     v11["Africana (sabanas tropicales) / savanna_african"]
     b3["Sabana / savanna"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
-    o1_2["draft_service / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Tendones sin preparar / RES#000106 / potential"]
     c2["Chimpancé, zonas compatibles / animal_chimpanzee"]
     v1["Africano (selvas y bosques secos) / tropical_forest_african"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Ciervos / ANM#000175"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     v2["Asiático (selvas y bosques estacionales) / tropical_forest_asian"]
@@ -380,21 +500,35 @@ flowchart LR
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
     v12["Americana (sabanas y praderas) / savanna_american"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Astas / RES#000036 / potential"]
+    o3_5["Tendones sin preparar / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
     c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v3
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v11
+    c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v1
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v0
     c3 -->|source occurrence| v12
     c3 -->|source occurrence| v2
@@ -418,31 +552,51 @@ flowchart LR
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
     b1["Bosque templado / temperate_forest"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
     c1["Correcaminos / animal_roadrunner"]
     v15["Americano (Norteamérica y Sudamérica) / desert_american"]
     b4["Desierto / desert"]
-    o1_0["Huevos / RES#000039 / potential"]
-    o1_1["Plumas / RES#000040 / potential"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Plumas / RES#000040 / potential"]
+    o1_4["Huevos / RES#000039 / potential"]
     c2["Coyote / animal_coyote"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
-    o2_0["Piel sin curtir / RES#000031 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Cuscús y otros marsupiales arborícolas / animal_cuscuses_and_other_arboreal_marsupials"]
     v3["Oceánico (Nueva Guinea y Melanesia) / tropical_forest_oceanian"]
     b0["Bosque tropical / tropical_forest"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v4
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v15
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v15
     c2 -->|source occurrence| v5
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v3
     v15 -->|biomeId| b4
     v3 -->|biomeId| b0
@@ -457,32 +611,58 @@ flowchart LR
     c0["Cóndor andino / animal_andean_condor"]
     v23["Andino / alpine_andean"]
     b6["Alta montaña y pisos alpinos / alpine"]
-    o0_0["Plumas / RES#000040 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Damanes de roca / animal_rock_hyraxes"]
     v26["Africano (Etiopía y África oriental) / alpine_african"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Dingo / animal_dingo"]
     v18["Australiano / desert_australian"]
     b4["Desierto / desert"]
-    o2_0["Piel sin curtir / RES#000031 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Dromedario doméstico o asilvestrado: solo si fue introducido / animal_introduced_domestic_or_feral_dromedary"]
     v16["Africano y arábigo / desert_african_and_arabian"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["Leche / RES#000042 / potential"]
-    o3_3["transport_service / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Tendones sin preparar / RES#000106 / potential"]
+    o3_5["Fibra animal / RES#000041 / potential"]
+    o3_6["Leche / RES#000042 / potential"]
+    o3_7["Estiércol de ganado / RES#000006 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v23
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v26
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v18
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
     c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
+    c3 -->|potentialProducts| o3_6
+    c3 -->|potentialProducts| o3_7
     c3 -->|source occurrence| v16
     v16 -->|biomeId| b4
     v18 -->|biomeId| b4
@@ -499,39 +679,67 @@ flowchart LR
     b0["Bosque tropical / tropical_forest"]
     v11["Africana (sabanas tropicales) / savanna_african"]
     b3["Sabana / savanna"]
-    o0_0["Piel sin curtir / RES#000031 / potential"]
-    o0_1["Marfil / RES#000046 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Colmillos / RES#000045 / potential"]
+    o0_5["Marfil / RES#000046 / potential"]
+    o0_6["Tendones sin preparar / RES#000106 / potential"]
     c1["Elefantes asiáticos / ANM#000177"]
     v2["Asiático (selvas y bosques estacionales) / tropical_forest_asian"]
-    o1_0["Marfil / RES#000046 / potential"]
-    o1_1["transport_service / potential"]
-    o1_2["work_service / potential"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Colmillos / RES#000045 / potential"]
+    o1_5["Marfil / RES#000046 / potential"]
+    o1_6["Tendones sin preparar / RES#000106 / potential"]
     c2["Elefantes marinos en costas / animal_coastal_elephant_seals"]
     v10["Subantártica / tundra_subantarctic"]
     b2["Tundra / tundra"]
-    o2_0["Piel sin curtir / RES#000031 / potential"]
-    o2_1["Aceite animal / RES#000033 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
+    o2_4["Aceite animal / RES#000033 / potential"]
     c3["Emú, zonas abiertas compatibles / animal_emu"]
     v14["Australiana (sabanas tropicales) / savanna_australian"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["Huevos / RES#000039 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
     o3_3["Plumas / RES#000040 / potential"]
+    o3_4["Huevos / RES#000039 / potential"]
+    o3_5["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
+    c0 -->|potentialProducts| o0_6
     c0 -->|source occurrence| v1
     c0 -->|source occurrence| v11
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
+    c1 -->|potentialProducts| o1_6
     c1 -->|source occurrence| v2
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v10
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
     c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v14
     v1 -->|biomeId| b0
     v10 -->|biomeId| b2
@@ -550,39 +758,59 @@ flowchart LR
     v18["Australiano / desert_australian"]
     b4["Desierto / desert"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Focas de especies regionales / animal_regional_seals"]
     v21["Polar y subpolar / marine_polar_and_subpolar"]
     b5["Marinos / marine"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
     o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Aceite animal / RES#000033 / potential"]
     c2["Focas y lobos marinos en costas apropiadas / animal_coastal_seals_and_sea_lions"]
     v20["Costero y mar templado / marine_temperate_coast_and_sea"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
     o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
+    o2_4["Aceite animal / RES#000033 / potential"]
     c3["Gacelas / ANM#000178"]
     v16["Africano y arábigo / desert_african_and_arabian"]
     v17["Asiático central / desert_central_asian"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Cuernos / RES#000037 / potential"]
+    o3_5["Tendones sin preparar / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v18
     c0 -->|source occurrence| v6
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v21
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v20
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v16
     c3 -->|source occurrence| v17
     v16 -->|biomeId| b4
@@ -601,24 +829,50 @@ flowchart LR
     v2["Asiático (selvas y bosques estacionales) / tropical_forest_asian"]
     b0["Bosque tropical / tropical_forest"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Huevos / RES#000039 / potential"]
-    o0_2["Plumas / RES#000040 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Gelada, altiplano etíope / animal_gelada"]
     v26["Africano (Etiopía y África oriental) / alpine_african"]
     b6["Alta montaña y pisos alpinos / alpine"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Glotón en transición subártica / animal_subarctic_wolverine"]
     v9["Euroasiática / tundra_eurasian"]
     b2["Tundra / tundra"]
-    o2_0["Piel sin curtir / RES#000031 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Gorila occidental, África central occidental / animal_western_gorilla"]
     v1["Africano (selvas y bosques secos) / tropical_forest_african"]
+    o3_0["Carne / RES#000029 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v2
+    c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v26
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v9
+    c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v1
     v1 -->|biomeId| b0
     v2 -->|biomeId| b0
@@ -633,35 +887,61 @@ flowchart LR
     c0["Guacamayas / animal_macaws"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     b0["Bosque tropical / tropical_forest"]
-    o0_0["Plumas / RES#000040 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Guanacos / ANM#000179"]
     v15["Americano (Norteamérica y Sudamérica) / desert_american"]
     b4["Desierto / desert"]
     v23["Andino / alpine_andean"]
     b6["Alta montaña y pisos alpinos / alpine"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
-    o1_2["Fibra animal / RES#000041 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Tendones sin preparar / RES#000106 / potential"]
+    o1_5["Fibra animal / RES#000041 / potential"]
     c2["Jabalíes / ANM#000180"]
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
     b1["Bosque templado / temperate_forest"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
-    o2_2["Colmillos / RES#000045 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
+    o2_4["Colmillos / RES#000045 / potential"]
+    o2_5["Tendones sin preparar / RES#000106 / potential"]
     c3["Jaguar / animal_jaguar"]
-    o3_0["Piel sin curtir / RES#000031 / potential"]
+    o3_0["Carne / RES#000029 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v0
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v15
     c1 -->|source occurrence| v23
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v4
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v0
     v0 -->|biomeId| b0
     v15 -->|biomeId| b4
@@ -677,29 +957,47 @@ flowchart LR
     v17["Asiático central / desert_central_asian"]
     b4["Desierto / desert"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
     c1["Jirafa / animal_giraffe"]
     v11["Africana (sabanas tropicales) / savanna_african"]
     b3["Sabana / savanna"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Tendones sin preparar / RES#000106 / potential"]
     c2["Krill antártico, océano Austral / animal_antarctic_krill"]
     v21["Polar y subpolar / marine_polar_and_subpolar"]
     b5["Marinos / marine"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Concha o caparazón / RES#000044 / potential"]
     c3["Lemming / animal_lemming"]
     v9["Euroasiática / tundra_eurasian"]
     b2["Tundra / tundra"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v17
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v11
+    c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
     c2 -->|source occurrence| v21
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v9
     v11 -->|biomeId| b3
     v17 -->|biomeId| b4
@@ -714,28 +1012,50 @@ flowchart LR
     c0["Leopardo de las nieves / animal_snow_leopard"]
     v24["Asiático (Himalaya y Tíbet) / alpine_asian"]
     b6["Alta montaña y pisos alpinos / alpine"]
-    o0_0["Piel sin curtir / RES#000031 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
     c1["León / animal_lion"]
     v11["Africana (sabanas tropicales) / savanna_african"]
     b3["Sabana / savanna"]
-    o1_0["Piel sin curtir / RES#000031 / potential"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Liebre ártica / animal_arctic_hare"]
     v8["Norteamérica y Groenlandia / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Lince euroasiático / animal_eurasian_lynx"]
     v7["Boreal (taiga de Eurasia y Norteamérica) / temperate_forest_boreal"]
     b1["Bosque templado / temperate_forest"]
-    o3_0["Piel sin curtir / RES#000031 / potential"]
+    o3_0["Carne / RES#000029 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v24
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v11
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v8
     c3 -->|potentialProducts| o3_0
+    c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v7
     v11 -->|biomeId| b3
     v24 -->|biomeId| b6
@@ -750,26 +1070,48 @@ flowchart LR
     c0["Lobo de crin, Cerrado / animal_maned_wolf"]
     v12["Americana (sabanas y praderas) / savanna_american"]
     b3["Sabana / savanna"]
-    o0_0["Piel sin curtir / RES#000031 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
     c1["Lobo etíope, tierras altas de Etiopía / animal_ethiopian_wolf"]
     v26["Africano (Etiopía y África oriental) / alpine_african"]
     b6["Alta montaña y pisos alpinos / alpine"]
-    o1_0["Piel sin curtir / RES#000031 / potential"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Lobo gris / animal_grey_wolf"]
     v13["Euroasiática (praderas y estepas) / savanna_eurasian"]
-    o2_0["Piel sin curtir / RES#000031 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Marmotas / ANM#000181"]
     v25["Europeo (Alpes y Pirineos) / alpine_european"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v12
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v26
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v13
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v13
     c3 -->|source occurrence| v25
     v12 -->|biomeId| b3
@@ -785,28 +1127,46 @@ flowchart LR
     c0["Mejillones y ostras, según región / animal_regional_mussels_and_oysters"]
     v20["Costero y mar templado / marine_temperate_coast_and_sea"]
     b5["Marinos / marine"]
-    o0_0["Concha de animal / RES#000044 / potential"]
-    o0_1["Perlas / RES#000043 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Concha o caparazón / RES#000044 / potential"]
+    o0_2["Perlas / RES#000043 / potential"]
     c1["Moluscos y bivalvos tropicales / animal_tropical_mollusks_and_bivalves"]
     v19["Costero tropical / marine_tropical_coast"]
-    o1_0["Concha de animal / RES#000044 / potential"]
-    o1_1["Perlas / RES#000043 / potential"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Concha o caparazón / RES#000044 / potential"]
+    o1_2["Perlas / RES#000043 / potential"]
     c2["Mono aullador / animal_howler_monkey"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     b0["Bosque tropical / tropical_forest"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Okapi, cuenca del Congo / animal_okapi"]
     v1["Africano (selvas y bosques secos) / tropical_forest_african"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Tendones sin preparar / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
     c0 -->|source occurrence| v20
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
     c1 -->|source occurrence| v19
+    c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v0
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v1
     v0 -->|biomeId| b0
     v1 -->|biomeId| b0
@@ -822,8 +1182,9 @@ flowchart LR
     v12["Americana (sabanas y praderas) / savanna_american"]
     b3["Sabana / savanna"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
     o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
     c1["Osos / ANM#000182"]
     v4["Euroasiático (bosques templados y mediterráneos) / temperate_forest_eurasian"]
     b1["Bosque templado / temperate_forest"]
@@ -832,36 +1193,45 @@ flowchart LR
     v8["Norteamérica y Groenlandia / tundra_north_american_and_greenland"]
     b2["Tundra / tundra"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
     o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Ostras y otros bivalvos de estuario / animal_estuarine_oysters_and_other_bivalves"]
     v22["Humedales costeros (manglares y marismas) / marine_coastal_wetlands"]
     b5["Marinos / marine"]
-    o2_0["Concha de animal / RES#000044 / potential"]
-    o2_1["Perlas / RES#000043 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Concha o caparazón / RES#000044 / potential"]
+    o2_2["Perlas / RES#000043 / potential"]
     c3["Pavo ocelado, Yucatán y zonas vecinas / animal_ocellated_turkey"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     b0["Bosque tropical / tropical_forest"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Huevos / RES#000039 / potential"]
-    o3_2["Plumas / RES#000040 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Plumas / RES#000040 / potential"]
+    o3_4["Huevos / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v12
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v4
     c1 -->|source occurrence| v5
     c1 -->|source occurrence| v7
     c1 -->|source occurrence| v8
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
     c2 -->|source occurrence| v22
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v0
     v0 -->|biomeId| b0
     v12 -->|biomeId| b3
@@ -880,35 +1250,55 @@ flowchart LR
     v2["Asiático (selvas y bosques estacionales) / tropical_forest_asian"]
     b0["Bosque tropical / tropical_forest"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Huevos / RES#000039 / potential"]
-    o0_2["Plumas / RES#000040 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Pecarí de collar / animal_collared_peccary"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
-    o1_2["Colmillos / RES#000045 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Colmillos / RES#000045 / potential"]
     c2["Peces arrecifales, especies regionales / animal_regional_reef_fish"]
     v19["Costero tropical / marine_tropical_coast"]
     b5["Marinos / marine"]
-    o2_0["Aceite de pescado / RES#000034 / potential"]
-    o2_1["Carne de pescado / RES#000030 / potential"]
+    o2_0["Carne de pescado / RES#000030 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Piel sin curtir / RES#000031 / potential"]
+    o2_3["Grasa animal / RES#000032 / potential"]
+    o2_4["Aceite de pescado / RES#000034 / potential"]
     c3["Peces juveniles de estuario / animal_juvenile_estuarine_fish"]
     v22["Humedales costeros (manglares y marismas) / marine_coastal_wetlands"]
-    o3_0["Aceite de pescado / RES#000034 / potential"]
-    o3_1["Carne de pescado / RES#000030 / potential"]
+    o3_0["Carne de pescado / RES#000030 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Piel sin curtir / RES#000031 / potential"]
+    o3_3["Grasa animal / RES#000032 / potential"]
+    o3_4["Aceite de pescado / RES#000034 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v2
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v0
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v19
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v22
     v0 -->|biomeId| b0
     v19 -->|biomeId| b5
@@ -923,34 +1313,56 @@ flowchart LR
     c0["Peces polares regionales / animal_regional_polar_fish"]
     v21["Polar y subpolar / marine_polar_and_subpolar"]
     b5["Marinos / marine"]
-    o0_0["Aceite de pescado / RES#000034 / potential"]
-    o0_1["Carne de pescado / RES#000030 / potential"]
+    o0_0["Carne de pescado / RES#000030 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Piel sin curtir / RES#000031 / potential"]
+    o0_3["Grasa animal / RES#000032 / potential"]
+    o0_4["Aceite de pescado / RES#000034 / potential"]
     c1["Perentie (varano gigante) / animal_perentie"]
     v18["Australiano / desert_australian"]
     b4["Desierto / desert"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Huevos / RES#000039 / potential"]
     c2["Perrito de la pradera / animal_prairie_dog"]
     v12["Americana (sabanas y praderas) / savanna_american"]
     b3["Sabana / savanna"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Petreles y albatros en islas apropiadas / animal_island_petrels_and_albatrosses"]
     v10["Subantártica / tundra_subantarctic"]
     b2["Tundra / tundra"]
-    o3_0["Huevos / RES#000039 / potential"]
-    o3_1["Plumas / RES#000040 / potential"]
+    o3_0["Carne / RES#000029 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Plumas / RES#000040 / potential"]
+    o3_4["Huevos / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v21
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v18
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v12
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
     c3 -->|source occurrence| v10
     v10 -->|biomeId| b2
     v12 -->|biomeId| b3
@@ -967,35 +1379,61 @@ flowchart LR
     b2["Tundra / tundra"]
     v21["Polar y subpolar / marine_polar_and_subpolar"]
     b5["Marinos / marine"]
-    o0_0["Huevos / RES#000039 / potential"]
-    o0_1["Grasa animal / RES#000032 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Puma / animal_puma"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
     b1["Bosque templado / temperate_forest"]
     v23["Andino / alpine_andean"]
     b6["Alta montaña y pisos alpinos / alpine"]
-    o1_0["Piel sin curtir / RES#000031 / potential"]
+    o1_0["Carne / RES#000029 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Quebrantahuesos / ANM#000184"]
     v24["Asiático (Himalaya y Tíbet) / alpine_asian"]
     v25["Europeo (Alpes y Pirineos) / alpine_european"]
-    o2_0["Plumas / RES#000040 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Plumas / RES#000040 / potential"]
+    o2_4["Huevos / RES#000039 / potential"]
     c3["Rebeco / animal_chamois"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Cuernos / RES#000037 / potential"]
+    o3_5["Tendones sin preparar / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v10
     c0 -->|source occurrence| v21
     c1 -->|potentialProducts| o1_0
+    c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v23
     c1 -->|source occurrence| v5
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v24
     c2 -->|source occurrence| v25
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v25
     v10 -->|biomeId| b2
     v21 -->|biomeId| b5
@@ -1015,42 +1453,64 @@ flowchart LR
     v9["Euroasiática / tundra_eurasian"]
     b2["Tundra / tundra"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
-    o0_2["Astas / RES#000036 / potential"]
-    o0_3["Leche / RES#000042 / potential"]
-    o0_4["draft_service / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Astas / RES#000036 / potential"]
+    o0_5["Tendones sin preparar / RES#000106 / potential"]
+    o0_6["Leche / RES#000042 / potential"]
+    o0_7["Estiércol de ganado / RES#000006 / potential"]
     c1["Saiga, estepas euroasiáticas / animal_eurasian_saiga"]
     v13["Euroasiática (praderas y estepas) / savanna_eurasian"]
     b3["Sabana / savanna"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
-    o1_2["antlers_or_horns / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Cuernos / RES#000037 / potential"]
+    o1_5["Tendones sin preparar / RES#000106 / potential"]
     c2["Sardinas regionales / animal_regional_sardines"]
     v20["Costero y mar templado / marine_temperate_coast_and_sea"]
     b5["Marinos / marine"]
-    o2_0["Aceite de pescado / RES#000034 / potential"]
-    o2_1["Carne de pescado / RES#000030 / potential"]
+    o2_0["Carne de pescado / RES#000030 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Piel sin curtir / RES#000031 / potential"]
+    o2_3["Grasa animal / RES#000032 / potential"]
+    o2_4["Aceite de pescado / RES#000034 / potential"]
     c3["Serpientes de cascabel regionales / animal_regional_rattlesnakes"]
     v15["Americano (Norteamérica y Sudamérica) / desert_american"]
     b4["Desierto / desert"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
     c0 -->|potentialProducts| o0_3
     c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
+    c0 -->|potentialProducts| o0_6
+    c0 -->|potentialProducts| o0_7
     c0 -->|source occurrence| v7
     c0 -->|source occurrence| v9
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v13
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
     c2 -->|source occurrence| v20
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
+    c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
     c3 -->|source occurrence| v15
     v13 -->|biomeId| b3
     v15 -->|biomeId| b4
@@ -1067,35 +1527,59 @@ flowchart LR
     v24["Asiático (Himalaya y Tíbet) / alpine_asian"]
     b6["Alta montaña y pisos alpinos / alpine"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
-    o0_2["antlers_or_horns / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Cuernos / RES#000037 / potential"]
+    o0_5["Tendones sin preparar / RES#000106 / potential"]
     c1["Tapires / ANM#000185"]
     v0["Americano (selvas húmedas y bosques secos) / tropical_forest_american"]
     b0["Bosque tropical / tropical_forest"]
     v2["Asiático (selvas y bosques estacionales) / tropical_forest_asian"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Tendones sin preparar / RES#000106 / potential"]
     c2["Tigre, en hábitats adecuados / animal_tiger"]
-    o2_0["Piel sin curtir / RES#000031 / potential"]
+    o2_0["Carne / RES#000029 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Tortuga del desierto / animal_desert_tortoise"]
     v15["Americano (Norteamérica y Sudamérica) / desert_american"]
     b4["Desierto / desert"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Huevos / RES#000039 / potential"]
-    o3_2["Concha de animal / RES#000044 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Concha o caparazón / RES#000044 / potential"]
+    o3_5["Huevos / RES#000039 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v24
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
     c1 -->|source occurrence| v0
     c1 -->|source occurrence| v2
     c2 -->|potentialProducts| o2_0
+    c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v2
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v15
     v0 -->|biomeId| b0
     v15 -->|biomeId| b4
@@ -1111,40 +1595,62 @@ flowchart LR
     v19["Costero tropical / marine_tropical_coast"]
     b5["Marinos / marine"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Huevos / RES#000039 / potential"]
-    o0_2["Concha de animal / RES#000044 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Concha o caparazón / RES#000044 / potential"]
+    o0_5["Huevos / RES#000039 / potential"]
     c1["Tortugas terrestres regionales / animal_regional_land_tortoises"]
     v6["Sudafricano y australiano (matorrales y bosques regionales) / temperate_forest_south_african_and_australian"]
     b1["Bosque templado / temperate_forest"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Huevos / RES#000039 / potential"]
-    o1_2["Concha de animal / RES#000044 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Concha o caparazón / RES#000044 / potential"]
+    o1_5["Huevos / RES#000039 / potential"]
     c2["Ualabíes regionales / animal_regional_wallabies"]
     v14["Australiana (sabanas tropicales) / savanna_australian"]
     b3["Sabana / savanna"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
     c3["Vicuña / animal_vicuna"]
     v23["Andino / alpine_andean"]
     b6["Alta montaña y pisos alpinos / alpine"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["Fibra animal / RES#000041 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Tendones sin preparar / RES#000106 / potential"]
+    o3_5["Fibra animal / RES#000041 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v19
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v6
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
+    c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
     c2 -->|source occurrence| v14
     c2 -->|source occurrence| v6
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v23
     v14 -->|biomeId| b3
     v19 -->|biomeId| b5
@@ -1160,17 +1666,25 @@ flowchart LR
     v23["Andino / alpine_andean"]
     b6["Alta montaña y pisos alpinos / alpine"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
     c1["Vizcachas en roquedos / animal_rock_dwelling_viscachas"]
     v15["Americano (Norteamérica y Sudamérica) / desert_american"]
     b4["Desierto / desert"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
     c2["Yak salvaje, altiplano tibetano / animal_wild_yak"]
     v24["Asiático (Himalaya y Tíbet) / alpine_asian"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
-    o2_2["Fibra animal / RES#000041 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
+    o2_3["Piel sin curtir / RES#000031 / potential"]
+    o2_4["Cuernos / RES#000037 / potential"]
+    o2_5["Tendones sin preparar / RES#000106 / potential"]
+    o2_6["Fibra animal / RES#000041 / potential"]
     c3["Zorros / ANM#000169"]
     v5["Americano (bosques templados y mediterráneos) / temperate_forest_american"]
     b1["Bosque templado / temperate_forest"]
@@ -1179,19 +1693,27 @@ flowchart LR
     v9["Euroasiática / tundra_eurasian"]
     v16["Africano y arábigo / desert_african_and_arabian"]
     v17["Asiático central / desert_central_asian"]
-    o3_0["Piel sin curtir / RES#000031 / potential"]
-    o3_1["Carne / RES#000029 / potential"]
-    o3_2["Huesos / RES#000105 / potential"]
-    o3_3["Grasa animal / RES#000032 / potential"]
+    o3_0["Carne / RES#000029 / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
     c0 -->|source occurrence| v23
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
+    c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
     c1 -->|source occurrence| v15
     c2 -->|potentialProducts| o2_0
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
+    c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
+    c2 -->|potentialProducts| o2_6
     c2 -->|source occurrence| v24
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
@@ -1220,30 +1742,49 @@ flowchart LR
     c0["Águila real / animal_golden_eagle"]
     v25["Europeo (Alpes y Pirineos) / alpine_european"]
     b6["Alta montaña y pisos alpinos / alpine"]
-    o0_0["Plumas / RES#000040 / potential"]
+    o0_0["Carne / RES#000029 / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Plumas / RES#000040 / potential"]
+    o0_4["Huevos / RES#000039 / potential"]
     c1["Íbices / ANM#000186"]
     v24["Asiático (Himalaya y Tíbet) / alpine_asian"]
     v26["Africano (Etiopía y África oriental) / alpine_african"]
     o1_0["Carne / RES#000029 / potential"]
-    o1_1["Piel sin curtir / RES#000031 / potential"]
-    o1_2["antlers_or_horns / potential"]
+    o1_1["Huesos / RES#000105 / potential"]
+    o1_2["Grasa animal / RES#000032 / potential"]
+    o1_3["Piel sin curtir / RES#000031 / potential"]
+    o1_4["Cuernos / RES#000037 / potential"]
+    o1_5["Tendones sin preparar / RES#000106 / potential"]
     c2["Ñandú común, Pampas / animal_greater_rhea"]
     v12["Americana (sabanas y praderas) / savanna_american"]
     b3["Sabana / savanna"]
     o2_0["Carne / RES#000029 / potential"]
-    o2_1["Piel sin curtir / RES#000031 / potential"]
-    o2_2["Huevos / RES#000039 / potential"]
+    o2_1["Huesos / RES#000105 / potential"]
+    o2_2["Grasa animal / RES#000032 / potential"]
     o2_3["Plumas / RES#000040 / potential"]
+    o2_4["Huevos / RES#000039 / potential"]
+    o2_5["Piel sin curtir / RES#000031 / potential"]
     c3["Ñu / animal_wildebeest"]
     v11["Africana (sabanas tropicales) / savanna_african"]
     o3_0["Carne / RES#000029 / potential"]
-    o3_1["Piel sin curtir / RES#000031 / potential"]
-    o3_2["antlers_or_horns / potential"]
+    o3_1["Huesos / RES#000105 / potential"]
+    o3_2["Grasa animal / RES#000032 / potential"]
+    o3_3["Piel sin curtir / RES#000031 / potential"]
+    o3_4["Cuernos / RES#000037 / potential"]
+    o3_5["Tendones sin preparar / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
+    c0 -->|potentialProducts| o0_1
+    c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
     c0 -->|source occurrence| v25
     c1 -->|potentialProducts| o1_0
     c1 -->|potentialProducts| o1_1
     c1 -->|potentialProducts| o1_2
+    c1 -->|potentialProducts| o1_3
+    c1 -->|potentialProducts| o1_4
+    c1 -->|potentialProducts| o1_5
     c1 -->|source occurrence| v24
     c1 -->|source occurrence| v25
     c1 -->|source occurrence| v26
@@ -1251,10 +1792,15 @@ flowchart LR
     c2 -->|potentialProducts| o2_1
     c2 -->|potentialProducts| o2_2
     c2 -->|potentialProducts| o2_3
+    c2 -->|potentialProducts| o2_4
+    c2 -->|potentialProducts| o2_5
     c2 -->|source occurrence| v12
     c3 -->|potentialProducts| o3_0
     c3 -->|potentialProducts| o3_1
     c3 -->|potentialProducts| o3_2
+    c3 -->|potentialProducts| o3_3
+    c3 -->|potentialProducts| o3_4
+    c3 -->|potentialProducts| o3_5
     c3 -->|source occurrence| v11
     v11 -->|biomeId| b3
     v12 -->|biomeId| b3
@@ -1271,14 +1817,23 @@ flowchart LR
     v16["Africano y arábigo / desert_african_and_arabian"]
     b4["Desierto / desert"]
     o0_0["Carne / RES#000029 / potential"]
-    o0_1["Piel sin curtir / RES#000031 / potential"]
-    o0_2["antlers_or_horns / potential"]
+    o0_1["Huesos / RES#000105 / potential"]
+    o0_2["Grasa animal / RES#000032 / potential"]
+    o0_3["Piel sin curtir / RES#000031 / potential"]
+    o0_4["Cuernos / RES#000037 / potential"]
+    o0_5["Tendones sin preparar / RES#000106 / potential"]
     c0 -->|potentialProducts| o0_0
     c0 -->|potentialProducts| o0_1
     c0 -->|potentialProducts| o0_2
+    c0 -->|potentialProducts| o0_3
+    c0 -->|potentialProducts| o0_4
+    c0 -->|potentialProducts| o0_5
     c0 -->|source occurrence| v16
     v16 -->|biomeId| b4
 ```
+
+
+[Materiales y obtención / Materials and acquisition](PRODUCTS.es.md)
 
 ## Categorías agrupadas y compatibilidad
 

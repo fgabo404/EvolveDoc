@@ -1,5 +1,7 @@
 # Evolve — Design and Simulation Reference
 
+[Animals: materials and acquisition](animal-products.md)
+
 [Roadmap and pending work — read when resuming](../../ROADMAP.md)
 
 [Plants and animals: gameplay categories](biology.md)

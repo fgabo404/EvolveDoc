@@ -101,6 +101,6 @@ Checked source occurrence coverage, translation-map coverage, unique candidate I
 
 ## Resource integration update
 
-World schema/content is 1.4.0/0.5.0. Plant and animal guides use 1.3.0/0.4.0; minerals remain 1.1.0/0.2.0. All 485 occurrence IDs remain; grouped definitions have explicit aliases and preserve source provenance. `extractedResourceId` identifies a collected/extracted material, not automatically refined metal.
+World schema/content is 1.4.0/0.5.0. Plants use 1.3.0/0.4.0 and animals 1.4.0/0.6.0; minerals remain 1.1.0/0.2.0. All 485 occurrence IDs remain; grouped definitions have explicit aliases and preserve source provenance. `extractedResourceId` identifies a collected/extracted material, not automatically refined metal.
 
 The [current granularity policy](biology.md) uses general entities and ID aliases; scientific background is optional.

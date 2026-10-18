@@ -101,6 +101,6 @@ Se comprobó cobertura de apariciones, traducciones, IDs únicos, referencias, r
 
 ## Actualización de recursos
 
-Mundo usa esquema/contenido 1.4.0/0.5.0. Plantas y animales usan 1.3.0/0.4.0; minerales conservan 1.1.0/0.2.0. Las 485 apariciones conservan sus IDs; las definiciones agrupadas tienen alias y procedencia explícita. `extractedResourceId` identifica material obtenido, no metal refinado automático.
+Mundo usa esquema/contenido 1.4.0/0.5.0. Plantas usan 1.3.0/0.4.0 y animales 1.4.0/0.6.0; minerales conservan 1.1.0/0.2.0. Las 485 apariciones conservan sus IDs; las definiciones agrupadas tienen alias y procedencia explícita. `extractedResourceId` identifica material obtenido, no metal refinado automático.
 
 La [granularidad vigente](biology.md) usa entidades generales y alias de IDs; la referencia científica es opcional.

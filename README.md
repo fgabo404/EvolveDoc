@@ -39,6 +39,7 @@ EvolveDoc/
 | Stable ID and tag conventions | [Identifiers](lang/en/identifiers.md) | [Identificadores](lang/es/identifiers.md) |
 | Complete JSON field references | [All JSON structures](lang/en/json-structures.md) | [Todas las estructuras JSON](lang/es/json-structures.md) |
 | General plant and animal entities | [Categories](lang/en/biology.md) | [Categorías](lang/es/biology.md) |
+| Animal materials and acquisition | [All animals](lang/en/animal-products.md) | [Todos los animales](lang/es/animal-products.md) |
 | Resource catalog | [Resources](lang/en/resources.md) | [Recursos](lang/es/resources.md) |
 | Agriculture contract | [Agriculture](lang/en/agriculture.technologies.md) | [Agricultura](lang/es/agriculture.technologies.md) |
 | World and species guide | [World guide](lang/en/world.catalog.guide.md) | [Guía del mundo](lang/es/world.catalog.guide.md) |
@@ -47,7 +48,8 @@ EvolveDoc/
 ## Current content
 
 - General gameplay categories: 33 selected animal/plant groups replace regional/species variants, with 86 explicit retired-ID aliases. Scientific background is optional.
-- 105 resources, 301 possible source links and 25 transformation endpoint guides; units, yields and recipes remain unresolved.
+- Material/acquisition reference for all 101 current animals: 498 material links and 17 methods; quantities and operational rules remain deferred.
+- 106 resources, 594 possible source links and 28 transformation endpoint guides; units, yields and recipes remain unresolved.
 - 23 flat agriculture technologies; their existing IDs and gameplay configuration are preserved.
 - 7 biomes, 27 regional variants and 485 source occurrences.
 - 109 plant entity candidates, 101 animal entity candidates, 57 geological candidates and 21 agricultural crop candidates.

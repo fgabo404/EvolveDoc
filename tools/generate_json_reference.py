@@ -376,6 +376,27 @@ biologicalGranularity|World placement uses gameplay categories rather than manda
 gameplayIdentity|Scientific catalog is optional background; gameplay identities come from general entity guides.|El catálogo científico es referencia opcional; las identidades del juego están en las guías generales.
 '''
 
+TEXT += "\n" + r'''
+productEvidenceSources|Primary reference bibliography for animal anatomy, material uses and acquisition design.|Bibliografía primaria de anatomía, usos materiales y diseño de obtención animal.
+acquisitionMethods|Flat human-readable material acquisition definitions; not implemented engine handlers or UI actions.|Definiciones planas de obtención de materiales; no son manejadores del motor ni acciones de interfaz implementadas.
+sourceOutcome|Whether the method requires a dead animal, consumes it, preserves it, collects discarded material or removes an egg.|Indica si requiere animal muerto, lo consume, lo conserva, recoge material desprendido o retira un huevo.
+availabilityConstraints|English design-condition tags; not executable condition expressions or numeric thresholds.|Etiquetas de condiciones de diseño en inglés; no expresiones ejecutables ni umbrales numéricos.
+animalProductPolicy|Scope and interpretation of animal materials, live collection and processed derivatives.|Alcance de materiales animales, recolección en vida y derivados procesados.
+anatomicalGroup|Broad functional anatomy: mammal, bird, fish, reptile or shellfish; not a scientific species subdivision.|Anatomía funcional general: mamífero, ave, pez, reptil o marisco; no subdivide especies científicas.
+acquisitionMethodTags|References to this animal catalog's material acquisition definitions.|Referencias a definiciones de obtención de materiales del catálogo animal.
+processingTag|Optional process guide required for a processed output; null for raw materials even when handling is needed.|Guía de transformación para un producto procesado; null para materia cruda aunque necesite manipulación.
+notes|Localized explanation of material availability and source-specific limitations.|Explicación traducida de disponibilidad y límites según origen.
+productReviewStatus|Material/acquisition design coverage; operational behavior, quantities and balance remain pending.|Cobertura del diseño de materiales/obtención; funcionamiento operativo, cantidades y balance pendientes.
+serviceUseCandidates|Animal work/transport candidates, kept separate from inventory materials and not yet approved as trained services.|Candidatos de trabajo/transporte separados de materiales; no son servicios entrenados aprobados.
+serviceTag|Technical animal service candidate identifier; not a material resource.|Identificador técnico de servicio animal candidato; no es un recurso material.
+productCoverage|Counts for current animal material/method reference coverage.|Conteos de cobertura actual de materiales y métodos animales.
+animalEntityCount|Number of current animal gameplay entities covered.|Cantidad de entidades animales del juego cubiertas.
+materialLinkCount|Number of distinct entity/material associations in the animal guide.|Cantidad de asociaciones distintas entre entidades y materiales en la guía animal.
+acquisitionMethodCount|Number of material acquisition method definitions.|Cantidad de definiciones de métodos de obtención.
+serviceCandidateCount|Number of unapproved work/transport service candidates.|Cantidad de candidatos no aprobados de servicios de trabajo/transporte.
+inputProvenancePolicy|Source/anatomy constraint on process input; generic resource IDs alone do not authorize a recipe.|Restricción de origen/anatomía de la entrada; IDs genéricos no autorizan por sí solos una receta.
+'''
+
 DESCRIPTIONS={}
 for line in TEXT.strip().splitlines():
     if not line.strip():

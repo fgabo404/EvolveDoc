@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-17 — Material and acquisition reference for all current animals
+
+- Apply the user’s detailed scope to all 101 animal entities, replacing the fox-only interpretation. Add 498 material associations, 17 qualitative acquisition methods and a primary-source bibliography.
+- Distinguish dead/consumed bodies, living or shed collection, individual anatomy and reproductive conditions. Resolve antlers versus horns; do not grant bones to shellfish, milk to birds or guaranteed pearls/baleen to broad groups.
+- Keep 7 work/transport service candidates separate from inventory materials, pending suitability/training design.
+- Allocate RES#000106 to raw tendons and retain all existing IDs. Current resources: 106, source bindings: 594, process guides: 28, animal material tags: 21. Oil/ivory derivatives require processing and input provenance.
+- Animal schema/content 1.4.0/0.6.0; resource schema/content 1.1.0/0.4.0. No crop, world occurrence, technology or simulation behavior changes. Runtime remains disabled; quantities, durations, regeneration and actual action execution remain deferred.
+- Add complete bilingual acquisition tables, field documentation and consistency validation. Roadmap marks the animal reference complete and plants next.
+- Se completa la referencia inicial animal → material → obtención; no se afirma un catálogo de todos los tejidos posibles ni aprovechamiento histórico habitual de cada animal.
+
 ## 2026-10-17 — Detailed fox resource choice
 
 - Record user-selected option C for foxes: hide, meat, bones and animal fat. Allocate RES#000105 for bones; no changes to other animal outputs.

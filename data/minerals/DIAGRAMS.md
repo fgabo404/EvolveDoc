@@ -371,7 +371,7 @@ flowchart LR
     c0["Seashells / geological_seashells"]
     v19["Tropical Coast / marine_tropical_coast"]
     b5["Marine / marine"]
-    r0["Animal shell / RES#000044"]
+    r0["Shell or carapace / RES#000044"]
     c1["Tin-Bearing Deposit / geological_tin_bearing_deposit"]
     v2["Asian / tropical_forest_asian"]
     b0["Tropical Forest / tropical_forest"]

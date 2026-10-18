@@ -16,8 +16,8 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.3.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.5.0"` |
+| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.4.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.6.0"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Language codes available in this document. | `["en", "es"]` |
@@ -26,6 +26,10 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `speciesCandidates` | `array<object>` | 1/1 | Flat gameplay entity candidates; general categories are valid and need not resolve to scientific species. | `—` |
 | `biologicalCatalogFile` | `string` | 1/1 | Sibling biological catalog file; legacy candidate IDs remain unchanged. | `"animals.biological.catalog.json"` |
 | `entityAliases` | `array<object>` | 1/1 | Retired regional/specific IDs mapped to one canonical gameplay entity. | `—` |
+| `productEvidenceSources` | `array<object>` | 1/1 | Primary reference bibliography for animal anatomy, material uses and acquisition design. | `—` |
+| `acquisitionMethods` | `array<object>` | 1/1 | Flat human-readable material acquisition definitions; not implemented engine handlers or UI actions. | `—` |
+| `serviceUseCandidates` | `array<object>` | 1/1 | Animal work/transport candidates, kept separate from inventory materials and not yet approved as trained services. | `—` |
+| `productCoverage` | `object` | 1/1 | Counts for current animal material/method reference coverage. | `—` |
 
 ### `$.runtimePolicy`
 
@@ -34,6 +38,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `loadAsGameDefinitions` | `boolean` | 1/1 | False blocks promotion of this guide to playable definitions. | `false` |
 | `unknownValues` | `string` | 1/1 | Explains that unresolved null values are not zero or unrestricted. | `"null means unresolved; it is not zero or unrestricted."` |
 | `classificationPolicy` | `string` | 1/1 | Use general gameplay entities unless a distinction changes resources or behavior; science is optional. | `"Use general gameplay entities when specific species add no meaningful resource or behavior distinction. Scienti…` |
+| `animalProductPolicy` | `string` | 1/1 | Scope and interpretation of animal materials, live collection and processed derivatives. | `"Materials reflect useful biological potential, not guaranteed equal outputs or universal food suitability. Broa…` |
 
 ### `$.speciesCandidates[]`
 
@@ -49,14 +54,16 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `ecology` | `object` | 101/101 | Environmental requirements; quantitative values remain unresolved. | `—` |
 | `propagation` | `object` | 101/101 | Reproduction/propagation methods and required materials, still under design. | `—` |
 | `domestication` | `object` | 101/101 | Eligibility, ancestor/form relationships and selection criteria. | `—` |
-| `potentialProducts` | `array<object>` | 101/101 | Potential source uses; not confirmed outputs, quantities or unlocks. | `[]` |
-| `potentialUseMethods` | `array<string>` | 101/101 | Potential source use methods, not authorized gameplay actions. | `["hunting"]` |
+| `potentialProducts` | `array<object>` | 101/101 | Potential source uses; not confirmed outputs, quantities or unlocks. | `—` |
+| `potentialUseMethods` | `array<string>` | 101/101 | Potential source use methods, not authorized gameplay actions. | `["hunting", "butchering", "skinning"]` |
 | `cultivationResearch` | `null` | 101/101 | Illustrative link to per-species research; null means no binding specified. | `null` |
 | `sourceLabel` | `string` | 101/101 | Exact Spanish source label for provenance, not a localized UI field. | `"Alce euroasiático"` |
 | `initialPresencePolicy` | `string` | 101/101 | Constraints to resolve before initial spawning. | `"resolve_native_region_and_habitat_before_spawning"` |
 | `taxonResolution` | `object` | 101/101 | Optional scientific background links; not required for gameplay identity, spawning or resource access. | `—` |
 | `tag` | `string` | 18/101 | English snake_case technical label; future IDs and tags are not yet applied to legacy catalogs. | `"moose"` |
 | `sourceVariants` | `array<object>` | 18/101 | Original labels and regional source references merged into this single gameplay entity. | `—` |
+| `anatomicalGroup` | `string` | 101/101 | Broad functional anatomy: mammal, bird, fish, reptile or shellfish; not a scientific species subdivision. | `"mammal"` |
+| `productReviewStatus` | `string` | 101/101 | Material/acquisition design coverage; operational behavior, quantities and balance remain pending. | `"material_and_acquisition_reference_completed_operational_rules_pending"` |
 
 ### `$.speciesCandidates[].name`
 
@@ -105,11 +112,23 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `resourceTag` | `string` | 222/222 | English resource-category tag; not a resolved resource ID. | `"meat"` |
-| `status` | `string` | 222/222 | Maturity, review state or current example research status; read the containing object. | `"potential_from_source"` |
-| `requiredTechnologyIds` | `null` | 222/222 | Technology references needed for this output; null means unresolved, not none. | `null` |
-| `yield` | `null` | 222/222 | Output yield; units, formula and amount remain unresolved. | `null` |
-| `resourceId` | `string` | 205/222 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000029"` |
+| `resourceTag` | `string` | 498/498 | English resource-category tag; not a resolved resource ID. | `"meat"` |
+| `status` | `string` | 498/498 | Maturity, review state or current example research status; read the containing object. | `"biological_potential_gameplay_design"` |
+| `requiredTechnologyIds` | `null` | 498/498 | Technology references needed for this output; null means unresolved, not none. | `null` |
+| `yield` | `null` | 498/498 | Output yield; units, formula and amount remain unresolved. | `null` |
+| `resourceId` | `string` | 498/498 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000029"` |
+| `acquisitionMethodTags` | `array<string>` | 498/498 | References to this animal catalog's material acquisition definitions. | `["butchering"]` |
+| `availabilityConstraints` | `array<string>` | 498/498 | English design-condition tags; not executable condition expressions or numeric thresholds. | `[]` |
+| `processingTag` | `null \| string` | 498/498 | Optional process guide required for a processed output; null for raw materials even when handling is needed. | `"fish_oil_extraction"` |
+| `notes` | `object` | 498/498 | Localized explanation of material availability and source-specific limitations. | `—` |
+| `evidenceSourceKeys` | `array<string>` | 498/498 | Keys into this catalog bibliography; empty means no specific lineage claim is asserted here. | `["fao_byproducts"]` |
+
+### `$.speciesCandidates[].potentialProducts[].notes`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `en` | `string` | 498/498 | English visible text. | `"Useful biological material; availability depends on the actual source and collection method."` |
+| `es` | `string` | 498/498 | Spanish visible text. | `"Material biológico aprovechable; depende de la fuente concreta y el método de obtención."` |
 
 ### `$.speciesCandidates[].taxonResolution`
 
@@ -144,14 +163,68 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `previousId` | `string` | 51/51 | Retired source ID retained for compatibility and provenance; do not reuse. | `"animal_corsac_fox"` |
 | `entityId` | `string` | 51/51 | Canonical gameplay entity ID; may represent a general category rather than a scientific species. | `"ANM#000169"` |
 
+### `$.productEvidenceSources[]`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `sourceKey` | `string` | 15/15 | Stable bibliography key local to a biological catalog, not an entity ID. | `"fao_byproducts"` |
+| `title` | `string` | 15/15 | Document or schema title. | `"Animal slaughter byproduct utilization"` |
+| `url` | `string` | 15/15 | Public source URL. | `"https://www.fao.org/4/x6552e/X6552E10.htm"` |
+| `checkedOn` | `string` | 15/15 | Date of the consulted reference snapshot; not publication date. | `"2026-10-17"` |
+| `supports` | `string` | 15/15 | Scope of the claim supported by this bibliography entry. | `"General anatomy/material utilization; not evidence that every wild category is routinely harvested."` |
+
+### `$.acquisitionMethods[]`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `tag` | `string` | 17/17 | English snake_case technical label; future IDs and tags are not yet applied to legacy catalogs. | `"butchering"` |
+| `name` | `object` | 17/17 | Player-visible label using language keys. | `—` |
+| `description` | `object` | 17/17 | Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text. | `—` |
+| `sourceOutcome` | `string` | 17/17 | Whether the method requires a dead animal, consumes it, preserves it, collects discarded material or removes an egg. | `"requires_dead_animal"` |
+| `availabilityConstraints` | `array<string>` | 17/17 | English design-condition tags; not executable condition expressions or numeric thresholds. | `[]` |
+| `runtimeEnabled` | `boolean` | 17/17 | Whether this occurrence may be used by generation; currently false. | `false` |
+
+### `$.acquisitionMethods[].name`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `en` | `string` | 17/17 | English visible text. | `"Butchering"` |
+| `es` | `string` | 17/17 | Spanish visible text. | `"Despiece"` |
+
+### `$.acquisitionMethods[].description`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `en` | `string` | 17/17 | English visible text. | `"Remove flesh, bones and raw fat from a usable carcass; not an automatic reward for sighting or killing."` |
+| `es` | `string` | 17/17 | Spanish visible text. | `"Extrae carne, huesos y grasa cruda de un cuerpo aprovechable; no es recompensa automática por avistar o matar."` |
+
+### `$.serviceUseCandidates[]`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `entityId` | `string` | 7/7 | Canonical gameplay entity ID; may represent a general category rather than a scientific species. | `"animal_woodland_caribou"` |
+| `serviceTag` | `string` | 7/7 | Technical animal service candidate identifier; not a material resource. | `"draft_service"` |
+| `status` | `string` | 7/7 | Maturity, review state or current example research status; read the containing object. | `"requires_separate_training_and_husbandry_design"` |
+| `availabilityConstraints` | `array<string>` | 7/7 | English design-condition tags; not executable condition expressions or numeric thresholds. | `["suitable_individual", "controlled_training", "historical_suitability_review"]` |
+| `runtimeEnabled` | `boolean` | 7/7 | Whether this occurrence may be used by generation; currently false. | `false` |
+
+### `$.productCoverage`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `animalEntityCount` | `integer` | 1/1 | Number of current animal gameplay entities covered. | `101` |
+| `materialLinkCount` | `integer` | 1/1 | Number of distinct entity/material associations in the animal guide. | `498` |
+| `acquisitionMethodCount` | `integer` | 1/1 | Number of material acquisition method definitions. | `17` |
+| `serviceCandidateCount` | `integer` | 1/1 | Number of unapproved work/transport service candidates. | `7` |
+
 ## Complete example document with reduced repeated arrays
 
 Valid JSON copied from actual records. Repeated object arrays are shortened for readability; object keys and scalar lists of the retained records are preserved. This sample does not guarantee cross-reference closure because records may refer to omitted entries. Use the source JSON and sibling catalogs for loading or validation.
 
 ```json
 {
-  "schemaVersion": "1.3.0",
-  "contentVersion": "0.5.0",
+  "schemaVersion": "1.4.0",
+  "contentVersion": "0.6.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -161,7 +234,8 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
   "runtimePolicy": {
     "loadAsGameDefinitions": false,
     "unknownValues": "null means unresolved; it is not zero or unrestricted.",
-    "classificationPolicy": "Use general gameplay entities when specific species add no meaningful resource or behavior distinction. Scientific taxonomy is optional background, not an unlock or entity identity requirement. Preserve distinctions for crops, wild/domestic forms and other actual gameplay differences."
+    "classificationPolicy": "Use general gameplay entities when specific species add no meaningful resource or behavior distinction. Scientific taxonomy is optional background, not an unlock or entity identity requirement. Preserve distinctions for crops, wild/domestic forms and other actual gameplay differences.",
+    "animalProductPolicy": "Materials reflect useful biological potential, not guaranteed equal outputs or universal food suitability. Broad groups keep anatomical/sex/life-stage constraints. Raw parts require carcass processing; live/shed collection is separate. Processed oil and ivory require explicit processing. No quantities, durations or engine workflow are implemented."
   },
   "kind": "animal_catalog_design_guide",
   "speciesCandidates": [
@@ -204,14 +278,31 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
       "potentialProducts": [
         {
           "resourceTag": "meat",
-          "status": "potential_from_source",
+          "status": "biological_potential_gameplay_design",
           "requiredTechnologyIds": null,
           "yield": null,
-          "resourceId": "RES#000029"
+          "resourceId": "RES#000029",
+          "acquisitionMethodTags": [
+            "butchering"
+          ],
+          "availabilityConstraints": [],
+          "processingTag": null,
+          "notes": {
+            "en": "Useful biological material; availability depends on the actual source and collection method.",
+            "es": "Material biológico aprovechable; depende de la fuente concreta y el método de obtención."
+          },
+          "evidenceSourceKeys": [
+            "fao_byproducts"
+          ]
         }
       ],
       "potentialUseMethods": [
-        "hunting"
+        "hunting",
+        "butchering",
+        "skinning",
+        "recover_hard_parts",
+        "collect_shed_antlers",
+        "recover_tendons"
       ],
       "cultivationResearch": null,
       "sourceLabel": "Alce euroasiático",
@@ -239,7 +330,9 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
             "temperate_forest_boreal"
           ]
         }
-      ]
+      ],
+      "anatomicalGroup": "mammal",
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
     }
   ],
   "biologicalCatalogFile": "animals.biological.catalog.json",
@@ -248,6 +341,50 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
       "previousId": "animal_corsac_fox",
       "entityId": "ANM#000169"
     }
-  ]
+  ],
+  "productEvidenceSources": [
+    {
+      "sourceKey": "fao_byproducts",
+      "title": "Animal slaughter byproduct utilization",
+      "url": "https://www.fao.org/4/x6552e/X6552E10.htm",
+      "checkedOn": "2026-10-17",
+      "supports": "General anatomy/material utilization; not evidence that every wild category is routinely harvested."
+    }
+  ],
+  "acquisitionMethods": [
+    {
+      "tag": "butchering",
+      "name": {
+        "en": "Butchering",
+        "es": "Despiece"
+      },
+      "description": {
+        "en": "Remove flesh, bones and raw fat from a usable carcass; not an automatic reward for sighting or killing.",
+        "es": "Extrae carne, huesos y grasa cruda de un cuerpo aprovechable; no es recompensa automática por avistar o matar."
+      },
+      "sourceOutcome": "requires_dead_animal",
+      "availabilityConstraints": [],
+      "runtimeEnabled": false
+    }
+  ],
+  "serviceUseCandidates": [
+    {
+      "entityId": "animal_woodland_caribou",
+      "serviceTag": "draft_service",
+      "status": "requires_separate_training_and_husbandry_design",
+      "availabilityConstraints": [
+        "suitable_individual",
+        "controlled_training",
+        "historical_suitability_review"
+      ],
+      "runtimeEnabled": false
+    }
+  ],
+  "productCoverage": {
+    "animalEntityCount": 101,
+    "materialLinkCount": 498,
+    "acquisitionMethodCount": 17,
+    "serviceCandidateCount": 7
+  }
 }
 ```

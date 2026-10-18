@@ -53,7 +53,7 @@ Resources are inventory materials; trees, animals and deposits are possible sour
 | RES#000041 | animal_fiber | Animal fiber | animal_material | raw |
 | RES#000042 | milk | Milk | animal_material | raw |
 | RES#000043 | pearls | Pearls | animal_material | raw |
-| RES#000044 | animal_shell | Animal shell | animal_material | raw |
+| RES#000044 | animal_shell | Shell or carapace | animal_material | raw |
 | RES#000045 | tusks | Tusks | animal_material | raw |
 | RES#000046 | ivory | Ivory material | animal_material | processed |
 | RES#000047 | clay | Clay | geological_material | raw |
@@ -115,6 +115,7 @@ Resources are inventory materials; trees, animals and deposits are possible sour
 | RES#000103 | olive_oil | Olive oil | food_ingredient | processed |
 | RES#000104 | leather | Leather | animal_material | processed |
 | RES#000105 | bones | Bones | animal_material | raw |
+| RES#000106 | raw_tendons | Raw tendons | animal_material | raw |
 
 ## Every resource
 
@@ -147,17 +148,19 @@ flowchart LR
     r1["Livestock manure / RES#000006"]
     k1["animal_material"]
     r1 -->|category| k1
+    s0["animalSpeciesCandidates"]
+    s0 -->|possible source| r1
     r2["Wheat grain / RES#000007"]
     k2["crop_material"]
     r2 -->|category| k2
-    s0["agriculturalCropCandidates"]
-    s0 -->|possible source| r2
-    s1["plantSpeciesCandidates"]
+    s1["agriculturalCropCandidates"]
     s1 -->|possible source| r2
+    s2["plantSpeciesCandidates"]
+    s2 -->|possible source| r2
     r3["Barley grain / RES#000008"]
     r3 -->|category| k2
-    s0 -->|possible source| r3
     s1 -->|possible source| r3
+    s2 -->|possible source| r3
 ```
 
 ### Group 3
@@ -344,7 +347,7 @@ flowchart LR
     r2["Pearls / RES#000043"]
     r2 -->|category| k0
     s0 -->|possible source| r2
-    r3["Animal shell / RES#000044"]
+    r3["Shell or carapace / RES#000044"]
     r3 -->|category| k0
     s0 -->|possible source| r3
     s1["geologicalResourceCandidates"]
@@ -647,6 +650,9 @@ flowchart LR
     r0 -->|category| k0
     s0["animalSpeciesCandidates"]
     s0 -->|possible source| r0
+    r1["Raw tendons / RES#000106"]
+    r1 -->|category| k0
+    s0 -->|possible source| r1
 ```
 
 ## Proposed transformations
@@ -828,6 +834,26 @@ flowchart LR
     r0 -->|input endpoint| p0
     r1["Ivory material / RES#000046"]
     p0 -->|output endpoint| r1
+    p1["animal_fat_rendering / guide"]
+    r2["Animal fat / RES#000032"]
+    r2 -->|input endpoint| p1
+    r3["Animal oil / RES#000033"]
+    p1 -->|output endpoint| r3
+    p2["fish_oil_extraction / guide"]
+    r2 -->|input endpoint| p2
+    r4["Fish oil / RES#000034"]
+    p2 -->|output endpoint| r4
+```
+
+### Processes 10
+
+```mermaid
+flowchart LR
+    p0["whale_oil_rendering / guide"]
+    r0["Animal fat / RES#000032"]
+    r0 -->|input endpoint| p0
+    r1["Whale oil / RES#000035"]
+    p0 -->|output endpoint| r1
 ```
 
 ## All source bindings
@@ -873,207 +899,6 @@ flowchart LR
 | agriculturalCropCandidates | wheat | RES#000028 | false | proposed_requires_species_and_action_review |
 | agriculturalCropCandidates | barley | RES#000028 | false | proposed_requires_species_and_action_review |
 | agriculturalCropCandidates | rice | RES#000028 | false | proposed_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_seals | RES#000032 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000032 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_giant_anteater | RES#000032 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000182 | RES#000032 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000183 | RES#000032 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_coastal_elephant_seals | RES#000033 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_woodland_caribou | RES#000036 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_tundra_caribou | RES#000036 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_reindeer | RES#000036 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000038 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_australian_scrub_birds | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_southern_cassowary | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_roadrunner | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_emu | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_red_junglefowl | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_ocellated_turkey | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_indian_peafowl | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_island_petrels_and_albatrosses | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000183 | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_desert_tortoise | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_sea_turtles | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_greater_rhea | RES#000039 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_australian_scrub_birds | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_birds_of_paradise | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_snowy_owl | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_cockatoos_and_savanna_birds | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_southern_cassowary | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_roadrunner | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_andean_condor | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_emu | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_red_junglefowl | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_macaws | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_ocellated_turkey | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_indian_peafowl | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_island_petrels_and_albatrosses | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000184 | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_golden_eagle | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_greater_rhea | RES#000040 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_muskox | RES#000041 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000041 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000179 | RES#000041 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_vicuna | RES#000041 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wild_yak | RES#000041 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_atlantic_cod | RES#000030 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_reef_fish | RES#000030 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_juvenile_estuarine_fish | RES#000030 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_polar_fish | RES#000030 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_sardines | RES#000030 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_atlantic_cod | RES#000034 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_reef_fish | RES#000034 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_juvenile_estuarine_fish | RES#000034 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_polar_fish | RES#000034 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_sardines | RES#000034 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000170 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000171 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_american_bison | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_muskox | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_african_buffalo | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_przewalski_horse | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000174 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_capybara | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_woodland_caribou | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_tundra_caribou | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_southern_cassowary | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_plains_zebra | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000175 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_european_rabbit | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_coyote | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_cuscuses_and_other_arboreal_marsupials | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_rock_hyraxes | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_dingo | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000176 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_coastal_elephant_seals | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_emu | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_short_beaked_echidna | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_seals | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000178 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_subarctic_wolverine | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000179 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000180 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_jaguar | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_jerboas_and_gerbils | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_giraffe | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_lemming | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_snow_leopard | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_lion | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_arctic_hare | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_eurasian_lynx | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_maned_wolf | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_ethiopian_wolf | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_grey_wolf | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000181 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_okapi | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_giant_anteater | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000182 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_collared_peccary | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_perentie | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_prairie_dog | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_puma | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_chamois | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_reindeer | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_eurasian_saiga | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_rattlesnakes | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_himalayan_tahr | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000185 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_tiger | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_wallabies | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_vicuna | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_andean_viscacha | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_rock_dwelling_viscachas | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wild_yak | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000186 | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_greater_rhea | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wildebeest | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_arabian_oryx | RES#000031 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_american_bison | RES#000037 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_african_buffalo | RES#000037 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000176 | RES#000046 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000177 | RES#000046 | true | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000170 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000171 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_american_bison | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_muskox | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_african_buffalo | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_przewalski_horse | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000173 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000174 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_capybara | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_woodland_caribou | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_tundra_caribou | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_southern_cassowary | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_plains_zebra | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000175 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_european_rabbit | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_cuscuses_and_other_arboreal_marsupials | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_rock_hyraxes | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_emu | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_short_beaked_echidna | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_seals | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000178 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_red_junglefowl | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000179 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000180 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_jerboas_and_gerbils | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_giraffe | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_lemming | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_arctic_hare | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000181 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_okapi | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_giant_anteater | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000182 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_ocellated_turkey | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_indian_peafowl | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_collared_peccary | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_perentie | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_prairie_dog | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_chamois | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_reindeer | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_eurasian_saiga | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_rattlesnakes | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_himalayan_tahr | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000185 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_desert_tortoise | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_sea_turtles | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_wallabies | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_vicuna | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_andean_viscacha | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_rock_dwelling_viscachas | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wild_yak | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000186 | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_greater_rhea | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_wildebeest | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_arabian_oryx | RES#000029 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_woodland_caribou | RES#000042 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_tundra_caribou | RES#000042 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000042 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_reindeer | RES#000042 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_mussels_and_oysters | RES#000043 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_tropical_mollusks_and_bivalves | RES#000043 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_estuarine_oysters_and_other_bivalves | RES#000043 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_desert_tortoise | RES#000044 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_sea_turtles | RES#000044 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000044 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_mussels_and_oysters | RES#000044 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_tropical_mollusks_and_bivalves | RES#000044 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_estuarine_oysters_and_other_bivalves | RES#000044 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | ANM#000180 | RES#000045 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_collared_peccary | RES#000045 | false | source_potential_use_requires_species_and_action_review |
-| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000035 | true | source_potential_use_requires_species_and_action_review |
 | geologicalResourceCandidates | geological_clay | RES#000047 | false | source_material_mapping_requires_extraction_and_processing_review |
 | geologicalResourceCandidates | geological_alluvial_clay | RES#000047 | false | source_material_mapping_requires_extraction_and_processing_review |
 | geologicalResourceCandidates | geological_estuarine_clay | RES#000047 | false | source_material_mapping_requires_extraction_and_processing_review |
@@ -1131,44 +956,535 @@ flowchart LR
 | geologicalResourceCandidates | geological_deep_gypsum | RES#000086 | false | source_material_mapping_requires_extraction_and_processing_review |
 | geologicalResourceCandidates | geological_coastal_gypsum | RES#000086 | false | source_material_mapping_requires_extraction_and_processing_review |
 | geologicalResourceCandidates | geological_surface_opal | RES#000087 | false | source_material_mapping_requires_extraction_and_processing_review |
-| animalSpeciesCandidates | ANM#000169 | RES#000031 | false | gameplay_output_selected_acquisition_method_pending |
-| animalSpeciesCandidates | ANM#000169 | RES#000029 | false | gameplay_output_selected_acquisition_method_pending |
-| animalSpeciesCandidates | ANM#000169 | RES#000105 | false | gameplay_output_selected_acquisition_method_pending |
-| animalSpeciesCandidates | ANM#000169 | RES#000032 | false | gameplay_output_selected_acquisition_method_pending |
+| animalSpeciesCandidates | ANM#000170 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000170 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000170 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000170 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000170 | RES#000036 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000170 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000171 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000171 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000171 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000171 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000171 | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000171 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_australian_scrub_birds | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_australian_scrub_birds | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_australian_scrub_birds | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_australian_scrub_birds | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_australian_scrub_birds | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_birds_of_paradise | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_birds_of_paradise | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_birds_of_paradise | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_birds_of_paradise | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_birds_of_paradise | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_shorebirds_and_waterbirds | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000172 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000172 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000172 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000172 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_atlantic_cod | RES#000030 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_atlantic_cod | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_atlantic_cod | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_atlantic_cod | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_atlantic_cod | RES#000034 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000035 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_migratory_whales | RES#000038 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_american_bison | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_american_bison | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_american_bison | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_american_bison | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_american_bison | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_american_bison | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_american_bison | RES#000041 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_muskox | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_muskox | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_muskox | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_muskox | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_muskox | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_muskox | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_muskox | RES#000041 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_african_buffalo | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_african_buffalo | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_african_buffalo | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_african_buffalo | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_african_buffalo | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_african_buffalo | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snowy_owl | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snowy_owl | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snowy_owl | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snowy_owl | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snowy_owl | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_przewalski_horse | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_przewalski_horse | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_przewalski_horse | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_przewalski_horse | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_przewalski_horse | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cockatoos_and_savanna_birds | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cockatoos_and_savanna_birds | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cockatoos_and_savanna_birds | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cockatoos_and_savanna_birds | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cockatoos_and_savanna_birds | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_bactrian_camel | RES#000041 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000173 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000173 | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000174 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000174 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000174 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000174 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_capybara | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_capybara | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_capybara | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_capybara | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_woodland_caribou | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_woodland_caribou | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_woodland_caribou | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_woodland_caribou | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_woodland_caribou | RES#000036 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_woodland_caribou | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tundra_caribou | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tundra_caribou | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tundra_caribou | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tundra_caribou | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tundra_caribou | RES#000036 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tundra_caribou | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_southern_cassowary | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_southern_cassowary | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_southern_cassowary | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_southern_cassowary | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_southern_cassowary | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_southern_cassowary | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_plains_zebra | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_plains_zebra | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_plains_zebra | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_plains_zebra | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_plains_zebra | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chimpanzee | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chimpanzee | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chimpanzee | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chimpanzee | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000175 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000175 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000175 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000175 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000175 | RES#000036 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000175 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_european_rabbit | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_european_rabbit | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_european_rabbit | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_european_rabbit | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_roadrunner | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_roadrunner | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_roadrunner | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_roadrunner | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_roadrunner | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coyote | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coyote | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coyote | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coyote | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cuscuses_and_other_arboreal_marsupials | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cuscuses_and_other_arboreal_marsupials | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cuscuses_and_other_arboreal_marsupials | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_cuscuses_and_other_arboreal_marsupials | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_condor | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_condor | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_condor | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_condor | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_condor | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_hyraxes | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_hyraxes | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_hyraxes | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_hyraxes | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_dingo | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_dingo | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_dingo | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_dingo | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000041 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000042 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_introduced_domestic_or_feral_dromedary | RES#000006 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000176 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000176 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000176 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000176 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000176 | RES#000045 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000176 | RES#000046 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000176 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000177 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000177 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000177 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000177 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000177 | RES#000045 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000177 | RES#000046 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000177 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_elephant_seals | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_elephant_seals | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_elephant_seals | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_elephant_seals | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_elephant_seals | RES#000033 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_emu | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_emu | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_emu | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_emu | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_emu | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_emu | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_short_beaked_echidna | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_short_beaked_echidna | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_short_beaked_echidna | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_short_beaked_echidna | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_short_beaked_echidna | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_seals | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_seals | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_seals | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_seals | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_seals | RES#000033 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_coastal_seals_and_sea_lions | RES#000033 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000178 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000178 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000178 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000178 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000178 | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000178 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_red_junglefowl | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_red_junglefowl | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_red_junglefowl | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_red_junglefowl | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_red_junglefowl | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_gelada | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_gelada | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_gelada | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_gelada | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_subarctic_wolverine | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_subarctic_wolverine | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_subarctic_wolverine | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_subarctic_wolverine | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_western_gorilla | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_western_gorilla | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_western_gorilla | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_western_gorilla | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_macaws | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_macaws | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_macaws | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_macaws | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_macaws | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000179 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000179 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000179 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000179 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000179 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000179 | RES#000041 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000180 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000180 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000180 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000180 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000180 | RES#000045 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000180 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_jaguar | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_jaguar | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_jaguar | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_jaguar | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_jerboas_and_gerbils | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_jerboas_and_gerbils | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_jerboas_and_gerbils | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_jerboas_and_gerbils | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giraffe | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giraffe | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giraffe | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giraffe | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giraffe | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_antarctic_krill | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_antarctic_krill | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lemming | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lemming | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lemming | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lemming | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snow_leopard | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snow_leopard | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snow_leopard | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_snow_leopard | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lion | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lion | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lion | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_lion | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arctic_hare | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arctic_hare | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arctic_hare | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arctic_hare | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_lynx | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_lynx | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_lynx | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_lynx | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_maned_wolf | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_maned_wolf | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_maned_wolf | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_maned_wolf | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ethiopian_wolf | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ethiopian_wolf | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ethiopian_wolf | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ethiopian_wolf | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_grey_wolf | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_grey_wolf | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_grey_wolf | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_grey_wolf | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000181 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000181 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000181 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000181 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_mussels_and_oysters | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_mussels_and_oysters | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_mussels_and_oysters | RES#000043 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tropical_mollusks_and_bivalves | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tropical_mollusks_and_bivalves | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tropical_mollusks_and_bivalves | RES#000043 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_howler_monkey | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_howler_monkey | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_howler_monkey | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_howler_monkey | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_okapi | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_okapi | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_okapi | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_okapi | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_okapi | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giant_anteater | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giant_anteater | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giant_anteater | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_giant_anteater | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000182 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000182 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000182 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000182 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_estuarine_oysters_and_other_bivalves | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_estuarine_oysters_and_other_bivalves | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_estuarine_oysters_and_other_bivalves | RES#000043 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ocellated_turkey | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ocellated_turkey | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ocellated_turkey | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ocellated_turkey | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_ocellated_turkey | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_indian_peafowl | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_indian_peafowl | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_indian_peafowl | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_indian_peafowl | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_indian_peafowl | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_collared_peccary | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_collared_peccary | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_collared_peccary | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_collared_peccary | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_collared_peccary | RES#000045 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_reef_fish | RES#000030 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_reef_fish | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_reef_fish | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_reef_fish | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_reef_fish | RES#000034 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_juvenile_estuarine_fish | RES#000030 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_juvenile_estuarine_fish | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_juvenile_estuarine_fish | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_juvenile_estuarine_fish | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_juvenile_estuarine_fish | RES#000034 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_polar_fish | RES#000030 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_polar_fish | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_polar_fish | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_polar_fish | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_polar_fish | RES#000034 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_perentie | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_perentie | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_perentie | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_perentie | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_perentie | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_prairie_dog | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_prairie_dog | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_prairie_dog | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_prairie_dog | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_island_petrels_and_albatrosses | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_island_petrels_and_albatrosses | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_island_petrels_and_albatrosses | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_island_petrels_and_albatrosses | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_island_petrels_and_albatrosses | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000183 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000183 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000183 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000183 | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000183 | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_puma | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_puma | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_puma | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_puma | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000184 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000184 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000184 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000184 | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000184 | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chamois | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chamois | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chamois | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chamois | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chamois | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_chamois | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000036 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000042 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_reindeer | RES#000006 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_saiga | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_saiga | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_saiga | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_saiga | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_saiga | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_eurasian_saiga | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_sardines | RES#000030 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_sardines | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_sardines | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_sardines | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_sardines | RES#000034 | true | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_rattlesnakes | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_rattlesnakes | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_rattlesnakes | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_rattlesnakes | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_himalayan_tahr | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_himalayan_tahr | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_himalayan_tahr | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_himalayan_tahr | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_himalayan_tahr | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_himalayan_tahr | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000185 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000185 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000185 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000185 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000185 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tiger | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tiger | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tiger | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_tiger | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_desert_tortoise | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_desert_tortoise | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_desert_tortoise | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_desert_tortoise | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_desert_tortoise | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_desert_tortoise | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_sea_turtles | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_sea_turtles | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_sea_turtles | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_sea_turtles | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_sea_turtles | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_sea_turtles | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000044 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_land_tortoises | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_wallabies | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_wallabies | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_wallabies | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_regional_wallabies | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_vicuna | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_vicuna | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_vicuna | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_vicuna | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_vicuna | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_vicuna | RES#000041 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_viscacha | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_viscacha | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_viscacha | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_andean_viscacha | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_dwelling_viscachas | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_dwelling_viscachas | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_dwelling_viscachas | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_rock_dwelling_viscachas | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_yak | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_yak | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_yak | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_yak | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_yak | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_yak | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wild_yak | RES#000041 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000169 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000169 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000169 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000169 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_golden_eagle | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_golden_eagle | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_golden_eagle | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_golden_eagle | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_golden_eagle | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000186 | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000186 | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000186 | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000186 | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000186 | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | ANM#000186 | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_greater_rhea | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_greater_rhea | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_greater_rhea | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_greater_rhea | RES#000040 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_greater_rhea | RES#000039 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_greater_rhea | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wildebeest | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wildebeest | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wildebeest | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wildebeest | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wildebeest | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_wildebeest | RES#000106 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arabian_oryx | RES#000029 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arabian_oryx | RES#000105 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arabian_oryx | RES#000032 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arabian_oryx | RES#000031 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arabian_oryx | RES#000037 | false | biological_potential_with_acquisition_constraints |
+| animalSpeciesCandidates | animal_arabian_oryx | RES#000106 | false | biological_potential_with_acquisition_constraints |
 
 ## Animal source tags
 
 | sourceTag | targetKind | resourceIds | resolutionStatus |
 | --- | --- | --- | --- |
-| animal_fat | resource | RES#000032 | tag_linked_species_and_use_review_pending |
-| animal_oil | resource | RES#000033 | tag_linked_species_and_use_review_pending |
-| antlers | resource | RES#000036 | tag_linked_species_and_use_review_pending |
-| antlers_or_horns | unresolved_anatomical_alternative | none | choose_by_exact_species |
-| baleen | resource | RES#000038 | tag_linked_species_and_use_review_pending |
-| draft_service | service | none | not_an_inventory_resource |
-| eggs | resource | RES#000039 | tag_linked_species_and_use_review_pending |
-| feathers | resource | RES#000040 | tag_linked_species_and_use_review_pending |
-| fiber | resource | RES#000041 | tag_linked_species_and_use_review_pending |
-| fish_meat | resource | RES#000030 | tag_linked_species_and_use_review_pending |
-| fish_oil | resource | RES#000034 | tag_linked_species_and_use_review_pending |
-| hide | resource | RES#000031 | tag_linked_species_and_use_review_pending |
-| horns | resource | RES#000037 | tag_linked_species_and_use_review_pending |
-| ivory | resource | RES#000046 | tag_linked_species_and_use_review_pending |
-| meat | resource | RES#000029 | tag_linked_species_and_use_review_pending |
-| milk | resource | RES#000042 | tag_linked_species_and_use_review_pending |
-| pearls | resource | RES#000043 | tag_linked_species_and_use_review_pending |
-| shell | resource | RES#000044 | tag_linked_species_and_use_review_pending |
-| shells | resource | RES#000044 | tag_linked_species_and_use_review_pending |
-| transport_service | service | none | not_an_inventory_resource |
-| tusks | resource | RES#000045 | tag_linked_species_and_use_review_pending |
-| whale_oil | resource | RES#000035 | tag_linked_species_and_use_review_pending |
-| work_service | service | none | not_an_inventory_resource |
-| bones | resource | RES#000105 | gameplay_output_selected_acquisition_method_pending |
+| animal_fat | resource | RES#000032 | linked_to_material_acquisition_reference |
+| animal_fiber | resource | RES#000041 | linked_to_material_acquisition_reference |
+| animal_oil | resource | RES#000033 | linked_to_material_acquisition_reference |
+| animal_shell | resource | RES#000044 | linked_to_material_acquisition_reference |
+| antlers | resource | RES#000036 | linked_to_material_acquisition_reference |
+| baleen | resource | RES#000038 | linked_to_material_acquisition_reference |
+| bones | resource | RES#000105 | linked_to_material_acquisition_reference |
+| eggs | resource | RES#000039 | linked_to_material_acquisition_reference |
+| feathers | resource | RES#000040 | linked_to_material_acquisition_reference |
+| fish_meat | resource | RES#000030 | linked_to_material_acquisition_reference |
+| fish_oil | resource | RES#000034 | linked_to_material_acquisition_reference |
+| hide | resource | RES#000031 | linked_to_material_acquisition_reference |
+| horns | resource | RES#000037 | linked_to_material_acquisition_reference |
+| ivory | resource | RES#000046 | linked_to_material_acquisition_reference |
+| livestock_manure | resource | RES#000006 | linked_to_material_acquisition_reference |
+| meat | resource | RES#000029 | linked_to_material_acquisition_reference |
+| milk | resource | RES#000042 | linked_to_material_acquisition_reference |
+| pearls | resource | RES#000043 | linked_to_material_acquisition_reference |
+| raw_tendons | resource | RES#000106 | linked_to_material_acquisition_reference |
+| tusks | resource | RES#000045 | linked_to_material_acquisition_reference |
+| whale_oil | resource | RES#000035 | linked_to_material_acquisition_reference |
 
 ## Unresolved sources
 
 | resourceId | reason |
 | --- | --- |
 | RES#000003 | World water access and collection actions are not yet defined as source entities. |
-| RES#000006 | Livestock husbandry and collection conditions are pending; animal presence does not grant manure. |
-| RES#000004 | Exact fiber-bearing species, harvesting and separation methods remain unresolved. |
+| RES#000006 | Conditional manure sources are documented for managed animal cases; actual husbandry, collection and broader domestic entities remain under design. |
+| RES#000004 | Fiber-bearing plant entity groups, harvesting and separation methods remain under design; exact scientific species are optional. |

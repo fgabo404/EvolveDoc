@@ -36,42 +36,90 @@ Excerpt of the actual record’s main fields; the complete JSON and nested objec
   },
   "potentialProducts": [
     {
-      "resourceTag": "hide",
-      "status": "gameplay_output_selected_acquisition_method_pending",
-      "requiredTechnologyIds": null,
-      "yield": null,
-      "resourceId": "RES#000031"
-    },
-    {
       "resourceTag": "meat",
-      "status": "gameplay_output_selected_acquisition_method_pending",
+      "status": "biological_potential_gameplay_design",
       "requiredTechnologyIds": null,
       "yield": null,
-      "resourceId": "RES#000029"
+      "resourceId": "RES#000029",
+      "acquisitionMethodTags": [
+        "butchering"
+      ],
+      "availabilityConstraints": [],
+      "processingTag": null,
+      "notes": {
+        "en": "Useful biological material; availability depends on the actual source and collection method.",
+        "es": "Material biológico aprovechable; depende de la fuente concreta y el método de obtención."
+      },
+      "evidenceSourceKeys": [
+        "fao_byproducts"
+      ]
     },
     {
       "resourceTag": "bones",
-      "status": "gameplay_output_selected_acquisition_method_pending",
+      "status": "biological_potential_gameplay_design",
       "requiredTechnologyIds": null,
       "yield": null,
-      "resourceId": "RES#000105"
+      "resourceId": "RES#000105",
+      "acquisitionMethodTags": [
+        "butchering"
+      ],
+      "availabilityConstraints": [],
+      "processingTag": null,
+      "notes": {
+        "en": "Useful biological material; availability depends on the actual source and collection method.",
+        "es": "Material biológico aprovechable; depende de la fuente concreta y el método de obtención."
+      },
+      "evidenceSourceKeys": [
+        "fao_byproducts"
+      ]
     },
     {
       "resourceTag": "animal_fat",
-      "status": "gameplay_output_selected_acquisition_method_pending",
+      "status": "biological_potential_gameplay_design",
       "requiredTechnologyIds": null,
       "yield": null,
-      "resourceId": "RES#000032"
+      "resourceId": "RES#000032",
+      "acquisitionMethodTags": [
+        "butchering"
+      ],
+      "availabilityConstraints": [],
+      "processingTag": null,
+      "notes": {
+        "en": "Useful biological material; availability depends on the actual source and collection method.",
+        "es": "Material biológico aprovechable; depende de la fuente concreta y el método de obtención."
+      },
+      "evidenceSourceKeys": [
+        "fao_byproducts"
+      ]
+    },
+    {
+      "resourceTag": "hide",
+      "status": "biological_potential_gameplay_design",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000031",
+      "acquisitionMethodTags": [
+        "skinning"
+      ],
+      "availabilityConstraints": [],
+      "processingTag": null,
+      "notes": {
+        "en": "Useful biological material; availability depends on the actual source and collection method.",
+        "es": "Material biológico aprovechable; depende de la fuente concreta y el método de obtención."
+      },
+      "evidenceSourceKeys": [
+        "fao_byproducts"
+      ]
     }
   ]
 }
 ```
 
-The five previous fox IDs map to `ANM#000169`. Their occurrences in six regional habitat variants remain intact. The detailed option selected for foxes links hide (`RES#000031`), meat (`RES#000029`), bones (`RES#000105`) and animal fat (`RES#000032`). The acquisition workflow remains undecided. Grouping creates neither new animals nor permission to place them everywhere.
+The five previous fox IDs map to `ANM#000169`. Their occurrences in six regional habitat variants remain intact. The detailed option selected for foxes links hide (`RES#000031`), meat (`RES#000029`), bones (`RES#000105`) and animal fat (`RES#000032`). Material acquisition methods are now documented; future UI action grouping remains undecided. Grouping creates neither new animals nor permission to place them everywhere.
 
 ## Compatibility and scope
 
-Old IDs are retired and never reused. Every world occurrence keeps its ID and original text; `definitionId` references the general category and `sourceDefinitionId` preserves the previous identity when grouping occurred. Resource links were redirected and deduplicated: 301 current bindings for 105 materials.
+Old IDs are retired and never reused. Every world occurrence keeps its ID and original text; `definitionId` references the general category and `sourceDefinitionId` preserves the previous identity when grouping occurred. Resource links were redirected and deduplicated: 594 current bindings for 106 materials.
 
 There are 109 plant entities, 101 animal entities and the same 21 crop groups. All 485 original occurrences, crops, resources and technologies are retained. No yields, durations, costs or recipes were added. Pending operational design keeps these catalogs runtime-disabled.
 
@@ -86,4 +134,6 @@ Previous scientific catalogs remain optional background. They do not determine e
 - [Optional science: plants](../../data/plants/BIOLOGY.md)
 - [Optional science: animals](../../data/animals/BIOLOGY.md)
 
-Design decision: detailed option C for foxes. This does not automatically apply to other animals or yet define bone/fat uses, amounts or durations.
+Design decision updated: the detailed approach applies to all current animals with anatomy-specific outputs. Material uses, amounts and durations still require further design.
+
+[Animal materials / Materiales animales](animal-products.md)

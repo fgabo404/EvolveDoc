@@ -13,7 +13,7 @@ This is a documentation repository with structured design catalogs and small edu
 | `data/animals` | Animal gameplay categories, regional occurrences, useful domestication distinctions and outputs. |
 | `data/plants` | Plant/crop gameplay categories; propagation, useful forms and outputs. |
 | `data/minerals` | Geological candidates; future deposits, extraction, processing and requirements. |
-| `data/resources` | 105 material definitions with source links and proposed transformation endpoints; quantities and recipes remain unresolved. |
+| `data/resources` | 106 material definitions with source links and proposed transformation endpoints; quantities and recipes remain unresolved. |
 | `data/technologies` | Flat technology definitions, requirements, research costs and eurekas. |
 | `schemas` | Initial structural contracts and their explicit limits. |
 | `simulation` | Fixtures and runnable demonstrations; not the production engine. |
@@ -23,7 +23,7 @@ This is a documentation repository with structured design catalogs and small edu
 
 Load `data/world/world.catalog.guide.json` for world design. Resolve its `catalogFiles` relative to that file. Plant and animal files contain `speciesCandidates`; the plants file also contains `agriculturalCropCandidates`. The minerals file contains `geologicalResourceCandidates`. The world file retains all 485 `resourceOccurrences`; their `definitionId` references resolve across these catalogs.
 
-World schema/content is 1.4.0/0.5.0; plant/animal guides are 1.3.0/0.4.0; minerals remain 1.1.0/0.2.0; resources are 1.0.0/0.3.0. Generalized entries retain retired-ID aliases and original occurrences. Agriculture remains 2.0.0/0.3.0 unchanged.
+World schema/content is 1.4.0/0.5.0; plant guide is 1.3.0/0.4.0 and animal guide 1.4.0/0.6.0; minerals remain 1.1.0/0.2.0; resources are 1.1.0/0.4.0. Generalized entries retain retired-ID aliases and original occurrences. Agriculture remains 2.0.0/0.3.0 unchanged.
 
 `null` means unresolved. An empty mapping is not worldwide distribution. All guide catalogs remain runtime-disabled. Candidate classification follows the source: for example, lichens remain under flora pending scientific review.
 
@@ -39,4 +39,4 @@ Git is the primary reference from this migration onward. Drive is not automatica
 
 Current granularity uses [general gameplay categories](biology.md). Scientific taxonomy is optional; grouped IDs retain aliases and provenance.
 
-Animal content: 0.5.0 after selecting detailed fox outputs; structure remains 1.3.0.
+Animal schema/content: 1.4.0/0.6.0 after completing the material/acquisition reference for all 101 current animals.

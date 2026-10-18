@@ -4,7 +4,7 @@
 
 ## Qué define
 
-Este catálogo define materiales almacenables. Una planta o animal es el origen; un recurso es el material obtenido; un proceso relaciona materiales de entrada y salida. Hay **105 recursos**, **301 vínculos de origen**, **25 guías de transformación** y **24 tags animales clasificados**.
+Este catálogo define materiales almacenables. Una planta o animal es el origen; un recurso es el material obtenido; un proceso relaciona materiales de entrada y salida. Hay **106 recursos**, **594 vínculos de origen**, **28 guías de transformación** y **21 tags animales clasificados**.
 
 No son datos científicos o de balance terminados. Los productos agregados de cultivos y árboles son propuestas de diseño; las cantidades, condiciones específicas y recetas quedan pendientes. El catálogo y todos sus vínculos tienen la ejecución deshabilitada.
 
@@ -14,7 +14,7 @@ No son datos científicos o de balance terminados. Los productos agregados de cu
 | --- | --- |
 | `resources` | Identidad, traducciones, categoría, etapa y almacenamiento pendiente. |
 | `sourceBindings` | Relación explícita entre candidato y recurso posible; sin cantidades garantizadas. |
-| `sourceTagMappings` | Traduce tags animales existentes a recursos, servicios o alternativas pendientes. |
+| `sourceTagMappings` | Relaciona los tags actuales de materiales animales con sus recursos; servicios y anatomía ambigua ya se separaron. |
 | `processingLinks` | Extremos de transformaciones propuestas; no recetas completas. |
 | `unresolvedSources` | Agua, estiércol y fibra vegetal genérica requieren sistemas de obtención todavía pendientes. |
 | `reviewIssues` | Compatibilidad de materiales, preparación de alimentos y alcance histórico. |
@@ -110,7 +110,7 @@ El trigo también tiene paja como subproducto propuesto, y la harina se relacion
 
 - `null` es pendiente, nunca cero o ningún requisito. Unidades, caducidad, almacenamiento y cantidades no están balanceados.
 - Los servicios `draft_service`, `transport_service` y `work_service` no son materiales de inventario.
-- `antlers_or_horns` queda sin ID: primero debe resolverse la anatomía de la especie. No se otorgan ambos. `shell` y `shells` se vinculan explícitamente al mismo recurso; `fiber` animal se separa de fibra vegetal.
+- La antigua alternativa `antlers_or_horns` se resolvió en astas o cuernos según anatomía del grupo. Concha/caparazón usa `animal_shell` y fibra textil animal usa `animal_fiber`, separada de la vegetal.
 - Los IDs de materiales genéricos no permiten sustituir automáticamente especies, menas o semillas. Los futuros lotes de GameState deben conservar especie/origen, viabilidad y calidad. No sumar semillas de especies distintas como si fueran intercambiables.
 - Tener grano no significa que sea viable para sembrar ni seguro para comer sin preparación.
 - Las guías de procesos no fijan cantidades, duración, tecnologías, instalaciones, combustibles ni coproductos. Las entradas enumeradas pueden ser incompletas. No ejecutar como recetas.
@@ -127,4 +127,6 @@ python tools/generate_catalog_diagrams.py --check
 python tools/validate_repository.py
 ```
 
-Zorros: opción detallada confirmada con piel, carne, huesos y grasa animal. Huesos usa la nueva asignación permanente `RES#000105`. Método de obtención y usos posteriores siguen pendientes; no se extiende esta decisión a otras entidades.
+Zorros: opción detallada confirmada con piel, carne, huesos y grasa animal. Huesos usa la nueva asignación permanente `RES#000105`. La obtención está documentada y los usos posteriores siguen pendientes; el criterio detallado se extiende a todos los animales actuales.
+
+La referencia detallada se aplica ahora a todos los animales: [materiales y obtención](animal-products.md). Los servicios se separaron de los tags de materiales, las alternativas de astas/cuernos se resolvieron por anatomía y se añadió `RES#000106` para tendones. Aceites y marfil conservan procesos y restricciones de origen.

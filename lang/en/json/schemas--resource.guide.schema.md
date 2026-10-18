@@ -51,7 +51,7 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `const` | `string` | 1/1 | Exact allowed JSON value for the property. | `"1.0.0"` |
+| `const` | `string` | 1/1 | Exact allowed JSON value for the property. | `"1.1.0"` |
 
 ### `$.properties.contentVersion`
 
@@ -387,6 +387,7 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | `quantityPerAction` | `object` | 1/1 | Subschema describing `quantityPerAction`; see its nested fields below. | `—` |
 | `runtimeEnabled` | `object` | 1/1 | Subschema describing `runtimeEnabled`; see its nested fields below. | `—` |
 | `requiresProcessing` | `object` | 1/1 | Subschema describing `requiresProcessing`; see its nested fields below. | `—` |
+| `processingTag` | `object` | 1/1 | Subschema describing `processingTag`; see its nested fields below. | `—` |
 
 ### `$.$defs.sourceBinding.properties.sourceCollection`
 
@@ -435,6 +436,12 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `"boolean"` |
+
+### `$.$defs.sourceBinding.properties.processingTag`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `type` | `array<string>` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `["string", "null"]` |
 
 ### `$.$defs.sourceTagMapping`
 
@@ -516,6 +523,7 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | `byproducts` | `object` | 1/1 | Subschema describing `byproducts`; see its nested fields below. | `—` |
 | `recipeId` | `object` | 1/1 | Subschema describing `recipeId`; see its nested fields below. | `—` |
 | `runtimeEnabled` | `object` | 1/1 | Subschema describing `runtimeEnabled`; see its nested fields below. | `—` |
+| `inputProvenancePolicy` | `object` | 1/1 | Subschema describing `inputProvenancePolicy`; see its nested fields below. | `—` |
 
 ### `$.$defs.processingLink.properties.processTag`
 
@@ -603,6 +611,12 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `const` | `boolean` | 1/1 | Exact allowed JSON value for the property. | `false` |
+
+### `$.$defs.processingLink.properties.inputProvenancePolicy`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `type` | `string` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `"string"` |
 
 ### `$.$defs.unresolvedSource`
 
@@ -807,7 +821,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
   ],
   "properties": {
     "schemaVersion": {
-      "const": "1.0.0"
+      "const": "1.1.0"
     },
     "contentVersion": {
       "type": "string"
@@ -1024,6 +1038,12 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
         },
         "requiresProcessing": {
           "type": "boolean"
+        },
+        "processingTag": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "additionalProperties": false
@@ -1126,6 +1146,9 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
         },
         "runtimeEnabled": {
           "const": false
+        },
+        "inputProvenancePolicy": {
+          "type": "string"
         }
       },
       "additionalProperties": false

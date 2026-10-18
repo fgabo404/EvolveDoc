@@ -7,7 +7,9 @@ from generate_catalog_diagrams import documents as expected_diagrams
 from validate_resources import validate_resources
 from validate_biology import validate_biology
 from validate_gameplay_categories import validate_categories
+from validate_animal_products import validate_animal_products
 from generate_biology_reference import documents as expected_biology
+from generate_animal_products import documents as expected_animal_products
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -42,7 +44,8 @@ def main():
     resource_summary = validate_resources()
     biology_summary = validate_biology()
     category_summary = validate_categories()
-    for relative, expected in {**expected_documents(), **expected_diagrams(), **expected_biology()}.items():
+    animal_summary = validate_animal_products()
+    for relative, expected in {**expected_documents(), **expected_diagrams(), **expected_biology(), **expected_animal_products()}.items():
         document = ROOT / relative
         require(document.exists() and document.read_text(encoding="utf-8") == expected,
                 f"Missing or outdated documentation: {relative}. Regenerate JSON references and catalog diagrams.")
@@ -116,6 +119,7 @@ def main():
     print(f"Validated {resource_summary['resourceCount']} resources and {resource_summary['sourceBindingCount']} source/product bindings.")
     print(f"Validated {biology_summary['taxonCount']} taxon references, {biology_summary['biologicalFormCount']} forms and {biology_summary['lineageRelationCount']} lineage summaries.")
     print(f"Validated {category_summary['generalizedCategoryCount']} general gameplay categories and {category_summary['retiredIdCount']} retired-ID aliases.")
+    print(f"Validated material/method coverage for {animal_summary['animalEntityCount']} animals and {animal_summary['materialLinkCount']} material links.")
     print("External technology imports are declared, not implemented. Live taxonomy verification, source interpretation, ecology, balance and full JSON Schema validation are outside this check.")
 
 

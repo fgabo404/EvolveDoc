@@ -133,6 +133,9 @@ def candidate_catalog(folder,lang,data,world):
                 define('r'+str(i),name(material,lang)+' / '+material['id']);edges.add((rid,'r'+str(i),'extractedResourceId / proposed'))
         for a,b,k in sorted(edges):lines.append(f'    {a} -->|{k}| {b}')
         text+=mermaid(lines,'LR')+'\n'
+    if folder=='animals':
+        suffix='.es' if es else ''
+        text+=f'\n[Materiales y obtención / Materials and acquisition](PRODUCTS{suffix}.md)\n\n'
     if data.get('entityAliases'):
         text+=('## Categorías agrupadas y compatibilidad\n\nLos IDs anteriores apuntan a una sola entidad. La taxonomía científica es opcional.\n\n' if es else '## General categories and compatibility\n\nPrevious IDs map to a single gameplay entity. Scientific taxonomy is optional.\n\n')
         text+=table(['previousId','entityId'],[(a['previousId'],a['entityId']) for a in data['entityAliases']])+'\n'

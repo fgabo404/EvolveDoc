@@ -371,7 +371,7 @@ flowchart LR
     c0["Conchas marinas / geological_seashells"]
     v19["Costero tropical / marine_tropical_coast"]
     b5["Marinos / marine"]
-    r0["Concha de animal / RES#000044"]
+    r0["Concha o caparazón / RES#000044"]
     c1["Estaño / geological_tin_bearing_deposit"]
     v2["Asiático (selvas y bosques estacionales) / tropical_forest_asian"]
     b0["Bosque tropical / tropical_forest"]
