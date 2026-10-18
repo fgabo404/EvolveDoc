@@ -18,10 +18,27 @@ El catálogo existente `data/world/world.catalog.guide.json` conserva sus cuatro
 1. Generar masas continentales, océanos y posición geográfica.
 2. Generar elevación detallada y formas de relieve conectadas.
 3. Derivar condiciones ambientales, incluyendo temperatura, humedad, agua y suelo.
-4. Asignar biomas y variantes regionales en función del conjunto de condiciones, **no solo de la altitud**.
+4. Asignar biomas y tipos ecológicos en función del conjunto de condiciones, **no solo de la altitud**. La región biogeográfica filtra después las especies potenciales.
 5. Distribuir flora, fauna y recursos de acuerdo con los catálogos y las restricciones geográficas.
 
-**Biomas del catálogo actual (7):** bosque tropical, bosque templado, tundra, sabana, desierto, marino y alta montaña/alpino. El catálogo incluye **27 variantes regionales**. Los umbrales climáticos, la abundancia y la distribución concreta siguen pendientes de diseño y balance.
+**Biomas del catálogo actual (7):** bosque tropical, bosque templado, tundra, sabana, desierto, marino y alta montaña/alpino. El catálogo conserva **27 variantes regionales históricas** como datos y referencias, pero ya no se consideran la taxonomía objetivo del diseño. Se propone reemplazar la subdivisión meramente continental por **tipos de ecosistema definidos ecológicamente**, con ecorregiones de referencia y regiones biogeográficas como dimensiones separadas. Los umbrales climáticos, la abundancia y la distribución concreta siguen pendientes de diseño y balance.
+
+## Clasificación ecológica de biomas — decisión de diseño (v0.2)
+
+**Decisión aprobada el 17 de octubre de 2026:** Las variantes de G-Evolve no deben clasificarse simplemente como «americano», «africano», «asiático» u «oceánico». Estas etiquetas indican procedencia geográfica, no un tipo de ecosistema. Los bocetos se desarrollarán **uno por tipo ecológico**, no uno por continente.
+
+**Modelo propuesto:**
+
+- **Bioma:** categoría amplia existente (por ejemplo `tropical_forest`).
+- **Tipo de ecosistema / subtipo ecológico:** formación distinguida por lluvia, estacionalidad, vegetación, inundación, suelo y condiciones de altitud (por ejemplo selva tropical lluviosa de tierras bajas; bosque tropical estacional o seco; bosque tropical montano o nublado; bosque inundable). Son candidatos a validar, no una lista definitiva.
+- **Ecorregión:** unidad territorial real que sirve de ejemplo y de referencia ecológica (por ejemplo bosques húmedos de la Amazonía). La Amazonía no es una clasificación universal ni todo su territorio forma un único ecosistema.
+- **Región biogeográfica:** factor independiente que limita especies nativas; dos lugares con el mismo tipo de ecosistema pueden albergar flora y fauna diferentes.
+
+**Primera ficha visual a desarrollar:** *Selva tropical húmeda de tierras bajas*, inspirada en ejemplos amazónicos, sin codificar «americana» como subtipo ecológico.
+
+**Compatibilidad:** mantener los IDs y las 27 variantes regionales actuales en `data/world/world.catalog.guide.json` y sus referencias hasta diseñar una migración con alias y validación de las 485 apariciones. No alterar el JSON ejecutable/guía durante esta actualización documental. No asignar todavía umbrales cuantitativos ni reclasificar especies automáticamente.
+
+**Fuentes de referencia de clasificación:** WWF / Olson et al. (2001), *Terrestrial Ecoregions of the World*; categorías de bosques tropicales y subtropicales húmedos, secos y de coníferas. Véase https://www.worldwildlife.org/biomes/ y https://ecoregion.net/ .
 
 ## Reglas visuales
 
