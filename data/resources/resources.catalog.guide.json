@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "kind": "resource_catalog_design_guide",
   "status": "prototype_requires_species_action_and_balance_review",
   "defaultLanguage": "en",
@@ -2750,7 +2750,7 @@
     },
     {
       "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_european_oaks",
+      "sourceId": "PLT#000204",
       "resourceId": "RES#000001",
       "acquisitionTag": "wood_harvesting",
       "reviewStatus": "proposed_requires_species_and_action_review",
@@ -2760,7 +2760,7 @@
     },
     {
       "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_north_american_oaks",
+      "sourceId": "PLT#000201",
       "resourceId": "RES#000001",
       "acquisitionTag": "wood_harvesting",
       "reviewStatus": "proposed_requires_species_and_action_review",
@@ -2770,57 +2770,7 @@
     },
     {
       "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_californian_oaks",
-      "resourceId": "RES#000001",
-      "acquisitionTag": "wood_harvesting",
-      "reviewStatus": "proposed_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_scots_pine",
-      "resourceId": "RES#000001",
-      "acquisitionTag": "wood_harvesting",
-      "reviewStatus": "proposed_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_mountain_pines",
-      "resourceId": "RES#000001",
-      "acquisitionTag": "wood_harvesting",
-      "reviewStatus": "proposed_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_white_spruce",
-      "resourceId": "RES#000001",
-      "acquisitionTag": "wood_harvesting",
-      "reviewStatus": "proposed_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_black_spruce",
-      "resourceId": "RES#000001",
-      "acquisitionTag": "wood_harvesting",
-      "reviewStatus": "proposed_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "plantSpeciesCandidates",
-      "sourceId": "plant_eurasian_spruces",
+      "sourceId": "PLT#000203",
       "resourceId": "RES#000001",
       "acquisitionTag": "wood_harvesting",
       "reviewStatus": "proposed_requires_species_and_action_review",
@@ -3010,7 +2960,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_american_black_bear",
+      "sourceId": "ANM#000182",
       "resourceId": "RES#000032",
       "acquisitionTag": "species_appropriate_animal_fat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3020,47 +2970,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_asian_black_bear",
-      "resourceId": "RES#000032",
-      "acquisitionTag": "species_appropriate_animal_fat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_brown_bear",
-      "resourceId": "RES#000032",
-      "acquisitionTag": "species_appropriate_animal_fat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_coastal_and_sea_ice_polar_bear",
-      "resourceId": "RES#000032",
-      "acquisitionTag": "species_appropriate_animal_fat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_island_coastal_penguins",
-      "resourceId": "RES#000032",
-      "acquisitionTag": "species_appropriate_animal_fat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_southern_regional_penguins",
+      "sourceId": "ANM#000183",
       "resourceId": "RES#000032",
       "acquisitionTag": "species_appropriate_animal_fat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3210,17 +3120,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_island_coastal_penguins",
-      "resourceId": "RES#000039",
-      "acquisitionTag": "species_appropriate_eggs_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_southern_regional_penguins",
+      "sourceId": "ANM#000183",
       "resourceId": "RES#000039",
       "acquisitionTag": "species_appropriate_eggs_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3410,17 +3310,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_bearded_vulture",
-      "resourceId": "RES#000040",
-      "acquisitionTag": "species_appropriate_feathers_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_bearded_vulture_in_suitable_mountains",
+      "sourceId": "ANM#000184",
       "resourceId": "RES#000040",
       "acquisitionTag": "species_appropriate_feathers_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3470,17 +3360,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_guanaco_in_coastal_deserts_and_foothills",
-      "resourceId": "RES#000041",
-      "acquisitionTag": "species_appropriate_fiber_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_guanaco_at_suitable_elevations",
+      "sourceId": "ANM#000179",
       "resourceId": "RES#000041",
       "acquisitionTag": "species_appropriate_fiber_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3610,7 +3490,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_eurasian_moose",
+      "sourceId": "ANM#000170",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3620,27 +3500,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_north_american_moose",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_regional_small_antelopes",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_regional_antelopes",
+      "sourceId": "ANM#000171",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3700,37 +3560,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_antilopine_kangaroo",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_western_grey_kangaroo",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_red_kangaroo",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_new_guinea_tree_kangaroos",
+      "sourceId": "ANM#000174",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3790,27 +3620,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_chital",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_red_deer",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_sika_deer",
+      "sourceId": "ANM#000175",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3880,27 +3690,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_african_forest_elephant",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_african_savanna_elephant",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_african_savanna_elephant_in_dry_forest_mosaics",
+      "sourceId": "ANM#000176",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3960,17 +3750,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_mongolian_gazelle",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_desert_gazelles",
+      "sourceId": "ANM#000178",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -3990,7 +3770,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_guanaco_in_coastal_deserts_and_foothills",
+      "sourceId": "ANM#000179",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4000,37 +3780,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_guanaco_at_suitable_elevations",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_huemul",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_wild_boar",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_eurasian_wild_boar",
+      "sourceId": "ANM#000180",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4150,17 +3900,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_alpine_marmot",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_steppe_marmots",
+      "sourceId": "ANM#000181",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4190,37 +3930,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_american_black_bear",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_asian_black_bear",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_brown_bear",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_coastal_and_sea_ice_polar_bear",
+      "sourceId": "ANM#000182",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4251,16 +3961,6 @@
     {
       "sourceCollection": "animalSpeciesCandidates",
       "sourceId": "animal_prairie_dog",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_pudu",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4330,17 +4030,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_regional_amazonian_or_central_american_tapir",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_malayan_tapir",
+      "sourceId": "ANM#000185",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4361,36 +4051,6 @@
     {
       "sourceCollection": "animalSpeciesCandidates",
       "sourceId": "animal_regional_wallabies",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_white_tailed_deer",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_mesoamerican_white_tailed_deer",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_pampas_deer",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4440,7 +4100,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_corsac_fox",
+      "sourceId": "ANM#000169",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4450,67 +4110,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_culpeo_fox",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_culpeo_fox_in_arid_habitats",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_fennec_fox",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_arctic_fox",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_alpine_ibex",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_walia_ibex",
-      "resourceId": "RES#000031",
-      "acquisitionTag": "species_appropriate_hide_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_siberian_ibex",
+      "sourceId": "ANM#000186",
       "resourceId": "RES#000031",
       "acquisitionTag": "species_appropriate_hide_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4570,7 +4170,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_african_forest_elephant",
+      "sourceId": "ANM#000176",
       "resourceId": "RES#000046",
       "acquisitionTag": "multi_stage_acquisition_guide",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4580,7 +4180,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_african_savanna_elephant",
+      "sourceId": "ANM#000177",
       "resourceId": "RES#000046",
       "acquisitionTag": "multi_stage_acquisition_guide",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4590,37 +4190,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_african_savanna_elephant_in_dry_forest_mosaics",
-      "resourceId": "RES#000046",
-      "acquisitionTag": "multi_stage_acquisition_guide",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": true
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_asian_elephant",
-      "resourceId": "RES#000046",
-      "acquisitionTag": "multi_stage_acquisition_guide",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": true
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_asian_elephant_in_suitable_forests",
-      "resourceId": "RES#000046",
-      "acquisitionTag": "multi_stage_acquisition_guide",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": true
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_eurasian_moose",
+      "sourceId": "ANM#000170",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4630,27 +4200,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_north_american_moose",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_regional_small_antelopes",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_regional_antelopes",
+      "sourceId": "ANM#000171",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4730,7 +4280,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_coastal_crabs",
+      "sourceId": "ANM#000173",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4740,47 +4290,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_mangrove_crabs",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_antilopine_kangaroo",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_western_grey_kangaroo",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_red_kangaroo",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_new_guinea_tree_kangaroos",
+      "sourceId": "ANM#000174",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4840,27 +4350,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_chital",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_red_deer",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_sika_deer",
+      "sourceId": "ANM#000175",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4950,17 +4440,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_mongolian_gazelle",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_desert_gazelles",
+      "sourceId": "ANM#000178",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4980,7 +4460,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_guanaco_in_coastal_deserts_and_foothills",
+      "sourceId": "ANM#000179",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -4990,37 +4470,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_guanaco_at_suitable_elevations",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_huemul",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_wild_boar",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_eurasian_wild_boar",
+      "sourceId": "ANM#000180",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -5070,17 +4520,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_alpine_marmot",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_steppe_marmots",
+      "sourceId": "ANM#000181",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -5110,37 +4550,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_american_black_bear",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_asian_black_bear",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_brown_bear",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_coastal_and_sea_ice_polar_bear",
+      "sourceId": "ANM#000182",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -5200,16 +4610,6 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_pudu",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
       "sourceId": "animal_chamois",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
@@ -5260,17 +4660,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_regional_amazonian_or_central_american_tapir",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_malayan_tapir",
+      "sourceId": "ANM#000185",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -5320,36 +4710,6 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_white_tailed_deer",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_mesoamerican_white_tailed_deer",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_pampas_deer",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
       "sourceId": "animal_vicuna",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
@@ -5390,27 +4750,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_alpine_ibex",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_walia_ibex",
-      "resourceId": "RES#000029",
-      "acquisitionTag": "species_appropriate_meat_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_siberian_ibex",
+      "sourceId": "ANM#000186",
       "resourceId": "RES#000029",
       "acquisitionTag": "species_appropriate_meat_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -5580,17 +4920,7 @@
     },
     {
       "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_wild_boar",
-      "resourceId": "RES#000045",
-      "acquisitionTag": "species_appropriate_tusks_acquisition",
-      "reviewStatus": "source_potential_use_requires_species_and_action_review",
-      "quantityPerAction": null,
-      "runtimeEnabled": false,
-      "requiresProcessing": false
-    },
-    {
-      "sourceCollection": "animalSpeciesCandidates",
-      "sourceId": "animal_eurasian_wild_boar",
+      "sourceId": "ANM#000180",
       "resourceId": "RES#000045",
       "acquisitionTag": "species_appropriate_tusks_acquisition",
       "reviewStatus": "source_potential_use_requires_species_and_action_review",
@@ -6928,7 +6258,7 @@
   ],
   "summary": {
     "resourceCount": 104,
-    "sourceBindingCount": 365,
+    "sourceBindingCount": 298,
     "processingLinkCount": 25,
     "sourceTagMappingCount": 23,
     "geologicalSourceCount": 57,

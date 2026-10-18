@@ -32,6 +32,12 @@ The standard-library checker does not execute a general JSON Schema engine; `too
 
 ## Biological catalog structural schema / Esquema estructural biológico
 
-`biological.catalog.schema.json` covers the complete current nested structure of both biology reference catalogs (schema 1.0.0), including taxon match evidence, forms, lineage/exclusion endpoints, bibliography and review fields. Runtime flags stay false. `tools/validate_biology.py` checks cross-file identities, reference coverage, exact stored match evidence and lineage boundaries; it does not query a live authority or prove source-label interpretation. General JSON Schema execution remains separate.
+`biological.catalog.schema.json` covers the complete current nested structure of both optional scientific background catalogs (schema 1.1.0), including taxon match evidence, forms, lineage/exclusion endpoints, bibliography and review fields. Runtime flags stay false. `tools/validate_biology.py` checks cross-file identities, reference coverage, exact stored match evidence and lineage boundaries; it does not query a live authority or prove source-label interpretation. General JSON Schema execution remains separate.
 
 El esquema cubre todos los objetos internos de ambos catálogos biológicos. El verificador comprueba identidades, referencias, cobertura, evidencia almacenada y límites de linaje; no consulta autoridades en vivo ni demuestra la interpretación de etiquetas originales. La ejecución general de JSON Schema sigue separada.
+
+## General gameplay categories / Categorías generales
+
+Plant/animal guides 1.3.0 add optional `sourceVariants`, allocated group `tag` values and root `entityAliases`. World manifest 1.4.0 adds original `sourceDefinitionId` where an occurrence was remapped. Existing guide schemas remain preliminary envelopes; generated JSON references describe every current nested field and example. `tools/validate_gameplay_categories.py` checks alias targets, retired IDs, regional provenance and the single fox/hide binding. Scientific reference identities are not gameplay requirements.
+
+Las guías 1.3.0 agrupan entidades mediante alias y conservan procedencia regional. Las referencias JSON documentan todos los campos nuevos; el verificador propio comprueba identidades y vínculos. La taxonomía es opcional y no exige nuevas entidades.

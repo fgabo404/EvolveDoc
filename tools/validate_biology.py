@@ -21,7 +21,7 @@ def read(path):
 def validate_biology():
     all_ids, all_tags, provider_keys = set(), set(), set()
     totals = dict(taxonCount=0, biologicalFormCount=0, lineageRelationCount=0)
-    for folder, candidate_count, crop_count in [('plants',129,21),('animals',134,0)]:
+    for folder in ['plants','animals']:
         data = read(f'data/{folder}/{folder}.biological.catalog.json')
         guide = read(f'data/{folder}/{folder}.catalog.guide.json')
         require(guide['biologicalCatalogFile'] == f'{folder}.biological.catalog.json', 'Wrong biological catalog link')
@@ -91,7 +91,7 @@ def validate_biology():
             require(resolution['inheritResourceBindings'] is False, 'Implicit species resource inheritance')
         expected={'taxonCount':len(taxa),'biologicalFormCount':len(forms),'lineageRelationCount':len(data['lineageRelations']),'excludedLineageRelationCount':len(data['excludedLineageRelations']),'sourceCandidateCount':len(guide['speciesCandidates']),'cropCandidateCount':len(guide.get('agriculturalCropCandidates',[]))}
         require(expected==data['summary'], 'Biology summary mismatch')
-        require(expected['sourceCandidateCount']==candidate_count and expected['cropCandidateCount']==crop_count, 'Source coverage changed')
+        require(data['status']=='optional_scientific_background_not_gameplay_entity_catalog', 'Scientific reference must remain optional')
         for key in totals:totals[key]+=expected[key]
     return totals
 

@@ -20,7 +20,7 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | --- | --- | --- | --- | --- |
 | `$schema` | `string` | 1/1 | URI del dialecto JSON Schema; no referencia a datos del juego. | `"https://json-schema.org/draft/2020-12/schema"` |
 | `title` | `string` | 1/1 | Título del documento o esquema. | `"Evolve biological reference catalog"` |
-| `description` | `string` | 1/1 | Explicación; en definiciones visibles es un mapa de idiomas y en esquemas es texto técnico. | `"Complete structural contract for biology catalog 1.0.0. References and scientific interpretation require separa…` |
+| `description` | `string` | 1/1 | Explicación; en definiciones visibles es un mapa de idiomas y en esquemas es texto técnico. | `"Full structural contract for optional scientific background catalog 1.1.0. Gameplay categories are defined in t…` |
 | `type` | `string` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `"object"` |
 | `properties` | `object` | 1/1 | Esquemas por propiedad; no prohíbe campos extra sin additionalProperties. | `—` |
 | `required` | `array<string>` | 1/1 | Propiedades obligatorias según esquema; aparecer en un ejemplo no vuelve obligatorio un campo. | `["biologicalForms", "contentVersion", "defaultLanguage"]` |
@@ -497,6 +497,7 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | `sourceInterpretation` | `object` | 1/1 | Subesquema que describe `sourceInterpretation`; ver sus campos internos más abajo. | `—` |
 | `unknownValues` | `object` | 1/1 | Subesquema que describe `unknownValues`; ver sus campos internos más abajo. | `—` |
 | `varietyPolicy` | `object` | 1/1 | Subesquema que describe `varietyPolicy`; ver sus campos internos más abajo. | `—` |
+| `gameplayIdentity` | `object` | 1/1 | Subesquema que describe `gameplayIdentity`; ver sus campos internos más abajo. | `—` |
 
 ### `$.properties.runtimePolicy.properties.floraClassification`
 
@@ -542,6 +543,12 @@ Estas son palabras de JSON Schema, no campos del juego. El esquema permite propi
 | `type` | `string` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `"string"` |
 
 ### `$.properties.runtimePolicy.properties.varietyPolicy`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `type` | `string` | 1/1 | Discriminador de condición/recompensa/efecto, o tipo JSON Schema en esquemas. | `"string"` |
+
+### `$.properties.runtimePolicy.properties.gameplayIdentity`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
@@ -882,7 +889,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Evolve biological reference catalog",
-  "description": "Complete structural contract for biology catalog 1.0.0. References and scientific interpretation require separate validation.",
+  "description": "Full structural contract for optional scientific background catalog 1.1.0. Gameplay categories are defined in the plant/animal guides, independently of taxonomic identity.",
   "type": "object",
   "properties": {
     "biologicalForms": {
@@ -1150,6 +1157,9 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         },
         "varietyPolicy": {
           "type": "string"
+        },
+        "gameplayIdentity": {
+          "type": "string"
         }
       },
       "required": [
@@ -1160,7 +1170,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         "resourceInheritance",
         "sourceInterpretation",
         "unknownValues",
-        "varietyPolicy"
+        "varietyPolicy",
+        "gameplayIdentity"
       ],
       "additionalProperties": false
     },

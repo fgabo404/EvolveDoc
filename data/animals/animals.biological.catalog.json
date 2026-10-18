@@ -1,8 +1,8 @@
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "kind": "biological_taxon_catalog",
-  "status": "taxonomy_names_verified_representative_choices_and_ecology_pending",
+  "status": "optional_scientific_background_not_gameplay_entity_catalog",
   "defaultLanguage": "en",
   "supportedLanguages": [
     "en",
@@ -16,7 +16,8 @@
     "resourceInheritance": "Candidate resource bindings do not automatically transfer to every selected taxon or form.",
     "lineagePolicy": "Relations summarize evidence, not automatic gameplay transitions. Hybrid and introgression edges are not domestication edges. An extant species may only proxy an ancestral population.",
     "varietyPolicy": "Cultivar groups are not species, botanical varieties or named cultivars. No modern named cultivars or animal breeds are invented.",
-    "floraClassification": "The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG/FNG prefixes remain explicit."
+    "floraClassification": "The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG/FNG prefixes remain explicit.",
+    "gameplayIdentity": "Gameplay identity is defined by the general plant/animal guide. Scientific names are optional background and never mandatory unlock requirements."
   },
   "taxa": [
     {
@@ -6655,7 +6656,7 @@
     "biologicalFormCount": 28,
     "lineageRelationCount": 12,
     "excludedLineageRelationCount": 2,
-    "sourceCandidateCount": 134,
+    "sourceCandidateCount": 101,
     "cropCandidateCount": 0
   }
 }

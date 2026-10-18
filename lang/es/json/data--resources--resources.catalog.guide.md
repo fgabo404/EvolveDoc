@@ -17,7 +17,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.1.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.2.0"` |
 | `kind` | `string` | 1/1 | Discriminador que identifica el documento o categoría del candidato. | `"resource_catalog_design_guide"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"prototype_requires_species_action_and_balance_review"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
@@ -84,14 +84,14 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `sourceCollection` | `string` | 365/365 | Clave de colección para plantas, animales, cultivos o geología; no es ID de recurso. | `"agriculturalCropCandidates"` |
-| `sourceId` | `string` | 365/365 | ID actual del candidato de origen, conservado sin migración. | `"wheat"` |
-| `resourceId` | `string` | 365/365 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000007"` |
-| `acquisitionTag` | `string` | 365/365 | Tag descriptivo de obtención; no es ID de acción o receta implementada. | `"crop_harvesting"` |
-| `reviewStatus` | `string` | 365/365 | Revisión pendiente antes de autorizar un producto del origen. | `"proposed_requires_species_and_action_review"` |
-| `quantityPerAction` | `null` | 365/365 | Cantidad por acción pendiente; no significa cero ni rendimiento garantizado. | `null` |
-| `runtimeEnabled` | `boolean` | 365/365 | Indica si la aparición puede usarse en generación; actualmente false. | `false` |
-| `requiresProcessing` | `boolean` | 365/365 | True indica procesamiento posterior en la relación; no es producto directo de recolección. | `false` |
+| `sourceCollection` | `string` | 298/298 | Clave de colección para plantas, animales, cultivos o geología; no es ID de recurso. | `"agriculturalCropCandidates"` |
+| `sourceId` | `string` | 298/298 | ID actual del candidato de origen, conservado sin migración. | `"wheat"` |
+| `resourceId` | `string` | 298/298 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000007"` |
+| `acquisitionTag` | `string` | 298/298 | Tag descriptivo de obtención; no es ID de acción o receta implementada. | `"crop_harvesting"` |
+| `reviewStatus` | `string` | 298/298 | Revisión pendiente antes de autorizar un producto del origen. | `"proposed_requires_species_and_action_review"` |
+| `quantityPerAction` | `null` | 298/298 | Cantidad por acción pendiente; no significa cero ni rendimiento garantizado. | `null` |
+| `runtimeEnabled` | `boolean` | 298/298 | Indica si la aparición puede usarse en generación; actualmente false. | `false` |
+| `requiresProcessing` | `boolean` | 298/298 | True indica procesamiento posterior en la relación; no es producto directo de recolección. | `false` |
 
 ### `$.sourceTagMappings[]`
 
@@ -145,7 +145,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `resourceCount` | `integer` | 1/1 | Cantidad de definiciones de recursos. | `104` |
-| `sourceBindingCount` | `integer` | 1/1 | Cantidad de relaciones posibles de origen a recurso. | `365` |
+| `sourceBindingCount` | `integer` | 1/1 | Cantidad de relaciones posibles de origen a recurso. | `298` |
 | `processingLinkCount` | `integer` | 1/1 | Cantidad de guías propuestas de transformación. | `25` |
 | `sourceTagMappingCount` | `integer` | 1/1 | Cantidad de tags animales originales clasificados o vinculados. | `23` |
 | `geologicalSourceCount` | `integer` | 1/1 | Cantidad de candidatos geológicos vinculados con materiales. | `57` |
@@ -158,7 +158,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 ```json
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "kind": "resource_catalog_design_guide",
   "status": "prototype_requires_species_action_and_balance_review",
   "defaultLanguage": "en",
@@ -273,7 +273,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
   ],
   "summary": {
     "resourceCount": 104,
-    "sourceBindingCount": 365,
+    "sourceBindingCount": 298,
     "processingLinkCount": 25,
     "sourceTagMappingCount": 23,
     "geologicalSourceCount": 57,

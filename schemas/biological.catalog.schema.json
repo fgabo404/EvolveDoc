@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Evolve biological reference catalog",
-  "description": "Complete structural contract for biology catalog 1.0.0. References and scientific interpretation require separate validation.",
+  "description": "Full structural contract for optional scientific background catalog 1.1.0. Gameplay categories are defined in the plant/animal guides, independently of taxonomic identity.",
   "type": "object",
   "properties": {
     "biologicalForms": {
@@ -269,6 +269,9 @@
         },
         "varietyPolicy": {
           "type": "string"
+        },
+        "gameplayIdentity": {
+          "type": "string"
         }
       },
       "required": [
@@ -279,7 +282,8 @@
         "resourceInheritance",
         "sourceInterpretation",
         "unknownValues",
-        "varietyPolicy"
+        "varietyPolicy",
+        "gameplayIdentity"
       ],
       "additionalProperties": false
     },

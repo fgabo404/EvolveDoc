@@ -24,7 +24,7 @@ name|Player-visible label using language keys.|Nombre visible mediante claves de
 description|Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text.|Explicación; en definiciones visibles es un mapa de idiomas y en esquemas es texto técnico.
 en|English visible text.|Texto visible en inglés.
 es|Spanish visible text.|Texto visible en español.
-speciesCandidates|Flat candidate records; broad groups are not yet accepted exact species.|Candidatos al mismo nivel; los grupos generales todavía no son especies exactas aceptadas.
+speciesCandidates|Flat gameplay entity candidates; general categories are valid and need not resolve to scientific species.|Entidades candidatas al mismo nivel; las categorías generales son válidas y no requieren especie científica.
 agriculturalCropCandidates|Crop groups linked to selected taxa/forms; ancestry coverage and production rules remain partial.|Grupos agrícolas vinculados a taxones/formas seleccionados; ancestros y reglas productivas siguen parcialmente pendientes.
 geologicalResourceCandidates|Source materials and geological forms awaiting deposit and processing design.|Materiales y formas geológicas pendientes de yacimientos y procesamiento.
 taxonomy|Scientific identity, evidence and review information.|Identidad científica, evidencia y revisión.
@@ -309,7 +309,7 @@ TEXT += "\n" + r'''
 biologicalCatalogFile|Sibling biological catalog file; legacy candidate IDs remain unchanged.|Archivo biológico relacionado; conserva los IDs de candidatos anteriores.
 plantBiology|Relative path from the world manifest to the flora biological catalog.|Ruta relativa del manifiesto mundial al catálogo biológico de flora.
 animalBiology|Relative path from the world manifest to the animal biological catalog.|Ruta relativa del manifiesto mundial al catálogo biológico de fauna.
-taxonResolution|Explicit source-to-taxon and reference-form selection; not a spawn or production rule.|Selección explícita de taxones y formas de referencia; no es regla de aparición ni producción.
+taxonResolution|Optional scientific background links; not required for gameplay identity, spawning or resource access.|Referencias científicas opcionales; no son requisito de identidad, aparición o acceso a recursos.
 taxonIds|References to the selected taxon definitions; group selections are non-exhaustive.|Referencias de taxones elegidos; las selecciones de grupos no son exhaustivas.
 formIds|Related biological reference forms; not the forms approved to spawn at this source occurrence.|Formas biológicas relacionadas; no son las formas aprobadas para aparecer en esa ubicación.
 selectionMode|Whether a label is interpreted specifically or split into representative species/crop taxa.|Indica interpretación específica o selección representativa de especies/cultivos.
@@ -329,7 +329,7 @@ taxonCount|Number of distinct provider taxon identities in this catalog.|Cantida
 biologicalFormCount|Number of biological reference forms in this catalog.|Cantidad de formas biológicas de referencia en este catálogo.
 lineageRelationCount|Number of accepted reference lineage relations.|Cantidad de relaciones de linaje de referencia registradas.
 excludedLineageRelationCount|Number of explicitly excluded direct ancestry assumptions.|Cantidad de supuestos de ascendencia directa explícitamente descartados.
-sourceCandidateCount|Number of covered original species/group candidates.|Cantidad de candidatos originales de especies/grupos cubiertos.
+sourceCandidateCount|Number of current gameplay candidates with optional scientific cross-references.|Cantidad de candidatos actuales con referencias científicas opcionales.
 cropCandidateCount|Number of covered crop group candidates.|Cantidad de grupos agrícolas cubiertos.
 taxonRank|Provider rank: species, subspecies or variety; a form is a separate entity.|Rango del proveedor: especie, subespecie o variedad; una forma es otra entidad.
 organismGroup|Explicit animal, plant, alga or lichenized fungus classification.|Clasificación explícita de animal, planta, alga u hongo liquenizado.
@@ -363,6 +363,17 @@ childFormId|Reference descendant form in an excluded direct-lineage assumption.|
 sourceKey|Stable bibliography key local to a biological catalog, not an entity ID.|Clave bibliográfica estable local al catálogo; no es ID de entidad.
 url|Public source URL.|URL pública de la fuente.
 supports|Scope of the claim supported by this bibliography entry.|Alcance de la afirmación respaldada por esta entrada bibliográfica.
+'''
+
+TEXT += "\n" + r'''
+classificationPolicy|Use general gameplay entities unless a distinction changes resources or behavior; science is optional.|Usa entidades generales salvo diferencias de recursos o comportamiento; la ciencia es opcional.
+entityAliases|Retired regional/specific IDs mapped to one canonical gameplay entity.|IDs regionales/específicos retirados que apuntan a una entidad general del juego.
+previousId|Retired source ID retained for compatibility and provenance; do not reuse.|ID anterior conservado para compatibilidad y procedencia; no reutilizar.
+entityId|Canonical gameplay entity ID; may represent a general category rather than a scientific species.|ID de entidad del juego; puede representar una categoría general y no una especie científica.
+sourceVariants|Original labels and regional source references merged into this single gameplay entity.|Etiquetas originales y referencias regionales reunidas en una entidad del juego.
+sourceDefinitionId|Original source identity before generalization; definitionId references the current gameplay category.|Identidad original antes de generalizar; definitionId apunta a la categoría vigente del juego.
+biologicalGranularity|World placement uses gameplay categories rather than mandatory scientific species.|La aparición mundial usa categorías del juego y no especies científicas obligatorias.
+gameplayIdentity|Scientific catalog is optional background; gameplay identities come from general entity guides.|El catálogo científico es referencia opcional; las identidades del juego están en las guías generales.
 '''
 
 DESCRIPTIONS={}

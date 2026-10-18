@@ -16,10 +16,10 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.1.0"` |
+| `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.1.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.2.0"` |
 | `kind` | `string` | 1/1 | Discriminator identifying this document or candidate category. | `"biological_taxon_catalog"` |
-| `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"taxonomy_names_verified_representative_choices_and_ecology_pending"` |
+| `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"optional_scientific_background_not_gameplay_entity_catalog"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Language codes available in this document. | `["en", "es"]` |
 | `runtimePolicy` | `object` | 1/1 | Rules and restrictions for interpreting this guide. | `—` |
@@ -43,6 +43,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `lineagePolicy` | `string` | 1/1 | Evidence-based ancestry is separate from automatic gameplay transformations. | `"Relations summarize evidence, not automatic gameplay transitions. Hybrid and introgression edges are not domest…` |
 | `varietyPolicy` | `string` | 1/1 | Distinguishes species, reference forms, cultivar groups and named breeds/cultivars. | `"Cultivar groups are not species, botanical varieties or named cultivars. No modern named cultivars or animal br…` |
 | `floraClassification` | `string` | 1/1 | Explains that the flora folder includes algae and lichenized fungi with explicit classification. | `"The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG…` |
+| `gameplayIdentity` | `string` | 1/1 | Scientific catalog is optional background; gameplay identities come from general entity guides. | `"Gameplay identity is defined by the general plant/animal guide. Scientific names are optional background and ne…` |
 
 ### `$.taxa[]`
 
@@ -157,7 +158,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | `biologicalFormCount` | `integer` | 1/1 | Number of biological reference forms in this catalog. | `49` |
 | `lineageRelationCount` | `integer` | 1/1 | Number of accepted reference lineage relations. | `13` |
 | `excludedLineageRelationCount` | `integer` | 1/1 | Number of explicitly excluded direct ancestry assumptions. | `0` |
-| `sourceCandidateCount` | `integer` | 1/1 | Number of covered original species/group candidates. | `129` |
+| `sourceCandidateCount` | `integer` | 1/1 | Number of current gameplay candidates with optional scientific cross-references. | `109` |
 | `cropCandidateCount` | `integer` | 1/1 | Number of covered crop group candidates. | `21` |
 
 ## Complete example document with reduced repeated arrays
@@ -166,10 +167,10 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 
 ```json
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "kind": "biological_taxon_catalog",
-  "status": "taxonomy_names_verified_representative_choices_and_ecology_pending",
+  "status": "optional_scientific_background_not_gameplay_entity_catalog",
   "defaultLanguage": "en",
   "supportedLanguages": [
     "en",
@@ -183,7 +184,8 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
     "resourceInheritance": "Candidate resource bindings do not automatically transfer to every selected taxon or form.",
     "lineagePolicy": "Relations summarize evidence, not automatic gameplay transitions. Hybrid and introgression edges are not domestication edges. An extant species may only proxy an ancestral population.",
     "varietyPolicy": "Cultivar groups are not species, botanical varieties or named cultivars. No modern named cultivars or animal breeds are invented.",
-    "floraClassification": "The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG/FNG prefixes remain explicit."
+    "floraClassification": "The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG/FNG prefixes remain explicit.",
+    "gameplayIdentity": "Gameplay identity is defined by the general plant/animal guide. Scientific names are optional background and never mandatory unlock requirements."
   },
   "taxa": [
     {
@@ -291,7 +293,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
     "biologicalFormCount": 49,
     "lineageRelationCount": 13,
     "excludedLineageRelationCount": 0,
-    "sourceCandidateCount": 129,
+    "sourceCandidateCount": 109,
     "cropCandidateCount": 21
   }
 }

@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17 — General gameplay entity categories
+
+- Follow the simpler entity scope: foxes provide hide without separate Arctic/corsac/fennec gameplay species. Group 18 animal cases and 15 plant cases only where existing output profiles match. Retain meaningful crop and wild/domestic distinctions.
+- Preserve all 485 occurrence IDs, habitats and source text; remap current definition IDs and retain sourceDefinitionId plus 86 explicit retired-ID aliases. No previous IDs are reused.
+- Current guides contain 109 plant and 101 animal entities, plus unchanged 21 crop groups. Deduplicate source bindings from 365 to 298 for the same 104 resources; do not add yields or processing requirements.
+- General guide schema/content: 1.3.0/0.4.0; world 1.4.0/0.5.0; resources content 0.2.0. Scientific catalogs remain optional background (1.1.0/0.2.0), not gameplay subdivisions or unlock requirements.
+- Refresh bilingual documentation, complete JSON examples, category diagrams and alias/provenance checks. Technology definitions and research example remain unchanged.
+- Se simplifican casos equivalentes como zorros, osos, robles y pinos. Se conservan hábitats, recursos y procedencia; la clasificación científica queda como referencia opcional.
+
 ## 2026-10-17 — Biological identities and reference lineages
 
 - Added 367 provider-matched taxon records, 77 biological reference forms, 25 documented lineage summaries and two explicitly excluded direct ancestry assumptions.

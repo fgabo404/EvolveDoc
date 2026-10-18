@@ -1,6 +1,6 @@
 # Evolve — Referencia de diseño y simulación
 
-[Plantas, animales y formas biológicas](biology.md)
+[Plantas y animales: categorías del juego](biology.md)
 
 [Catálogo de recursos y relaciones](resources.md)
 
@@ -127,4 +127,4 @@ La versión estructural `2.0.0` elimina los contenedores de nodos tecnológicos.
 
 Los [ejemplos de simulación](../../simulation/README.md) muestran investigación independiente por especie con la definición agrícola real. Son ejemplos educativos, no un motor completo. La guía del mundo está dividida en catálogos relacionados; consulta la [estructura](repository.md).
 
-El catálogo biológico precisa nombres y relaciones seleccionadas; distribución, hábitat y ancestros todavía no revisados siguen pendientes. Ver [biología](biology.md).
+La guía usa categorías generales como zorros y robles. Solo se conservan diferencias útiles para el juego. La taxonomía científica es opcional. Ver [entidades](biology.md).

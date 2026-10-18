@@ -59,3 +59,7 @@ New resource definitions already use RES IDs. `data/resources/resources.catalog.
 ## Biological allocations
 
 `ALG` identifies algae and `FRM` biological forms. The `plants.biological.catalog.json` and `animals.biological.catalog.json` files record actual PLT/ANM/ALG/FNG/FRM allocations. The FRM sequence is shared across both folders. Do not reuse table examples or recalculate IDs alphabetically. `VAR` remains a regional variant, not a cultivar. Taxa explicitly record species/subspecies ranks. See [biology](biology.md).
+
+## General gameplay entities
+
+PLT and ANM also identify gameplay categories, not only scientific taxa. The 33 generalized categories have new permanent allocations without reusing previous scientific IDs. Plant/animal guides include `entityAliases` for 86 retired IDs. For example, `ANM#000169` is foxes and `PLT#000204` is oaks. Scientific names are optional background and do not force categories to split.

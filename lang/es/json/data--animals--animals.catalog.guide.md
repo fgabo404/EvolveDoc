@@ -16,15 +16,16 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.2.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.3.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.3.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.4.0"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"design_guide_requires_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Códigos de idioma disponibles. | `["en", "es"]` |
 | `runtimePolicy` | `object` | 1/1 | Reglas y restricciones para interpretar esta guía. | `—` |
 | `kind` | `string` | 1/1 | Discriminador que identifica el documento o categoría del candidato. | `"animal_catalog_design_guide"` |
-| `speciesCandidates` | `array<object>` | 1/1 | Candidatos al mismo nivel; los grupos generales todavía no son especies exactas aceptadas. | `—` |
+| `speciesCandidates` | `array<object>` | 1/1 | Entidades candidatas al mismo nivel; las categorías generales son válidas y no requieren especie científica. | `—` |
 | `biologicalCatalogFile` | `string` | 1/1 | Archivo biológico relacionado; conserva los IDs de candidatos anteriores. | `"animals.biological.catalog.json"` |
+| `entityAliases` | `array<object>` | 1/1 | IDs regionales/específicos retirados que apuntan a una entidad general del juego. | `—` |
 
 ### `$.runtimePolicy`
 
@@ -32,90 +33,116 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | --- | --- | --- | --- | --- |
 | `loadAsGameDefinitions` | `boolean` | 1/1 | False impide tratar esta guía como definiciones jugables. | `false` |
 | `unknownValues` | `string` | 1/1 | Aclara que null pendiente no equivale a cero o sin restricciones. | `"null means unresolved; it is not zero or unrestricted."` |
+| `classificationPolicy` | `string` | 1/1 | Usa entidades generales salvo diferencias de recursos o comportamiento; la ciencia es opcional. | `"Use general gameplay entities when specific species add no meaningful resource or behavior distinction. Scienti…` |
 
 ### `$.speciesCandidates[]`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `id` | `string` | 134/134 | Identidad estable de la definición o civilización del ejemplo; nunca usar nombres traducidos. | `"animal_eurasian_moose"` |
-| `kind` | `string` | 134/134 | Discriminador que identifica el documento o categoría del candidato. | `"animal"` |
-| `name` | `object` | 134/134 | Nombre visible mediante claves de idioma. | `—` |
-| `taxonomy` | `object` | 134/134 | Identidad científica, evidencia y revisión. | `—` |
-| `definitionStatus` | `string` | 134/134 | Madurez del registro; los candidatos no son definiciones ejecutables. | `"design_guide_only"` |
-| `nativeRegionIds` | `array<?>` | 134/134 | Referencias a regiones nativas; vacío significa pendiente, no distribución mundial. | `[]` |
-| `biomeVariantIds` | `array<string>` | 134/134 | Referencias a variantes regionales que enumeran este candidato. | `["temperate_forest_boreal"]` |
-| `ecology` | `object` | 134/134 | Requisitos ambientales; los valores cuantitativos están pendientes. | `—` |
-| `propagation` | `object` | 134/134 | Métodos de reproducción y materiales requeridos, todavía en diseño. | `—` |
-| `domestication` | `object` | 134/134 | Elegibilidad, relaciones con ancestros/formas y criterios de selección. | `—` |
-| `potentialProducts` | `array<object>` | 134/134 | Usos potenciales de la fuente; no son productos, cantidades o desbloqueos confirmados. | `[]` |
-| `potentialUseMethods` | `array<string>` | 134/134 | Métodos de uso potenciales de la fuente, no acciones ya autorizadas del juego. | `["hunting"]` |
-| `cultivationResearch` | `null` | 134/134 | Relación ilustrativa con investigación por especie; null indica vínculo no definido. | `null` |
-| `sourceLabel` | `string` | 134/134 | Etiqueta original en español para trazabilidad, no texto localizado de interfaz. | `"Alce euroasiático"` |
-| `initialPresencePolicy` | `string` | 134/134 | Restricciones que deben resolverse antes de la aparición inicial. | `"resolve_native_region_and_habitat_before_spawning"` |
-| `taxonResolution` | `object` | 134/134 | Selección explícita de taxones y formas de referencia; no es regla de aparición ni producción. | `—` |
+| `id` | `string` | 101/101 | Identidad estable de la definición o civilización del ejemplo; nunca usar nombres traducidos. | `"ANM#000170"` |
+| `kind` | `string` | 101/101 | Discriminador que identifica el documento o categoría del candidato. | `"animal"` |
+| `name` | `object` | 101/101 | Nombre visible mediante claves de idioma. | `—` |
+| `taxonomy` | `object` | 101/101 | Identidad científica, evidencia y revisión. | `—` |
+| `definitionStatus` | `string` | 101/101 | Madurez del registro; los candidatos no son definiciones ejecutables. | `"general_gameplay_category_design_guide"` |
+| `nativeRegionIds` | `array<?>` | 101/101 | Referencias a regiones nativas; vacío significa pendiente, no distribución mundial. | `[]` |
+| `biomeVariantIds` | `array<string>` | 101/101 | Referencias a variantes regionales que enumeran este candidato. | `["temperate_forest_boreal"]` |
+| `ecology` | `object` | 101/101 | Requisitos ambientales; los valores cuantitativos están pendientes. | `—` |
+| `propagation` | `object` | 101/101 | Métodos de reproducción y materiales requeridos, todavía en diseño. | `—` |
+| `domestication` | `object` | 101/101 | Elegibilidad, relaciones con ancestros/formas y criterios de selección. | `—` |
+| `potentialProducts` | `array<object>` | 101/101 | Usos potenciales de la fuente; no son productos, cantidades o desbloqueos confirmados. | `[]` |
+| `potentialUseMethods` | `array<string>` | 101/101 | Métodos de uso potenciales de la fuente, no acciones ya autorizadas del juego. | `["hunting"]` |
+| `cultivationResearch` | `null` | 101/101 | Relación ilustrativa con investigación por especie; null indica vínculo no definido. | `null` |
+| `sourceLabel` | `string` | 101/101 | Etiqueta original en español para trazabilidad, no texto localizado de interfaz. | `"Alce euroasiático"` |
+| `initialPresencePolicy` | `string` | 101/101 | Restricciones que deben resolverse antes de la aparición inicial. | `"resolve_native_region_and_habitat_before_spawning"` |
+| `taxonResolution` | `object` | 101/101 | Referencias científicas opcionales; no son requisito de identidad, aparición o acceso a recursos. | `—` |
+| `tag` | `string` | 18/101 | Etiqueta técnica en inglés snake_case; IDs y tags futuros aún no aplicados a catálogos actuales. | `"moose"` |
+| `sourceVariants` | `array<object>` | 18/101 | Etiquetas originales y referencias regionales reunidas en una entidad del juego. | `—` |
 
 ### `$.speciesCandidates[].name`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `en` | `string` | 134/134 | Texto visible en inglés. | `"Eurasian Moose"` |
-| `es` | `string` | 134/134 | Texto visible en español. | `"Alce euroasiático"` |
+| `en` | `string` | 101/101 | Texto visible en inglés. | `"Moose"` |
+| `es` | `string` | 101/101 | Texto visible en español. | `"Alces"` |
 
 ### `$.speciesCandidates[].taxonomy`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `scientificName` | `null \| string` | 134/134 | Nombre científico de la fuente o del registro aceptado del proveedor; null en la fuente original significa pendiente allí. | `"Gallus gallus"` |
-| `nameEvidence` | `string` | 134/134 | Evidencia del nombre científico registrado o de su ausencia. | `"not_supplied"` |
-| `resolutionStatus` | `string` | 134/134 | Tarea pendiente para resolver el candidato o restricción regional. | `"linked_to_taxon_catalog_source_interpretation_still_requires_review"` |
-| `verified` | `boolean` | 134/134 | Indica si existe verificación científica; los candidatos actuales no están verificados. | `false` |
+| `scientificName` | `null \| string` | 101/101 | Nombre científico de la fuente o del registro aceptado del proveedor; null en la fuente original significa pendiente allí. | `"Gallus gallus"` |
+| `nameEvidence` | `string` | 101/101 | Evidencia del nombre científico registrado o de su ausencia. | `"gameplay_category_not_scientific_species"` |
+| `resolutionStatus` | `string` | 101/101 | Tarea pendiente para resolver el candidato o restricción regional. | `"scientific_species_not_required_for_gameplay_category"` |
+| `verified` | `boolean` | 101/101 | Indica si existe verificación científica; los candidatos actuales no están verificados. | `false` |
 
 ### `$.speciesCandidates[].ecology`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `temperatureRangeC` | `null` | 134/134 | Límites de temperatura en grados Celsius; null todavía no tiene estructura interna definida. | `null` |
-| `moistureRange` | `null` | 134/134 | Límites de humedad; unidades y estructura pendientes. | `null` |
-| `elevationRangeM` | `null` | 134/134 | Límites de elevación en metros; valores y estructura pendientes. | `null` |
-| `waterRequirements` | `null` | 134/134 | Necesidades de agua; pendiente no significa que no necesite agua. | `null` |
-| `soilRequirements` | `null` | 134/134 | Restricciones de suelo pendientes de estructura. | `null` |
-| `habitatRestrictionsStatus` | `string` | 134/134 | Explicación técnica sobre restricciones de hábitat pendientes. | `"See source occurrences; quantitative constraints remain undefined."` |
+| `temperatureRangeC` | `null` | 101/101 | Límites de temperatura en grados Celsius; null todavía no tiene estructura interna definida. | `null` |
+| `moistureRange` | `null` | 101/101 | Límites de humedad; unidades y estructura pendientes. | `null` |
+| `elevationRangeM` | `null` | 101/101 | Límites de elevación en metros; valores y estructura pendientes. | `null` |
+| `waterRequirements` | `null` | 101/101 | Necesidades de agua; pendiente no significa que no necesite agua. | `null` |
+| `soilRequirements` | `null` | 101/101 | Restricciones de suelo pendientes de estructura. | `null` |
+| `habitatRestrictionsStatus` | `string` | 101/101 | Explicación técnica sobre restricciones de hábitat pendientes. | `"General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer wo…` |
 
 ### `$.speciesCandidates[].propagation`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `methods` | `null` | 134/134 | Métodos de reproducción admitidos; null significa pendiente. | `null` |
-| `materialResourceIds` | `null` | 134/134 | Referencias a recursos de reproducción; null significa relaciones pendientes. | `null` |
+| `methods` | `null` | 101/101 | Métodos de reproducción admitidos; null significa pendiente. | `null` |
+| `materialResourceIds` | `null` | 101/101 | Referencias a recursos de reproducción; null significa relaciones pendientes. | `null` |
 
 ### `$.speciesCandidates[].domestication`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `eligibility` | `string` | 134/134 | Elegibilidad del candidato para este mecanismo y revisión necesaria. | `"requires_species_review"` |
-| `wildAncestorId` | `null` | 134/134 | Referencia al ancestro silvestre elegido, sin deducirlo automáticamente. | `null` |
-| `domesticatedFormId` | `null` | 134/134 | Referencia a la forma domesticada; no concede domesticación instantánea. | `null` |
-| `criteria` | `null` | 134/134 | Criterios de domesticación todavía no modelados. | `null` |
+| `eligibility` | `string` | 101/101 | Elegibilidad del candidato para este mecanismo y revisión necesaria. | `"requires_gameplay_domestication_design"` |
+| `wildAncestorId` | `null` | 101/101 | Referencia al ancestro silvestre elegido, sin deducirlo automáticamente. | `null` |
+| `domesticatedFormId` | `null` | 101/101 | Referencia a la forma domesticada; no concede domesticación instantánea. | `null` |
+| `criteria` | `null` | 101/101 | Criterios de domesticación todavía no modelados. | `null` |
 
 ### `$.speciesCandidates[].potentialProducts[]`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `resourceTag` | `string` | 295/295 | Tag en inglés de categoría del recurso; no es ID resuelto. | `"meat"` |
-| `status` | `string` | 295/295 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"potential_from_source"` |
-| `requiredTechnologyIds` | `null` | 295/295 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
-| `yield` | `null` | 295/295 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
-| `resourceId` | `string` | 264/295 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000029"` |
+| `resourceTag` | `string` | 219/219 | Tag en inglés de categoría del recurso; no es ID resuelto. | `"meat"` |
+| `status` | `string` | 219/219 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"potential_from_source"` |
+| `requiredTechnologyIds` | `null` | 219/219 | Referencias tecnológicas del producto; null significa pendiente, no ningún requisito. | `null` |
+| `yield` | `null` | 219/219 | Rendimiento; unidad, fórmula y cantidad pendientes. | `null` |
+| `resourceId` | `string` | 202/219 | Referencia a un recurso, distinta del ID de especie o yacimiento. | `"RES#000029"` |
 
 ### `$.speciesCandidates[].taxonResolution`
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `taxonIds` | `array<string>` | 134/134 | Referencias de taxones elegidos; las selecciones de grupos no son exhaustivas. | `["ANM#000001"]` |
-| `formIds` | `array<string>` | 134/134 | Formas biológicas relacionadas; no son las formas aprobadas para aparecer en esa ubicación. | `[]` |
-| `selectionMode` | `string` | 134/134 | Indica interpretación específica o selección representativa de especies/cultivos. | `"specific_name_interpretation"` |
-| `interpretationStatus` | `string` | 134/134 | Estado de interpretación de la etiqueta original, independiente del cotejo del nombre científico. | `"proposed_requires_native_range_and_habitat_review"` |
-| `inheritResourceBindings` | `boolean` | 134/134 | False: los taxones/formas no heredan automáticamente productos del candidato. | `false` |
+| `taxonIds` | `array<string>` | 101/101 | Referencias de taxones elegidos; las selecciones de grupos no son exhaustivas. | `["ANM#000001", "ANM#000002"]` |
+| `formIds` | `array<string>` | 101/101 | Formas biológicas relacionadas; no son las formas aprobadas para aparecer en esa ubicación. | `[]` |
+| `selectionMode` | `string` | 101/101 | Indica interpretación específica o selección representativa de especies/cultivos. | `"optional_scientific_reference"` |
+| `interpretationStatus` | `string` | 101/101 | Estado de interpretación de la etiqueta original, independiente del cotejo del nombre científico. | `"not_required_for_gameplay_identity_or_resource_access"` |
+| `inheritResourceBindings` | `boolean` | 101/101 | False: los taxones/formas no heredan automáticamente productos del candidato. | `false` |
+
+### `$.speciesCandidates[].sourceVariants[]`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `id` | `string` | 51/51 | Identidad estable de la definición o civilización del ejemplo; nunca usar nombres traducidos. | `"animal_eurasian_moose"` |
+| `name` | `object` | 51/51 | Nombre visible mediante claves de idioma. | `—` |
+| `sourceLabel` | `string` | 51/51 | Etiqueta original en español para trazabilidad, no texto localizado de interfaz. | `"Alce euroasiático"` |
+| `biomeVariantIds` | `array<string>` | 51/51 | Referencias a variantes regionales que enumeran este candidato. | `["temperate_forest_boreal"]` |
+
+### `$.speciesCandidates[].sourceVariants[].name`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `en` | `string` | 51/51 | Texto visible en inglés. | `"Eurasian Moose"` |
+| `es` | `string` | 51/51 | Texto visible en español. | `"Alce euroasiático"` |
+
+### `$.entityAliases[]`
+
+| Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
+| --- | --- | --- | --- | --- |
+| `previousId` | `string` | 51/51 | ID anterior conservado para compatibilidad y procedencia; no reutilizar. | `"animal_corsac_fox"` |
+| `entityId` | `string` | 51/51 | ID de entidad del juego; puede representar una categoría general y no una especie científica. | `"ANM#000169"` |
 
 ## Ejemplo de documento completo con arreglos repetidos reducidos
 
@@ -123,8 +150,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 
 ```json
 {
-  "schemaVersion": "1.2.0",
-  "contentVersion": "0.3.0",
+  "schemaVersion": "1.3.0",
+  "contentVersion": "0.4.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -133,24 +160,25 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
   ],
   "runtimePolicy": {
     "loadAsGameDefinitions": false,
-    "unknownValues": "null means unresolved; it is not zero or unrestricted."
+    "unknownValues": "null means unresolved; it is not zero or unrestricted.",
+    "classificationPolicy": "Use general gameplay entities when specific species add no meaningful resource or behavior distinction. Scientific taxonomy is optional background, not an unlock or entity identity requirement. Preserve distinctions for crops, wild/domestic forms and other actual gameplay differences."
   },
   "kind": "animal_catalog_design_guide",
   "speciesCandidates": [
     {
-      "id": "animal_eurasian_moose",
+      "id": "ANM#000170",
       "kind": "animal",
       "name": {
-        "en": "Eurasian Moose",
-        "es": "Alce euroasiático"
+        "en": "Moose",
+        "es": "Alces"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "temperate_forest_boreal"
@@ -161,14 +189,14 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -190,15 +218,36 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000001"
+          "ANM#000001",
+          "ANM#000002"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "moose",
+      "sourceVariants": [
+        {
+          "id": "animal_eurasian_moose",
+          "name": {
+            "en": "Eurasian Moose",
+            "es": "Alce euroasiático"
+          },
+          "sourceLabel": "Alce euroasiático",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        }
+      ]
     }
   ],
-  "biologicalCatalogFile": "animals.biological.catalog.json"
+  "biologicalCatalogFile": "animals.biological.catalog.json",
+  "entityAliases": [
+    {
+      "previousId": "animal_corsac_fox",
+      "entityId": "ANM#000169"
+    }
+  ]
 }
 ```

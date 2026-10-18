@@ -20,7 +20,7 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | --- | --- | --- | --- | --- |
 | `$schema` | `string` | 1/1 | JSON Schema dialect URI; not a reference to game data. | `"https://json-schema.org/draft/2020-12/schema"` |
 | `title` | `string` | 1/1 | Document or schema title. | `"Evolve biological reference catalog"` |
-| `description` | `string` | 1/1 | Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text. | `"Complete structural contract for biology catalog 1.0.0. References and scientific interpretation require separa…` |
+| `description` | `string` | 1/1 | Explanation; in game definitions visible descriptions are language maps, while schema descriptions are developer text. | `"Full structural contract for optional scientific background catalog 1.1.0. Gameplay categories are defined in t…` |
 | `type` | `string` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `"object"` |
 | `properties` | `object` | 1/1 | Schemas for named properties; does not forbid other fields without additionalProperties. | `—` |
 | `required` | `array<string>` | 1/1 | Property names required by this schema; presence in an example alone does not make a field required. | `["biologicalForms", "contentVersion", "defaultLanguage"]` |
@@ -497,6 +497,7 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | `sourceInterpretation` | `object` | 1/1 | Subschema describing `sourceInterpretation`; see its nested fields below. | `—` |
 | `unknownValues` | `object` | 1/1 | Subschema describing `unknownValues`; see its nested fields below. | `—` |
 | `varietyPolicy` | `object` | 1/1 | Subschema describing `varietyPolicy`; see its nested fields below. | `—` |
+| `gameplayIdentity` | `object` | 1/1 | Subschema describing `gameplayIdentity`; see its nested fields below. | `—` |
 
 ### `$.properties.runtimePolicy.properties.floraClassification`
 
@@ -542,6 +543,12 @@ These are JSON Schema keywords, not game-definition fields. The envelope allows 
 | `type` | `string` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `"string"` |
 
 ### `$.properties.runtimePolicy.properties.varietyPolicy`
+
+| Field | Current JSON type | Seen | Meaning | Sample value |
+| --- | --- | --- | --- | --- |
+| `type` | `string` | 1/1 | Condition/reward/effect discriminator, or JSON Schema type in schema documents. | `"string"` |
+
+### `$.properties.runtimePolicy.properties.gameplayIdentity`
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
@@ -882,7 +889,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Evolve biological reference catalog",
-  "description": "Complete structural contract for biology catalog 1.0.0. References and scientific interpretation require separate validation.",
+  "description": "Full structural contract for optional scientific background catalog 1.1.0. Gameplay categories are defined in the plant/animal guides, independently of taxonomic identity.",
   "type": "object",
   "properties": {
     "biologicalForms": {
@@ -1150,6 +1157,9 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
         },
         "varietyPolicy": {
           "type": "string"
+        },
+        "gameplayIdentity": {
+          "type": "string"
         }
       },
       "required": [
@@ -1160,7 +1170,8 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
         "resourceInheritance",
         "sourceInterpretation",
         "unknownValues",
-        "varietyPolicy"
+        "varietyPolicy",
+        "gameplayIdentity"
       ],
       "additionalProperties": false
     },

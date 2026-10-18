@@ -294,8 +294,8 @@ flowchart LR
 | --- | --- |
 | biomeCount | `7` |
 | regionalVariantCount | `27` |
-| plantCandidateCount | `129` |
-| animalCandidateCount | `134` |
+| plantCandidateCount | `109` |
+| animalCandidateCount | `101` |
 | geologicalCandidateCount | `57` |
 | sourceOccurrenceCount | `485` |
 | agriculturalCropCandidateCount | `21` |

@@ -13,3 +13,7 @@ Reglas del mundo y apariciones del documento. Las especies y candidatos geológi
 Manifest schema/content: 1.3.0/0.4.0. Added flora/fauna biological catalog links; all 485 original occurrences retained.
 
 Manifiesto esquema/contenido: 1.3.0/0.4.0. Se agregaron enlaces a catálogos biológicos; conserva las 485 apariciones originales.
+
+Current manifest schema/content: 1.4.0/0.5.0. General categories replace selected regional/specific identities through aliases; all 485 source occurrences remain. Scientific references are optional.
+
+Manifiesto actual: 1.4.0/0.5.0. Categorías generales con alias para identidades anteriores; conserva las 485 apariciones originales. Referencias científicas opcionales.

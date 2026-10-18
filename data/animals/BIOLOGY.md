@@ -1,8 +1,10 @@
-# Biological identities and relationships
+# Optional scientific reference
+
+**Gameplay entities are general categories. This scientific reference does not require splitting foxes, bears or oaks into species.**
 
 [JSON](animals.biological.catalog.json) · [Model and boundaries](../../lang/en/biology.md)
 
-Scientific names matched to the provider; representative choices, native ranges, habitats and outputs still need review. Legacy candidate IDs retain source provenance. No table authorizes initial spawning or gameplay transformations. Related reference forms are not a wild-spawn list.
+Scientific names matched to the provider; representative choices, native ranges, habitats and outputs still need review. Retired source IDs are preserved through explicit aliases. No table authorizes initial spawning or gameplay transformations. Related reference forms are not a wild-spawn list.
 
 ## Coverage
 
@@ -12,22 +14,19 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `biologicalFormCount` | 28 |
 | `lineageRelationCount` | 12 |
 | `excludedLineageRelationCount` | 2 |
-| `sourceCandidateCount` | 134 |
+| `sourceCandidateCount` | 101 |
 | `cropCandidateCount` | 0 |
 
 ## Original labels and concrete selection
 
 | Candidate | Reference name | Selected taxa | Selection | Related forms |
 | --- | --- | --- | --- | --- |
-| `animal_eurasian_moose` | Eurasian Moose | `ANM#000001` Alces alces | `specific_name_interpretation` |  |
-| `animal_north_american_moose` | North American Moose | `ANM#000002` Alces americanus | `specific_name_interpretation` |  |
-| `animal_regional_small_antelopes` | Regional Small Antelopes | `ANM#000140` Raphicerus melanotis; `ANM#000139` Raphicerus campestris | `representative_species_selection` |  |
-| `animal_regional_antelopes` | Regional Antelopes | `ANM#000037` Cephalophus silvicultor; `ANM#000156` Tragelaphus scriptus | `representative_species_selection` |  |
+| `ANM#000170` | Moose | `ANM#000001` Alces alces; `ANM#000002` Alces americanus | `optional_scientific_reference` |  |
+| `ANM#000171` | Antelopes | `ANM#000140` Raphicerus melanotis; `ANM#000139` Raphicerus campestris; `ANM#000037` Cephalophus silvicultor; `ANM#000156` Tragelaphus scriptus | `optional_scientific_reference` |  |
 | `animal_australian_scrub_birds` | Australian Scrub Birds | `ANM#000009` Atrichornis clamosus | `representative_species_selection` |  |
 | `animal_birds_of_paradise` | Birds of Paradise | `ANM#000123` Paradisaea raggiana | `representative_species_selection` |  |
 | `animal_shorebirds_and_waterbirds` | Shorebirds and Waterbirds | `ANM#000008` Ardea cinerea; `ANM#000102` Numenius arquata | `representative_species_selection` |  |
-| `animal_chacma_baboon` | Chacma Baboon | `ANM#000122` Papio ursinus | `specific_name_interpretation` |  |
-| `animal_baboons` | Baboons | `ANM#000121` Papio anubis | `representative_species_selection` |  |
+| `ANM#000172` | Baboons | `ANM#000122` Papio ursinus; `ANM#000121` Papio anubis | `optional_scientific_reference` |  |
 | `animal_atlantic_cod` | Atlantic Cod | `ANM#000059` Gadus morhua | `specific_name_interpretation` |  |
 | `animal_regional_migratory_whales` | Regional Migratory Whales | `ANM#000093` Megaptera novaeangliae; `ANM#000011` Balaenoptera musculus | `representative_species_selection` |  |
 | `animal_american_bison` | American Bison | `ANM#000012` Bison bison | `specific_name_interpretation` |  |
@@ -37,21 +36,15 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `animal_przewalski_horse` | Przewalski Horse | `ANM#000055` Equus przewalskii | `specific_name_interpretation` | `FRM#000073` |
 | `animal_cockatoos_and_savanna_birds` | Cockatoos and Savanna Birds | `ANM#000022` Cacatua galerita; `ANM#000053` Eolophus roseicapilla | `representative_species_selection` |  |
 | `animal_wild_bactrian_camel` | Wild Bactrian Camel | `ANM#000025` Camelus ferus | `specific_name_interpretation` | `FRM#000075` |
-| `animal_coastal_crabs` | Coastal Crabs | `ANM#000103` Ocypode ceratophthalmus | `representative_species_selection` |  |
-| `animal_mangrove_crabs` | Mangrove Crabs | `ANM#000146` Scylla serrata | `representative_species_selection` |  |
-| `animal_antilopine_kangaroo` | Antilopine Kangaroo | `ANM#000108` Macropus antilopinus | `specific_name_interpretation` |  |
-| `animal_western_grey_kangaroo` | Western Grey Kangaroo | `ANM#000090` Macropus fuliginosus | `specific_name_interpretation` |  |
-| `animal_red_kangaroo` | Red Kangaroo | `ANM#000109` Macropus rufus | `specific_name_interpretation` |  |
-| `animal_new_guinea_tree_kangaroos` | New Guinea Tree Kangaroos | `ANM#000048` Dendrolagus goodfellowi | `representative_species_selection` |  |
+| `ANM#000173` | Crabs | `ANM#000103` Ocypode ceratophthalmus; `ANM#000146` Scylla serrata | `optional_scientific_reference` |  |
+| `ANM#000174` | Kangaroos | `ANM#000108` Macropus antilopinus; `ANM#000090` Macropus fuliginosus; `ANM#000109` Macropus rufus; `ANM#000048` Dendrolagus goodfellowi | `optional_scientific_reference` |  |
 | `animal_capybara` | Capybara | `ANM#000075` Hydrochoerus hydrochaeris | `specific_name_interpretation` |  |
 | `animal_woodland_caribou` | Woodland Caribou | `ANM#000137` Rangifer tarandus caribou | `specific_name_interpretation` |  |
 | `animal_tundra_caribou` | Tundra Caribou | `ANM#000138` Rangifer tarandus groenlandicus | `specific_name_interpretation` |  |
 | `animal_southern_cassowary` | Southern Cassowary | `ANM#000036` Casuarius casuarius | `specific_name_interpretation` |  |
 | `animal_plains_zebra` | Plains Zebra | `ANM#000056` Equus quagga | `specific_name_interpretation` |  |
 | `animal_chimpanzee` | Chimpanzee | `ANM#000116` Pan troglodytes | `specific_name_interpretation` |  |
-| `animal_chital` | Chital | `ANM#000010` Axis axis | `specific_name_interpretation` |  |
-| `animal_red_deer` | Red Deer | `ANM#000038` Cervus elaphus | `specific_name_interpretation` |  |
-| `animal_sika_deer` | Sika Deer | `ANM#000039` Cervus nippon | `specific_name_interpretation` |  |
+| `ANM#000175` | Deer | `ANM#000010` Axis axis; `ANM#000038` Cervus elaphus; `ANM#000039` Cervus nippon; `ANM#000074` Hippocamelus bisulcus; `ANM#000131` Pudu puda; `ANM#000104` Odocoileus virginianus; `ANM#000115` Ozotoceros bezoarticus | `optional_scientific_reference` |  |
 | `animal_european_rabbit` | European Rabbit | `ANM#000106` Oryctolagus cuniculus | `specific_name_interpretation` | `FRM#000054`, `FRM#000055` |
 | `animal_roadrunner` | Roadrunner | `ANM#000064` Geococcyx californianus | `specific_name_interpretation` |  |
 | `animal_coyote` | Coyote | `ANM#000026` Canis latrans | `specific_name_interpretation` |  |
@@ -60,28 +53,21 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `animal_rock_hyraxes` | Rock Hyraxes | `ANM#000130` Procavia capensis | `specific_name_interpretation` |  |
 | `animal_dingo` | Dingo | `ANM#000028` Canis lupus dingo | `specific_name_interpretation` |  |
 | `animal_introduced_domestic_or_feral_dromedary` | Introduced Domestic or Feral Dromedary | `ANM#000024` Camelus dromedarius | `specific_name_interpretation` | `FRM#000077` |
-| `animal_african_forest_elephant` | African Forest Elephant | `ANM#000085` Loxodonta cyclotis | `specific_name_interpretation` |  |
-| `animal_african_savanna_elephant` | African Savanna Elephant | `ANM#000084` Loxodonta africana | `specific_name_interpretation` |  |
-| `animal_african_savanna_elephant_in_dry_forest_mosaics` | African Savanna Elephant in Dry-Forest Mosaics | `ANM#000084` Loxodonta africana | `specific_name_interpretation` |  |
-| `animal_asian_elephant` | Asian Elephant | `ANM#000052` Elephas maximus | `specific_name_interpretation` |  |
-| `animal_asian_elephant_in_suitable_forests` | Asian Elephant in Suitable Forests | `ANM#000052` Elephas maximus | `specific_name_interpretation` |  |
+| `ANM#000176` | African elephants | `ANM#000085` Loxodonta cyclotis; `ANM#000084` Loxodonta africana | `optional_scientific_reference` |  |
+| `ANM#000177` | Asian elephants | `ANM#000052` Elephas maximus | `optional_scientific_reference` |  |
 | `animal_coastal_elephant_seals` | Coastal Elephant Seals | `ANM#000096` Mirounga leonina | `specific_name_interpretation` |  |
 | `animal_emu` | Emu | `ANM#000051` Dromaius novaehollandiae | `specific_name_interpretation` |  |
 | `animal_short_beaked_echidna` | Short-Beaked Echidna | `ANM#000151` Tachyglossus aculeatus | `specific_name_interpretation` |  |
 | `animal_regional_seals` | Regional Seals | `ANM#000133` Pusa hispida; `ANM#000081` Leptonychotes weddellii | `representative_species_selection` |  |
 | `animal_coastal_seals_and_sea_lions` | Coastal Seals and Sea Lions | `ANM#000126` Phoca vitulina; `ANM#000111` Otaria byronia | `representative_species_selection` |  |
-| `animal_mongolian_gazelle` | Mongolian Gazelle | `ANM#000129` Procapra gutturosa | `specific_name_interpretation` |  |
-| `animal_desert_gazelles` | Desert Gazelles | `ANM#000062` Gazella dorcas; `ANM#000063` Gazella marica | `representative_species_selection` |  |
+| `ANM#000178` | Gazelles | `ANM#000129` Procapra gutturosa; `ANM#000062` Gazella dorcas; `ANM#000063` Gazella marica | `optional_scientific_reference` |  |
 | `animal_red_junglefowl` | Red Junglefowl | `ANM#000060` Gallus gallus | `specific_name_interpretation` | `FRM#000057` |
 | `animal_gelada` | Gelada | `ANM#000155` Theropithecus gelada | `specific_name_interpretation` |  |
 | `animal_subarctic_wolverine` | Subarctic Wolverine | `ANM#000071` Gulo gulo | `specific_name_interpretation` |  |
 | `animal_western_gorilla` | Western Gorilla | `ANM#000070` Gorilla gorilla | `specific_name_interpretation` |  |
 | `animal_macaws` | Macaws | `ANM#000007` Ara macao; `ANM#000006` Ara ararauna | `representative_species_selection` |  |
-| `animal_guanaco_in_coastal_deserts_and_foothills` | Guanaco in Coastal Deserts and Foothills | `ANM#000079` Lama glama guanicoe | `specific_name_interpretation` | `FRM#000058` |
-| `animal_guanaco_at_suitable_elevations` | Guanaco at Suitable Elevations | `ANM#000079` Lama glama guanicoe | `specific_name_interpretation` | `FRM#000058` |
-| `animal_huemul` | Huemul | `ANM#000074` Hippocamelus bisulcus | `specific_name_interpretation` |  |
-| `animal_wild_boar` | Wild Boar | `ANM#000148` Sus scrofa | `specific_name_interpretation` | `FRM#000050` |
-| `animal_eurasian_wild_boar` | Eurasian Wild Boar | `ANM#000148` Sus scrofa | `specific_name_interpretation` | `FRM#000050` |
+| `ANM#000179` | Guanacos | `ANM#000079` Lama glama guanicoe | `optional_scientific_reference` | `FRM#000058` |
+| `ANM#000180` | Wild boars | `ANM#000148` Sus scrofa | `optional_scientific_reference` | `FRM#000050` |
 | `animal_jaguar` | Jaguar | `ANM#000118` Panthera onca | `specific_name_interpretation` |  |
 | `animal_regional_jerboas_and_gerbils` | Regional Jerboas and Gerbils | `ANM#000050` Dipus sagitta; `ANM#000095` Meriones meridianus | `representative_species_selection` |  |
 | `animal_giraffe` | Giraffe | `ANM#000065` Giraffa camelopardalis; `ANM#000067` Giraffa reticulata; `ANM#000068` Giraffa tippelskirchi; `ANM#000066` Giraffa giraffa | `representative_species_selection` |  |
@@ -94,17 +80,13 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `animal_maned_wolf` | Maned Wolf | `ANM#000042` Chrysocyon brachyurus | `specific_name_interpretation` |  |
 | `animal_ethiopian_wolf` | Ethiopian Wolf | `ANM#000030` Canis simensis | `specific_name_interpretation` |  |
 | `animal_grey_wolf` | Grey Wolf | `ANM#000027` Canis lupus | `specific_name_interpretation` | `FRM#000052` |
-| `animal_alpine_marmot` | Alpine Marmot | `ANM#000092` Marmota marmota | `specific_name_interpretation` |  |
-| `animal_steppe_marmots` | Steppe Marmots | `ANM#000091` Marmota bobak | `representative_species_selection` |  |
+| `ANM#000181` | Marmots | `ANM#000092` Marmota marmota; `ANM#000091` Marmota bobak | `optional_scientific_reference` |  |
 | `animal_regional_mussels_and_oysters` | Regional Mussels and Oysters | `ANM#000099` Mytilus edulis; `ANM#000110` Ostrea edulis | `representative_species_selection` |  |
 | `animal_tropical_mollusks_and_bivalves` | Tropical Mollusks and Bivalves | `ANM#000157` Tridacna maxima; `ANM#000127` Pinctada margaritifera | `representative_species_selection` |  |
 | `animal_howler_monkey` | Howler Monkey | `ANM#000003` Alouatta seniculus | `specific_name_interpretation` |  |
 | `animal_okapi` | Okapi | `ANM#000105` Okapia johnstoni | `specific_name_interpretation` |  |
 | `animal_giant_anteater` | Giant Anteater | `ANM#000098` Myrmecophaga tridactyla | `specific_name_interpretation` |  |
-| `animal_american_black_bear` | American Black Bear | `ANM#000158` Ursus americanus | `specific_name_interpretation` |  |
-| `animal_asian_black_bear` | Asian Black Bear | `ANM#000161` Ursus thibetanus | `specific_name_interpretation` |  |
-| `animal_brown_bear` | Brown Bear | `ANM#000159` Ursus arctos | `specific_name_interpretation` |  |
-| `animal_coastal_and_sea_ice_polar_bear` | Coastal and Sea-Ice Polar Bear | `ANM#000160` Ursus maritimus | `specific_name_interpretation` |  |
+| `ANM#000182` | Bears | `ANM#000158` Ursus americanus; `ANM#000161` Ursus thibetanus; `ANM#000159` Ursus arctos; `ANM#000160` Ursus maritimus | `optional_scientific_reference` |  |
 | `animal_estuarine_oysters_and_other_bivalves` | Estuarine Oysters and Other Bivalves | `ANM#000044` Crassostrea virginica | `representative_species_selection` |  |
 | `animal_ocellated_turkey` | Ocellated Turkey | `ANM#000094` Meleagris ocellata | `specific_name_interpretation` |  |
 | `animal_indian_peafowl` | Indian Peafowl | `ANM#000124` Pavo cristatus | `specific_name_interpretation` |  |
@@ -115,41 +97,28 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `animal_perentie` | Perentie | `ANM#000162` Varanus giganteus | `specific_name_interpretation` |  |
 | `animal_prairie_dog` | Prairie Dog | `ANM#000047` Cynomys ludovicianus | `specific_name_interpretation` |  |
 | `animal_island_petrels_and_albatrosses` | Island Petrels and Albatrosses | `ANM#000089` Macronectes giganteus; `ANM#000049` Diomedea exulans | `representative_species_selection` |  |
-| `animal_island_coastal_penguins` | Island Coastal Penguins | `ANM#000004` Aptenodytes patagonicus | `representative_species_selection` |  |
-| `animal_southern_regional_penguins` | Southern Regional Penguins | `ANM#000134` Pygoscelis adeliae; `ANM#000135` Pygoscelis antarcticus | `representative_species_selection` |  |
-| `animal_pudu` | Pudu | `ANM#000131` Pudu puda | `specific_name_interpretation` |  |
+| `ANM#000183` | Penguins | `ANM#000004` Aptenodytes patagonicus; `ANM#000134` Pygoscelis adeliae; `ANM#000135` Pygoscelis antarcticus | `optional_scientific_reference` |  |
 | `animal_puma` | Puma | `ANM#000132` Puma concolor | `specific_name_interpretation` |  |
-| `animal_bearded_vulture` | Bearded Vulture | `ANM#000072` Gypaetus barbatus | `specific_name_interpretation` |  |
-| `animal_bearded_vulture_in_suitable_mountains` | Bearded Vulture in Suitable Mountains | `ANM#000072` Gypaetus barbatus | `specific_name_interpretation` |  |
+| `ANM#000184` | Bearded vultures | `ANM#000072` Gypaetus barbatus | `optional_scientific_reference` |  |
 | `animal_chamois` | Chamois | `ANM#000142` Rupicapra rupicapra | `specific_name_interpretation` |  |
 | `animal_reindeer` | Reindeer | `ANM#000136` Rangifer tarandus | `specific_name_interpretation` |  |
 | `animal_eurasian_saiga` | Eurasian Saiga | `ANM#000143` Saiga tatarica | `specific_name_interpretation` |  |
 | `animal_regional_sardines` | Regional Sardines | `ANM#000144` Sardina pilchardus; `ANM#000145` Sardinops sagax | `representative_species_selection` |  |
 | `animal_regional_rattlesnakes` | Regional Rattlesnakes | `ANM#000045` Crotalus atrox; `ANM#000046` Crotalus cerastes | `representative_species_selection` |  |
 | `animal_himalayan_tahr` | Himalayan Tahr | `ANM#000073` Hemitragus jemlahicus | `specific_name_interpretation` |  |
-| `animal_regional_amazonian_or_central_american_tapir` | Regional Amazonian or Central American Tapir | `ANM#000154` Tapirus terrestris; `ANM#000152` Tapirella bairdii | `representative_species_selection` |  |
-| `animal_malayan_tapir` | Malayan Tapir | `ANM#000153` Acrocodia indica | `specific_name_interpretation` |  |
+| `ANM#000185` | Tapirs | `ANM#000154` Tapirus terrestris; `ANM#000152` Tapirella bairdii; `ANM#000153` Acrocodia indica | `optional_scientific_reference` |  |
 | `animal_tiger` | Tiger | `ANM#000119` Panthera tigris | `specific_name_interpretation` |  |
 | `animal_desert_tortoise` | Desert Tortoise | `ANM#000069` Gopherus agassizii | `specific_name_interpretation` |  |
 | `animal_sea_turtles` | Sea Turtles | `ANM#000040` Chelonia mydas; `ANM#000057` Eretmochelys imbricata | `representative_species_selection` |  |
 | `animal_regional_land_tortoises` | Regional Land Tortoises | `ANM#000041` Chersina angulata | `representative_species_selection` |  |
 | `animal_regional_wallabies` | Regional Wallabies | `ANM#000100` Macropus agilis; `ANM#000101` Macropus eugenii | `representative_species_selection` |  |
-| `animal_white_tailed_deer` | White-Tailed Deer | `ANM#000104` Odocoileus virginianus | `specific_name_interpretation` |  |
-| `animal_mesoamerican_white_tailed_deer` | Mesoamerican White-Tailed Deer | `ANM#000104` Odocoileus virginianus | `specific_name_interpretation` |  |
-| `animal_pampas_deer` | Pampas Deer | `ANM#000115` Ozotoceros bezoarticus | `specific_name_interpretation` |  |
 | `animal_vicuna` | Vicuna | `ANM#000164` Vicugna vicugna | `specific_name_interpretation` | `FRM#000060` |
 | `animal_andean_viscacha` | Andean Viscacha | `ANM#000076` Lagidium peruanum | `specific_name_interpretation` |  |
 | `animal_rock_dwelling_viscachas` | Rock-Dwelling Viscachas | `ANM#000077` Lagidium viscacia | `specific_name_interpretation` |  |
 | `animal_wild_yak` | Wild Yak | `ANM#000016` Bos grunniens mutus | `specific_name_interpretation` | `FRM#000062` |
-| `animal_corsac_fox` | Corsac Fox | `ANM#000165` Vulpes corsac | `specific_name_interpretation` |  |
-| `animal_culpeo_fox` | Culpeo Fox | `ANM#000087` Lycalopex culpaeus | `specific_name_interpretation` |  |
-| `animal_culpeo_fox_in_arid_habitats` | Culpeo Fox in Arid Habitats | `ANM#000087` Lycalopex culpaeus | `specific_name_interpretation` |  |
-| `animal_fennec_fox` | Fennec Fox | `ANM#000167` Vulpes zerda | `specific_name_interpretation` |  |
-| `animal_arctic_fox` | Arctic Fox | `ANM#000166` Vulpes lagopus | `specific_name_interpretation` |  |
+| `ANM#000169` | Foxes | `ANM#000165` Vulpes corsac; `ANM#000087` Lycalopex culpaeus; `ANM#000167` Vulpes zerda; `ANM#000166` Vulpes lagopus | `optional_scientific_reference` |  |
 | `animal_golden_eagle` | Golden Eagle | `ANM#000005` Aquila chrysaetos | `specific_name_interpretation` |  |
-| `animal_alpine_ibex` | Alpine Ibex | `ANM#000033` Capra ibex | `specific_name_interpretation` |  |
-| `animal_walia_ibex` | Walia Ibex | `ANM#000035` Capra walie | `specific_name_interpretation` |  |
-| `animal_siberian_ibex` | Siberian Ibex | `ANM#000034` Capra sibirica | `specific_name_interpretation` |  |
+| `ANM#000186` | Ibexes | `ANM#000033` Capra ibex; `ANM#000035` Capra walie; `ANM#000034` Capra sibirica | `optional_scientific_reference` |  |
 | `animal_greater_rhea` | Greater Rhea | `ANM#000141` Rhea americana | `specific_name_interpretation` |  |
 | `animal_wildebeest` | Wildebeest | `ANM#000043` Connochaetes taurinus | `specific_name_interpretation` |  |
 | `animal_arabian_oryx` | Arabian Oryx | `ANM#000107` Oryx leucoryx | `specific_name_interpretation` |  |

@@ -16,10 +16,10 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.1.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.1.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.2.0"` |
 | `kind` | `string` | 1/1 | Discriminador que identifica el documento o categoría del candidato. | `"biological_taxon_catalog"` |
-| `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"taxonomy_names_verified_representative_choices_and_ecology_pending"` |
+| `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"optional_scientific_background_not_gameplay_entity_catalog"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
 | `supportedLanguages` | `array<string>` | 1/1 | Códigos de idioma disponibles. | `["en", "es"]` |
 | `runtimePolicy` | `object` | 1/1 | Reglas y restricciones para interpretar esta guía. | `—` |
@@ -43,6 +43,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `lineagePolicy` | `string` | 1/1 | La ascendencia documentada es independiente de transformaciones automáticas del juego. | `"Relations summarize evidence, not automatic gameplay transitions. Hybrid and introgression edges are not domest…` |
 | `varietyPolicy` | `string` | 1/1 | Distingue especies, formas de referencia, grupos de cultivo y cultivares/razas con nombre. | `"Cultivar groups are not species, botanical varieties or named cultivars. No modern named cultivars or animal br…` |
 | `floraClassification` | `string` | 1/1 | Aclara que flora incluye algas y hongos liquenizados clasificados explícitamente. | `"The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG…` |
+| `gameplayIdentity` | `string` | 1/1 | El catálogo científico es referencia opcional; las identidades del juego están en las guías generales. | `"Gameplay identity is defined by the general plant/animal guide. Scientific names are optional background and ne…` |
 
 ### `$.taxa[]`
 
@@ -157,7 +158,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `biologicalFormCount` | `integer` | 1/1 | Cantidad de formas biológicas de referencia en este catálogo. | `49` |
 | `lineageRelationCount` | `integer` | 1/1 | Cantidad de relaciones de linaje de referencia registradas. | `13` |
 | `excludedLineageRelationCount` | `integer` | 1/1 | Cantidad de supuestos de ascendencia directa explícitamente descartados. | `0` |
-| `sourceCandidateCount` | `integer` | 1/1 | Cantidad de candidatos originales de especies/grupos cubiertos. | `129` |
+| `sourceCandidateCount` | `integer` | 1/1 | Cantidad de candidatos actuales con referencias científicas opcionales. | `109` |
 | `cropCandidateCount` | `integer` | 1/1 | Cantidad de grupos agrícolas cubiertos. | `21` |
 
 ## Ejemplo de documento completo con arreglos repetidos reducidos
@@ -166,10 +167,10 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 
 ```json
 {
-  "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "schemaVersion": "1.1.0",
+  "contentVersion": "0.2.0",
   "kind": "biological_taxon_catalog",
-  "status": "taxonomy_names_verified_representative_choices_and_ecology_pending",
+  "status": "optional_scientific_background_not_gameplay_entity_catalog",
   "defaultLanguage": "en",
   "supportedLanguages": [
     "en",
@@ -183,7 +184,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
     "resourceInheritance": "Candidate resource bindings do not automatically transfer to every selected taxon or form.",
     "lineagePolicy": "Relations summarize evidence, not automatic gameplay transitions. Hybrid and introgression edges are not domestication edges. An extant species may only proxy an ancestral population.",
     "varietyPolicy": "Cultivar groups are not species, botanical varieties or named cultivars. No modern named cultivars or animal breeds are invented.",
-    "floraClassification": "The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG/FNG prefixes remain explicit."
+    "floraClassification": "The plants folder includes source flora, including algae and lichenized fungi. Their scientific kingdom and ALG/FNG prefixes remain explicit.",
+    "gameplayIdentity": "Gameplay identity is defined by the general plant/animal guide. Scientific names are optional background and never mandatory unlock requirements."
   },
   "taxa": [
     {
@@ -291,7 +293,7 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
     "biologicalFormCount": 49,
     "lineageRelationCount": 13,
     "excludedLineageRelationCount": 0,
-    "sourceCandidateCount": 129,
+    "sourceCandidateCount": 109,
     "cropCandidateCount": 21
   }
 }

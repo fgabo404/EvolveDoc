@@ -16,8 +16,8 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
-| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.3.0"` |
-| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.4.0"` |
+| `schemaVersion` | `string` | 1/1 | Versión del contrato estructural, no del lanzamiento del juego. | `"1.4.0"` |
+| `contentVersion` | `string` | 1/1 | Versión del contenido del catálogo y del balance provisional. | `"0.5.0"` |
 | `kind` | `string` | 1/1 | Discriminador que identifica el documento o categoría del candidato. | `"world_catalog_design_guide"` |
 | `status` | `string` | 1/1 | Madurez, revisión o estado de investigación del ejemplo; depende del objeto contenedor. | `"source_converted_requires_species_resolution"` |
 | `defaultLanguage` | `string` | 1/1 | Idioma predeterminado para el texto visible. | `"en"` |
@@ -31,7 +31,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `regionalVariants` | `array<object>` | 1/1 | Variantes regionales/de hábitat relacionadas con su bioma. | `—` |
 | `resourceOccurrences` | `array<object>` | 1/1 | Apariciones de la fuente relacionadas con candidatos, variantes y métodos de extracción. | `—` |
 | `generationPipeline` | `array<string>` | 1/1 | Pasos ordenados de diseño, no código ejecutable del generador. | `["generate_terrain_water_static_climate_and_biogeographic_regions", "assign_biomes_and_geographic_modifiers", "g…` |
-| `speciesCompletionChecklist` | `array<string>` | 1/1 | Tareas de revisión antes de aprobar una definición candidata. | `["resolve_to_individual_species_or_explicit_game_taxon", "verify_scientific_name_and_native_distribution", "spli…` |
+| `speciesCompletionChecklist` | `array<string>` | 1/1 | Tareas de revisión antes de aprobar una definición candidata. | `["choose_general_gameplay_entity_and_stable_id", "preserve_regional_habitat_rules_and_source_provenance", "group…` |
 | `reviewIssues` | `array<object>` | 1/1 | Contradicciones de la fuente y preguntas de diseño pendientes. | `—` |
 | `sourceDistributionNotes` | `array<string>` | 1/1 | Notas originales de distribución, no especies adicionales. | `["Los siete biomas son categorías de interfaz; cada subtipo mantiene clima, terreno, hábitat y región propios.",…` |
 | `agricultureSectionSource` | `array<string>` | 1/1 | Sección agrícola original conservada para trazabilidad. | `["5. Catálogo agrícola y vegetal inicial", "Los recursos agrícolas deben distinguir tres estados conceptuales: (…` |
@@ -57,16 +57,17 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | Campo | Tipo JSON actual | Presencia | Significado | Valor de muestra |
 | --- | --- | --- | --- | --- |
 | `loadAsGameDefinitions` | `boolean` | 1/1 | False impide tratar esta guía como definiciones jugables. | `false` |
-| `reason` | `string` | 1/1 | Explicación de la restricción de ejecución. | `"This is a structured design guide, not a scientifically verified species catalog or executable world generator."` |
+| `reason` | `string` | 1/1 | Explicación de la restricción de ejecución. | `"This is a gameplay design guide, not an executable world generator. General categories are valid; scientific sp…` |
 | `unknownValues` | `string` | 1/1 | Aclara que null pendiente no equivale a cero o sin restricciones. | `"null means unresolved; it never means zero, none, unrestricted or approved."` |
 | `visibleText` | `string` | 1/1 | Política que distingue texto visible traducido y procedencia original. | `"name and description use language maps; sourceText and sourceLabel preserve verbatim Spanish provenance and mus…` |
 | `flatCollections` | `string` | 1/1 | Política de colecciones al mismo nivel relacionadas mediante IDs. | `"All definitions are stored in flat collections and connected by stable IDs."` |
-| `preserveSpeciesResearch` | `string` | 1/1 | Regla para conservar identidad de investigación al precisar taxonomía. | `"IDs must survive later taxonomy refinement or receive explicit alias/migration rules."` |
+| `preserveSpeciesResearch` | `string` | 1/1 | Regla para conservar identidad de investigación al precisar taxonomía. | `"Gameplay entity IDs remain stable. Generalized sources keep explicit aliases and provenance; scientific taxonom…` |
 | `wildAndDomestic` | `string` | 1/1 | Regla que separa presencia silvestre, cultivo, domesticación y producción. | `"Wild presence, cultivation knowledge, domestication and established crop production are separate states."` |
 | `distribution` | `string` | 1/1 | Regla que exige regiones nativas y hábitats verificados para aparición. | `"Biome compatibility does not imply universal native distribution."` |
 | `geology` | `string` | 1/1 | Regla que controla minerales independientemente de etiquetas de bioma. | `"Mineral distribution is controlled by geology, not mandatory biome resource lists."` |
 | `miningStages` | `string` | 1/1 | Interpretación de métodos de extracción sin inventar épocas exclusivas. | `"Extraction methods describe capabilities, not exclusive material eras."` |
 | `scope` | `string` | 1/1 | Ámbito de investigación/efecto o límite descriptivo de runtimePolicy; depende del objeto. | `"Mechanized mining and seabed nodules remain future content outside the initial medieval scope."` |
+| `biologicalGranularity` | `string` | 1/1 | La aparición mundial usa categorías del juego y no especies científicas obligatorias. | `"World occurrences reference gameplay categories; optional scientific catalogs do not split entities or expand s…` |
 
 ### `$.worldRules`
 
@@ -159,6 +160,7 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | `spawnProbability` | `null` | 485/485 | Probabilidad de aparición pendiente; null no es cero ni aparición segura. | `null` |
 | `guaranteedPresence` | `boolean` | 485/485 | Indica presencia garantizada; false no implica imposibilidad. | `false` |
 | `runtimeEnabled` | `boolean` | 485/485 | Indica si la aparición puede usarse en generación; actualmente false. | `false` |
+| `sourceDefinitionId` | `string` | 92/485 | Identidad original antes de generalizar; definitionId apunta a la categoría vigente del juego. | `"animal_mesoamerican_white_tailed_deer"` |
 
 ### `$.reviewIssues[]`
 
@@ -175,8 +177,8 @@ Un campo observado solo como `null` todavía no tiene estructura interna impleme
 | --- | --- | --- | --- | --- |
 | `biomeCount` | `integer` | 1/1 | Cantidad de biomas. | `7` |
 | `regionalVariantCount` | `integer` | 1/1 | Cantidad de variantes regionales. | `27` |
-| `plantCandidateCount` | `integer` | 1/1 | Cantidad de candidatos vegetales regionales. | `129` |
-| `animalCandidateCount` | `integer` | 1/1 | Cantidad de candidatos animales. | `134` |
+| `plantCandidateCount` | `integer` | 1/1 | Cantidad de candidatos vegetales regionales. | `109` |
+| `animalCandidateCount` | `integer` | 1/1 | Cantidad de candidatos animales. | `101` |
 | `geologicalCandidateCount` | `integer` | 1/1 | Cantidad de candidatos geológicos. | `57` |
 | `sourceOccurrenceCount` | `integer` | 1/1 | Cantidad de apariciones de la fuente. | `485` |
 | `agriculturalCropCandidateCount` | `integer` | 1/1 | Cantidad de candidatos agrícolas. | `21` |
@@ -224,8 +226,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
 
 ```json
 {
-  "schemaVersion": "1.3.0",
-  "contentVersion": "0.4.0",
+  "schemaVersion": "1.4.0",
+  "contentVersion": "0.5.0",
   "kind": "world_catalog_design_guide",
   "status": "source_converted_requires_species_resolution",
   "defaultLanguage": "en",
@@ -243,16 +245,17 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
   },
   "runtimePolicy": {
     "loadAsGameDefinitions": false,
-    "reason": "This is a structured design guide, not a scientifically verified species catalog or executable world generator.",
+    "reason": "This is a gameplay design guide, not an executable world generator. General categories are valid; scientific species resolution is optional.",
     "unknownValues": "null means unresolved; it never means zero, none, unrestricted or approved.",
     "visibleText": "name and description use language maps; sourceText and sourceLabel preserve verbatim Spanish provenance and must not be displayed as localized game text.",
     "flatCollections": "All definitions are stored in flat collections and connected by stable IDs.",
-    "preserveSpeciesResearch": "IDs must survive later taxonomy refinement or receive explicit alias/migration rules.",
+    "preserveSpeciesResearch": "Gameplay entity IDs remain stable. Generalized sources keep explicit aliases and provenance; scientific taxonomy does not split research identities automatically.",
     "wildAndDomestic": "Wild presence, cultivation knowledge, domestication and established crop production are separate states.",
     "distribution": "Biome compatibility does not imply universal native distribution.",
     "geology": "Mineral distribution is controlled by geology, not mandatory biome resource lists.",
     "miningStages": "Extraction methods describe capabilities, not exclusive material eras.",
-    "scope": "Mechanized mining and seabed nodules remain future content outside the initial medieval scope."
+    "scope": "Mechanized mining and seabed nodules remain future content outside the initial medieval scope.",
+    "biologicalGranularity": "World occurrences reference gameplay categories; optional scientific catalogs do not split entities or expand spawns. Original sourceDefinitionId/sourceText preserve provenance."
   },
   "worldRules": {
     "hexagonalMap": true,
@@ -356,15 +359,16 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
     "validate_alternative_development_trade_and_expansion_paths"
   ],
   "speciesCompletionChecklist": [
-    "resolve_to_individual_species_or_explicit_game_taxon",
-    "verify_scientific_name_and_native_distribution",
-    "split_regional_groups_and_distinguish_wild_ancestors",
+    "choose_general_gameplay_entity_and_stable_id",
+    "preserve_regional_habitat_rules_and_source_provenance",
+    "group_cosmetic_or_scientific_variants_without_gameplay_differences",
+    "retain_useful_wild_and_domestic_distinctions",
     "define_ecological_compatibility",
     "define_propagation_and_cultivation_or_animal_management",
     "define_material_resources_and_products",
     "define_technology_requirements_and_scope",
-    "define_domestication_criteria_and_temporal_scope",
-    "define_balance_and_validation_scenarios"
+    "define_domestication_criteria_where_relevant",
+    "defer_quantities_durations_and_balance_until_simulation_design"
   ],
   "reviewIssues": [
     {
@@ -422,8 +426,8 @@ JSON válido copiado de registros reales. Los arreglos repetidos de objetos se r
   "summary": {
     "biomeCount": 7,
     "regionalVariantCount": 27,
-    "plantCandidateCount": 129,
-    "animalCandidateCount": 134,
+    "plantCandidateCount": 109,
+    "animalCandidateCount": 101,
     "geologicalCandidateCount": 57,
     "sourceOccurrenceCount": 485,
     "agriculturalCropCandidateCount": 21

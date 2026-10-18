@@ -1,8 +1,10 @@
-# Biological identities and relationships
+# Optional scientific reference
+
+**Gameplay entities are general categories. This scientific reference does not require splitting foxes, bears or oaks into species.**
 
 [JSON](plants.biological.catalog.json) · [Model and boundaries](../../lang/en/biology.md)
 
-Scientific names matched to the provider; representative choices, native ranges, habitats and outputs still need review. Legacy candidate IDs retain source provenance. No table authorizes initial spawning or gameplay transformations. Related reference forms are not a wild-spawn list.
+Scientific names matched to the provider; representative choices, native ranges, habitats and outputs still need review. Retired source IDs are preserved through explicit aliases. No table authorizes initial spawning or gameplay transformations. Related reference forms are not a wild-spawn list.
 
 ## Coverage
 
@@ -12,23 +14,18 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `biologicalFormCount` | 49 |
 | `lineageRelationCount` | 13 |
 | `excludedLineageRelationCount` | 0 |
-| `sourceCandidateCount` | 129 |
+| `sourceCandidateCount` | 109 |
 | `cropCandidateCount` | 21 |
 
 ## Original labels and concrete selection
 
 | Candidate | Reference name | Selected taxa | Selection | Related forms |
 | --- | --- | --- | --- | --- |
-| `plant_dwarf_birch` | Dwarf Birch | `PLT#000025` Betula nana | `specific_name_interpretation` |  |
-| `plant_birches` | Birches | `PLT#000026` Betula pendula; `PLT#000027` Betula pubescens | `representative_species_selection` |  |
-| `plant_african_acacias` | African Acacias | `PLT#000181` Vachellia tortilis; `PLT#000180` Vachellia nilotica | `representative_species_selection` |  |
-| `plant_australian_acacias` | Australian Acacias | `PLT#000002` Acacia aneura; `PLT#000001` Acacia acuminata | `representative_species_selection` |  |
-| `plant_desert_acacias` | Desert Acacias | `PLT#000002` Acacia aneura | `representative_species_selection` |  |
-| `plant_arid_land_acacias` | Arid-Land Acacias | `PLT#000181` Vachellia tortilis | `representative_species_selection` |  |
+| `PLT#000191` | Birches | `PLT#000025` Betula nana; `PLT#000026` Betula pendula; `PLT#000027` Betula pubescens | `optional_scientific_reference` |  |
+| `PLT#000192` | Acacias | `PLT#000181` Vachellia tortilis; `PLT#000180` Vachellia nilotica; `PLT#000002` Acacia aneura; `PLT#000001` Acacia acuminata | `optional_scientific_reference` |  |
 | `plant_wild_olive` | Wild Olive | `PLT#000104` Olea europaea europaea | `specific_name_interpretation` |  |
 | `plant_agaves` | Agaves | `PLT#000010` Agave americana; `PLT#000011` Agave deserti | `representative_species_selection` |  |
-| `plant_american_larch` | American Larch | `PLT#000087` Larix laricina | `specific_name_interpretation` |  |
-| `plant_siberian_larches` | Siberian Larches | `PLT#000088` Larix sibirica; `PLT#000086` Larix gmelinii | `representative_species_selection` |  |
+| `PLT#000193` | Larches | `PLT#000087` Larix laricina; `PLT#000088` Larix sibirica; `PLT#000086` Larix gmelinii | `optional_scientific_reference` |  |
 | `plant_polar_marine_algae` | Polar Marine Algae | `ALG#000005` Palmaria palmata | `representative_species_selection` |  |
 | `plant_tropical_marine_algae` | Tropical Marine Algae | `ALG#000007` Ulva lactuca | `representative_species_selection` |  |
 | `plant_regional_brown_and_red_algae` | Regional Brown and Red Algae | `ALG#000006` Saccharina latissima; `ALG#000005` Palmaria palmata | `representative_species_selection` |  |
@@ -37,18 +34,15 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `plant_xerophytic_shrubs` | Xerophytic Shrubs | `PLT#000166` Tetraena coccinea | `representative_species_selection` |  |
 | `plant_shrubs_and_cushion_plants` | Shrubs and Cushion Plants | `PLT#000014` Androsace tapete | `representative_species_selection` |  |
 | `plant_maples` | Maples | `PLT#000005` Acer saccharum; `PLT#000004` Acer rubrum | `representative_species_selection` |  |
-| `plant_wormwoods` | Wormwoods | `PLT#000017` Artemisia terrae-albae | `specific_name_interpretation` |  |
-| `plant_wormwoods_703907` | Wormwoods | `PLT#000016` Artemisia frigida | `representative_species_selection` |  |
+| `PLT#000194` | Wormwoods | `PLT#000017` Artemisia terrae-albae; `PLT#000016` Artemisia frigida | `optional_scientific_reference` |  |
 | `plant_arctic_blueberries` | Arctic Blueberries | `PLT#000178` Vaccinium uliginosum | `specific_name_interpretation` |  |
 | `plant_hazel` | Hazel | `PLT#000048` Corylus avellana | `specific_name_interpretation` |  |
-| `plant_dry_forest_bamboos` | Dry-Forest Bamboos | `PLT#000054` Dendrocalamus strictus | `representative_species_selection` |  |
-| `plant_asian_tropical_bamboos` | Asian Tropical Bamboos | `PLT#000022` Bambusa bambos | `representative_species_selection` |  |
-| `plant_wild_bananas` | Wild Bananas | `PLT#000098` Musa acuminata | `representative_species_selection` |  |
-| `plant_new_guinea_wild_bananas` | New Guinea Wild Bananas | `PLT#000099` Musa maclayi | `specific_name_interpretation` |  |
+| `PLT#000195` | Bamboos | `PLT#000054` Dendrocalamus strictus; `PLT#000022` Bambusa bambos | `optional_scientific_reference` |  |
+| `PLT#000196` | Wild bananas | `PLT#000098` Musa acuminata; `PLT#000099` Musa maclayi | `optional_scientific_reference` |  |
 | `plant_banksias` | Banksias | `PLT#000023` Banksia attenuata | `specific_name_interpretation` |  |
 | `plant_african_baobab` | African Baobab | `PLT#000007` Adansonia digitata | `specific_name_interpretation` |  |
 | `plant_tundra_berries` | Tundra Berries | `PLT#000179` Vaccinium vitis-idaea; `PLT#000060` Empetrum nigrum | `representative_species_selection` |  |
-| `plant_temperate_kelp_forests` | Temperate Kelp Forests | `ALG#000003` Laminaria hyperborea; `ALG#000004` Macrocystis pyrifera | `representative_species_selection` |  |
+| `PLT#000198` | Kelp | `ALG#000003` Laminaria hyperborea; `ALG#000004` Macrocystis pyrifera; `ALG#000001` Durvillaea antarctica | `optional_scientific_reference` |  |
 | `plant_cape_bulbs_and_geophytes` | Cape Bulbs and Geophytes | `PLT#000186` Watsonia borbonica | `specific_name_interpretation` |  |
 | `plant_wild_cacao` | Wild Cacao | `PLT#000168` Theobroma cacao | `specific_name_interpretation` | `FRM#000028` |
 | `plant_south_american_cacti` | South American Cacti | `PLT#000057` Leucostele atacamensis atacamensis | `representative_species_selection` |  |
@@ -59,14 +53,12 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `plant_coigue` | Coigue | `PLT#000101` Nothofagus dombeyi | `specific_name_interpretation` |  |
 | `plant_patagonian_tussock_grasses` | Patagonian Tussock Grasses | `PLT#000068` Festuca gracillima | `representative_species_selection` |  |
 | `plant_edelweiss` | Edelweiss | `PLT#000092` Leontopodium nivale alpinum | `specific_name_interpretation` |  |
-| `plant_californian_oaks` | Californian Oaks | `PLT#000132` Quercus agrifolia; `PLT#000134` Quercus douglasii | `representative_species_selection` |  |
+| `PLT#000204` | Oaks | `PLT#000132` Quercus agrifolia; `PLT#000134` Quercus douglasii; `PLT#000137` Quercus robur; `PLT#000136` Quercus petraea; `PLT#000133` Quercus alba; `PLT#000138` Quercus rubra | `optional_scientific_reference` |  |
 | `plant_mountain_junipers` | Mountain Junipers | `PLT#000082` Juniperus indica; `PLT#000083` Juniperus tibetica | `representative_species_selection` |  |
 | `plant_ethiopian_highland_ensete` | Ethiopian Highland Ensete | `PLT#000061` Ensete ventricosum | `specific_name_interpretation` |  |
 | `plant_heaths` | Heaths | `PLT#000062` Erica plukenetii | `representative_species_selection` |  |
 | `plant_cordgrasses_and_saltmarsh_grasses` | Cordgrasses and Saltmarsh Grasses | `PLT#000160` Sporobolus alterniflorus; `PLT#000161` Sporobolus maritimus | `representative_species_selection` |  |
-| `plant_mediterranean_eucalypts` | Mediterranean Eucalypts | `PLT#000064` Eucalyptus marginata | `specific_name_interpretation` |  |
-| `plant_tropical_savanna_eucalypts` | Tropical Savanna Eucalypts | `PLT#000065` Eucalyptus tetrodonta | `specific_name_interpretation` |  |
-| `plant_arid_land_eucalypts` | Arid-Land Eucalypts | `PLT#000063` Eucalyptus camaldulensis | `specific_name_interpretation` |  |
+| `PLT#000197` | Eucalypts | `PLT#000064` Eucalyptus marginata; `PLT#000065` Eucalyptus tetrodonta; `PLT#000063` Eucalyptus camaldulensis | `optional_scientific_reference` |  |
 | `plant_marine_phytoplankton` | Marine Phytoplankton | `ALG#000002` Fragilariopsis cylindrus | `specific_name_interpretation` |  |
 | `plant_wild_beans` | Wild Beans | `PLT#000116` Phaseolus vulgaris; `PLT#000115` Phaseolus lunatus | `representative_species_selection` | `FRM#000015`, `FRM#000016` |
 | `plant_gentians` | Gentians | `PLT#000070` Gentiana acaulis | `specific_name_interpretation` |  |
@@ -79,13 +71,10 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `plant_ichu_grass` | Ichu Grass | `PLT#000080` Jarava ichu | `specific_name_interpretation` |  |
 | `plant_creosote_bushes` | Creosote Bushes | `PLT#000089` Larrea tridentata | `representative_species_selection` |  |
 | `plant_shea_tree` | Shea Tree | `PLT#000183` Vitellaria paradoxa | `specific_name_interpretation` |  |
-| `plant_subantarctic_kelp` | Subantarctic Kelp | `ALG#000001` Durvillaea antarctica | `representative_species_selection` |  |
 | `plant_lenga_beech` | Lenga Beech | `PLT#000102` Nothofagus pumilio | `specific_name_interpretation` |  |
 | `plant_east_african_giant_lobelias` | East African Giant Lobelias | `PLT#000093` Lobelia deckenii | `specific_name_interpretation` |  |
-| `plant_lichens` | Lichens | `FNG#000001` Cladonia rangiferina; `FNG#000002` Usnea antarctica | `representative_species_selection` |  |
-| `plant_reindeer_lichens` | Reindeer Lichens | `FNG#000001` Cladonia rangiferina | `representative_species_selection` |  |
-| `plant_tropical_mangroves` | Tropical Mangroves | `PLT#000142` Rhizophora mucronata; `PLT#000019` Avicennia marina | `representative_species_selection` |  |
-| `plant_red_mangrove_and_other_native_mangroves` | Red Mangrove and Other Native Mangroves | `PLT#000141` Rhizophora mangle | `representative_species_selection` |  |
+| `PLT#000199` | Lichens | `FNG#000001` Cladonia rangiferina; `FNG#000002` Usnea antarctica | `optional_scientific_reference` |  |
+| `PLT#000200` | Mangroves | `PLT#000142` Rhizophora mucronata; `PLT#000019` Avicennia marina; `PLT#000141` Rhizophora mangle | `optional_scientific_reference` |  |
 | `plant_manzanitas` | Manzanitas | `PLT#000015` Arctostaphylos manzanita | `representative_species_selection` |  |
 | `plant_mesquites` | Mesquites | `PLT#000129` Prosopis glandulosa; `PLT#000130` Prosopis juliflora | `representative_species_selection` |  |
 | `plant_cloudberry` | Cloudberry | `PLT#000144` Rubus chamaemorus | `specific_name_interpretation` |  |
@@ -111,27 +100,20 @@ Scientific names matched to the provider; representative choices, native ranges,
 | `plant_regional_seagrasses` | Regional Seagrasses | `PLT#000167` Thalassia testudinum; `PLT#000053` Cymodocea rotundata | `representative_species_selection` |  |
 | `plant_subantarctic_grasses` | Subantarctic Grasses | `PLT#000125` Poa flabellata | `representative_species_selection` |  |
 | `plant_pequi` | Pequi | `PLT#000033` Caryocar brasiliense | `specific_name_interpretation` |  |
-| `plant_scots_pine` | Scots Pine | `PLT#000123` Pinus sylvestris | `specific_name_interpretation` |  |
-| `plant_mountain_pines` | Mountain Pines | `PLT#000122` Pinus mugo | `specific_name_interpretation` |  |
-| `plant_cushion_plants` | Cushion Plants | `PLT#000021` Azorella selago | `representative_species_selection` |  |
-| `plant_andean_cushion_plants` | Andean Cushion Plants | `PLT#000020` Azorella compacta | `representative_species_selection` |  |
+| `PLT#000201` | Pines | `PLT#000123` Pinus sylvestris; `PLT#000122` Pinus mugo | `optional_scientific_reference` |  |
+| `PLT#000202` | Cushion plants | `PLT#000021` Azorella selago; `PLT#000020` Azorella compacta | `optional_scientific_reference` |  |
 | `plant_atacama_coastal_fog_plants` | Atacama Coastal Fog Plants | `PLT#000169` Tillandsia landbeckii | `representative_species_selection` |  |
 | `plant_estuarine_halophytes` | Estuarine Halophytes | `PLT#000147` Salicornia europaea | `representative_species_selection` |  |
 | `plant_proteas` | Proteas | `PLT#000131` Protea repens | `specific_name_interpretation` |  |
-| `plant_white_spruce` | White Spruce | `PLT#000119` Picea glauca | `specific_name_interpretation` |  |
-| `plant_black_spruce` | Black Spruce | `PLT#000120` Picea mariana | `specific_name_interpretation` |  |
-| `plant_eurasian_spruces` | Eurasian Spruces | `PLT#000118` Picea abies; `PLT#000121` Picea obovata | `representative_species_selection` |  |
+| `PLT#000203` | Spruces | `PLT#000119` Picea glauca; `PLT#000120` Picea mariana; `PLT#000118` Picea abies; `PLT#000121` Picea obovata | `optional_scientific_reference` |  |
 | `plant_queuna_trees` | Queuna Trees | `PLT#000127` Polylepis tarapacana; `PLT#000126` Polylepis incana | `representative_species_selection` |  |
 | `plant_soapbark_tree` | Soapbark Tree | `PLT#000139` Quillaja saponaria | `specific_name_interpretation` |  |
 | `plant_african_raffia_palms` | African Raffia Palms | `PLT#000140` Raphia hookeri | `representative_species_selection` |  |
 | `plant_restios` | Restios | `PLT#000059` Elegia tectorum | `specific_name_interpretation` |  |
-| `plant_european_oaks` | European Oaks | `PLT#000137` Quercus robur; `PLT#000136` Quercus petraea | `representative_species_selection` |  |
-| `plant_north_american_oaks` | North American Oaks | `PLT#000133` Quercus alba; `PLT#000138` Quercus rubra | `representative_species_selection` |  |
 | `plant_asian_oaks_and_maples` | Asian Oaks and Maples | `PLT#000135` Quercus mongolica; `PLT#000003` Acer palmatum | `representative_species_selection` |  |
 | `plant_high_altitude_rhododendrons` | High-Altitude Rhododendrons | `PLT#000143` Rhododendron campanulatum | `specific_name_interpretation` |  |
 | `plant_sonoran_saguaro` | Sonoran Saguaro | `PLT#000032` Carnegiea gigantea | `specific_name_interpretation` |  |
-| `plant_dwarf_willows` | Dwarf Willows | `PLT#000148` Salix arctica | `specific_name_interpretation` |  |
-| `plant_arctic_willows` | Arctic Willows | `PLT#000149` Salix polaris | `specific_name_interpretation` |  |
+| `PLT#000205` | Willows | `PLT#000148` Salix arctica; `PLT#000149` Salix polaris | `optional_scientific_reference` |  |
 | `plant_saxaul` | Saxaul | `PLT#000076` Haloxylon ammodendron | `representative_species_selection` |  |
 | `plant_giant_groundsels` | Giant Groundsels | `PLT#000056` Dendrosenecio kilimanjari; `PLT#000055` Dendrosenecio keniodendron | `representative_species_selection` |  |
 | `plant_african_wild_sorghums` | African Wild Sorghums | `PLT#000158` Sorghum arundinaceum | `specific_name_interpretation` |  |

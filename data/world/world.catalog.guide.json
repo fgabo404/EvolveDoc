@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.3.0",
-  "contentVersion": "0.4.0",
+  "schemaVersion": "1.4.0",
+  "contentVersion": "0.5.0",
   "kind": "world_catalog_design_guide",
   "status": "source_converted_requires_species_resolution",
   "defaultLanguage": "en",
@@ -18,16 +18,17 @@
   },
   "runtimePolicy": {
     "loadAsGameDefinitions": false,
-    "reason": "This is a structured design guide, not a scientifically verified species catalog or executable world generator.",
+    "reason": "This is a gameplay design guide, not an executable world generator. General categories are valid; scientific species resolution is optional.",
     "unknownValues": "null means unresolved; it never means zero, none, unrestricted or approved.",
     "visibleText": "name and description use language maps; sourceText and sourceLabel preserve verbatim Spanish provenance and must not be displayed as localized game text.",
     "flatCollections": "All definitions are stored in flat collections and connected by stable IDs.",
-    "preserveSpeciesResearch": "IDs must survive later taxonomy refinement or receive explicit alias/migration rules.",
+    "preserveSpeciesResearch": "Gameplay entity IDs remain stable. Generalized sources keep explicit aliases and provenance; scientific taxonomy does not split research identities automatically.",
     "wildAndDomestic": "Wild presence, cultivation knowledge, domestication and established crop production are separate states.",
     "distribution": "Biome compatibility does not imply universal native distribution.",
     "geology": "Mineral distribution is controlled by geology, not mandatory biome resource lists.",
     "miningStages": "Extraction methods describe capabilities, not exclusive material eras.",
-    "scope": "Mechanized mining and seabed nodules remain future content outside the initial medieval scope."
+    "scope": "Mechanized mining and seabed nodules remain future content outside the initial medieval scope.",
+    "biologicalGranularity": "World occurrences reference gameplay categories; optional scientific catalogs do not split entities or expand spawns. Original sourceDefinitionId/sourceText preserve provenance."
   },
   "worldRules": {
     "hexagonalMap": true,
@@ -569,7 +570,7 @@
     },
     {
       "id": "occurrence_0010",
-      "definitionId": "animal_mesoamerican_white_tailed_deer",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_american",
@@ -578,11 +579,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_mesoamerican_white_tailed_deer"
     },
     {
       "id": "occurrence_0011",
-      "definitionId": "animal_regional_amazonian_or_central_american_tapir",
+      "definitionId": "ANM#000185",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_american",
@@ -591,7 +593,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_regional_amazonian_or_central_american_tapir"
     },
     {
       "id": "occurrence_0012",
@@ -855,7 +858,7 @@
     },
     {
       "id": "occurrence_0032",
-      "definitionId": "animal_african_savanna_elephant_in_dry_forest_mosaics",
+      "definitionId": "ANM#000176",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_african",
@@ -864,7 +867,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_african_savanna_elephant_in_dry_forest_mosaics"
     },
     {
       "id": "occurrence_0033",
@@ -881,7 +885,7 @@
     },
     {
       "id": "occurrence_0034",
-      "definitionId": "animal_baboons",
+      "definitionId": "ANM#000172",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_african",
@@ -890,11 +894,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_baboons"
     },
     {
       "id": "occurrence_0035",
-      "definitionId": "animal_african_forest_elephant",
+      "definitionId": "ANM#000176",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_african",
@@ -903,11 +908,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_african_forest_elephant"
     },
     {
       "id": "occurrence_0036",
-      "definitionId": "animal_regional_antelopes",
+      "definitionId": "ANM#000171",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_african",
@@ -916,7 +922,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_regional_antelopes"
     },
     {
       "id": "occurrence_0037",
@@ -972,7 +979,7 @@
     },
     {
       "id": "occurrence_0041",
-      "definitionId": "plant_african_acacias",
+      "definitionId": "PLT#000192",
       "kind": "plant",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_african",
@@ -981,7 +988,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_african_acacias"
     },
     {
       "id": "occurrence_0042",
@@ -1128,7 +1136,7 @@
     },
     {
       "id": "occurrence_0053",
-      "definitionId": "animal_asian_elephant",
+      "definitionId": "ANM#000177",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_asian",
@@ -1137,7 +1145,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_asian_elephant"
     },
     {
       "id": "occurrence_0054",
@@ -1167,7 +1176,7 @@
     },
     {
       "id": "occurrence_0056",
-      "definitionId": "animal_chital",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_asian",
@@ -1176,7 +1185,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_chital"
     },
     {
       "id": "occurrence_0057",
@@ -1193,7 +1203,7 @@
     },
     {
       "id": "occurrence_0058",
-      "definitionId": "animal_asian_elephant_in_suitable_forests",
+      "definitionId": "ANM#000177",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_asian",
@@ -1202,11 +1212,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_asian_elephant_in_suitable_forests"
     },
     {
       "id": "occurrence_0059",
-      "definitionId": "animal_malayan_tapir",
+      "definitionId": "ANM#000185",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_asian",
@@ -1215,11 +1226,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_malayan_tapir"
     },
     {
       "id": "occurrence_0060",
-      "definitionId": "plant_wild_bananas",
+      "definitionId": "PLT#000196",
       "kind": "plant",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_asian",
@@ -1228,7 +1240,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_wild_bananas"
     },
     {
       "id": "occurrence_0061",
@@ -1258,7 +1271,7 @@
     },
     {
       "id": "occurrence_0063",
-      "definitionId": "plant_dry_forest_bamboos",
+      "definitionId": "PLT#000195",
       "kind": "plant",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_asian",
@@ -1267,11 +1280,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_dry_forest_bamboos"
     },
     {
       "id": "occurrence_0064",
-      "definitionId": "plant_asian_tropical_bamboos",
+      "definitionId": "PLT#000195",
       "kind": "plant",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_asian",
@@ -1280,7 +1294,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_asian_tropical_bamboos"
     },
     {
       "id": "occurrence_0065",
@@ -1427,7 +1442,7 @@
     },
     {
       "id": "occurrence_0076",
-      "definitionId": "animal_new_guinea_tree_kangaroos",
+      "definitionId": "ANM#000174",
       "kind": "animal",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_oceanian",
@@ -1436,7 +1451,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_new_guinea_tree_kangaroos"
     },
     {
       "id": "occurrence_0077",
@@ -1479,7 +1495,7 @@
     },
     {
       "id": "occurrence_0080",
-      "definitionId": "plant_new_guinea_wild_bananas",
+      "definitionId": "PLT#000196",
       "kind": "plant",
       "biomeId": "tropical_forest",
       "variantId": "tropical_forest_oceanian",
@@ -1488,7 +1504,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_new_guinea_wild_bananas"
     },
     {
       "id": "occurrence_0081",
@@ -1622,7 +1639,7 @@
     },
     {
       "id": "occurrence_0091",
-      "definitionId": "animal_red_deer",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_eurasian",
@@ -1631,11 +1648,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_red_deer"
     },
     {
       "id": "occurrence_0092",
-      "definitionId": "animal_sika_deer",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_eurasian",
@@ -1644,11 +1662,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_sika_deer"
     },
     {
       "id": "occurrence_0093",
-      "definitionId": "animal_wild_boar",
+      "definitionId": "ANM#000180",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_eurasian",
@@ -1657,11 +1676,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_wild_boar"
     },
     {
       "id": "occurrence_0094",
-      "definitionId": "animal_eurasian_wild_boar",
+      "definitionId": "ANM#000180",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_eurasian",
@@ -1670,7 +1690,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_eurasian_wild_boar"
     },
     {
       "id": "occurrence_0095",
@@ -1687,7 +1708,7 @@
     },
     {
       "id": "occurrence_0096",
-      "definitionId": "animal_brown_bear",
+      "definitionId": "ANM#000182",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_eurasian",
@@ -1696,11 +1717,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_brown_bear"
     },
     {
       "id": "occurrence_0097",
-      "definitionId": "animal_asian_black_bear",
+      "definitionId": "ANM#000182",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_eurasian",
@@ -1709,11 +1731,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_asian_black_bear"
     },
     {
       "id": "occurrence_0098",
-      "definitionId": "plant_european_oaks",
+      "definitionId": "PLT#000204",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_eurasian",
@@ -1722,7 +1745,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_european_oaks"
     },
     {
       "id": "occurrence_0099",
@@ -1908,7 +1932,7 @@
     },
     {
       "id": "occurrence_0113",
-      "definitionId": "animal_white_tailed_deer",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_american",
@@ -1917,11 +1941,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_white_tailed_deer"
     },
     {
       "id": "occurrence_0114",
-      "definitionId": "animal_pudu",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_american",
@@ -1930,7 +1955,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_pudu"
     },
     {
       "id": "occurrence_0115",
@@ -1947,7 +1973,7 @@
     },
     {
       "id": "occurrence_0116",
-      "definitionId": "animal_culpeo_fox",
+      "definitionId": "ANM#000169",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_american",
@@ -1956,11 +1982,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_culpeo_fox"
     },
     {
       "id": "occurrence_0117",
-      "definitionId": "animal_american_black_bear",
+      "definitionId": "ANM#000182",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_american",
@@ -1969,11 +1996,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_american_black_bear"
     },
     {
       "id": "occurrence_0118",
-      "definitionId": "animal_huemul",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_american",
@@ -1982,7 +2010,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_huemul"
     },
     {
       "id": "occurrence_0119",
@@ -1999,7 +2028,7 @@
     },
     {
       "id": "occurrence_0120",
-      "definitionId": "plant_north_american_oaks",
+      "definitionId": "PLT#000204",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_american",
@@ -2008,7 +2037,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_north_american_oaks"
     },
     {
       "id": "occurrence_0121",
@@ -2077,7 +2107,7 @@
     },
     {
       "id": "occurrence_0126",
-      "definitionId": "plant_californian_oaks",
+      "definitionId": "PLT#000204",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_american",
@@ -2086,7 +2116,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_californian_oaks"
     },
     {
       "id": "occurrence_0127",
@@ -2194,7 +2225,7 @@
     },
     {
       "id": "occurrence_0135",
-      "definitionId": "animal_regional_small_antelopes",
+      "definitionId": "ANM#000171",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_south_african_and_australian",
@@ -2203,11 +2234,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_regional_small_antelopes"
     },
     {
       "id": "occurrence_0136",
-      "definitionId": "animal_western_grey_kangaroo",
+      "definitionId": "ANM#000174",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_south_african_and_australian",
@@ -2216,11 +2248,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_western_grey_kangaroo"
     },
     {
       "id": "occurrence_0137",
-      "definitionId": "animal_chacma_baboon",
+      "definitionId": "ANM#000172",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_south_african_and_australian",
@@ -2229,7 +2262,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_chacma_baboon"
     },
     {
       "id": "occurrence_0138",
@@ -2324,7 +2358,7 @@
     },
     {
       "id": "occurrence_0145",
-      "definitionId": "plant_mediterranean_eucalypts",
+      "definitionId": "PLT#000197",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_south_african_and_australian",
@@ -2333,7 +2367,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_mediterranean_eucalypts"
     },
     {
       "id": "occurrence_0146",
@@ -2350,7 +2385,7 @@
     },
     {
       "id": "occurrence_0147",
-      "definitionId": "plant_australian_acacias",
+      "definitionId": "PLT#000192",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_south_african_and_australian",
@@ -2359,7 +2394,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_australian_acacias"
     },
     {
       "id": "occurrence_0148",
@@ -2480,7 +2516,7 @@
     },
     {
       "id": "occurrence_0157",
-      "definitionId": "animal_eurasian_moose",
+      "definitionId": "ANM#000170",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2489,11 +2525,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_eurasian_moose"
     },
     {
       "id": "occurrence_0158",
-      "definitionId": "animal_north_american_moose",
+      "definitionId": "ANM#000170",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2502,7 +2539,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_north_american_moose"
     },
     {
       "id": "occurrence_0159",
@@ -2532,7 +2570,7 @@
     },
     {
       "id": "occurrence_0161",
-      "definitionId": "animal_brown_bear",
+      "definitionId": "ANM#000182",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2541,11 +2579,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_brown_bear"
     },
     {
       "id": "occurrence_0162",
-      "definitionId": "animal_american_black_bear",
+      "definitionId": "ANM#000182",
       "kind": "animal",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2554,7 +2593,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_american_black_bear"
     },
     {
       "id": "occurrence_0163",
@@ -2571,7 +2611,7 @@
     },
     {
       "id": "occurrence_0164",
-      "definitionId": "plant_scots_pine",
+      "definitionId": "PLT#000201",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2580,11 +2620,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_scots_pine"
     },
     {
       "id": "occurrence_0165",
-      "definitionId": "plant_black_spruce",
+      "definitionId": "PLT#000203",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2593,11 +2634,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_black_spruce"
     },
     {
       "id": "occurrence_0166",
-      "definitionId": "plant_eurasian_spruces",
+      "definitionId": "PLT#000203",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2606,11 +2648,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_eurasian_spruces"
     },
     {
       "id": "occurrence_0167",
-      "definitionId": "plant_white_spruce",
+      "definitionId": "PLT#000203",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2619,11 +2662,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_white_spruce"
     },
     {
       "id": "occurrence_0168",
-      "definitionId": "plant_siberian_larches",
+      "definitionId": "PLT#000193",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2632,11 +2676,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_siberian_larches"
     },
     {
       "id": "occurrence_0169",
-      "definitionId": "plant_american_larch",
+      "definitionId": "PLT#000193",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2645,11 +2690,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_american_larch"
     },
     {
       "id": "occurrence_0170",
-      "definitionId": "plant_birches",
+      "definitionId": "PLT#000191",
       "kind": "plant",
       "biomeId": "temperate_forest",
       "variantId": "temperate_forest_boreal",
@@ -2658,7 +2704,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_birches"
     },
     {
       "id": "occurrence_0171",
@@ -2792,7 +2839,7 @@
     },
     {
       "id": "occurrence_0181",
-      "definitionId": "animal_arctic_fox",
+      "definitionId": "ANM#000169",
       "kind": "animal",
       "biomeId": "tundra",
       "variantId": "tundra_north_american_and_greenland",
@@ -2801,7 +2848,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_arctic_fox"
     },
     {
       "id": "occurrence_0182",
@@ -2818,7 +2866,7 @@
     },
     {
       "id": "occurrence_0183",
-      "definitionId": "animal_coastal_and_sea_ice_polar_bear",
+      "definitionId": "ANM#000182",
       "kind": "animal",
       "biomeId": "tundra",
       "variantId": "tundra_north_american_and_greenland",
@@ -2827,11 +2875,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_coastal_and_sea_ice_polar_bear"
     },
     {
       "id": "occurrence_0184",
-      "definitionId": "plant_dwarf_willows",
+      "definitionId": "PLT#000205",
       "kind": "plant",
       "biomeId": "tundra",
       "variantId": "tundra_north_american_and_greenland",
@@ -2840,11 +2889,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_dwarf_willows"
     },
     {
       "id": "occurrence_0185",
-      "definitionId": "plant_reindeer_lichens",
+      "definitionId": "PLT#000199",
       "kind": "plant",
       "biomeId": "tundra",
       "variantId": "tundra_north_american_and_greenland",
@@ -2853,7 +2903,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_reindeer_lichens"
     },
     {
       "id": "occurrence_0186",
@@ -3013,7 +3064,7 @@
     },
     {
       "id": "occurrence_0198",
-      "definitionId": "animal_arctic_fox",
+      "definitionId": "ANM#000169",
       "kind": "animal",
       "biomeId": "tundra",
       "variantId": "tundra_eurasian",
@@ -3022,7 +3073,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_arctic_fox"
     },
     {
       "id": "occurrence_0199",
@@ -3065,7 +3117,7 @@
     },
     {
       "id": "occurrence_0202",
-      "definitionId": "plant_dwarf_birch",
+      "definitionId": "PLT#000191",
       "kind": "plant",
       "biomeId": "tundra",
       "variantId": "tundra_eurasian",
@@ -3074,11 +3126,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_dwarf_birch"
     },
     {
       "id": "occurrence_0203",
-      "definitionId": "plant_arctic_willows",
+      "definitionId": "PLT#000205",
       "kind": "plant",
       "biomeId": "tundra",
       "variantId": "tundra_eurasian",
@@ -3087,11 +3140,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_arctic_willows"
     },
     {
       "id": "occurrence_0204",
-      "definitionId": "plant_lichens",
+      "definitionId": "PLT#000199",
       "kind": "plant",
       "biomeId": "tundra",
       "variantId": "tundra_eurasian",
@@ -3100,7 +3154,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_lichens"
     },
     {
       "id": "occurrence_0205",
@@ -3221,7 +3276,7 @@
     },
     {
       "id": "occurrence_0214",
-      "definitionId": "animal_island_coastal_penguins",
+      "definitionId": "ANM#000183",
       "kind": "animal",
       "biomeId": "tundra",
       "variantId": "tundra_subantarctic",
@@ -3230,7 +3285,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_island_coastal_penguins"
     },
     {
       "id": "occurrence_0215",
@@ -3286,7 +3342,7 @@
     },
     {
       "id": "occurrence_0219",
-      "definitionId": "plant_lichens",
+      "definitionId": "PLT#000199",
       "kind": "plant",
       "biomeId": "tundra",
       "variantId": "tundra_subantarctic",
@@ -3295,11 +3351,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_lichens"
     },
     {
       "id": "occurrence_0220",
-      "definitionId": "plant_cushion_plants",
+      "definitionId": "PLT#000202",
       "kind": "plant",
       "biomeId": "tundra",
       "variantId": "tundra_subantarctic",
@@ -3308,7 +3365,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_cushion_plants"
     },
     {
       "id": "occurrence_0221",
@@ -3416,7 +3474,7 @@
     },
     {
       "id": "occurrence_0229",
-      "definitionId": "animal_african_savanna_elephant",
+      "definitionId": "ANM#000176",
       "kind": "animal",
       "biomeId": "savanna",
       "variantId": "savanna_african",
@@ -3425,7 +3483,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_african_savanna_elephant"
     },
     {
       "id": "occurrence_0230",
@@ -3546,7 +3605,7 @@
     },
     {
       "id": "occurrence_0239",
-      "definitionId": "plant_african_acacias",
+      "definitionId": "PLT#000192",
       "kind": "plant",
       "biomeId": "savanna",
       "variantId": "savanna_african",
@@ -3555,7 +3614,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_african_acacias"
     },
     {
       "id": "occurrence_0240",
@@ -3728,7 +3788,7 @@
     },
     {
       "id": "occurrence_0253",
-      "definitionId": "animal_pampas_deer",
+      "definitionId": "ANM#000175",
       "kind": "animal",
       "biomeId": "savanna",
       "variantId": "savanna_american",
@@ -3737,7 +3797,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_pampas_deer"
     },
     {
       "id": "occurrence_0254",
@@ -3975,7 +4036,7 @@
     },
     {
       "id": "occurrence_0272",
-      "definitionId": "animal_steppe_marmots",
+      "definitionId": "ANM#000181",
       "kind": "animal",
       "biomeId": "savanna",
       "variantId": "savanna_eurasian",
@@ -3984,7 +4045,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_steppe_marmots"
     },
     {
       "id": "occurrence_0273",
@@ -4001,7 +4063,7 @@
     },
     {
       "id": "occurrence_0274",
-      "definitionId": "plant_wormwoods_703907",
+      "definitionId": "PLT#000194",
       "kind": "plant",
       "biomeId": "savanna",
       "variantId": "savanna_eurasian",
@@ -4010,7 +4072,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_wormwoods_703907"
     },
     {
       "id": "occurrence_0275",
@@ -4157,7 +4220,7 @@
     },
     {
       "id": "occurrence_0286",
-      "definitionId": "animal_antilopine_kangaroo",
+      "definitionId": "ANM#000174",
       "kind": "animal",
       "biomeId": "savanna",
       "variantId": "savanna_australian",
@@ -4166,7 +4229,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_antilopine_kangaroo"
     },
     {
       "id": "occurrence_0287",
@@ -4209,7 +4273,7 @@
     },
     {
       "id": "occurrence_0290",
-      "definitionId": "plant_tropical_savanna_eucalypts",
+      "definitionId": "PLT#000197",
       "kind": "plant",
       "biomeId": "savanna",
       "variantId": "savanna_australian",
@@ -4218,11 +4282,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_tropical_savanna_eucalypts"
     },
     {
       "id": "occurrence_0291",
-      "definitionId": "plant_australian_acacias",
+      "definitionId": "PLT#000192",
       "kind": "plant",
       "biomeId": "savanna",
       "variantId": "savanna_australian",
@@ -4231,7 +4296,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_australian_acacias"
     },
     {
       "id": "occurrence_0292",
@@ -4378,7 +4444,7 @@
     },
     {
       "id": "occurrence_0303",
-      "definitionId": "animal_culpeo_fox_in_arid_habitats",
+      "definitionId": "ANM#000169",
       "kind": "animal",
       "biomeId": "desert",
       "variantId": "desert_american",
@@ -4387,7 +4453,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_culpeo_fox_in_arid_habitats"
     },
     {
       "id": "occurrence_0304",
@@ -4430,7 +4497,7 @@
     },
     {
       "id": "occurrence_0307",
-      "definitionId": "animal_guanaco_in_coastal_deserts_and_foothills",
+      "definitionId": "ANM#000179",
       "kind": "animal",
       "biomeId": "desert",
       "variantId": "desert_american",
@@ -4439,7 +4506,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_guanaco_in_coastal_deserts_and_foothills"
     },
     {
       "id": "occurrence_0308",
@@ -4651,7 +4719,7 @@
     },
     {
       "id": "occurrence_0324",
-      "definitionId": "animal_fennec_fox",
+      "definitionId": "ANM#000169",
       "kind": "animal",
       "biomeId": "desert",
       "variantId": "desert_african_and_arabian",
@@ -4660,7 +4728,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_fennec_fox"
     },
     {
       "id": "occurrence_0325",
@@ -4677,7 +4746,7 @@
     },
     {
       "id": "occurrence_0326",
-      "definitionId": "animal_desert_gazelles",
+      "definitionId": "ANM#000178",
       "kind": "animal",
       "biomeId": "desert",
       "variantId": "desert_african_and_arabian",
@@ -4686,7 +4755,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_desert_gazelles"
     },
     {
       "id": "occurrence_0327",
@@ -4703,7 +4773,7 @@
     },
     {
       "id": "occurrence_0328",
-      "definitionId": "plant_arid_land_acacias",
+      "definitionId": "PLT#000192",
       "kind": "plant",
       "biomeId": "desert",
       "variantId": "desert_african_and_arabian",
@@ -4712,7 +4782,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_arid_land_acacias"
     },
     {
       "id": "occurrence_0329",
@@ -4885,7 +4956,7 @@
     },
     {
       "id": "occurrence_0342",
-      "definitionId": "animal_mongolian_gazelle",
+      "definitionId": "ANM#000178",
       "kind": "animal",
       "biomeId": "desert",
       "variantId": "desert_central_asian",
@@ -4894,11 +4965,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_mongolian_gazelle"
     },
     {
       "id": "occurrence_0343",
-      "definitionId": "animal_corsac_fox",
+      "definitionId": "ANM#000169",
       "kind": "animal",
       "biomeId": "desert",
       "variantId": "desert_central_asian",
@@ -4907,7 +4979,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_corsac_fox"
     },
     {
       "id": "occurrence_0344",
@@ -4924,7 +4997,7 @@
     },
     {
       "id": "occurrence_0345",
-      "definitionId": "plant_wormwoods",
+      "definitionId": "PLT#000194",
       "kind": "plant",
       "biomeId": "desert",
       "variantId": "desert_central_asian",
@@ -4933,7 +5006,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_wormwoods"
     },
     {
       "id": "occurrence_0346",
@@ -5080,7 +5154,7 @@
     },
     {
       "id": "occurrence_0357",
-      "definitionId": "animal_red_kangaroo",
+      "definitionId": "ANM#000174",
       "kind": "animal",
       "biomeId": "desert",
       "variantId": "desert_australian",
@@ -5089,7 +5163,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_red_kangaroo"
     },
     {
       "id": "occurrence_0358",
@@ -5132,7 +5207,7 @@
     },
     {
       "id": "occurrence_0361",
-      "definitionId": "plant_desert_acacias",
+      "definitionId": "PLT#000192",
       "kind": "plant",
       "biomeId": "desert",
       "variantId": "desert_australian",
@@ -5141,11 +5216,12 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_desert_acacias"
     },
     {
       "id": "occurrence_0362",
-      "definitionId": "plant_arid_land_eucalypts",
+      "definitionId": "PLT#000197",
       "kind": "plant",
       "biomeId": "desert",
       "variantId": "desert_australian",
@@ -5154,7 +5230,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_arid_land_eucalypts"
     },
     {
       "id": "occurrence_0363",
@@ -5275,7 +5352,7 @@
     },
     {
       "id": "occurrence_0372",
-      "definitionId": "animal_coastal_crabs",
+      "definitionId": "ANM#000173",
       "kind": "animal",
       "biomeId": "marine",
       "variantId": "marine_tropical_coast",
@@ -5284,7 +5361,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_coastal_crabs"
     },
     {
       "id": "occurrence_0373",
@@ -5301,7 +5379,7 @@
     },
     {
       "id": "occurrence_0374",
-      "definitionId": "plant_tropical_mangroves",
+      "definitionId": "PLT#000200",
       "kind": "plant",
       "biomeId": "marine",
       "variantId": "marine_tropical_coast",
@@ -5310,7 +5388,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_tropical_mangroves"
     },
     {
       "id": "occurrence_0375",
@@ -5470,7 +5549,7 @@
     },
     {
       "id": "occurrence_0387",
-      "definitionId": "plant_temperate_kelp_forests",
+      "definitionId": "PLT#000198",
       "kind": "plant",
       "biomeId": "marine",
       "variantId": "marine_temperate_coast_and_sea",
@@ -5479,7 +5558,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_temperate_kelp_forests"
     },
     {
       "id": "occurrence_0388",
@@ -5639,7 +5719,7 @@
     },
     {
       "id": "occurrence_0400",
-      "definitionId": "animal_southern_regional_penguins",
+      "definitionId": "ANM#000183",
       "kind": "animal",
       "biomeId": "marine",
       "variantId": "marine_polar_and_subpolar",
@@ -5648,7 +5728,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_southern_regional_penguins"
     },
     {
       "id": "occurrence_0401",
@@ -5678,7 +5759,7 @@
     },
     {
       "id": "occurrence_0403",
-      "definitionId": "plant_subantarctic_kelp",
+      "definitionId": "PLT#000198",
       "kind": "plant",
       "biomeId": "marine",
       "variantId": "marine_polar_and_subpolar",
@@ -5687,7 +5768,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_subantarctic_kelp"
     },
     {
       "id": "occurrence_0404",
@@ -5782,7 +5864,7 @@
     },
     {
       "id": "occurrence_0411",
-      "definitionId": "animal_mangrove_crabs",
+      "definitionId": "ANM#000173",
       "kind": "animal",
       "biomeId": "marine",
       "variantId": "marine_coastal_wetlands",
@@ -5791,7 +5873,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_mangrove_crabs"
     },
     {
       "id": "occurrence_0412",
@@ -5834,7 +5917,7 @@
     },
     {
       "id": "occurrence_0415",
-      "definitionId": "plant_red_mangrove_and_other_native_mangroves",
+      "definitionId": "PLT#000200",
       "kind": "plant",
       "biomeId": "marine",
       "variantId": "marine_coastal_wetlands",
@@ -5843,7 +5926,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_red_mangrove_and_other_native_mangroves"
     },
     {
       "id": "occurrence_0416",
@@ -5990,7 +6074,7 @@
     },
     {
       "id": "occurrence_0427",
-      "definitionId": "animal_guanaco_at_suitable_elevations",
+      "definitionId": "ANM#000179",
       "kind": "animal",
       "biomeId": "alpine",
       "variantId": "alpine_andean",
@@ -5999,7 +6083,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_guanaco_at_suitable_elevations"
     },
     {
       "id": "occurrence_0428",
@@ -6094,7 +6179,7 @@
     },
     {
       "id": "occurrence_0435",
-      "definitionId": "plant_andean_cushion_plants",
+      "definitionId": "PLT#000202",
       "kind": "plant",
       "biomeId": "alpine",
       "variantId": "alpine_andean",
@@ -6103,7 +6188,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_andean_cushion_plants"
     },
     {
       "id": "occurrence_0436",
@@ -6237,7 +6323,7 @@
     },
     {
       "id": "occurrence_0446",
-      "definitionId": "animal_siberian_ibex",
+      "definitionId": "ANM#000186",
       "kind": "animal",
       "biomeId": "alpine",
       "variantId": "alpine_asian",
@@ -6246,7 +6332,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_siberian_ibex"
     },
     {
       "id": "occurrence_0447",
@@ -6263,7 +6350,7 @@
     },
     {
       "id": "occurrence_0448",
-      "definitionId": "animal_bearded_vulture",
+      "definitionId": "ANM#000184",
       "kind": "animal",
       "biomeId": "alpine",
       "variantId": "alpine_asian",
@@ -6272,7 +6359,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_bearded_vulture"
     },
     {
       "id": "occurrence_0449",
@@ -6432,7 +6520,7 @@
     },
     {
       "id": "occurrence_0461",
-      "definitionId": "animal_alpine_ibex",
+      "definitionId": "ANM#000186",
       "kind": "animal",
       "biomeId": "alpine",
       "variantId": "alpine_european",
@@ -6441,7 +6529,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_alpine_ibex"
     },
     {
       "id": "occurrence_0462",
@@ -6458,7 +6547,7 @@
     },
     {
       "id": "occurrence_0463",
-      "definitionId": "animal_alpine_marmot",
+      "definitionId": "ANM#000181",
       "kind": "animal",
       "biomeId": "alpine",
       "variantId": "alpine_european",
@@ -6467,7 +6556,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_alpine_marmot"
     },
     {
       "id": "occurrence_0464",
@@ -6484,7 +6574,7 @@
     },
     {
       "id": "occurrence_0465",
-      "definitionId": "animal_bearded_vulture_in_suitable_mountains",
+      "definitionId": "ANM#000184",
       "kind": "animal",
       "biomeId": "alpine",
       "variantId": "alpine_european",
@@ -6493,7 +6583,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_bearded_vulture_in_suitable_mountains"
     },
     {
       "id": "occurrence_0466",
@@ -6510,7 +6601,7 @@
     },
     {
       "id": "occurrence_0467",
-      "definitionId": "plant_mountain_pines",
+      "definitionId": "PLT#000201",
       "kind": "plant",
       "biomeId": "alpine",
       "variantId": "alpine_european",
@@ -6519,7 +6610,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "plant_mountain_pines"
     },
     {
       "id": "occurrence_0468",
@@ -6666,7 +6758,7 @@
     },
     {
       "id": "occurrence_0479",
-      "definitionId": "animal_walia_ibex",
+      "definitionId": "ANM#000186",
       "kind": "animal",
       "biomeId": "alpine",
       "variantId": "alpine_african",
@@ -6675,7 +6767,8 @@
       "constraintsStatus": "qualitative_source_constraints_preserved_pending_formalization",
       "spawnProbability": null,
       "guaranteedPresence": false,
-      "runtimeEnabled": false
+      "runtimeEnabled": false,
+      "sourceDefinitionId": "animal_walia_ibex"
     },
     {
       "id": "occurrence_0480",
@@ -6766,15 +6859,16 @@
     "validate_alternative_development_trade_and_expansion_paths"
   ],
   "speciesCompletionChecklist": [
-    "resolve_to_individual_species_or_explicit_game_taxon",
-    "verify_scientific_name_and_native_distribution",
-    "split_regional_groups_and_distinguish_wild_ancestors",
+    "choose_general_gameplay_entity_and_stable_id",
+    "preserve_regional_habitat_rules_and_source_provenance",
+    "group_cosmetic_or_scientific_variants_without_gameplay_differences",
+    "retain_useful_wild_and_domestic_distinctions",
     "define_ecological_compatibility",
     "define_propagation_and_cultivation_or_animal_management",
     "define_material_resources_and_products",
     "define_technology_requirements_and_scope",
-    "define_domestication_criteria_and_temporal_scope",
-    "define_balance_and_validation_scenarios"
+    "define_domestication_criteria_where_relevant",
+    "defer_quantities_durations_and_balance_until_simulation_design"
   ],
   "reviewIssues": [
     {
@@ -6832,8 +6926,8 @@
   "summary": {
     "biomeCount": 7,
     "regionalVariantCount": 27,
-    "plantCandidateCount": 129,
-    "animalCandidateCount": 134,
+    "plantCandidateCount": 109,
+    "animalCandidateCount": 101,
     "geologicalCandidateCount": 57,
     "sourceOccurrenceCount": 485,
     "agriculturalCropCandidateCount": 21

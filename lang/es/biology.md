@@ -1,68 +1,66 @@
-# Plantas, animales y formas biológicas
+# Plantas y animales: categorías del juego
 
-[Plantas: catálogo completo, correspondencias y ramas](../../data/plants/BIOLOGY.es.md) · [Animales: catálogo completo, correspondencias y ramas](../../data/animals/BIOLOGY.es.md)
+Usamos el detalle necesario para jugar. **Zorros** es una entidad que proporciona **piel**: no hace falta crear zorro ártico, rojo, corsac o fénec como entidades distintas. Una diferencia de color, región o nombre científico no exige otra ficha.
 
-Este diseño precisa las identidades biológicas sin fijar cantidades, tiempos, probabilidades, rendimientos ni fórmulas de simulación. Las colecciones siguen al mismo nivel y se relacionan por IDs.
+## Cuándo agrupar y cuándo conservar diferencias
 
-## Qué representa cada objeto
+Agrupar cuando solo cambia el nombre regional o científico y los recursos y usos registrados coinciden. Conservar diferencias cuando cambien productos, acciones o progresión: trigo y maíz siguen separados; un animal silvestre y su forma domesticada pueden requerir fichas diferentes. No fusionar especies solo por parecido. Tampoco fusionar plantas con sus recursos.
 
-| Colección | Significado | Ejemplo |
-| --- | --- | --- |
-| `speciesCandidates` | Etiqueta original, su procedencia y las apariciones regionales existentes. Puede describir un grupo. | Robles, trigo silvestre, jabalí. |
-| `taxa` | Identidad científica aceptada por un proveedor explícito, con rango y evidencia del cotejo. | `Quercus robur`, `Sus scrofa`. |
-| `biologicalForms` | Forma cultivada, domesticada, población ancestral de referencia o grupo de cultivo. No es un individuo ni una población de partida. | Conejo silvestre y doméstico pueden compartir taxón. |
-| `lineageRelations` | Relación histórica entre formas; distingue domesticación, selección, hibridación, aporte ancestral e introgresión. | Dos aportes ancestrales para trigo panadero. |
-| `excludedLineageRelations` | Supuesto directo que no debe introducirse como hecho. | Przewalski → caballo doméstico moderno. |
-| `evidenceSources` | Bibliografía de relaciones, enlazada mediante `sourceKey`. | Estudio genómico de domesticación. |
+En esta revisión se agruparon 18 casos animales y 15 vegetales. Por ejemplo, zorros, osos, ciervos, canguros, robles y pinos. No se fusionaron todas las aves, todos los árboles ni todos los alimentos. Los elefantes africanos y asiáticos conservan categorías separadas porque sus usos registrados difieren; cualquier cambio posterior se decidirá por jugabilidad.
 
-`taxonResolution` vincula cada candidato a sus `taxonIds` y `formIds`. Sus formas son referencias asociadas: no indican que un animal doméstico deba aparecer inicialmente donde se enumeró su pariente silvestre. `selectionMode` distingue una interpretación específica de una selección representativa no exhaustiva. Los IDs anteriores no se eliminan ni se sustituyen silenciosamente.
+## Estructura
 
-Los grupos agrícolas también seleccionan taxones concretos. Así, trigo puede contener escanda menor, escanda mayor, trigo duro y trigo panadero; arroz asiático y africano quedan separados. Una forma cultivada de referencia registra la identidad de diseño, sin afirmar que su domesticación ancestral ya esté investigada.
+| Campo | Función |
+| --- | --- |
+| `id` / `tag` | Identidad permanente de la categoría, independiente del idioma y la taxonomía. |
+| `name` | Nombre visible con `en` y `es`. |
+| `biomeVariantIds` | Hábitats referenciados por las apariciones regionales; no significa presencia universal. |
+| `potentialProducts` | Recursos obtenibles según el diseño; cantidades y requisitos operativos pendientes. |
+| `sourceVariants` | Etiquetas originales que se reunieron en una categoría. Solo procedencia, no subentidades jugables. |
+| `entityAliases` | Correspondencias de IDs anteriores hacia una sola entidad vigente. |
+| `taxonResolution` | Referencia científica opcional; no crea subespecies jugables ni requisitos. |
 
-## Identidades permanentes
+Las colecciones siguen planas. `speciesCandidates` conserva su nombre técnico por compatibilidad, pero admite categorías generales. Del mismo modo, el campo técnico `speciesId` de investigación podrá identificar el cultivo o entidad del juego elegido; no obliga a usar una especie científica. No se cambia todavía el ejemplo de simulación ni sus alias de trigo/maíz.
 
-- `PLT`: taxón vegetal; `ANM`: taxón animal; `ALG`: alga; `FNG`: hongo, incluidos los liquenizados.
-- `FRM`: forma biológica, grupo de cultivo o población de referencia.
-- Cada prefijo tiene una secuencia independiente de seis cifras. Las formas de ambas carpetas comparten una sola secuencia FRM. Los IDs asignados están en estos JSON: conservarlos al ampliar el catálogo; nunca recalcularlos ordenando nombres.
-- `VAR` sigue significando variante regional del mundo. Una variedad botánica es un taxón con rango `VARIETY`; un grupo de cultivares usa `FRM` y `formKind: "cultivar_group"`. No son equivalentes.
+## Ejemplo: zorros
 
-La carpeta de plantas conserva la flora original e incluye algas y líquenes. `organismGroup`, el reino y el prefijo impiden tratar un liquen como planta botánica. Las etiquetas latinas se mantienen iguales en `name.en` y `name.es`; los nombres comunes originales permanecen bilingües en sus candidatos. No se inventan traducciones específicas para nombres comunes ambiguos.
+Fragmento de los campos principales del registro real; el JSON completo y todos sus objetos se documentan en la referencia de estructura.
 
-## Cómo leer los parentescos
-
-La rama de trigo distingue domesticación de escandas, selección de trigo duro y origen híbrido de trigo panadero. `hybrid_origin` requiere conjuntamente los `parentFormIds`: no son alternativas ni una receta jugable. Los grupos de cebada de dos y seis hileras son selección dentro del cultivo, no especies nuevas ni cultivares modernos con nombre.
-
-El maíz distingue domesticación desde teocintle del Balsas y aporte genético posterior de teocintle mexicano. La introgresión no se interpreta como otra domesticación. En animales, uro se ramifica hacia linajes taurinos y cebuinos; el cebú no es una mejora del ganado taurino. Las poblaciones silvestres actuales pueden ser representantes de un complejo ancestral, no la población fundadora exacta.
-
-No se añade una relación solo porque dos especies pertenezcan al mismo género o se parezcan. Los ancestros desconocidos, razas y cultivares históricos sin evidencia permanecen pendientes. El catálogo registra 25 resúmenes de relaciones, no el árbol evolutivo completo de todos los organismos.
-
-## Evidencia y límites
-
-Los nombres científicos seleccionados se cotejaron con GBIF: coincidencia `EXACT`, puntuación del proveedor al menos 95 y rango de especie/subespecie/variedad; los sinónimos enlazan al taxón aceptado. La puntuación no mide certeza de que la etiqueta original represente esa especie. Cada registro guarda proveedor, clave, URL, consulta y fecha. Camelus ferus usa el catálogo GBIF Catalogue of Life XR indicado en su registro; los tratamientos taxonómicos pueden diferir entre autoridades.
-
-Esto valida el cotejo de nombres, no la selección original completa. Cada elección representativa necesita revisar distribución nativa, hábitat, introducciones históricas y productos. Las 485 apariciones originales conservan su significado de procedencia; no se duplican para generar automáticamente todas las especies seleccionadas.
-
-`inheritResourceBindings: false` impide heredar automáticamente productos de grupos generales. Madera sigue siendo recurso, no especie. Para convertir una forma concreta en fuente de leche, fibra o semillas se revisarán sus vínculos propios, además de anatomía, sexo y etapa de vida cuando corresponda. Las cadenas de transformación de recursos permanecen en su catálogo.
-
-Las referencias de cultivo sin relación de ascendencia documentada están pendientes de revisión, no carecen de ancestros. No hay razas animales ni cultivares históricos individuales enumerados todavía. Las formas y relaciones no se cargan como reglas ejecutables: `loadAsGameDefinitions` y `runtimeEnabled` permanecen en `false`.
-
-## Estructura, ejemplos y comprobaciones
-
-Los contratos completos, objetos internos y ejemplos están en:
-
-- [JSON de plantas](json/data--plants--plants.biological.catalog.md).
-- [JSON de animales](json/data--animals--animals.biological.catalog.md).
-- [Esquema biológico](json/schemas--biological.catalog.schema.md).
-- [JSON de candidatos vegetales](json/data--plants--plants.catalog.guide.md).
-- [JSON de candidatos animales](json/data--animals--animals.catalog.guide.md).
-
-El esquema estructural cubre todos los objetos actuales. El verificador propio comprueba IDs, referencias, nombres cotejados almacenados, límites de ejecución, bibliografía, cobertura y ausencia de ciclos en ascendencia/selección. No consulta servicios en vivo ni demuestra por sí mismo una hipótesis científica. La integración con un motor general de JSON Schema continúa separada.
-
-```sh
-python tools/generate_json_reference.py
-python tools/generate_biology_reference.py
-python tools/generate_catalog_diagrams.py
-python tools/validate_repository.py
+```json
+{
+  "id": "ANM#000169",
+  "tag": "foxes",
+  "name": {
+    "en": "Foxes",
+    "es": "Zorros"
+  },
+  "potentialProducts": [
+    {
+      "resourceTag": "hide",
+      "status": "potential_from_source",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000031"
+    }
+  ]
+}
 ```
 
-El ejemplo de investigación conserva sus alias anteriores de trigo/maíz. Antes de implementar progreso definitivo por especie se elegirá el taxón o forma correspondiente y se diseñará la migración. Este cambio no modifica partidas ni cantidades de producción.
+Los cinco IDs anteriores de zorros apuntan a `ANM#000169`. Sus seis variantes regionales de hábitat conservan sus apariciones. Solo existe un vínculo de producto hacia `RES#000031` (piel sin curtir). Agrupar no crea animales nuevos ni permite colocarlos en todo el mapa.
+
+## Compatibilidad y alcance
+
+Los IDs antiguos quedan retirados y no se reutilizan. Cada aparición mundial conserva su ID y texto original; `definitionId` apunta a la categoría general y `sourceDefinitionId` conserva la identidad anterior cuando hubo agrupación. Los vínculos de recursos se redirigieron y se eliminaron duplicados: 298 vínculos vigentes para los mismos 104 materiales.
+
+Hay 109 entidades vegetales, 101 animales y los mismos 21 grupos agrícolas. Se conservan las 485 apariciones del documento y todos los cultivos, recursos y tecnologías. No se añadieron rendimientos, tiempos, costes ni recetas. Las reglas operativas pendientes mantienen los catálogos deshabilitados para ejecución.
+
+## Referencias
+
+- [Plants](../../data/plants/DIAGRAMS.es.md)
+- [Animals](../../data/animals/DIAGRAMS.es.md)
+- [JSON structures](json-structures.md)
+
+Los catálogos científicos anteriores se conservan como antecedentes opcionales. No dirigen la identidad de entidades ni exigen completar especies, variedades botánicas o ancestros científicos para avanzar con el diseño. Las relaciones de domesticación útiles podrán adaptarse posteriormente a las categorías del juego.
+
+- [Optional science: plants](../../data/plants/BIOLOGY.es.md)
+- [Optional science: animals](../../data/animals/BIOLOGY.es.md)

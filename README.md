@@ -36,7 +36,7 @@ EvolveDoc/
 | Architecture and repository layout | [Structure](lang/en/repository.md) | [Estructura](lang/es/repository.md) |
 | Stable ID and tag conventions | [Identifiers](lang/en/identifiers.md) | [Identificadores](lang/es/identifiers.md) |
 | Complete JSON field references | [All JSON structures](lang/en/json-structures.md) | [Todas las estructuras JSON](lang/es/json-structures.md) |
-| Biological identities and lineages | [Biology](lang/en/biology.md) | [Biología](lang/es/biology.md) |
+| General plant and animal entities | [Categories](lang/en/biology.md) | [Categorías](lang/es/biology.md) |
 | Resource catalog | [Resources](lang/en/resources.md) | [Recursos](lang/es/resources.md) |
 | Agriculture contract | [Agriculture](lang/en/agriculture.technologies.md) | [Agricultura](lang/es/agriculture.technologies.md) |
 | World and species guide | [World guide](lang/en/world.catalog.guide.md) | [Guía del mundo](lang/es/world.catalog.guide.md) |
@@ -44,15 +44,15 @@ EvolveDoc/
 
 ## Current content
 
-- 367 provider-matched taxa, 77 biological reference forms and 25 documented lineage summaries; representative selections and ecology still need review.
-- 104 resources, 365 possible source links and 25 transformation endpoint guides; units, yields and recipes remain unresolved.
+- General gameplay categories: 33 selected animal/plant groups replace regional/species variants, with 86 explicit retired-ID aliases. Scientific background is optional.
+- 104 resources, 298 possible source links and 25 transformation endpoint guides; units, yields and recipes remain unresolved.
 - 23 flat agriculture technologies; their existing IDs and gameplay configuration are preserved.
 - 7 biomes, 27 regional variants and 485 source occurrences.
-- 129 plant candidates, 134 animal candidates, 57 geological candidates and 21 agricultural crop candidates.
+- 109 plant entity candidates, 101 animal entity candidates, 57 geological candidates and 21 agricultural crop candidates.
 - Nomenclature contract: three-letter English prefix plus six digits, with a separate English `snake_case` tag. New resources, taxa and forms have allocated IDs; legacy candidate/technology IDs are retained.
 - A runnable research example, structural validation and bilingual documentation.
 
-Source candidates retain their provenance and link to selected taxon references; this does not scientifically finalize broad source interpretations. Unknown values remain `null`, and guide catalogs are disabled for runtime generation. Biological ancestry has partial documented coverage; yields, executable domestication, mineral processing and world-generation formulas still require design. No full engine or graphics is included.
+Gameplay identities use general categories such as foxes, bears, oaks and pines when scientific subdivisions add no gameplay value. Crop identities and useful wild/domestic differences remain separate. All original source occurrences are preserved. Scientific catalogs remain optional background; they do not create mandatory entity subdivisions. Guide catalogs remain runtime-disabled while operational rules, yields and formulas are deferred. No full engine or graphics is included.
 
 ## Run the checks and example
 

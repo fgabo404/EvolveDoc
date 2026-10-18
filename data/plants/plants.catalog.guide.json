@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.2.0",
-  "contentVersion": "0.3.0",
+  "schemaVersion": "1.3.0",
+  "contentVersion": "0.4.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -9,27 +9,29 @@
   ],
   "runtimePolicy": {
     "loadAsGameDefinitions": false,
-    "unknownValues": "null means unresolved; it is not zero or unrestricted."
+    "unknownValues": "null means unresolved; it is not zero or unrestricted.",
+    "classificationPolicy": "Use general gameplay entities when specific species add no meaningful resource or behavior distinction. Scientific taxonomy is optional background, not an unlock or entity identity requirement. Preserve distinctions for crops, wild/domestic forms and other actual gameplay differences."
   },
   "kind": "plant_catalog_design_guide",
   "speciesCandidates": [
     {
-      "id": "plant_dwarf_birch",
+      "id": "PLT#000191",
       "kind": "plant",
       "name": {
-        "en": "Dwarf Birch",
-        "es": "Abedul enano"
+        "en": "Birches",
+        "es": "Abedules"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tundra_eurasian"
+        "tundra_eurasian",
+        "temperate_forest_boreal"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -37,14 +39,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -60,88 +62,63 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000025"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_birches",
-      "kind": "plant",
-      "name": {
-        "en": "Birches",
-        "es": "Abedules"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_birches",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Abedules",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000025",
           "PLT#000026",
           "PLT#000027"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "birches",
+      "sourceVariants": [
+        {
+          "id": "plant_dwarf_birch",
+          "name": {
+            "en": "Dwarf Birch",
+            "es": "Abedul enano"
+          },
+          "sourceLabel": "Abedul enano",
+          "biomeVariantIds": [
+            "tundra_eurasian"
+          ]
+        },
+        {
+          "id": "plant_birches",
+          "name": {
+            "en": "Birches",
+            "es": "Abedules"
+          },
+          "sourceLabel": "Abedules",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        }
+      ]
     },
     {
-      "id": "plant_african_acacias",
+      "id": "PLT#000192",
       "kind": "plant",
       "name": {
-        "en": "African Acacias",
-        "es": "Acacias africanas"
+        "en": "Acacias",
+        "es": "Acacias"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "savanna_african",
-        "tropical_forest_african"
+        "tropical_forest_african",
+        "savanna_australian",
+        "temperate_forest_south_african_and_australian",
+        "desert_australian",
+        "desert_african_and_arabian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -149,14 +126,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -173,180 +150,64 @@
       "taxonResolution": {
         "taxonIds": [
           "PLT#000181",
-          "PLT#000180"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_australian_acacias",
-      "kind": "plant",
-      "name": {
-        "en": "Australian Acacias",
-        "es": "Acacias australianas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian",
-        "temperate_forest_south_african_and_australian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_australian_acacias",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Acacias australianas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000180",
           "PLT#000002",
           "PLT#000001"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_desert_acacias",
-      "kind": "plant",
-      "name": {
-        "en": "Desert Acacias",
-        "es": "Acacias del desierto"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_desert_acacias",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Acacias del desierto",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "PLT#000002"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_arid_land_acacias",
-      "kind": "plant",
-      "name": {
-        "en": "Arid-Land Acacias",
-        "es": "Acacias desérticas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_arid_land_acacias",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Acacias desérticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "PLT#000181"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      "tag": "acacias",
+      "sourceVariants": [
+        {
+          "id": "plant_african_acacias",
+          "name": {
+            "en": "African Acacias",
+            "es": "Acacias africanas"
+          },
+          "sourceLabel": "Acacias africanas",
+          "biomeVariantIds": [
+            "savanna_african",
+            "tropical_forest_african"
+          ]
+        },
+        {
+          "id": "plant_australian_acacias",
+          "name": {
+            "en": "Australian Acacias",
+            "es": "Acacias australianas"
+          },
+          "sourceLabel": "Acacias australianas",
+          "biomeVariantIds": [
+            "savanna_australian",
+            "temperate_forest_south_african_and_australian"
+          ]
+        },
+        {
+          "id": "plant_desert_acacias",
+          "name": {
+            "en": "Desert Acacias",
+            "es": "Acacias del desierto"
+          },
+          "sourceLabel": "Acacias del desierto",
+          "biomeVariantIds": [
+            "desert_australian"
+          ]
+        },
+        {
+          "id": "plant_arid_land_acacias",
+          "name": {
+            "en": "Arid-Land Acacias",
+            "es": "Acacias desérticas"
+          },
+          "sourceLabel": "Acacias desérticas",
+          "biomeVariantIds": [
+            "desert_african_and_arabian"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_wild_olive",
@@ -379,7 +240,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -441,7 +302,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -467,19 +328,19 @@
       }
     },
     {
-      "id": "plant_american_larch",
+      "id": "PLT#000193",
       "kind": "plant",
       "name": {
-        "en": "American Larch",
-        "es": "Alerce americano"
+        "en": "Larches",
+        "es": "Alerces"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "temperate_forest_boreal"
@@ -490,14 +351,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -513,69 +374,40 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000087"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_siberian_larches",
-      "kind": "plant",
-      "name": {
-        "en": "Siberian Larches",
-        "es": "Alerces siberianos"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_siberian_larches",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Alerces siberianos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000087",
           "PLT#000088",
           "PLT#000086"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "larches",
+      "sourceVariants": [
+        {
+          "id": "plant_american_larch",
+          "name": {
+            "en": "American Larch",
+            "es": "Alerce americano"
+          },
+          "sourceLabel": "Alerce americano",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        },
+        {
+          "id": "plant_siberian_larches",
+          "name": {
+            "en": "Siberian Larches",
+            "es": "Alerces siberianos"
+          },
+          "sourceLabel": "Alerces siberianos",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_polar_marine_algae",
@@ -608,7 +440,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -663,7 +495,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -718,7 +550,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -774,7 +606,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -829,7 +661,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -884,7 +716,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -939,7 +771,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -994,7 +826,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1020,7 +852,7 @@
       }
     },
     {
-      "id": "plant_wormwoods",
+      "id": "PLT#000194",
       "kind": "plant",
       "name": {
         "en": "Wormwoods",
@@ -1028,14 +860,15 @@
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "desert_central_asian"
+        "desert_central_asian",
+        "savanna_eurasian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -1043,14 +876,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1066,68 +899,39 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000017"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_wormwoods_703907",
-      "kind": "plant",
-      "name": {
-        "en": "Wormwoods",
-        "es": "Artemisas (Artemisia spp.)"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_wormwoods_703907",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Artemisas (Artemisia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000017",
           "PLT#000016"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "wormwoods",
+      "sourceVariants": [
+        {
+          "id": "plant_wormwoods",
+          "name": {
+            "en": "Wormwoods",
+            "es": "Artemisas"
+          },
+          "sourceLabel": "Artemisas",
+          "biomeVariantIds": [
+            "desert_central_asian"
+          ]
+        },
+        {
+          "id": "plant_wormwoods_703907",
+          "name": {
+            "en": "Wormwoods",
+            "es": "Artemisas (Artemisia spp.)"
+          },
+          "sourceLabel": "Artemisas (Artemisia spp.)",
+          "biomeVariantIds": [
+            "savanna_eurasian"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_arctic_blueberries",
@@ -1160,7 +964,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1215,7 +1019,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1240,19 +1044,19 @@
       }
     },
     {
-      "id": "plant_dry_forest_bamboos",
+      "id": "PLT#000195",
       "kind": "plant",
       "name": {
-        "en": "Dry-Forest Bamboos",
-        "es": "Bambúes de bosque seco"
+        "en": "Bamboos",
+        "es": "Bambúes"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "tropical_forest_asian"
@@ -1263,14 +1067,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1286,86 +1090,58 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000054"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_asian_tropical_bamboos",
-      "kind": "plant",
-      "name": {
-        "en": "Asian Tropical Bamboos",
-        "es": "Bambúes tropicales asiáticos"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_asian_tropical_bamboos",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Bambúes tropicales asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000054",
           "PLT#000022"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "bamboos",
+      "sourceVariants": [
+        {
+          "id": "plant_dry_forest_bamboos",
+          "name": {
+            "en": "Dry-Forest Bamboos",
+            "es": "Bambúes de bosque seco"
+          },
+          "sourceLabel": "Bambúes de bosque seco",
+          "biomeVariantIds": [
+            "tropical_forest_asian"
+          ]
+        },
+        {
+          "id": "plant_asian_tropical_bamboos",
+          "name": {
+            "en": "Asian Tropical Bamboos",
+            "es": "Bambúes tropicales asiáticos"
+          },
+          "sourceLabel": "Bambúes tropicales asiáticos",
+          "biomeVariantIds": [
+            "tropical_forest_asian"
+          ]
+        }
+      ]
     },
     {
-      "id": "plant_wild_bananas",
+      "id": "PLT#000196",
       "kind": "plant",
       "name": {
-        "en": "Wild Bananas",
-        "es": "Bananos silvestres (Musa spp.)"
+        "en": "Wild bananas",
+        "es": "Bananos silvestres"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tropical_forest_asian"
+        "tropical_forest_asian",
+        "tropical_forest_oceanian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -1373,14 +1149,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1396,68 +1172,39 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000098"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_new_guinea_wild_bananas",
-      "kind": "plant",
-      "name": {
-        "en": "New Guinea Wild Bananas",
-        "es": "Bananos silvestres de Nueva Guinea"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_new_guinea_wild_bananas",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Bananos silvestres de Nueva Guinea",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000098",
           "PLT#000099"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "wild_bananas",
+      "sourceVariants": [
+        {
+          "id": "plant_wild_bananas",
+          "name": {
+            "en": "Wild Bananas",
+            "es": "Bananos silvestres (Musa spp.)"
+          },
+          "sourceLabel": "Bananos silvestres (Musa spp.)",
+          "biomeVariantIds": [
+            "tropical_forest_asian"
+          ]
+        },
+        {
+          "id": "plant_new_guinea_wild_bananas",
+          "name": {
+            "en": "New Guinea Wild Bananas",
+            "es": "Bananos silvestres de Nueva Guinea"
+          },
+          "sourceLabel": "Bananos silvestres de Nueva Guinea",
+          "biomeVariantIds": [
+            "tropical_forest_oceanian"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_banksias",
@@ -1490,7 +1237,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1546,7 +1293,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1601,7 +1348,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1627,22 +1374,23 @@
       }
     },
     {
-      "id": "plant_temperate_kelp_forests",
+      "id": "PLT#000198",
       "kind": "plant",
       "name": {
-        "en": "Temperate Kelp Forests",
-        "es": "Bosques de kelp en costas templadas apropiadas"
+        "en": "Kelp",
+        "es": "Kelp"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "marine_temperate_coast_and_sea"
+        "marine_temperate_coast_and_sea",
+        "marine_polar_and_subpolar"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -1650,14 +1398,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1674,13 +1422,39 @@
       "taxonResolution": {
         "taxonIds": [
           "ALG#000003",
-          "ALG#000004"
+          "ALG#000004",
+          "ALG#000001"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "kelp",
+      "sourceVariants": [
+        {
+          "id": "plant_temperate_kelp_forests",
+          "name": {
+            "en": "Temperate Kelp Forests",
+            "es": "Bosques de kelp en costas templadas apropiadas"
+          },
+          "sourceLabel": "Bosques de kelp en costas templadas apropiadas",
+          "biomeVariantIds": [
+            "marine_temperate_coast_and_sea"
+          ]
+        },
+        {
+          "id": "plant_subantarctic_kelp",
+          "name": {
+            "en": "Subantarctic Kelp",
+            "es": "Kelp subantártico en costas apropiadas"
+          },
+          "sourceLabel": "Kelp subantártico en costas apropiadas",
+          "biomeVariantIds": [
+            "marine_polar_and_subpolar"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_cape_bulbs_and_geophytes",
@@ -1713,7 +1487,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1768,7 +1542,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1832,7 +1606,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1887,7 +1661,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1953,7 +1727,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2008,7 +1782,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2064,7 +1838,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2128,7 +1902,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2190,7 +1964,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2245,7 +2019,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2270,22 +2044,23 @@
       }
     },
     {
-      "id": "plant_californian_oaks",
+      "id": "PLT#000204",
       "kind": "plant",
       "name": {
-        "en": "Californian Oaks",
-        "es": "Encinas y robles californianos"
+        "en": "Oaks",
+        "es": "Robles"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "temperate_forest_american"
+        "temperate_forest_american",
+        "temperate_forest_eurasian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -2293,14 +2068,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2324,13 +2099,53 @@
       "taxonResolution": {
         "taxonIds": [
           "PLT#000132",
-          "PLT#000134"
+          "PLT#000134",
+          "PLT#000137",
+          "PLT#000136",
+          "PLT#000133",
+          "PLT#000138"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "oaks",
+      "sourceVariants": [
+        {
+          "id": "plant_californian_oaks",
+          "name": {
+            "en": "Californian Oaks",
+            "es": "Encinas y robles californianos"
+          },
+          "sourceLabel": "Encinas y robles californianos",
+          "biomeVariantIds": [
+            "temperate_forest_american"
+          ]
+        },
+        {
+          "id": "plant_european_oaks",
+          "name": {
+            "en": "European Oaks",
+            "es": "Robles europeos"
+          },
+          "sourceLabel": "Robles europeos",
+          "biomeVariantIds": [
+            "temperate_forest_eurasian"
+          ]
+        },
+        {
+          "id": "plant_north_american_oaks",
+          "name": {
+            "en": "North American Oaks",
+            "es": "Robles norteamericanos"
+          },
+          "sourceLabel": "Robles norteamericanos",
+          "biomeVariantIds": [
+            "temperate_forest_american"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_mountain_junipers",
@@ -2363,7 +2178,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2419,7 +2234,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2474,7 +2289,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2529,7 +2344,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2555,22 +2370,24 @@
       }
     },
     {
-      "id": "plant_mediterranean_eucalypts",
+      "id": "PLT#000197",
       "kind": "plant",
       "name": {
-        "en": "Mediterranean Eucalypts",
-        "es": "Eucaliptos de clima mediterráneo"
+        "en": "Eucalypts",
+        "es": "Eucaliptos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
+        "temperate_forest_south_african_and_australian",
+        "savanna_australian",
+        "desert_australian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -2578,14 +2395,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2601,123 +2418,51 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000064"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_tropical_savanna_eucalypts",
-      "kind": "plant",
-      "name": {
-        "en": "Tropical Savanna Eucalypts",
-        "es": "Eucaliptos de sabana tropical"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_tropical_savanna_eucalypts",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Eucaliptos de sabana tropical",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "PLT#000065"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_arid_land_eucalypts",
-      "kind": "plant",
-      "name": {
-        "en": "Arid-Land Eucalypts",
-        "es": "Eucaliptos de zonas áridas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_arid_land_eucalypts",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Eucaliptos de zonas áridas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000064",
+          "PLT#000065",
           "PLT#000063"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "eucalypts",
+      "sourceVariants": [
+        {
+          "id": "plant_mediterranean_eucalypts",
+          "name": {
+            "en": "Mediterranean Eucalypts",
+            "es": "Eucaliptos de clima mediterráneo"
+          },
+          "sourceLabel": "Eucaliptos de clima mediterráneo",
+          "biomeVariantIds": [
+            "temperate_forest_south_african_and_australian"
+          ]
+        },
+        {
+          "id": "plant_tropical_savanna_eucalypts",
+          "name": {
+            "en": "Tropical Savanna Eucalypts",
+            "es": "Eucaliptos de sabana tropical"
+          },
+          "sourceLabel": "Eucaliptos de sabana tropical",
+          "biomeVariantIds": [
+            "savanna_australian"
+          ]
+        },
+        {
+          "id": "plant_arid_land_eucalypts",
+          "name": {
+            "en": "Arid-Land Eucalypts",
+            "es": "Eucaliptos de zonas áridas"
+          },
+          "sourceLabel": "Eucaliptos de zonas áridas",
+          "biomeVariantIds": [
+            "desert_australian"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_marine_phytoplankton",
@@ -2750,7 +2495,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2805,7 +2550,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2871,7 +2616,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2926,7 +2671,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2981,7 +2726,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3036,7 +2781,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3091,7 +2836,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3146,7 +2891,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3201,7 +2946,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3263,7 +3008,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3318,7 +3063,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3373,7 +3118,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3393,61 +3138,6 @@
         ],
         "formIds": [],
         "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_subantarctic_kelp",
-      "kind": "plant",
-      "name": {
-        "en": "Subantarctic Kelp",
-        "es": "Kelp subantártico en costas apropiadas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_subantarctic_kelp",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Kelp subantártico en costas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ALG#000001"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
       }
@@ -3483,7 +3173,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3545,7 +3235,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3570,7 +3260,7 @@
       }
     },
     {
-      "id": "plant_lichens",
+      "id": "PLT#000199",
       "kind": "plant",
       "name": {
         "en": "Lichens",
@@ -3578,15 +3268,16 @@
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "tundra_eurasian",
-        "tundra_subantarctic"
+        "tundra_subantarctic",
+        "tundra_north_american_and_greenland"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -3594,14 +3285,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3621,28 +3312,55 @@
           "FNG#000002"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "lichens",
+      "sourceVariants": [
+        {
+          "id": "plant_lichens",
+          "name": {
+            "en": "Lichens",
+            "es": "Líquenes"
+          },
+          "sourceLabel": "Líquenes",
+          "biomeVariantIds": [
+            "tundra_eurasian",
+            "tundra_subantarctic"
+          ]
+        },
+        {
+          "id": "plant_reindeer_lichens",
+          "name": {
+            "en": "Reindeer Lichens",
+            "es": "Líquenes de reno"
+          },
+          "sourceLabel": "Líquenes de reno",
+          "biomeVariantIds": [
+            "tundra_north_american_and_greenland"
+          ]
+        }
+      ]
     },
     {
-      "id": "plant_reindeer_lichens",
+      "id": "PLT#000200",
       "kind": "plant",
       "name": {
-        "en": "Reindeer Lichens",
-        "es": "Líquenes de reno"
+        "en": "Mangroves",
+        "es": "Mangles"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
+        "marine_tropical_coast",
+        "marine_coastal_wetlands"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -3650,69 +3368,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_reindeer_lichens",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Líquenes de reno",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "FNG#000001"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_tropical_mangroves",
-      "kind": "plant",
-      "name": {
-        "en": "Tropical Mangroves",
-        "es": "Manglares en litorales tropicales compatibles"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3729,68 +3392,39 @@
       "taxonResolution": {
         "taxonIds": [
           "PLT#000142",
-          "PLT#000019"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_red_mangrove_and_other_native_mangroves",
-      "kind": "plant",
-      "name": {
-        "en": "Red Mangrove and Other Native Mangroves",
-        "es": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_coastal_wetlands"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_red_mangrove_and_other_native_mangroves",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000019",
           "PLT#000141"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "mangroves",
+      "sourceVariants": [
+        {
+          "id": "plant_tropical_mangroves",
+          "name": {
+            "en": "Tropical Mangroves",
+            "es": "Manglares en litorales tropicales compatibles"
+          },
+          "sourceLabel": "Manglares en litorales tropicales compatibles",
+          "biomeVariantIds": [
+            "marine_tropical_coast"
+          ]
+        },
+        {
+          "id": "plant_red_mangrove_and_other_native_mangroves",
+          "name": {
+            "en": "Red Mangrove and Other Native Mangroves",
+            "es": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)"
+          },
+          "sourceLabel": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)",
+          "biomeVariantIds": [
+            "marine_coastal_wetlands"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_manzanitas",
@@ -3823,7 +3457,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3878,7 +3512,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3934,7 +3568,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3991,7 +3625,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4047,7 +3681,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4103,7 +3737,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4159,7 +3793,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4214,7 +3848,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4270,7 +3904,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4326,7 +3960,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4382,7 +4016,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4439,7 +4073,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4494,7 +4128,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4549,7 +4183,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4604,7 +4238,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4659,7 +4293,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4714,7 +4348,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4769,7 +4403,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4825,7 +4459,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4880,7 +4514,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4935,7 +4569,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4990,7 +4624,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5045,7 +4679,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5101,7 +4735,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5156,7 +4790,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5181,22 +4815,23 @@
       }
     },
     {
-      "id": "plant_scots_pine",
+      "id": "PLT#000201",
       "kind": "plant",
       "name": {
-        "en": "Scots Pine",
-        "es": "Pino silvestre"
+        "en": "Pines",
+        "es": "Pinos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "temperate_forest_boreal"
+        "temperate_forest_boreal",
+        "alpine_european"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -5204,14 +4839,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5234,93 +4869,58 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000123"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_mountain_pines",
-      "kind": "plant",
-      "name": {
-        "en": "Mountain Pines",
-        "es": "Pinos de montaña"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceId": "RES#000001",
-          "status": "proposed_requires_species_and_action_review",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_mountain_pines",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Pinos de montaña",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000123",
           "PLT#000122"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "pines",
+      "sourceVariants": [
+        {
+          "id": "plant_scots_pine",
+          "name": {
+            "en": "Scots Pine",
+            "es": "Pino silvestre"
+          },
+          "sourceLabel": "Pino silvestre",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        },
+        {
+          "id": "plant_mountain_pines",
+          "name": {
+            "en": "Mountain Pines",
+            "es": "Pinos de montaña"
+          },
+          "sourceLabel": "Pinos de montaña",
+          "biomeVariantIds": [
+            "alpine_european"
+          ]
+        }
+      ]
     },
     {
-      "id": "plant_cushion_plants",
+      "id": "PLT#000202",
       "kind": "plant",
       "name": {
-        "en": "Cushion Plants",
+        "en": "Cushion plants",
         "es": "Plantas almohadilladas"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tundra_subantarctic"
+        "tundra_subantarctic",
+        "alpine_andean"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -5328,14 +4928,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5351,68 +4951,39 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000021"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_andean_cushion_plants",
-      "kind": "plant",
-      "name": {
-        "en": "Andean Cushion Plants",
-        "es": "Plantas almohadilladas andinas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_andean_cushion_plants",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Plantas almohadilladas andinas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000021",
           "PLT#000020"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "cushion_plants",
+      "sourceVariants": [
+        {
+          "id": "plant_cushion_plants",
+          "name": {
+            "en": "Cushion Plants",
+            "es": "Plantas almohadilladas"
+          },
+          "sourceLabel": "Plantas almohadilladas",
+          "biomeVariantIds": [
+            "tundra_subantarctic"
+          ]
+        },
+        {
+          "id": "plant_andean_cushion_plants",
+          "name": {
+            "en": "Andean Cushion Plants",
+            "es": "Plantas almohadilladas andinas"
+          },
+          "sourceLabel": "Plantas almohadilladas andinas",
+          "biomeVariantIds": [
+            "alpine_andean"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_atacama_coastal_fog_plants",
@@ -5445,7 +5016,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5500,7 +5071,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5555,7 +5126,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5580,19 +5151,19 @@
       }
     },
     {
-      "id": "plant_white_spruce",
+      "id": "PLT#000203",
       "kind": "plant",
       "name": {
-        "en": "White Spruce",
-        "es": "Pícea blanca"
+        "en": "Spruces",
+        "es": "Píceas"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "temperate_forest_boreal"
@@ -5603,14 +5174,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5633,138 +5204,52 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000119"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_black_spruce",
-      "kind": "plant",
-      "name": {
-        "en": "Black Spruce",
-        "es": "Pícea negra"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceId": "RES#000001",
-          "status": "proposed_requires_species_and_action_review",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_black_spruce",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Pícea negra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "PLT#000120"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_eurasian_spruces",
-      "kind": "plant",
-      "name": {
-        "en": "Eurasian Spruces",
-        "es": "Píceas euroasiáticas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceId": "RES#000001",
-          "status": "proposed_requires_species_and_action_review",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_eurasian_spruces",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Píceas euroasiáticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000119",
+          "PLT#000120",
           "PLT#000118",
           "PLT#000121"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "spruces",
+      "sourceVariants": [
+        {
+          "id": "plant_white_spruce",
+          "name": {
+            "en": "White Spruce",
+            "es": "Pícea blanca"
+          },
+          "sourceLabel": "Pícea blanca",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        },
+        {
+          "id": "plant_black_spruce",
+          "name": {
+            "en": "Black Spruce",
+            "es": "Pícea negra"
+          },
+          "sourceLabel": "Pícea negra",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        },
+        {
+          "id": "plant_eurasian_spruces",
+          "name": {
+            "en": "Eurasian Spruces",
+            "es": "Píceas euroasiáticas"
+          },
+          "sourceLabel": "Píceas euroasiáticas",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_queuna_trees",
@@ -5797,7 +5282,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5853,7 +5338,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5908,7 +5393,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5963,7 +5448,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5983,132 +5468,6 @@
         ],
         "formIds": [],
         "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_european_oaks",
-      "kind": "plant",
-      "name": {
-        "en": "European Oaks",
-        "es": "Robles europeos"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceId": "RES#000001",
-          "status": "proposed_requires_species_and_action_review",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_european_oaks",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Robles europeos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "PLT#000137",
-          "PLT#000136"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_north_american_oaks",
-      "kind": "plant",
-      "name": {
-        "en": "North American Oaks",
-        "es": "Robles norteamericanos"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceId": "RES#000001",
-          "status": "proposed_requires_species_and_action_review",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_north_american_oaks",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Robles norteamericanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "PLT#000133",
-          "PLT#000138"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
       }
@@ -6144,7 +5503,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6200,7 +5559,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6255,7 +5614,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6280,22 +5639,23 @@
       }
     },
     {
-      "id": "plant_dwarf_willows",
+      "id": "PLT#000205",
       "kind": "plant",
       "name": {
-        "en": "Dwarf Willows",
-        "es": "Sauces enanos"
+        "en": "Willows",
+        "es": "Sauces"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
+        "tundra_north_american_and_greenland",
+        "tundra_eurasian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -6303,14 +5663,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6326,68 +5686,39 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "PLT#000148"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "plant_arctic_willows",
-      "kind": "plant",
-      "name": {
-        "en": "Arctic Willows",
-        "es": "Sauces árticos"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": null,
-      "potentialUseMethods": [],
-      "cultivationResearch": {
-        "technologyId": "species_cultivation",
-        "speciesId": "plant_arctic_willows",
-        "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
-      },
-      "sourceLabel": "Sauces árticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "PLT#000148",
           "PLT#000149"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "willows",
+      "sourceVariants": [
+        {
+          "id": "plant_dwarf_willows",
+          "name": {
+            "en": "Dwarf Willows",
+            "es": "Sauces enanos"
+          },
+          "sourceLabel": "Sauces enanos",
+          "biomeVariantIds": [
+            "tundra_north_american_and_greenland"
+          ]
+        },
+        {
+          "id": "plant_arctic_willows",
+          "name": {
+            "en": "Arctic Willows",
+            "es": "Sauces árticos"
+          },
+          "sourceLabel": "Sauces árticos",
+          "biomeVariantIds": [
+            "tundra_eurasian"
+          ]
+        }
+      ]
     },
     {
       "id": "plant_saxaul",
@@ -6420,7 +5751,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6475,7 +5806,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6531,7 +5862,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6586,7 +5917,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6641,7 +5972,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6696,7 +6027,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6752,7 +6083,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6814,7 +6145,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6873,7 +6204,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6939,7 +6270,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6994,7 +6325,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7056,7 +6387,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7111,7 +6442,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7166,7 +6497,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7229,7 +6560,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7285,7 +6616,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -8135,5 +7466,147 @@
       }
     }
   ],
-  "biologicalCatalogFile": "plants.biological.catalog.json"
+  "biologicalCatalogFile": "plants.biological.catalog.json",
+  "entityAliases": [
+    {
+      "previousId": "plant_dwarf_birch",
+      "entityId": "PLT#000191"
+    },
+    {
+      "previousId": "plant_birches",
+      "entityId": "PLT#000191"
+    },
+    {
+      "previousId": "plant_african_acacias",
+      "entityId": "PLT#000192"
+    },
+    {
+      "previousId": "plant_australian_acacias",
+      "entityId": "PLT#000192"
+    },
+    {
+      "previousId": "plant_desert_acacias",
+      "entityId": "PLT#000192"
+    },
+    {
+      "previousId": "plant_arid_land_acacias",
+      "entityId": "PLT#000192"
+    },
+    {
+      "previousId": "plant_american_larch",
+      "entityId": "PLT#000193"
+    },
+    {
+      "previousId": "plant_siberian_larches",
+      "entityId": "PLT#000193"
+    },
+    {
+      "previousId": "plant_wormwoods",
+      "entityId": "PLT#000194"
+    },
+    {
+      "previousId": "plant_wormwoods_703907",
+      "entityId": "PLT#000194"
+    },
+    {
+      "previousId": "plant_dry_forest_bamboos",
+      "entityId": "PLT#000195"
+    },
+    {
+      "previousId": "plant_asian_tropical_bamboos",
+      "entityId": "PLT#000195"
+    },
+    {
+      "previousId": "plant_wild_bananas",
+      "entityId": "PLT#000196"
+    },
+    {
+      "previousId": "plant_new_guinea_wild_bananas",
+      "entityId": "PLT#000196"
+    },
+    {
+      "previousId": "plant_mediterranean_eucalypts",
+      "entityId": "PLT#000197"
+    },
+    {
+      "previousId": "plant_tropical_savanna_eucalypts",
+      "entityId": "PLT#000197"
+    },
+    {
+      "previousId": "plant_arid_land_eucalypts",
+      "entityId": "PLT#000197"
+    },
+    {
+      "previousId": "plant_temperate_kelp_forests",
+      "entityId": "PLT#000198"
+    },
+    {
+      "previousId": "plant_subantarctic_kelp",
+      "entityId": "PLT#000198"
+    },
+    {
+      "previousId": "plant_lichens",
+      "entityId": "PLT#000199"
+    },
+    {
+      "previousId": "plant_reindeer_lichens",
+      "entityId": "PLT#000199"
+    },
+    {
+      "previousId": "plant_tropical_mangroves",
+      "entityId": "PLT#000200"
+    },
+    {
+      "previousId": "plant_red_mangrove_and_other_native_mangroves",
+      "entityId": "PLT#000200"
+    },
+    {
+      "previousId": "plant_scots_pine",
+      "entityId": "PLT#000201"
+    },
+    {
+      "previousId": "plant_mountain_pines",
+      "entityId": "PLT#000201"
+    },
+    {
+      "previousId": "plant_cushion_plants",
+      "entityId": "PLT#000202"
+    },
+    {
+      "previousId": "plant_andean_cushion_plants",
+      "entityId": "PLT#000202"
+    },
+    {
+      "previousId": "plant_white_spruce",
+      "entityId": "PLT#000203"
+    },
+    {
+      "previousId": "plant_black_spruce",
+      "entityId": "PLT#000203"
+    },
+    {
+      "previousId": "plant_eurasian_spruces",
+      "entityId": "PLT#000203"
+    },
+    {
+      "previousId": "plant_californian_oaks",
+      "entityId": "PLT#000204"
+    },
+    {
+      "previousId": "plant_european_oaks",
+      "entityId": "PLT#000204"
+    },
+    {
+      "previousId": "plant_north_american_oaks",
+      "entityId": "PLT#000204"
+    },
+    {
+      "previousId": "plant_dwarf_willows",
+      "entityId": "PLT#000205"
+    },
+    {
+      "previousId": "plant_arctic_willows",
+      "entityId": "PLT#000205"
+    }
+  ]
 }

@@ -36,11 +36,11 @@ Las colecciones son planas y se relacionan por IDs. Los nombres visibles usan `{
 
 ## 3. Identidad y taxonomía
 
-Los IDs de candidatos identifican entradas de diseño; no son nombres científicos aceptados. Las variantes que podrían corresponder al mismo taxón se conservan hasta revisarlas. No deben fusionarse solo por tener nombres parecidos.
+Los IDs de candidatos identifican entradas de diseño; no son nombres científicos aceptados. Las variantes regionales revisadas se agrupan cuando sus productos coinciden, con alias y procedencia conservada. No fusionar entidades diferentes solo por parecido.
 
-Solo se incluyen nombres científicos binomiales escritos explícitamente en el documento. `verified: false` indica que no se ha validado taxonomía. Acacias, peces regionales o parientes silvestres deben desglosarse o aceptarse expresamente como grupos de juego. Un nombre común en singular no garantiza una especie exacta.
+Solo se incluyen nombres científicos binomiales escritos explícitamente en el documento. `verified: false` indica que no se ha validado taxonomía. Las categorías generales como acacias y zorros son identidades válidas del juego. La taxonomía científica es opcional y no exige subdividirlas.
 
-Los IDs agrícolas `wheat` y `maize` son vínculos propuestos para investigación. Falta resolver su taxón, ancestro y relación con los candidatos silvestres. No se equipara automáticamente maíz doméstico con cualquier teosinte ni trigo doméstico con cualquier trigo silvestre.
+Los IDs agrícolas `wheat` y `maize` son vínculos propuestos para investigación. Falta diseñar sus relaciones jugables con las formas silvestres; la taxonomía es opcional. No se equipara automáticamente maíz doméstico con cualquier teosinte ni trigo doméstico con cualquier trigo silvestre.
 
 ## 4. Contenido conservado
 
@@ -56,7 +56,7 @@ La procedencia incluye el ID exacto del documento y la huella de la copia adjunt
 
 Todas las apariciones tienen `runtimeEnabled: false`, `guaranteedPresence: false` y probabilidad desconocida. No se inventaron abundancias, crecimiento, rangos de fertilidad, tiempos de domesticación ni rendimientos.
 
-Los productos animales solo transcriben aprovechamientos potenciales del documento. No son desbloqueos ni rendimientos garantizados. `antlers_or_horns` debe concretarse según especie, sin conceder ambos por defecto. Algunos productos vegetales y todos los cultivos ya tienen vínculos propuestos de recursos; especie exacta, requisitos de obtención y cantidades siguen pendientes. Son propuestas adicionales de diseño, no afirmaciones textuales de la fuente.
+Los productos animales solo transcriben aprovechamientos potenciales del documento. No son desbloqueos ni rendimientos garantizados. `antlers_or_horns` requiere decidir el recurso del juego, sin conceder ambos por defecto. Algunos productos vegetales y todos los cultivos ya tienen vínculos propuestos de recursos; los requisitos de obtención y cantidades siguen pendientes; no se exige especie científica exacta. Son propuestas adicionales de diseño, no afirmaciones textuales de la fuente.
 
 ## 6. Reglas del mundo
 
@@ -76,7 +76,7 @@ Esta guía no resuelve todas las dependencias externas. Presencia silvestre, des
 
 ## 8. Cómo completar cada candidato
 
-Elegir especie exacta o taxón de juego; verificar nombre científico y distribución; distinguir ancestros y formas domésticas; definir ecología y reproducción; especificar productos y recetas; vincular tecnologías; revisar época y región; finalmente balancear y probar.
+Elegir categoría del juego; conservar reglas regionales de hábitat; distinguir formas silvestres y domésticas útiles; definir ecología y reproducción; especificar productos y recetas; vincular tecnologías; revisar época y región; finalmente balancear y probar.
 
 Tras esas revisiones se podrán promover registros aprobados a `species.json` y definiciones ejecutables del mundo. Al dividir o fusionar candidatos deben conservarse IDs o establecerse alias y migraciones explícitas. Los registros con valores pendientes no son contenido final del simulador.
 
@@ -91,8 +91,8 @@ Se comprobó cobertura de apariciones, traducciones, IDs únicos, referencias, r
 {
   "biomeCount": 7,
   "regionalVariantCount": 27,
-  "plantCandidateCount": 129,
-  "animalCandidateCount": 134,
+  "plantCandidateCount": 109,
+  "animalCandidateCount": 101,
   "geologicalCandidateCount": 57,
   "sourceOccurrenceCount": 485,
   "agriculturalCropCandidateCount": 21
@@ -101,4 +101,6 @@ Se comprobó cobertura de apariciones, traducciones, IDs únicos, referencias, r
 
 ## Actualización de recursos
 
-El esquema/contenido del mundo es ahora 1.2.0/0.3.0; `catalogFiles.resources` enlaza la guía de recursos. Plantas, animales y minerales usan 1.1.0/0.2.0 con referencias adicionales de productos. Las 485 apariciones y los IDs originales se conservan. `extractedResourceId` identifica material obtenido, no metal refinado automático.
+Mundo usa esquema/contenido 1.4.0/0.5.0. Plantas y animales usan 1.3.0/0.4.0; minerales conservan 1.1.0/0.2.0. Las 485 apariciones conservan sus IDs; las definiciones agrupadas tienen alias y procedencia explícita. `extractedResourceId` identifica material obtenido, no metal refinado automático.
+
+La [granularidad vigente](biology.md) usa entidades generales y alias de IDs; la referencia científica es opcional.

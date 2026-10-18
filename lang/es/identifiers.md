@@ -59,3 +59,7 @@ Los nuevos recursos ya usan IDs RES. `data/resources/resources.catalog.guide.jso
 ## Asignaciones biológicas
 
 `ALG` identifica algas y `FRM` formas biológicas. Los catálogos `plants.biological.catalog.json` y `animals.biological.catalog.json` registran las asignaciones reales PLT/ANM/ALG/FNG/FRM. La secuencia FRM es global entre ambas carpetas. No reutilizar los ejemplos de la tabla ni recalcular IDs por orden alfabético. `VAR` sigue siendo variante regional, no variedad de cultivo. Los taxones incluyen rangos de especie y subespecie explícitos. Ver [biología](biology.md).
+
+## Entidades generales
+
+Los prefijos PLT y ANM también identifican categorías del juego, no solo taxones científicos. Las 33 categorías agrupadas tienen asignaciones nuevas y permanentes, sin reutilizar los IDs científicos anteriores. Los catálogos vegetales y animales incluyen `entityAliases` con los 86 IDs retirados. Por ejemplo, `ANM#000169` es zorros y `PLT#000204` es robles. Los nombres científicos son antecedentes opcionales y no obligan a dividir estas entidades.

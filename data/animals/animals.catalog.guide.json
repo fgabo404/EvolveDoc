@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.2.0",
-  "contentVersion": "0.3.0",
+  "schemaVersion": "1.3.0",
+  "contentVersion": "0.4.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -9,24 +9,25 @@
   ],
   "runtimePolicy": {
     "loadAsGameDefinitions": false,
-    "unknownValues": "null means unresolved; it is not zero or unrestricted."
+    "unknownValues": "null means unresolved; it is not zero or unrestricted.",
+    "classificationPolicy": "Use general gameplay entities when specific species add no meaningful resource or behavior distinction. Scientific taxonomy is optional background, not an unlock or entity identity requirement. Preserve distinctions for crops, wild/domestic forms and other actual gameplay differences."
   },
   "kind": "animal_catalog_design_guide",
   "speciesCandidates": [
     {
-      "id": "animal_eurasian_moose",
+      "id": "ANM#000170",
       "kind": "animal",
       "name": {
-        "en": "Eurasian Moose",
-        "es": "Alce euroasiático"
+        "en": "Moose",
+        "es": "Alces"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "temperate_forest_boreal"
@@ -37,14 +38,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -79,105 +80,58 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000001"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_north_american_moose",
-      "kind": "animal",
-      "name": {
-        "en": "North American Moose",
-        "es": "Alce norteamericano"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Alce norteamericano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000001",
           "ANM#000002"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "moose",
+      "sourceVariants": [
+        {
+          "id": "animal_eurasian_moose",
+          "name": {
+            "en": "Eurasian Moose",
+            "es": "Alce euroasiático"
+          },
+          "sourceLabel": "Alce euroasiático",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        },
+        {
+          "id": "animal_north_american_moose",
+          "name": {
+            "en": "North American Moose",
+            "es": "Alce norteamericano"
+          },
+          "sourceLabel": "Alce norteamericano",
+          "biomeVariantIds": [
+            "temperate_forest_boreal"
+          ]
+        }
+      ]
     },
     {
-      "id": "animal_regional_small_antelopes",
+      "id": "ANM#000171",
       "kind": "animal",
       "name": {
-        "en": "Regional Small Antelopes",
-        "es": "Antílopes pequeños regionales"
+        "en": "Antelopes",
+        "es": "Antílopes"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
+        "temperate_forest_south_african_and_australian",
+        "tropical_forest_african"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -185,14 +139,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -228,88 +182,40 @@
       "taxonResolution": {
         "taxonIds": [
           "ANM#000140",
-          "ANM#000139"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_regional_antelopes",
-      "kind": "animal",
-      "name": {
-        "en": "Regional Antelopes",
-        "es": "Antílopes regionales"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Antílopes regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000139",
           "ANM#000037",
           "ANM#000156"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "antelopes",
+      "sourceVariants": [
+        {
+          "id": "animal_regional_small_antelopes",
+          "name": {
+            "en": "Regional Small Antelopes",
+            "es": "Antílopes pequeños regionales"
+          },
+          "sourceLabel": "Antílopes pequeños regionales",
+          "biomeVariantIds": [
+            "temperate_forest_south_african_and_australian"
+          ]
+        },
+        {
+          "id": "animal_regional_antelopes",
+          "name": {
+            "en": "Regional Antelopes",
+            "es": "Antílopes regionales"
+          },
+          "sourceLabel": "Antílopes regionales",
+          "biomeVariantIds": [
+            "tropical_forest_african"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_australian_scrub_birds",
@@ -342,7 +248,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -408,7 +314,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -469,7 +375,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -516,22 +422,23 @@
       }
     },
     {
-      "id": "animal_chacma_baboon",
+      "id": "ANM#000172",
       "kind": "animal",
       "name": {
-        "en": "Chacma Baboon",
-        "es": "Babuino chacma en zonas compatibles"
+        "en": "Baboons",
+        "es": "Babuinos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
+        "temperate_forest_south_african_and_australian",
+        "tropical_forest_african"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -539,14 +446,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -558,64 +465,39 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000122"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_baboons",
-      "kind": "animal",
-      "name": {
-        "en": "Baboons",
-        "es": "Babuinos"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [],
-      "potentialUseMethods": [],
-      "cultivationResearch": null,
-      "sourceLabel": "Babuinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000122",
           "ANM#000121"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "baboons",
+      "sourceVariants": [
+        {
+          "id": "animal_chacma_baboon",
+          "name": {
+            "en": "Chacma Baboon",
+            "es": "Babuino chacma en zonas compatibles"
+          },
+          "sourceLabel": "Babuino chacma en zonas compatibles",
+          "biomeVariantIds": [
+            "temperate_forest_south_african_and_australian"
+          ]
+        },
+        {
+          "id": "animal_baboons",
+          "name": {
+            "en": "Baboons",
+            "es": "Babuinos"
+          },
+          "sourceLabel": "Babuinos",
+          "biomeVariantIds": [
+            "tropical_forest_african"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_atlantic_cod",
@@ -648,7 +530,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -716,7 +598,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -867,7 +749,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1015,7 +897,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1074,7 +956,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1142,7 +1024,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1204,7 +1086,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1249,22 +1131,23 @@
       }
     },
     {
-      "id": "animal_coastal_crabs",
+      "id": "ANM#000173",
       "kind": "animal",
       "name": {
-        "en": "Coastal Crabs",
-        "es": "Cangrejos costeros"
+        "en": "Crabs",
+        "es": "Cangrejos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "marine_tropical_coast"
+        "marine_tropical_coast",
+        "marine_coastal_wetlands"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -1272,14 +1155,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1302,93 +1185,60 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000103"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_mangrove_crabs",
-      "kind": "animal",
-      "name": {
-        "en": "Mangrove Crabs",
-        "es": "Cangrejos de manglar (costas tropicales)"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_coastal_wetlands"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        }
-      ],
-      "potentialUseMethods": [
-        "fishing",
-        "gathering"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Cangrejos de manglar (costas tropicales)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000103",
           "ANM#000146"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "crabs",
+      "sourceVariants": [
+        {
+          "id": "animal_coastal_crabs",
+          "name": {
+            "en": "Coastal Crabs",
+            "es": "Cangrejos costeros"
+          },
+          "sourceLabel": "Cangrejos costeros",
+          "biomeVariantIds": [
+            "marine_tropical_coast"
+          ]
+        },
+        {
+          "id": "animal_mangrove_crabs",
+          "name": {
+            "en": "Mangrove Crabs",
+            "es": "Cangrejos de manglar (costas tropicales)"
+          },
+          "sourceLabel": "Cangrejos de manglar (costas tropicales)",
+          "biomeVariantIds": [
+            "marine_coastal_wetlands"
+          ]
+        }
+      ]
     },
     {
-      "id": "animal_antilopine_kangaroo",
+      "id": "ANM#000174",
       "kind": "animal",
       "name": {
-        "en": "Antilopine Kangaroo",
-        "es": "Canguro antilopino, norte de Australia"
+        "en": "Kangaroos",
+        "es": "Canguros"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "savanna_australian"
+        "savanna_australian",
+        "temperate_forest_south_african_and_australian",
+        "desert_australian",
+        "tropical_forest_oceanian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -1396,14 +1246,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1432,217 +1282,63 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000108"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_western_grey_kangaroo",
-      "kind": "animal",
-      "name": {
-        "en": "Western Grey Kangaroo",
-        "es": "Canguro gris occidental"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Canguro gris occidental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000090"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_red_kangaroo",
-      "kind": "animal",
-      "name": {
-        "en": "Red Kangaroo",
-        "es": "Canguro rojo"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Canguro rojo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000109"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_new_guinea_tree_kangaroos",
-      "kind": "animal",
-      "name": {
-        "en": "New Guinea Tree Kangaroos",
-        "es": "Canguros arborícolas de Nueva Guinea"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Canguros arborícolas de Nueva Guinea",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000108",
+          "ANM#000090",
+          "ANM#000109",
           "ANM#000048"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "kangaroos",
+      "sourceVariants": [
+        {
+          "id": "animal_antilopine_kangaroo",
+          "name": {
+            "en": "Antilopine Kangaroo",
+            "es": "Canguro antilopino, norte de Australia"
+          },
+          "sourceLabel": "Canguro antilopino, norte de Australia",
+          "biomeVariantIds": [
+            "savanna_australian"
+          ]
+        },
+        {
+          "id": "animal_western_grey_kangaroo",
+          "name": {
+            "en": "Western Grey Kangaroo",
+            "es": "Canguro gris occidental"
+          },
+          "sourceLabel": "Canguro gris occidental",
+          "biomeVariantIds": [
+            "temperate_forest_south_african_and_australian"
+          ]
+        },
+        {
+          "id": "animal_red_kangaroo",
+          "name": {
+            "en": "Red Kangaroo",
+            "es": "Canguro rojo"
+          },
+          "sourceLabel": "Canguro rojo",
+          "biomeVariantIds": [
+            "desert_australian"
+          ]
+        },
+        {
+          "id": "animal_new_guinea_tree_kangaroos",
+          "name": {
+            "en": "New Guinea Tree Kangaroos",
+            "es": "Canguros arborícolas de Nueva Guinea"
+          },
+          "sourceLabel": "Canguros arborícolas de Nueva Guinea",
+          "biomeVariantIds": [
+            "tropical_forest_oceanian"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_capybara",
@@ -1675,7 +1371,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1743,7 +1439,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1829,7 +1525,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1915,7 +1611,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -1997,7 +1693,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2069,7 +1765,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2090,22 +1786,26 @@
       }
     },
     {
-      "id": "animal_chital",
+      "id": "ANM#000175",
       "kind": "animal",
       "name": {
-        "en": "Chital",
-        "es": "Ciervo axis, India y Sri Lanka"
+        "en": "Deer",
+        "es": "Ciervos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tropical_forest_asian"
+        "tropical_forest_asian",
+        "temperate_forest_eurasian",
+        "temperate_forest_american",
+        "tropical_forest_american",
+        "savanna_american"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -2113,14 +1813,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2155,161 +1855,110 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000010"
+          "ANM#000010",
+          "ANM#000038",
+          "ANM#000039",
+          "ANM#000074",
+          "ANM#000131",
+          "ANM#000104",
+          "ANM#000115"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_red_deer",
-      "kind": "animal",
-      "name": {
-        "en": "Red Deer",
-        "es": "Ciervo rojo"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
+      "tag": "deer",
+      "sourceVariants": [
         {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
+          "id": "animal_chital",
+          "name": {
+            "en": "Chital",
+            "es": "Ciervo axis, India y Sri Lanka"
+          },
+          "sourceLabel": "Ciervo axis, India y Sri Lanka",
+          "biomeVariantIds": [
+            "tropical_forest_asian"
+          ]
         },
         {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
+          "id": "animal_red_deer",
+          "name": {
+            "en": "Red Deer",
+            "es": "Ciervo rojo"
+          },
+          "sourceLabel": "Ciervo rojo",
+          "biomeVariantIds": [
+            "temperate_forest_eurasian"
+          ]
         },
         {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
+          "id": "animal_sika_deer",
+          "name": {
+            "en": "Sika Deer",
+            "es": "Ciervo sika"
+          },
+          "sourceLabel": "Ciervo sika",
+          "biomeVariantIds": [
+            "temperate_forest_eurasian"
+          ]
+        },
+        {
+          "id": "animal_huemul",
+          "name": {
+            "en": "Huemul",
+            "es": "Huemul en bosques andino-patagónicos"
+          },
+          "sourceLabel": "Huemul en bosques andino-patagónicos",
+          "biomeVariantIds": [
+            "temperate_forest_american"
+          ]
+        },
+        {
+          "id": "animal_pudu",
+          "name": {
+            "en": "Pudu",
+            "es": "Pudú"
+          },
+          "sourceLabel": "Pudú",
+          "biomeVariantIds": [
+            "temperate_forest_american"
+          ]
+        },
+        {
+          "id": "animal_white_tailed_deer",
+          "name": {
+            "en": "White-Tailed Deer",
+            "es": "Venado cola blanca"
+          },
+          "sourceLabel": "Venado cola blanca",
+          "biomeVariantIds": [
+            "temperate_forest_american"
+          ]
+        },
+        {
+          "id": "animal_mesoamerican_white_tailed_deer",
+          "name": {
+            "en": "Mesoamerican White-Tailed Deer",
+            "es": "Venado cola blanca, Mesoamérica"
+          },
+          "sourceLabel": "Venado cola blanca, Mesoamérica",
+          "biomeVariantIds": [
+            "tropical_forest_american"
+          ]
+        },
+        {
+          "id": "animal_pampas_deer",
+          "name": {
+            "en": "Pampas Deer",
+            "es": "Venado de las pampas"
+          },
+          "sourceLabel": "Venado de las pampas",
+          "biomeVariantIds": [
+            "savanna_american"
+          ]
         }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Ciervo rojo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000038"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_sika_deer",
-      "kind": "animal",
-      "name": {
-        "en": "Sika Deer",
-        "es": "Ciervo sika"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Ciervo sika",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000039"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      ]
     },
     {
       "id": "animal_european_rabbit",
@@ -2342,7 +1991,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2413,7 +2062,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2541,7 +2190,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2609,7 +2258,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2668,7 +2317,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2795,7 +2444,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2846,22 +2495,23 @@
       }
     },
     {
-      "id": "animal_african_forest_elephant",
+      "id": "ANM#000176",
       "kind": "animal",
       "name": {
-        "en": "African Forest Elephant",
-        "es": "Elefante africano de bosque"
+        "en": "African elephants",
+        "es": "Elefantes africanos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tropical_forest_african"
+        "tropical_forest_african",
+        "savanna_african"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -2869,14 +2519,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -2903,160 +2553,65 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000085"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_african_savanna_elephant",
-      "kind": "animal",
-      "name": {
-        "en": "African Savanna Elephant",
-        "es": "Elefante africano de sabana"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "ivory",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000046"
-        }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": null,
-      "sourceLabel": "Elefante africano de sabana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000085",
           "ANM#000084"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_african_savanna_elephant_in_dry_forest_mosaics",
-      "kind": "animal",
-      "name": {
-        "en": "African Savanna Elephant in Dry-Forest Mosaics",
-        "es": "Elefante africano de sabana, mosaicos de bosque seco"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
+      "tag": "african_elephants",
+      "sourceVariants": [
         {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
+          "id": "animal_african_forest_elephant",
+          "name": {
+            "en": "African Forest Elephant",
+            "es": "Elefante africano de bosque"
+          },
+          "sourceLabel": "Elefante africano de bosque",
+          "biomeVariantIds": [
+            "tropical_forest_african"
+          ]
         },
         {
-          "resourceTag": "ivory",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000046"
+          "id": "animal_african_savanna_elephant",
+          "name": {
+            "en": "African Savanna Elephant",
+            "es": "Elefante africano de sabana"
+          },
+          "sourceLabel": "Elefante africano de sabana",
+          "biomeVariantIds": [
+            "savanna_african"
+          ]
+        },
+        {
+          "id": "animal_african_savanna_elephant_in_dry_forest_mosaics",
+          "name": {
+            "en": "African Savanna Elephant in Dry-Forest Mosaics",
+            "es": "Elefante africano de sabana, mosaicos de bosque seco"
+          },
+          "sourceLabel": "Elefante africano de sabana, mosaicos de bosque seco",
+          "biomeVariantIds": [
+            "tropical_forest_african"
+          ]
         }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": null,
-      "sourceLabel": "Elefante africano de sabana, mosaicos de bosque seco",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000084"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      ]
     },
     {
-      "id": "animal_asian_elephant",
+      "id": "ANM#000177",
       "kind": "animal",
       "name": {
-        "en": "Asian Elephant",
-        "es": "Elefante asiático"
+        "en": "Asian elephants",
+        "es": "Elefantes asiáticos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "tropical_forest_asian"
@@ -3067,14 +2622,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3111,83 +2666,35 @@
           "ANM#000052"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_asian_elephant_in_suitable_forests",
-      "kind": "animal",
-      "name": {
-        "en": "Asian Elephant in Suitable Forests",
-        "es": "Elefante asiático en bosques apropiados"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
+      "tag": "asian_elephants",
+      "sourceVariants": [
         {
-          "resourceTag": "ivory",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000046"
+          "id": "animal_asian_elephant",
+          "name": {
+            "en": "Asian Elephant",
+            "es": "Elefante asiático"
+          },
+          "sourceLabel": "Elefante asiático",
+          "biomeVariantIds": [
+            "tropical_forest_asian"
+          ]
         },
         {
-          "resourceTag": "transport_service",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null
-        },
-        {
-          "resourceTag": "work_service",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null
+          "id": "animal_asian_elephant_in_suitable_forests",
+          "name": {
+            "en": "Asian Elephant in Suitable Forests",
+            "es": "Elefante asiático en bosques apropiados"
+          },
+          "sourceLabel": "Elefante asiático en bosques apropiados",
+          "biomeVariantIds": [
+            "tropical_forest_asian"
+          ]
         }
-      ],
-      "potentialUseMethods": [
-        "training"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Elefante asiático en bosques apropiados",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000052"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      ]
     },
     {
       "id": "animal_coastal_elephant_seals",
@@ -3220,7 +2727,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3288,7 +2795,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3371,7 +2878,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3437,7 +2944,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3513,7 +3020,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3559,22 +3066,23 @@
       }
     },
     {
-      "id": "animal_mongolian_gazelle",
+      "id": "ANM#000178",
       "kind": "animal",
       "name": {
-        "en": "Mongolian Gazelle",
-        "es": "Gacela de Mongolia, Gobi"
+        "en": "Gazelles",
+        "es": "Gacelas"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "desert_central_asian"
+        "desert_central_asian",
+        "desert_african_and_arabian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -3582,14 +3090,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3624,88 +3132,40 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000129"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_desert_gazelles",
-      "kind": "animal",
-      "name": {
-        "en": "Desert Gazelles",
-        "es": "Gacelas desérticas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Gacelas desérticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000129",
           "ANM#000062",
           "ANM#000063"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "gazelles",
+      "sourceVariants": [
+        {
+          "id": "animal_mongolian_gazelle",
+          "name": {
+            "en": "Mongolian Gazelle",
+            "es": "Gacela de Mongolia, Gobi"
+          },
+          "sourceLabel": "Gacela de Mongolia, Gobi",
+          "biomeVariantIds": [
+            "desert_central_asian"
+          ]
+        },
+        {
+          "id": "animal_desert_gazelles",
+          "name": {
+            "en": "Desert Gazelles",
+            "es": "Gacelas desérticas"
+          },
+          "sourceLabel": "Gacelas desérticas",
+          "biomeVariantIds": [
+            "desert_african_and_arabian"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_red_junglefowl",
@@ -3738,7 +3198,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3813,7 +3273,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3925,7 +3385,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -3976,7 +3436,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4008,22 +3468,23 @@
       }
     },
     {
-      "id": "animal_guanaco_in_coastal_deserts_and_foothills",
+      "id": "ANM#000179",
       "kind": "animal",
       "name": {
-        "en": "Guanaco in Coastal Deserts and Foothills",
-        "es": "Guanaco en desiertos costeros y piedemonte"
+        "en": "Guanacos",
+        "es": "Guanacos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "desert_american"
+        "desert_american",
+        "alpine_andean"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -4031,14 +3492,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4080,177 +3541,50 @@
         "formIds": [
           "FRM#000058"
         ],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_guanaco_at_suitable_elevations",
-      "kind": "animal",
-      "name": {
-        "en": "Guanaco at Suitable Elevations",
-        "es": "Guanaco en pisos adecuados"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
+      "tag": "guanacos",
+      "sourceVariants": [
         {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
+          "id": "animal_guanaco_in_coastal_deserts_and_foothills",
+          "name": {
+            "en": "Guanaco in Coastal Deserts and Foothills",
+            "es": "Guanaco en desiertos costeros y piedemonte"
+          },
+          "sourceLabel": "Guanaco en desiertos costeros y piedemonte",
+          "biomeVariantIds": [
+            "desert_american"
+          ]
         },
         {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "fiber",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000041"
+          "id": "animal_guanaco_at_suitable_elevations",
+          "name": {
+            "en": "Guanaco at Suitable Elevations",
+            "es": "Guanaco en pisos adecuados"
+          },
+          "sourceLabel": "Guanaco en pisos adecuados",
+          "biomeVariantIds": [
+            "alpine_andean"
+          ]
         }
-      ],
-      "potentialUseMethods": [
-        "capture",
-        "shearing"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Guanaco en pisos adecuados",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000079"
-        ],
-        "formIds": [
-          "FRM#000058"
-        ],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      ]
     },
     {
-      "id": "animal_huemul",
+      "id": "ANM#000180",
       "kind": "animal",
       "name": {
-        "en": "Huemul",
-        "es": "Huemul en bosques andino-patagónicos"
+        "en": "Wild boars",
+        "es": "Jabalíes"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Huemul en bosques andino-patagónicos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000074"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_wild_boar",
-      "kind": "animal",
-      "name": {
-        "en": "Wild Boar",
-        "es": "Jabalí"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "temperate_forest_eurasian"
@@ -4261,14 +3595,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4309,87 +3643,35 @@
         "formIds": [
           "FRM#000050"
         ],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_eurasian_wild_boar",
-      "kind": "animal",
-      "name": {
-        "en": "Eurasian Wild Boar",
-        "es": "Jabalí euroasiático"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
+      "tag": "wild_boars",
+      "sourceVariants": [
         {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
+          "id": "animal_wild_boar",
+          "name": {
+            "en": "Wild Boar",
+            "es": "Jabalí"
+          },
+          "sourceLabel": "Jabalí",
+          "biomeVariantIds": [
+            "temperate_forest_eurasian"
+          ]
         },
         {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "tusks",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000045"
+          "id": "animal_eurasian_wild_boar",
+          "name": {
+            "en": "Eurasian Wild Boar",
+            "es": "Jabalí euroasiático"
+          },
+          "sourceLabel": "Jabalí euroasiático",
+          "biomeVariantIds": [
+            "temperate_forest_eurasian"
+          ]
         }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Jabalí euroasiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000148"
-        ],
-        "formIds": [
-          "FRM#000050"
-        ],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      ]
     },
     {
       "id": "animal_jaguar",
@@ -4483,7 +3765,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4623,7 +3905,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4676,7 +3958,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -4866,7 +4148,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5150,22 +4432,23 @@
       }
     },
     {
-      "id": "animal_alpine_marmot",
+      "id": "ANM#000181",
       "kind": "animal",
       "name": {
-        "en": "Alpine Marmot",
-        "es": "Marmota alpina"
+        "en": "Marmots",
+        "es": "Marmotas"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "alpine_european"
+        "alpine_european",
+        "savanna_eurasian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -5173,14 +4456,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5209,81 +4492,39 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000092"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_steppe_marmots",
-      "kind": "animal",
-      "name": {
-        "en": "Steppe Marmots",
-        "es": "Marmotas de estepa"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Marmotas de estepa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000092",
           "ANM#000091"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "marmots",
+      "sourceVariants": [
+        {
+          "id": "animal_alpine_marmot",
+          "name": {
+            "en": "Alpine Marmot",
+            "es": "Marmota alpina"
+          },
+          "sourceLabel": "Marmota alpina",
+          "biomeVariantIds": [
+            "alpine_european"
+          ]
+        },
+        {
+          "id": "animal_steppe_marmots",
+          "name": {
+            "en": "Steppe Marmots",
+            "es": "Marmotas de estepa"
+          },
+          "sourceLabel": "Marmotas de estepa",
+          "biomeVariantIds": [
+            "savanna_eurasian"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_regional_mussels_and_oysters",
@@ -5316,7 +4557,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5385,7 +4626,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5454,7 +4695,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5573,7 +4814,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5618,23 +4859,25 @@
       }
     },
     {
-      "id": "animal_american_black_bear",
+      "id": "ANM#000182",
       "kind": "animal",
       "name": {
-        "en": "American Black Bear",
-        "es": "Oso negro americano"
+        "en": "Bears",
+        "es": "Osos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
         "temperate_forest_american",
-        "temperate_forest_boreal"
+        "temperate_forest_boreal",
+        "temperate_forest_eurasian",
+        "tundra_north_american_and_greenland"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -5642,14 +4885,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -5685,239 +4928,65 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000158"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_asian_black_bear",
-      "kind": "animal",
-      "name": {
-        "en": "Asian Black Bear",
-        "es": "Oso negro asiático"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "animal_fat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000032"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Oso negro asiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000161"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_brown_bear",
-      "kind": "animal",
-      "name": {
-        "en": "Brown Bear",
-        "es": "Oso pardo"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal",
-        "temperate_forest_eurasian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "animal_fat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000032"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Oso pardo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000159"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_coastal_and_sea_ice_polar_bear",
-      "kind": "animal",
-      "name": {
-        "en": "Coastal and Sea-Ice Polar Bear",
-        "es": "Oso polar solo en costas y hielo marino"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "animal_fat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000032"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Oso polar solo en costas y hielo marino",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000158",
+          "ANM#000161",
+          "ANM#000159",
           "ANM#000160"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "bears",
+      "sourceVariants": [
+        {
+          "id": "animal_american_black_bear",
+          "name": {
+            "en": "American Black Bear",
+            "es": "Oso negro americano"
+          },
+          "sourceLabel": "Oso negro americano",
+          "biomeVariantIds": [
+            "temperate_forest_american",
+            "temperate_forest_boreal"
+          ]
+        },
+        {
+          "id": "animal_asian_black_bear",
+          "name": {
+            "en": "Asian Black Bear",
+            "es": "Oso negro asiático"
+          },
+          "sourceLabel": "Oso negro asiático",
+          "biomeVariantIds": [
+            "temperate_forest_eurasian"
+          ]
+        },
+        {
+          "id": "animal_brown_bear",
+          "name": {
+            "en": "Brown Bear",
+            "es": "Oso pardo"
+          },
+          "sourceLabel": "Oso pardo",
+          "biomeVariantIds": [
+            "temperate_forest_boreal",
+            "temperate_forest_eurasian"
+          ]
+        },
+        {
+          "id": "animal_coastal_and_sea_ice_polar_bear",
+          "name": {
+            "en": "Coastal and Sea-Ice Polar Bear",
+            "es": "Oso polar solo en costas y hielo marino"
+          },
+          "sourceLabel": "Oso polar solo en costas y hielo marino",
+          "biomeVariantIds": [
+            "tundra_north_american_and_greenland"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_estuarine_oysters_and_other_bivalves",
@@ -5950,7 +5019,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6018,7 +5087,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6091,7 +5160,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6164,7 +5233,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6239,7 +5308,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6308,7 +5377,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6376,7 +5445,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6445,7 +5514,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6513,7 +5582,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6581,7 +5650,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6620,22 +5689,23 @@
       }
     },
     {
-      "id": "animal_island_coastal_penguins",
+      "id": "ANM#000183",
       "kind": "animal",
       "name": {
-        "en": "Island Coastal Penguins",
-        "es": "Pingüinos en costas de islas apropiadas"
+        "en": "Penguins",
+        "es": "Pingüinos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tundra_subantarctic"
+        "tundra_subantarctic",
+        "marine_polar_and_subpolar"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -6643,14 +5713,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6680,157 +5750,40 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000004"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_southern_regional_penguins",
-      "kind": "animal",
-      "name": {
-        "en": "Southern Regional Penguins",
-        "es": "Pingüinos únicamente en regiones australes apropiadas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "eggs",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000039"
-        },
-        {
-          "resourceTag": "animal_fat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000032"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting",
-        "gathering"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Pingüinos únicamente en regiones australes apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000004",
           "ANM#000134",
           "ANM#000135"
         ],
         "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_pudu",
-      "kind": "animal",
-      "name": {
-        "en": "Pudu",
-        "es": "Pudú"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
+      "tag": "penguins",
+      "sourceVariants": [
         {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
+          "id": "animal_island_coastal_penguins",
+          "name": {
+            "en": "Island Coastal Penguins",
+            "es": "Pingüinos en costas de islas apropiadas"
+          },
+          "sourceLabel": "Pingüinos en costas de islas apropiadas",
+          "biomeVariantIds": [
+            "tundra_subantarctic"
+          ]
         },
         {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
+          "id": "animal_southern_regional_penguins",
+          "name": {
+            "en": "Southern Regional Penguins",
+            "es": "Pingüinos únicamente en regiones australes apropiadas"
+          },
+          "sourceLabel": "Pingüinos únicamente en regiones australes apropiadas",
+          "biomeVariantIds": [
+            "marine_polar_and_subpolar"
+          ]
         }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Pudú",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000131"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      ]
     },
     {
       "id": "animal_puma",
@@ -6895,22 +5848,23 @@
       }
     },
     {
-      "id": "animal_bearded_vulture",
+      "id": "ANM#000184",
       "kind": "animal",
       "name": {
-        "en": "Bearded Vulture",
+        "en": "Bearded vultures",
         "es": "Quebrantahuesos"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "alpine_asian"
+        "alpine_asian",
+        "alpine_european"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -6918,14 +5872,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -6948,69 +5902,35 @@
           "ANM#000072"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_bearded_vulture_in_suitable_mountains",
-      "kind": "animal",
-      "name": {
-        "en": "Bearded Vulture in Suitable Mountains",
-        "es": "Quebrantahuesos en cordilleras apropiadas"
       },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
+      "tag": "bearded_vultures",
+      "sourceVariants": [
         {
-          "resourceTag": "feathers",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000040"
+          "id": "animal_bearded_vulture",
+          "name": {
+            "en": "Bearded Vulture",
+            "es": "Quebrantahuesos"
+          },
+          "sourceLabel": "Quebrantahuesos",
+          "biomeVariantIds": [
+            "alpine_asian"
+          ]
+        },
+        {
+          "id": "animal_bearded_vulture_in_suitable_mountains",
+          "name": {
+            "en": "Bearded Vulture in Suitable Mountains",
+            "es": "Quebrantahuesos en cordilleras apropiadas"
+          },
+          "sourceLabel": "Quebrantahuesos en cordilleras apropiadas",
+          "biomeVariantIds": [
+            "alpine_european"
+          ]
         }
-      ],
-      "potentialUseMethods": [],
-      "cultivationResearch": null,
-      "sourceLabel": "Quebrantahuesos en cordilleras apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000072"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
+      ]
     },
     {
       "id": "animal_chamois",
@@ -7043,7 +5963,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7118,7 +6038,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7204,7 +6124,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7278,7 +6198,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7347,7 +6267,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7416,7 +6336,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7460,22 +6380,23 @@
       }
     },
     {
-      "id": "animal_regional_amazonian_or_central_american_tapir",
+      "id": "ANM#000185",
       "kind": "animal",
       "name": {
-        "en": "Regional Amazonian or Central American Tapir",
-        "es": "Tapir amazónico o centroamericano, según zona"
+        "en": "Tapirs",
+        "es": "Tapires"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "tropical_forest_american"
+        "tropical_forest_american",
+        "tropical_forest_asian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -7483,14 +6404,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7520,81 +6441,39 @@
       "taxonResolution": {
         "taxonIds": [
           "ANM#000154",
-          "ANM#000152"
-        ],
-        "formIds": [],
-        "selectionMode": "representative_species_selection",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_malayan_tapir",
-      "kind": "animal",
-      "name": {
-        "en": "Malayan Tapir",
-        "es": "Tapir malayo, península malaya y Sumatra"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Tapir malayo, península malaya y Sumatra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000152",
           "ANM#000153"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "tapirs",
+      "sourceVariants": [
+        {
+          "id": "animal_regional_amazonian_or_central_american_tapir",
+          "name": {
+            "en": "Regional Amazonian or Central American Tapir",
+            "es": "Tapir amazónico o centroamericano, según zona"
+          },
+          "sourceLabel": "Tapir amazónico o centroamericano, según zona",
+          "biomeVariantIds": [
+            "tropical_forest_american"
+          ]
+        },
+        {
+          "id": "animal_malayan_tapir",
+          "name": {
+            "en": "Malayan Tapir",
+            "es": "Tapir malayo, península malaya y Sumatra"
+          },
+          "sourceLabel": "Tapir malayo, península malaya y Sumatra",
+          "biomeVariantIds": [
+            "tropical_forest_asian"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_tiger",
@@ -7688,7 +6567,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7764,7 +6643,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7841,7 +6720,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7918,7 +6797,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -7957,228 +6836,6 @@
       }
     },
     {
-      "id": "animal_white_tailed_deer",
-      "kind": "animal",
-      "name": {
-        "en": "White-Tailed Deer",
-        "es": "Venado cola blanca"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Venado cola blanca",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000104"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_mesoamerican_white_tailed_deer",
-      "kind": "animal",
-      "name": {
-        "en": "Mesoamerican White-Tailed Deer",
-        "es": "Venado cola blanca, Mesoamérica"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Venado cola blanca, Mesoamérica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000104"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_pampas_deer",
-      "kind": "animal",
-      "name": {
-        "en": "Pampas Deer",
-        "es": "Venado de las pampas"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Venado de las pampas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000115"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
       "id": "animal_vicuna",
       "kind": "animal",
       "name": {
@@ -8209,7 +6866,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -8287,7 +6944,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -8355,7 +7012,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -8423,7 +7080,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -8468,22 +7125,27 @@
       }
     },
     {
-      "id": "animal_corsac_fox",
+      "id": "ANM#000169",
       "kind": "animal",
       "name": {
-        "en": "Corsac Fox",
-        "es": "Zorro corsac"
+        "en": "Foxes",
+        "es": "Zorros"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "desert_central_asian"
+        "desert_central_asian",
+        "temperate_forest_american",
+        "desert_american",
+        "desert_african_and_arabian",
+        "tundra_eurasian",
+        "tundra_north_american_and_greenland"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -8491,7 +7153,7 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
@@ -8520,258 +7182,75 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000165"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_culpeo_fox",
-      "kind": "animal",
-      "name": {
-        "en": "Culpeo Fox",
-        "es": "Zorro culpeo"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "not_a_livestock_route_in_source",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Zorro culpeo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000087"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_culpeo_fox_in_arid_habitats",
-      "kind": "animal",
-      "name": {
-        "en": "Culpeo Fox in Arid Habitats",
-        "es": "Zorro culpeo en ambientes áridos"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "not_a_livestock_route_in_source",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Zorro culpeo en ambientes áridos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000087"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_fennec_fox",
-      "kind": "animal",
-      "name": {
-        "en": "Fennec Fox",
-        "es": "Zorro fénec, Sáhara"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "not_a_livestock_route_in_source",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Zorro fénec, Sáhara",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000167"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_arctic_fox",
-      "kind": "animal",
-      "name": {
-        "en": "Arctic Fox",
-        "es": "Zorro ártico"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian",
-        "tundra_north_american_and_greenland"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "not_a_livestock_route_in_source",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Zorro ártico",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000165",
+          "ANM#000087",
+          "ANM#000167",
           "ANM#000166"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "foxes",
+      "sourceVariants": [
+        {
+          "id": "animal_corsac_fox",
+          "name": {
+            "en": "Corsac Fox",
+            "es": "Zorro corsac"
+          },
+          "sourceLabel": "Zorro corsac",
+          "biomeVariantIds": [
+            "desert_central_asian"
+          ]
+        },
+        {
+          "id": "animal_culpeo_fox",
+          "name": {
+            "en": "Culpeo Fox",
+            "es": "Zorro culpeo"
+          },
+          "sourceLabel": "Zorro culpeo",
+          "biomeVariantIds": [
+            "temperate_forest_american"
+          ]
+        },
+        {
+          "id": "animal_culpeo_fox_in_arid_habitats",
+          "name": {
+            "en": "Culpeo Fox in Arid Habitats",
+            "es": "Zorro culpeo en ambientes áridos"
+          },
+          "sourceLabel": "Zorro culpeo en ambientes áridos",
+          "biomeVariantIds": [
+            "desert_american"
+          ]
+        },
+        {
+          "id": "animal_fennec_fox",
+          "name": {
+            "en": "Fennec Fox",
+            "es": "Zorro fénec, Sáhara"
+          },
+          "sourceLabel": "Zorro fénec, Sáhara",
+          "biomeVariantIds": [
+            "desert_african_and_arabian"
+          ]
+        },
+        {
+          "id": "animal_arctic_fox",
+          "name": {
+            "en": "Arctic Fox",
+            "es": "Zorro ártico"
+          },
+          "sourceLabel": "Zorro ártico",
+          "biomeVariantIds": [
+            "tundra_eurasian",
+            "tundra_north_american_and_greenland"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_golden_eagle",
@@ -8804,7 +7283,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -8833,22 +7312,24 @@
       }
     },
     {
-      "id": "animal_alpine_ibex",
+      "id": "ANM#000186",
       "kind": "animal",
       "name": {
-        "en": "Alpine Ibex",
-        "es": "Íbice alpino, Alpes"
+        "en": "Ibexes",
+        "es": "Íbices"
       },
       "taxonomy": {
         "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
+        "nameEvidence": "gameplay_category_not_scientific_species",
+        "resolutionStatus": "scientific_species_not_required_for_gameplay_category",
         "verified": false
       },
-      "definitionStatus": "design_guide_only",
+      "definitionStatus": "general_gameplay_category_design_guide",
       "nativeRegionIds": [],
       "biomeVariantIds": [
-        "alpine_european"
+        "alpine_european",
+        "alpine_african",
+        "alpine_asian"
       ],
       "ecology": {
         "temperatureRangeC": null,
@@ -8856,14 +7337,14 @@
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
+        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
       },
       "propagation": {
         "methods": null,
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -8898,161 +7379,51 @@
       "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
-          "ANM#000033"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_walia_ibex",
-      "kind": "animal",
-      "name": {
-        "en": "Walia Ibex",
-        "es": "Íbice de Walia, macizo de Simien"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Íbice de Walia, macizo de Simien",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
-          "ANM#000035"
-        ],
-        "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
-        "inheritResourceBindings": false
-      }
-    },
-    {
-      "id": "animal_siberian_ibex",
-      "kind": "animal",
-      "name": {
-        "en": "Siberian Ibex",
-        "es": "Íbice siberiano, Asia central"
-      },
-      "taxonomy": {
-        "scientificName": null,
-        "nameEvidence": "not_supplied",
-        "resolutionStatus": "linked_to_taxon_catalog_source_interpretation_still_requires_review",
-        "verified": false
-      },
-      "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
-      "ecology": {
-        "temperatureRangeC": null,
-        "moistureRange": null,
-        "elevationRangeM": null,
-        "waterRequirements": null,
-        "soilRequirements": null,
-        "habitatRestrictionsStatus": "See source occurrences; quantitative constraints remain undefined."
-      },
-      "propagation": {
-        "methods": null,
-        "materialResourceIds": null
-      },
-      "domestication": {
-        "eligibility": "requires_species_review",
-        "wildAncestorId": null,
-        "domesticatedFormId": null,
-        "criteria": null
-      },
-      "potentialProducts": [
-        {
-          "resourceTag": "meat",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000029"
-        },
-        {
-          "resourceTag": "hide",
-          "status": "potential_from_source",
-          "requiredTechnologyIds": null,
-          "yield": null,
-          "resourceId": "RES#000031"
-        },
-        {
-          "resourceTag": "antlers_or_horns",
-          "status": "resolve_by_species_not_both_automatically",
-          "requiredTechnologyIds": null,
-          "yield": null
-        }
-      ],
-      "potentialUseMethods": [
-        "hunting"
-      ],
-      "cultivationResearch": null,
-      "sourceLabel": "Íbice siberiano, Asia central",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
-      "taxonResolution": {
-        "taxonIds": [
+          "ANM#000033",
+          "ANM#000035",
           "ANM#000034"
         ],
         "formIds": [],
-        "selectionMode": "specific_name_interpretation",
-        "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
+        "selectionMode": "optional_scientific_reference",
+        "interpretationStatus": "not_required_for_gameplay_identity_or_resource_access",
         "inheritResourceBindings": false
-      }
+      },
+      "tag": "ibexes",
+      "sourceVariants": [
+        {
+          "id": "animal_alpine_ibex",
+          "name": {
+            "en": "Alpine Ibex",
+            "es": "Íbice alpino, Alpes"
+          },
+          "sourceLabel": "Íbice alpino, Alpes",
+          "biomeVariantIds": [
+            "alpine_european"
+          ]
+        },
+        {
+          "id": "animal_walia_ibex",
+          "name": {
+            "en": "Walia Ibex",
+            "es": "Íbice de Walia, macizo de Simien"
+          },
+          "sourceLabel": "Íbice de Walia, macizo de Simien",
+          "biomeVariantIds": [
+            "alpine_african"
+          ]
+        },
+        {
+          "id": "animal_siberian_ibex",
+          "name": {
+            "en": "Siberian Ibex",
+            "es": "Íbice siberiano, Asia central"
+          },
+          "sourceLabel": "Íbice siberiano, Asia central",
+          "biomeVariantIds": [
+            "alpine_asian"
+          ]
+        }
+      ]
     },
     {
       "id": "animal_greater_rhea",
@@ -9085,7 +7456,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -9167,7 +7538,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -9241,7 +7612,7 @@
         "materialResourceIds": null
       },
       "domestication": {
-        "eligibility": "requires_species_review",
+        "eligibility": "requires_gameplay_domestication_design",
         "wildAncestorId": null,
         "domesticatedFormId": null,
         "criteria": null
@@ -9285,5 +7656,211 @@
       }
     }
   ],
-  "biologicalCatalogFile": "animals.biological.catalog.json"
+  "biologicalCatalogFile": "animals.biological.catalog.json",
+  "entityAliases": [
+    {
+      "previousId": "animal_corsac_fox",
+      "entityId": "ANM#000169"
+    },
+    {
+      "previousId": "animal_culpeo_fox",
+      "entityId": "ANM#000169"
+    },
+    {
+      "previousId": "animal_culpeo_fox_in_arid_habitats",
+      "entityId": "ANM#000169"
+    },
+    {
+      "previousId": "animal_fennec_fox",
+      "entityId": "ANM#000169"
+    },
+    {
+      "previousId": "animal_arctic_fox",
+      "entityId": "ANM#000169"
+    },
+    {
+      "previousId": "animal_eurasian_moose",
+      "entityId": "ANM#000170"
+    },
+    {
+      "previousId": "animal_north_american_moose",
+      "entityId": "ANM#000170"
+    },
+    {
+      "previousId": "animal_regional_small_antelopes",
+      "entityId": "ANM#000171"
+    },
+    {
+      "previousId": "animal_regional_antelopes",
+      "entityId": "ANM#000171"
+    },
+    {
+      "previousId": "animal_chacma_baboon",
+      "entityId": "ANM#000172"
+    },
+    {
+      "previousId": "animal_baboons",
+      "entityId": "ANM#000172"
+    },
+    {
+      "previousId": "animal_coastal_crabs",
+      "entityId": "ANM#000173"
+    },
+    {
+      "previousId": "animal_mangrove_crabs",
+      "entityId": "ANM#000173"
+    },
+    {
+      "previousId": "animal_antilopine_kangaroo",
+      "entityId": "ANM#000174"
+    },
+    {
+      "previousId": "animal_western_grey_kangaroo",
+      "entityId": "ANM#000174"
+    },
+    {
+      "previousId": "animal_red_kangaroo",
+      "entityId": "ANM#000174"
+    },
+    {
+      "previousId": "animal_new_guinea_tree_kangaroos",
+      "entityId": "ANM#000174"
+    },
+    {
+      "previousId": "animal_chital",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_red_deer",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_sika_deer",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_huemul",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_pudu",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_white_tailed_deer",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_mesoamerican_white_tailed_deer",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_pampas_deer",
+      "entityId": "ANM#000175"
+    },
+    {
+      "previousId": "animal_african_forest_elephant",
+      "entityId": "ANM#000176"
+    },
+    {
+      "previousId": "animal_african_savanna_elephant",
+      "entityId": "ANM#000176"
+    },
+    {
+      "previousId": "animal_african_savanna_elephant_in_dry_forest_mosaics",
+      "entityId": "ANM#000176"
+    },
+    {
+      "previousId": "animal_asian_elephant",
+      "entityId": "ANM#000177"
+    },
+    {
+      "previousId": "animal_asian_elephant_in_suitable_forests",
+      "entityId": "ANM#000177"
+    },
+    {
+      "previousId": "animal_mongolian_gazelle",
+      "entityId": "ANM#000178"
+    },
+    {
+      "previousId": "animal_desert_gazelles",
+      "entityId": "ANM#000178"
+    },
+    {
+      "previousId": "animal_guanaco_in_coastal_deserts_and_foothills",
+      "entityId": "ANM#000179"
+    },
+    {
+      "previousId": "animal_guanaco_at_suitable_elevations",
+      "entityId": "ANM#000179"
+    },
+    {
+      "previousId": "animal_wild_boar",
+      "entityId": "ANM#000180"
+    },
+    {
+      "previousId": "animal_eurasian_wild_boar",
+      "entityId": "ANM#000180"
+    },
+    {
+      "previousId": "animal_alpine_marmot",
+      "entityId": "ANM#000181"
+    },
+    {
+      "previousId": "animal_steppe_marmots",
+      "entityId": "ANM#000181"
+    },
+    {
+      "previousId": "animal_american_black_bear",
+      "entityId": "ANM#000182"
+    },
+    {
+      "previousId": "animal_asian_black_bear",
+      "entityId": "ANM#000182"
+    },
+    {
+      "previousId": "animal_brown_bear",
+      "entityId": "ANM#000182"
+    },
+    {
+      "previousId": "animal_coastal_and_sea_ice_polar_bear",
+      "entityId": "ANM#000182"
+    },
+    {
+      "previousId": "animal_island_coastal_penguins",
+      "entityId": "ANM#000183"
+    },
+    {
+      "previousId": "animal_southern_regional_penguins",
+      "entityId": "ANM#000183"
+    },
+    {
+      "previousId": "animal_bearded_vulture",
+      "entityId": "ANM#000184"
+    },
+    {
+      "previousId": "animal_bearded_vulture_in_suitable_mountains",
+      "entityId": "ANM#000184"
+    },
+    {
+      "previousId": "animal_regional_amazonian_or_central_american_tapir",
+      "entityId": "ANM#000185"
+    },
+    {
+      "previousId": "animal_malayan_tapir",
+      "entityId": "ANM#000185"
+    },
+    {
+      "previousId": "animal_alpine_ibex",
+      "entityId": "ANM#000186"
+    },
+    {
+      "previousId": "animal_walia_ibex",
+      "entityId": "ANM#000186"
+    },
+    {
+      "previousId": "animal_siberian_ibex",
+      "entityId": "ANM#000186"
+    }
+  ]
 }

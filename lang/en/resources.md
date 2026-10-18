@@ -4,7 +4,7 @@
 
 ## Purpose
 
-This catalog defines storable materials. A plant or animal is a source; a resource is an acquired material; a process relates input and output materials. It contains **104 resources**, **365 source bindings**, **25 transformation guides** and **23 classified animal source tags**.
+This catalog defines storable materials. A plant or animal is a source; a resource is an acquired material; a process relates input and output materials. It contains **104 resources**, **298 source bindings**, **25 transformation guides** and **23 classified animal source tags**.
 
 Scientific review and balance are not complete. Added crop/tree products are design proposals; amounts, exact conditions and recipes remain unresolved. The catalog and every relation are runtime-disabled.
 
@@ -22,7 +22,7 @@ Scientific review and balance are not complete. Added crop/tree products are des
 
 ## Identity and references
 
-New resources use permanent `RES#000001` IDs and English `snake_case` tags. The catalog JSON is the initial allocation record: do not renumber by sorting, recycle retired IDs or change existing assignments. Species and technology IDs remain unchanged.
+New resources use permanent `RES#000001` IDs and English `snake_case` tags. The catalog JSON is the initial allocation record: do not renumber by sorting, recycle retired IDs or change existing assignments. Generalized entity IDs have explicit aliases; technology IDs remain unchanged.
 
 `sourceCollection` resolves to these collections:
 

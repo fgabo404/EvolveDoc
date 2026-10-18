@@ -133,9 +133,12 @@ def candidate_catalog(folder,lang,data,world):
                 define('r'+str(i),name(material,lang)+' / '+material['id']);edges.add((rid,'r'+str(i),'extractedResourceId / proposed'))
         for a,b,k in sorted(edges):lines.append(f'    {a} -->|{k}| {b}')
         text+=mermaid(lines,'LR')+'\n'
+    if data.get('entityAliases'):
+        text+=('## Categorías agrupadas y compatibilidad\n\nLos IDs anteriores apuntan a una sola entidad. La taxonomía científica es opcional.\n\n' if es else '## General categories and compatibility\n\nPrevious IDs map to a single gameplay entity. Scientific taxonomy is optional.\n\n')
+        text+=table(['previousId','entityId'],[(a['previousId'],a['entityId']) for a in data['entityAliases']])+'\n'
     if folder=='plants':
         crops=data['agriculturalCropCandidates'];text+=('## Todos los candidatos agrícolas\n\n' if es else '## All agricultural candidates\n\n')
-        text+=('Son grupos agrícolas pendientes de especie exacta y ancestro; no se fusionan automáticamente con candidatos regionales.\n\n' if es else 'These are crop groups awaiting exact species and ancestors; they are not automatically merged with regional candidates.\n\n')
+        text+=('Los cultivos se distinguen por su utilidad en el juego; no necesitan subdividirse en especies científicas. No se fusionan automáticamente con sus formas silvestres.\n\n' if es else 'Crops are distinguished by gameplay use and need not split into scientific species. They are not automatically merged with wild forms.\n\n')
         for number,group in enumerate(chunks(crops),1):
             text+=f'### '+('Cultivos' if es else 'Crops')+f' {number}\n\n';lines=[];tags={}
             lines.append(node('tech','species_cultivation'))
@@ -230,6 +233,9 @@ def documents():
         for folder in ['technologies','world','plants','animals','minerals','resources']:
             index+=f'- [{folder}](../../data/{folder}/{filename})\n'
         index+=('\nCobertura actual: 23 tecnologías, 9 importaciones tecnológicas, 7 biomas, 27 variantes regionales, 129 candidatos vegetales, 134 animales, 57 geológicos, 21 candidatos agrícolas y las 485 apariciones de la fuente. Recursos sigue sin catálogo.\n\nLos diagramas muestran relaciones; las tablas que los acompañan conservan parámetros y apariciones repetidas. No inventan evolución biológica, domesticación, productos ni procesamiento. Las estructuras campo por campo siguen en la [referencia de JSON](json-structures.md).\n' if es else '\nCurrent coverage: 23 technologies, 9 external technology imports, 7 biomes, 27 regional variants, 129 plant candidates, 134 animal candidates, 57 geological candidates, 21 crop candidates and all 485 source occurrences. Resources has no catalog yet.\n\nDiagrams show relationships; accompanying tables retain parameters and repeated occurrences. They do not invent biological evolution, domestication, outputs or processing. Field-by-field structures remain in the [JSON reference](json-structures.md).\n')
+        plant_count=len(read('data/plants/plants.catalog.guide.json')['speciesCandidates'])
+        animal_count=len(read('data/animals/animals.catalog.guide.json')['speciesCandidates'])
+        index=index.replace('129 candidatos vegetales, 134 animales',f'{plant_count} entidades vegetales, {animal_count} animales').replace('129 plant candidates, 134 animal candidates',f'{plant_count} plant entities, {animal_count} animal entities')
         index=index.replace('Recursos sigue sin catálogo.',f"Recursos: {len(resource_data['resources'])} materiales, {len(resource_data['sourceBindings'])} vínculos de origen y {len(resource_data['processingLinks'])} guías de transformación pendientes de revisión.")
         index=index.replace('Resources has no catalog yet.',f"Resources: {len(resource_data['resources'])} materials, {len(resource_data['sourceBindings'])} source bindings and {len(resource_data['processingLinks'])} transformation guides pending review.")
         index+=('\nActualizar con `python tools/generate_catalog_diagrams.py`; verificar con `--check`.\n' if es else '\nUpdate with `python tools/generate_catalog_diagrams.py`; verify with `--check`.\n')
@@ -237,10 +243,10 @@ def documents():
     for lang in ['en','es']:
         suffix='.es' if lang=='es' else ''
         for folder in ['plants','animals']:
-            link=f'\n[Biological identities and relationships / Identidades y relaciones biológicas](BIOLOGY{suffix}.md)\n'
+            link=f'\n[Optional scientific background / Referencia científica opcional](BIOLOGY{suffix}.md)\n'
             output[f'data/{folder}/DIAGRAMS{suffix}.md']+=link
         for folder in ['plants','animals']:
-            output[f'lang/{lang}/catalog-diagrams.md']+=f'\n- [Biology: {folder}](../../data/{folder}/BIOLOGY{suffix}.md)\n'
+            output[f'lang/{lang}/catalog-diagrams.md']+=f'\n- [Optional science: {folder}](../../data/{folder}/BIOLOGY{suffix}.md)\n'
     return {path: content.rstrip()+'\n' for path,content in output.items()}
 
 

@@ -36,9 +36,9 @@ All collections are flat; IDs connect them. Player-visible names use `{en, es}`.
 
 ## 3. Identity and taxonomy
 
-Candidate IDs are traceable design-entry IDs, not accepted scientific names. Entries with the same likely taxon but different source qualifiers remain separate until reviewed. Do not merge records merely because their English names look similar.
+Candidate IDs are traceable design-entry IDs, not accepted scientific names. Reviewed regional variants with the same gameplay outputs are grouped, with explicit aliases and original occurrence provenance. Do not merge unrelated records by appearance.
 
-Scientific names are populated only when the source explicitly gives a binomial. `verified: false` means no taxonomic validation was performed. Entries such as acacias, regional fish or wild crop relatives must be split or explicitly accepted as game-level groups before implementation. A vernacular singular name is not sufficient proof of exact taxonomy.
+Scientific names are populated only when the source explicitly gives a binomial. `verified: false` means no taxonomic validation was performed. General categories such as acacias and foxes are accepted gameplay identities. Scientific taxonomy is optional and does not determine mandatory subdivisions.
 
 Agricultural crop IDs such as `wheat` and `maize` are prospective bindings for species research. Their exact taxon, wild ancestor and relationship to regional wild candidates are unresolved. Do not equate domesticated maize with every teosinte population or domesticated wheat with every wild wheat candidate.
 
@@ -56,7 +56,7 @@ The original source document is represented by its exact connector file ID and s
 
 Every occurrence has `runtimeEnabled: false`, `guaranteedPresence: false` and an unknown spawn probability. No abundance, growth rate, fertility range, domestication duration or yield was invented.
 
-Fauna product tags only transcribe potential uses in the document. They are not confirmed yields or automatic unlocks. `antlers_or_horns` must be resolved by species; never grant both by default. Selected plant products and all crop products now have proposed resource links; exact species, acquisition requirements and quantities remain unresolved. These proposals are additional design data, not verbatim source claims.
+Fauna product tags only transcribe potential uses in the document. They are not confirmed yields or automatic unlocks. `antlers_or_horns` requires a gameplay resource decision; never grant both by default. Selected plant products and all crop products now have proposed resource links; acquisition requirements and quantities remain unresolved; exact scientific species are not required. These proposals are additional design data, not verbatim source claims.
 
 ## 6. World-generation rules
 
@@ -76,7 +76,7 @@ This guide does not resolve every technology import. Native presence, discovery,
 
 ## 8. Completion workflow
 
-For each candidate: select an exact species or explicit game taxon; verify scientific name and native range; identify wild/domestic relationships; define ecological and propagation conditions; specify products and recipes; connect technology requirements; validate period and regional availability; then balance and test.
+For each candidate: choose a gameplay category; preserve regional habitat rules; identify useful wild/domestic distinctions; define ecological and propagation conditions; specify products and recipes; connect technology requirements; validate period and regional availability; then balance and test.
 
 Only after those reviews should approved records be promoted into an executable `species.json`/world-definition catalog. Keep stable IDs or introduce explicit aliases and save migrations when merging or splitting candidates. Do not use null-filled guide records as final simulation content.
 
@@ -91,8 +91,8 @@ Checked source occurrence coverage, translation-map coverage, unique candidate I
 {
   "biomeCount": 7,
   "regionalVariantCount": 27,
-  "plantCandidateCount": 129,
-  "animalCandidateCount": 134,
+  "plantCandidateCount": 109,
+  "animalCandidateCount": 101,
   "geologicalCandidateCount": 57,
   "sourceOccurrenceCount": 485,
   "agriculturalCropCandidateCount": 21
@@ -101,4 +101,6 @@ Checked source occurrence coverage, translation-map coverage, unique candidate I
 
 ## Resource integration update
 
-World schema/content is now 1.2.0/0.3.0; `catalogFiles.resources` references the resource guide. Plant, animal and mineral guides are 1.1.0/0.2.0 with additive output references. The original 485 source occurrences and candidate IDs are unchanged. `extractedResourceId` identifies a collected/extracted material, not automatically refined metal.
+World schema/content is 1.4.0/0.5.0. Plant and animal guides use 1.3.0/0.4.0; minerals remain 1.1.0/0.2.0. All 485 occurrence IDs remain; grouped definitions have explicit aliases and preserve source provenance. `extractedResourceId` identifies a collected/extracted material, not automatically refined metal.
+
+The [current granularity policy](biology.md) uses general entities and ID aliases; scientific background is optional.

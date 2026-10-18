@@ -1,68 +1,66 @@
-# Plants, animals and biological forms
+# Plants and animals: gameplay categories
 
-[Plants: complete catalog, mappings and branches](../../data/plants/BIOLOGY.md) · [Animals: complete catalog, mappings and branches](../../data/animals/BIOLOGY.md)
+Use the detail needed for gameplay. **Foxes** are one entity providing **hide**: Arctic, red, corsac and fennec foxes do not need separate gameplay entries. Color, region or scientific name alone does not require another definition.
 
-This design specifies biological identities without fixing quantities, durations, probabilities, yields or simulation formulas. Collections remain flat and reference each other by ID.
+## When to group and when to retain distinctions
 
-## What each object represents
+Group regional/scientific variants when their recorded resources and uses match. Retain distinctions when outputs, actions or progression differ: wheat and maize remain separate, and wild/domesticated forms may need different definitions. Do not merge unrelated entities by appearance or merge plants with their resources.
 
-| Collection | Meaning | Example |
-| --- | --- | --- |
-| `speciesCandidates` | Original source label, provenance and existing regional occurrences; may describe a group. | Oaks, wild wheat, wild boar. |
-| `taxa` | Accepted scientific identity under an explicit provider, with rank and match evidence. | `Quercus robur`, `Sus scrofa`. |
-| `biologicalForms` | Cultivated/domestic form, ancestral reference population or cultivar group; not an individual or game population. | Wild and domestic rabbits can share a taxon. |
-| `lineageRelations` | Historical relation between forms, distinguishing domestication, selection, hybrid origin, ancestral contribution and introgression. | Two ancestral contributions to bread wheat. |
-| `excludedLineageRelations` | Direct assumption that must not be introduced as fact. | Przewalski horse → modern domestic horse. |
-| `evidenceSources` | Relationship bibliography referenced by `sourceKey`. | A domestication genomics study. |
+This revision groups 18 animal cases and 15 plant cases, including foxes, bears, deer, kangaroos, oaks and pines. It does not merge all birds, trees or foods. African and Asian elephant categories remain separate because their recorded uses differ; future changes are gameplay decisions.
 
-`taxonResolution` links every candidate to selected `taxonIds` and related `formIds`. These forms are associated references, not instructions to initially spawn domestic animals wherever a wild relative was listed. `selectionMode` distinguishes specific interpretations from non-exhaustive representative choices. Legacy IDs are neither deleted nor silently replaced.
+## Structure
 
-Crop groups also select concrete taxa. Wheat includes einkorn, emmer, durum and bread wheat; Asian and African rice remain separate. A cultivated reference form establishes design identity without asserting that ancestral domestication has already been reviewed.
+| Field | Purpose |
+| --- | --- |
+| `id` / `tag` | Permanent gameplay identity, independent of language and taxonomy. |
+| `name` | Visible label with `en` and `es`. |
+| `biomeVariantIds` | Habitats referenced by regional occurrences, not universal presence. |
+| `potentialProducts` | Designed obtainable resources; quantities and operating requirements remain deferred. |
+| `sourceVariants` | Original labels combined into one category; provenance, not playable subentities. |
+| `entityAliases` | Previous IDs mapped to one canonical entity. |
+| `taxonResolution` | Optional scientific reference; creates neither playable subspecies nor requirements. |
 
-## Permanent identities
+Collections remain flat. The legacy technical collection name `speciesCandidates` now explicitly permits general categories. Likewise, research `speciesId` can identify the chosen crop or gameplay entity; it does not require a scientific species. The research demonstration and its wheat/maize aliases are unchanged.
 
-- `PLT`: plant taxon; `ANM`: animal taxon; `ALG`: alga; `FNG`: fungus, including lichenized fungi.
-- `FRM`: biological form, cultivar group or reference population.
-- Each prefix has an independent six-digit sequence. Forms in both folders share one FRM sequence. These JSON files are the allocation registry: preserve IDs when expanding the catalog; never recalculate them by sorting names.
-- `VAR` still means a world regional variant. A botanical variety is a taxon ranked `VARIETY`; a cultivar group uses `FRM` with `formKind: "cultivar_group"`. These are different concepts.
+## Example: foxes
 
-The plants folder retains source flora, including algae and lichens. Explicit `organismGroup`, kingdom and prefixes prevent treating a lichen as a botanical plant. Latin labels are identical in `name.en` and `name.es`; original bilingual common names remain in candidates. Specific translations are not invented for ambiguous common names.
+Excerpt of the actual record’s main fields; the complete JSON and nested objects are documented in the structure reference.
 
-## Reading ancestry
-
-The wheat branch separates einkorn/emmer domestication, durum selection and bread wheat hybrid origin. A `hybrid_origin` jointly requires all `parentFormIds`: these are not alternatives or executable breeding recipes. Two-row and six-row barley are selected cultivar groups, not new species or named modern cultivars.
-
-Maize separates domestication from Balsas teosinte and later gene flow from Mexican highland teosinte. Introgression is not interpreted as a second domestication. Aurochs ancestry branches toward taurine and indicine lineages; zebu is not an upgrade of taurine cattle. Living wild taxa may proxy ancestral complexes without identifying exact founding populations.
-
-No relation is added merely because species share a genus or look similar. Unknown ancestors, breeds and historical cultivars without evidence remain unresolved. The catalog records 25 relationship summaries, not a complete evolutionary tree of every organism.
-
-## Evidence and boundaries
-
-Selected scientific names were matched through GBIF: `EXACT`, provider score at least 95, and species/subspecies/variety rank; synonyms resolve to accepted taxa. The score is not certainty that an original source label denotes that species. Every record stores provider, key, URL, query and date. Camelus ferus uses the explicitly named GBIF Catalogue of Life XR dataset; taxonomic treatments can differ across authorities.
-
-This validates name matching, not the entire source interpretation. Every representative selection still requires native-range, habitat, historical-introduction and output review. All 485 original occurrences retain source provenance; they are not multiplied into automatic spawns of every selected species.
-
-`inheritResourceBindings: false` blocks automatic inheritance of broad-group outputs. Wood remains a resource, not a species. Making a concrete form a source of milk, fiber or seed requires its own reviewed bindings, including anatomy, sex and life stage where relevant. Resource transformation chains remain in their own catalog.
-
-Cultivated references without documented ancestry relations await review; they do not lack ancestors. Individual historical cultivars and animal breeds are not yet enumerated. Forms and relations remain non-executable: `loadAsGameDefinitions` and `runtimeEnabled` stay `false`.
-
-## Structure, examples and checks
-
-Complete contracts, nested objects and examples:
-
-- [Plant JSON](json/data--plants--plants.biological.catalog.md).
-- [Animal JSON](json/data--animals--animals.biological.catalog.md).
-- [Biological schema](json/schemas--biological.catalog.schema.md).
-- [Plant candidate JSON](json/data--plants--plants.catalog.guide.md).
-- [Animal candidate JSON](json/data--animals--animals.catalog.guide.md).
-
-The structural schema covers every current object. The custom checker verifies IDs, references, stored name-match evidence, runtime boundaries, bibliography, coverage and ancestry/selection acyclicity. It neither calls live services nor independently proves scientific hypotheses. General JSON Schema engine integration remains separate.
-
-```sh
-python tools/generate_json_reference.py
-python tools/generate_biology_reference.py
-python tools/generate_catalog_diagrams.py
-python tools/validate_repository.py
+```json
+{
+  "id": "ANM#000169",
+  "tag": "foxes",
+  "name": {
+    "en": "Foxes",
+    "es": "Zorros"
+  },
+  "potentialProducts": [
+    {
+      "resourceTag": "hide",
+      "status": "potential_from_source",
+      "requiredTechnologyIds": null,
+      "yield": null,
+      "resourceId": "RES#000031"
+    }
+  ]
+}
 ```
 
-The research demonstration retains its legacy wheat/maize aliases. Before implementing final species-specific progress, choose concrete taxon/form identities and design migration. This change does not modify game saves or production quantities.
+The five previous fox IDs map to `ANM#000169`. Their occurrences in six regional habitat variants remain intact. There is only one output binding to `RES#000031` (hide). Grouping creates neither new animals nor permission to place them everywhere.
+
+## Compatibility and scope
+
+Old IDs are retired and never reused. Every world occurrence keeps its ID and original text; `definitionId` references the general category and `sourceDefinitionId` preserves the previous identity when grouping occurred. Resource links were redirected and deduplicated: 298 current bindings for the same 104 materials.
+
+There are 109 plant entities, 101 animal entities and the same 21 crop groups. All 485 original occurrences, crops, resources and technologies are retained. No yields, durations, costs or recipes were added. Pending operational design keeps these catalogs runtime-disabled.
+
+## References
+
+- [Plants](../../data/plants/DIAGRAMS.md)
+- [Animals](../../data/animals/DIAGRAMS.md)
+- [JSON structures](json-structures.md)
+
+Previous scientific catalogs remain optional background. They do not determine entity identity or require scientific species, botanical varieties or exact ancestors to complete game design. Useful domestication relations can later be adapted to gameplay categories.
+
+- [Optional science: plants](../../data/plants/BIOLOGY.md)
+- [Optional science: animals](../../data/animals/BIOLOGY.md)

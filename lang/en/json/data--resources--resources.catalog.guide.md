@@ -17,7 +17,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `schemaVersion` | `string` | 1/1 | Version of the structural contract, not the game's release. | `"1.0.0"` |
-| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.1.0"` |
+| `contentVersion` | `string` | 1/1 | Version of the catalog content and provisional balance. | `"0.2.0"` |
 | `kind` | `string` | 1/1 | Discriminator identifying this document or candidate category. | `"resource_catalog_design_guide"` |
 | `status` | `string` | 1/1 | Maturity, review state or current example research status; read the containing object. | `"prototype_requires_species_action_and_balance_review"` |
 | `defaultLanguage` | `string` | 1/1 | Default language for visible-text fallback. | `"en"` |
@@ -84,14 +84,14 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
-| `sourceCollection` | `string` | 365/365 | Symbolic collection key resolving to plants, animals, crops or geology; not a resource ID. | `"agriculturalCropCandidates"` |
-| `sourceId` | `string` | 365/365 | Existing source candidate ID, preserved without migrating its identity. | `"wheat"` |
-| `resourceId` | `string` | 365/365 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000007"` |
-| `acquisitionTag` | `string` | 365/365 | Descriptive acquisition guide tag; not an implemented action or recipe ID. | `"crop_harvesting"` |
-| `reviewStatus` | `string` | 365/365 | Review still required before a source output is authorized. | `"proposed_requires_species_and_action_review"` |
-| `quantityPerAction` | `null` | 365/365 | Output per action, still unresolved; not zero or guaranteed yield. | `null` |
-| `runtimeEnabled` | `boolean` | 365/365 | Whether this occurrence may be used by generation; currently false. | `false` |
-| `requiresProcessing` | `boolean` | 365/365 | True means this source relation includes further processing; it is not a direct harvesting output. | `false` |
+| `sourceCollection` | `string` | 298/298 | Symbolic collection key resolving to plants, animals, crops or geology; not a resource ID. | `"agriculturalCropCandidates"` |
+| `sourceId` | `string` | 298/298 | Existing source candidate ID, preserved without migrating its identity. | `"wheat"` |
+| `resourceId` | `string` | 298/298 | Reference to a resource definition, distinct from a species or deposit ID. | `"RES#000007"` |
+| `acquisitionTag` | `string` | 298/298 | Descriptive acquisition guide tag; not an implemented action or recipe ID. | `"crop_harvesting"` |
+| `reviewStatus` | `string` | 298/298 | Review still required before a source output is authorized. | `"proposed_requires_species_and_action_review"` |
+| `quantityPerAction` | `null` | 298/298 | Output per action, still unresolved; not zero or guaranteed yield. | `null` |
+| `runtimeEnabled` | `boolean` | 298/298 | Whether this occurrence may be used by generation; currently false. | `false` |
+| `requiresProcessing` | `boolean` | 298/298 | True means this source relation includes further processing; it is not a direct harvesting output. | `false` |
 
 ### `$.sourceTagMappings[]`
 
@@ -145,7 +145,7 @@ A field seen only as `null` has no implemented inner structure. Do not invent ra
 | Field | Current JSON type | Seen | Meaning | Sample value |
 | --- | --- | --- | --- | --- |
 | `resourceCount` | `integer` | 1/1 | Number of resource definitions. | `104` |
-| `sourceBindingCount` | `integer` | 1/1 | Number of possible source-to-resource relations. | `365` |
+| `sourceBindingCount` | `integer` | 1/1 | Number of possible source-to-resource relations. | `298` |
 | `processingLinkCount` | `integer` | 1/1 | Number of proposed transformation guides. | `25` |
 | `sourceTagMappingCount` | `integer` | 1/1 | Number of original animal tags explicitly classified or mapped. | `23` |
 | `geologicalSourceCount` | `integer` | 1/1 | Number of geological candidates with material mappings. | `57` |
@@ -158,7 +158,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
 ```json
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "kind": "resource_catalog_design_guide",
   "status": "prototype_requires_species_action_and_balance_review",
   "defaultLanguage": "en",
@@ -273,7 +273,7 @@ Valid JSON copied from actual records. Repeated object arrays are shortened for 
   ],
   "summary": {
     "resourceCount": 104,
-    "sourceBindingCount": 365,
+    "sourceBindingCount": 298,
     "processingLinkCount": 25,
     "sourceTagMappingCount": 23,
     "geologicalSourceCount": 57,

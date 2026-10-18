@@ -4,7 +4,7 @@
 
 ## Qué define
 
-Este catálogo define materiales almacenables. Una planta o animal es el origen; un recurso es el material obtenido; un proceso relaciona materiales de entrada y salida. Hay **104 recursos**, **365 vínculos de origen**, **25 guías de transformación** y **23 tags animales clasificados**.
+Este catálogo define materiales almacenables. Una planta o animal es el origen; un recurso es el material obtenido; un proceso relaciona materiales de entrada y salida. Hay **104 recursos**, **298 vínculos de origen**, **25 guías de transformación** y **23 tags animales clasificados**.
 
 No son datos científicos o de balance terminados. Los productos agregados de cultivos y árboles son propuestas de diseño; las cantidades, condiciones específicas y recetas quedan pendientes. El catálogo y todos sus vínculos tienen la ejecución deshabilitada.
 
