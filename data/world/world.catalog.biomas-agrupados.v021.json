@@ -1,0 +1,3015 @@
+{
+  "kind": "world_catalog_grouped_by_approved_biome",
+  "version": "0.1.0",
+  "modelVersion": "0.2.1",
+  "status": "design_only_not_runtime_enabled",
+  "source": "data/world/world.occurrences.biomes-v021.proposal.json",
+  "rules": [
+    "Bioma > Tipo > flora/fauna/recursos; sin divisiones regionales.",
+    "Entradas repetidas se agrupan por definitionId conservando occurrenceIds originales.",
+    "Las asociaciones sin tipo inequívoco quedan en pendientesDeClasificarPorTipo bajo su bioma central.",
+    "Los recursos minerales dependen de geología; una asociación no garantiza presencia.",
+    "No se habilitan apariciones hasta validar condiciones ecológicas."
+  ],
+  "biomas": [
+    {
+      "id": "forest",
+      "nombre": "Bosque",
+      "tipos": [
+        {
+          "id": "tropical_forest",
+          "nombre": "Tropical (selva)",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "plant_wild_cacao",
+              "nombre": "Cacao silvestre, en su distribución nativa",
+              "occurrenceIds": [
+                "occurrence_0016"
+              ]
+            },
+            {
+              "definitionId": "plant_mesoamerican_teosinte",
+              "nombre": "Teosinte, en su distribución mesoamericana",
+              "occurrenceIds": [
+                "occurrence_0017"
+              ]
+            },
+            {
+              "definitionId": "plant_mesoamerican_vanilla",
+              "nombre": "Vainilla (Vanilla planifolia), Mesoamérica",
+              "occurrenceIds": [
+                "occurrence_0018"
+              ]
+            },
+            {
+              "definitionId": "plant_wild_beans",
+              "nombre": "Frijoles silvestres (Phaseolus spp.)",
+              "occurrenceIds": [
+                "occurrence_0019"
+              ]
+            },
+            {
+              "definitionId": "plant_brazil_nut",
+              "nombre": "Castaña de Brasil, Amazonía",
+              "occurrenceIds": [
+                "occurrence_0020"
+              ]
+            },
+            {
+              "definitionId": "plant_wild_squashes",
+              "nombre": "Calabazas silvestres (Cucurbita spp.)",
+              "occurrenceIds": [
+                "occurrence_0021"
+              ]
+            },
+            {
+              "definitionId": "plant_amazonian_rubber_tree",
+              "nombre": "Árbol del caucho (Hevea brasiliensis), Amazonía",
+              "occurrenceIds": [
+                "occurrence_0022"
+              ]
+            },
+            {
+              "definitionId": "plant_african_oil_palm",
+              "nombre": "Palma aceitera africana",
+              "occurrenceIds": [
+                "occurrence_0038"
+              ]
+            },
+            {
+              "definitionId": "plant_african_baobab",
+              "nombre": "Baobab africano",
+              "occurrenceIds": [
+                "occurrence_0039"
+              ]
+            },
+            {
+              "definitionId": "plant_kola_trees",
+              "nombre": "Nuez de cola (Cola spp.)",
+              "occurrenceIds": [
+                "occurrence_0040"
+              ]
+            },
+            {
+              "definitionId": "PLT#000192",
+              "nombre": "Acacias africanas",
+              "occurrenceIds": [
+                "occurrence_0041"
+              ]
+            },
+            {
+              "definitionId": "plant_african_raffia_palms",
+              "nombre": "Rafia africana (Raphia spp.)",
+              "occurrenceIds": [
+                "occurrence_0042"
+              ]
+            },
+            {
+              "definitionId": "plant_miombo_trees",
+              "nombre": "Árboles de miombo (Brachystegia spp.), donde corresponda",
+              "occurrenceIds": [
+                "occurrence_0043"
+              ]
+            },
+            {
+              "definitionId": "plant_regional_tropical_timber_trees",
+              "nombre": "Árboles de maderas tropicales regionales",
+              "occurrenceIds": [
+                "occurrence_0044"
+              ]
+            },
+            {
+              "definitionId": "PLT#000196",
+              "nombre": "Bananos silvestres (Musa spp.)",
+              "occurrenceIds": [
+                "occurrence_0060",
+                "occurrence_0080"
+              ]
+            },
+            {
+              "definitionId": "plant_native_teak",
+              "nombre": "Teca en su distribución nativa",
+              "occurrenceIds": [
+                "occurrence_0061"
+              ]
+            },
+            {
+              "definitionId": "plant_wild_taro",
+              "nombre": "Taro silvestre en su área nativa",
+              "occurrenceIds": [
+                "occurrence_0062"
+              ]
+            },
+            {
+              "definitionId": "PLT#000195",
+              "nombre": "Bambúes de bosque seco",
+              "occurrenceIds": [
+                "occurrence_0063",
+                "occurrence_0064"
+              ]
+            },
+            {
+              "definitionId": "plant_sal_trees",
+              "nombre": "Árboles de sal (Shorea robusta), regiones adecuadas",
+              "occurrenceIds": [
+                "occurrence_0065"
+              ]
+            },
+            {
+              "definitionId": "plant_regional_palms_and_dipterocarps",
+              "nombre": "Palmas y dipterocarpáceas regionales",
+              "occurrenceIds": [
+                "occurrence_0066"
+              ]
+            },
+            {
+              "definitionId": "plant_wild_sugarcane_relatives",
+              "nombre": "Parientes silvestres de caña de azúcar (Saccharum spp.)",
+              "occurrenceIds": [
+                "occurrence_0079"
+              ]
+            },
+            {
+              "definitionId": "plant_taro_and_regional_aroids",
+              "nombre": "Taro y otras aráceas regionales",
+              "occurrenceIds": [
+                "occurrence_0081"
+              ]
+            },
+            {
+              "definitionId": "plant_palms_and_pandanus",
+              "nombre": "Palmas y pandanus",
+              "occurrenceIds": [
+                "occurrence_0082"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "animal_jaguar",
+              "nombre": "Jaguar [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0009"
+              ]
+            },
+            {
+              "definitionId": "ANM#000175",
+              "nombre": "Venado cola blanca, Mesoamérica [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0010",
+                "occurrence_0056"
+              ]
+            },
+            {
+              "definitionId": "ANM#000185",
+              "nombre": "Tapir amazónico o centroamericano, según zona [terrestre · carne, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0011",
+                "occurrence_0059"
+              ]
+            },
+            {
+              "definitionId": "animal_collared_peccary",
+              "nombre": "Pecarí de collar [terrestre · carne, piel (lujo), colmillos · caza; domesticación no automática]",
+              "occurrenceIds": [
+                "occurrence_0012"
+              ]
+            },
+            {
+              "definitionId": "animal_howler_monkey",
+              "nombre": "Mono aullador [terrestre · fauna silvestre; sin producción ganadera]",
+              "occurrenceIds": [
+                "occurrence_0013"
+              ]
+            },
+            {
+              "definitionId": "animal_ocellated_turkey",
+              "nombre": "Pavo ocelado, Yucatán y zonas vecinas [terrestre · carne, huevos, plumas · cría potencial según especie]",
+              "occurrenceIds": [
+                "occurrence_0014"
+              ]
+            },
+            {
+              "definitionId": "animal_macaws",
+              "nombre": "Guacamayas [terrestre · plumas ornamentales (lujo) · captura]",
+              "occurrenceIds": [
+                "occurrence_0015"
+              ]
+            },
+            {
+              "definitionId": "animal_western_gorilla",
+              "nombre": "Gorila occidental, África central occidental [terrestre · fauna silvestre; sin producción ganadera]",
+              "occurrenceIds": [
+                "occurrence_0031"
+              ]
+            },
+            {
+              "definitionId": "ANM#000176",
+              "nombre": "Elefante africano de sabana, mosaicos de bosque seco [terrestre · marfil (lujo), piel (lujo) · fauna silvestre]",
+              "occurrenceIds": [
+                "occurrence_0032",
+                "occurrence_0035"
+              ]
+            },
+            {
+              "definitionId": "animal_okapi",
+              "nombre": "Okapi, cuenca del Congo [terrestre · piel (lujo), carne · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0033"
+              ]
+            },
+            {
+              "definitionId": "ANM#000172",
+              "nombre": "Babuinos [terrestre · fauna silvestre; sin producción ganadera]",
+              "occurrenceIds": [
+                "occurrence_0034"
+              ]
+            },
+            {
+              "definitionId": "ANM#000171",
+              "nombre": "Antílopes regionales [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0036"
+              ]
+            },
+            {
+              "definitionId": "animal_chimpanzee",
+              "nombre": "Chimpancé, zonas compatibles [terrestre · fauna silvestre; sin producción ganadera]",
+              "occurrenceIds": [
+                "occurrence_0037"
+              ]
+            },
+            {
+              "definitionId": "ANM#000177",
+              "nombre": "Elefante asiático [terrestre · trabajo y transporte (adiestramiento); marfil (lujo) · no domesticación plena]",
+              "occurrenceIds": [
+                "occurrence_0053",
+                "occurrence_0058"
+              ]
+            },
+            {
+              "definitionId": "animal_indian_peafowl",
+              "nombre": "Pavo real azul, subcontinente indio [terrestre · carne, huevos, plumas · cría potencial según especie]",
+              "occurrenceIds": [
+                "occurrence_0054"
+              ]
+            },
+            {
+              "definitionId": "animal_tiger",
+              "nombre": "Tigre, en hábitats adecuados [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0055"
+              ]
+            },
+            {
+              "definitionId": "animal_red_junglefowl",
+              "nombre": "Gallina roja de la jungla (Gallus gallus) [terrestre · carne, huevos, plumas · cría potencial según especie]",
+              "occurrenceIds": [
+                "occurrence_0057"
+              ]
+            },
+            {
+              "definitionId": "animal_southern_cassowary",
+              "nombre": "Casuario del sur, Nueva Guinea y norte de Australia [terrestre · carne, huevos, plumas, piel · caza/cría según especie]",
+              "occurrenceIds": [
+                "occurrence_0075"
+              ]
+            },
+            {
+              "definitionId": "ANM#000174",
+              "nombre": "Canguros arborícolas de Nueva Guinea [terrestre · carne, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0076"
+              ]
+            },
+            {
+              "definitionId": "animal_birds_of_paradise",
+              "nombre": "Aves del paraíso [terrestre · plumas ornamentales (lujo) · captura]",
+              "occurrenceIds": [
+                "occurrence_0077"
+              ]
+            },
+            {
+              "definitionId": "animal_cuscuses_and_other_arboreal_marsupials",
+              "nombre": "Cuscús y otros marsupiales arborícolas [terrestre · carne, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0078"
+              ]
+            }
+          ],
+          "recursos": [
+            {
+              "definitionId": "geological_alluvial_clay",
+              "nombre": "Arcilla aluvial",
+              "occurrenceIds": [
+                "occurrence_0001",
+                "occurrence_0067"
+              ]
+            },
+            {
+              "definitionId": "geological_limestone",
+              "nombre": "Caliza",
+              "occurrenceIds": [
+                "occurrence_0002",
+                "occurrence_0046"
+              ]
+            },
+            {
+              "definitionId": "geological_alluvial_gold",
+              "nombre": "Oro aluvial",
+              "occurrenceIds": [
+                "occurrence_0003",
+                "occurrence_0025",
+                "occurrence_0069"
+              ]
+            },
+            {
+              "definitionId": "geological_copper_bearing_deposit",
+              "nombre": "Cobre",
+              "occurrenceIds": [
+                "occurrence_0004",
+                "occurrence_0027",
+                "occurrence_0049",
+                "occurrence_0070"
+              ]
+            },
+            {
+              "definitionId": "geological_iron_bearing_deposit",
+              "nombre": "Hierro",
+              "occurrenceIds": [
+                "occurrence_0005",
+                "occurrence_0026",
+                "occurrence_0050"
+              ]
+            },
+            {
+              "definitionId": "geological_vein_gold",
+              "nombre": "Oro en veta",
+              "occurrenceIds": [
+                "occurrence_0006",
+                "occurrence_0071"
+              ]
+            },
+            {
+              "definitionId": "geological_sulfide_copper_ore",
+              "nombre": "Cobre (sulfuros)",
+              "occurrenceIds": [
+                "occurrence_0007"
+              ]
+            },
+            {
+              "definitionId": "geological_hematite_iron_ore",
+              "nombre": "Hierro (hematita)",
+              "occurrenceIds": [
+                "occurrence_0008",
+                "occurrence_0029"
+              ]
+            },
+            {
+              "definitionId": "geological_clay",
+              "nombre": "Arcilla",
+              "occurrenceIds": [
+                "occurrence_0023"
+              ]
+            },
+            {
+              "definitionId": "geological_iron_rich_laterite",
+              "nombre": "Laterita ferruginosa",
+              "occurrenceIds": [
+                "occurrence_0024"
+              ]
+            },
+            {
+              "definitionId": "geological_manganese_bearing_deposit",
+              "nombre": "Manganeso",
+              "occurrenceIds": [
+                "occurrence_0028"
+              ]
+            },
+            {
+              "definitionId": "geological_pyrolusite_manganese_ore",
+              "nombre": "Manganeso (pirolusita)",
+              "occurrenceIds": [
+                "occurrence_0030"
+              ]
+            },
+            {
+              "definitionId": "geological_fluvial_clay",
+              "nombre": "Arcilla fluvial",
+              "occurrenceIds": [
+                "occurrence_0045"
+              ]
+            },
+            {
+              "definitionId": "geological_alluvial_cassiterite",
+              "nombre": "Estaño aluvial (casiterita)",
+              "occurrenceIds": [
+                "occurrence_0047"
+              ]
+            },
+            {
+              "definitionId": "geological_tin_bearing_deposit",
+              "nombre": "Estaño",
+              "occurrenceIds": [
+                "occurrence_0048"
+              ]
+            },
+            {
+              "definitionId": "geological_vein_cassiterite_tin_ore",
+              "nombre": "Estaño (casiterita en veta)",
+              "occurrenceIds": [
+                "occurrence_0051"
+              ]
+            },
+            {
+              "definitionId": "geological_chalcopyrite_copper_ore",
+              "nombre": "Cobre (calcopirita)",
+              "occurrenceIds": [
+                "occurrence_0052",
+                "occurrence_0074"
+              ]
+            },
+            {
+              "definitionId": "geological_volcanic_rock",
+              "nombre": "Roca volcánica",
+              "occurrenceIds": [
+                "occurrence_0068"
+              ]
+            },
+            {
+              "definitionId": "geological_nickel_bearing_deposit",
+              "nombre": "Níquel",
+              "occurrenceIds": [
+                "occurrence_0072"
+              ]
+            },
+            {
+              "definitionId": "geological_nickeliferous_laterite",
+              "nombre": "Níquel (laterita niquelífera)",
+              "occurrenceIds": [
+                "occurrence_0073"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "subtropical_forest",
+          "nombre": "Subtropical",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [],
+          "recursos": []
+        },
+        {
+          "id": "temperate_forest",
+          "nombre": "Templado",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [],
+          "recursos": []
+        },
+        {
+          "id": "boreal_forest",
+          "nombre": "Boreal (taiga)",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "PLT#000201",
+              "nombre": "Pino silvestre",
+              "occurrenceIds": [
+                "occurrence_0164"
+              ]
+            },
+            {
+              "definitionId": "PLT#000203",
+              "nombre": "Pícea negra",
+              "occurrenceIds": [
+                "occurrence_0165",
+                "occurrence_0166",
+                "occurrence_0167"
+              ]
+            },
+            {
+              "definitionId": "PLT#000193",
+              "nombre": "Alerces siberianos",
+              "occurrenceIds": [
+                "occurrence_0168",
+                "occurrence_0169"
+              ]
+            },
+            {
+              "definitionId": "PLT#000191",
+              "nombre": "Abedules",
+              "occurrenceIds": [
+                "occurrence_0170"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "ANM#000170",
+              "nombre": "Alce euroasiático [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0157",
+                "occurrence_0158"
+              ]
+            },
+            {
+              "definitionId": "animal_reindeer",
+              "nombre": "Reno [terrestre · carne, piel (lujo), astas; leche/tracción solo con domesticación apta]",
+              "occurrenceIds": [
+                "occurrence_0159"
+              ]
+            },
+            {
+              "definitionId": "animal_woodland_caribou",
+              "nombre": "Caribú de bosque [terrestre · carne, piel (lujo), astas; leche/tracción solo con domesticación apta]",
+              "occurrenceIds": [
+                "occurrence_0160"
+              ]
+            },
+            {
+              "definitionId": "ANM#000182",
+              "nombre": "Oso pardo [terrestre · carne, grasa, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0161",
+                "occurrence_0162"
+              ]
+            },
+            {
+              "definitionId": "animal_eurasian_lynx",
+              "nombre": "Lince euroasiático [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0163"
+              ]
+            }
+          ],
+          "recursos": [
+            {
+              "definitionId": "geological_granite",
+              "nombre": "Granito",
+              "occurrenceIds": [
+                "occurrence_0149"
+              ]
+            },
+            {
+              "definitionId": "geological_slate",
+              "nombre": "Pizarra",
+              "occurrenceIds": [
+                "occurrence_0150"
+              ]
+            },
+            {
+              "definitionId": "geological_clay",
+              "nombre": "Arcilla",
+              "occurrenceIds": [
+                "occurrence_0151"
+              ]
+            },
+            {
+              "definitionId": "geological_iron_bearing_deposit",
+              "nombre": "Hierro",
+              "occurrenceIds": [
+                "occurrence_0152"
+              ]
+            },
+            {
+              "definitionId": "geological_copper_bearing_deposit",
+              "nombre": "Cobre",
+              "occurrenceIds": [
+                "occurrence_0153"
+              ]
+            },
+            {
+              "definitionId": "geological_nickel_bearing_deposit",
+              "nombre": "Níquel",
+              "occurrenceIds": [
+                "occurrence_0154"
+              ]
+            },
+            {
+              "definitionId": "geological_magnetite_iron_ore",
+              "nombre": "Hierro (magnetita)",
+              "occurrenceIds": [
+                "occurrence_0155"
+              ]
+            },
+            {
+              "definitionId": "geological_sulfide_nickel_ore",
+              "nombre": "Níquel (sulfuros)",
+              "occurrenceIds": [
+                "occurrence_0156"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "forest_swamp",
+          "nombre": "Pantano arbolado",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [],
+          "recursos": []
+        }
+      ],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [
+          {
+            "definitionId": "PLT#000204",
+            "nombre": "Robles europeos",
+            "occurrenceIds": [
+              "occurrence_0098",
+              "occurrence_0120",
+              "occurrence_0126"
+            ]
+          },
+          {
+            "definitionId": "plant_asian_oaks_and_maples",
+            "nombre": "Robles y arces asiáticos",
+            "occurrenceIds": [
+              "occurrence_0099"
+            ]
+          },
+          {
+            "definitionId": "plant_wild_olive",
+            "nombre": "Acebuche",
+            "occurrenceIds": [
+              "occurrence_0100"
+            ]
+          },
+          {
+            "definitionId": "plant_european_beech",
+            "nombre": "Haya europea",
+            "occurrenceIds": [
+              "occurrence_0101"
+            ]
+          },
+          {
+            "definitionId": "plant_asian_chestnuts",
+            "nombre": "Castaños asiáticos",
+            "occurrenceIds": [
+              "occurrence_0102"
+            ]
+          },
+          {
+            "definitionId": "plant_native_wild_grapevine",
+            "nombre": "Vid silvestre en hábitats nativos",
+            "occurrenceIds": [
+              "occurrence_0103"
+            ]
+          },
+          {
+            "definitionId": "plant_hazel",
+            "nombre": "Avellano",
+            "occurrenceIds": [
+              "occurrence_0104"
+            ]
+          },
+          {
+            "definitionId": "plant_coigue",
+            "nombre": "Coigüe (Nothofagus dombeyi)",
+            "occurrenceIds": [
+              "occurrence_0121"
+            ]
+          },
+          {
+            "definitionId": "plant_manzanitas",
+            "nombre": "Manzanitas (Arctostaphylos spp.)",
+            "occurrenceIds": [
+              "occurrence_0122"
+            ]
+          },
+          {
+            "definitionId": "plant_soapbark_tree",
+            "nombre": "Quillay",
+            "occurrenceIds": [
+              "occurrence_0123"
+            ]
+          },
+          {
+            "definitionId": "plant_maples",
+            "nombre": "Arces",
+            "occurrenceIds": [
+              "occurrence_0124"
+            ]
+          },
+          {
+            "definitionId": "plant_lenga_beech",
+            "nombre": "Lenga (Nothofagus pumilio)",
+            "occurrenceIds": [
+              "occurrence_0125"
+            ]
+          },
+          {
+            "definitionId": "plant_proteas",
+            "nombre": "Proteas",
+            "occurrenceIds": [
+              "occurrence_0142"
+            ]
+          },
+          {
+            "definitionId": "plant_banksias",
+            "nombre": "Banksias",
+            "occurrenceIds": [
+              "occurrence_0143"
+            ]
+          },
+          {
+            "definitionId": "plant_heaths",
+            "nombre": "Erica spp.",
+            "occurrenceIds": [
+              "occurrence_0144"
+            ]
+          },
+          {
+            "definitionId": "PLT#000197",
+            "nombre": "Eucaliptos de clima mediterráneo",
+            "occurrenceIds": [
+              "occurrence_0145"
+            ]
+          },
+          {
+            "definitionId": "plant_restios",
+            "nombre": "Restios",
+            "occurrenceIds": [
+              "occurrence_0146"
+            ]
+          },
+          {
+            "definitionId": "PLT#000192",
+            "nombre": "Acacias australianas",
+            "occurrenceIds": [
+              "occurrence_0147"
+            ]
+          },
+          {
+            "definitionId": "plant_cape_bulbs_and_geophytes",
+            "nombre": "Bulbos y geófitas del Cabo",
+            "occurrenceIds": [
+              "occurrence_0148"
+            ]
+          }
+        ],
+        "fauna": [
+          {
+            "definitionId": "ANM#000175",
+            "nombre": "Ciervo rojo [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+            "occurrenceIds": [
+              "occurrence_0091",
+              "occurrence_0092",
+              "occurrence_0113",
+              "occurrence_0114",
+              "occurrence_0118"
+            ]
+          },
+          {
+            "definitionId": "ANM#000180",
+            "nombre": "Jabalí [terrestre · carne, piel (lujo), colmillos · caza; domesticación no automática]",
+            "occurrenceIds": [
+              "occurrence_0093",
+              "occurrence_0094"
+            ]
+          },
+          {
+            "definitionId": "animal_european_rabbit",
+            "nombre": "Conejo europeo, área nativa ibérica [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+            "occurrenceIds": [
+              "occurrence_0095"
+            ]
+          },
+          {
+            "definitionId": "ANM#000182",
+            "nombre": "Oso pardo [terrestre · carne, grasa, piel (lujo) · caza]",
+            "occurrenceIds": [
+              "occurrence_0096",
+              "occurrence_0097",
+              "occurrence_0117"
+            ]
+          },
+          {
+            "definitionId": "animal_coyote",
+            "nombre": "Coyote [terrestre · piel (lujo) · caza; no ganadería]",
+            "occurrenceIds": [
+              "occurrence_0115"
+            ]
+          },
+          {
+            "definitionId": "ANM#000169",
+            "nombre": "Zorro culpeo [terrestre · piel (lujo) · caza; no ganadería]",
+            "occurrenceIds": [
+              "occurrence_0116"
+            ]
+          },
+          {
+            "definitionId": "animal_puma",
+            "nombre": "Puma [terrestre · piel (lujo) · caza; no ganadería]",
+            "occurrenceIds": [
+              "occurrence_0119"
+            ]
+          },
+          {
+            "definitionId": "ANM#000171",
+            "nombre": "Antílopes pequeños regionales [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+            "occurrenceIds": [
+              "occurrence_0135"
+            ]
+          },
+          {
+            "definitionId": "ANM#000174",
+            "nombre": "Canguro gris occidental [terrestre · carne, piel (lujo) · caza]",
+            "occurrenceIds": [
+              "occurrence_0136"
+            ]
+          },
+          {
+            "definitionId": "ANM#000172",
+            "nombre": "Babuino chacma en zonas compatibles [terrestre · fauna silvestre; sin producción ganadera]",
+            "occurrenceIds": [
+              "occurrence_0137"
+            ]
+          },
+          {
+            "definitionId": "animal_regional_wallabies",
+            "nombre": "Ualabíes regionales [terrestre · carne, piel (lujo) · caza]",
+            "occurrenceIds": [
+              "occurrence_0138"
+            ]
+          },
+          {
+            "definitionId": "animal_regional_land_tortoises",
+            "nombre": "Tortugas terrestres regionales [terrestre · carne, huevos, caparazón · caza/recolección]",
+            "occurrenceIds": [
+              "occurrence_0139"
+            ]
+          },
+          {
+            "definitionId": "animal_short_beaked_echidna",
+            "nombre": "Equidna de hocico corto [terrestre · carne, piel (lujo) · fauna silvestre]",
+            "occurrenceIds": [
+              "occurrence_0140"
+            ]
+          },
+          {
+            "definitionId": "animal_australian_scrub_birds",
+            "nombre": "Aves de matorral australiano [terrestre · huevos, plumas · fauna silvestre]",
+            "occurrenceIds": [
+              "occurrence_0141"
+            ]
+          }
+        ],
+        "recursos": [
+          {
+            "definitionId": "geological_clay",
+            "nombre": "Arcilla",
+            "occurrenceIds": [
+              "occurrence_0083",
+              "occurrence_0105",
+              "occurrence_0128"
+            ]
+          },
+          {
+            "definitionId": "geological_limestone",
+            "nombre": "Caliza",
+            "occurrenceIds": [
+              "occurrence_0084"
+            ]
+          },
+          {
+            "definitionId": "geological_flint",
+            "nombre": "Sílex",
+            "occurrenceIds": [
+              "occurrence_0085"
+            ]
+          },
+          {
+            "definitionId": "geological_iron_bearing_deposit",
+            "nombre": "Hierro",
+            "occurrenceIds": [
+              "occurrence_0086",
+              "occurrence_0109",
+              "occurrence_0132"
+            ]
+          },
+          {
+            "definitionId": "geological_copper_bearing_deposit",
+            "nombre": "Cobre",
+            "occurrenceIds": [
+              "occurrence_0087",
+              "occurrence_0108",
+              "occurrence_0131"
+            ]
+          },
+          {
+            "definitionId": "geological_lead_bearing_deposit",
+            "nombre": "Plomo",
+            "occurrenceIds": [
+              "occurrence_0088"
+            ]
+          },
+          {
+            "definitionId": "geological_magnetite_iron_ore",
+            "nombre": "Hierro (magnetita)",
+            "occurrenceIds": [
+              "occurrence_0089",
+              "occurrence_0112"
+            ]
+          },
+          {
+            "definitionId": "geological_bituminous_coal",
+            "nombre": "Carbón mineral (hulla)",
+            "occurrenceIds": [
+              "occurrence_0090"
+            ]
+          },
+          {
+            "definitionId": "geological_granite",
+            "nombre": "Granito",
+            "occurrenceIds": [
+              "occurrence_0106",
+              "occurrence_0129"
+            ]
+          },
+          {
+            "definitionId": "geological_volcanic_obsidian",
+            "nombre": "Obsidiana en zonas volcánicas",
+            "occurrenceIds": [
+              "occurrence_0107"
+            ]
+          },
+          {
+            "definitionId": "geological_silver_bearing_deposit",
+            "nombre": "Plata",
+            "occurrenceIds": [
+              "occurrence_0110"
+            ]
+          },
+          {
+            "definitionId": "geological_chalcopyrite_copper_ore",
+            "nombre": "Cobre (calcopirita)",
+            "occurrenceIds": [
+              "occurrence_0111",
+              "occurrence_0134"
+            ]
+          },
+          {
+            "definitionId": "geological_sandstone",
+            "nombre": "Arenisca",
+            "occurrenceIds": [
+              "occurrence_0127"
+            ]
+          },
+          {
+            "definitionId": "geological_vein_gold",
+            "nombre": "Oro en veta",
+            "occurrenceIds": [
+              "occurrence_0130"
+            ]
+          },
+          {
+            "definitionId": "geological_gold_bearing_quartz",
+            "nombre": "Oro (cuarzo aurífero)",
+            "occurrenceIds": [
+              "occurrence_0133"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "plains",
+      "nombre": "Llanuras",
+      "tipos": [
+        {
+          "id": "plains_savanna",
+          "nombre": "Sabana",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "plant_african_wild_sorghums",
+              "nombre": "Sorgos silvestres africanos",
+              "occurrenceIds": [
+                "occurrence_0235"
+              ]
+            },
+            {
+              "definitionId": "plant_sahelian_wild_pearl_millet_relatives",
+              "nombre": "Parientes silvestres del mijo perla, Sahel",
+              "occurrenceIds": [
+                "occurrence_0236"
+              ]
+            },
+            {
+              "definitionId": "plant_african_baobab",
+              "nombre": "Baobab africano",
+              "occurrenceIds": [
+                "occurrence_0237"
+              ]
+            },
+            {
+              "definitionId": "plant_shea_tree",
+              "nombre": "Karité, sabanas de África occidental",
+              "occurrenceIds": [
+                "occurrence_0238"
+              ]
+            },
+            {
+              "definitionId": "PLT#000192",
+              "nombre": "Acacias africanas",
+              "occurrenceIds": [
+                "occurrence_0239",
+                "occurrence_0291"
+              ]
+            },
+            {
+              "definitionId": "plant_cerrado_grasses",
+              "nombre": "Gramíneas del Cerrado",
+              "occurrenceIds": [
+                "occurrence_0255"
+              ]
+            },
+            {
+              "definitionId": "plant_regional_savanna_palms",
+              "nombre": "Palmas de sabana regionales",
+              "occurrenceIds": [
+                "occurrence_0258"
+              ]
+            },
+            {
+              "definitionId": "plant_pequi",
+              "nombre": "Pequi (Caryocar brasiliense), Cerrado",
+              "occurrenceIds": [
+                "occurrence_0261"
+              ]
+            },
+            {
+              "definitionId": "PLT#000197",
+              "nombre": "Eucaliptos de sabana tropical",
+              "occurrenceIds": [
+                "occurrence_0290"
+              ]
+            },
+            {
+              "definitionId": "plant_northern_australian_native_grasses",
+              "nombre": "Gramíneas nativas del norte",
+              "occurrenceIds": [
+                "occurrence_0292"
+              ]
+            },
+            {
+              "definitionId": "plant_wetland_pandanus",
+              "nombre": "Pandanus en zonas húmedas",
+              "occurrenceIds": [
+                "occurrence_0293"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "ANM#000176",
+              "nombre": "Elefante africano de sabana [terrestre · marfil (lujo), piel (lujo) · fauna silvestre]",
+              "occurrenceIds": [
+                "occurrence_0229"
+              ]
+            },
+            {
+              "definitionId": "animal_giraffe",
+              "nombre": "Jirafa [terrestre · piel (lujo), carne · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0230"
+              ]
+            },
+            {
+              "definitionId": "animal_plains_zebra",
+              "nombre": "Cebra de llanura [terrestre · carne, piel (lujo) · silvestre; no tracción ganadera automática]",
+              "occurrenceIds": [
+                "occurrence_0231"
+              ]
+            },
+            {
+              "definitionId": "animal_lion",
+              "nombre": "León [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0232"
+              ]
+            },
+            {
+              "definitionId": "animal_wildebeest",
+              "nombre": "Ñu [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0233"
+              ]
+            },
+            {
+              "definitionId": "animal_african_buffalo",
+              "nombre": "Búfalo africano [terrestre · carne, piel (lujo), cuernos · caza; no ganadería automática]",
+              "occurrenceIds": [
+                "occurrence_0234"
+              ]
+            },
+            {
+              "definitionId": "animal_maned_wolf",
+              "nombre": "Lobo de crin, Cerrado [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0254"
+              ]
+            },
+            {
+              "definitionId": "ANM#000174",
+              "nombre": "Canguro antilopino, norte de Australia [terrestre · carne, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0286"
+              ]
+            },
+            {
+              "definitionId": "animal_emu",
+              "nombre": "Emú, zonas abiertas compatibles [terrestre · carne, huevos, plumas, piel · caza/cría según especie]",
+              "occurrenceIds": [
+                "occurrence_0287"
+              ]
+            },
+            {
+              "definitionId": "animal_regional_wallabies",
+              "nombre": "Ualabíes regionales [terrestre · carne, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0288"
+              ]
+            },
+            {
+              "definitionId": "animal_cockatoos_and_savanna_birds",
+              "nombre": "Cacatúas y aves de sabana [terrestre · plumas ornamentales (lujo) · captura]",
+              "occurrenceIds": [
+                "occurrence_0289"
+              ]
+            }
+          ],
+          "recursos": [
+            {
+              "definitionId": "geological_alluvial_clay",
+              "nombre": "Arcilla aluvial",
+              "occurrenceIds": [
+                "occurrence_0221"
+              ]
+            },
+            {
+              "definitionId": "geological_limestone",
+              "nombre": "Caliza",
+              "occurrenceIds": [
+                "occurrence_0222"
+              ]
+            },
+            {
+              "definitionId": "geological_alluvial_gold",
+              "nombre": "Oro aluvial",
+              "occurrenceIds": [
+                "occurrence_0223"
+              ]
+            },
+            {
+              "definitionId": "geological_iron_bearing_deposit",
+              "nombre": "Hierro",
+              "occurrenceIds": [
+                "occurrence_0224",
+                "occurrence_0281"
+              ]
+            },
+            {
+              "definitionId": "geological_copper_bearing_deposit",
+              "nombre": "Cobre",
+              "occurrenceIds": [
+                "occurrence_0225",
+                "occurrence_0282"
+              ]
+            },
+            {
+              "definitionId": "geological_vein_gold",
+              "nombre": "Oro en veta",
+              "occurrenceIds": [
+                "occurrence_0226",
+                "occurrence_0283"
+              ]
+            },
+            {
+              "definitionId": "geological_hematite_iron_ore",
+              "nombre": "Hierro (hematita)",
+              "occurrenceIds": [
+                "occurrence_0227",
+                "occurrence_0284"
+              ]
+            },
+            {
+              "definitionId": "geological_gold_bearing_quartz",
+              "nombre": "Oro (cuarzo aurífero)",
+              "occurrenceIds": [
+                "occurrence_0228",
+                "occurrence_0285"
+              ]
+            },
+            {
+              "definitionId": "geological_clay",
+              "nombre": "Arcilla",
+              "occurrenceIds": [
+                "occurrence_0278"
+              ]
+            },
+            {
+              "definitionId": "geological_sandstone",
+              "nombre": "Arenisca",
+              "occurrenceIds": [
+                "occurrence_0279"
+              ]
+            },
+            {
+              "definitionId": "geological_iron_rich_laterite",
+              "nombre": "Laterita ferruginosa",
+              "occurrenceIds": [
+                "occurrence_0280"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "plains_grassland",
+          "nombre": "Pradera",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "plant_big_bluestem",
+              "nombre": "Pastos altos (Andropogon gerardii)",
+              "occurrenceIds": [
+                "occurrence_0256"
+              ]
+            },
+            {
+              "definitionId": "plant_pampas_grasses",
+              "nombre": "Gramíneas pampeanas",
+              "occurrenceIds": [
+                "occurrence_0257"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "animal_american_bison",
+              "nombre": "Bisonte americano [terrestre · carne, piel (lujo), cuernos · caza; no ganadería automática]",
+              "occurrenceIds": [
+                "occurrence_0249"
+              ]
+            },
+            {
+              "definitionId": "animal_greater_rhea",
+              "nombre": "Ñandú común, Pampas [terrestre · carne, huevos, plumas, piel · caza/cría según especie]",
+              "occurrenceIds": [
+                "occurrence_0250"
+              ]
+            },
+            {
+              "definitionId": "animal_prairie_dog",
+              "nombre": "Perrito de la pradera [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+              "occurrenceIds": [
+                "occurrence_0252"
+              ]
+            },
+            {
+              "definitionId": "ANM#000175",
+              "nombre": "Venado de las pampas [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0253"
+              ]
+            }
+          ],
+          "recursos": []
+        },
+        {
+          "id": "plains_steppe",
+          "nombre": "Estepa",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "plant_blue_grama",
+              "nombre": "Grama azul (Bouteloua gracilis)",
+              "occurrenceIds": [
+                "occurrence_0259"
+              ]
+            },
+            {
+              "definitionId": "plant_patagonian_tussock_grasses",
+              "nombre": "Coirones patagónicos (Festuca y afines)",
+              "occurrenceIds": [
+                "occurrence_0260"
+              ]
+            },
+            {
+              "definitionId": "PLT#000194",
+              "nombre": "Artemisas (Artemisia spp.)",
+              "occurrenceIds": [
+                "occurrence_0274"
+              ]
+            },
+            {
+              "definitionId": "plant_eurasian_steppe_grasses",
+              "nombre": "Pastos esteparios euroasiáticos",
+              "occurrenceIds": [
+                "occurrence_0275"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "animal_eurasian_saiga",
+              "nombre": "Saiga, estepas euroasiáticas [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0270"
+              ]
+            },
+            {
+              "definitionId": "animal_przewalski_horse",
+              "nombre": "Caballo de Przewalski, Asia central [terrestre · carne, piel (lujo) · silvestre; no caballo doméstico]",
+              "occurrenceIds": [
+                "occurrence_0271"
+              ]
+            },
+            {
+              "definitionId": "ANM#000181",
+              "nombre": "Marmotas de estepa [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+              "occurrenceIds": [
+                "occurrence_0272"
+              ]
+            }
+          ],
+          "recursos": []
+        },
+        {
+          "id": "plains_wetland",
+          "nombre": "Humedal abierto",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [
+            {
+              "definitionId": "animal_capybara",
+              "nombre": "Capibara, cerca de agua [terrestre · carne, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0248"
+              ]
+            }
+          ],
+          "recursos": []
+        }
+      ],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [
+          {
+            "definitionId": "plant_southwest_asian_wild_wheat",
+            "nombre": "Trigo silvestre, solo en sus regiones nativas del sudoeste asiático",
+            "occurrenceIds": [
+              "occurrence_0276"
+            ]
+          },
+          {
+            "definitionId": "plant_wild_barley",
+            "nombre": "Cebada silvestre, en sus regiones nativas",
+            "occurrenceIds": [
+              "occurrence_0277"
+            ]
+          }
+        ],
+        "fauna": [
+          {
+            "definitionId": "animal_giant_anteater",
+            "nombre": "Oso hormiguero gigante [terrestre · carne, grasa, piel (lujo) · caza]",
+            "occurrenceIds": [
+              "occurrence_0251"
+            ]
+          },
+          {
+            "definitionId": "animal_grey_wolf",
+            "nombre": "Lobo gris [terrestre · piel (lujo) · caza; no ganadería]",
+            "occurrenceIds": [
+              "occurrence_0273"
+            ]
+          }
+        ],
+        "recursos": [
+          {
+            "definitionId": "geological_clay",
+            "nombre": "Arcilla",
+            "occurrenceIds": [
+              "occurrence_0240",
+              "occurrence_0262"
+            ]
+          },
+          {
+            "definitionId": "geological_granite",
+            "nombre": "Granito",
+            "occurrenceIds": [
+              "occurrence_0241"
+            ]
+          },
+          {
+            "definitionId": "geological_alluvial_gold",
+            "nombre": "Oro aluvial",
+            "occurrenceIds": [
+              "occurrence_0242"
+            ]
+          },
+          {
+            "definitionId": "geological_copper_bearing_deposit",
+            "nombre": "Cobre",
+            "occurrenceIds": [
+              "occurrence_0243",
+              "occurrence_0266"
+            ]
+          },
+          {
+            "definitionId": "geological_iron_bearing_deposit",
+            "nombre": "Hierro",
+            "occurrenceIds": [
+              "occurrence_0244",
+              "occurrence_0265"
+            ]
+          },
+          {
+            "definitionId": "geological_silver_bearing_deposit",
+            "nombre": "Plata",
+            "occurrenceIds": [
+              "occurrence_0245"
+            ]
+          },
+          {
+            "definitionId": "geological_chalcopyrite_copper_ore",
+            "nombre": "Cobre (calcopirita)",
+            "occurrenceIds": [
+              "occurrence_0246"
+            ]
+          },
+          {
+            "definitionId": "geological_hematite_iron_ore",
+            "nombre": "Hierro (hematita)",
+            "occurrenceIds": [
+              "occurrence_0247"
+            ]
+          },
+          {
+            "definitionId": "geological_limestone",
+            "nombre": "Caliza",
+            "occurrenceIds": [
+              "occurrence_0263"
+            ]
+          },
+          {
+            "definitionId": "geological_flint",
+            "nombre": "Sílex",
+            "occurrenceIds": [
+              "occurrence_0264"
+            ]
+          },
+          {
+            "definitionId": "geological_tin_bearing_deposit",
+            "nombre": "Estaño",
+            "occurrenceIds": [
+              "occurrence_0267"
+            ]
+          },
+          {
+            "definitionId": "geological_magnetite_iron_ore",
+            "nombre": "Hierro (magnetita)",
+            "occurrenceIds": [
+              "occurrence_0268"
+            ]
+          },
+          {
+            "definitionId": "geological_bituminous_coal",
+            "nombre": "Carbón mineral (hulla)",
+            "occurrenceIds": [
+              "occurrence_0269"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "desert",
+      "nombre": "Desierto",
+      "tipos": [
+        {
+          "id": "desert_sandy",
+          "nombre": "Arenoso",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [],
+          "recursos": [
+            {
+              "definitionId": "geological_sand",
+              "nombre": "Arena",
+              "occurrenceIds": [
+                "occurrence_0294",
+                "occurrence_0316",
+                "occurrence_0332",
+                "occurrence_0348"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "desert_rocky",
+          "nombre": "Rocoso",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [],
+          "recursos": [
+            {
+              "definitionId": "geological_sandstone",
+              "nombre": "Arenisca",
+              "occurrenceIds": [
+                "occurrence_0295",
+                "occurrence_0317",
+                "occurrence_0349"
+              ]
+            },
+            {
+              "definitionId": "geological_gravel",
+              "nombre": "Grava",
+              "occurrenceIds": [
+                "occurrence_0333"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "desert_salt_flat",
+          "nombre": "Salar",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [],
+          "recursos": []
+        }
+      ],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [
+          {
+            "definitionId": "plant_sonoran_saguaro",
+            "nombre": "Saguaro, Sonora",
+            "occurrenceIds": [
+              "occurrence_0309"
+            ]
+          },
+          {
+            "definitionId": "plant_south_american_cacti",
+            "nombre": "Cactáceas sudamericanas regionales",
+            "occurrenceIds": [
+              "occurrence_0310"
+            ]
+          },
+          {
+            "definitionId": "plant_prickly_pears",
+            "nombre": "Nopales (Opuntia spp.)",
+            "occurrenceIds": [
+              "occurrence_0311"
+            ]
+          },
+          {
+            "definitionId": "plant_creosote_bushes",
+            "nombre": "Jarillas (Larrea spp.), Monte",
+            "occurrenceIds": [
+              "occurrence_0312"
+            ]
+          },
+          {
+            "definitionId": "plant_agaves",
+            "nombre": "Agaves",
+            "occurrenceIds": [
+              "occurrence_0313"
+            ]
+          },
+          {
+            "definitionId": "plant_atacama_coastal_fog_plants",
+            "nombre": "Plantas de niebla costera, sectores de Atacama",
+            "occurrenceIds": [
+              "occurrence_0314"
+            ]
+          },
+          {
+            "definitionId": "plant_mesquites",
+            "nombre": "Mezquites",
+            "occurrenceIds": [
+              "occurrence_0315"
+            ]
+          },
+          {
+            "definitionId": "PLT#000192",
+            "nombre": "Acacias desérticas",
+            "occurrenceIds": [
+              "occurrence_0328",
+              "occurrence_0361"
+            ]
+          },
+          {
+            "definitionId": "plant_xerophytic_shrubs",
+            "nombre": "Arbustos xerófitos",
+            "occurrenceIds": [
+              "occurrence_0329"
+            ]
+          },
+          {
+            "definitionId": "plant_date_palm",
+            "nombre": "Palmera datilera en oasis y áreas de cultivo",
+            "occurrenceIds": [
+              "occurrence_0330"
+            ]
+          },
+          {
+            "definitionId": "plant_ephemeral_rainfall_grasses",
+            "nombre": "Gramíneas efímeras tras lluvias",
+            "occurrenceIds": [
+              "occurrence_0331"
+            ]
+          },
+          {
+            "definitionId": "plant_saxaul",
+            "nombre": "Saxaúl (Haloxylon spp.)",
+            "occurrenceIds": [
+              "occurrence_0344"
+            ]
+          },
+          {
+            "definitionId": "PLT#000194",
+            "nombre": "Artemisas",
+            "occurrenceIds": [
+              "occurrence_0345"
+            ]
+          },
+          {
+            "definitionId": "plant_halophytic_shrubs",
+            "nombre": "Arbustos halófitos",
+            "occurrenceIds": [
+              "occurrence_0346"
+            ]
+          },
+          {
+            "definitionId": "plant_regional_desert_grasses",
+            "nombre": "Pastos desérticos regionales",
+            "occurrenceIds": [
+              "occurrence_0347"
+            ]
+          },
+          {
+            "definitionId": "plant_spinifex_grasses",
+            "nombre": "Spinifex (Triodia spp.)",
+            "occurrenceIds": [
+              "occurrence_0360"
+            ]
+          },
+          {
+            "definitionId": "PLT#000197",
+            "nombre": "Eucaliptos de zonas áridas",
+            "occurrenceIds": [
+              "occurrence_0362"
+            ]
+          },
+          {
+            "definitionId": "plant_australian_saltbushes",
+            "nombre": "Arbustos salinos australianos",
+            "occurrenceIds": [
+              "occurrence_0363"
+            ]
+          }
+        ],
+        "fauna": [
+          {
+            "definitionId": "animal_roadrunner",
+            "nombre": "Correcaminos [terrestre · huevos, plumas · fauna silvestre]",
+            "occurrenceIds": [
+              "occurrence_0302"
+            ]
+          },
+          {
+            "definitionId": "ANM#000169",
+            "nombre": "Zorro culpeo en ambientes áridos [terrestre · piel (lujo) · caza; no ganadería]",
+            "occurrenceIds": [
+              "occurrence_0303",
+              "occurrence_0324",
+              "occurrence_0343"
+            ]
+          },
+          {
+            "definitionId": "animal_coyote",
+            "nombre": "Coyote [terrestre · piel (lujo) · caza; no ganadería]",
+            "occurrenceIds": [
+              "occurrence_0304"
+            ]
+          },
+          {
+            "definitionId": "animal_rock_dwelling_viscachas",
+            "nombre": "Vizcachas en roquedos [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+            "occurrenceIds": [
+              "occurrence_0305"
+            ]
+          },
+          {
+            "definitionId": "animal_regional_rattlesnakes",
+            "nombre": "Serpientes de cascabel regionales [terrestre · piel (lujo), carne · caza]",
+            "occurrenceIds": [
+              "occurrence_0306"
+            ]
+          },
+          {
+            "definitionId": "ANM#000179",
+            "nombre": "Guanaco en desiertos costeros y piedemonte [terrestre · fibra, carne, piel (lujo) · silvestre; fibra por captura/esquila]",
+            "occurrenceIds": [
+              "occurrence_0307"
+            ]
+          },
+          {
+            "definitionId": "animal_desert_tortoise",
+            "nombre": "Tortuga del desierto [terrestre · carne, huevos, caparazón · caza/recolección]",
+            "occurrenceIds": [
+              "occurrence_0308"
+            ]
+          },
+          {
+            "definitionId": "animal_arabian_oryx",
+            "nombre": "Órix de Arabia, Arabia [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+            "occurrenceIds": [
+              "occurrence_0325"
+            ]
+          },
+          {
+            "definitionId": "ANM#000178",
+            "nombre": "Gacelas desérticas [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+            "occurrenceIds": [
+              "occurrence_0326",
+              "occurrence_0342"
+            ]
+          },
+          {
+            "definitionId": "animal_introduced_domestic_or_feral_dromedary",
+            "nombre": "Dromedario doméstico o asilvestrado: solo si fue introducido [terrestre · leche, carne, piel (lujo), carga y transporte · ganadería si introducido]",
+            "occurrenceIds": [
+              "occurrence_0327"
+            ]
+          },
+          {
+            "definitionId": "animal_wild_bactrian_camel",
+            "nombre": "Camello bactriano salvaje, regiones remotas de Asia central [terrestre · carne, piel (lujo), fibra · silvestre; no equivale a camello doméstico]",
+            "occurrenceIds": [
+              "occurrence_0340"
+            ]
+          },
+          {
+            "definitionId": "animal_regional_jerboas_and_gerbils",
+            "nombre": "Jerbos y gerbillos regionales [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+            "occurrenceIds": [
+              "occurrence_0341"
+            ]
+          },
+          {
+            "definitionId": "animal_dingo",
+            "nombre": "Dingo [terrestre · piel (lujo) · caza; no ganadería]",
+            "occurrenceIds": [
+              "occurrence_0356"
+            ]
+          },
+          {
+            "definitionId": "ANM#000174",
+            "nombre": "Canguro rojo [terrestre · carne, piel (lujo) · caza]",
+            "occurrenceIds": [
+              "occurrence_0357"
+            ]
+          },
+          {
+            "definitionId": "animal_perentie",
+            "nombre": "Perentie (varano gigante) [terrestre · carne, piel (lujo) · caza]",
+            "occurrenceIds": [
+              "occurrence_0358"
+            ]
+          },
+          {
+            "definitionId": "animal_short_beaked_echidna",
+            "nombre": "Equidna de hocico corto [terrestre · carne, piel (lujo) · fauna silvestre]",
+            "occurrenceIds": [
+              "occurrence_0359"
+            ]
+          }
+        ],
+        "recursos": [
+          {
+            "definitionId": "geological_rock_salt",
+            "nombre": "Sal gema",
+            "occurrenceIds": [
+              "occurrence_0296",
+              "occurrence_0318",
+              "occurrence_0334"
+            ]
+          },
+          {
+            "definitionId": "geological_copper_bearing_deposit",
+            "nombre": "Cobre",
+            "occurrenceIds": [
+              "occurrence_0297",
+              "occurrence_0320",
+              "occurrence_0335",
+              "occurrence_0352"
+            ]
+          },
+          {
+            "definitionId": "geological_silver_bearing_deposit",
+            "nombre": "Plata",
+            "occurrenceIds": [
+              "occurrence_0298"
+            ]
+          },
+          {
+            "definitionId": "geological_iron_bearing_deposit",
+            "nombre": "Hierro",
+            "occurrenceIds": [
+              "occurrence_0299",
+              "occurrence_0319",
+              "occurrence_0336",
+              "occurrence_0351"
+            ]
+          },
+          {
+            "definitionId": "geological_chalcopyrite_copper_ore",
+            "nombre": "Cobre (calcopirita)",
+            "occurrenceIds": [
+              "occurrence_0300",
+              "occurrence_0338"
+            ]
+          },
+          {
+            "definitionId": "geological_hematite_iron_ore",
+            "nombre": "Hierro (hematita)",
+            "occurrenceIds": [
+              "occurrence_0301",
+              "occurrence_0322",
+              "occurrence_0354"
+            ]
+          },
+          {
+            "definitionId": "geological_phosphorite",
+            "nombre": "Fosforita",
+            "occurrenceIds": [
+              "occurrence_0321"
+            ]
+          },
+          {
+            "definitionId": "geological_apatite_phosphorite",
+            "nombre": "Fosforita (apatita)",
+            "occurrenceIds": [
+              "occurrence_0323"
+            ]
+          },
+          {
+            "definitionId": "geological_tin_bearing_deposit",
+            "nombre": "Estaño",
+            "occurrenceIds": [
+              "occurrence_0337"
+            ]
+          },
+          {
+            "definitionId": "geological_magnetite_iron_ore",
+            "nombre": "Hierro (magnetita)",
+            "occurrenceIds": [
+              "occurrence_0339"
+            ]
+          },
+          {
+            "definitionId": "geological_surface_opal",
+            "nombre": "Ópalo superficial",
+            "occurrenceIds": [
+              "occurrence_0350"
+            ]
+          },
+          {
+            "definitionId": "geological_vein_gold",
+            "nombre": "Oro en veta",
+            "occurrenceIds": [
+              "occurrence_0353"
+            ]
+          },
+          {
+            "definitionId": "geological_gold_bearing_quartz",
+            "nombre": "Oro (cuarzo aurífero)",
+            "occurrenceIds": [
+              "occurrence_0355"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "marine",
+      "nombre": "Marino",
+      "tipos": [
+        {
+          "id": "marine_reef",
+          "nombre": "Arrecife",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [
+            {
+              "definitionId": "animal_regional_reef_fish",
+              "nombre": "Peces arrecifales, especies regionales [marino · pescado (alimento), aceite de pescado (según especie) · pesca]",
+              "occurrenceIds": [
+                "occurrence_0370"
+              ]
+            }
+          ],
+          "recursos": []
+        },
+        {
+          "id": "marine_estuary_littoral",
+          "nombre": "Estuario o litoral",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "plant_cordgrasses_and_saltmarsh_grasses",
+              "nombre": "Espartina y otros pastos de marisma (regiones compatibles)",
+              "occurrenceIds": [
+                "occurrence_0416"
+              ]
+            },
+            {
+              "definitionId": "plant_estuarine_halophytes",
+              "nombre": "Plantas halófitas de estuario",
+              "occurrenceIds": [
+                "occurrence_0417"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "ANM#000173",
+              "nombre": "Cangrejos costeros [marino-costero · carne, caparazones · pesca/recolección]",
+              "occurrenceIds": [
+                "occurrence_0372"
+              ]
+            },
+            {
+              "definitionId": "animal_coastal_seals_and_sea_lions",
+              "nombre": "Focas y lobos marinos en costas apropiadas [marino-costero · carne, grasa/aceite, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0386"
+              ]
+            },
+            {
+              "definitionId": "animal_regional_seals",
+              "nombre": "Focas de especies regionales [marino-costero · carne, grasa/aceite, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0396"
+              ]
+            },
+            {
+              "definitionId": "ANM#000183",
+              "nombre": "Pingüinos únicamente en regiones australes apropiadas [marino-costero · huevos, grasa · recolección/caza]",
+              "occurrenceIds": [
+                "occurrence_0400"
+              ]
+            },
+            {
+              "definitionId": "animal_estuarine_oysters_and_other_bivalves",
+              "nombre": "Ostras y otros bivalvos de estuario [marino · alimento, conchas; perlas (solo especies aptas) · recolección]",
+              "occurrenceIds": [
+                "occurrence_0412"
+              ]
+            },
+            {
+              "definitionId": "animal_juvenile_estuarine_fish",
+              "nombre": "Peces juveniles de estuario [marino · pescado (alimento), aceite de pescado (según especie) · pesca]",
+              "occurrenceIds": [
+                "occurrence_0413"
+              ]
+            },
+            {
+              "definitionId": "animal_shorebirds_and_waterbirds",
+              "nombre": "Aves limícolas y acuáticas [costero · carne, huevos, plumas · caza/recolección]",
+              "occurrenceIds": [
+                "occurrence_0414"
+              ]
+            }
+          ],
+          "recursos": [
+            {
+              "definitionId": "geological_coastal_limestone",
+              "nombre": "Caliza costera",
+              "occurrenceIds": [
+                "occurrence_0367",
+                "occurrence_0380",
+                "occurrence_0393"
+              ]
+            },
+            {
+              "definitionId": "geological_coastal_gypsum",
+              "nombre": "Yeso costero",
+              "occurrenceIds": [
+                "occurrence_0368",
+                "occurrence_0381",
+                "occurrence_0394"
+              ]
+            },
+            {
+              "definitionId": "geological_coastal_gravel",
+              "nombre": "Grava costera",
+              "occurrenceIds": [
+                "occurrence_0379",
+                "occurrence_0390"
+              ]
+            },
+            {
+              "definitionId": "geological_estuarine_clay",
+              "nombre": "Arcilla estuarina",
+              "occurrenceIds": [
+                "occurrence_0404"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "marine_mangrove",
+          "nombre": "Manglar",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "PLT#000200",
+              "nombre": "Manglares en litorales tropicales compatibles",
+              "occurrenceIds": [
+                "occurrence_0374",
+                "occurrence_0415"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "ANM#000173",
+              "nombre": "Cangrejos de manglar (costas tropicales) [marino-costero · carne, caparazones · pesca/recolección]",
+              "occurrenceIds": [
+                "occurrence_0411"
+              ]
+            }
+          ],
+          "recursos": []
+        },
+        {
+          "id": "marine_open_ocean",
+          "nombre": "Océano abierto",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [
+            {
+              "definitionId": "animal_atlantic_cod",
+              "nombre": "Bacalao del Atlántico, Atlántico norte [marino · pescado (alimento), aceite de pescado (según especie) · pesca]",
+              "occurrenceIds": [
+                "occurrence_0383"
+              ]
+            },
+            {
+              "definitionId": "animal_regional_migratory_whales",
+              "nombre": "Ballenas migratorias, según región [marino · aceite de ballena, carne, barbas (según especie) · caza marítima]",
+              "occurrenceIds": [
+                "occurrence_0397"
+              ]
+            },
+            {
+              "definitionId": "animal_antarctic_krill",
+              "nombre": "Krill antártico, océano Austral [marino · alimento marino · pesca]",
+              "occurrenceIds": [
+                "occurrence_0398"
+              ]
+            }
+          ],
+          "recursos": []
+        }
+      ],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [
+          {
+            "definitionId": "plant_regional_seagrasses",
+            "nombre": "Pastos marinos (Thalassia y otros géneros regionales)",
+            "occurrenceIds": [
+              "occurrence_0375"
+            ]
+          },
+          {
+            "definitionId": "plant_tropical_marine_algae",
+            "nombre": "Algas marinas tropicales",
+            "occurrenceIds": [
+              "occurrence_0376"
+            ]
+          },
+          {
+            "definitionId": "PLT#000198",
+            "nombre": "Bosques de kelp en costas templadas apropiadas",
+            "occurrenceIds": [
+              "occurrence_0387",
+              "occurrence_0403"
+            ]
+          },
+          {
+            "definitionId": "plant_eelgrass_and_other_seagrasses",
+            "nombre": "Zostera y otros pastos marinos",
+            "occurrenceIds": [
+              "occurrence_0388"
+            ]
+          },
+          {
+            "definitionId": "plant_regional_brown_and_red_algae",
+            "nombre": "Algas pardas y rojas regionales",
+            "occurrenceIds": [
+              "occurrence_0389"
+            ]
+          },
+          {
+            "definitionId": "plant_marine_phytoplankton",
+            "nombre": "Fitoplancton marino",
+            "occurrenceIds": [
+              "occurrence_0401"
+            ]
+          },
+          {
+            "definitionId": "plant_polar_marine_algae",
+            "nombre": "Algas marinas polares",
+            "occurrenceIds": [
+              "occurrence_0402"
+            ]
+          }
+        ],
+        "fauna": [
+          {
+            "definitionId": "animal_sea_turtles",
+            "nombre": "Tortugas marinas en zonas de alimentación y anidación [marino · carne, huevos, caparazón · caza/recolección]",
+            "occurrenceIds": [
+              "occurrence_0371"
+            ]
+          },
+          {
+            "definitionId": "animal_tropical_mollusks_and_bivalves",
+            "nombre": "Moluscos y bivalvos tropicales [marino · alimento, conchas; perlas (solo especies aptas) · recolección]",
+            "occurrenceIds": [
+              "occurrence_0373"
+            ]
+          },
+          {
+            "definitionId": "animal_regional_sardines",
+            "nombre": "Sardinas regionales [marino · pescado (alimento), aceite de pescado (según especie) · pesca]",
+            "occurrenceIds": [
+              "occurrence_0384"
+            ]
+          },
+          {
+            "definitionId": "animal_regional_mussels_and_oysters",
+            "nombre": "Mejillones y ostras, según región [marino · alimento, conchas; perlas (solo especies aptas) · recolección]",
+            "occurrenceIds": [
+              "occurrence_0385"
+            ]
+          },
+          {
+            "definitionId": "animal_regional_polar_fish",
+            "nombre": "Peces polares regionales [marino · pescado (alimento), aceite de pescado (según especie) · pesca]",
+            "occurrenceIds": [
+              "occurrence_0399"
+            ]
+          }
+        ],
+        "recursos": [
+          {
+            "definitionId": "geological_sea_salt",
+            "nombre": "Sal marina",
+            "occurrenceIds": [
+              "occurrence_0364",
+              "occurrence_0377"
+            ]
+          },
+          {
+            "definitionId": "geological_calcareous_sand",
+            "nombre": "Arena calcárea",
+            "occurrenceIds": [
+              "occurrence_0365"
+            ]
+          },
+          {
+            "definitionId": "geological_seashells",
+            "nombre": "Conchas marinas",
+            "occurrenceIds": [
+              "occurrence_0366"
+            ]
+          },
+          {
+            "definitionId": "geological_polymetallic_nodules",
+            "nombre": "Nódulos polimetálicos (manganeso, níquel y cobre)",
+            "occurrenceIds": [
+              "occurrence_0369",
+              "occurrence_0382",
+              "occurrence_0395"
+            ]
+          },
+          {
+            "definitionId": "geological_silica_sand",
+            "nombre": "Arena silícea",
+            "occurrenceIds": [
+              "occurrence_0378"
+            ]
+          },
+          {
+            "definitionId": "geological_basalt",
+            "nombre": "Roca basáltica",
+            "occurrenceIds": [
+              "occurrence_0391"
+            ]
+          },
+          {
+            "definitionId": "geological_sand",
+            "nombre": "Arena",
+            "occurrenceIds": [
+              "occurrence_0392",
+              "occurrence_0405"
+            ]
+          },
+          {
+            "definitionId": "geological_sea_salt_in_suitable_saltworks",
+            "nombre": "Sal marina (en salinas apropiadas)",
+            "occurrenceIds": [
+              "occurrence_0406"
+            ]
+          },
+          {
+            "definitionId": "geological_gypsum_in_evaporite_deposits",
+            "nombre": "Yeso (en depósitos evaporíticos)",
+            "occurrenceIds": [
+              "occurrence_0407"
+            ]
+          },
+          {
+            "definitionId": "geological_limestone_in_carbonate_formations",
+            "nombre": "Caliza (donde exista formación carbonatada)",
+            "occurrenceIds": [
+              "occurrence_0408"
+            ]
+          },
+          {
+            "definitionId": "geological_deep_rock_salt",
+            "nombre": "Sal gema (en depósitos profundos apropiados)",
+            "occurrenceIds": [
+              "occurrence_0409"
+            ]
+          },
+          {
+            "definitionId": "geological_deep_gypsum",
+            "nombre": "Yeso (en yacimientos profundos)",
+            "occurrenceIds": [
+              "occurrence_0410"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tundra",
+      "nombre": "Tundra",
+      "tipos": [
+        {
+          "id": "tundra",
+          "nombre": "Tundra",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "PLT#000205",
+              "nombre": "Sauces enanos",
+              "occurrenceIds": [
+                "occurrence_0184",
+                "occurrence_0203"
+              ]
+            },
+            {
+              "definitionId": "PLT#000199",
+              "nombre": "Líquenes de reno",
+              "occurrenceIds": [
+                "occurrence_0185",
+                "occurrence_0204",
+                "occurrence_0219"
+              ]
+            },
+            {
+              "definitionId": "plant_cloudberry",
+              "nombre": "Mora de los pantanos",
+              "occurrenceIds": [
+                "occurrence_0186"
+              ]
+            },
+            {
+              "definitionId": "plant_mosses",
+              "nombre": "Musgos",
+              "occurrenceIds": [
+                "occurrence_0187",
+                "occurrence_0205",
+                "occurrence_0218"
+              ]
+            },
+            {
+              "definitionId": "plant_arctic_blueberries",
+              "nombre": "Arándanos árticos",
+              "occurrenceIds": [
+                "occurrence_0188"
+              ]
+            },
+            {
+              "definitionId": "PLT#000191",
+              "nombre": "Abedul enano",
+              "occurrenceIds": [
+                "occurrence_0202"
+              ]
+            },
+            {
+              "definitionId": "plant_tundra_berries",
+              "nombre": "Bayas de tundra",
+              "occurrenceIds": [
+                "occurrence_0206"
+              ]
+            },
+            {
+              "definitionId": "plant_subantarctic_grasses",
+              "nombre": "Pastos subantárticos",
+              "occurrenceIds": [
+                "occurrence_0217"
+              ]
+            },
+            {
+              "definitionId": "PLT#000202",
+              "nombre": "Plantas almohadilladas",
+              "occurrenceIds": [
+                "occurrence_0220"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "animal_muskox",
+              "nombre": "Buey almizclero [terrestre · carne, fibra, piel (lujo) · silvestre]",
+              "occurrenceIds": [
+                "occurrence_0179"
+              ]
+            },
+            {
+              "definitionId": "animal_tundra_caribou",
+              "nombre": "Caribú de tundra [terrestre · carne, piel (lujo), astas; leche/tracción solo con domesticación apta]",
+              "occurrenceIds": [
+                "occurrence_0180"
+              ]
+            },
+            {
+              "definitionId": "ANM#000169",
+              "nombre": "Zorro ártico [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0181",
+                "occurrence_0198"
+              ]
+            },
+            {
+              "definitionId": "animal_arctic_hare",
+              "nombre": "Liebre ártica [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+              "occurrenceIds": [
+                "occurrence_0182"
+              ]
+            },
+            {
+              "definitionId": "ANM#000182",
+              "nombre": "Oso polar solo en costas y hielo marino [terrestre · carne, grasa, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0183"
+              ]
+            },
+            {
+              "definitionId": "animal_reindeer",
+              "nombre": "Reno [terrestre · carne, piel (lujo), astas; leche/tracción solo con domesticación apta]",
+              "occurrenceIds": [
+                "occurrence_0197"
+              ]
+            },
+            {
+              "definitionId": "animal_lemming",
+              "nombre": "Lemming [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+              "occurrenceIds": [
+                "occurrence_0199"
+              ]
+            },
+            {
+              "definitionId": "animal_snowy_owl",
+              "nombre": "Búho nival [terrestre · plumas · fauna silvestre]",
+              "occurrenceIds": [
+                "occurrence_0200"
+              ]
+            },
+            {
+              "definitionId": "animal_subarctic_wolverine",
+              "nombre": "Glotón en transición subártica [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0201"
+              ]
+            },
+            {
+              "definitionId": "ANM#000183",
+              "nombre": "Pingüinos en costas de islas apropiadas [marino-costero · huevos, grasa · recolección/caza]",
+              "occurrenceIds": [
+                "occurrence_0214"
+              ]
+            },
+            {
+              "definitionId": "animal_coastal_elephant_seals",
+              "nombre": "Elefantes marinos en costas [marino-costero · aceite animal, piel (lujo) · caza]",
+              "occurrenceIds": [
+                "occurrence_0215"
+              ]
+            },
+            {
+              "definitionId": "animal_island_petrels_and_albatrosses",
+              "nombre": "Petreles y albatros en islas apropiadas [marino-costero · huevos, plumas · recolección]",
+              "occurrenceIds": [
+                "occurrence_0216"
+              ]
+            }
+          ],
+          "recursos": [
+            {
+              "definitionId": "geological_gravel",
+              "nombre": "Grava",
+              "occurrenceIds": [
+                "occurrence_0171",
+                "occurrence_0189",
+                "occurrence_0208"
+              ]
+            },
+            {
+              "definitionId": "geological_slate",
+              "nombre": "Pizarra",
+              "occurrenceIds": [
+                "occurrence_0172"
+              ]
+            },
+            {
+              "definitionId": "geological_granite",
+              "nombre": "Granito",
+              "occurrenceIds": [
+                "occurrence_0173",
+                "occurrence_0190"
+              ]
+            },
+            {
+              "definitionId": "geological_iron_bearing_deposit",
+              "nombre": "Hierro",
+              "occurrenceIds": [
+                "occurrence_0174",
+                "occurrence_0192",
+                "occurrence_0210"
+              ]
+            },
+            {
+              "definitionId": "geological_copper_bearing_deposit",
+              "nombre": "Cobre",
+              "occurrenceIds": [
+                "occurrence_0175",
+                "occurrence_0193",
+                "occurrence_0211"
+              ]
+            },
+            {
+              "definitionId": "geological_nickel_bearing_deposit",
+              "nombre": "Níquel",
+              "occurrenceIds": [
+                "occurrence_0176",
+                "occurrence_0194"
+              ]
+            },
+            {
+              "definitionId": "geological_magnetite_iron_ore",
+              "nombre": "Hierro (magnetita)",
+              "occurrenceIds": [
+                "occurrence_0177",
+                "occurrence_0195",
+                "occurrence_0212"
+              ]
+            },
+            {
+              "definitionId": "geological_sulfide_nickel_ore",
+              "nombre": "Níquel (sulfuros)",
+              "occurrenceIds": [
+                "occurrence_0178"
+              ]
+            },
+            {
+              "definitionId": "geological_glacial_clay",
+              "nombre": "Arcilla glacial",
+              "occurrenceIds": [
+                "occurrence_0191"
+              ]
+            },
+            {
+              "definitionId": "geological_chalcopyrite_copper_ore",
+              "nombre": "Cobre (calcopirita)",
+              "occurrenceIds": [
+                "occurrence_0196",
+                "occurrence_0213"
+              ]
+            },
+            {
+              "definitionId": "geological_basalt",
+              "nombre": "Roca basáltica",
+              "occurrenceIds": [
+                "occurrence_0207"
+              ]
+            },
+            {
+              "definitionId": "geological_peat",
+              "nombre": "Turba",
+              "occurrenceIds": [
+                "occurrence_0209"
+              ]
+            }
+          ]
+        }
+      ],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [],
+        "fauna": [],
+        "recursos": []
+      }
+    },
+    {
+      "id": "mountain",
+      "nombre": "Montaña",
+      "tipos": [
+        {
+          "id": "mountain_alpine",
+          "nombre": "Alpino",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [
+            {
+              "definitionId": "plant_ichu_grass",
+              "nombre": "Ichu",
+              "occurrenceIds": [
+                "occurrence_0431"
+              ]
+            },
+            {
+              "definitionId": "plant_wild_potato_relatives",
+              "nombre": "Parientes silvestres de la papa",
+              "occurrenceIds": [
+                "occurrence_0433"
+              ]
+            },
+            {
+              "definitionId": "plant_wild_quinoa_relatives",
+              "nombre": "Parientes silvestres de la quinua",
+              "occurrenceIds": [
+                "occurrence_0434"
+              ]
+            },
+            {
+              "definitionId": "PLT#000202",
+              "nombre": "Plantas almohadilladas andinas",
+              "occurrenceIds": [
+                "occurrence_0435"
+              ]
+            },
+            {
+              "definitionId": "plant_mountain_junipers",
+              "nombre": "Enebros de montaña",
+              "occurrenceIds": [
+                "occurrence_0449"
+              ]
+            },
+            {
+              "definitionId": "plant_high_altitude_rhododendrons",
+              "nombre": "Rododendros de altura",
+              "occurrenceIds": [
+                "occurrence_0450"
+              ]
+            },
+            {
+              "definitionId": "plant_asian_alpine_grasses",
+              "nombre": "Pastos alpinos asiáticos",
+              "occurrenceIds": [
+                "occurrence_0451"
+              ]
+            },
+            {
+              "definitionId": "plant_shrubs_and_cushion_plants",
+              "nombre": "Arbustos y plantas almohadilladas",
+              "occurrenceIds": [
+                "occurrence_0452"
+              ]
+            },
+            {
+              "definitionId": "plant_edelweiss",
+              "nombre": "Edelweiss",
+              "occurrenceIds": [
+                "occurrence_0466"
+              ]
+            },
+            {
+              "definitionId": "PLT#000201",
+              "nombre": "Pinos de montaña",
+              "occurrenceIds": [
+                "occurrence_0467"
+              ]
+            },
+            {
+              "definitionId": "plant_alpine_grasses",
+              "nombre": "Pastos alpinos",
+              "occurrenceIds": [
+                "occurrence_0468"
+              ]
+            },
+            {
+              "definitionId": "plant_gentians",
+              "nombre": "Gencianas",
+              "occurrenceIds": [
+                "occurrence_0469"
+              ]
+            },
+            {
+              "definitionId": "plant_east_african_giant_lobelias",
+              "nombre": "Lobelias gigantes, montañas de África oriental",
+              "occurrenceIds": [
+                "occurrence_0482"
+              ]
+            },
+            {
+              "definitionId": "plant_giant_groundsels",
+              "nombre": "Senecios gigantes (Dendrosenecio spp.)",
+              "occurrenceIds": [
+                "occurrence_0483"
+              ]
+            },
+            {
+              "definitionId": "plant_afroalpine_grasses",
+              "nombre": "Pastos afroalpinos",
+              "occurrenceIds": [
+                "occurrence_0484"
+              ]
+            },
+            {
+              "definitionId": "plant_ethiopian_highland_ensete",
+              "nombre": "Ensete en tierras altas etíopes apropiadas",
+              "occurrenceIds": [
+                "occurrence_0485"
+              ]
+            }
+          ],
+          "fauna": [
+            {
+              "definitionId": "animal_vicuna",
+              "nombre": "Vicuña [terrestre · fibra, carne, piel (lujo) · silvestre; fibra por captura/esquila]",
+              "occurrenceIds": [
+                "occurrence_0426"
+              ]
+            },
+            {
+              "definitionId": "ANM#000179",
+              "nombre": "Guanaco en pisos adecuados [terrestre · fibra, carne, piel (lujo) · silvestre; fibra por captura/esquila]",
+              "occurrenceIds": [
+                "occurrence_0427"
+              ]
+            },
+            {
+              "definitionId": "animal_andean_condor",
+              "nombre": "Cóndor andino [terrestre · plumas · fauna silvestre]",
+              "occurrenceIds": [
+                "occurrence_0428"
+              ]
+            },
+            {
+              "definitionId": "animal_puma",
+              "nombre": "Puma [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0429"
+              ]
+            },
+            {
+              "definitionId": "animal_andean_viscacha",
+              "nombre": "Vizcacha andina [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+              "occurrenceIds": [
+                "occurrence_0430"
+              ]
+            },
+            {
+              "definitionId": "animal_snow_leopard",
+              "nombre": "Leopardo de las nieves [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0444"
+              ]
+            },
+            {
+              "definitionId": "animal_wild_yak",
+              "nombre": "Yak salvaje, altiplano tibetano [terrestre · carne, piel (lujo), fibra · silvestre; domesticación requiere población apta]",
+              "occurrenceIds": [
+                "occurrence_0445"
+              ]
+            },
+            {
+              "definitionId": "ANM#000186",
+              "nombre": "Íbice siberiano, Asia central [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0446",
+                "occurrence_0461",
+                "occurrence_0479"
+              ]
+            },
+            {
+              "definitionId": "animal_himalayan_tahr",
+              "nombre": "Tahr del Himalaya [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0447"
+              ]
+            },
+            {
+              "definitionId": "ANM#000184",
+              "nombre": "Quebrantahuesos [terrestre · plumas · fauna silvestre]",
+              "occurrenceIds": [
+                "occurrence_0448",
+                "occurrence_0465"
+              ]
+            },
+            {
+              "definitionId": "animal_chamois",
+              "nombre": "Rebeco [terrestre · carne, piel (lujo), astas/cuernos (según especie) · caza]",
+              "occurrenceIds": [
+                "occurrence_0462"
+              ]
+            },
+            {
+              "definitionId": "ANM#000181",
+              "nombre": "Marmota alpina [terrestre · carne, piel (lujo) · caza; cría solo si es viable]",
+              "occurrenceIds": [
+                "occurrence_0463"
+              ]
+            },
+            {
+              "definitionId": "animal_golden_eagle",
+              "nombre": "Águila real [terrestre · plumas · fauna silvestre]",
+              "occurrenceIds": [
+                "occurrence_0464"
+              ]
+            },
+            {
+              "definitionId": "animal_gelada",
+              "nombre": "Gelada, altiplano etíope [terrestre · fauna silvestre; sin producción ganadera]",
+              "occurrenceIds": [
+                "occurrence_0478"
+              ]
+            },
+            {
+              "definitionId": "animal_ethiopian_wolf",
+              "nombre": "Lobo etíope, tierras altas de Etiopía [terrestre · piel (lujo) · caza; no ganadería]",
+              "occurrenceIds": [
+                "occurrence_0480"
+              ]
+            },
+            {
+              "definitionId": "animal_rock_hyraxes",
+              "nombre": "Damanes de roca [terrestre · carne, piel (lujo) · fauna silvestre]",
+              "occurrenceIds": [
+                "occurrence_0481"
+              ]
+            }
+          ],
+          "recursos": [
+            {
+              "definitionId": "geological_granite",
+              "nombre": "Granito",
+              "occurrenceIds": [
+                "occurrence_0418",
+                "occurrence_0436",
+                "occurrence_0454"
+              ]
+            },
+            {
+              "definitionId": "geological_clay",
+              "nombre": "Arcilla",
+              "occurrenceIds": [
+                "occurrence_0419",
+                "occurrence_0472"
+              ]
+            },
+            {
+              "definitionId": "geological_alluvial_gold",
+              "nombre": "Oro aluvial",
+              "occurrenceIds": [
+                "occurrence_0420"
+              ]
+            },
+            {
+              "definitionId": "geological_copper_bearing_deposit",
+              "nombre": "Cobre",
+              "occurrenceIds": [
+                "occurrence_0421",
+                "occurrence_0439",
+                "occurrence_0457",
+                "occurrence_0474"
+              ]
+            },
+            {
+              "definitionId": "geological_silver_bearing_deposit",
+              "nombre": "Plata",
+              "occurrenceIds": [
+                "occurrence_0422"
+              ]
+            },
+            {
+              "definitionId": "geological_tin_bearing_deposit",
+              "nombre": "Estaño",
+              "occurrenceIds": [
+                "occurrence_0423"
+              ]
+            },
+            {
+              "definitionId": "geological_chalcopyrite_copper_ore",
+              "nombre": "Cobre (calcopirita)",
+              "occurrenceIds": [
+                "occurrence_0424",
+                "occurrence_0443"
+              ]
+            },
+            {
+              "definitionId": "geological_argentite_silver_ore",
+              "nombre": "Plata (argentita)",
+              "occurrenceIds": [
+                "occurrence_0425"
+              ]
+            },
+            {
+              "definitionId": "geological_slate",
+              "nombre": "Pizarra",
+              "occurrenceIds": [
+                "occurrence_0437",
+                "occurrence_0455"
+              ]
+            },
+            {
+              "definitionId": "geological_rock_salt",
+              "nombre": "Sal gema",
+              "occurrenceIds": [
+                "occurrence_0438"
+              ]
+            },
+            {
+              "definitionId": "geological_iron_bearing_deposit",
+              "nombre": "Hierro",
+              "occurrenceIds": [
+                "occurrence_0440",
+                "occurrence_0456",
+                "occurrence_0473"
+              ]
+            },
+            {
+              "definitionId": "geological_vein_gold",
+              "nombre": "Oro en veta",
+              "occurrenceIds": [
+                "occurrence_0441",
+                "occurrence_0475"
+              ]
+            },
+            {
+              "definitionId": "geological_magnetite_iron_ore",
+              "nombre": "Hierro (magnetita)",
+              "occurrenceIds": [
+                "occurrence_0442",
+                "occurrence_0459",
+                "occurrence_0476"
+              ]
+            },
+            {
+              "definitionId": "geological_limestone",
+              "nombre": "Caliza",
+              "occurrenceIds": [
+                "occurrence_0453"
+              ]
+            },
+            {
+              "definitionId": "geological_lead_bearing_deposit",
+              "nombre": "Plomo",
+              "occurrenceIds": [
+                "occurrence_0458"
+              ]
+            },
+            {
+              "definitionId": "geological_galena_lead_ore",
+              "nombre": "Plomo (galena)",
+              "occurrenceIds": [
+                "occurrence_0460"
+              ]
+            },
+            {
+              "definitionId": "geological_volcanic_rock",
+              "nombre": "Roca volcánica",
+              "occurrenceIds": [
+                "occurrence_0470"
+              ]
+            },
+            {
+              "definitionId": "geological_pumice",
+              "nombre": "Piedra pómez",
+              "occurrenceIds": [
+                "occurrence_0471"
+              ]
+            },
+            {
+              "definitionId": "geological_gold_bearing_quartz",
+              "nombre": "Oro (cuarzo aurífero)",
+              "occurrenceIds": [
+                "occurrence_0477"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mountain_summit",
+          "nombre": "Cumbres",
+          "estado": "asociacion_provisional_pendiente_de_validacion",
+          "flora": [],
+          "fauna": [],
+          "recursos": []
+        }
+      ],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [
+          {
+            "definitionId": "plant_queuna_trees",
+            "nombre": "Queñua (Polylepis spp.)",
+            "occurrenceIds": [
+              "occurrence_0432"
+            ]
+          }
+        ],
+        "fauna": [],
+        "recursos": []
+      }
+    },
+    {
+      "id": "arctic",
+      "nombre": "Ártico",
+      "tipos": [],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [],
+        "fauna": [],
+        "recursos": []
+      }
+    },
+    {
+      "id": "antarctic",
+      "nombre": "Antártico",
+      "tipos": [],
+      "pendientesDeClasificarPorTipo": {
+        "nota": "Registros conservados en el bioma central hasta definir el tipo compatible; no se asignan arbitrariamente.",
+        "flora": [],
+        "fauna": [],
+        "recursos": []
+      }
+    }
+  ]
+}
