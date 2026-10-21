@@ -49,6 +49,17 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 3. **Pradera templada** — `savanna_temperate_grassland`
 4. **Estepa semiárida** — `savanna_steppe`
 
+## Jerarquía aprobada: Llanuras
+
+**Categoría principal:** `plains` — **Llanuras** (categoría de diseño jugable; geomorfológicamente una llanura es relieve, no un bioma estrictamente ecológico).
+
+1. **Sabana** — `plains_savanna`
+2. **Pradera** — `plains_grassland`
+3. **Estepa** — `plains_steppe`
+4. **Humedal** — `plains_wetland`
+
+**Decisión aprobada:** Humedal se incluye como tipo de Llanuras en la interfaz conceptual; el **pantano** es un subtipo de humedal, no una categoría equivalente. Los humedales también pueden aparecer fuera de las llanuras, de modo que las reglas futuras de generación no deben restringirlos exclusivamente a esta forma de relieve. IDs conceptuales, sin migración de JSON ni especies por ahora.
+
 ## Jerarquía aprobada: Desierto
 
 **Categoría principal:** `desert` — **Desierto**.
