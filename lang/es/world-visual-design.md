@@ -68,3 +68,49 @@ Esta regla **sustituye** la sugerencia anterior de hacer casi invisible la grill
 ## Estado de implementación
 
 Esta especificación es documentación conceptual; no activa definiciones ejecutables. El catálogo existente continúa siendo la fuente de IDs y relaciones. La elevación numérica, las pendientes, los algoritmos de transición y los límites geográficos serán objeto de validación y simulación antes de programar.
+
+
+## Estándar oficial de bocetos conceptuales — Hex Grid First (20 de octubre de 2026)
+
+**Estado: APROBADO. Aplicación predeterminada a todos los futuros bocetos de G-Evolve**, especialmente fichas de biomas, subtipos, relieve, terrenos, variaciones y láminas comparativas. Mantener la coherencia con el estilo global *Hand-Drawn Isometric Hex World with Progressive Elevation*, pero distinguir **boceto conceptual/editorial** de **mapa jugable continuo**.
+
+### Referencia estética principal
+
+**Lámina de referencia aprobada por el usuario:** «G-EVOLVE — BIOMAS DEL MUNDO», una *concept sheet* con varios dioramas hexagonales isométricos y rótulos editoriales de Bosque, Llanuras, Desierto, Marino, Tundra, Ártico, Antártico y Montaña. Fue generada en la conversación del 20 de octubre de 2026. **El PNG original no se ha incorporado aún al repositorio**: este archivo documenta el estilo de forma formal, sin atribuirle un archivo de imagen binario inexistente.
+
+**Identidad:** concept sheet isométrico modular de biomas; ilustración digital dibujada a mano, limpia, elegante, natural, de detalle contenido. Vista 2.5D/isométrica superior con caras laterales visibles en las losetas, volúmenes suaves y contornos finos y definidos. Lámina editorial en blanco/crema con amplios espacios vacíos, titulares y etiquetas pequeñas, claras, alineadas, sin ornamentación excesiva. Colores suaves, ligeramente desaturados y diferenciados por ecosistema; sombras discretas. Apariencia de diorama ilustrado y atlas conceptual, no render fotorrealista, arte épico ni fotografía.
+
+### REGLA ABSOLUTA: LA GRID ES PRIMERO Y NUNCA DESAPARECE
+
+El rasgo **más importante y explícitamente solicitado** es que la **cuadrícula hexagonal esté MÁS VISIBLE, DELINEADA y REMARCADA que en la lámina original aprobada**. Mantener todo lo demás del estilo original.
+
+**Orden obligatorio de construcción y lectura:**
+1. **Trazar primero la grid hexagonal real:** hexágonos correctos, unidos, regulares y legibles; conforman la estructura base de cada bloque. Evitar pentágonos, polígonos irregulares, cuadrados o bordes incompatibles con una retícula hexagonal.
+2. **Construir terreno y relieve encima de la grid**, conservando el perímetro superior de CADA celda y las separaciones entre celdas. Aplicar caras laterales para el espesor/elevación y diferencias de altura progresivas según el tema.
+3. **Aplicar los colores, agua, texturas y biomas sin borrar la malla.** Las fronteras y contornos de hexágonos se deben leer también bajo agua, hielo, arena, pradera y bosque.
+4. **Añadir muy pocos elementos característicos** —árboles, arbustos, hierba, rocas o detalles de agua— solamente para identificar el bioma, sin cubrir un porcentaje significativo del mosaico. Dejar superficies despejadas.
+5. **Agregar las etiquetas editoriales al final**, sin sobreponer textos sobre las celdas; títulos de sección y nombres de subtipos con líneas-guía finas si ayudan.
+
+**Contraste:** contorno fino-medio, limpio y distinguible del color del terreno; más oscuro/reforzado en los bordes entre hexágonos para una lectura inmediata, pero sin transformarlo en un tablero de líneas gruesas dominantes. La malla ha de permanecer legible a tamaño normal de visualización, sin necesidad de zoom. No sustituir la grid por una textura simulada o marcas hexagonales dibujadas al azar. La continuidad del agua, ríos y terrenos puede sugerirse con color y trazos fluidos, **sin hacer desaparecer los bordes de las celdas**.
+
+### Composición obligatoria para bocetos
+
+- Lámina *concept sheet* organizada en módulos independientes por bioma o tema; cada módulo presenta pequeños grupos de hexágonos isométricos conectados.
+- Fondo claro blanco roto/crema, sin decoraciones ni fondos cargados.
+- Jerarquía: título de la lámina → categoría → diorama hexagonal → etiquetas breves de subtipos o variantes.
+- Densidad baja: **minimalismo gráfico, pocas piezas representativas**, bastante espacio negativo.
+- No llenar cada casilla con objetos; la lectura prioritaria es **(1) hexágonos, (2) relieve/suelo y agua, (3) tipo de bioma, (4) elementos decorativos**.
+- Conservar una escala/perspectiva y grosor de línea coherentes entre los módulos.
+- Los bocetos son conceptuales y comparativos, no capturas de un mapa jugable definitivo.
+- Si se pide **un solo bioma**, usar una sola composición hexagonal más grande, sin necesidad de introducir otras categorías; si se piden **varios**, usar módulos comparativos.
+- En bocetos de elevación, mantener desniveles creíbles y progresivos, no una pila arbitraria de columnas hexagonales. En agua, representar hexágonos y costuras claramente.
+- Los subtipos mostrados deben corresponder al catálogo conceptual vigente; no reintroducir clasificaciones antiguas o arbitrarias.
+
+### Criterios de aceptación de futuros bocetos
+
+Un boceto **se considera fallido** si: su grid no es claramente hexagonal; está oculta por bosque, océano o elementos; solo se ven siluetas externas de grandes bloques y no los hexágonos internos; los elementos decorativos saturan la lámina; parece fotorrealista o un mapa jugable terminado; o no conserva la estética suave y limpia de la lámina aprobada.
+
+**Instrucción reutilizable para crear bocetos:**
+> G-Evolve — lámina conceptual isométrica 2.5D de dioramas formados por HEXÁGONOS REALES UNIDOS. **Dibuja primero la cuadrícula hexagonal de cada mosaico, con TODOS los bordes internos marcados y VISIBLES** de forma nítida, en terreno, nieve y agua. Construye el suelo, alturas y biomas sobre esa grid, nunca ocultándola. Acabado hand-drawn digital suave, paleta natural ligeramente desaturada, caras laterales isométricas, fondo crema/blanco, composición editorial espaciosa, etiquetas discretas, muy pocos árboles/rocas/props. Mínimo ruido visual; leer primero las celdas, luego el relieve, finalmente la vegetación. Conservar el mismo estilo de la concept sheet «G-EVOLVE — BIOMAS DEL MUNDO» aprobada.
+
+Esta sección especifica **el tratamiento de bocetos** y refuerza las reglas ya establecidas de hexágonos visibles para el mundo completo; prevalece sobre cualquier descripción histórica de cuadrícula «sutil», «casi invisible» o susceptible de ocultarse.
