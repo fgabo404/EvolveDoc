@@ -1,11 +1,13 @@
-# G-Evolve — Catálogo de biomas (v0.3)
+# G-Evolve — Modelo de clasificación de biomas (v0.2.1)
+
+**Versionado del modelo:** `0.2.0` introduce el modelo jerárquico `Bioma → tipo → subtipo ecológico`; `0.2.1` incorpora los tres tipos aprobados de Desierto sin alterar esa estructura. No incrementar la versión del modelo por cada commit documental; usar revisiones de documentación e historial Git para cambios editoriales. Los catálogos JSON heredados conservan sus versiones independientes y todavía requieren migración.
 
 **Estado:** jerarquía de bosques aprobada para diseño; subtipos ecológicos previos pendientes de revisión y balance.  
 **Fuente estructurada:** [ecological-subtypes.proposal.json](../../data/world/ecological-subtypes.proposal.json).
 
 No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**, **ecorregión de referencia** y **región biogeográfica**. Esta última condiciona las especies nativas, sin modificar el tipo de ecosistema. La elevación progresiva, temperatura, humedad, agua y suelo intervienen en la generación, sin umbrales numéricos aprobados.
 
-## Jerarquía principal aprobada: Bosque
+## Jerarquía aprobada: Bosque
 
 **Categoría principal:** `forest` — **Bosque**.
 
@@ -47,7 +49,7 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 3. **Pradera templada** — `savanna_temperate_grassland`
 4. **Estepa semiárida** — `savanna_steppe`
 
-## Jerarquía aprobada: Desierto (v0.3)
+## Jerarquía aprobada: Desierto
 
 **Categoría principal:** `desert` — **Desierto**.
 
