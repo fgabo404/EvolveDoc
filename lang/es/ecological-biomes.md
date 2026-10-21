@@ -111,12 +111,17 @@ No modificar por ahora los JSON heredados ni sus especies, flora o recursos: la 
 3. **Mar polar o subpolar** — `marine_polar_sea`
 4. **Humedal costero (manglar o marisma)** — `marine_coastal_wetland`
 
-## Alta montaña y pisos alpinos (`alpine`)
+## Jerarquía aprobada: Montaña
 
-1. **Piso subalpino** — `alpine_subalpine`
-2. **Pradera alpina** — `alpine_alpine_meadow`
-3. **Tundra alpina** — `alpine_alpine_tundra`
-4. **Piso nival y cumbres** — `alpine_nival_summit`
+**Categoría de relieve/jugabilidad:** `mountain` — **Montaña**.
+
+1. **Alpino** — `mountain_alpine`: paisajes de alta montaña, con accesibilidad dependiente de pendiente, superficie y condiciones locales; no presupone ausencia de tundra, bosques u otros ecosistemas.
+2. **Cumbres** — `mountain_summit`: **infranqueables para tránsito terrestre ordinario** y sin asentamientos convencionales. Representan las formaciones culminantes que funcionan como barreras geográficas.
+
+**Decisión aprobada:** el mundo tiene elevación numérica progresiva, no solo dos alturas físicas ni cuatro niveles fijos. La montaña es una **forma de relieve** y la cobertura ecológica se determina por clima, humedad, latitud, temperatura y características locales. Una ladera montañosa puede contener bosque boreal (taiga), tundra u otra cobertura coherente: **altura elevada no implica automáticamente bioma alpino**. La tundra no está obligatoriamente a gran altura: también existe en bajas altitudes de regiones polares. La taiga puede encontrarse tanto en tierras bajas frías como en laderas de montaña. Los umbrales altitudinales deben ser contextuales, no números globales invariables.
+
+**Compatibilidad:** IDs conceptuales, sin cambiar `alpine` ni los JSON históricos hasta la migración integral acordada. La clasificación previa subalpino/pradera alpina/tundra alpina/piso nival queda como antecedente, no como jerarquía vigente.
+
 
 ## Compatibilidad y decisiones pendientes
 
