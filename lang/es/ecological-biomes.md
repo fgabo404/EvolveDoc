@@ -37,11 +37,22 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 3. **Bosque templado siempreverde** — `temperate_forest_temperate_evergreen`
 4. **Bosque boreal de coníferas (taiga)** — `temperate_forest_boreal_coniferous`
 
-## Tundra (`tundra`)
+## Jerarquía aprobada: Tundra
 
-1. **Tundra arbustiva ártica** — `tundra_arctic_shrub_tundra`
-2. **Tundra de musgos y líquenes** — `tundra_arctic_moss_lichen`
-3. **Tundra subantártica** — `tundra_subantarctic_tundra`
+**Categoría principal:** `tundra` — **Tundra**, sin subdivisiones aprobadas por ahora. Las variantes ártica, euroasiática y subantártica anteriores se conservan solo como antecedentes del catálogo heredado. Tundra describe vegetación y condiciones ecológicas; no se confunde con el hielo permanente de los polos.
+
+## Nuevos biomas polares aprobados
+
+1. **Ártico** — `arctic` (ID conceptual; región del extremo norte del mundo de juego).
+2. **Antártico** — `antarctic` (ID conceptual; región del extremo sur del mundo de juego).
+
+Se incluyen como categorías **jugables/geográficas polares** para estructurar el mapa. El hielo, la tundra, los mares polares y las superficies rocosas siguen siendo atributos/ecosistemas que pueden coexistir; no suponer que todo el Ártico es hielo terrestre ni que el Antártico carece de mar. Definir posteriormente sus condiciones de terreno y clima.
+
+### Topología del mapa aprobada
+
+Como en el mapa mundial de Civilization VI, el mundo de G-Evolve tendrá **continuidad este-oeste**: al salir por el borde derecho se vuelve por el izquierdo, y viceversa (envoltura cilíndrica horizontal). **Norte y sur no se conectan entre sí**: son los extremos polares del mapa, reservados respectivamente para las regiones Ártica y Antártica. Esta decisión define topología, no distancias, anchuras o extensión garantizada de hielo. La cuadrícula hexagonal visible y el relieve progresivo se mantienen.
+
+No modificar por ahora los JSON heredados ni sus especies, flora o recursos: la migración se realizará tras cerrar todo el modelo de biomas.
 
 ## Sabana y praderas (`savanna`)
 
