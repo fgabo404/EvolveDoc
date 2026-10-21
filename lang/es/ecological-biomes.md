@@ -80,7 +80,18 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 3. **Desierto frío** — `desert_cold_desert`
 4. **Desierto hiperárido** — `desert_hyperarid_desert`
 
-## Marino (`marine`)
+## Jerarquía aprobada: Marino
+
+**Categoría principal:** `marine` — **Marino**.
+
+1. **Arrecife** — `marine_reef`: formaciones de arrecife, incluyendo arrecifes coralinos; referencia visual de aguas claras y estructuras sumergidas. No todos los arrecifes son tropicales.
+2. **Estuario o litoral** — `marine_estuary_littoral`: ambientes costeros de transición, desembocaduras y litoral. **Estuario y litoral no son sinónimos ecológicos**; se agrupan provisionalmente como un único tipo visual del juego, conservando la distinción para el modelado posterior.
+3. **Manglar** — `marine_mangrove`: bosque costero de mangles en ambientes intermareales tropicales y subtropicales; transición entre tierra y mar.
+4. **Océano abierto (alta mar)** — `marine_open_ocean`: aguas alejadas de la costa, de amplio alcance oceánico. Temperatura, profundidad y corrientes se tratarán como propiedades independientes.
+
+**Decisión aprobada:** son cuatro tipos jugables de paisaje/ecosistema marino; la batimetría, salinidad, temperatura, oleaje, sustrato y régimen hídrico se simularán por separado. No se modifican todavía los catálogos JSON ni se migran especies, recursos o IDs históricos.
+
+### Tipos anteriores de Marino (históricos; no vigentes)
 
 1. **Costa tropical somera** — `marine_tropical_shallow_coast`
 2. **Mar costero templado** — `marine_temperate_coastal_sea`
