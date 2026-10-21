@@ -134,3 +134,14 @@ No modificar por ahora los JSON heredados ni sus especies, flora o recursos: la 
 - El desierto arenoso/rocoso expresa sustrato, mientras que hiperárido expresa aridez; podrían convertirse en modificadores combinables, evitando subtipos superpuestos.
 - La tundra alpina se mantiene en alta montaña para evitar duplicarla con tundra de latitudes frías.
 - Primer boceto a trabajar: **selva tropical lluviosa de tierras bajas**, con referencia amazónica solo como ejemplo geográfico, no como categoría universal.
+
+## Regla aprobada de elevación y rangos habituales (20 de octubre de 2026)
+
+- **Nivel 0**: referencia del nivel del mar; la transitabilidad depende de la superficie (agua o tierra).
+- **Niveles 1–100**: escala de elevación del terreno terrestre **potencialmente transitable**; las pendientes, agua y obstáculos pueden imponer restricciones adicionales.
+- **Niveles superiores a 100**: **Cumbres**, infranqueables para movimiento terrestre ordinario y sin asentamientos convencionales. **100 no es la altura máxima del mundo**.
+- Cada bioma tendrá un **intervalo habitual de aparición** dentro de la escala de terreno correspondiente; son rangos preferentes para generación, **no fronteras ecológicas absolutas**. Condiciones de clima, latitud, humedad y suelo pueden permitir apariciones fuera del rango habitual cuando sea coherente.
+- La correspondencia numérica de nivel a metros reales **queda por definir**: quedan descartados como reglas los intentos anteriores de igualar 100 al Everest o fijar sin aprobación 100 = 5,000 m.
+- Las profundidades marinas se modelarán aparte del rango terrestre sin asignar niveles negativos automáticamente.
+- Esta regla sustituye las propuestas anteriores de cumbres en 65–100 u 80–100.
+
