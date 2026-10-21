@@ -145,3 +145,38 @@ No modificar por ahora los JSON heredados ni sus especies, flora o recursos: la 
 - Las profundidades marinas se modelarán aparte del rango terrestre sin asignar niveles negativos automáticamente.
 - Esta regla sustituye las propuestas anteriores de cumbres en 65–100 u 80–100.
 
+
+## Rangos habituales de elevación — propuesta aprobada para simulación
+
+**Regla aprobada:** los rangos de la tabla son **habituales o preferentes**, nunca límites rígidos de aparición. El generador podrá ubicar un bioma fuera de su intervalo cuando latitud, temperatura, humedad, suelo, régimen hídrico y geografía lo justifiquen. Los números son parámetros de diseño para los 100 niveles terrestres, **no conversiones científicas exactas en metros**. La escala en metros por nivel sigue pendiente.
+
+| Categoría | Tipo | Nivel habitual | Referencia representativa |
+|---|---|---:|---|
+| Marino | Océano abierto (superficie) | 0 | Océano Pacífico |
+| Marino | Arrecife (superficie) | 0–1 | Gran Barrera de Coral |
+| Marino | Estuario / litoral | 0–3 | Bahía de Chesapeake |
+| Marino | Manglar | 0–3 | Sundarbans |
+| Bosque | Tropical (selva) | 2–25 | Amazonía |
+| Bosque | Subtropical | 5–35 | Bosques subtropicales de China |
+| Bosque | Templado | 5–35 | Europa central |
+| Bosque | Boreal (taiga) | 5–30 | Siberia y Canadá |
+| Bosque | Pantano arbolado | 0–8 | Everglades (sectores arbolados) |
+| Llanuras | Sabana | 5–25 | Serengeti |
+| Llanuras | Pradera | 5–30 | Grandes Praderas norteamericanas |
+| Llanuras | Estepa | 10–40 | Mongolia |
+| Llanuras | Humedal abierto | 0–12 | Pantanal (sectores abiertos) |
+| Desierto | Arenoso | 5–25 | Dunas del Sahara |
+| Desierto | Rocoso | 10–40 | Monument Valley, Merrick Butte |
+| Desierto | Salar | 55–75 | Salar de Uyuni |
+| Tundra | Tundra | 0–20 | Alaska ártica |
+| Polar | Ártico (territorio) | 0–20 | Regiones terrestres árticas |
+| Polar | Antártico (territorio) | 40–70 | Meseta interior antártica |
+| Montaña | Alpino | 60–100 | Alpes y cordilleras elevadas |
+| Montaña | Cumbres | 101+ | Cumbres infranqueables |
+
+**Alcance e interpretación:** 0 es la referencia del nivel del mar; 1–100 corresponde a elevación terrestre potencialmente transitable (sujeta a pendientes y otros obstáculos); más de 100 corresponde a cumbres infranqueables. El agua marina se representa a nivel superficial 0 y sus profundidades se modelarán aparte. Ártico y Antártico son categorías geográficas determinadas por latitud, no por elevación; sus rangos describen únicamente ejemplos de terreno. Cumbres no tienen máximo superior definido.
+
+**Excepciones coherentes:** bosques de montaña como los de Banff pueden alcanzar alturas mayores que el rango típico de taiga; praderas alpinas, tundras de altura y salares bajos también pueden generarse cuando las condiciones lo sustenten. No imponer exclusividad de altitud ni asignación automática basada solo en altura.
+
+**Datos:** estos rangos aprobados pertenecen a la documentación conceptual del modelo. No editar todavía los JSON heredados de biomas, flora, fauna, minerales o recursos hasta cerrar la migración integral.
+
