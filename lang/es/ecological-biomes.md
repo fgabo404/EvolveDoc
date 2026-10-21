@@ -89,6 +89,8 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 3. **Manglar** — `marine_mangrove`: bosque costero de mangles en ambientes intermareales tropicales y subtropicales; transición entre tierra y mar.
 4. **Océano abierto (alta mar)** — `marine_open_ocean`: aguas alejadas de la costa, de amplio alcance oceánico. Temperatura, profundidad y corrientes se tratarán como propiedades independientes.
 
+**Alcance de primera versión:** conservar **Estuario o litoral** como un único tipo visual/jugable. Para la simulación inicial se representará mediante condiciones geográficas relativamente estáticas. La dinámica temporal del litoral (cambios de costa, erosión, sedimentación, mareas u otros procesos que se acuerden) se **aplaza para una versión posterior del juego**. Un estuario tampoco es físicamente inmutable; la distinción «fijo frente a dinámico» es una simplificación de alcance del desarrollo, no una afirmación científica. No crear por ahora mecánicas dinámicas ni separar ambos tipos.
+
 **Decisión aprobada:** son cuatro tipos jugables de paisaje/ecosistema marino; la batimetría, salinidad, temperatura, oleaje, sustrato y régimen hídrico se simularán por separado. No se modifican todavía los catálogos JSON ni se migran especies, recursos o IDs históricos.
 
 ### Tipos anteriores de Marino (históricos; no vigentes)
