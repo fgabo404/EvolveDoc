@@ -15,6 +15,7 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 2. **Subtropical** — `subtropical_forest` (ID conceptual nuevo; pendiente de asignación definitiva en catálogo operativo).
 3. **Templado** — `temperate_forest` (ID histórico conservado).
 4. **Boreal (taiga)** — `boreal_forest` (ID conceptual nuevo; separado de bosque templado).
+5. **Pantano arbolado** — `forest_swamp` (tipo visual de bosque anegado; referencia: bosques pantanosos de los Everglades, Florida).
 
 **Decisión del 20 de octubre de 2026:** la jerarquía es `Bosque → tipo climático → subtipo de ecosistema`. La procedencia continental no define tipos forestales. Los detalles enumerados a continuación son propuestas anteriores y deben migrarse/revisarse, en particular la taiga, que ahora pertenece a Boreal y no a Templado.
 
@@ -56,9 +57,9 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 1. **Sabana** — `plains_savanna`
 2. **Pradera** — `plains_grassland`
 3. **Estepa** — `plains_steppe`
-4. **Humedal** — `plains_wetland`
+4. **Humedal abierto** — `plains_wetland` (referencia visual: pastizales, lagunas y planicies inundables del Pantanal)
 
-**Decisión aprobada:** Humedal se incluye como tipo de Llanuras en la interfaz conceptual; el **pantano** es un subtipo de humedal, no una categoría equivalente. Los humedales también pueden aparecer fuera de las llanuras, de modo que las reglas futuras de generación no deben restringirlos exclusivamente a esta forma de relieve. IDs conceptuales, sin migración de JSON ni especies por ahora.
+**Decisión aprobada:** Para la clasificación visual de G-Evolve, el **pantano arbolado** aparece en Bosque y el **humedal abierto** en Llanuras. Ecológicamente ambos pueden ser humedales: esta división prioriza la fisonomía y jugabilidad, no implica que todos los Everglades sean bosques pantanosos ni que todo el Pantanal sea pastizal abierto. Los humedales pueden aparecer fuera de las llanuras; sus condiciones hídricas se modelarán de forma independiente. IDs conceptuales, sin migración de JSON ni especies por ahora.
 
 ## Jerarquía aprobada: Desierto
 
