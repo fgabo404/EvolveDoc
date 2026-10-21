@@ -1,18 +1,33 @@
-# G-Evolve — Propuesta de subtipos ecológicos (v0.1)
+# G-Evolve — Catálogo de biomas (v0.2)
 
-**Estado:** catálogo propuesto para diseño y bocetos; pendiente de revisión ecológica y balance.  
+**Estado:** jerarquía de bosques aprobada para diseño; subtipos ecológicos previos pendientes de revisión y balance.  
 **Fuente estructurada:** [ecological-subtypes.proposal.json](../../data/world/ecological-subtypes.proposal.json).
 
 No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**, **ecorregión de referencia** y **región biogeográfica**. Esta última condiciona las especies nativas, sin modificar el tipo de ecosistema. La elevación progresiva, temperatura, humedad, agua y suelo intervienen en la generación, sin umbrales numéricos aprobados.
 
-## Bosque tropical (`tropical_forest`)
+## Jerarquía principal aprobada: Bosque
+
+**Categoría principal:** `forest` — **Bosque**.
+
+1. **Tropical (selva)** — `tropical_forest` (ID histórico conservado).
+2. **Subtropical** — `subtropical_forest` (ID conceptual nuevo; pendiente de asignación definitiva en catálogo operativo).
+3. **Templado** — `temperate_forest` (ID histórico conservado).
+4. **Boreal (taiga)** — `boreal_forest` (ID conceptual nuevo; separado de bosque templado).
+
+**Decisión del 20 de octubre de 2026:** la jerarquía es `Bosque → tipo climático → subtipo de ecosistema`. La procedencia continental no define tipos forestales. Los detalles enumerados a continuación son propuestas anteriores y deben migrarse/revisarse, en particular la taiga, que ahora pertenece a Boreal y no a Templado.
+
+**Compatibilidad:** no renombrar ni borrar IDs de los datos de mundo, variantes regionales, especies o apariciones hasta contar con un plan de alias/migración y validación. El JSON de subtipos ecológicos v0.1 queda como referencia histórica, no como jerarquía vigente aprobada.
+
+## Propuestas de subtipos heredados (pendientes de revisión)
+
+### Bosque tropical (`tropical_forest`)
 
 1. **Selva tropical lluviosa de tierras bajas** — `tropical_forest_lowland_rainforest`
 2. **Bosque tropical estacional o seco** — `tropical_forest_seasonal_dry_forest`
 3. **Bosque tropical montano o nuboso** — `tropical_forest_montane_cloud_forest`
 4. **Bosque tropical inundable** — `tropical_forest_flooded_tropical_forest`
 
-## Bosque templado (`temperate_forest`)
+### Bosque templado (`temperate_forest`)
 
 1. **Bosque templado caducifolio** — `temperate_forest_temperate_deciduous`
 2. **Bosque templado mixto** — `temperate_forest_temperate_mixed`
