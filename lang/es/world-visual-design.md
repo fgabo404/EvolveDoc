@@ -114,3 +114,16 @@ Un boceto **se considera fallido** si: su grid no es claramente hexagonal; está
 > G-Evolve — lámina conceptual isométrica 2.5D de dioramas formados por HEXÁGONOS REALES UNIDOS. **Dibuja primero la cuadrícula hexagonal de cada mosaico, con TODOS los bordes internos marcados y VISIBLES** de forma nítida, en terreno, nieve y agua. Construye el suelo, alturas y biomas sobre esa grid, nunca ocultándola. Acabado hand-drawn digital suave, paleta natural ligeramente desaturada, caras laterales isométricas, fondo crema/blanco, composición editorial espaciosa, etiquetas discretas, muy pocos árboles/rocas/props. Mínimo ruido visual; leer primero las celdas, luego el relieve, finalmente la vegetación. Conservar el mismo estilo de la concept sheet «G-EVOLVE — BIOMAS DEL MUNDO» aprobada.
 
 Esta sección especifica **el tratamiento de bocetos** y refuerza las reglas ya establecidas de hexágonos visibles para el mundo completo; prevalece sobre cualquier descripción histórica de cuadrícula «sutil», «casi invisible» o susceptible de ocultarse.
+
+
+## Lámina de biomas seleccionada — grid remarcada (21 de octubre de 2026)
+
+**Estado:** referencia visual preferida y aprobada por el usuario, después de pedir mayor uniformidad y contraste de la malla hexagonal.
+
+**Imagen fuente de la conversación:** `a_clean_infographic_style_illustration_flat_isome.png` (PNG, 1536 × 1024). **Importante:** nombre del archivo original generado en la conversación; el binario todavía NO está cargado en GitHub, por lo que este apartado no representa una subida de imagen. Conservar el PNG para incorporarlo posteriormente a una carpeta de referencias gráficas.
+
+**Título en la lámina:** «G-EVOLVE — BIOMAS DEL MUNDO», `CONCEPT SHEET / HEX GRID · V0.2.1`.
+
+**Aspectos específicos aprobados:** lámina editorial sobre fondo crema, mosaicos de hexágonos isométricos por ecosistema, elementos paisajísticos muy escasos, vegetación y relieve sugeridos sin saturación, paleta suave pero definida, títulos discretos y rangos de elevación habituales de cada tipo. La grid de esta versión tiene **bordes internos más contrastados, uniformes y claramente dibujados**, con énfasis blanco o gris contra las superficies de agua, bosque, llanura, desierto, nieve y piedra. Esta referencia prevalece sobre los bocetos anteriores de grid menos visible.
+
+**Invariantes para reproducciones:** comenzar dibujando una malla hexagonal exacta y regular; cada hexágono debe conservar bordes internos legibles; añadir terrenos y objetos encima sin cubrir sistemáticamente la retícula; conservar la misma presentación comparativa limpia, los nombres de los biomas y la estética isométrica hand-drawn. No convertir el esquema en un mapa cargado de árboles ni en una textura de celdas borrosas.
