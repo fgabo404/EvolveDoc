@@ -1,4 +1,4 @@
-# G-Evolve — Catálogo de biomas (v0.2)
+# G-Evolve — Catálogo de biomas (v0.3)
 
 **Estado:** jerarquía de bosques aprobada para diseño; subtipos ecológicos previos pendientes de revisión y balance.  
 **Fuente estructurada:** [ecological-subtypes.proposal.json](../../data/world/ecological-subtypes.proposal.json).
@@ -47,7 +47,19 @@ No clasificar subtipos por continente. Separar **bioma**, **tipo de ecosistema**
 3. **Pradera templada** — `savanna_temperate_grassland`
 4. **Estepa semiárida** — `savanna_steppe`
 
-## Desierto (`desert`)
+## Jerarquía aprobada: Desierto (v0.3)
+
+**Categoría principal:** `desert` — **Desierto**.
+
+1. **Arenoso (dunas)** — `desert_sandy`: dunas, campos de arena, ondulaciones y valles secos.
+2. **Rocoso (cañones y mesetas)** — `desert_rocky`: roca expuesta, cañones, mesas, buttes y escarpes erosionados. **Merrick Butte** es referencia morfológica y visual, no requisito regional.
+3. **Salar** — `desert_salt_flat`: planicies salinas, costras de sal, depresiones y lagunas salobres ocasionales.
+
+**Decisión aprobada:** estos tres son tipos de **paisaje/superficie para el diseño del mundo**, no clases climáticas científicas excluyentes. La aridez, temperatura, origen geográfico y elevación se modelarán por atributos separados. Los IDs nuevos son conceptuales; no se cambian los IDs ni las relaciones del JSON heredado hasta planificar una migración segura.
+
+**Sustituye** para diseño la antigua propuesta de desiertos cálidos arenosos, rocosos, fríos e hiperáridos. Las antiguas entradas quedan como antecedentes, no como tres tipos vigentes.
+
+## Subtipos anteriores de desierto (históricos; no vigentes)
 
 1. **Desierto cálido arenoso** — `desert_hot_sandy_desert`
 2. **Desierto rocoso** — `desert_rocky_desert`
