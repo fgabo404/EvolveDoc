@@ -325,3 +325,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - El parámetro `NivelMar` permanece en `WorldSettings` por compatibilidad, pero no controla actualmente el corte tierra/agua; la costa se define por la máscara continental y el mar visual/lógico es nivel cero.
 - Pruebas añadidas para costas bajas, niveles 60–79, cumbres desde 80 y consistencia de clasificación.
 - Código: commit `59f639238060bcffc20c286373a1b3c342e7fb8a`. Pendiente validación de compilación y captura en PC.
+
+## Cámara orbital con mayor libertad
+
+- Botón derecho + movimiento horizontal: giro sin límites, 360° repetibles.
+- Botón derecho + movimiento vertical: inclinación variable de 8° a 85° sobre el plano, de vista rasante a casi cenital. No se invierte el horizonte.
+- Conserva zoom entre 8 y 52 unidades, desplazamiento WASD, costura E/O y límites polares.
+- Código commit `6e7527a5d048851487397dd377c8488485532f5c`; pendiente validación local.
