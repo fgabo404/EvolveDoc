@@ -300,3 +300,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se mantienen tierra, topología este-oeste y controles de cámara sin cambios.
 - Se agrega una prueba que verifica que todas las celdas marinas sean de nivel 0.
 - Código commit `3b859897cc92a5c6fae0c396adc50de97b8f809a`.
+
+## Contornos blancos del mar
+
+- Los hexágonos oceánicos continúan a elevación 0 y ahora muestran un contorno superior blanco de un píxel; la tierra sigue sin bordes.
+- Las líneas del agua se guardan en un VBO separado y se replican con el mismo desplazamiento horizontal del render E/O.
+- Se utiliza un pequeño desplazamiento vertical de 0.003 para evitar z-fighting; no altera la altura lógica del mar.
+- Código commit `2b41b7e9d517969fd1cdcad326415060d1d15a60`.
