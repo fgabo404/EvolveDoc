@@ -220,3 +220,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - El mapa activo sigue siendo radial de radio 1: centro y seis vecinos (7 celdas).
 - Código `GEvolve.Desktop/HexRenderer.cs`, commit `69a59a28fa1a2fc8d57377df7cd0f74563089fb6`.
 - Pendiente compilación y validación visual local, especialmente continuidad de los bordes.
+
+## Corrección GLSL tras error de ejecución local
+
+- El usuario confirmó `dotnet build` exitoso, pero la ventana falló durante `HexRenderer.Compilar` con `Error GLSL: (0) : error C0000: syntax error, unexpected $end at token <EOF>`.
+- Se simplificó el shader de fragmentos para separar las rutas de tapa y pared con `if/else` explícito y se mejoró el mensaje de excepción para identificar si falla `VertexShader` o `FragmentShader`.
+- Código: commit `ced2330da74923d6dda1a1ba70236d81449629a0`. Continúan tapa clara, paredes oscuras, contornos por shader y 7 celdas.
+- **Pendiente de validación real en GPU del usuario**; no se declara resuelto hasta comprobar ejecución. Si persiste, inspeccionar shader específico y registro del controlador.
