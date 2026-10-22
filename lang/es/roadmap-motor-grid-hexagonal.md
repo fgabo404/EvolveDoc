@@ -316,3 +316,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Importante: se dibuja todavía la malla completa en tres posiciones horizontales, sin culling visual por chunks; 30,000 celdas pueden exigir optimización de GPU y filtrado de etiquetas a distancia.
 - Pruebas esenciales añadidas para 30,000 celdas, 300 regiones, costura E/O y nivel oceánico cero.
 - Código commit `096587615c8326785359aefd104bafe29fd9cd3a`. Pendiente verificación local de compilación y rendimiento.
+
+## Elevaciones continuas y costa baja (sin biomas)
+
+- Se corrige el salto de altura: océano = 0; toda tierra emergida puede ocupar niveles 1–100, incluidas costas de 1–10.
+- La generación combina una máscara continental de costas sinuosas, crecimiento de altura hacia el interior y crestas montañosas concentradas. Se mantiene la periodicidad este-oeste.
+- Clasificación funcional: agua 0; tierra media/baja 1–59; relieve alto 60–79; cumbres impasables 80–100. Los biomas no están integrados.
+- El parámetro `NivelMar` permanece en `WorldSettings` por compatibilidad, pero no controla actualmente el corte tierra/agua; la costa se define por la máscara continental y el mar visual/lógico es nivel cero.
+- Pruebas añadidas para costas bajas, niveles 60–79, cumbres desde 80 y consistencia de clasificación.
+- Código: commit `59f639238060bcffc20c286373a1b3c342e7fb8a`. Pendiente validación de compilación y captura en PC.
