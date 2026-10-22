@@ -377,3 +377,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Tamaños 100×50, 200×150 y 300×200; semilla cambia con flechas o clic, no requiere edición de archivos. Tipos aún son prototipos matemáticos sin biomas.
 - Se preserva menú de pausa con Esc y el sistema de cámara. Falta confirmar compilación y resultado visual localmente.
 - Último commit código `7bfdc499556527b10771272cbde873b83398a9f6`.
+
+## Ajuste visual de Nueva partida — referencia aprobada
+
+- Pantalla Nueva partida: fondo gris claro, encabezado pixelado centrado y líneas horizontales a ambos lados.
+- Tres filas oscuras con marcos biselados y doble borde: etiqueta a la izquierda y recuadro de valor independiente a la derecha, con flechas `<` y `>`; texto ajustable para nombres largos.
+- Acciones inferiores GENERAR MUNDO (marco verde menta) y VOLVER (marco gris), centradas y más estrechas que los selectores.
+- Interacción: al hacer clic en la mitad izquierda/derecha del control de valor, se decrementa/incrementa la opción; las teclas de dirección y Enter conservan su comportamiento previo.
+- Sin imágenes externas ni cambios de mecánica de generación, presets, movimiento o cámara.
+- Código: `b746c96445150c5f4d806ae2be1a8b528a0c8cb5`. Validación local de compilación y aspecto pendiente.
