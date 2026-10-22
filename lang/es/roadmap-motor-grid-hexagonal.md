@@ -120,3 +120,14 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se mantiene rueda de zoom y geometría volumétrica hexagonal.
 - Implementado en `GEvolve.Desktop/Program.cs` del repositorio de código; commit `16fd75d5e9a69cccde9003fc979f8abaf7004b0b`.
 - Pendiente de verificación local con `git pull`, `dotnet build` y prueba de extremos del giro; no dar por probado sin evidencia.
+
+## Entrega intermedia — mini-grid 3D con relieve de prueba
+
+- Referencia visual: mapa 3D hexagonal con alturas progresivas, contornos visibles y estilo despejado. Los rangos visuales del boceto no son umbrales ecológicos definitivos.
+- El usuario verificó localmente el primer prisma 3D girable. Se mantiene **azimut limitado 0°–180°**, inclinación fija para preservar horizonte y zoom con rueda.
+- Nueva prueba previa a los 400 hexágonos: **7 celdas contiguas** (centro + seis vecinos), cada una con altura de tapa distinta.
+- `GEvolve.Core/HexDemoWorld.cs` define identidades axiales y alturas fijas de demostración. `GEvolve.Desktop/HexRenderer.cs` obtiene centros mediante `HexGeometry` y genera tapa, paredes hasta nivel base y líneas de contorno. `Program.cs` compone datos y cámara.
+- Solo se demuestra geometría 3D: **no es todavía generación procedural**, ni biomas, ni relieve ecológico definitivo, ni grid 20x20.
+- Repositorio de código: `fgabo404/Evolve`, último commit `b31e2e59cbc8fc14c50c5663946aebf17dcdf1ad`.
+- **Pendiente de aceptación local:** cerrar aplicación anterior; `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Desktop`; confirmar las siete columnas y el giro limitado.
+- **Política de documentación:** usar XML docs para clases/métodos públicos y comentarios técnicos breves sobre decisiones geométricas y renderizado.
