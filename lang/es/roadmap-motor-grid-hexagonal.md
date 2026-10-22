@@ -242,3 +242,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Mapa radial de radio **8**: centro + ocho anillos, diámetro de **17 hexágonos**, **217 celdas** (`1 + 3 * 8 * 9`).
 - Encuadre ortográfico actualizado a distancia inicial 38 unidades, zoom entre 18 y 75; se conservan superficies superiores claras, laterales oscuros y giro 15°–165°.
 - Código commit `89c0c1a3359be07444ddb23def63606771fa1270`. Pendiente de prueba visual y compilación local.
+
+## Estándar geométrico y estilo sin bordes
+
+- Se centralizó `HexGeometry.RadioEstandar = 1f` en el núcleo. Corresponde al radio **centro–vértice de 1 unidad del mundo**, no píxeles. Para el hexágono pointy-top del proyecto: ancho entre lados = `sqrt(3)` unidades y distancia entre vértices opuestos = `2` unidades. Todos los centros axiales y vértices de render utilizan esa misma constante.
+- A petición del usuario, **se eliminan por completo los bordes**, su shader de contorno y los atributos de borde: 6 floats por vértice (posición XYZ y RGB), con menor uso de memoria y ancho de banda.
+- Tapa superior gris clara (`gris * 1.15`, máximo 1), paredes gris oscuro (`gris * 0.70`). Se mantiene mapa radial de radio 8 / 217 hexágonos y la cámara existente.
+- Código último commit `98bb9844c3002e29d95b9e6ef55f0db4056b8e74`; pendiente validación local de compilación y vista.
