@@ -434,3 +434,13 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 ## Biomas visuales provisionales
 
 Se agrego una clasificacion determinista por hexagono usando latitud, humedad procedural, distancia a la costa y elevacion. Incluye veinte clases del catalogo de bosques, desiertos, llanuras, marino, pantanos, tundra y montanas. Cada clase tiene un color provisional, sin texturas, vegetacion, fauna ni recursos. El relieve, menu, tipos de mundo y backup v0.1.0 permanecen intactos. Archivos: GeneradorBiomas.cs, WorldMap.cs, WorldSystem.cs, WorldGenerator.cs, Program.cs y HexRenderer.cs. Pendiente probar compilacion en PC.
+
+## Iteración visual: mundo inspirado en boceto hexagonal (octubre 2026)
+
+- Generador: se suman núcleos pequeños de islas satélite a los cuatro tipos de distribución, conservando la cuota oceánica y semilla determinista.
+- Costas: BFS multifuente desde las celdas terrestres calcula distancia de cada hexágono marino a tierra. Anillos 1–2 reciben tonos de arrecife (franja tropical) o litoral/estuario (otras latitudes); más allá se usa océano profundo.
+- Biomas terrestres: campo climático de frecuencia espacial reducida, con regiones de humedad más extensas para evitar parches dispersos. Se conserva clasificación por relieve y temperatura.
+- Norte y sur: celdas acuáticas y terrestres de latitudes extremas reciben tundra ártica/antártica como representación visual del hielo, sin simular capas físicas de hielo.
+- Se mantiene mapa 200×150, envolvimiento horizontal, escala 0–100, cuadrícula y etiquetas numéricas. Árboles 3D, picos modelados y texturas del boceto son todavía **referencias visuales**, no funcionalidades implementadas.
+- Pruebas ligeras añadidas para clasificación y franja costera; falta ejecutar y revisar compilación en PC con .NET.
+- Instantánea de respaldo version-inicial-v0.1.0 intacta.
