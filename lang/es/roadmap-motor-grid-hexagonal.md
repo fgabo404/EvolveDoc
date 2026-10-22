@@ -173,3 +173,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Cada hexágono tiene **radio geométrico 1 unidad**: ancho pointy-top `sqrt(3)` unidades, longitud de punta a punta `2` unidades. **No hay tamaño fijo en píxeles**: lo determinan proyección ortográfica, tamaño de ventana, distancia/zoom y orientación de la cámara.
 - Con ventana de 720 px y altura ortográfica de `80*0.85=68` unidades al inicio, la escala es ~10.59 px/unidad; ancho horizontal de referencia ~18.3 px antes de proyectar la orientación del plano X/Z. No confundir este dato con un tamaño constante o con la dimensión vertical proyectada.
 - Pendiente de `git pull`, compilación y comprobación visual local del usuario.
+
+## Estilo técnico de terreno 3D — sin sombras y contornos negros
+
+- Por aprobación del usuario, las tapas y las paredes de cada prisma usan el **mismo valor de gris** por elevación; no se aplica sombreado lateral ni iluminación por cara.
+- Los bordes superiores, las aristas verticales y los bordes inferiores están dibujados en **negro puro** para destacar cada volumen hexagonal.
+- Código: `GEvolve.Desktop/HexRenderer.cs`, commit `d08681191d87fd6b0e717649ebbde18d926b1fa1`.
+- Pendiente: validación visual y compilación local del usuario.
