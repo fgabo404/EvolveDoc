@@ -235,3 +235,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Cámara ortográfica reajustada a distancia inicial 22 unidades; zoom adaptado al nuevo tamaño. Se conserva giro horizontal de 15° a 165°, tapas claras y laterales oscuros.
 - Commit código final: `acc37e83f776f5fc62fe781da1497a33b73aa010`.
 - Pendiente compilación y comprobación visual local.
+
+## Ampliación de prueba a 217 celdas y borde 4f
+
+- Por solicitud del usuario, `GrosorBordePx` vuelve a **4f** (4 píxeles solicitados en el shader GLSL).
+- Mapa radial de radio **8**: centro + ocho anillos, diámetro de **17 hexágonos**, **217 celdas** (`1 + 3 * 8 * 9`).
+- Encuadre ortográfico actualizado a distancia inicial 38 unidades, zoom entre 18 y 75; se conservan superficies superiores claras, laterales oscuros y giro 15°–165°.
+- Código commit `89c0c1a3359be07444ddb23def63606771fa1270`. Pendiente de prueba visual y compilación local.
