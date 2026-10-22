@@ -188,3 +188,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se mantienen caras laterales de gris uniforme, relieve elevado en el centro, mapa radial de 397 celdas y cámara con azimut 15°–165°.
 - Código `GEvolve.Desktop/HexRenderer.cs`, commit `fa5b2b268c9b3b463bdc879a31ce0c2f480acccf`.
 - Pendiente de `git pull origin master`, `dotnet build` y revisión visual de la cuadrícula.
+
+## Corrección de bordes discontinuos (anillo sin solapamiento)
+
+- La captura cercana del usuario muestra contornos negros discontinuos; no se considera aceptado el estilo anterior.
+- Se eliminó el esquema de **dos tapas hexagonales completas superpuestas a alturas casi idénticas**, susceptible a errores de profundidad y artefactos.
+- Cada celda pasa a construir **seis bandas trapezoidales negras (12 triángulos)** y **seis triángulos interiores grises**, contiguos y coplanares. Se conserva el volumen 3D gris sin sombras.
+- Grosor visual de la banda negra: `0.27` unidades radiales del mundo, variable en píxeles según zoom y cámara.
+- Revisión a validar en PC mediante `git pull origin master`, `dotnet build` y `dotnet run --project .\\GEvolve.Desktop`.
+- Código commit `3168487c3a435d9472f6952fe55889c8eaf44dd4`.
