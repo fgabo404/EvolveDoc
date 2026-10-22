@@ -227,3 +227,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se simplificó el shader de fragmentos para separar las rutas de tapa y pared con `if/else` explícito y se mejoró el mensaje de excepción para identificar si falla `VertexShader` o `FragmentShader`.
 - Código: commit `ced2330da74923d6dda1a1ba70236d81449629a0`. Continúan tapa clara, paredes oscuras, contornos por shader y 7 celdas.
 - **Pendiente de validación real en GPU del usuario**; no se declara resuelto hasta comprobar ejecución. Si persiste, inspeccionar shader específico y registro del controlador.
+
+## Ampliación radial y bordes finos
+
+- A solicitud del usuario, grosor de los bordes GLSL reducido de 3 px a **1.5 px**.
+- Escena ampliada de radio 1 a **radio 5**: diámetro de 11 celdas en el eje central, **91 hexágonos** en total. Un mapa radial hexagonal con centro único no tiene un diámetro par exacto de 10 celdas.
+- Cámara ortográfica reajustada a distancia inicial 22 unidades; zoom adaptado al nuevo tamaño. Se conserva giro horizontal de 15° a 165°, tapas claras y laterales oscuros.
+- Commit código final: `acc37e83f776f5fc62fe781da1497a33b73aa010`.
+- Pendiente compilación y comprobación visual local.
