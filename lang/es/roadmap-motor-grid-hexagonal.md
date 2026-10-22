@@ -367,3 +367,13 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - La cámara y el zoom se reinician al crear un mundo nuevo; durante el juego se conservan WASD, Shift, giro horizontal 360°, inclinación 25°–85°, zoom 8–52 y topología continua E/O.
 - Sin nuevas dependencias externas. Compilación e interacción gráfica aún deben comprobarse en PC. No existe todavía guardado de partidas ni multijugador.
 - Código commit `7cb11f96d0025d5ec9e9acaba88a93578e41c227`.
+
+## Menú minimalista aprobado (v0.1.0)
+
+- Se sustituye el fondo oscuro/paisaje del menú por gris claro uniforme, sin imágenes ni elementos decorativos saturados.
+- Logo G-EVOLVE con acento verde en la G y subtítulo exclusivo de versión `V0.1.0`; se conserva fuente pixelada geométrica y botones rectangulares carbón con realce verde.
+- Inicio: Nueva partida, Continuar (solo en sesión), Salir. Nueva partida abre la pantalla Configuración: **Tipo de mundo**, **Tamaño**, **Semilla** y acciones Generar mundo / Volver.
+- Tipo de mundo determina los parámetros ocultos mediante `WorldPresets.Aplicar`: Continentes Normal/60% océanos/40% montañas; Pangea Normal/45%/50%; Archipiélagos Normal/75%/35%; Mar Interior Antiguo/40%/30%; Fractal Joven/60%/55%; Aleatorio Normal/60%/40%. Semilla inicial 2026.
+- Tamaños 100×50, 200×150 y 300×200; semilla cambia con flechas o clic, no requiere edición de archivos. Tipos aún son prototipos matemáticos sin biomas.
+- Se preserva menú de pausa con Esc y el sistema de cámara. Falta confirmar compilación y resultado visual localmente.
+- Último commit código `7bfdc499556527b10771272cbde873b83398a9f6`.
