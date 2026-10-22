@@ -344,3 +344,15 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Velocidad base aumentada de 18 a 24 unidades del mundo por segundo (+33 %).
 - Shift conserva el multiplicador 2.5; giro, inclinación y zoom sin cambios.
 - Código commit `62633a0adf62db8a72505394cf633d575077f120`.
+
+## Generador de tipos de mundo — versión 1
+
+- Configuración aprobada: `TipoMundo.Continentes`, mapa `200 x 150` (30,000 hexágonos), `EdadGeologica.Normal`, `PorcentajeOceanos = 60`, `IntensidadMontanosa = 40`, `Semilla = 2026`.
+- Nuevas opciones de `WorldSettings`: tipo de mundo, edad geológica, proporción objetivo de océanos e intensidad montañosa. Se conservan los parámetros anteriores por compatibilidad.
+- Patrones disponibles: Continentes, Pangea, Archipiélagos, Mar Interior, Fractal y Aleatorio. Se generan a través de máscaras geográficas reproducibles, no de biomas.
+- El motor selecciona exactamente 18,000 celdas marinas (60% de 30,000) por ordenación determinista de la máscara; cada océano tiene nivel 0 y cada tierra elevación 1–100.
+- La edad geológica y la intensidad montañosa afectan las crestas; la semilla modifica las formaciones sin estado aleatorio compartido.
+- Se preserva la lógica de mapa envolvente este-oeste, límites norte-sur, chunks lógicos, números de altura, contornos blancos oceánicos, cámara y zoom.
+- Pruebas incorporadas: configuración, dimensiones, proporción de agua, reproducibilidad, variación de tipo y semilla, límites de elevación y parámetros inválidos.
+- Limitaciones: máscaras matemáticas iniciales; no placas tectónicas, clima, biomas, erosión compleja ni renderizado selectivo por chunks. Pendiente compilar y verificar visualmente en PC.
+- Código último commit `b80e47af18be7aa4faf0e3e0a8e79428ab858434`.
