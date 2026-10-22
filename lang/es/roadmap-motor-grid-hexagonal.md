@@ -153,3 +153,15 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - El código fue documentado y se incorporaron verificaciones de conteo, unicidad, alturas finitas y reproducibilidad al ejecutable de pruebas.
 - Repositorio `fgabo404/Evolve`, rama `master`, último commit `01942a2248f830cb959f56e42e8940474f254976`.
 - Falta que el usuario ejecute `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Core.Tests`, `dotnet run --project .\\GEvolve.Desktop` y confirme visualización; no considerar la fase terminada antes.
+
+## Variante aprobada de prototipo — mapa radial y grises
+
+**Nueva decisión del usuario:** conservar el motor 3D, pero sustituir la cuadrícula rectangular visible por un mapa con **perímetro hexagonal radial**, construido desde el centro axial `(0,0)`. En prototipo, el radio **11** produce exactamente **397 celdas** mediante `1 + 3R(R+1)`; no confundir con las 400 celdas del hito rectangular original, cuyo código y pruebas permanecen disponibles.
+
+- **Datos:** `HexDemoWorld.CrearRadial(11)` genera coordenadas únicas por anillos, con altura ilustrativa reproducible.
+- **Renderizado:** tapas en escala de grises según elevación (oscuro=bajo, claro=alto); paredes también grises, líneas de cuadrícula oscuras y visibles.
+- **Cámara:** giro horizontal azimutal limitado a **15°–165°**; inclinación vertical fija **35°**, manteniendo horizonte y zoom.
+- **Fuera de alcance:** la forma radial es una vista de prototipo; el mundo final mantiene la topología este-oeste envolvente anteriormente aprobada. No declarar que el planeta final tendrá borde hexagonal.
+- **Pruebas:** conteo 397, 66 celdas en anillo exterior, centro único, coordenadas únicas, radios y reproducibilidad; código documentado.
+- **Pendiente de aceptación local:** `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Core.Tests`, `dotnet run --project .\\GEvolve.Desktop`. No declarar éxito de renderizado sin captura.
+- **Último commit código:** `dd1ac7362dc20d15308f712bcdd6a1d05d69978f`.
