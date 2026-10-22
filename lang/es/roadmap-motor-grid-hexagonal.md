@@ -111,3 +111,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - **Prototipo gráfico transitorio:** usa proyección en perspectiva para comprobar volumen; el estilo final aprobado continúa siendo mundo 3D con proyección ortográfica inclinada/isométrica y cuadrícula siempre visible.
 - **Pendiente de aceptación:** `git pull origin master`, `dotnet build` y `dotnet run --project .\\GEvolve.Desktop`; comprobar rotación y volumen. No dar la fase por validada hasta la prueba local.
 - Código documentado: `GEvolve.Desktop/HexRenderer.cs` y `GEvolve.Desktop/Program.cs`, último commit `ef185e0ef3277c99f3a4fef49c5b52e75e314103`.
+
+## Restricción de cámara aprobada — giro con horizonte estable
+
+- El usuario confirmó el volumen 3D y el funcionamiento del giro.
+- A partir de ahora, el **azimut horizontal** de la cámara queda limitado de **0° a 180°**, sin rotación completa de 360°.
+- La **inclinación vertical** permanece fija en 35° para no volcar el horizonte, invertir la vista ni mirar desde debajo del terreno. El desplazamiento vertical del mouse no inclina la cámara en este prototipo.
+- Se mantiene rueda de zoom y geometría volumétrica hexagonal.
+- Implementado en `GEvolve.Desktop/Program.cs` del repositorio de código; commit `16fd75d5e9a69cccde9003fc979f8abaf7004b0b`.
+- Pendiente de verificación local con `git pull`, `dotnet build` y prueba de extremos del giro; no dar por probado sin evidencia.
