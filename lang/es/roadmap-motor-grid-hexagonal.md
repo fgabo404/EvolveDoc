@@ -256,3 +256,13 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - La inclinación vertical permanece fija en 35° para mantener el horizonte estable y evitar invertir el terreno.
 - El cambio no altera el estándar de medida hexagonal, mapa radial de 217 celdas ni colores sin borde.
 - Código `GEvolve.Desktop/Program.cs`, commit `5fe01f8750b34a1a8c0f5f3270a03116b448c6d3`. Pendiente de confirmación local.
+
+## Prototipo explorable — mundo de 100 × 50 hexágonos
+
+- Código publicado en `fgabo404/Evolve`, rama `master`. Commit final `576e59d412b45bd704be222f0bcd5c7aeef6a022`.
+- **Generación:** `GEvolve.Core/WorldGenerator.cs` crea 5,000 hexágonos (100 × 50) con coordenadas axiales únicas, máscara de tres continentes e irregularidades por ondas con semilla `2026`. Agua a altura 0.08, tierra más elevada. Biomas/clima/geografía realista no implementados.
+- **Renderizado:** `HexRenderer` muestra agua azul y tierra verde en una sola malla; conserva caras superiores más claras y laterales más oscuros, sin contornos. El tamaño estándar sigue siendo radio 1 unidad de mundo.
+- **Navegación:** WASD mueve el objetivo sobre XZ siguiendo orientación horizontal de cámara; Shift acelera; botón derecho gira 360°; rueda cambia zoom; Home centra la cámara. La inclinación vertical es fija para conservar horizonte.
+- **Alcance:** esta es una primera visualización de 5,000 hexágonos, todavía en una sola malla estática. NO incluye chunks, culling ni envolvente E–O; son los siguientes pasos de optimización/topología sin cambiar el diseño aprobado del mundo final. Los bordes norte/sur no envuelven.
+- **Pruebas añadidas:** conteo de 5,000, unicidad, ambos tipos de superficie, alturas válidas y reproducibilidad por semilla.
+- **Validación pendiente en PC:** `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Core.Tests`, `dotnet run --project .\\GEvolve.Desktop` y captura de pantalla del mapa.
