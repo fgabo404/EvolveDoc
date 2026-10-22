@@ -197,3 +197,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Grosor visual de la banda negra: `0.27` unidades radiales del mundo, variable en píxeles según zoom y cámara.
 - Revisión a validar en PC mediante `git pull origin master`, `dotnet build` y `dotnet run --project .\\GEvolve.Desktop`.
 - Código commit `3168487c3a435d9472f6952fe55889c8eaf44dd4`.
+
+## Cambio de estilo: sin contornos, tapa superior más oscura
+
+- Por decisión del usuario, se eliminan todos los bordes negros, bandas geométricas y cálculo de contornos por shader.
+- El prisma mantiene una única malla; sus tapas superiores usan un gris equivalente al **72 % del gris lateral**; las seis paredes quedan en el mismo tono gris lateral, sin iluminación por cara.
+- Se eliminan los atributos de borde innecesarios: vértice = posición XYZ + color RGB (6 `float` en vez de 9), reduciendo datos enviados a la GPU.
+- Cambios en `GEvolve.Desktop/HexRenderer.cs`, último commit de código `f549cb9096e61c2b060bcd81e8d39080fda3b2f6`.
+- Pendiente de compilación y aceptación visual local del usuario.
