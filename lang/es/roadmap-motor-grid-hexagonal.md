@@ -412,3 +412,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se conservan mar 0, tierra 1–100, rejilla hexagonal, menú minimalista y escala visual de grises. No se integran biomas.
 - Se ha preservado la rama de respaldo `version-inicial-v0.1.0` sin modificarla.
 - Pendiente: ejecutar `dotnet build` y `dotnet run --project .\\GEvolve.Core.Tests` en PC; esta sesión no tiene instalado el SDK .NET.
+
+## Regeneración dentro del juego
+
+- Botón `REGENERAR MUNDO` superpuesto arriba a la derecha, sin abrir menú ni abandonar la partida.
+- Atajo `F5` con la misma función.
+- Cada activación incrementa la semilla, conserva tipo/tamaño y presets de generación, libera recursos gráficos anteriores y construye un mundo nuevo. Restablece objetivo de cámara y zoom según el comportamiento existente de `CrearMundo`.
+- El HUD muestra la semilla actual y utiliza los botones pixelados que ya existen; sin dependencias nuevas.
+- Código: `490a39be3d81078971f5addae709aa5470dbc25a`. Pendiente validación visual y de compilación en PC.
