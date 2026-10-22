@@ -332,3 +332,9 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Botón derecho + movimiento vertical: inclinación variable de 8° a 85° sobre el plano, de vista rasante a casi cenital. No se invierte el horizonte.
 - Conserva zoom entre 8 y 52 unidades, desplazamiento WASD, costura E/O y límites polares.
 - Código commit `6e7527a5d048851487397dd377c8488485532f5c`; pendiente validación local.
+
+## Ajuste de cámara: evitar ángulo rasante
+
+- Inclinación mínima aumentada de 8° a **25°**; máxima 85°, inicial 35°.
+- Sin cambios en giro horizontal 360°, movimiento WASD ni zoom 8–52.
+- Código commit `d5380ff12d3223919d1e614f7e3010967ae656e7`.
