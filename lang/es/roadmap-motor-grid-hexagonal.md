@@ -402,3 +402,13 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - No mover ni editar la rama del hito; los desarrollos futuros continúan en `master`.
 - Se crea una rama de respaldo porque el conector GitHub disponible no expone creación de etiquetas (tags) o releases.
 - Pendiente validación de compilación y ejecución local; el hito indica versión inicial del prototipo, no versión final certificada.
+
+## Generación geográfica mejorada posterior a v0.1.0
+
+- Tipos activos: **Pangea**, **Archipiélagos**, **Continentes pequeños** y **Continentes grandes** (predeterminado). Se reemplazan las opciones previas Mar Interior, Fractal y Aleatorio de la interfaz.
+- Cada tipo utiliza núcleos de masa independientes, deformación espacial del dominio y ruido suavizado de distintas escalas para crear costas menos geométricas, con golfos, cabos, penínsulas e islas; todavía es un modelo procedural, no una simulación geológica real.
+- La función de ruido es periódica de este a oeste, mantiene las costas continuas y reproduce resultados por semilla. El ajuste de proporción oceánica sigue siendo exacto por ordenación determinista.
+- Presets ocultos: Pangea 40% agua/50% montañas; Archipiélagos 80%/35%; Continentes pequeños 70%/45%; Continentes grandes 60%/40%. Edad normal en todos.
+- Se conservan mar 0, tierra 1–100, rejilla hexagonal, menú minimalista y escala visual de grises. No se integran biomas.
+- Se ha preservado la rama de respaldo `version-inicial-v0.1.0` sin modificarla.
+- Pendiente: ejecutar `dotnet build` y `dotnet run --project .\\GEvolve.Core.Tests` en PC; esta sesión no tiene instalado el SDK .NET.
