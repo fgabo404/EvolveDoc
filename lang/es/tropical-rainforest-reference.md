@@ -102,3 +102,15 @@ Fuente: `data/world/world.catalog.biomas-agrupados.v021.json`. Conserva IDs esta
 - Algunas entradas heredadas representan bosque tropical seco o mosaicos; su pertenencia definitiva al tipo Selva requiere revisión ecológica posterior, sin eliminar ni reubicar registros ahora.
 - Animales salvajes, domesticación y cultivo no son equivalentes; presencia y obtención de productos dependen de mecánicas específicas.
 - Las cumbres extremas permanecen infranqueables y no se convierten en selva automáticamente.
+
+## Cierre de la ficha de diseño — 21 de octubre de 2026
+
+**Estado aprobado:** ficha de **Bosque → Tropical (selva)** completa para la **fase actual de diseño conceptual**, conforme a la aprobación del usuario. No equivale a la implementación en el motor ni a la validación de distribuciones y probabilidades.
+
+**Inventario conservado:** 23 definiciones de flora, 21 de fauna y 20 recursos geológicos; estructura `Bioma → Tipo → Flora / Fauna / Recursos` sin subdivisiones regionales en el catálogo visible.
+
+**Recursos biológicos y derivados** (no son recursos geológicos adicionales ni nuevos IDs aprobados): madera de árboles, látex del caucho, semillas de cacao, vainas de vainilla, frutos/fibras/aceites de palmas según especie, bambú como material y productos animales (carne, piel, plumas, huesos u otros según cada especie). Su obtención depende de presencia, disponibilidad, descubrimiento y tecnología/capacidad; no se garantiza por hexágono.
+
+**Referencia visual:** boceto actual aceptado provisionalmente, con cuadrícula siempre visible, relieve progresivo y baja saturación de árboles y detalles. El PNG sigue pendiente de incorporación binaria al repositorio.
+
+**Pendiente para fases futuras, sin reabrir esta ficha por defecto:** comprobación ecológica final de especies heredadas, distribución efectiva, probabilidades de aparición, balances de abundancia e implementación. Conservar JSON originales sin cambios.
