@@ -9,7 +9,7 @@ Construir un motor gráfico propio y un generador procedural reproducible para u
 
 | Componente | Tecnología | Uso / motivo | Estado |
 |---|---|---|---|
-| Aplicación PC | C# y .NET (versión LTS vigente al implementar) | Ejecutable, herramientas y orquestación | Propuesto |
+| Aplicación PC | C# y .NET 10 LTS | Ejecutable, herramientas y orquestación | Aprobado (.NET 10 LTS) |
 | Ventana, entrada y contexto gráfico | OpenTK | Crear ventana, recibir ratón/teclado y acceder a OpenGL | Propuesto |
 | GPU y renderizado | OpenGL moderno + GLSL | Mallas, buffers, shaders, profundidad, selección y líneas de cuadrícula | Propuesto |
 | Matemáticas | System.Numerics | Vectores, matrices, transformaciones de cámara | Propuesto |
@@ -129,10 +129,20 @@ Evolve/
 **Dependencias:** Desktop compone módulos; Rendering depende de contratos de Core/World pero no al revés; Simulation depende de Core y definiciones, nunca de OpenGL; Editor interactúa por comandos de aplicación.
 
 ## Decisiones abiertas
-- LTS exacta de .NET, versión de OpenGL y objetivo mínimo de GPU.
+- Versión de OpenGL y objetivo mínimo de GPU (framework aprobado: .NET 10 LTS).
 - Si elevación por hexágono representa mesetas escalonadas, interpolación o una mezcla; resolver visualmente en el prototipo.
 - Algoritmos concretos de ruido, erosión y clima y sus parámetros.
 - Formato definitivo de partidas, estrategia de chunks/LOD y medición de rendimiento.
 - Recursos, fauna y fórmulas solo después de completar los contratos de simulación.
 
 **Compatibilidad:** documentación de arquitectura, sin cambios a IDs, JSON existentes, balance, reglas ni catálogos. La simulación manual y los pendientes del roadmap continúan vigentes.
+
+## Entorno de desarrollo aprobado (21 de octubre de 2026)
+
+- **Editor:** Visual Studio Code (VS Code), sin necesidad de instalar Visual Studio IDE.
+- **Lenguaje y SDK objetivo:** C# sobre **.NET 10 LTS**; usar `net10.0` en proyectos nuevos y `global.json` cuando se cree la solución para fijar una versión de SDK instalada compatible.
+- **Sistema inicial:** Windows PC.
+- **Git:** Git for Windows.
+- **Gráficos:** OpenTK + OpenGL + GLSL; OpenTK se añade con NuGet al crear la solución.
+- **Migración del puesto:** se puede conservar .NET 9 instalado; instalar .NET 10 SDK en paralelo. Verificar con `dotnet --list-sdks`.
+- Esta decisión sustituye el planteamiento temporal de trabajar con .NET 9. Todavía no se ha creado código ni se ha actualizado el equipo del usuario remotamente.
