@@ -165,3 +165,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - **Pruebas:** conteo 397, 66 celdas en anillo exterior, centro único, coordenadas únicas, radios y reproducibilidad; código documentado.
 - **Pendiente de aceptación local:** `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Core.Tests`, `dotnet run --project .\\GEvolve.Desktop`. No declarar éxito de renderizado sin captura.
 - **Último commit código:** `dd1ac7362dc20d15308f712bcdd6a1d05d69978f`.
+
+## Relieve radial descendente y escala de render (actualización)
+
+- Se ajustó el prototipo radial: **elevación máxima en el centro** y descenso monótono por anillos hasta la periferia; cumbre 1.80 y borde 0.15 unidades visuales, sin convertirlos en umbrales definitivos del modelo 0–100.
+- Código: `GEvolve.Core/HexDemoWorld.cs` y verificaciones de cima/borde/descenso en `GEvolve.Core.Tests/Program.cs`; último commit `4c0c645440b049dd57af08909a0c9031282b5cb1`.
+- Cada hexágono tiene **radio geométrico 1 unidad**: ancho pointy-top `sqrt(3)` unidades, longitud de punta a punta `2` unidades. **No hay tamaño fijo en píxeles**: lo determinan proyección ortográfica, tamaño de ventana, distancia/zoom y orientación de la cámara.
+- Con ventana de 720 px y altura ortográfica de `80*0.85=68` unidades al inicio, la escala es ~10.59 px/unidad; ancho horizontal de referencia ~18.3 px antes de proyectar la orientación del plano X/Z. No confundir este dato con un tamaño constante o con la dimensión vertical proyectada.
+- Pendiente de `git pull`, compilación y comprobación visual local del usuario.
