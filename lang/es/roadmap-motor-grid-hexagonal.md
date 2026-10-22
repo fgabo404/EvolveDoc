@@ -14,7 +14,7 @@
 | 1 | Núcleo geométrico hexagonal | ✅ Completado: conversiones y pruebas locales superadas | Coordenadas axiales `(q,r)`, vecinos, conversiones a posición y pruebas básicas |
 | 2 | Separación de proyectos | ✅ Completado para el hito: Core independiente y Desktop referenciándolo | `GEvolve.Core` independiente de OpenTK y `GEvolve.Desktop` consume sus tipos |
 | 3 | Malla base de hexágono | 🔄 En prueba local: primer hexágono y shaders incorporados | Se dibuja **un** hexágono mediante VAO/VBO/EBO + shaders GLSL |
-| 4 | Grid de 20 × 20 | ⬜ Pendiente | Se ven exactamente **400** hexágonos sin superposiciones ni huecos |
+| 4 | Grid de 20 × 20 | 🔄 Código publicado; pendiente de compilación y revisión visual local | Se ven exactamente **400** hexágonos sin superposiciones ni huecos |
 | 5 | Cámara y encuadre | ⬜ Pendiente | Grid completo visible, redimensionamiento correcto, navegación/zoom básicos |
 | 6 | Selección e inspección | ⬜ Pendiente | Clic identifica la celda y muestra `q,r`; celda elegida queda resaltada |
 | 7 | Validación y cierre del hito | ⬜ Pendiente | Compila en Debug/Release; invariantes matemáticas y render comprobados |
@@ -145,3 +145,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Cámara ahora usa proyección **ortográfica inclinada** en lugar de perspectiva, con encuadre inicial más abierto y zoom limitado para mantener los siete hexágonos visibles; se conserva el azimut 0°–180° y horizonte fijo.
 - Último commit del código: `cd0e2dfcfb5dc7d6735beb21002ed15db9db9b8d`.
 - **Pendiente:** el usuario debe ejecutar `git pull`, `dotnet build` y la aplicación para verificar si la forma, los bordes y las alturas son legibles. No avanzar a 400 celdas antes de esa comprobación.
+
+## Grid 20 × 20 preparado (pendiente de ejecución local)
+
+- La última captura aportada por el usuario corresponde todavía a la versión anterior de **7 hexágonos**, no a la cuadrícula 20 × 20.
+- Se publicó `HexDemoWorld.CrearCuadricula(20, 20)` con **400 celdas únicas**, alturas reproducibles de demostración y cámara ortográfica con encuadre ampliado.
+- El código fue documentado y se incorporaron verificaciones de conteo, unicidad, alturas finitas y reproducibilidad al ejecutable de pruebas.
+- Repositorio `fgabo404/Evolve`, rama `master`, último commit `01942a2248f830cb959f56e42e8940474f254976`.
+- Falta que el usuario ejecute `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Core.Tests`, `dotnet run --project .\\GEvolve.Desktop` y confirme visualización; no considerar la fase terminada antes.
