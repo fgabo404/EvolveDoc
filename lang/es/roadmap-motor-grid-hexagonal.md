@@ -11,9 +11,9 @@
 | Fase | Entregable | Estado | Criterio verificable |
 |---|---|---|---|
 | 0 | Ventana OpenGL | ✅ Hecho | Aplicación arranca, abre ventana y dibuja fondo sin errores |
-| 1 | Núcleo geométrico hexagonal | 🔄 En progreso: coordenadas, vecinos y distancia implementados; falta conversión geométrica y pruebas | Coordenadas axiales `(q,r)`, vecinos, conversiones a posición y pruebas básicas |
-| 2 | Separación de proyectos | ⬜ Pendiente | `GEvolve.Core` independiente de OpenTK y `GEvolve.Desktop` consume sus tipos |
-| 3 | Malla base de hexágono | ⬜ Pendiente | Se dibuja **un** hexágono mediante VAO/VBO/EBO + shaders GLSL |
+| 1 | Núcleo geométrico hexagonal | ✅ Completado: conversiones y pruebas locales superadas | Coordenadas axiales `(q,r)`, vecinos, conversiones a posición y pruebas básicas |
+| 2 | Separación de proyectos | ✅ Completado para el hito: Core independiente y Desktop referenciándolo | `GEvolve.Core` independiente de OpenTK y `GEvolve.Desktop` consume sus tipos |
+| 3 | Malla base de hexágono | 🔄 En prueba local: primer hexágono y shaders incorporados | Se dibuja **un** hexágono mediante VAO/VBO/EBO + shaders GLSL |
 | 4 | Grid de 20 × 20 | ⬜ Pendiente | Se ven exactamente **400** hexágonos sin superposiciones ni huecos |
 | 5 | Cámara y encuadre | ⬜ Pendiente | Grid completo visible, redimensionamiento correcto, navegación/zoom básicos |
 | 6 | Selección e inspección | ⬜ Pendiente | Clic identifica la celda y muestra `q,r`; celda elegida queda resaltada |
@@ -94,3 +94,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Cubre: coordenada cúbica derivada, seis vecinos únicos, distancia/simetría, conversiones axiales/XY con múltiples radios y validación de entradas incorrectas.
 - Comando de aceptación desde la raíz: `dotnet run --project .\\GEvolve.Core.Tests`.
 - **Fase 1 todavía pendiente de aceptación:** ejecutar la prueba local y obtener el mensaje de éxito; solo entonces marcar completa. Este proyecto de pruebas aún no está agregado a la solución, pero es ejecutable por su ruta.
+
+## Avance — primer hexágono renderizado (21 de octubre de 2026)
+
+- **Fase 1 aprobada:** el usuario ejecutó `GEvolve.Core.Tests` y obtuvo `OK — Pruebas esenciales de geometría hexagonal superadas`; `dotnet build` también correcto y Git limpio.
+- **Fase 2 cubierta en el alcance actual:** biblioteca `GEvolve.Core` independiente del render y referencia desde `GEvolve.Desktop`; no se requiere otro proyecto aún.
+- **Fase 3 pendiente de verificación local:** añadidos `GEvolve.Desktop/HexRenderer.cs` y cambios en `Program.cs` para renderizar **un** hexágono verde con borde oscuro mediante VBO/VAO, shaders GLSL y liberación de recursos GPU. Último commit de código: `aaf5d989bac93e6480c35e6daaf8019a422b7c0f`.
+- **Validación solicitada:** ejecutar `git pull origin master`, `dotnet build` y `dotnet run --project .\\GEvolve.Desktop`; confirmar imagen de un hexágono en la ventana. No afirmar que la compilación/ejecución ya fue verificada después de este commit.
