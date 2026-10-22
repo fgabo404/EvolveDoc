@@ -137,3 +137,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - En la primera ejecución local, `Program.cs` (línea 72) falló con `CS8310` al usar `objetivo + new(...)` sin tipo explícito.
 - Corregido a `objetivo + new Vector3(...)` en `fgabo404/Evolve`, commit `c53a5c90b60979656998acee0a78ffbcabb2a95e`.
 - Pendiente: usuario confirma nueva compilación y funcionamiento 3D de siete celdas. No marcar el hito como completado todavía.
+
+## Corrección visual mini-grid 3D — encuadre y matrices
+
+- La captura local tras la primera mini-grid mostró geometría desproporcionadamente grande, cortada y sin silueta hexagonal reconocible; **no se aceptó el hito visual**.
+- Se corrigió la convención de carga de la matriz OpenTK/GLSL (`GL.UniformMatrix4` con `transpose=false` para las matrices combinadas por filas) en `GEvolve.Desktop/HexRenderer.cs`.
+- Cámara ahora usa proyección **ortográfica inclinada** en lugar de perspectiva, con encuadre inicial más abierto y zoom limitado para mantener los siete hexágonos visibles; se conserva el azimut 0°–180° y horizonte fijo.
+- Último commit del código: `cd0e2dfcfb5dc7d6735beb21002ed15db9db9b8d`.
+- **Pendiente:** el usuario debe ejecutar `git pull`, `dotnet build` y la aplicación para verificar si la forma, los bordes y las alturas son legibles. No avanzar a 400 celdas antes de esa comprobación.
