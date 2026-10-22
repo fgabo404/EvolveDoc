@@ -307,3 +307,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Las líneas del agua se guardan en un VBO separado y se replican con el mismo desplazamiento horizontal del render E/O.
 - Se utiliza un pequeño desplazamiento vertical de 0.003 para evitar z-fighting; no altera la altura lógica del mar.
 - Código commit `2b41b7e9d517969fd1cdcad326415060d1d15a60`.
+
+## Mundo 200 × 150 y etiqueta numérica por hexágono
+
+- La escena muestra 200 columnas por 150 filas: 30,000 hexágonos, distribuidos en 300 chunks lógicos de 10 × 10.
+- Cada celda del mundo expone el nivel lógico (byte 0–100) al renderizador. Los dígitos vectoriales de siete segmentos se trazan sobre la cara superior: blancos en agua y oscuros en tierra. Se conservan los contornos blancos exclusivos del mar.
+- El mar permanece a nivel 0 y muestra la etiqueta 0. El zoom conserva el límite 8–52, el giro 360 grados y la continuidad este-oeste. Se ampliaron los límites norte-sur para abarcar 150 filas.
+- Importante: se dibuja todavía la malla completa en tres posiciones horizontales, sin culling visual por chunks; 30,000 celdas pueden exigir optimización de GPU y filtrado de etiquetas a distancia.
+- Pruebas esenciales añadidas para 30,000 celdas, 300 regiones, costura E/O y nivel oceánico cero.
+- Código commit `096587615c8326785359aefd104bafe29fd9cd3a`. Pendiente verificación local de compilación y rendimiento.
