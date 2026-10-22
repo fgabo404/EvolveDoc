@@ -430,3 +430,7 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se mantienen océano 0, tierra 1–100, reglas 60–79 alto y 80–100 impasable, escala de grises, semilla reproducible y cuatro tipos de mundo.
 - No se añaden todavía tectónica, erosión hidráulica, ríos ni biomas. Verificación de compilación pendiente en PC.
 - Commit del motor: `efd0cc5c97ddb04c3c5116cdb182ad1530f752c6`.
+
+## Biomas visuales provisionales
+
+Se agrego una clasificacion determinista por hexagono usando latitud, humedad procedural, distancia a la costa y elevacion. Incluye veinte clases del catalogo de bosques, desiertos, llanuras, marino, pantanos, tundra y montanas. Cada clase tiene un color provisional, sin texturas, vegetacion, fauna ni recursos. El relieve, menu, tipos de mundo y backup v0.1.0 permanecen intactos. Archivos: GeneradorBiomas.cs, WorldMap.cs, WorldSystem.cs, WorldGenerator.cs, Program.cs y HexRenderer.cs. Pendiente probar compilacion en PC.
