@@ -101,3 +101,13 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - **Fase 2 cubierta en el alcance actual:** biblioteca `GEvolve.Core` independiente del render y referencia desde `GEvolve.Desktop`; no se requiere otro proyecto aún.
 - **Fase 3 pendiente de verificación local:** añadidos `GEvolve.Desktop/HexRenderer.cs` y cambios en `Program.cs` para renderizar **un** hexágono verde con borde oscuro mediante VBO/VAO, shaders GLSL y liberación de recursos GPU. Último commit de código: `aaf5d989bac93e6480c35e6daaf8019a422b7c0f`.
 - **Validación solicitada:** ejecutar `git pull origin master`, `dotnet build` y `dotnet run --project .\\GEvolve.Desktop`; confirmar imagen de un hexágono en la ventana. No afirmar que la compilación/ejecución ya fue verificada después de este commit.
+
+
+## Cambio visual solicitado — inspección 3D con cámara orbital
+
+- Aprobado por el usuario tras verificar el primer hexágono plano: el **terreno debe ser verdaderamente 3D y girable**.
+- El código en `fgabo404/Evolve` cambia el hexágono plano por un prisma hexagonal con tapa, seis paredes y aristas; añade cámara orbital (arrastre con botón derecho) y zoom (rueda).
+- Se conserva la separación entre núcleo matemático `GEvolve.Core` y representación `GEvolve.Desktop`.
+- **Prototipo gráfico transitorio:** usa proyección en perspectiva para comprobar volumen; el estilo final aprobado continúa siendo mundo 3D con proyección ortográfica inclinada/isométrica y cuadrícula siempre visible.
+- **Pendiente de aceptación:** `git pull origin master`, `dotnet build` y `dotnet run --project .\\GEvolve.Desktop`; comprobar rotación y volumen. No dar la fase por validada hasta la prueba local.
+- Código documentado: `GEvolve.Desktop/HexRenderer.cs` y `GEvolve.Desktop/Program.cs`, último commit `ef185e0ef3277c99f3a4fef49c5b52e75e314103`.
