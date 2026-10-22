@@ -386,3 +386,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Interacción: al hacer clic en la mitad izquierda/derecha del control de valor, se decrementa/incrementa la opción; las teclas de dirección y Enter conservan su comportamiento previo.
 - Sin imágenes externas ni cambios de mecánica de generación, presets, movimiento o cámara.
 - Código: `b746c96445150c5f4d806ae2be1a8b528a0c8cb5`. Validación local de compilación y aspecto pendiente.
+
+## Paleta monocromática por elevación
+
+- La tierra cambia a escala continua de grises: nivel 1 negro, nivel 100 blanco, con tonos intermedios según el nivel lógico y laterales ligeramente más oscuros.
+- Se ajusta automáticamente el color de las etiquetas numéricas para mantener contraste en terreno oscuro o claro.
+- El océano conserva el azul, el nivel 0 y sus contornos blancos. Sin cambios en biomas, relieve lógico ni generación.
+- Código commit `12cc28d9f4eea70044394d5dd4735e63f88b7340`.
