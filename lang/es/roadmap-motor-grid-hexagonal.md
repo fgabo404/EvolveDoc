@@ -205,3 +205,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se eliminan los atributos de borde innecesarios: vértice = posición XYZ + color RGB (6 `float` en vez de 9), reduciendo datos enviados a la GPU.
 - Cambios en `GEvolve.Desktop/HexRenderer.cs`, último commit de código `f549cb9096e61c2b060bcd81e8d39080fda3b2f6`.
 - Pendiente de compilación y aceptación visual local del usuario.
+
+## Prueba visual de solo dos capas radiales
+
+- A solicitud del usuario, la escena activa ahora usa `HexDemoWorld.CrearRadial(1)`: un hexágono central y seis vecinos, **7 celdas**, dos niveles radiales contando el centro.
+- El generador radial de radio 11 y las pruebas permanecen disponibles; únicamente se reduce la escena visible para comprobar la apariencia.
+- Se reajustó cámara y zoom para encuadrar estas siete celdas. Se conserva la tapa gris oscura, las caras laterales claras, ausencia de contornos y giro horizontal 15°–165°.
+- Commit código: `d8544c7b53fb79d763b5409cf56d328f2f1ecb87`. Pendiente de compilación y validación visual local.
