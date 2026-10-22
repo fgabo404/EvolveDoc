@@ -212,3 +212,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - El generador radial de radio 11 y las pruebas permanecen disponibles; únicamente se reduce la escena visible para comprobar la apariencia.
 - Se reajustó cámara y zoom para encuadrar estas siete celdas. Se conserva la tapa gris oscura, las caras laterales claras, ausencia de contornos y giro horizontal 15°–165°.
 - Commit código: `d8544c7b53fb79d763b5409cf56d328f2f1ecb87`. Pendiente de compilación y validación visual local.
+
+## Ajuste visual solicitado — tapas claras, paredes oscuras y contornos
+
+- Restaurados los bordes negros con shader GLSL (`fwidth`/`smoothstep`) y grosor de referencia de 3 píxeles, sin duplicar prismas ni crear bandas de geometría.
+- La superficie superior usa gris base multiplicado por 1.15 (limitado a 1); las paredes usan el gris base multiplicado por 0.70.
+- El mapa activo sigue siendo radial de radio 1: centro y seis vecinos (7 celdas).
+- Código `GEvolve.Desktop/HexRenderer.cs`, commit `69a59a28fa1a2fc8d57377df7cd0f74563089fb6`.
+- Pendiente compilación y validación visual local, especialmente continuidad de los bordes.
