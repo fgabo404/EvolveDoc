@@ -180,3 +180,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Los bordes superiores, las aristas verticales y los bordes inferiores están dibujados en **negro puro** para destacar cada volumen hexagonal.
 - Código: `GEvolve.Desktop/HexRenderer.cs`, commit `d08681191d87fd6b0e717649ebbde18d926b1fa1`.
 - Pendiente: validación visual y compilación local del usuario.
+
+## Cuadrícula negra visible mediante geometría (corrección)
+
+- Captura del usuario: al solicitar grosor `GL.LineWidth(4f)`, los trazos seguían demasiado finos/entrecortados; resultado rechazado visualmente.
+- Reemplazadas las líneas rasterizadas por una tapa hexagonal negra completa y una tapa gris interior reducida. La franja negra resultante tiene grosor de referencia `0.18` **unidades del mundo**, no píxeles; por ello crece o disminuye visualmente con el zoom y no depende del soporte de líneas anchas del driver.
+- Se mantienen caras laterales de gris uniforme, relieve elevado en el centro, mapa radial de 397 celdas y cámara con azimut 15°–165°.
+- Código `GEvolve.Desktop/HexRenderer.cs`, commit `fa5b2b268c9b3b463bdc879a31ce0c2f480acccf`.
+- Pendiente de `git pull origin master`, `dotnet build` y revisión visual de la cuadrícula.
