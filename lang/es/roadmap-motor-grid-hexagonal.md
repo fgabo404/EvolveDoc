@@ -356,3 +356,14 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Pruebas incorporadas: configuración, dimensiones, proporción de agua, reproducibilidad, variación de tipo y semilla, límites de elevación y parámetros inválidos.
 - Limitaciones: máscaras matemáticas iniciales; no placas tectónicas, clima, biomas, erosión compleja ni renderizado selectivo por chunks. Pendiente compilar y verificar visualmente en PC.
 - Código último commit `b80e47af18be7aa4faf0e3e0a8e79428ab858434`.
+
+## Menú principal y configuración de mundo — primera versión
+
+- Menú funcional de estilo pixelado inspirado en la organización de Minecraft, con identidad y gráficos propios de G-Evolve. El menú se dibuja directamente con OpenGL en `GEvolve.Desktop/MenuRenderer.cs`, sin texturas ni fuentes de terceros.
+- Pantallas: **Inicio** (Un jugador / Continuar / Salir), **Configurar mundo** y **Pausa** (Continuar / Nuevo mundo / Menú principal).
+- Desde configuración se puede cambiar tipo de mundo (Continentes, Pangea, Archipiélagos, Mar interior, Fractal o Aleatorio), edad geológica, porcentaje de océanos, intensidad montañosa, semilla y tamaño (100×50, 200×150, 300×200).
+- Perfil inicial aprobado: Continentes, 200×150, Normal, 60 % océanos, 40 % montañas, semilla 2026. La generación ocurre al seleccionar **Generar mundo**, no al iniciar la aplicación.
+- Controles del menú: W/S o flechas arriba/abajo para elegir; A/D o flechas izquierda/derecha para cambiar valores; Enter o Espacio para confirmar; Escape para retroceder o pausar. También se admiten clics izquierdos en los botones.
+- La cámara y el zoom se reinician al crear un mundo nuevo; durante el juego se conservan WASD, Shift, giro horizontal 360°, inclinación 25°–85°, zoom 8–52 y topología continua E/O.
+- Sin nuevas dependencias externas. Compilación e interacción gráfica aún deben comprobarse en PC. No existe todavía guardado de partidas ni multijugador.
+- Código commit `7cb11f96d0025d5ec9e9acaba88a93578e41c227`.
