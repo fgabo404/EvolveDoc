@@ -249,3 +249,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - A petición del usuario, **se eliminan por completo los bordes**, su shader de contorno y los atributos de borde: 6 floats por vértice (posición XYZ y RGB), con menor uso de memoria y ancho de banda.
 - Tapa superior gris clara (`gris * 1.15`, máximo 1), paredes gris oscuro (`gris * 0.70`). Se mantiene mapa radial de radio 8 / 217 hexágonos y la cámara existente.
 - Código último commit `98bb9844c3002e29d95b9e6ef55f0db4056b8e74`; pendiente validación local de compilación y vista.
+
+## Cámara: giro horizontal completo
+
+- El usuario solicita dar una vuelta completa alrededor del mapa. Se reemplaza la restricción de azimut 15°–165° por giro horizontal **360° continuo y repetible**, normalizando el ángulo módulo 2π.
+- La inclinación vertical permanece fija en 35° para mantener el horizonte estable y evitar invertir el terreno.
+- El cambio no altera el estándar de medida hexagonal, mapa radial de 217 celdas ni colores sin borde.
+- Código `GEvolve.Desktop/Program.cs`, commit `5fe01f8750b34a1a8c0f5f3270a03116b448c6d3`. Pendiente de confirmación local.
