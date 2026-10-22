@@ -338,3 +338,9 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Inclinación mínima aumentada de 8° a **25°**; máxima 85°, inicial 35°.
 - Sin cambios en giro horizontal 360°, movimiento WASD ni zoom 8–52.
 - Código commit `d5380ff12d3223919d1e614f7e3010967ae656e7`.
+
+## Sensibilidad de desplazamiento WASD
+
+- Velocidad base aumentada de 18 a 24 unidades del mundo por segundo (+33 %).
+- Shift conserva el multiplicador 2.5; giro, inclinación y zoom sin cambios.
+- Código commit `62633a0adf62db8a72505394cf633d575077f120`.
