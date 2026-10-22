@@ -420,3 +420,13 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Cada activación incrementa la semilla, conserva tipo/tamaño y presets de generación, libera recursos gráficos anteriores y construye un mundo nuevo. Restablece objetivo de cámara y zoom según el comportamiento existente de `CrearMundo`.
 - El HUD muestra la semilla actual y utiliza los botones pixelados que ya existen; sin dependencias nuevas.
 - Código: `490a39be3d81078971f5addae709aa5470dbc25a`. Pendiente validación visual y de compilación en PC.
+
+## Relieve basado en costas y corredores montañosos (posterior a versión inicial)
+
+- Se mantiene sin cambios la formación y distribución de masas continentales.
+- Después de clasificar océanos se calcula para cada hexágono la distancia mínima a la costa, usando búsqueda en anchura por seis vecinos y envolvimiento este-oeste.
+- Las primeras celdas costeras generan cotas bajas; al avanzar al interior aparecen llanuras suavizadas y mesetas amplias según ruido regional determinista.
+- Se reemplazan las bandas montañosas sinusoidales por dos corredores curvados y localizados según la semilla, con amplitud controlada por la montañosidad y edad geológica.
+- Se mantienen océano 0, tierra 1–100, reglas 60–79 alto y 80–100 impasable, escala de grises, semilla reproducible y cuatro tipos de mundo.
+- No se añaden todavía tectónica, erosión hidráulica, ríos ni biomas. Verificación de compilación pendiente en PC.
+- Commit del motor: `efd0cc5c97ddb04c3c5116cdb182ad1530f752c6`.
