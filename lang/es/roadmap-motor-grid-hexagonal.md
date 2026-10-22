@@ -86,3 +86,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Eliminado `GEvolve.Core/Class1.cs` de plantilla; commit `accbc079d7f18ef405643b6f139790695b23ccbe`.
 - **Estado:** fase 1 todavía en progreso, pendiente de compilación y pruebas locales de inversión/distancia.
 - **Política de trabajo acordada:** el asistente modifica código directamente en GitHub, con comentarios y documentación XML para APIs; el usuario ejecuta `git pull`, compila y valida localmente antes de cerrar cada fase. Documentar avances en este roadmap.
+
+## Verificación de fase 1 — pruebas automáticas pendientes de ejecutar
+
+- Evidencia local del usuario: `dotnet build` correcto y ventana OpenGL operativa después de integrar `HexGeometry.cs`.
+- Se añadió un ejecutable de verificación independiente `GEvolve.Core.Tests` al repositorio `fgabo404/Evolve` en `master` (código documentado, sin paquetes externos).
+- Cubre: coordenada cúbica derivada, seis vecinos únicos, distancia/simetría, conversiones axiales/XY con múltiples radios y validación de entradas incorrectas.
+- Comando de aceptación desde la raíz: `dotnet run --project .\\GEvolve.Core.Tests`.
+- **Fase 1 todavía pendiente de aceptación:** ejecutar la prueba local y obtener el mensaje de éxito; solo entonces marcar completa. Este proyecto de pruebas aún no está agregado a la solución, pero es ejecutable por su ruta.
