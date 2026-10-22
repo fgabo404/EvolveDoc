@@ -11,7 +11,7 @@
 | Fase | Entregable | Estado | Criterio verificable |
 |---|---|---|---|
 | 0 | Ventana OpenGL | ✅ Hecho | Aplicación arranca, abre ventana y dibuja fondo sin errores |
-| 1 | Núcleo geométrico hexagonal | ⬜ Pendiente | Coordenadas axiales `(q,r)`, vecinos, conversiones a posición y pruebas básicas |
+| 1 | Núcleo geométrico hexagonal | 🔄 En progreso: coordenadas, vecinos y distancia implementados; falta conversión geométrica y pruebas | Coordenadas axiales `(q,r)`, vecinos, conversiones a posición y pruebas básicas |
 | 2 | Separación de proyectos | ⬜ Pendiente | `GEvolve.Core` independiente de OpenTK y `GEvolve.Desktop` consume sus tipos |
 | 3 | Malla base de hexágono | ⬜ Pendiente | Se dibuja **un** hexágono mediante VAO/VBO/EBO + shaders GLSL |
 | 4 | Grid de 20 × 20 | ⬜ Pendiente | Se ven exactamente **400** hexágonos sin superposiciones ni huecos |
@@ -71,3 +71,10 @@
 
 ## Después de este hito (fuera de alcance)
 Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → clima y biomas → distribución de flora, fauna y recursos. Se abordará mediante otra hoja de ruta al completar la cuadrícula.
+
+## Avance registrado — Núcleo hexagonal (21 de octubre de 2026)
+
+- Código subido a `fgabo404/Evolve` (rama `master`), commit `246f6b4`.
+- Se creó `GEvolve.Core` (`net10.0`), vinculado a `GEvolve.Desktop`; `dotnet build` completado según evidencia de la terminal.
+- `GEvolve.Core/HexCoord.cs` implementa coordenadas axiales `(Q,R)`, coordenada cúbica derivada `S`, seis vecinos y distancia.
+- **Pendiente para completar fase 1:** conversión axial↔posición XY con orientación acordada, pruebas de identidad/distancia y retirar `Class1.cs` de plantilla.
