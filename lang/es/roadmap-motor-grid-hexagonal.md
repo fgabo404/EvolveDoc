@@ -266,3 +266,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - **Alcance:** esta es una primera visualización de 5,000 hexágonos, todavía en una sola malla estática. NO incluye chunks, culling ni envolvente E–O; son los siguientes pasos de optimización/topología sin cambiar el diseño aprobado del mundo final. Los bordes norte/sur no envuelven.
 - **Pruebas añadidas:** conteo de 5,000, unicidad, ambos tipos de superficie, alturas válidas y reproducibilidad por semilla.
 - **Validación pendiente en PC:** `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Core.Tests`, `dotnet run --project .\\GEvolve.Desktop` y captura de pantalla del mapa.
+
+## Navegación continua y zoom limitado
+
+- Cámara: desplazamiento horizontal periódico (este-oeste) por ancho físico de 100 columnas hexagonales. Al cruzar el extremo se retorna al lado opuesto sin detener el movimiento.
+- GPU: se dibuja la misma malla en tres posiciones horizontales (original y dos copias desplazadas), sin triplicar almacenamiento de vértices; es un prototipo previo a culling/chunks gráficos.
+- Norte-sur: límites polares, sin conexión entre extremos.
+- Zoom: rango 8–52 unidades de cámara, inicio 38; giro horizontal 360 grados.
+- Revisión pendiente de compilación y validación visual de la costura este-oeste.
+- Código: commit `c6bd3e6b30675511af7b7b1b5f209526e2cc64da`.
