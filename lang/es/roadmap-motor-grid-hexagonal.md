@@ -452,3 +452,11 @@ Se agrego una clasificacion determinista por hexagono usando latitud, humedad pr
 - El scroll usa un factor multiplicativo de 1.12 por paso y permite alejar la cámara hasta 750 unidades (antes 52) para observar un mapa de hasta 300×200; la distancia máxima de recorte de cámara pasa a 2000.
 - Se conservan F5 y el botón regenerar, los controles de cámara, mapa envolvente E/O y la instantánea de respaldo v0.1.0.
 - Pendiente verificar compilación y comportamiento visual en PC. Commit `be6fcb1d131f0bef8fd28233ac408f84f8b5e084`.
+
+## Cordilleras conectadas (iteración posterior a v0.1.0)
+
+- Nuevo módulo `GEvolve.Core/GeneradorCordilleras.cs` construye trayectorias terrestres con varios segmentos conectados por semilla. Cada trayectoria serpentea suavemente, tiene centro montañoso, laderas progresivas y se debilita cerca del mar.
+- Las montañas ya no se originan mediante dos bandas longitudinales globales. Pangea crea 5 cadenas; Archipiélagos 13 más cortas; Continentes pequeños 10; Continentes grandes 8, con distribución controlada por la semilla.
+- Altitudes se combinan con llanuras y mesetas; se conserva mar nivel 0, tierra 1–100 y 80–100 impasable. Los biomas alpino y cumbres se asignan por altura con el clasificador existente.
+- Se conservan el diseño UI, la cámara, el zoom amplio, la carga y el respaldo de versión inicial `version-inicial-v0.1.0`.
+- Pendiente compilar y comprobar visualmente el resultado en PC; la forma final de cada cadena dependerá del relieve terrestre disponible.
