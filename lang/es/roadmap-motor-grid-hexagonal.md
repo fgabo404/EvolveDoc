@@ -131,3 +131,9 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Repositorio de código: `fgabo404/Evolve`, último commit `b31e2e59cbc8fc14c50c5663946aebf17dcdf1ad`.
 - **Pendiente de aceptación local:** cerrar aplicación anterior; `git pull origin master`, `dotnet build`, `dotnet run --project .\\GEvolve.Desktop`; confirmar las siete columnas y el giro limitado.
 - **Política de documentación:** usar XML docs para clases/métodos públicos y comentarios técnicos breves sobre decisiones geométricas y renderizado.
+
+## Corrección de compilación de mini-grid
+
+- En la primera ejecución local, `Program.cs` (línea 72) falló con `CS8310` al usar `objetivo + new(...)` sin tipo explícito.
+- Corregido a `objetivo + new Vector3(...)` en `fgabo404/Evolve`, commit `c53a5c90b60979656998acee0a78ffbcabb2a95e`.
+- Pendiente: usuario confirma nueva compilación y funcionamiento 3D de siete celdas. No marcar el hito como completado todavía.
