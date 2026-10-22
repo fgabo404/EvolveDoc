@@ -292,3 +292,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se preserva el render del terreno, la navegación continua y el zoom limitado. En esta etapa los valles/crestas son clasificación lógica; aún falta su refinamiento visual por erosión y rutas.
 - Pruebas incluidas: conteo, valores válidos, reproducibilidad y restricción de cumbres.
 - Código commit `367408e09161f0216ee5152ffb03a25572014fee`; pendiente compilar y revisar localmente.
+
+## Mar hexagonal a nivel cero
+
+- Todos los hexágonos oceánicos permanecen en la cuadrícula, sin eliminar celdas.
+- La elevación lógica de cada celda oceánica y su altura visual quedan exactamente en 0; forman una superficie marina plana.
+- Se mantienen tierra, topología este-oeste y controles de cámara sin cambios.
+- Se agrega una prueba que verifica que todas las celdas marinas sean de nivel 0.
+- Código commit `3b859897cc92a5c6fae0c396adc50de97b8f809a`.
