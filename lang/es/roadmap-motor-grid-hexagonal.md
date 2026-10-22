@@ -393,3 +393,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se ajusta automáticamente el color de las etiquetas numéricas para mantener contraste en terreno oscuro o claro.
 - El océano conserva el azul, el nivel 0 y sus contornos blancos. Sin cambios en biomas, relieve lógico ni generación.
 - Código commit `12cc28d9f4eea70044394d5dd4735e63f88b7340`.
+
+## Hito: versión inicial v0.1.0 (22 de octubre de 2026)
+
+- Se conserva el estado inicial del motor en la rama inmutable por convención `version-inicial-v0.1.0` del repositorio `fgabo404/Evolve`.
+- Commit exacto: `12cc28d9f4eea70044394d5dd4735e63f88b7340`.
+- Incluye generación por tipos de mundo, menú pixelado minimalista gris claro, mapa hexagonal, mundo 200×150, alturas 0–100, escala de grises en tierra, océano azul con contornos blancos, números de altura y cámara orbital.
+- No mover ni editar la rama del hito; los desarrollos futuros continúan en `master`.
+- Se crea una rama de respaldo porque el conector GitHub disponible no expone creación de etiquetas (tags) o releases.
+- Pendiente validación de compilación y ejecución local; el hito indica versión inicial del prototipo, no versión final certificada.
