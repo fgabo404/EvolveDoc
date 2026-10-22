@@ -444,3 +444,11 @@ Se agrego una clasificacion determinista por hexagono usando latitud, humedad pr
 - Se mantiene mapa 200×150, envolvimiento horizontal, escala 0–100, cuadrícula y etiquetas numéricas. Árboles 3D, picos modelados y texturas del boceto son todavía **referencias visuales**, no funcionalidades implementadas.
 - Pruebas ligeras añadidas para clasificación y franja costera; falta ejecutar y revisar compilación en PC con .NET.
 - Instantánea de respaldo version-inicial-v0.1.0 intacta.
+
+## Interfaz: carga y zoom de mundo completo
+
+- Al pulsar Generar mundo o Regenerar mundo se activa la pantalla `CARGANDO MUNDO` / `GENERANDO TERRENO Y BIOMAS` y el cálculo de WorldSystem ocurre en un Task en segundo plano; OpenGL y la construcción de la malla se mantienen en el hilo gráfico.
+- Al completarse el cálculo se dibuja el mundo. Los errores vuelven a configuración con mensaje básico.
+- El scroll usa un factor multiplicativo de 1.12 por paso y permite alejar la cámara hasta 750 unidades (antes 52) para observar un mapa de hasta 300×200; la distancia máxima de recorte de cámara pasa a 2000.
+- Se conservan F5 y el botón regenerar, los controles de cámara, mapa envolvente E/O y la instantánea de respaldo v0.1.0.
+- Pendiente verificar compilación y comportamiento visual en PC. Commit `be6fcb1d131f0bef8fd28233ac408f84f8b5e084`.
