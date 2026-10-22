@@ -275,3 +275,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Zoom: rango 8–52 unidades de cámara, inicio 38; giro horizontal 360 grados.
 - Revisión pendiente de compilación y validación visual de la costura este-oeste.
 - Código: commit `c6bd3e6b30675511af7b7b1b5f209526e2cc64da`.
+
+## Relieve por niveles 0-100
+
+- Clasificación funcional separada de biomas: mar bajo nivel 30 configurable; terreno medio desde nivel del mar hasta 59; alto 60–79; cumbres infranqueables 80–100.
+- `WorldCell.Relieve` y `ReglasRelieve.Clasificar` centralizan el estado. `WorldSystem` incorpora crestas de montaña deterministas sobre la masa continental.
+- Visualización provisional sin bordes: mar azul, tierras verdes, elevaciones altas gris verdoso y cumbres claras; cada cara lateral sigue más oscura que la superior.
+- Continúa la conexión E/O del mundo y los límites N/S. Los rangos ecológicos por bioma, pendientes, paso y erosión permanecen pendientes.
+- Código final `59701e0b820bbbf23852ea34fcd45218ccab66ae`. Requiere prueba local de compilación y captura.
