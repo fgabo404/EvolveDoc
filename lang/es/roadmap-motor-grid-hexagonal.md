@@ -283,3 +283,12 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Visualización provisional sin bordes: mar azul, tierras verdes, elevaciones altas gris verdoso y cumbres claras; cada cara lateral sigue más oscura que la superior.
 - Continúa la conexión E/O del mundo y los límites N/S. Los rangos ecológicos por bioma, pendientes, paso y erosión permanecen pendientes.
 - Código final `59701e0b820bbbf23852ea34fcd45218ccab66ae`. Requiere prueba local de compilación y captura.
+
+## Análisis hexagonal de pendientes y formas de relieve
+
+- Se añadió `GEvolve.Core/AnalizadorRelieve.cs`, que inspecciona hasta seis vecinos por celda usando coordenadas offset odd-r; respeta costura longitudinal E/O y los límites polares N/S.
+- `WorldMap.Analisis` expone las pendientes máxima y media, la forma local (llanura, ladera, valle, cresta, cumbre) y el indicador de paso difícil para cada una de las 5,000 celdas.
+- La diferencia máxima de altura es >=24 para marcar un paso difícil; las cumbres de nivel 80 o superior también lo son. Estos umbrales son provisionales para balance, no reglas definitivas de movilidad.
+- Se preserva el render del terreno, la navegación continua y el zoom limitado. En esta etapa los valles/crestas son clasificación lógica; aún falta su refinamiento visual por erosión y rutas.
+- Pruebas incluidas: conteo, valores válidos, reproducibilidad y restricción de cumbres.
+- Código commit `367408e09161f0216ee5152ffb03a25572014fee`; pendiente compilar y revisar localmente.
