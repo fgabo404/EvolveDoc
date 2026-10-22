@@ -460,3 +460,16 @@ Se agrego una clasificacion determinista por hexagono usando latitud, humedad pr
 - Altitudes se combinan con llanuras y mesetas; se conserva mar nivel 0, tierra 1–100 y 80–100 impasable. Los biomas alpino y cumbres se asignan por altura con el clasificador existente.
 - Se conservan el diseño UI, la cámara, el zoom amplio, la carga y el respaldo de versión inicial `version-inicial-v0.1.0`.
 - Pendiente compilar y comprobar visualmente el resultado en PC; la forma final de cada cadena dependerá del relieve terrestre disponible.
+
+## Generación de masas terrestres por tipo de mundo
+
+Se sustituye la antigua máscara global de masas ovales por `GeneradorMasasTerrestres.Crear(WorldSettings)`, llamado desde `WorldSystem.Generar`. El nuevo módulo utiliza ruido fractal multiescala, deformación de coordenadas y regiones superpuestas con envolvimiento de longitud. Cada modalidad dispone de una distribución distinta de centros, número de regiones y escalas:
+
+- **Pangea:** núcleo dominante y seis regiones anexas, buscando una gran masa continental con penínsulas.
+- **Continentes grandes:** cinco regiones amplias distribuidas de forma escalonada.
+- **Continentes pequeños:** once regiones medianas.
+- **Archipiélagos:** treinta y cinco regiones pequeñas con menor distorsión de costa.
+
+Se mantiene el porcentaje exacto de océanos, la semilla determinista y las etapas posteriores sin cambios: distancias costeras, cordilleras, relieve, biomas y color. La conectividad final real de cada mundo todavía requiere validación topológica con componentes conexas; esta primera integración no garantiza matemáticamente el número final de continentes.
+
+Commit de integración: `1d8de71840d56c6d964ccdb4512e5f16ad162a6d`. Pendiente compilación y revisión visual en PC.
