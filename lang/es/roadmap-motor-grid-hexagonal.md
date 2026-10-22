@@ -473,3 +473,9 @@ Se sustituye la antigua máscara global de masas ovales por `GeneradorMasasTerre
 Se mantiene el porcentaje exacto de océanos, la semilla determinista y las etapas posteriores sin cambios: distancias costeras, cordilleras, relieve, biomas y color. La conectividad final real de cada mundo todavía requiere validación topológica con componentes conexas; esta primera integración no garantiza matemáticamente el número final de continentes.
 
 Commit de integración: `1d8de71840d56c6d964ccdb4512e5f16ad162a6d`. Pendiente compilación y revisión visual en PC.
+
+## Correccion de siluetas continentales: sin ovalos ni rejillas
+
+A partir del feedback visual del mapa anterior (masas ovaladas en filas), se sustituyo `GeneradorMasasTerrestres` por una metodologia de **esqueletos ramificados**. Cada grupo continental nace con una espina serpenteante y varios brazos conectados; campos fractales multiescala deforman sus costas con bahias, peninsulas y estrechos. Los centros se distribuyen sin grilla. Los cuatro tipos conservan metodos parametrizados distintos: Pangea (un grupo grande), Continentes grandes (4), Continentes pequenos (9) y Archipielagos (21). Se mantiene el calculo posterior de cuota de oceanos, relieve, cordilleras y biomas, asi como la continuidad este-oeste.
+
+Nota: la cuota de oceano puede separar o conectar grupos despues del umbral; todavia no hay comprobacion matematica de conectividad. Falta verificacion visual/compilacion con .NET en PC. Commit `b870e02278bbe73fa688490d3d3967f33cc77a1b`.
