@@ -78,3 +78,11 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Se creó `GEvolve.Core` (`net10.0`), vinculado a `GEvolve.Desktop`; `dotnet build` completado según evidencia de la terminal.
 - `GEvolve.Core/HexCoord.cs` implementa coordenadas axiales `(Q,R)`, coordenada cúbica derivada `S`, seis vecinos y distancia.
 - **Pendiente para completar fase 1:** conversión axial↔posición XY con orientación acordada, pruebas de identidad/distancia y retirar `Class1.cs` de plantilla.
+
+## Avance — conversión axial/XY documentada
+
+- Repositorio de código: `fgabo404/Evolve`, rama `master`.
+- Añadido `GEvolve.Core/HexGeometry.cs` con XML docs para `APosicion`, `AHexagono`, validación de radio y redondeo cúbico; commit `14dd5d1e1da0e3ced4338d374c1140022ddef004`.
+- Eliminado `GEvolve.Core/Class1.cs` de plantilla; commit `accbc079d7f18ef405643b6f139790695b23ccbe`.
+- **Estado:** fase 1 todavía en progreso, pendiente de compilación y pruebas locales de inversión/distancia.
+- **Política de trabajo acordada:** el asistente modifica código directamente en GitHub, con comentarios y documentación XML para APIs; el usuario ejecuta `git pull`, compila y valida localmente antes de cerrar cada fase. Documentar avances en este roadmap.
