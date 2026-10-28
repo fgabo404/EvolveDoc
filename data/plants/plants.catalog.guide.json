@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.3.0",
-  "contentVersion": "0.4.0",
+  "contentVersion": "0.6.0",
   "status": "design_guide_requires_resolution",
   "defaultLanguage": "en",
   "supportedLanguages": [
@@ -28,18 +28,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian",
-        "temperate_forest_boreal"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -59,7 +54,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Abedul enano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000025",
@@ -79,10 +74,7 @@
             "en": "Dwarf Birch",
             "es": "Abedul enano"
           },
-          "sourceLabel": "Abedul enano",
-          "biomeVariantIds": [
-            "tundra_eurasian"
-          ]
+          "sourceLabel": "Abedul enano"
         },
         {
           "id": "plant_birches",
@@ -90,12 +82,10 @@
             "en": "Birches",
             "es": "Abedules"
           },
-          "sourceLabel": "Abedules",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Abedules"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000192",
@@ -111,22 +101,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african",
-        "tropical_forest_african",
-        "savanna_australian",
-        "temperate_forest_south_african_and_australian",
-        "desert_australian",
-        "desert_african_and_arabian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -146,7 +127,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Acacias africanas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000181",
@@ -167,11 +148,7 @@
             "en": "African Acacias",
             "es": "Acacias africanas"
           },
-          "sourceLabel": "Acacias africanas",
-          "biomeVariantIds": [
-            "savanna_african",
-            "tropical_forest_african"
-          ]
+          "sourceLabel": "Acacias africanas"
         },
         {
           "id": "plant_australian_acacias",
@@ -179,11 +156,7 @@
             "en": "Australian Acacias",
             "es": "Acacias australianas"
           },
-          "sourceLabel": "Acacias australianas",
-          "biomeVariantIds": [
-            "savanna_australian",
-            "temperate_forest_south_african_and_australian"
-          ]
+          "sourceLabel": "Acacias australianas"
         },
         {
           "id": "plant_desert_acacias",
@@ -191,10 +164,7 @@
             "en": "Desert Acacias",
             "es": "Acacias del desierto"
           },
-          "sourceLabel": "Acacias del desierto",
-          "biomeVariantIds": [
-            "desert_australian"
-          ]
+          "sourceLabel": "Acacias del desierto"
         },
         {
           "id": "plant_arid_land_acacias",
@@ -202,12 +172,10 @@
             "en": "Arid-Land Acacias",
             "es": "Acacias desérticas"
           },
-          "sourceLabel": "Acacias desérticas",
-          "biomeVariantIds": [
-            "desert_african_and_arabian"
-          ]
+          "sourceLabel": "Acacias desérticas"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_olive",
@@ -223,10 +191,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -260,7 +224,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Acebuche",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000104"
@@ -269,7 +233,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_agaves",
@@ -285,10 +250,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -315,7 +276,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Agaves",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000010",
@@ -325,7 +286,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000193",
@@ -341,17 +303,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -371,7 +329,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Alerce americano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000087",
@@ -391,10 +349,7 @@
             "en": "American Larch",
             "es": "Alerce americano"
           },
-          "sourceLabel": "Alerce americano",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Alerce americano"
         },
         {
           "id": "plant_siberian_larches",
@@ -402,12 +357,10 @@
             "en": "Siberian Larches",
             "es": "Alerces siberianos"
           },
-          "sourceLabel": "Alerces siberianos",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Alerces siberianos"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_polar_marine_algae",
@@ -423,10 +376,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -453,7 +402,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Algas marinas polares",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ALG#000005"
@@ -462,7 +411,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_tropical_marine_algae",
@@ -478,10 +428,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -508,7 +454,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Algas marinas tropicales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ALG#000007"
@@ -517,7 +463,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_regional_brown_and_red_algae",
@@ -533,10 +480,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_temperate_coast_and_sea"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -563,7 +506,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Algas pardas y rojas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ALG#000006",
@@ -573,7 +516,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_halophytic_shrubs",
@@ -589,10 +533,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -619,7 +559,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos halófitos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000075"
@@ -628,7 +568,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_australian_saltbushes",
@@ -644,10 +585,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -674,7 +611,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos salinos australianos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000018"
@@ -683,7 +620,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_xerophytic_shrubs",
@@ -699,10 +637,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -729,7 +663,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos xerófitos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000166"
@@ -738,7 +672,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_shrubs_and_cushion_plants",
@@ -754,10 +689,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -784,7 +715,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arbustos y plantas almohadilladas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000014"
@@ -793,7 +724,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_maples",
@@ -809,10 +741,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -839,7 +767,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arces",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000005",
@@ -849,7 +777,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000194",
@@ -865,18 +794,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian",
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -896,7 +820,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Artemisas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000017",
@@ -915,10 +839,7 @@
             "en": "Wormwoods",
             "es": "Artemisas"
           },
-          "sourceLabel": "Artemisas",
-          "biomeVariantIds": [
-            "desert_central_asian"
-          ]
+          "sourceLabel": "Artemisas"
         },
         {
           "id": "plant_wormwoods_703907",
@@ -926,12 +847,10 @@
             "en": "Wormwoods",
             "es": "Artemisas (Artemisia spp.)"
           },
-          "sourceLabel": "Artemisas (Artemisia spp.)",
-          "biomeVariantIds": [
-            "savanna_eurasian"
-          ]
+          "sourceLabel": "Artemisas (Artemisia spp.)"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_arctic_blueberries",
@@ -947,10 +866,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -977,7 +892,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Arándanos árticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000178"
@@ -986,7 +901,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_hazel",
@@ -1002,10 +918,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1032,7 +944,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Avellano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000048"
@@ -1041,7 +953,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000195",
@@ -1057,17 +970,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -1087,7 +996,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bambúes de bosque seco",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000054",
@@ -1106,10 +1015,7 @@
             "en": "Dry-Forest Bamboos",
             "es": "Bambúes de bosque seco"
           },
-          "sourceLabel": "Bambúes de bosque seco",
-          "biomeVariantIds": [
-            "tropical_forest_asian"
-          ]
+          "sourceLabel": "Bambúes de bosque seco"
         },
         {
           "id": "plant_asian_tropical_bamboos",
@@ -1117,12 +1023,10 @@
             "en": "Asian Tropical Bamboos",
             "es": "Bambúes tropicales asiáticos"
           },
-          "sourceLabel": "Bambúes tropicales asiáticos",
-          "biomeVariantIds": [
-            "tropical_forest_asian"
-          ]
+          "sourceLabel": "Bambúes tropicales asiáticos"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000196",
@@ -1138,18 +1042,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian",
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -1169,7 +1068,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bananos silvestres (Musa spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000098",
@@ -1188,10 +1087,7 @@
             "en": "Wild Bananas",
             "es": "Bananos silvestres (Musa spp.)"
           },
-          "sourceLabel": "Bananos silvestres (Musa spp.)",
-          "biomeVariantIds": [
-            "tropical_forest_asian"
-          ]
+          "sourceLabel": "Bananos silvestres (Musa spp.)"
         },
         {
           "id": "plant_new_guinea_wild_bananas",
@@ -1199,12 +1095,10 @@
             "en": "New Guinea Wild Bananas",
             "es": "Bananos silvestres de Nueva Guinea"
           },
-          "sourceLabel": "Bananos silvestres de Nueva Guinea",
-          "biomeVariantIds": [
-            "tropical_forest_oceanian"
-          ]
+          "sourceLabel": "Bananos silvestres de Nueva Guinea"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_banksias",
@@ -1220,10 +1114,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1250,7 +1140,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Banksias",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000023"
@@ -1259,7 +1149,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_african_baobab",
@@ -1275,11 +1166,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african",
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1306,7 +1192,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Baobab africano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000007"
@@ -1315,7 +1201,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_tundra_berries",
@@ -1331,10 +1218,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1361,7 +1244,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bayas de tundra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000179",
@@ -1371,7 +1254,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000198",
@@ -1387,18 +1271,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_temperate_coast_and_sea",
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -1418,7 +1297,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bosques de kelp en costas templadas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ALG#000003",
@@ -1438,10 +1317,7 @@
             "en": "Temperate Kelp Forests",
             "es": "Bosques de kelp en costas templadas apropiadas"
           },
-          "sourceLabel": "Bosques de kelp en costas templadas apropiadas",
-          "biomeVariantIds": [
-            "marine_temperate_coast_and_sea"
-          ]
+          "sourceLabel": "Bosques de kelp en costas templadas apropiadas"
         },
         {
           "id": "plant_subantarctic_kelp",
@@ -1449,12 +1325,10 @@
             "en": "Subantarctic Kelp",
             "es": "Kelp subantártico en costas apropiadas"
           },
-          "sourceLabel": "Kelp subantártico en costas apropiadas",
-          "biomeVariantIds": [
-            "marine_polar_and_subpolar"
-          ]
+          "sourceLabel": "Kelp subantártico en costas apropiadas"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_cape_bulbs_and_geophytes",
@@ -1470,10 +1344,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1500,7 +1370,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Bulbos y geófitas del Cabo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000186"
@@ -1509,7 +1379,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_cacao",
@@ -1525,10 +1396,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1562,7 +1429,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Cacao silvestre, en su distribución nativa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000168"
@@ -1573,7 +1440,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_south_american_cacti",
@@ -1589,10 +1457,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1619,7 +1483,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Cactáceas sudamericanas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000057"
@@ -1628,7 +1492,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_squashes",
@@ -1644,10 +1509,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1681,7 +1542,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Calabazas silvestres (Cucurbita spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000052",
@@ -1694,7 +1555,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_brazil_nut",
@@ -1710,10 +1572,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1740,7 +1598,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Castaña de Brasil, Amazonía",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000024"
@@ -1749,7 +1607,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_asian_chestnuts",
@@ -1765,10 +1624,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1795,7 +1650,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Castaños asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000036",
@@ -1805,7 +1660,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_barley",
@@ -1821,10 +1677,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1858,7 +1710,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Cebada silvestre, en sus regiones nativas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000078"
@@ -1869,7 +1721,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_coigue",
@@ -1885,10 +1738,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1922,7 +1771,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Coigüe (Nothofagus dombeyi)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000101"
@@ -1931,7 +1780,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_patagonian_tussock_grasses",
@@ -1947,10 +1797,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1977,7 +1823,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Coirones patagónicos (Festuca y afines)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000068"
@@ -1986,7 +1832,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_edelweiss",
@@ -2002,10 +1849,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2032,7 +1875,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Edelweiss",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000092"
@@ -2041,7 +1884,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000204",
@@ -2057,18 +1901,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american",
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -2095,7 +1934,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Encinas y robles californianos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000132",
@@ -2118,10 +1957,7 @@
             "en": "Californian Oaks",
             "es": "Encinas y robles californianos"
           },
-          "sourceLabel": "Encinas y robles californianos",
-          "biomeVariantIds": [
-            "temperate_forest_american"
-          ]
+          "sourceLabel": "Encinas y robles californianos"
         },
         {
           "id": "plant_european_oaks",
@@ -2129,10 +1965,7 @@
             "en": "European Oaks",
             "es": "Robles europeos"
           },
-          "sourceLabel": "Robles europeos",
-          "biomeVariantIds": [
-            "temperate_forest_eurasian"
-          ]
+          "sourceLabel": "Robles europeos"
         },
         {
           "id": "plant_north_american_oaks",
@@ -2140,12 +1973,10 @@
             "en": "North American Oaks",
             "es": "Robles norteamericanos"
           },
-          "sourceLabel": "Robles norteamericanos",
-          "biomeVariantIds": [
-            "temperate_forest_american"
-          ]
+          "sourceLabel": "Robles norteamericanos"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_mountain_junipers",
@@ -2161,10 +1992,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2191,7 +2018,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Enebros de montaña",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000082",
@@ -2201,7 +2028,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_ethiopian_highland_ensete",
@@ -2217,10 +2045,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2247,7 +2071,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Ensete en tierras altas etíopes apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000061"
@@ -2256,7 +2080,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_heaths",
@@ -2272,10 +2097,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2302,7 +2123,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Erica spp.",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000062"
@@ -2311,7 +2132,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_cordgrasses_and_saltmarsh_grasses",
@@ -2327,10 +2149,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_coastal_wetlands"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2357,7 +2175,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Espartina y otros pastos de marisma (regiones compatibles)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000160",
@@ -2367,7 +2185,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000197",
@@ -2383,19 +2202,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian",
-        "savanna_australian",
-        "desert_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -2415,7 +2228,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Eucaliptos de clima mediterráneo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000064",
@@ -2435,10 +2248,7 @@
             "en": "Mediterranean Eucalypts",
             "es": "Eucaliptos de clima mediterráneo"
           },
-          "sourceLabel": "Eucaliptos de clima mediterráneo",
-          "biomeVariantIds": [
-            "temperate_forest_south_african_and_australian"
-          ]
+          "sourceLabel": "Eucaliptos de clima mediterráneo"
         },
         {
           "id": "plant_tropical_savanna_eucalypts",
@@ -2446,10 +2256,7 @@
             "en": "Tropical Savanna Eucalypts",
             "es": "Eucaliptos de sabana tropical"
           },
-          "sourceLabel": "Eucaliptos de sabana tropical",
-          "biomeVariantIds": [
-            "savanna_australian"
-          ]
+          "sourceLabel": "Eucaliptos de sabana tropical"
         },
         {
           "id": "plant_arid_land_eucalypts",
@@ -2457,12 +2264,10 @@
             "en": "Arid-Land Eucalypts",
             "es": "Eucaliptos de zonas áridas"
           },
-          "sourceLabel": "Eucaliptos de zonas áridas",
-          "biomeVariantIds": [
-            "desert_australian"
-          ]
+          "sourceLabel": "Eucaliptos de zonas áridas"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_marine_phytoplankton",
@@ -2478,10 +2283,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2508,7 +2309,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Fitoplancton marino",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ALG#000002"
@@ -2517,7 +2318,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_beans",
@@ -2533,10 +2335,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2570,7 +2368,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Frijoles silvestres (Phaseolus spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000116",
@@ -2583,7 +2381,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_gentians",
@@ -2599,10 +2398,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2629,7 +2424,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gencianas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000070"
@@ -2638,7 +2433,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_blue_grama",
@@ -2654,10 +2450,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2684,7 +2476,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Grama azul (Bouteloua gracilis)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000028"
@@ -2693,7 +2485,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_cerrado_grasses",
@@ -2709,10 +2502,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2739,7 +2528,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas del Cerrado",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000094"
@@ -2748,7 +2537,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_ephemeral_rainfall_grasses",
@@ -2764,10 +2554,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2794,7 +2580,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas efímeras tras lluvias",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000164"
@@ -2803,7 +2589,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_northern_australian_native_grasses",
@@ -2819,10 +2606,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2849,7 +2632,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas nativas del norte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000159"
@@ -2858,7 +2641,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_pampas_grasses",
@@ -2874,10 +2658,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2904,7 +2684,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Gramíneas pampeanas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000114"
@@ -2913,7 +2693,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_european_beech",
@@ -2929,10 +2710,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2966,7 +2743,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Haya europea",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000066"
@@ -2975,7 +2752,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_ichu_grass",
@@ -2991,10 +2769,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3021,7 +2795,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Ichu",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000080"
@@ -3030,7 +2804,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_creosote_bushes",
@@ -3046,10 +2821,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3076,7 +2847,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Jarillas (Larrea spp.), Monte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000089"
@@ -3085,7 +2856,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_shea_tree",
@@ -3101,10 +2873,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3131,7 +2899,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Karité, sabanas de África occidental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000183"
@@ -3140,7 +2908,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_lenga_beech",
@@ -3156,10 +2925,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3193,7 +2958,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Lenga (Nothofagus pumilio)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000102"
@@ -3202,7 +2967,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_east_african_giant_lobelias",
@@ -3218,10 +2984,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3248,7 +3010,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Lobelias gigantes, montañas de África oriental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000093"
@@ -3257,7 +3019,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000199",
@@ -3273,19 +3036,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian",
-        "tundra_subantarctic",
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -3305,7 +3062,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Líquenes",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "FNG#000001",
@@ -3324,11 +3081,7 @@
             "en": "Lichens",
             "es": "Líquenes"
           },
-          "sourceLabel": "Líquenes",
-          "biomeVariantIds": [
-            "tundra_eurasian",
-            "tundra_subantarctic"
-          ]
+          "sourceLabel": "Líquenes"
         },
         {
           "id": "plant_reindeer_lichens",
@@ -3336,12 +3089,10 @@
             "en": "Reindeer Lichens",
             "es": "Líquenes de reno"
           },
-          "sourceLabel": "Líquenes de reno",
-          "biomeVariantIds": [
-            "tundra_north_american_and_greenland"
-          ]
+          "sourceLabel": "Líquenes de reno"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000200",
@@ -3357,18 +3108,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast",
-        "marine_coastal_wetlands"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -3388,7 +3134,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Manglares en litorales tropicales compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000142",
@@ -3408,10 +3154,7 @@
             "en": "Tropical Mangroves",
             "es": "Manglares en litorales tropicales compatibles"
           },
-          "sourceLabel": "Manglares en litorales tropicales compatibles",
-          "biomeVariantIds": [
-            "marine_tropical_coast"
-          ]
+          "sourceLabel": "Manglares en litorales tropicales compatibles"
         },
         {
           "id": "plant_red_mangrove_and_other_native_mangroves",
@@ -3419,12 +3162,10 @@
             "en": "Red Mangrove and Other Native Mangroves",
             "es": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)"
           },
-          "sourceLabel": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)",
-          "biomeVariantIds": [
-            "marine_coastal_wetlands"
-          ]
+          "sourceLabel": "Mangle rojo y otros mangles nativos (costas tropicales y subtropicales)"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_manzanitas",
@@ -3440,10 +3181,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3470,7 +3207,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Manzanitas (Arctostaphylos spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000015"
@@ -3479,7 +3216,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_mesquites",
@@ -3495,10 +3233,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3525,7 +3259,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Mezquites",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000129",
@@ -3535,7 +3269,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_cloudberry",
@@ -3551,10 +3286,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3581,7 +3312,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Mora de los pantanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000144"
@@ -3590,7 +3321,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_mosses",
@@ -3606,12 +3338,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian",
-        "tundra_north_american_and_greenland",
-        "tundra_subantarctic"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3638,7 +3364,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Musgos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000128",
@@ -3648,7 +3374,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_prickly_pears",
@@ -3664,10 +3391,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3694,7 +3417,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Nopales (Opuntia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000106",
@@ -3704,7 +3427,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_kola_trees",
@@ -3720,10 +3444,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3750,7 +3470,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Nuez de cola (Cola spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000046",
@@ -3760,7 +3480,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_african_oil_palm",
@@ -3776,10 +3497,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3806,7 +3523,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palma aceitera africana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000058"
@@ -3815,7 +3532,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_regional_savanna_palms",
@@ -3831,10 +3549,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3861,7 +3575,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palmas de sabana regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000030",
@@ -3871,7 +3585,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_regional_palms_and_dipterocarps",
@@ -3887,10 +3602,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3917,7 +3628,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palmas y dipterocarpáceas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000153",
@@ -3927,7 +3638,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_palms_and_pandanus",
@@ -3943,10 +3655,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3973,7 +3681,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Palmas y pandanus",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000096",
@@ -3983,7 +3691,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_date_palm",
@@ -3999,10 +3708,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4040,7 +3745,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wetland_pandanus",
@@ -4056,10 +3762,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4086,7 +3788,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pandanus en zonas húmedas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000111"
@@ -4095,7 +3797,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_sugarcane_relatives",
@@ -4111,10 +3814,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4141,7 +3840,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres de caña de azúcar (Saccharum spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000146"
@@ -4150,7 +3849,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_potato_relatives",
@@ -4166,10 +3866,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4196,7 +3892,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres de la papa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000155"
@@ -4205,7 +3901,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_quinoa_relatives",
@@ -4221,10 +3918,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4251,7 +3944,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres de la quinua",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000039"
@@ -4260,7 +3953,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_sahelian_wild_pearl_millet_relatives",
@@ -4276,10 +3970,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4306,7 +3996,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Parientes silvestres del mijo perla, Sahel",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000038"
@@ -4315,7 +4005,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_afroalpine_grasses",
@@ -4331,10 +4022,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4361,7 +4048,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos afroalpinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000067"
@@ -4370,7 +4057,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_alpine_grasses",
@@ -4386,10 +4074,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4416,7 +4100,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos alpinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000031",
@@ -4426,7 +4110,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_asian_alpine_grasses",
@@ -4442,10 +4127,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4472,7 +4153,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos alpinos asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000085"
@@ -4481,7 +4162,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_big_bluestem",
@@ -4497,10 +4179,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4527,7 +4205,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos altos (Andropogon gerardii)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000013"
@@ -4536,7 +4214,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_regional_desert_grasses",
@@ -4552,10 +4231,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4582,7 +4257,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos desérticos regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000163"
@@ -4591,7 +4266,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_eurasian_steppe_grasses",
@@ -4607,10 +4283,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4637,7 +4309,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos esteparios euroasiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000162"
@@ -4646,7 +4318,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_regional_seagrasses",
@@ -4662,10 +4335,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4692,7 +4361,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos marinos (Thalassia y otros géneros regionales)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000167",
@@ -4702,7 +4371,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_subantarctic_grasses",
@@ -4718,10 +4388,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_subantarctic"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4748,7 +4414,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pastos subantárticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000125"
@@ -4757,7 +4423,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_pequi",
@@ -4773,10 +4440,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4803,7 +4466,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pequi (Caryocar brasiliense), Cerrado",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000033"
@@ -4812,7 +4475,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000201",
@@ -4828,18 +4492,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal",
-        "alpine_european"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -4866,7 +4525,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pino silvestre",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000123",
@@ -4885,10 +4544,7 @@
             "en": "Scots Pine",
             "es": "Pino silvestre"
           },
-          "sourceLabel": "Pino silvestre",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Pino silvestre"
         },
         {
           "id": "plant_mountain_pines",
@@ -4896,12 +4552,10 @@
             "en": "Mountain Pines",
             "es": "Pinos de montaña"
           },
-          "sourceLabel": "Pinos de montaña",
-          "biomeVariantIds": [
-            "alpine_european"
-          ]
+          "sourceLabel": "Pinos de montaña"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000202",
@@ -4917,18 +4571,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_subantarctic",
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -4948,7 +4597,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Plantas almohadilladas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000021",
@@ -4967,10 +4616,7 @@
             "en": "Cushion Plants",
             "es": "Plantas almohadilladas"
           },
-          "sourceLabel": "Plantas almohadilladas",
-          "biomeVariantIds": [
-            "tundra_subantarctic"
-          ]
+          "sourceLabel": "Plantas almohadilladas"
         },
         {
           "id": "plant_andean_cushion_plants",
@@ -4978,12 +4624,10 @@
             "en": "Andean Cushion Plants",
             "es": "Plantas almohadilladas andinas"
           },
-          "sourceLabel": "Plantas almohadilladas andinas",
-          "biomeVariantIds": [
-            "alpine_andean"
-          ]
+          "sourceLabel": "Plantas almohadilladas andinas"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_atacama_coastal_fog_plants",
@@ -4999,10 +4643,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5029,7 +4669,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Plantas de niebla costera, sectores de Atacama",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000169"
@@ -5038,7 +4678,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_estuarine_halophytes",
@@ -5054,10 +4695,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_coastal_wetlands"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5084,7 +4721,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Plantas halófitas de estuario",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000147"
@@ -5093,7 +4730,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_proteas",
@@ -5109,10 +4747,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5139,7 +4773,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Proteas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000131"
@@ -5148,7 +4782,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000203",
@@ -5164,17 +4799,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -5201,7 +4832,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Pícea blanca",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000119",
@@ -5222,10 +4853,7 @@
             "en": "White Spruce",
             "es": "Pícea blanca"
           },
-          "sourceLabel": "Pícea blanca",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Pícea blanca"
         },
         {
           "id": "plant_black_spruce",
@@ -5233,10 +4861,7 @@
             "en": "Black Spruce",
             "es": "Pícea negra"
           },
-          "sourceLabel": "Pícea negra",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Pícea negra"
         },
         {
           "id": "plant_eurasian_spruces",
@@ -5244,12 +4869,10 @@
             "en": "Eurasian Spruces",
             "es": "Píceas euroasiáticas"
           },
-          "sourceLabel": "Píceas euroasiáticas",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Píceas euroasiáticas"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_queuna_trees",
@@ -5265,10 +4888,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5295,7 +4914,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Queñua (Polylepis spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000127",
@@ -5305,7 +4924,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_soapbark_tree",
@@ -5321,10 +4941,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5351,7 +4967,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Quillay",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000139"
@@ -5360,7 +4976,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_african_raffia_palms",
@@ -5376,10 +4993,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5406,7 +5019,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Rafia africana (Raphia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000140"
@@ -5415,7 +5028,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_restios",
@@ -5431,10 +5045,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5461,7 +5071,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Restios",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000059"
@@ -5470,7 +5080,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_asian_oaks_and_maples",
@@ -5486,10 +5097,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5516,7 +5123,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Robles y arces asiáticos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000135",
@@ -5526,7 +5133,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_high_altitude_rhododendrons",
@@ -5542,10 +5150,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5572,7 +5176,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Rododendros de altura",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000143"
@@ -5581,7 +5185,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_sonoran_saguaro",
@@ -5597,10 +5202,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5627,7 +5228,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Saguaro, Sonora",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000032"
@@ -5636,7 +5237,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "PLT#000205",
@@ -5652,18 +5254,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_north_american_and_greenland",
-        "tundra_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -5683,7 +5280,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Sauces enanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000148",
@@ -5702,10 +5299,7 @@
             "en": "Dwarf Willows",
             "es": "Sauces enanos"
           },
-          "sourceLabel": "Sauces enanos",
-          "biomeVariantIds": [
-            "tundra_north_american_and_greenland"
-          ]
+          "sourceLabel": "Sauces enanos"
         },
         {
           "id": "plant_arctic_willows",
@@ -5713,12 +5307,10 @@
             "en": "Arctic Willows",
             "es": "Sauces árticos"
           },
-          "sourceLabel": "Sauces árticos",
-          "biomeVariantIds": [
-            "tundra_eurasian"
-          ]
+          "sourceLabel": "Sauces árticos"
         }
-      ]
+      ],
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_saxaul",
@@ -5734,10 +5326,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5764,7 +5352,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Saxaúl (Haloxylon spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000076"
@@ -5773,7 +5361,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_giant_groundsels",
@@ -5789,10 +5378,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5819,7 +5404,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Senecios gigantes (Dendrosenecio spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000056",
@@ -5829,7 +5414,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_african_wild_sorghums",
@@ -5845,10 +5431,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5875,7 +5457,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Sorgos silvestres africanos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000158"
@@ -5884,7 +5466,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_spinifex_grasses",
@@ -5900,10 +5483,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5930,7 +5509,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Spinifex (Triodia spp.)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000170"
@@ -5939,7 +5518,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_wild_taro",
@@ -5955,10 +5535,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5985,7 +5561,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Taro silvestre en su área nativa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000047"
@@ -5994,7 +5570,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_taro_and_regional_aroids",
@@ -6010,10 +5587,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6040,7 +5613,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Taro y otras aráceas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000047",
@@ -6050,7 +5623,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_native_teak",
@@ -6066,10 +5640,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6103,7 +5673,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Teca en su distribución nativa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000165"
@@ -6112,7 +5682,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_mesoamerican_teosinte",
@@ -6128,10 +5699,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6158,7 +5725,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Teosinte, en su distribución mesoamericana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000189",
@@ -6171,7 +5738,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_southwest_asian_wild_wheat",
@@ -6187,10 +5755,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6224,7 +5788,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Trigo silvestre, solo en sus regiones nativas del sudoeste asiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000172",
@@ -6237,7 +5801,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_mesoamerican_vanilla",
@@ -6253,10 +5818,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6283,7 +5844,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Vainilla (Vanilla planifolia), Mesoamérica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000182"
@@ -6292,7 +5853,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_native_wild_grapevine",
@@ -6308,10 +5870,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6345,7 +5903,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Vid silvestre en hábitats nativos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000185"
@@ -6354,7 +5912,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_eelgrass_and_other_seagrasses",
@@ -6370,10 +5929,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_temperate_coast_and_sea"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6400,7 +5955,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Zostera y otros pastos marinos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000190"
@@ -6409,7 +5964,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_amazonian_rubber_tree",
@@ -6425,10 +5981,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6455,7 +6007,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árbol del caucho (Hevea brasiliensis), Amazonía",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000077"
@@ -6464,7 +6016,8 @@
         "selectionMode": "specific_name_interpretation",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_regional_tropical_timber_trees",
@@ -6480,10 +6033,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6517,7 +6066,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árboles de maderas tropicales regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000097",
@@ -6527,7 +6076,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_miombo_trees",
@@ -6543,10 +6093,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6573,7 +6119,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árboles de miombo (Brachystegia spp.), donde corresponda",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000029",
@@ -6583,7 +6129,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     },
     {
       "id": "plant_sal_trees",
@@ -6599,10 +6146,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6629,7 +6172,7 @@
         "eligibility": "Only instantiate after the exact species is confirmed cultivable; flora presence alone does not imply agricultural use."
       },
       "sourceLabel": "Árboles de sal (Shorea robusta), regiones adecuadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "PLT#000154"
@@ -6638,7 +6181,8 @@
         "selectionMode": "representative_species_selection",
         "interpretationStatus": "proposed_requires_native_range_and_habitat_review",
         "inheritResourceBindings": false
-      }
+      },
+      "biomeSubtypeIds": []
     }
   ],
   "agriculturalCropCandidates": [
