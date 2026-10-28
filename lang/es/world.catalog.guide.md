@@ -22,8 +22,8 @@ Las colecciones son planas y se relacionan por IDs. Los nombres visibles usan `{
 
 | Campo | Significado |
 | --- | --- |
-| `biomes` | Seis categorías generales de bioma. |
-| `biomeSubtypes` | Veinte subtipos ecológicos, sin asignaciones de contenido. |
+| `biomes` | Siete categorías generales de bioma. |
+| `biomeSubtypes` | Veintidós subtipos ecológicos, sin asignaciones de contenido. |
 | `speciesCandidates` | Entradas de flora y fauna, incluidos grupos que deben concretarse. |
 | `geologicalResourceCandidates` | Materiales y menas del documento. Extraer un depósito no concede automáticamente metal refinado. |
 | `resourceOccurrences` | Cada aparición documentada de flora, fauna y minería, con texto fuente, ID y método de extracción cuando corresponde; no se asigna automáticamente a subtipos. |
@@ -36,7 +36,7 @@ Las colecciones son planas y se relacionan por IDs. Los nombres visibles usan `{
 
 ## Estructura oficial de biomas y subtipos
 
-Seis biomas principales y veinte subtipos ecológicos sin división continental. JSON activo: `data/world/biomes.json`. Copia anterior: `data/world/Old/biomes.old.json`.
+Siete biomas principales y veintidós subtipos ecológicos sin división continental. JSON activo: `data/world/biomes.json`. Copia anterior: `data/world/Old/biomes.old.json`.
 
 ### 1. Desierto
 
@@ -76,6 +76,11 @@ Seis biomas principales y veinte subtipos ecológicos sin división continental.
 - Rocoso
 - Acantilados
 
+### 7. Polo
+
+- Polo Norte
+- Polo Sur
+
 **Cumbres:** por encima del nivel 100 son infranqueables y no constituyen un subtipo de Montaña. Su representación lógica está pendiente de definir.
 
 **Pendiente:** no se asignan flora, fauna, minerales, recursos, probabilidades ni rangos ecológicos a estos subtipos.
@@ -90,7 +95,7 @@ Los IDs agrícolas `wheat` y `maize` son vínculos propuestos para investigació
 
 ## 4. Contenido conservado
 
-Se conservan las 485 apariciones históricas, sin vínculos activos a biomas o subtipos. La estructura vigente contiene seis biomas y veinte subtipos.
+Se conservan las 485 apariciones históricas, sin vínculos activos a biomas o subtipos. La estructura vigente contiene siete biomas y veintidós subtipos.
 
 Tres líneas explicativas después de la última lista de flora alpina se guardan como notas de distribución, no como plantas. Las etapas mineras siguen siendo apariciones por método. No se fusionan automáticamente materiales similares.
 
@@ -111,6 +116,43 @@ Los productos animales registran posibilidades de la fuente y decisiones explíc
 **Principio aprobado:** la altitud limita la **compatibilidad** de los biomas, pero no los determina por sí sola. La selección posterior también deberá considerar temperatura, humedad y ubicación geográfica. La tectónica genera el relieve y, posteriormente, un clasificador ambiental determina el bioma compatible.
 
 **Rangos por subtipo pendientes:** se retiró la tabla provisional para los siete biomas anteriores. Se conserva la escala de 0 a 100 y la equivalencia de 40 m por nivel.
+
+## Sistema polar mixto y propuesta de rangos (2026-10-27)
+
+**Aprobado:** el Polo es el séptimo bioma y tiene los subtipos Polo Norte y Polo Sur. Se adopta **núcleo polar permanente + transición climática exterior**; una celda polar puede ser agua sin convertirse en tierra. La tundra sigue siendo un bioma distinto. Los subtipos de Polo son una clasificación del entorno; la cubierta de hielo física queda para una capa futura.
+
+**Límites numéricos propuestos, aún sin aprobación individual:** núcleo permanente 80°–90° en cada hemisferio; transición dependiente de temperatura y elevación entre 65°–80°. Los rangos de latitud de la tabla son **absolutos** (N o S), excepto Polo Norte y Polo Sur, que especifican hemisferio.
+
+**Escala aprobada:** nivel 0–100 equivalente a 0–4,000 metros, 40 m por nivel. Cumbres superiores a 100 infranqueables, sin pertenecer a ningún subtipo; el modo de codificar alturas superiores a 100 permanece pendiente.
+
+**Tabla de compatibilidad propuesta** (NO representa restricciones aprobadas ni parámetros de ejecución):
+
+| Bioma | Subtipo | Nivel Evolve | Altitud equivalente | Latitud |
+| --- | --- | --- | --- | --- |
+| Desierto | Arenoso (dunas) | 0–40 | 0–1600 m | 10°–50° N/S |
+| Desierto | Rocoso (cañones y mesetas) | 10–60 | 400–2400 m | 15°–55° N/S |
+| Desierto | Salar | 0–95 | 0–3800 m | 10°–50° N/S |
+| Bosque | Tropical (selva) | 0–30 | 0–1200 m | 0°–23° N/S |
+| Bosque | Subtropical | 10–50 | 400–2000 m | 15°–35° N/S |
+| Bosque | Templado | 5–60 | 200–2400 m | 30°–60° N/S |
+| Bosque | Boreal (taiga) | 0–35 | 0–1400 m | 50°–70° N/S |
+| Bosque | Pantano arbolado (Everglades) | 0–5 | 0–200 m | 15°–35° N/S |
+| Llanuras | Sabana | 0–40 | 0–1600 m | 5°–30° N/S |
+| Llanuras | Pradera | 10–45 | 400–1800 m | 25°–55° N/S |
+| Llanuras | Estepa | 10–50 | 400–2000 m | 30°–60° N/S |
+| Llanuras | Humedal abierto (Pantanal) | 0–10 | 0–400 m | 5°–35° N/S |
+| Marino | Arrecife | 0–0 | 0–0 m | 0°–35° N/S |
+| Marino | Estuario o litoral | 0–0 | 0–0 m | 0°–75° N/S |
+| Marino | Manglar | 0–0 | 0–0 m | 0°–35° N/S |
+| Marino | Océano abierto (alta mar) | 0–0 | 0–0 m | 0°–75° N/S |
+| Tundra | Tundra | 0–60 | 0–2400 m | 55°–80° N/S |
+| Montaña | Alpino | 40–90 | 1600–3600 m | 0°–75° N/S |
+| Montaña | Rocoso | 30–100 | 1200–4000 m | 0°–75° N/S |
+| Montaña | Acantilados | 0–100 | 0–4000 m | 0°–75° N/S |
+| Polo | Polo Norte | 0–80 | 0–3200 m | 65°–90° N |
+| Polo | Polo Sur | 0–100 | 0–4000 m | 65°–90° S |
+
+La altura y la latitud solo delimitan posibles candidatos. El bioma definitivo también requerirá temperatura, humedad, pendiente, costa y agua según corresponda. En el caso marino, el nivel 0 significa la superficie del mar; no define profundidad. **No se han asignado fauna, flora, minerales, recursos ni probabilidades de aparición.**
 
 ## 6. Reglas del mundo
 

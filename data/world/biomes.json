@@ -1,8 +1,8 @@
 {
   "schemaVersion": "2.0.0",
-  "contentVersion": "1.0.0",
+  "contentVersion": "1.1.0",
   "kind": "biome_catalog",
-  "status": "approved_structure_pending_ecological_rules",
+  "status": "approved_biome_structure_and_mixed_polar_mode_proposed_ranges",
   "biomes": [
     {
       "id": "desert",
@@ -45,6 +45,13 @@
         "es": "Montaña"
       },
       "interfaceCategoryOnly": true
+    },
+    {
+      "id": "polar",
+      "name": {
+        "es": "Polo"
+      },
+      "interfaceCategoryOnly": true
     }
   ],
   "biomeSubtypes": [
@@ -53,6 +60,22 @@
       "biomeId": "desert",
       "name": {
         "es": "Arenoso (dunas)"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 40
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 1600
+        },
+        "latitudeDegrees": {
+          "min": 10,
+          "max": 50,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -60,6 +83,22 @@
       "biomeId": "desert",
       "name": {
         "es": "Rocoso (cañones y mesetas)"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 10,
+          "max": 60
+        },
+        "approximateElevationMeters": {
+          "min": 400,
+          "max": 2400
+        },
+        "latitudeDegrees": {
+          "min": 15,
+          "max": 55,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -67,6 +106,22 @@
       "biomeId": "desert",
       "name": {
         "es": "Salar"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 95
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 3800
+        },
+        "latitudeDegrees": {
+          "min": 10,
+          "max": 50,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -74,6 +129,22 @@
       "biomeId": "forest",
       "name": {
         "es": "Tropical (selva)"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 30
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 1200
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 23,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -81,6 +152,22 @@
       "biomeId": "forest",
       "name": {
         "es": "Subtropical"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 10,
+          "max": 50
+        },
+        "approximateElevationMeters": {
+          "min": 400,
+          "max": 2000
+        },
+        "latitudeDegrees": {
+          "min": 15,
+          "max": 35,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -88,6 +175,22 @@
       "biomeId": "forest",
       "name": {
         "es": "Templado"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 5,
+          "max": 60
+        },
+        "approximateElevationMeters": {
+          "min": 200,
+          "max": 2400
+        },
+        "latitudeDegrees": {
+          "min": 30,
+          "max": 60,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -95,6 +198,22 @@
       "biomeId": "forest",
       "name": {
         "es": "Boreal (taiga)"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 35
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 1400
+        },
+        "latitudeDegrees": {
+          "min": 50,
+          "max": 70,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -102,6 +221,22 @@
       "biomeId": "forest",
       "name": {
         "es": "Pantano arbolado (Everglades)"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 5
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 200
+        },
+        "latitudeDegrees": {
+          "min": 15,
+          "max": 35,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -109,6 +244,22 @@
       "biomeId": "plains",
       "name": {
         "es": "Sabana"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 40
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 1600
+        },
+        "latitudeDegrees": {
+          "min": 5,
+          "max": 30,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -116,6 +267,22 @@
       "biomeId": "plains",
       "name": {
         "es": "Pradera"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 10,
+          "max": 45
+        },
+        "approximateElevationMeters": {
+          "min": 400,
+          "max": 1800
+        },
+        "latitudeDegrees": {
+          "min": 25,
+          "max": 55,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -123,6 +290,22 @@
       "biomeId": "plains",
       "name": {
         "es": "Estepa"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 10,
+          "max": 50
+        },
+        "approximateElevationMeters": {
+          "min": 400,
+          "max": 2000
+        },
+        "latitudeDegrees": {
+          "min": 30,
+          "max": 60,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -130,6 +313,22 @@
       "biomeId": "plains",
       "name": {
         "es": "Humedal abierto (Pantanal)"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 10
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 400
+        },
+        "latitudeDegrees": {
+          "min": 5,
+          "max": 35,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -137,6 +336,22 @@
       "biomeId": "marine",
       "name": {
         "es": "Arrecife"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 0
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 0
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 35,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -144,6 +359,22 @@
       "biomeId": "marine",
       "name": {
         "es": "Estuario o litoral"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 0
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 0
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 75,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -151,6 +382,22 @@
       "biomeId": "marine",
       "name": {
         "es": "Manglar"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 0
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 0
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 35,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -158,6 +405,22 @@
       "biomeId": "marine",
       "name": {
         "es": "Océano abierto (alta mar)"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 0
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 0
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 75,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -165,6 +428,22 @@
       "biomeId": "tundra",
       "name": {
         "es": "Tundra"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 60
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 2400
+        },
+        "latitudeDegrees": {
+          "min": 55,
+          "max": 80,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -172,6 +451,22 @@
       "biomeId": "mountain",
       "name": {
         "es": "Alpino"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 40,
+          "max": 90
+        },
+        "approximateElevationMeters": {
+          "min": 1600,
+          "max": 3600
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 75,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -179,6 +474,22 @@
       "biomeId": "mountain",
       "name": {
         "es": "Rocoso"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 30,
+          "max": 100
+        },
+        "approximateElevationMeters": {
+          "min": 1200,
+          "max": 4000
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 75,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     },
     {
@@ -186,6 +497,68 @@
       "biomeId": "mountain",
       "name": {
         "es": "Acantilados"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 100
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 4000
+        },
+        "latitudeDegrees": {
+          "min": 0,
+          "max": 75,
+          "hemisphere": "either"
+        },
+        "status": "proposed_pending_individual_approval"
+      }
+    },
+    {
+      "id": "polar_north",
+      "biomeId": "polar",
+      "name": {
+        "es": "Polo Norte"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 80
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 3200
+        },
+        "latitudeDegrees": {
+          "min": 65,
+          "max": 90,
+          "hemisphere": "north"
+        },
+        "status": "proposed_pending_individual_approval"
+      }
+    },
+    {
+      "id": "polar_south",
+      "biomeId": "polar",
+      "name": {
+        "es": "Polo Sur"
+      },
+      "proposedCompatibility": {
+        "elevationLevel": {
+          "min": 0,
+          "max": 100
+        },
+        "approximateElevationMeters": {
+          "min": 0,
+          "max": 4000
+        },
+        "latitudeDegrees": {
+          "min": 65,
+          "max": 90,
+          "hemisphere": "south"
+        },
+        "status": "proposed_pending_individual_approval"
       }
     }
   ],
@@ -198,12 +571,61 @@
     "note": "Fuera de la escala 0–100; representación pendiente."
   },
   "pending": [
-    "elevationRangesBySubtype",
     "temperature",
     "moisture",
     "flora",
     "fauna",
     "minerals",
-    "spawnRules"
-  ]
+    "spawnRules",
+    "approveSubtypeRanges",
+    "approvePolarLatitudeBoundaries"
+  ],
+  "elevationScale": {
+    "minLevel": 0,
+    "maxLevel": 100,
+    "seaLevel": 0,
+    "metersPerLevel": 40,
+    "maxMeters": 4000,
+    "status": "approved",
+    "marineDepthSeparate": true
+  },
+  "polarSystem": {
+    "type": "mixed",
+    "status": "approved",
+    "permanentCore": {
+      "status": "proposed_numeric_bounds",
+      "absoluteLatitudeMin": 80,
+      "absoluteLatitudeMax": 90
+    },
+    "climaticTransition": {
+      "status": "proposed_numeric_bounds",
+      "absoluteLatitudeMin": 65,
+      "absoluteLatitudeMax": 80,
+      "dependsOn": [
+        "temperature",
+        "elevation"
+      ],
+      "appliesTo": [
+        "north",
+        "south"
+      ]
+    },
+    "polarSurfaceMayBeOcean": true,
+    "polarDoesNotConvertWaterToLand": true,
+    "priority": "polar_climate_overrides_other_biomes_when_eligible",
+    "note": "La modalidad mixta está aprobada, pero los límites 65 y 80 grados son parámetros propuestos, aún no confirmados."
+  },
+  "classificationPolicy": {
+    "altitudeAndLatitude": "initial_compatibility_filters",
+    "additionalFactors": [
+      "temperature",
+      "moisture",
+      "slope",
+      "water",
+      "coast"
+    ],
+    "rangeSemantics": "proposed_preferred_windows_not_hard_physical_limits",
+    "speciesAndResourceAssignment": "none",
+    "runtimeEnabled": false
+  }
 }
