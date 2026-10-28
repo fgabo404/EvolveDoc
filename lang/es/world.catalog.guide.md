@@ -58,6 +58,28 @@ Todas las apariciones tienen `runtimeEnabled: false`, `guaranteedPresence: false
 
 Los productos animales registran posibilidades de la fuente y decisiones explícitas del juego, como los productos detallados de zorros. No son desbloqueos ni rendimientos garantizados. `antlers_or_horns` requiere decidir el recurso del juego, sin conceder ambos por defecto. Algunos productos vegetales y todos los cultivos ya tienen vínculos propuestos de recursos; los requisitos de obtención y cantidades siguen pendientes; no se exige especie científica exacta. Son propuestas adicionales de diseño, no afirmaciones textuales de la fuente.
 
+## Propuesta vigente — escala altimétrica y compatibilidad de biomas (2026-10-27)
+
+**Decisión aprobada de diseño:** cada hexágono podrá representar una elevación lógica entera entre **0 y 100**, equivalente linealmente a **0–4,000 metros sobre el nivel del mar**, con **40 m por nivel** (`metros = nivel × 40`). El nivel 0 es la referencia del nivel del mar, sin implicar por sí solo que una celda sea océano: la superficie tierra/agua se conserva como atributo independiente. La profundidad marina no queda definida en esta escala.
+
+**Principio aprobado:** la altitud limita la **compatibilidad** de los biomas, pero no los determina por sí sola. La selección posterior también deberá considerar temperatura, humedad y ubicación geográfica. La tectónica genera el relieve y, posteriormente, un clasificador ambiental determina el bioma compatible.
+
+**Rangos iniciales propuestos, pendientes de revisión individual y aprobación:** no deben tratarse como umbrales definitivos ni como reglas ejecutables.
+
+| Bioma | Altitud compatible propuesta | Nivel 0–100 propuesto |
+| --- | ---: | ---: |
+| Bosque tropical | 0–2,000 m | 0–50 |
+| Bosque templado | 400–3,000 m | 10–75 |
+| Tundra | 0–4,000 m | 0–100 |
+| Sabana | 0–2,000 m | 0–50 |
+| Desierto | 0–4,000 m | 0–100 |
+| Marino | Superficie oceánica, sin rango terrestre | 0 como referencia del mar; depende del atributo agua |
+| Alta montaña y pisos alpinos | 2,400–4,000 m | 60–100 |
+
+Los intervalos pueden solaparse: una altura no selecciona automáticamente un bioma. Se definirán más adelante condiciones de temperatura y humedad; los siete identificadores de bioma existentes se conservan. Esta propuesta **no modifica el generador tectónico actualmente implementado en `Evolve`**, ni sustituye sus datos experimentales hasta que se apruebe e implemente la capa de elevación definitiva.
+
+---
+
 ## 6. Reglas del mundo
 
 La configuración de elevaciones, sus rangos y las reglas para asignar biomas se redefinirán desde cero. No utilizar reglas anteriores como parámetros ejecutables.
