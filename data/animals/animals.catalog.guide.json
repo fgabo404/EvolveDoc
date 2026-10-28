@@ -29,17 +29,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -183,7 +179,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Alce euroasiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000001",
@@ -202,10 +198,7 @@
             "en": "Eurasian Moose",
             "es": "Alce euroasiático"
           },
-          "sourceLabel": "Alce euroasiático",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Alce euroasiático"
         },
         {
           "id": "animal_north_american_moose",
@@ -213,14 +206,12 @@
             "en": "North American Moose",
             "es": "Alce norteamericano"
           },
-          "sourceLabel": "Alce norteamericano",
-          "biomeVariantIds": [
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Alce norteamericano"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000171",
@@ -236,18 +227,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian",
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -389,7 +375,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Antílopes pequeños regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000140",
@@ -410,10 +396,7 @@
             "en": "Regional Small Antelopes",
             "es": "Antílopes pequeños regionales"
           },
-          "sourceLabel": "Antílopes pequeños regionales",
-          "biomeVariantIds": [
-            "temperate_forest_south_african_and_australian"
-          ]
+          "sourceLabel": "Antílopes pequeños regionales"
         },
         {
           "id": "animal_regional_antelopes",
@@ -421,14 +404,12 @@
             "en": "Regional Antelopes",
             "es": "Antílopes regionales"
           },
-          "sourceLabel": "Antílopes regionales",
-          "biomeVariantIds": [
-            "tropical_forest_african"
-          ]
+          "sourceLabel": "Antílopes regionales"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_australian_scrub_birds",
@@ -444,10 +425,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -578,7 +555,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Aves de matorral australiano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000009"
@@ -589,7 +566,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_birds_of_paradise",
@@ -605,10 +583,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -740,7 +714,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Aves del paraíso",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000123"
@@ -751,7 +725,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_shorebirds_and_waterbirds",
@@ -767,10 +742,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_coastal_wetlands"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -902,7 +873,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Aves limícolas y acuáticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000008",
@@ -914,7 +885,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000172",
@@ -930,18 +902,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian",
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -1038,7 +1005,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Babuino chacma en zonas compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000122",
@@ -1057,10 +1024,7 @@
             "en": "Chacma Baboon",
             "es": "Babuino chacma en zonas compatibles"
           },
-          "sourceLabel": "Babuino chacma en zonas compatibles",
-          "biomeVariantIds": [
-            "temperate_forest_south_african_and_australian"
-          ]
+          "sourceLabel": "Babuino chacma en zonas compatibles"
         },
         {
           "id": "animal_baboons",
@@ -1068,14 +1032,12 @@
             "en": "Baboons",
             "es": "Babuinos"
           },
-          "sourceLabel": "Babuinos",
-          "biomeVariantIds": [
-            "tropical_forest_african"
-          ]
+          "sourceLabel": "Babuinos"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_atlantic_cod",
@@ -1091,10 +1053,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_temperate_coast_and_sea"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1226,7 +1184,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Bacalao del Atlántico, Atlántico norte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000059"
@@ -1237,7 +1195,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "fish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_migratory_whales",
@@ -1253,10 +1212,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1386,7 +1341,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ballenas migratorias, según región",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000093",
@@ -1398,7 +1353,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_american_bison",
@@ -1414,10 +1370,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1592,7 +1544,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Bisonte americano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000012"
@@ -1603,7 +1555,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_muskox",
@@ -1619,10 +1572,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1797,7 +1746,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Buey almizclero",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000112"
@@ -1808,7 +1757,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_african_buffalo",
@@ -1824,10 +1774,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -1976,7 +1922,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Búfalo africano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000150"
@@ -1987,7 +1933,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_snowy_owl",
@@ -2003,10 +1950,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2137,7 +2080,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Búho nival",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000021"
@@ -2148,7 +2091,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_przewalski_horse",
@@ -2164,10 +2108,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2294,7 +2234,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Caballo de Przewalski, Asia central",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000055"
@@ -2307,7 +2247,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_cockatoos_and_savanna_birds",
@@ -2323,10 +2264,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2458,7 +2395,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cacatúas y aves de sabana",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000022",
@@ -2470,7 +2407,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_wild_bactrian_camel",
@@ -2486,10 +2424,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -2644,7 +2578,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Camello bactriano salvaje, regiones remotas de Asia central",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000025"
@@ -2657,7 +2591,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000173",
@@ -2673,18 +2608,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast",
-        "marine_coastal_wetlands"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -2745,7 +2675,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cangrejos costeros",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000103",
@@ -2764,10 +2694,7 @@
             "en": "Coastal Crabs",
             "es": "Cangrejos costeros"
           },
-          "sourceLabel": "Cangrejos costeros",
-          "biomeVariantIds": [
-            "marine_tropical_coast"
-          ]
+          "sourceLabel": "Cangrejos costeros"
         },
         {
           "id": "animal_mangrove_crabs",
@@ -2775,14 +2702,12 @@
             "en": "Mangrove Crabs",
             "es": "Cangrejos de manglar (costas tropicales)"
           },
-          "sourceLabel": "Cangrejos de manglar (costas tropicales)",
-          "biomeVariantIds": [
-            "marine_coastal_wetlands"
-          ]
+          "sourceLabel": "Cangrejos de manglar (costas tropicales)"
         }
       ],
       "anatomicalGroup": "shellfish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000174",
@@ -2798,20 +2723,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian",
-        "temperate_forest_south_african_and_australian",
-        "desert_australian",
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -2908,7 +2826,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Canguro antilopino, norte de Australia",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000108",
@@ -2929,10 +2847,7 @@
             "en": "Antilopine Kangaroo",
             "es": "Canguro antilopino, norte de Australia"
           },
-          "sourceLabel": "Canguro antilopino, norte de Australia",
-          "biomeVariantIds": [
-            "savanna_australian"
-          ]
+          "sourceLabel": "Canguro antilopino, norte de Australia"
         },
         {
           "id": "animal_western_grey_kangaroo",
@@ -2940,10 +2855,7 @@
             "en": "Western Grey Kangaroo",
             "es": "Canguro gris occidental"
           },
-          "sourceLabel": "Canguro gris occidental",
-          "biomeVariantIds": [
-            "temperate_forest_south_african_and_australian"
-          ]
+          "sourceLabel": "Canguro gris occidental"
         },
         {
           "id": "animal_red_kangaroo",
@@ -2951,10 +2863,7 @@
             "en": "Red Kangaroo",
             "es": "Canguro rojo"
           },
-          "sourceLabel": "Canguro rojo",
-          "biomeVariantIds": [
-            "desert_australian"
-          ]
+          "sourceLabel": "Canguro rojo"
         },
         {
           "id": "animal_new_guinea_tree_kangaroos",
@@ -2962,14 +2871,12 @@
             "en": "New Guinea Tree Kangaroos",
             "es": "Canguros arborícolas de Nueva Guinea"
           },
-          "sourceLabel": "Canguros arborícolas de Nueva Guinea",
-          "biomeVariantIds": [
-            "tropical_forest_oceanian"
-          ]
+          "sourceLabel": "Canguros arborícolas de Nueva Guinea"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_capybara",
@@ -2985,10 +2892,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3092,7 +2995,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Capibara, cerca de agua",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000075"
@@ -3103,7 +3006,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_woodland_caribou",
@@ -3119,10 +3023,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3273,7 +3173,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Caribú de bosque",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000137"
@@ -3284,7 +3184,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_tundra_caribou",
@@ -3300,10 +3201,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3454,7 +3351,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Caribú de tundra",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000138"
@@ -3465,7 +3362,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_southern_cassowary",
@@ -3481,10 +3379,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3635,7 +3529,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Casuario del sur, Nueva Guinea y norte de Australia",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000036"
@@ -3646,7 +3540,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_plains_zebra",
@@ -3662,10 +3557,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3792,7 +3683,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cebra de llanura",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000056"
@@ -3803,7 +3694,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_chimpanzee",
@@ -3819,10 +3711,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -3926,7 +3814,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Chimpancé, zonas compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000116"
@@ -3937,7 +3825,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000175",
@@ -3953,21 +3842,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian",
-        "temperate_forest_eurasian",
-        "temperate_forest_american",
-        "tropical_forest_american",
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -4111,7 +3992,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ciervo axis, India y Sri Lanka",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000010",
@@ -4135,10 +4016,7 @@
             "en": "Chital",
             "es": "Ciervo axis, India y Sri Lanka"
           },
-          "sourceLabel": "Ciervo axis, India y Sri Lanka",
-          "biomeVariantIds": [
-            "tropical_forest_asian"
-          ]
+          "sourceLabel": "Ciervo axis, India y Sri Lanka"
         },
         {
           "id": "animal_red_deer",
@@ -4146,10 +4024,7 @@
             "en": "Red Deer",
             "es": "Ciervo rojo"
           },
-          "sourceLabel": "Ciervo rojo",
-          "biomeVariantIds": [
-            "temperate_forest_eurasian"
-          ]
+          "sourceLabel": "Ciervo rojo"
         },
         {
           "id": "animal_sika_deer",
@@ -4157,10 +4032,7 @@
             "en": "Sika Deer",
             "es": "Ciervo sika"
           },
-          "sourceLabel": "Ciervo sika",
-          "biomeVariantIds": [
-            "temperate_forest_eurasian"
-          ]
+          "sourceLabel": "Ciervo sika"
         },
         {
           "id": "animal_huemul",
@@ -4168,10 +4040,7 @@
             "en": "Huemul",
             "es": "Huemul en bosques andino-patagónicos"
           },
-          "sourceLabel": "Huemul en bosques andino-patagónicos",
-          "biomeVariantIds": [
-            "temperate_forest_american"
-          ]
+          "sourceLabel": "Huemul en bosques andino-patagónicos"
         },
         {
           "id": "animal_pudu",
@@ -4179,10 +4048,7 @@
             "en": "Pudu",
             "es": "Pudú"
           },
-          "sourceLabel": "Pudú",
-          "biomeVariantIds": [
-            "temperate_forest_american"
-          ]
+          "sourceLabel": "Pudú"
         },
         {
           "id": "animal_white_tailed_deer",
@@ -4190,10 +4056,7 @@
             "en": "White-Tailed Deer",
             "es": "Venado cola blanca"
           },
-          "sourceLabel": "Venado cola blanca",
-          "biomeVariantIds": [
-            "temperate_forest_american"
-          ]
+          "sourceLabel": "Venado cola blanca"
         },
         {
           "id": "animal_mesoamerican_white_tailed_deer",
@@ -4201,10 +4064,7 @@
             "en": "Mesoamerican White-Tailed Deer",
             "es": "Venado cola blanca, Mesoamérica"
           },
-          "sourceLabel": "Venado cola blanca, Mesoamérica",
-          "biomeVariantIds": [
-            "tropical_forest_american"
-          ]
+          "sourceLabel": "Venado cola blanca, Mesoamérica"
         },
         {
           "id": "animal_pampas_deer",
@@ -4212,14 +4072,12 @@
             "en": "Pampas Deer",
             "es": "Venado de las pampas"
           },
-          "sourceLabel": "Venado de las pampas",
-          "biomeVariantIds": [
-            "savanna_american"
-          ]
+          "sourceLabel": "Venado de las pampas"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_european_rabbit",
@@ -4235,10 +4093,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4342,7 +4196,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Conejo europeo, área nativa ibérica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000106"
@@ -4356,7 +4210,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_roadrunner",
@@ -4372,10 +4227,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4506,7 +4357,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Correcaminos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000064"
@@ -4517,7 +4368,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_coyote",
@@ -4533,11 +4385,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american",
-        "temperate_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4641,7 +4488,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Coyote",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000026"
@@ -4652,7 +4499,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_cuscuses_and_other_arboreal_marsupials",
@@ -4668,10 +4516,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_oceanian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4775,7 +4619,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cuscús y otros marsupiales arborícolas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000147"
@@ -4786,7 +4630,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_andean_condor",
@@ -4802,10 +4647,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -4936,7 +4777,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Cóndor andino",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000168"
@@ -4947,7 +4788,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_rock_hyraxes",
@@ -4963,10 +4805,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5070,7 +4908,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Damanes de roca",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000130"
@@ -5081,7 +4919,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_dingo",
@@ -5097,10 +4936,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5204,7 +5039,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Dingo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000028"
@@ -5215,7 +5050,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_introduced_domestic_or_feral_dromedary",
@@ -5231,10 +5067,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -5446,7 +5278,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000176",
@@ -5462,18 +5295,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african",
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -5637,7 +5465,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Elefante africano de bosque",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000085",
@@ -5656,10 +5484,7 @@
             "en": "African Forest Elephant",
             "es": "Elefante africano de bosque"
           },
-          "sourceLabel": "Elefante africano de bosque",
-          "biomeVariantIds": [
-            "tropical_forest_african"
-          ]
+          "sourceLabel": "Elefante africano de bosque"
         },
         {
           "id": "animal_african_savanna_elephant",
@@ -5667,10 +5492,7 @@
             "en": "African Savanna Elephant",
             "es": "Elefante africano de sabana"
           },
-          "sourceLabel": "Elefante africano de sabana",
-          "biomeVariantIds": [
-            "savanna_african"
-          ]
+          "sourceLabel": "Elefante africano de sabana"
         },
         {
           "id": "animal_african_savanna_elephant_in_dry_forest_mosaics",
@@ -5678,14 +5500,12 @@
             "en": "African Savanna Elephant in Dry-Forest Mosaics",
             "es": "Elefante africano de sabana, mosaicos de bosque seco"
           },
-          "sourceLabel": "Elefante africano de sabana, mosaicos de bosque seco",
-          "biomeVariantIds": [
-            "tropical_forest_african"
-          ]
+          "sourceLabel": "Elefante africano de sabana, mosaicos de bosque seco"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000177",
@@ -5701,17 +5521,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -5876,7 +5692,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Elefante asiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000052"
@@ -5894,10 +5710,7 @@
             "en": "Asian Elephant",
             "es": "Elefante asiático"
           },
-          "sourceLabel": "Elefante asiático",
-          "biomeVariantIds": [
-            "tropical_forest_asian"
-          ]
+          "sourceLabel": "Elefante asiático"
         },
         {
           "id": "animal_asian_elephant_in_suitable_forests",
@@ -5905,14 +5718,12 @@
             "en": "Asian Elephant in Suitable Forests",
             "es": "Elefante asiático en bosques apropiados"
           },
-          "sourceLabel": "Elefante asiático en bosques apropiados",
-          "biomeVariantIds": [
-            "tropical_forest_asian"
-          ]
+          "sourceLabel": "Elefante asiático en bosques apropiados"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_coastal_elephant_seals",
@@ -5928,10 +5739,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_subantarctic"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6057,7 +5864,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Elefantes marinos en costas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000096"
@@ -6068,7 +5875,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_emu",
@@ -6084,10 +5892,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6238,7 +6042,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Emú, zonas abiertas compatibles",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000051"
@@ -6249,7 +6053,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_short_beaked_echidna",
@@ -6265,11 +6070,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian",
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6396,7 +6196,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Equidna de hocico corto",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000151"
@@ -6407,7 +6207,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_seals",
@@ -6423,10 +6224,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6552,7 +6349,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Focas de especies regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000133",
@@ -6564,7 +6361,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_coastal_seals_and_sea_lions",
@@ -6580,10 +6378,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_temperate_coast_and_sea"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -6709,7 +6503,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Focas y lobos marinos en costas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000126",
@@ -6721,7 +6515,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000178",
@@ -6737,18 +6532,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian",
-        "desert_african_and_arabian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -6890,7 +6680,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Gacela de Mongolia, Gobi",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000129",
@@ -6910,10 +6700,7 @@
             "en": "Mongolian Gazelle",
             "es": "Gacela de Mongolia, Gobi"
           },
-          "sourceLabel": "Gacela de Mongolia, Gobi",
-          "biomeVariantIds": [
-            "desert_central_asian"
-          ]
+          "sourceLabel": "Gacela de Mongolia, Gobi"
         },
         {
           "id": "animal_desert_gazelles",
@@ -6921,14 +6708,12 @@
             "en": "Desert Gazelles",
             "es": "Gacelas desérticas"
           },
-          "sourceLabel": "Gacelas desérticas",
-          "biomeVariantIds": [
-            "desert_african_and_arabian"
-          ]
+          "sourceLabel": "Gacelas desérticas"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_red_junglefowl",
@@ -6944,10 +6729,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -7078,7 +6859,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Gallina roja de la jungla (Gallus gallus)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000060"
@@ -7091,7 +6872,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_gelada",
@@ -7107,10 +6889,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -7214,7 +6992,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Gelada, altiplano etíope",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000155"
@@ -7225,7 +7003,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_subarctic_wolverine",
@@ -7241,10 +7020,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -7348,7 +7123,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Glotón en transición subártica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000071"
@@ -7359,7 +7134,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_western_gorilla",
@@ -7375,10 +7151,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -7482,7 +7254,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Gorila occidental, África central occidental",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000070"
@@ -7493,7 +7265,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_macaws",
@@ -7509,10 +7282,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -7644,7 +7413,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Guacamayas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000007",
@@ -7656,7 +7425,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000179",
@@ -7672,18 +7442,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american",
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -7829,7 +7594,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Guanaco en desiertos costeros y piedemonte",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000079"
@@ -7849,10 +7614,7 @@
             "en": "Guanaco in Coastal Deserts and Foothills",
             "es": "Guanaco en desiertos costeros y piedemonte"
           },
-          "sourceLabel": "Guanaco en desiertos costeros y piedemonte",
-          "biomeVariantIds": [
-            "desert_american"
-          ]
+          "sourceLabel": "Guanaco en desiertos costeros y piedemonte"
         },
         {
           "id": "animal_guanaco_at_suitable_elevations",
@@ -7860,14 +7622,12 @@
             "en": "Guanaco at Suitable Elevations",
             "es": "Guanaco en pisos adecuados"
           },
-          "sourceLabel": "Guanaco en pisos adecuados",
-          "biomeVariantIds": [
-            "alpine_andean"
-          ]
+          "sourceLabel": "Guanaco en pisos adecuados"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000180",
@@ -7883,17 +7643,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -8035,7 +7791,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jabalí",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000148"
@@ -8055,10 +7811,7 @@
             "en": "Wild Boar",
             "es": "Jabalí"
           },
-          "sourceLabel": "Jabalí",
-          "biomeVariantIds": [
-            "temperate_forest_eurasian"
-          ]
+          "sourceLabel": "Jabalí"
         },
         {
           "id": "animal_eurasian_wild_boar",
@@ -8066,14 +7819,12 @@
             "en": "Eurasian Wild Boar",
             "es": "Jabalí euroasiático"
           },
-          "sourceLabel": "Jabalí euroasiático",
-          "biomeVariantIds": [
-            "temperate_forest_eurasian"
-          ]
+          "sourceLabel": "Jabalí euroasiático"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_jaguar",
@@ -8089,10 +7840,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -8196,7 +7943,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jaguar",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000118"
@@ -8207,7 +7954,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_jerboas_and_gerbils",
@@ -8223,10 +7971,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -8330,7 +8074,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jerbos y gerbillos regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000050",
@@ -8342,7 +8086,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_giraffe",
@@ -8358,10 +8103,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -8488,7 +8229,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Jirafa",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000065",
@@ -8502,7 +8243,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_antarctic_krill",
@@ -8518,10 +8260,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -8591,7 +8329,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Krill antártico, océano Austral",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000058"
@@ -8602,7 +8340,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "shellfish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_lemming",
@@ -8618,10 +8357,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -8725,7 +8460,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lemming",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000080"
@@ -8736,7 +8471,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_snow_leopard",
@@ -8752,10 +8488,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -8859,7 +8591,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Leopardo de las nieves",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000120"
@@ -8870,7 +8602,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_lion",
@@ -8886,10 +8619,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -8993,7 +8722,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "León",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000117"
@@ -9004,7 +8733,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_arctic_hare",
@@ -9020,10 +8750,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -9127,7 +8853,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Liebre ártica",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000082"
@@ -9138,7 +8864,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_eurasian_lynx",
@@ -9154,10 +8881,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -9261,7 +8984,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lince euroasiático",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000088"
@@ -9272,7 +8995,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_maned_wolf",
@@ -9288,10 +9012,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -9395,7 +9115,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lobo de crin, Cerrado",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000042"
@@ -9406,7 +9126,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_ethiopian_wolf",
@@ -9422,10 +9143,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -9529,7 +9246,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lobo etíope, tierras altas de Etiopía",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000030"
@@ -9540,7 +9257,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_grey_wolf",
@@ -9556,10 +9274,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -9663,7 +9377,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Lobo gris",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000027"
@@ -9676,7 +9390,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000181",
@@ -9692,18 +9407,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european",
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -9800,7 +9510,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Marmota alpina",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000092",
@@ -9819,10 +9529,7 @@
             "en": "Alpine Marmot",
             "es": "Marmota alpina"
           },
-          "sourceLabel": "Marmota alpina",
-          "biomeVariantIds": [
-            "alpine_european"
-          ]
+          "sourceLabel": "Marmota alpina"
         },
         {
           "id": "animal_steppe_marmots",
@@ -9830,14 +9537,12 @@
             "en": "Steppe Marmots",
             "es": "Marmotas de estepa"
           },
-          "sourceLabel": "Marmotas de estepa",
-          "biomeVariantIds": [
-            "savanna_eurasian"
-          ]
+          "sourceLabel": "Marmotas de estepa"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_mussels_and_oysters",
@@ -9853,10 +9558,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_temperate_coast_and_sea"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -9948,7 +9649,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Mejillones y ostras, según región",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000099",
@@ -9960,7 +9661,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "shellfish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_tropical_mollusks_and_bivalves",
@@ -9976,10 +9678,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -10071,7 +9769,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Moluscos y bivalvos tropicales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000157",
@@ -10083,7 +9781,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "shellfish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_howler_monkey",
@@ -10099,10 +9798,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -10206,7 +9901,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Mono aullador",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000003"
@@ -10217,7 +9912,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_okapi",
@@ -10233,10 +9929,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -10363,7 +10055,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Okapi, cuenca del Congo",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000105"
@@ -10374,7 +10066,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_giant_anteater",
@@ -10390,10 +10083,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -10497,7 +10186,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Oso hormiguero gigante",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000098"
@@ -10508,7 +10197,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000182",
@@ -10524,20 +10214,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_american",
-        "temperate_forest_boreal",
-        "temperate_forest_eurasian",
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -10634,7 +10317,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Oso negro americano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000158",
@@ -10655,11 +10338,7 @@
             "en": "American Black Bear",
             "es": "Oso negro americano"
           },
-          "sourceLabel": "Oso negro americano",
-          "biomeVariantIds": [
-            "temperate_forest_american",
-            "temperate_forest_boreal"
-          ]
+          "sourceLabel": "Oso negro americano"
         },
         {
           "id": "animal_asian_black_bear",
@@ -10667,10 +10346,7 @@
             "en": "Asian Black Bear",
             "es": "Oso negro asiático"
           },
-          "sourceLabel": "Oso negro asiático",
-          "biomeVariantIds": [
-            "temperate_forest_eurasian"
-          ]
+          "sourceLabel": "Oso negro asiático"
         },
         {
           "id": "animal_brown_bear",
@@ -10678,11 +10354,7 @@
             "en": "Brown Bear",
             "es": "Oso pardo"
           },
-          "sourceLabel": "Oso pardo",
-          "biomeVariantIds": [
-            "temperate_forest_boreal",
-            "temperate_forest_eurasian"
-          ]
+          "sourceLabel": "Oso pardo"
         },
         {
           "id": "animal_coastal_and_sea_ice_polar_bear",
@@ -10690,14 +10362,12 @@
             "en": "Coastal and Sea-Ice Polar Bear",
             "es": "Oso polar solo en costas y hielo marino"
           },
-          "sourceLabel": "Oso polar solo en costas y hielo marino",
-          "biomeVariantIds": [
-            "tundra_north_american_and_greenland"
-          ]
+          "sourceLabel": "Oso polar solo en costas y hielo marino"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_estuarine_oysters_and_other_bivalves",
@@ -10713,10 +10383,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_coastal_wetlands"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -10808,7 +10474,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ostras y otros bivalvos de estuario",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000044"
@@ -10819,7 +10485,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "shellfish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_ocellated_turkey",
@@ -10835,10 +10502,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -10969,7 +10632,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pavo ocelado, Yucatán y zonas vecinas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000094"
@@ -10980,7 +10643,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_indian_peafowl",
@@ -10996,10 +10660,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -11130,7 +10790,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pavo real azul, subcontinente indio",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000124"
@@ -11141,7 +10801,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_collared_peccary",
@@ -11157,10 +10818,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -11286,7 +10943,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pecarí de collar",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000125"
@@ -11297,7 +10954,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_reef_fish",
@@ -11313,10 +10971,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -11448,7 +11102,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Peces arrecifales, especies regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000086",
@@ -11460,7 +11114,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "fish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_juvenile_estuarine_fish",
@@ -11476,10 +11131,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_coastal_wetlands"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -11611,7 +11262,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Peces juveniles de estuario",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000097"
@@ -11622,7 +11273,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "fish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_polar_fish",
@@ -11638,10 +11290,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -11773,7 +11421,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Peces polares regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000013",
@@ -11785,7 +11433,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "fish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_perentie",
@@ -11801,10 +11450,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -11933,7 +11578,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Perentie (varano gigante)",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000162"
@@ -11944,7 +11589,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "reptile",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_prairie_dog",
@@ -11960,10 +11606,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -12067,7 +11709,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Perrito de la pradera",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000047"
@@ -12078,7 +11720,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_island_petrels_and_albatrosses",
@@ -12094,10 +11737,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_subantarctic"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -12229,7 +11868,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Petreles y albatros en islas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000089",
@@ -12241,7 +11880,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000183",
@@ -12257,18 +11897,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tundra_subantarctic",
-        "marine_polar_and_subpolar"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -12393,7 +12028,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Pingüinos en costas de islas apropiadas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000004",
@@ -12413,10 +12048,7 @@
             "en": "Island Coastal Penguins",
             "es": "Pingüinos en costas de islas apropiadas"
           },
-          "sourceLabel": "Pingüinos en costas de islas apropiadas",
-          "biomeVariantIds": [
-            "tundra_subantarctic"
-          ]
+          "sourceLabel": "Pingüinos en costas de islas apropiadas"
         },
         {
           "id": "animal_southern_regional_penguins",
@@ -12424,14 +12056,12 @@
             "en": "Southern Regional Penguins",
             "es": "Pingüinos únicamente en regiones australes apropiadas"
           },
-          "sourceLabel": "Pingüinos únicamente en regiones australes apropiadas",
-          "biomeVariantIds": [
-            "marine_polar_and_subpolar"
-          ]
+          "sourceLabel": "Pingüinos únicamente en regiones australes apropiadas"
         }
       ],
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_puma",
@@ -12447,11 +12077,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean",
-        "temperate_forest_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -12555,7 +12180,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Puma",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000132"
@@ -12566,7 +12191,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000184",
@@ -12582,18 +12208,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian",
-        "alpine_european"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -12717,7 +12338,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Quebrantahuesos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000072"
@@ -12735,10 +12356,7 @@
             "en": "Bearded Vulture",
             "es": "Quebrantahuesos"
           },
-          "sourceLabel": "Quebrantahuesos",
-          "biomeVariantIds": [
-            "alpine_asian"
-          ]
+          "sourceLabel": "Quebrantahuesos"
         },
         {
           "id": "animal_bearded_vulture_in_suitable_mountains",
@@ -12746,14 +12364,12 @@
             "en": "Bearded Vulture in Suitable Mountains",
             "es": "Quebrantahuesos en cordilleras apropiadas"
           },
-          "sourceLabel": "Quebrantahuesos en cordilleras apropiadas",
-          "biomeVariantIds": [
-            "alpine_european"
-          ]
+          "sourceLabel": "Quebrantahuesos en cordilleras apropiadas"
         }
       ],
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_chamois",
@@ -12769,10 +12385,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -12921,7 +12533,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Rebeco",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000142"
@@ -12932,7 +12544,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_reindeer",
@@ -12948,11 +12561,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_boreal",
-        "tundra_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -13147,7 +12755,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Reno",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000136"
@@ -13158,7 +12766,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_eurasian_saiga",
@@ -13174,10 +12783,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_eurasian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -13326,7 +12931,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Saiga, estepas euroasiáticas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000143"
@@ -13337,7 +12942,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_sardines",
@@ -13353,10 +12959,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_temperate_coast_and_sea"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -13488,7 +13090,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Sardinas regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000144",
@@ -13500,7 +13102,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "fish",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_rattlesnakes",
@@ -13516,10 +13119,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -13625,7 +13224,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Serpientes de cascabel regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000045",
@@ -13637,7 +13236,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "reptile",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_himalayan_tahr",
@@ -13653,10 +13253,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -13805,7 +13401,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tahr del Himalaya",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000073"
@@ -13816,7 +13412,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000185",
@@ -13832,18 +13429,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_american",
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -13963,7 +13555,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tapir amazónico o centroamericano, según zona",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000154",
@@ -13983,10 +13575,7 @@
             "en": "Regional Amazonian or Central American Tapir",
             "es": "Tapir amazónico o centroamericano, según zona"
           },
-          "sourceLabel": "Tapir amazónico o centroamericano, según zona",
-          "biomeVariantIds": [
-            "tropical_forest_american"
-          ]
+          "sourceLabel": "Tapir amazónico o centroamericano, según zona"
         },
         {
           "id": "animal_malayan_tapir",
@@ -13994,14 +13583,12 @@
             "en": "Malayan Tapir",
             "es": "Tapir malayo, península malaya y Sumatra"
           },
-          "sourceLabel": "Tapir malayo, península malaya y Sumatra",
-          "biomeVariantIds": [
-            "tropical_forest_asian"
-          ]
+          "sourceLabel": "Tapir malayo, península malaya y Sumatra"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_tiger",
@@ -14017,10 +13604,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "tropical_forest_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -14124,7 +13707,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tigre, en hábitats adecuados",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000119"
@@ -14135,7 +13718,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_desert_tortoise",
@@ -14151,10 +13735,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -14305,7 +13885,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tortuga del desierto",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000069"
@@ -14316,7 +13896,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "reptile",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_sea_turtles",
@@ -14332,10 +13913,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "marine_tropical_coast"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -14486,7 +14063,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tortugas marinas en zonas de alimentación y anidación",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000040",
@@ -14498,7 +14075,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "reptile",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_land_tortoises",
@@ -14514,10 +14092,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -14668,7 +14242,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Tortugas terrestres regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000041"
@@ -14679,7 +14253,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "reptile",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_regional_wallabies",
@@ -14695,11 +14270,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_australian",
-        "temperate_forest_south_african_and_australian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -14803,7 +14373,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ualabíes regionales",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000100",
@@ -14815,7 +14385,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_vicuna",
@@ -14831,10 +14402,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -14987,7 +14554,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Vicuña",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000164"
@@ -15000,7 +14567,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_andean_viscacha",
@@ -15016,10 +14584,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_andean"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -15123,7 +14687,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Vizcacha andina",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000076"
@@ -15134,7 +14698,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_rock_dwelling_viscachas",
@@ -15150,10 +14715,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -15257,7 +14818,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Vizcachas en roquedos",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000077"
@@ -15268,7 +14829,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_wild_yak",
@@ -15284,10 +14846,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -15462,7 +15020,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Yak salvaje, altiplano tibetano",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000016"
@@ -15475,7 +15033,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000169",
@@ -15491,22 +15050,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_central_asian",
-        "temperate_forest_american",
-        "desert_american",
-        "desert_african_and_arabian",
-        "tundra_eurasian",
-        "tundra_north_american_and_greenland"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -15603,7 +15153,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Zorro corsac",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000165",
@@ -15624,10 +15174,7 @@
             "en": "Corsac Fox",
             "es": "Zorro corsac"
           },
-          "sourceLabel": "Zorro corsac",
-          "biomeVariantIds": [
-            "desert_central_asian"
-          ]
+          "sourceLabel": "Zorro corsac"
         },
         {
           "id": "animal_culpeo_fox",
@@ -15635,10 +15182,7 @@
             "en": "Culpeo Fox",
             "es": "Zorro culpeo"
           },
-          "sourceLabel": "Zorro culpeo",
-          "biomeVariantIds": [
-            "temperate_forest_american"
-          ]
+          "sourceLabel": "Zorro culpeo"
         },
         {
           "id": "animal_culpeo_fox_in_arid_habitats",
@@ -15646,10 +15190,7 @@
             "en": "Culpeo Fox in Arid Habitats",
             "es": "Zorro culpeo en ambientes áridos"
           },
-          "sourceLabel": "Zorro culpeo en ambientes áridos",
-          "biomeVariantIds": [
-            "desert_american"
-          ]
+          "sourceLabel": "Zorro culpeo en ambientes áridos"
         },
         {
           "id": "animal_fennec_fox",
@@ -15657,10 +15198,7 @@
             "en": "Fennec Fox",
             "es": "Zorro fénec, Sáhara"
           },
-          "sourceLabel": "Zorro fénec, Sáhara",
-          "biomeVariantIds": [
-            "desert_african_and_arabian"
-          ]
+          "sourceLabel": "Zorro fénec, Sáhara"
         },
         {
           "id": "animal_arctic_fox",
@@ -15668,15 +15206,12 @@
             "en": "Arctic Fox",
             "es": "Zorro ártico"
           },
-          "sourceLabel": "Zorro ártico",
-          "biomeVariantIds": [
-            "tundra_eurasian",
-            "tundra_north_american_and_greenland"
-          ]
+          "sourceLabel": "Zorro ártico"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_golden_eagle",
@@ -15692,10 +15227,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -15826,7 +15357,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Águila real",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000005"
@@ -15837,7 +15368,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "ANM#000186",
@@ -15853,19 +15385,13 @@
         "verified": false
       },
       "definitionStatus": "general_gameplay_category_design_guide",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "alpine_european",
-        "alpine_african",
-        "alpine_asian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
         "elevationRangeM": null,
         "waterRequirements": null,
         "soilRequirements": null,
-        "habitatRestrictionsStatus": "General gameplay category. Preserve regional source occurrences; do not spawn every historical form or infer worldwide presence."
+        "habitatRestrictionsStatus": "General gameplay category. Evaluate ecological suitability before spawning; no automatic distribution."
       },
       "propagation": {
         "methods": null,
@@ -16007,7 +15533,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Íbice alpino, Alpes",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000033",
@@ -16027,10 +15553,7 @@
             "en": "Alpine Ibex",
             "es": "Íbice alpino, Alpes"
           },
-          "sourceLabel": "Íbice alpino, Alpes",
-          "biomeVariantIds": [
-            "alpine_european"
-          ]
+          "sourceLabel": "Íbice alpino, Alpes"
         },
         {
           "id": "animal_walia_ibex",
@@ -16038,10 +15561,7 @@
             "en": "Walia Ibex",
             "es": "Íbice de Walia, macizo de Simien"
           },
-          "sourceLabel": "Íbice de Walia, macizo de Simien",
-          "biomeVariantIds": [
-            "alpine_african"
-          ]
+          "sourceLabel": "Íbice de Walia, macizo de Simien"
         },
         {
           "id": "animal_siberian_ibex",
@@ -16049,14 +15569,12 @@
             "en": "Siberian Ibex",
             "es": "Íbice siberiano, Asia central"
           },
-          "sourceLabel": "Íbice siberiano, Asia central",
-          "biomeVariantIds": [
-            "alpine_asian"
-          ]
+          "sourceLabel": "Íbice siberiano, Asia central"
         }
       ],
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_greater_rhea",
@@ -16072,10 +15590,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_american"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -16226,7 +15740,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ñandú común, Pampas",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000141"
@@ -16237,7 +15751,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "bird",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_wildebeest",
@@ -16253,10 +15768,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "savanna_african"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -16405,7 +15916,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Ñu",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000043"
@@ -16416,7 +15927,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     },
     {
       "id": "animal_arabian_oryx",
@@ -16432,10 +15944,6 @@
         "verified": false
       },
       "definitionStatus": "design_guide_only",
-      "nativeRegionIds": [],
-      "biomeVariantIds": [
-        "desert_african_and_arabian"
-      ],
       "ecology": {
         "temperatureRangeC": null,
         "moistureRange": null,
@@ -16584,7 +16092,7 @@
       ],
       "cultivationResearch": null,
       "sourceLabel": "Órix de Arabia, Arabia",
-      "initialPresencePolicy": "resolve_native_region_and_habitat_before_spawning",
+      "initialPresencePolicy": "resolve_biome_subtype_and_habitat_before_spawning",
       "taxonResolution": {
         "taxonIds": [
           "ANM#000107"
@@ -16595,7 +16103,8 @@
         "inheritResourceBindings": false
       },
       "anatomicalGroup": "mammal",
-      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending"
+      "productReviewStatus": "material_and_acquisition_reference_completed_operational_rules_pending",
+      "biomeSubtypeIds": []
     }
   ],
   "biologicalCatalogFile": "animals.biological.catalog.json",
