@@ -1,5 +1,7 @@
 # G-Evolve — Hoja de ruta técnica: primera cuadrícula hexagonal
 
+**Nota de limpieza (2026-10-27):** las reglas históricas de elevación, rangos y clasificación de biomas de este prototipo quedan retiradas. No deben trasladarse al motor actual. Se conservan los hitos de geometría e interfaz con finalidad histórica.
+
 **Objetivo del hito:** mostrar una cuadrícula funcional de **20 × 20 hexágonos (400)** en una aplicación Windows construida con motor propio en C# / .NET 10, OpenTK y OpenGL. Este hito **no** incluye relieve, biomas, generación de continentes ni simulación histórica.
 
 **Entorno:** VS Code · .NET 10 LTS · OpenTK 4.9.4 · OpenGL/GLSL · Git.  
@@ -123,7 +125,6 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 
 ## Entrega intermedia — mini-grid 3D con relieve de prueba
 
-- Referencia visual: mapa 3D hexagonal con alturas progresivas, contornos visibles y estilo despejado. Los rangos visuales del boceto no son umbrales ecológicos definitivos.
 - El usuario verificó localmente el primer prisma 3D girable. Se mantiene **azimut limitado 0°–180°**, inclinación fija para preservar horizonte y zoom con rueda.
 - Nueva prueba previa a los 400 hexágonos: **7 celdas contiguas** (centro + seis vecinos), cada una con altura de tapa distinta.
 - `GEvolve.Core/HexDemoWorld.cs` define identidades axiales y alturas fijas de demostración. `GEvolve.Desktop/HexRenderer.cs` obtiene centros mediante `HexGeometry` y genera tapa, paredes hasta nivel base y líneas de contorno. `Program.cs` compone datos y cámara.
@@ -135,7 +136,6 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 ## Corrección de compilación de mini-grid
 
 - En la primera ejecución local, `Program.cs` (línea 72) falló con `CS8310` al usar `objetivo + new(...)` sin tipo explícito.
-- Corregido a `objetivo + new Vector3(...)` en `fgabo404/Evolve`, commit `c53a5c90b60979656998acee0a78ffbcabb2a95e`.
 - Pendiente: usuario confirma nueva compilación y funcionamiento 3D de siete celdas. No marcar el hito como completado todavía.
 
 ## Corrección visual mini-grid 3D — encuadre y matrices
@@ -260,7 +260,6 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 ## Prototipo explorable — mundo de 100 × 50 hexágonos
 
 - Código publicado en `fgabo404/Evolve`, rama `master`. Commit final `576e59d412b45bd704be222f0bcd5c7aeef6a022`.
-- **Generación:** `GEvolve.Core/WorldGenerator.cs` crea 5,000 hexágonos (100 × 50) con coordenadas axiales únicas, máscara de tres continentes e irregularidades por ondas con semilla `2026`. Agua a altura 0.08, tierra más elevada. Biomas/clima/geografía realista no implementados.
 - **Renderizado:** `HexRenderer` muestra agua azul y tierra verde en una sola malla; conserva caras superiores más claras y laterales más oscuros, sin contornos. El tamaño estándar sigue siendo radio 1 unidad de mundo.
 - **Navegación:** WASD mueve el objetivo sobre XZ siguiendo orientación horizontal de cámara; Shift acelera; botón derecho gira 360°; rueda cambia zoom; Home centra la cámara. La inclinación vertical es fija para conservar horizonte.
 - **Alcance:** esta es una primera visualización de 5,000 hexágonos, todavía en una sola malla estática. NO incluye chunks, culling ni envolvente E–O; son los siguientes pasos de optimización/topología sin cambiar el diseño aprobado del mundo final. Los bordes norte/sur no envuelven.
@@ -276,9 +275,7 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Revisión pendiente de compilación y validación visual de la costura este-oeste.
 - Código: commit `c6bd3e6b30675511af7b7b1b5f209526e2cc64da`.
 
-## Relieve por niveles 0-100
 
-- Clasificación funcional separada de biomas: mar bajo nivel 30 configurable; terreno medio desde nivel del mar hasta 59; alto 60–79; cumbres infranqueables 80–100.
 - `WorldCell.Relieve` y `ReglasRelieve.Clasificar` centralizan el estado. `WorldSystem` incorpora crestas de montaña deterministas sobre la masa continental.
 - Visualización provisional sin bordes: mar azul, tierras verdes, elevaciones altas gris verdoso y cumbres claras; cada cara lateral sigue más oscura que la superior.
 - Continúa la conexión E/O del mundo y los límites N/S. Los rangos ecológicos por bioma, pendientes, paso y erosión permanecen pendientes.
@@ -288,7 +285,6 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 
 - Se añadió `GEvolve.Core/AnalizadorRelieve.cs`, que inspecciona hasta seis vecinos por celda usando coordenadas offset odd-r; respeta costura longitudinal E/O y los límites polares N/S.
 - `WorldMap.Analisis` expone las pendientes máxima y media, la forma local (llanura, ladera, valle, cresta, cumbre) y el indicador de paso difícil para cada una de las 5,000 celdas.
-- La diferencia máxima de altura es >=24 para marcar un paso difícil; las cumbres de nivel 80 o superior también lo son. Estos umbrales son provisionales para balance, no reglas definitivas de movilidad.
 - Se preserva el render del terreno, la navegación continua y el zoom limitado. En esta etapa los valles/crestas son clasificación lógica; aún falta su refinamiento visual por erosión y rutas.
 - Pruebas incluidas: conteo, valores válidos, reproducibilidad y restricción de cumbres.
 - Código commit `367408e09161f0216ee5152ffb03a25572014fee`; pendiente compilar y revisar localmente.
@@ -317,13 +313,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Pruebas esenciales añadidas para 30,000 celdas, 300 regiones, costura E/O y nivel oceánico cero.
 - Código commit `096587615c8326785359aefd104bafe29fd9cd3a`. Pendiente verificación local de compilación y rendimiento.
 
-## Elevaciones continuas y costa baja (sin biomas)
+## Relieve histórico — parámetros retirados
 
-- Se corrige el salto de altura: océano = 0; toda tierra emergida puede ocupar niveles 1–100, incluidas costas de 1–10.
 - La generación combina una máscara continental de costas sinuosas, crecimiento de altura hacia el interior y crestas montañosas concentradas. Se mantiene la periodicidad este-oeste.
-- Clasificación funcional: agua 0; tierra media/baja 1–59; relieve alto 60–79; cumbres impasables 80–100. Los biomas no están integrados.
 - El parámetro `NivelMar` permanece en `WorldSettings` por compatibilidad, pero no controla actualmente el corte tierra/agua; la costa se define por la máscara continental y el mar visual/lógico es nivel cero.
-- Pruebas añadidas para costas bajas, niveles 60–79, cumbres desde 80 y consistencia de clasificación.
 - Código: commit `59f639238060bcffc20c286373a1b3c342e7fb8a`. Pendiente validación de compilación y captura en PC.
 
 ## Cámara orbital con mayor libertad
@@ -427,11 +420,10 @@ Relieve progresivo → mundo envolvente este-oeste → continentes/océanos → 
 - Después de clasificar océanos se calcula para cada hexágono la distancia mínima a la costa, usando búsqueda en anchura por seis vecinos y envolvimiento este-oeste.
 - Las primeras celdas costeras generan cotas bajas; al avanzar al interior aparecen llanuras suavizadas y mesetas amplias según ruido regional determinista.
 - Se reemplazan las bandas montañosas sinusoidales por dos corredores curvados y localizados según la semilla, con amplitud controlada por la montañosidad y edad geológica.
-- Se mantienen océano 0, tierra 1–100, reglas 60–79 alto y 80–100 impasable, escala de grises, semilla reproducible y cuatro tipos de mundo.
 - No se añaden todavía tectónica, erosión hidráulica, ríos ni biomas. Verificación de compilación pendiente en PC.
 - Commit del motor: `efd0cc5c97ddb04c3c5116cdb182ad1530f752c6`.
 
-## Biomas visuales provisionales
+## Biomas del prototipo histórico — reglas retiradas
 
 Se agrego una clasificacion determinista por hexagono usando latitud, humedad procedural, distancia a la costa y elevacion. Incluye veinte clases del catalogo de bosques, desiertos, llanuras, marino, pantanos, tundra y montanas. Cada clase tiene un color provisional, sin texturas, vegetacion, fauna ni recursos. El relieve, menu, tipos de mundo y backup v0.1.0 permanecen intactos. Archivos: GeneradorBiomas.cs, WorldMap.cs, WorldSystem.cs, WorldGenerator.cs, Program.cs y HexRenderer.cs. Pendiente probar compilacion en PC.
 
@@ -457,7 +449,6 @@ Se agrego una clasificacion determinista por hexagono usando latitud, humedad pr
 
 - Nuevo módulo `GEvolve.Core/GeneradorCordilleras.cs` construye trayectorias terrestres con varios segmentos conectados por semilla. Cada trayectoria serpentea suavemente, tiene centro montañoso, laderas progresivas y se debilita cerca del mar.
 - Las montañas ya no se originan mediante dos bandas longitudinales globales. Pangea crea 5 cadenas; Archipiélagos 13 más cortas; Continentes pequeños 10; Continentes grandes 8, con distribución controlada por la semilla.
-- Altitudes se combinan con llanuras y mesetas; se conserva mar nivel 0, tierra 1–100 y 80–100 impasable. Los biomas alpino y cumbres se asignan por altura con el clasificador existente.
 - Se conservan el diseño UI, la cámara, el zoom amplio, la carga y el respaldo de versión inicial `version-inicial-v0.1.0`.
 - Pendiente compilar y comprobar visualmente el resultado en PC; la forma final de cada cadena dependerá del relieve terrestre disponible.
 
