@@ -60,7 +60,7 @@ Los productos animales registran posibilidades de la fuente y decisiones explíc
 
 ## 6. Reglas del mundo
 
-Elevación y bioma son independientes. Los niveles 0–2 permiten tránsito terrestre ordinario según superficie y restricciones; el nivel 3 bloquea el paso ordinario y los asentamientos convencionales. El nivel del mar distingue tierra de agua.
+La configuración de elevaciones, sus rangos y las reglas para asignar biomas se redefinirán desde cero. No utilizar reglas anteriores como parámetros ejecutables.
 
 Clima geográfico, agua, suelo y origen nativo condicionan especies. Estaciones y desastres dinámicos quedan fuera del alcance inicial. Los minerales se distribuyen por geología, no por una lista obligatoria de cada bioma.
 
