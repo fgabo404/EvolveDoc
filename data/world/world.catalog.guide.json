@@ -40,42 +40,6 @@
     "resourceDiscoverySeparateFromExistence": true,
     "potentialCultivationSeparateFromEstablishedCrops": true
   },
-  "elevationLevels": [
-    {
-      "id": 0,
-      "name": {
-        "en": "Sea Level",
-        "es": "Nivel del mar"
-      },
-      "ordinaryLandTraversal": "depends_on_land_or_water_surface"
-    },
-    {
-      "id": 1,
-      "name": {
-        "en": "Middle Elevation",
-        "es": "Nivel medio"
-      },
-      "ordinaryLandTraversal": true
-    },
-    {
-      "id": 2,
-      "name": {
-        "en": "High Elevation",
-        "es": "Nivel alto"
-      },
-      "ordinaryLandTraversal": true,
-      "movementAndConstructionRestrictions": null
-    },
-    {
-      "id": 3,
-      "name": {
-        "en": "Impassable Summits",
-        "es": "Cumbres infranqueables"
-      },
-      "ordinaryLandTraversal": false,
-      "conventionalSettlementsAllowed": false
-    }
-  ],
   "geographicModifiers": [
     {
       "id": "river_floodplain",
@@ -6935,7 +6899,6 @@
   "hexDefinitionGuide": {
     "definitionFields": [
       "terrainType",
-      "elevationLevel",
       "surfaceType",
       "biomeId",
       "regionalVariantId",
