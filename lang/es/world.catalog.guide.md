@@ -23,10 +23,10 @@ Las colecciones son planas y se relacionan por IDs. Los nombres visibles usan `{
 | Campo | Significado |
 | --- | --- |
 | `biomes` | Siete categorías de bioma para la interfaz. |
-| `regionalVariants` | Las 27 variantes regionales o de hábitat, vinculadas por `biomeId`. |
+| `biomeSubtypes` | Subtipos ecológicos vinculados por `biomeId`; ejemplos iniciales pendientes de definición. |
 | `speciesCandidates` | Entradas de flora y fauna, incluidos grupos que deben concretarse. |
 | `geologicalResourceCandidates` | Materiales y menas del documento. Extraer un depósito no concede automáticamente metal refinado. |
-| `resourceOccurrences` | Cada aparición regional de flora, fauna y minería, con texto fuente, ID y método de extracción cuando corresponde. |
+| `resourceOccurrences` | Cada aparición documentada de flora, fauna y minería, con texto fuente, ID y método de extracción cuando corresponde; no se asigna automáticamente a subtipos. |
 | `agriculturalCropCandidates` | Los 21 cultivos o grupos agrícolas de la sección 5, pendientes de resolver por especie. |
 | `hexDefinitionGuide` | Propiedades propuestas para hexágonos y separación entre generación y estado. |
 | `depositDefinitionGuide` | Campos de depósitos cuyas cantidades y reglas siguen pendientes. |
@@ -34,9 +34,15 @@ Las colecciones son planas y se relacionan por IDs. Los nombres visibles usan `{
 | `reviewIssues` | Contradicciones del documento y dudas de integración. |
 | `speciesCompletionChecklist` | Trabajo necesario para convertir cada candidato en definición jugable. |
 
+## Organización ecológica de biomas (sin regiones continentales)
+
+**Decisión:** la estructura se organiza por **bioma principal → subtipo ecológico**, sin variantes identificadas por América, Europa, Asia, África u Oceanía. No hay reparto obligatorio por continente. Las especies y materiales conservarán sus IDs, pero deberán vincularse a nuevos subtipos según sus condiciones ecológicas cuando se diseñen; ninguna de las 485 apariciones se reasigna automáticamente.
+
+**Ejemplos de subtipos registrados, aún pendientes de desarrollar:** desierto arenoso, desierto rocoso, salar; selva (bosque tropical) y bosque templado. El resto de los subtipos se acordará progresivamente. El bioma y subtipo no se determinan únicamente por altitud: también importan temperatura, humedad y otras condiciones ambientales.
+
 ## 3. Identidad y taxonomía
 
-Los IDs de candidatos identifican entradas de diseño; no son nombres científicos aceptados. Las variantes regionales revisadas se agrupan cuando sus productos coinciden, con alias y procedencia conservada. No fusionar entidades diferentes solo por parecido.
+Los IDs de candidatos identifican entradas de diseño; no son nombres científicos aceptados. Los subtipos ecológicos se definen por condiciones ambientales y terreno, no por procedencia continental. No fusionar entidades diferentes solo por parecido.
 
 Solo se incluyen nombres científicos binomiales escritos explícitamente en el documento. `verified: false` indica que no se ha validado taxonomía. Las categorías generales como acacias y zorros son identidades válidas del juego. La taxonomía científica es opcional y no exige subdividirlas.
 
@@ -44,7 +50,7 @@ Los IDs agrícolas `wheat` y `maize` son vínculos propuestos para investigació
 
 ## 4. Contenido conservado
 
-Se conservan las 485 apariciones del catálogo. El documento enumera 27 variantes, aunque después menciona 26; un apartado pendiente dice diez biomas, mientras que el catálogo detallado contiene siete. La guía conserva lo enumerado y registra estas contradicciones.
+Se conservan las 485 apariciones del catálogo y los siete biomas generales. Se retiraron las 27 variantes regionales y sus vínculos de asignación. Los subtipos ecológicos son nuevas propuestas pendientes de aprobación.
 
 Tres líneas explicativas después de la última lista de flora alpina se guardan como notas de distribución, no como plantas. Las etapas mineras siguen siendo apariciones por método. No se fusionan automáticamente materiales similares.
 
