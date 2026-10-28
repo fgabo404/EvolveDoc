@@ -1,0 +1,109 @@
+{
+  "archiveOf": "data/world/world.catalog.guide.json",
+  "archivedAt": "2026-10-27",
+  "biomes": [
+    {
+      "id": "tropical_forest",
+      "name": {
+        "en": "Tropical Forest",
+        "es": "Bosque tropical"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "temperate_forest",
+      "name": {
+        "en": "Temperate Forest",
+        "es": "Bosque templado"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "tundra",
+      "name": {
+        "en": "Tundra",
+        "es": "Tundra"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "savanna",
+      "name": {
+        "en": "Savanna and Grasslands",
+        "es": "Sabana"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "desert",
+      "name": {
+        "en": "Desert",
+        "es": "Desierto"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "marine",
+      "name": {
+        "en": "Marine",
+        "es": "Marinos"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "alpine",
+      "name": {
+        "en": "High Mountain and Alpine",
+        "es": "Alta montaña y pisos alpinos"
+      },
+      "interfaceCategoryOnly": true
+    }
+  ],
+  "biomeSubtypes": [
+    {
+      "id": "desert_sandy",
+      "biomeId": "desert",
+      "name": {
+        "es": "Desierto arenoso",
+        "en": "Sandy desert"
+      },
+      "status": "example_pending_definition"
+    },
+    {
+      "id": "desert_rocky",
+      "biomeId": "desert",
+      "name": {
+        "es": "Desierto rocoso",
+        "en": "Rocky desert"
+      },
+      "status": "example_pending_definition"
+    },
+    {
+      "id": "desert_salt_flat",
+      "biomeId": "desert",
+      "name": {
+        "es": "Salar",
+        "en": "Salt flat"
+      },
+      "status": "example_pending_definition"
+    },
+    {
+      "id": "tropical_forest_rainforest",
+      "biomeId": "tropical_forest",
+      "name": {
+        "es": "Selva",
+        "en": "Rainforest"
+      },
+      "status": "example_pending_definition"
+    },
+    {
+      "id": "temperate_forest_temperate",
+      "biomeId": "temperate_forest",
+      "name": {
+        "es": "Bosque templado",
+        "en": "Temperate woodland"
+      },
+      "status": "example_pending_definition"
+    }
+  ]
+}

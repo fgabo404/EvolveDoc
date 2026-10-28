@@ -22,8 +22,8 @@ Las colecciones son planas y se relacionan por IDs. Los nombres visibles usan `{
 
 | Campo | Significado |
 | --- | --- |
-| `biomes` | Siete categorías de bioma para la interfaz. |
-| `biomeSubtypes` | Subtipos ecológicos vinculados por `biomeId`; ejemplos iniciales pendientes de definición. |
+| `biomes` | Seis categorías generales de bioma. |
+| `biomeSubtypes` | Veinte subtipos ecológicos, sin asignaciones de contenido. |
 | `speciesCandidates` | Entradas de flora y fauna, incluidos grupos que deben concretarse. |
 | `geologicalResourceCandidates` | Materiales y menas del documento. Extraer un depósito no concede automáticamente metal refinado. |
 | `resourceOccurrences` | Cada aparición documentada de flora, fauna y minería, con texto fuente, ID y método de extracción cuando corresponde; no se asigna automáticamente a subtipos. |
@@ -34,11 +34,51 @@ Las colecciones son planas y se relacionan por IDs. Los nombres visibles usan `{
 | `reviewIssues` | Contradicciones del documento y dudas de integración. |
 | `speciesCompletionChecklist` | Trabajo necesario para convertir cada candidato en definición jugable. |
 
-## Organización ecológica de biomas (sin regiones continentales)
+## Estructura oficial de biomas y subtipos
 
-**Decisión:** la estructura se organiza por **bioma principal → subtipo ecológico**, sin variantes identificadas por América, Europa, Asia, África u Oceanía. No hay reparto obligatorio por continente. Las especies y materiales conservarán sus IDs, pero deberán vincularse a nuevos subtipos según sus condiciones ecológicas cuando se diseñen; ninguna de las 485 apariciones se reasigna automáticamente.
+Seis biomas principales y veinte subtipos ecológicos sin división continental. JSON activo: `data/world/biomes.json`. Copia anterior: `data/world/Old/biomes.old.json`.
 
-**Ejemplos de subtipos registrados, aún pendientes de desarrollar:** desierto arenoso, desierto rocoso, salar; selva (bosque tropical) y bosque templado. El resto de los subtipos se acordará progresivamente. El bioma y subtipo no se determinan únicamente por altitud: también importan temperatura, humedad y otras condiciones ambientales.
+### 1. Desierto
+
+- Arenoso (dunas)
+- Rocoso (cañones y mesetas)
+- Salar
+
+### 2. Bosque
+
+- Tropical (selva)
+- Subtropical
+- Templado
+- Boreal (taiga)
+- Pantano arbolado (Everglades)
+
+### 3. Llanuras
+
+- Sabana
+- Pradera
+- Estepa
+- Humedal abierto (Pantanal)
+
+### 4. Marino
+
+- Arrecife
+- Estuario o litoral
+- Manglar
+- Océano abierto (alta mar)
+
+### 5. Tundra
+
+- Tundra
+
+### 6. Montaña
+
+- Alpino
+- Rocoso
+- Acantilados
+
+**Cumbres:** por encima del nivel 100 son infranqueables y no constituyen un subtipo de Montaña. Su representación lógica está pendiente de definir.
+
+**Pendiente:** no se asignan flora, fauna, minerales, recursos, probabilidades ni rangos ecológicos a estos subtipos.
 
 ## 3. Identidad y taxonomía
 
@@ -50,7 +90,7 @@ Los IDs agrícolas `wheat` y `maize` son vínculos propuestos para investigació
 
 ## 4. Contenido conservado
 
-Se conservan las 485 apariciones del catálogo y los siete biomas generales. Se retiraron las 27 variantes regionales y sus vínculos de asignación. Los subtipos ecológicos son nuevas propuestas pendientes de aprobación.
+Se conservan las 485 apariciones históricas, sin vínculos activos a biomas o subtipos. La estructura vigente contiene seis biomas y veinte subtipos.
 
 Tres líneas explicativas después de la última lista de flora alpina se guardan como notas de distribución, no como plantas. Las etapas mineras siguen siendo apariciones por método. No se fusionan automáticamente materiales similares.
 
@@ -70,21 +110,7 @@ Los productos animales registran posibilidades de la fuente y decisiones explíc
 
 **Principio aprobado:** la altitud limita la **compatibilidad** de los biomas, pero no los determina por sí sola. La selección posterior también deberá considerar temperatura, humedad y ubicación geográfica. La tectónica genera el relieve y, posteriormente, un clasificador ambiental determina el bioma compatible.
 
-**Rangos iniciales propuestos, pendientes de revisión individual y aprobación:** no deben tratarse como umbrales definitivos ni como reglas ejecutables.
-
-| Bioma | Altitud compatible propuesta | Nivel 0–100 propuesto |
-| --- | ---: | ---: |
-| Bosque tropical | 0–2,000 m | 0–50 |
-| Bosque templado | 400–3,000 m | 10–75 |
-| Tundra | 0–4,000 m | 0–100 |
-| Sabana | 0–2,000 m | 0–50 |
-| Desierto | 0–4,000 m | 0–100 |
-| Marino | Superficie oceánica, sin rango terrestre | 0 como referencia del mar; depende del atributo agua |
-| Alta montaña y pisos alpinos | 2,400–4,000 m | 60–100 |
-
-Los intervalos pueden solaparse: una altura no selecciona automáticamente un bioma. Se definirán más adelante condiciones de temperatura y humedad; los siete identificadores de bioma existentes se conservan. Esta propuesta **no modifica el generador tectónico actualmente implementado en `Evolve`**, ni sustituye sus datos experimentales hasta que se apruebe e implemente la capa de elevación definitiva.
-
----
+**Rangos por subtipo pendientes:** se retiró la tabla provisional para los siete biomas anteriores. Se conserva la escala de 0 a 100 y la equivalencia de 40 m por nivel.
 
 ## 6. Reglas del mundo
 

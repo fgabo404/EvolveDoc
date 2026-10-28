@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "2.0.0",
+  "contentVersion": "1.0.0",
+  "kind": "biome_catalog",
+  "status": "approved_structure_pending_ecological_rules",
+  "biomes": [
+    {
+      "id": "desert",
+      "name": {
+        "es": "Desierto"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "forest",
+      "name": {
+        "es": "Bosque"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "plains",
+      "name": {
+        "es": "Llanuras"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "marine",
+      "name": {
+        "es": "Marino"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "tundra",
+      "name": {
+        "es": "Tundra"
+      },
+      "interfaceCategoryOnly": true
+    },
+    {
+      "id": "mountain",
+      "name": {
+        "es": "Montaña"
+      },
+      "interfaceCategoryOnly": true
+    }
+  ],
+  "biomeSubtypes": [
+    {
+      "id": "desert_sandy",
+      "biomeId": "desert",
+      "name": {
+        "es": "Arenoso (dunas)"
+      }
+    },
+    {
+      "id": "desert_rocky",
+      "biomeId": "desert",
+      "name": {
+        "es": "Rocoso (cañones y mesetas)"
+      }
+    },
+    {
+      "id": "desert_salt_flat",
+      "biomeId": "desert",
+      "name": {
+        "es": "Salar"
+      }
+    },
+    {
+      "id": "forest_tropical",
+      "biomeId": "forest",
+      "name": {
+        "es": "Tropical (selva)"
+      }
+    },
+    {
+      "id": "forest_subtropical",
+      "biomeId": "forest",
+      "name": {
+        "es": "Subtropical"
+      }
+    },
+    {
+      "id": "forest_temperate",
+      "biomeId": "forest",
+      "name": {
+        "es": "Templado"
+      }
+    },
+    {
+      "id": "forest_boreal",
+      "biomeId": "forest",
+      "name": {
+        "es": "Boreal (taiga)"
+      }
+    },
+    {
+      "id": "forest_wooded_swamp",
+      "biomeId": "forest",
+      "name": {
+        "es": "Pantano arbolado (Everglades)"
+      }
+    },
+    {
+      "id": "plains_savanna",
+      "biomeId": "plains",
+      "name": {
+        "es": "Sabana"
+      }
+    },
+    {
+      "id": "plains_prairie",
+      "biomeId": "plains",
+      "name": {
+        "es": "Pradera"
+      }
+    },
+    {
+      "id": "plains_steppe",
+      "biomeId": "plains",
+      "name": {
+        "es": "Estepa"
+      }
+    },
+    {
+      "id": "plains_open_wetland",
+      "biomeId": "plains",
+      "name": {
+        "es": "Humedal abierto (Pantanal)"
+      }
+    },
+    {
+      "id": "marine_reef",
+      "biomeId": "marine",
+      "name": {
+        "es": "Arrecife"
+      }
+    },
+    {
+      "id": "marine_estuary_littoral",
+      "biomeId": "marine",
+      "name": {
+        "es": "Estuario o litoral"
+      }
+    },
+    {
+      "id": "marine_mangrove",
+      "biomeId": "marine",
+      "name": {
+        "es": "Manglar"
+      }
+    },
+    {
+      "id": "marine_open_ocean",
+      "biomeId": "marine",
+      "name": {
+        "es": "Océano abierto (alta mar)"
+      }
+    },
+    {
+      "id": "tundra_tundra",
+      "biomeId": "tundra",
+      "name": {
+        "es": "Tundra"
+      }
+    },
+    {
+      "id": "mountain_alpine",
+      "biomeId": "mountain",
+      "name": {
+        "es": "Alpino"
+      }
+    },
+    {
+      "id": "mountain_rocky",
+      "biomeId": "mountain",
+      "name": {
+        "es": "Rocoso"
+      }
+    },
+    {
+      "id": "mountain_cliffs",
+      "biomeId": "mountain",
+      "name": {
+        "es": "Acantilados"
+      }
+    }
+  ],
+  "impassableSummits": {
+    "aboveElevationLevel": 100,
+    "biomeId": null,
+    "name": {
+      "es": "Cumbres infranqueables"
+    },
+    "note": "Fuera de la escala 0–100; representación pendiente."
+  },
+  "pending": [
+    "elevationRangesBySubtype",
+    "temperature",
+    "moisture",
+    "flora",
+    "fauna",
+    "minerals",
+    "spawnRules"
+  ]
+}
