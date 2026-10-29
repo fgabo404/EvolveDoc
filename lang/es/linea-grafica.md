@@ -61,3 +61,21 @@ Esta reserva **no afecta la propuesta de representación visual de ejércitos**:
 Se documentan **preferencias expresadas e ideas exploratorias** en la conversación del 29/10/2026. No se aprueba todavía un pipeline gráfico, tecnología de renderizado, tamaño de assets, reglas de cámara, sistema de NPCs ni representación definitiva de los ejércitos.
 
 **Próximo trabajo posible:** comparar referencias visuales y elaborar bocetos de un mismo elemento (mercado, bosque y ejército) visto a distintas distancias, antes de tomar decisiones técnicas.
+
+
+## 7. Personaje humano base — referencia visual seleccionada (29/10/2026)
+
+**Estado: diseño visual base aceptado por el usuario para seguir trabajando, aún no asset de producción.**
+
+Tras comparar varios bocetos, el usuario seleccionó expresamente el personaje de la imagen de referencia que compartió (figura humana pequeña sobre una playa, con cabello castaño oscuro, ojos verticales negros, mejillas rosadas, camisa gris clara y pantalón oscuro). Aprobó el boceto posterior de **un solo personaje en cinco orientaciones** (frente, espalda, perfil izquierdo, perfil derecho y una vista frontal ampliada) como base deseada para G-Evolve.
+
+Rasgos visuales que se deben preservar en próximas iteraciones:
+- **Pixel art cenital de apariencia chibi**, con cabeza cuadrada y grande en relación con el cuerpo.
+- Ojos oscuros de forma vertical, mejillas levemente rosadas, rostro de pocos píxeles y sin detalle innecesario.
+- Cuerpo muy compacto, brazos simples pegados a los costados, piernas cortas y contorno oscuro nítido.
+- Proporciones, rostro y silueta compartidos entre todas las profesiones; la vestimenta, los accesorios y el equipo cambiarán sin rediseñar el cuerpo base.
+- **Primero trabajar únicamente el personaje base**, separado de terreno y hexágonos; después explorar aldeano, explorador, soldado, etc.
+
+La referencia de estilo sigue siendo **The Escapists 2**, pero los recursos finales deben ser propios de G-Evolve. No confundir este diseño aceptado con las láminas previas de variantes, que no fueron aprobadas como plantilla definitiva.
+
+**Referencia visual:** imagen aportada por el usuario en la conversación del 29/10/2026 y boceto de cinco vistas generado y aprobado en esa misma conversación. Este registro describe el diseño; la imagen binaria no se incorpora aquí todavía.
