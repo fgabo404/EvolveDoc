@@ -1,14 +1,15 @@
-# Assets de personaje humano — G-Evolve
+# Assets humanos — G-Evolve
 
-## Material versionado
+## Especificaciones
 
-- [Ficha técnica SVG v0.1](humano-base-ficha-tecnica-v0.1.svg): representación **vectorial y esquemática**, con las cuatro vistas, proporciones propuestas, pivote y colores orientativos. Se puede previsualizar en GitHub. No es una copia del PNG generado.
-- [Especificación del humano base](../../../lang/es/diseno-personaje-humano-base.md): reglas artísticas vigentes y contrato dimensional de prototipado.
+- [Diseño del personaje humano base](../../../lang/es/diseno-personaje-humano-base.md)
+- [Línea gráfica](../../../lang/es/linea-grafica.md)
 
-## Material pendiente
+## Imágenes PNG pendientes de incorporar
 
-- El **boceto visual original «Taparrabo»** compartido por el usuario (frente ampliado y cuatro orientaciones) debe guardarse como PNG por separado, sin alteraciones.
-- La **ficha PNG generada en la conversación** también es un archivo distinto y no debe confundirse con este SVG de apoyo.
-- Cuatro sprites reales RGBA de 32×48 px y atlas 4×1 (128×48 px) sujetos a validación.
+1. `g-evolve-humano-base-ficha-tecnica-v1.png`: ficha **de presentación** de 1536 × 1024 px generada y aprobada para documentación visual; debe subirse sin modificar sus bytes.
+2. `humano-base-taparrabo-original.png`: lámina artística original compartida por el usuario, referencia maestra, también pendiente.
 
-**Regla de prioridad:** boceto original aprobado > especificación artística > esquema SVG y valores técnicos provisionales.
+No hay ninguna imagen SVG maestra. No crear referencias Markdown a estos nombres hasta que los PNG existan realmente en el repositorio.
+
+**Prioridad:** boceto original «Taparrabo» > reglas del diseño > ficha técnica ilustrativa > medidas provisionales de prototipado.

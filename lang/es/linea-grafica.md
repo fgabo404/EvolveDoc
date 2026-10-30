@@ -95,6 +95,8 @@ El archivo binario original de la lámina compartida en la conversación todaví
 4. No añadir mejillas rosas, pelo excesivamente detallado, ropa adicional, botas, expresiones o accesorios a la versión base.
 5. Conservar pendiente la paleta HEX exacta, sprites transparentes verificables, animaciones, integración con hexágonos y parámetros definitivos del motor.
 
-## 10. Ficha técnica visual versionada
+## 10. Ficha de presentación PNG: incorporación pendiente
 
-Para consulta de arte técnico, véase la [ficha SVG del humano base v0.1](../../assets/characters/human/humano-base-ficha-tecnica-v0.1.svg). Su imagen es una reconstrucción esquemática del personaje sobre una cuadrícula 32×48, **no reemplaza la lámina original aprobada ni el PNG de presentación generado en la conversación**. Las medidas y colores son propuestas sujetas a verificación contra el primer sprite nativo.
+Se preparó una nueva ficha técnica ilustrada del humano base (29/10/2026), cotejada visualmente contra la lámina «Taparrabo» compartida por el usuario. La imagen resultante es un **PNG de presentación** de 1536 × 1024 px, que contiene una vista ampliada, cuatro orientaciones, esquema de proporciones, anclaje y paleta indicativa.
+
+**El PNG todavía no se ha subido a este repositorio.** Cuando se incorpore, su destino previsto será `assets/characters/human/g-evolve-humano-base-ficha-tecnica-v1.png`. No enlazar archivos inexistentes ni sustituirlo por un SVG. La ficha sigue siendo ilustrativa y no un atlas de sprites.
