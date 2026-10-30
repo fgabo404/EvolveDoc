@@ -234,10 +234,12 @@ La imagen original se volvió a compartir en la conversación y confirma **una v
 
 **Siguiente validación:** dibujar los cuatro PNG RGBA nativos 32×48 con el pivote común, compararlos uno a uno con la lámina original y ajustar el contrato a v0.2 únicamente después de validar el resultado.
 
-## 13. Lámina técnica PNG — archivo original pendiente de subir
+## 13. Ficha técnica gráfica de referencia — humano base (v1.0)
 
-Se generó en la conversación la ficha de presentación **`g-evolve-humano-base-ficha-tecnica-v1.png`**, de **1536 × 1024 px**. Su contenido ilustrativo muestra vista frontal ampliada, cuatro orientaciones, esquema dimensional, pivote y ejemplos exploratorios de vestuario.
+El usuario **seleccionó esta lámina para conservarla como ficha técnica gráfica de referencia del humano base**. Se generó en la conversación la ficha PNG **`g-evolve-humano-base-ficha-tecnica-v1.png`**, de **1536 × 1024 px**. Su contenido ilustrativo muestra vista frontal ampliada, cuatro orientaciones, esquema dimensional, pivote, paleta orientativa y ejemplos exploratorios de vestuario. La ficha describe una versión visual del modelo; **no sustituye ni modifica la lámina maestra «Taparrabo»**.
 
-La incorporación del PNG **no se ha completado aún**; la conexión GitHub utilizada en esta sesión no pudo transferir los bytes binarios. La ruta prevista es `assets/characters/human/g-evolve-humano-base-ficha-tecnica-v1.png`.
+El **archivo PNG exacto fue seleccionado y conservado como descarga en la conversación**, pero **todavía no está subido a GitHub**: la conexión disponible no admite cargar el binario de forma directa. La ruta prevista es `assets/characters/human/g-evolve-humano-base-ficha-tecnica-v1.png`.
 
 Esta ficha de presentación es distinta de la lámina original «Taparrabo» aportada por el usuario y de un atlas de 32 × 48 px. Las cifras impresas en la imagen son anotaciones ilustrativas y **no sustituyen el contrato de medidas propuesto** de la sección 11 (en particular, cabeza nominal 26/46 px visibles). Las profesiones mostradas son solo ejemplos no aprobados.
+
+**Identificador de integridad del PNG seleccionado:** SHA-256 `a9b6c4ee88e43ae3728ccce7213ee31d170fcf1b5dbabaae97f302d3d5846f53`. Se utiliza para identificar la imagen exacta que se debe subir a EvolveDoc; la ficha no debe recrearse ni reemplazarse por SVG.

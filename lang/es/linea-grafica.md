@@ -103,9 +103,9 @@ El archivo binario original de la lámina compartida en la conversación todaví
 4. No añadir mejillas rosas, pelo excesivamente detallado, ropa adicional, botas, expresiones o accesorios a la versión base.
 5. Conservar pendiente la paleta HEX exacta, sprites transparentes verificables, animaciones, integración con hexágonos y parámetros definitivos del motor.
 
-## 10. Ficha de presentación PNG: incorporación pendiente
+## 10. Ficha técnica gráfica del humano base: imagen seleccionada (subida pendiente)
 
-Se preparó una nueva ficha técnica ilustrada del humano base (29/10/2026), cotejada visualmente contra la lámina «Taparrabo» compartida por el usuario. La imagen resultante es un **PNG de presentación** de 1536 × 1024 px, que contiene una vista ampliada, cuatro orientaciones, esquema de proporciones, anclaje y paleta indicativa.
+El usuario seleccionó la ficha técnica ilustrada del humano base (30/10/2026) como **referencia gráfica documental del personaje**, cotejada visualmente contra la lámina «Taparrabo» compartida anteriormente. La imagen resultante es un **PNG de presentación** de 1536 × 1024 px, que contiene una vista ampliada, cuatro orientaciones, esquema de proporciones, anclaje y paleta indicativa.
 
 **El PNG todavía no se ha subido a este repositorio.** Cuando se incorpore, su destino previsto será `assets/characters/human/g-evolve-humano-base-ficha-tecnica-v1.png`. No enlazar archivos inexistentes ni sustituirlo por un SVG. La ficha sigue siendo ilustrativa y no un atlas de sprites.
 
@@ -146,3 +146,5 @@ Se preparó una nueva ficha técnica ilustrada del humano base (29/10/2026), cot
 5. Validar lectura de recursos, siluetas y contraste sobre distintos biomas, no solo una isla tropical.
 
 **Prioridad para futuras decisiones artísticas:** (1) identidad original aprobada del humano base para anatomía; (2) video para acabado ambiental y sensación de movimiento; (3) reglas de legibilidad/zoom del simulador 4X; (4) propuestas técnicas por validar.
+
+**Referencia del PNG seleccionado:** SHA-256 `a9b6c4ee88e43ae3728ccce7213ee31d170fcf1b5dbabaae97f302d3d5846f53`. No sustituirlo por SVG ni convertir la lámina de presentación en spritesheet. La selección de esta ficha no implica aprobar los diseños exploratorios de otras profesiones.
