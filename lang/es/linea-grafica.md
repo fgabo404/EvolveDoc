@@ -79,3 +79,10 @@ Rasgos visuales que se deben preservar en próximas iteraciones:
 La referencia de estilo sigue siendo **The Escapists 2**, pero los recursos finales deben ser propios de G-Evolve. No confundir este diseño aceptado con las láminas previas de variantes, que no fueron aprobadas como plantilla definitiva.
 
 **Referencia visual:** imagen aportada por el usuario en la conversación del 29/10/2026 y boceto de cinco vistas generado y aprobado en esa misma conversación. Este registro describe el diseño; la imagen binaria no se incorpora aquí todavía.
+
+
+## 8. Modelo humano base — referencia maestra actualizada
+
+El personaje base aprobado más reciente es **humano con taparrabo marrón, torso descubierto y rostro SIN mejillas rosadas**, con vistas frente/espalda/izquierda/derecha. Sustituye como referencia maestra la versión anterior con rubor. Las variantes de cazador-recolector, agricultor y legionario siguen siendo exploraciones de indumentaria.
+
+**Ficha gráfica y técnica completa:** [Diseño del personaje humano base](diseno-personaje-humano-base.md). Los tamaños nativos, paletas HEX y animaciones siguen pendientes de definición. La imagen del boceto aprobado continúa en la conversación de diseño; el binario todavía no está incorporado a este repositorio.
