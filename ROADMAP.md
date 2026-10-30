@@ -35,12 +35,11 @@ The user may choose among options or delegate reality-based completion. Update d
 - [ ] Define quantities, units, durations, regeneration, consumption and numerical balance after the initial entity/resource design.
 - [ ] Complete GameState, turn phases, save/load and compatibility rules.
 - [ ] Implement technology conditions, eurekas, effects and species/entity-specific progress; the current research demo is only an example.
-- [ ] Emulate a small initial world without graphics, with reproducible scenarios to check generation and resource evolution.
+- [ ] Emulate a small initial world with reproducible scenarios to check generation and resource evolution.
 - [ ] Choose the implementation language and engine approach when simulation requirements are clear.
 
 ## Deferred ideas — Keep visible, outside the current focus
 
-- [ ] Graphics, map rendering and user interface, after the simulation base.
 - [ ] Dynamic weather, seasons and climate disasters; possible later expansion. Static habitat conditions remain part of world design.
 - [ ] Nomadic populations, migration and their diplomacy/trade behavior; detailed rules remain pending.
 - [ ] Broader city, economy, diplomacy and warfare systems; retain the historical simulation direction with a 4X format.
@@ -55,7 +54,7 @@ The user may choose among options or delegate reality-based completion. Update d
 - [x] Generalize 33 selected plant/animal cases with 86 retired-ID aliases; keep meaningful gameplay distinctions. Current guides contain 109 plant entities, 101 animal entities and 21 crop groups.
 - [x] Create the resource/source-binding and transformation-guide foundation. See [resources](lang/en/resources.md) for current coverage; recipes and operational rules remain pending.
 - [x] Add complete current JSON field references, examples, catalog diagrams and consistency checks.
-- [x] Add a small research-progress demonstration without graphics; no full simulation engine is implemented.
+- [x] Add a small research-progress demonstration; no full simulation engine is implemented.
 - [x] Create this shared roadmap and link both language versions from the README.
 
 ## Maintenance agreement
