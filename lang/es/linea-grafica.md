@@ -1,16 +1,24 @@
-# Línea gráfica — lluvia de ideas
+# Línea gráfica — dirección visual de G-Evolve
 
 **Proyecto:** G-Evolve  
-**Fecha de conversación:** 29 de octubre de 2026  
-**Estado:** Exploración conceptual / lluvia de ideas. **No es una especificación artística ni técnica definitiva.**
+**Origen:** exploración del 29 de octubre de 2026; decisión de referencia visual del **30 de octubre de 2026**.  
+**Estado:** **dirección artística de referencia seleccionada** para el juego a partir del video aportado por el usuario. Las reglas de producción, tamaños nativos, paletas definitivas y animaciones concretas siguen en fase de prototipado.
 
-## 1. Dirección visual que estamos explorando
+## 1. Dirección visual seleccionada
 
-- Referencia artística preferida: **The Escapists 2**, especialmente su estilo de **pixel art moderno, limpio y detallado**, visto desde una perspectiva elevada/cenital.
-- Preferencia por una apariencia **minimalista y clara**, capaz de comunicar información del mundo sin excesivo ruido visual.
-- La intención es **inspirarse** en la claridad, las proporciones y el enfoque visual de esa referencia, desarrollando una identidad propia para G-Evolve; no reproducir sus recursos gráficos.
-- Considerar perspectivas que permitan ver partes laterales de edificios, árboles y otros elementos sin perder la lectura del mapa desde arriba.
-- El proyecto es un simulador histórico sistémico con formato 4X, por lo que la legibilidad estratégica es tan importante como el detalle de los objetos.
+**Referencia principal desde el 30/10/2026:** el **video de jugabilidad compartido por el usuario** (secuencia breve con entorno de isla, agua, arena, palmeras, rocas, personaje, interfaz y acciones de interacción). Se adopta su **lenguaje gráfico general y sensación de fluidez** como guía estética para G-Evolve, **sin copiar sprites, mapas, interfaz ni recursos de terceros**.
+
+- **Pixel art 2D moderno, orgánico y legible**, con masas de color y siluetas claras; más riqueza ambiental que una representación puramente minimalista, pero sin ruido decorativo.
+- **Perspectiva cenital elevada**: se ven superficies de suelo y parte de los laterales de rocas, vegetación y construcciones; mantener lectura estratégica desde arriba.
+- **Terreno con costas irregulares y transiciones naturales** entre arena, suelo, vegetación y agua; evitar que las cuadrículas o el hexágono estructural aparezcan como bordes rígidos en cada textura.
+- **Volumen e iluminación sutiles**: sombreados escalonados, sombras de contacto, pequeñas luces y profundidad de agua. Mantener píxeles definidos y no aplicar desenfoque global al arte.
+- **Naturaleza rica pero ordenada**: árboles, rocas, agua y vegetación se reconocen inmediatamente, con variación local y animación discreta cuando corresponda.
+- **Movimiento con sensación continua**: interpolar la posición de objetos y cámara entre estados simulados, aunque las animaciones de sprites se compongan de pocos fotogramas.
+- **Interfaz con personalidad pixel art**, compacta y jerarquizada, sin sacrificar legibilidad de datos de un juego 4X.
+
+La referencia histórica a **The Escapists 2** sigue siendo útil como inspiración secundaria para la claridad y las proporciones chibi del humano base, **pero el video pasa a guiar la ambientación general, animación percibida y acabado del mundo**. La identidad final y sus assets serán originales de G-Evolve.
+
+**Compatibilidad con el diseño existente:** mantener la referencia aprobada del personaje «Taparrabo» (cabeza grande y cuadrada, torso corto, cuatro orientaciones), sin rediseñarlo por defecto. La integración visual entre personajes, fondos y edificios deberá validarse con bocetos conjuntos. El mundo **no tiene que ser tropical**: este lenguaje gráfico se trasladará a cada bioma histórico/geográfico correspondiente.
 
 ## 2. Zoom con cambios de representación
 
@@ -100,3 +108,41 @@ El archivo binario original de la lámina compartida en la conversación todaví
 Se preparó una nueva ficha técnica ilustrada del humano base (29/10/2026), cotejada visualmente contra la lámina «Taparrabo» compartida por el usuario. La imagen resultante es un **PNG de presentación** de 1536 × 1024 px, que contiene una vista ampliada, cuatro orientaciones, esquema de proporciones, anclaje y paleta indicativa.
 
 **El PNG todavía no se ha subido a este repositorio.** Cuando se incorpore, su destino previsto será `assets/characters/human/g-evolve-humano-base-ficha-tecnica-v1.png`. No enlazar archivos inexistentes ni sustituirlo por un SVG. La ficha sigue siendo ilustrativa y no un atlas de sprites.
+
+
+## 11. Referencia audiovisual y fluidez (decisión del 30/10/2026)
+
+**Evidencia original:** video MP4 adjunto por el usuario en la conversación del 30/10/2026; **el archivo de video no está incorporado a EvolveDoc**. Observaciones verificadas visualmente: agua con varias tonalidades, costa orgánica, zona de isla con vegetación y palmeras, rocas, personaje pequeño en vista elevada, interfaz pixel art y acciones de interacción. No inferir a partir del video un motor, sistema de cámara, velocidad de simulación, resolución nativa o cantidad de frames por animación.
+
+### 11.1 Principios gráficos que tomamos como guía
+
+| Elemento | Lenguaje visual deseado | Observación para Evolve |
+| --- | --- | --- |
+| Agua | Variación tonal y vida visual sutil | Cambios de color/ondas que no distraigan de unidades y recursos |
+| Costas y suelo | Perfiles escalonados y naturales, sin geometría rígida a la vista | Los hexágonos siguen existiendo para la simulación, pero su retícula se puede ocultar en el render |
+| Vegetación | Siluetas reconocibles, paleta rica, agrupación orgánica | Adaptar especies y densidades a los biomas reales y sus catálogos |
+| Rocas y recursos | Volúmenes y contrastes claros con sombra de contacto | Representar mineral explotable de acuerdo con datos y escala de zoom |
+| Personajes | Sprite compacto, nítido y anclado al suelo | Conservar modelo «Taparrabo» aprobado y sus orientaciones |
+| Interacciones | Reacción visual rápida, estados fáciles de reconocer | Activación de animación de trabajo, efectos pequeños y cambio al terminar |
+| Interfaz | Paneles pixel art coherentes, texto y recursos bien diferenciados | No ocultar información estratégica ni inventarios por decoración |
+
+### 11.2 Cómo producir la sensación de fluidez (guía, no valores aprobados)
+
+- **Lógica y render separados:** la simulación determina posiciones, estados y acciones; el render interpola posiciones visibles y reproduce animaciones.
+- **Movimiento continuo:** personajes o embarcaciones pueden avanzar entre puntos sin saltos visuales; mantener sincronización con la ruta real.
+- **Sprites animados:** dibujar secuencias cortas (quieto, caminar, trabajar, recolectar, golpear) y ajustar el timing observando el juego, no solo incrementando los frames.
+- **Animación ambiental:** agua, vegetación y efectos de interacción discretos; priorizar lo visible a la escala actual.
+- **Cámara:** desplazamiento y zoom suaves, con atención a evitar shimmer y pérdida de nitidez de píxel; comparar interpolación con movimiento alineado a píxeles.
+- **Capas de detalle (LOD):** a escala estratégica, mostrar iconos y patrones; a escala cercana, desplegar sprites y microanimaciones; la cantidad dibujada no equivale necesariamente al número de entidades simuladas.
+
+**Parámetros de prueba posibles, todavía no aprobados:** render cercano a 60 FPS cuando el dispositivo lo permita, caminata a 8–12 imágenes/segundo de animación y ciclo de 4–6 poses. Son puntos de partida para experimentar, **no una especificación de producción ni una medición del video**.
+
+### 11.3 Criterios para la primera prueba visual
+
+1. Dibujar un escenario pequeño con costa, agua, vegetación, piedra y una figura humana del modelo aprobado.
+2. Representar un desplazamiento breve con animación de pasos y movimiento interpolado; al llegar, reproducir idle.
+3. Incluir una acción de recolección/minería con efectos simples y respuesta visual inmediata.
+4. Mostrar tres encuadres del mismo lugar (cercano, regional y estratégico), sin obligar a dibujar todos los objetos en el zoom alejado.
+5. Validar lectura de recursos, siluetas y contraste sobre distintos biomas, no solo una isla tropical.
+
+**Prioridad para futuras decisiones artísticas:** (1) identidad original aprobada del humano base para anatomía; (2) video para acabado ambiental y sensación de movimiento; (3) reglas de legibilidad/zoom del simulador 4X; (4) propuestas técnicas por validar.

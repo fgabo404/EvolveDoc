@@ -9,7 +9,7 @@
 
 El humano base de G-Evolve es un personaje **pixel art 2D de escala reducida, lectura cenital elevada y silueta chibi compacta**. Su función es ser el modelo compartido a partir del cual se crean aldeanos, agricultores, cazadores-recolectores, exploradores, soldados y otros oficios sin modificar arbitrariamente anatomía o rostro.
 
-Inspiración visual declarada: *The Escapists 2*. Es una **referencia estética** de lectura y proporciones, no una autorización para reutilizar sprites ni una exigencia de copiar píxel a píxel diseños de terceros. Los assets finales serán propios de G-Evolve.
+Inspiración visual histórica: *The Escapists 2*, como referencia secundaria de lectura y proporciones. **Actualización del 30/10/2026:** la dirección general de ambientes y movimiento del juego sigue el video aportado por el usuario, descrito en [Línea gráfica](linea-grafica.md#11-referencia-audiovisual-y-fluidez-decisión-del-30102026). **El diseño anatómico maestro de «Taparrabo» no cambia por esta decisión.** Las referencias de terceros son orientativas: todos los assets finales serán propios de G-Evolve.
 
 **Decisión de diseño confirmada:** la última revisión elimina **por completo los píxeles rosados de las mejillas**. Las versiones anteriores con rubor no son el nuevo modelo de referencia.
 
