@@ -233,3 +233,11 @@ La imagen original se volvió a compartir en la conversación y confirma **una v
 - El documento refleja una **imagen visualizada en la conversación**; el PNG maestro aún requiere incorporación verificable a `EvolveDoc`.
 
 **Siguiente validación:** dibujar los cuatro PNG RGBA nativos 32×48 con el pivote común, compararlos uno a uno con la lámina original y ajustar el contrato a v0.2 únicamente después de validar el resultado.
+
+## 13. Ficha técnica visual consultable en GitHub
+
+![Ficha técnica del humano base v0.1](../../assets/characters/human/humano-base-ficha-tecnica-v0.1.svg)
+
+**Archivo:** [`assets/characters/human/humano-base-ficha-tecnica-v0.1.svg`](../../assets/characters/human/humano-base-ficha-tecnica-v0.1.svg). Es una **reconstrucción vectorial técnica** reproducible que sirve de apoyo a este contrato (cuatro direcciones, cuadrícula de referencia, anclaje y paleta ilustrativa). **No es el PNG maestro «Taparrabo» aportado por el usuario ni la imagen rasterizada generada en la conversación, y no es un spritesheet final**.
+
+La paleta ilustrativa en el SVG no está aprobada como catálogo HEX definitivo. Los valores de 32×48 y (16,46) continúan propuestos para prototipado. Deben incorporarse por separado los PNG originales antes de etiquetar el material como arte maestro versionado.

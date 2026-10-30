@@ -94,3 +94,7 @@ El archivo binario original de la lámina compartida en la conversación todaví
 3. Mantener iguales cabeza, ojos, cabello, tronco, extremidades y anclaje en todas las orientaciones; cambiar vestuario/equipo solo para oficios futuros.
 4. No añadir mejillas rosas, pelo excesivamente detallado, ropa adicional, botas, expresiones o accesorios a la versión base.
 5. Conservar pendiente la paleta HEX exacta, sprites transparentes verificables, animaciones, integración con hexágonos y parámetros definitivos del motor.
+
+## 10. Ficha técnica visual versionada
+
+Para consulta de arte técnico, véase la [ficha SVG del humano base v0.1](../../assets/characters/human/humano-base-ficha-tecnica-v0.1.svg). Su imagen es una reconstrucción esquemática del personaje sobre una cuadrícula 32×48, **no reemplaza la lámina original aprobada ni el PNG de presentación generado en la conversación**. Las medidas y colores son propuestas sujetas a verificación contra el primer sprite nativo.
