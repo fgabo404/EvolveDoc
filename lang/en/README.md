@@ -30,7 +30,7 @@ The current agriculture configuration contains 23 peer technology definitions in
 
 ## 2. Confirmed architectural direction
 
-Build a headless, turn-based simulation first. Validate game behavior before investing in graphics or UI. The simulation will be developed independently from the future presentation layer. A graphics engine and implementation language have not yet been selected.
+Keep simulation rules separate from presentation concerns so each can evolve independently.
 
 There are two categories of data:
 
@@ -48,7 +48,6 @@ Separate JSON files may organize each category. The number of files is independe
 - IDs are stable; translated text is never an identity or dependency.
 - Documentation is maintained in English and Spanish.
 - Current fallback policy: requested language, then `defaultLanguage`, then owner ID.
-- No graphics or layout coordinates belong in technology progression state.
 
 ## 4. Research and species
 
@@ -79,7 +78,7 @@ Knowing a technique, possessing materials and operating an installation are sepa
 - Simulation code, save/load and migrations.
 - Soil, reproduction, domestication and production calculations.
 - The exact phase order within a turn.
-- Graphics engine, implementation language and UI.
+- Implementation language and remaining technical integration choices.
 
 The configuration defines a proposed executable contract; it is not proof that an evaluator or simulation already exists.
 
@@ -104,7 +103,7 @@ The EvolveDoc Git repository is now the primary reference. Drive files are previ
 
 ## 9. Suggested next milestone
 
-Validate a small headless scenario with two civilizations and wheat/maize knowledge:
+Validate a small scenario with two civilizations and wheat/maize knowledge:
 
 1. Load definitions and resolve dependencies.
 2. Initialize independent civilization and species state.
