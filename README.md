@@ -57,7 +57,7 @@ EvolveDoc/
 - Nomenclature contract: three-letter English prefix plus six digits, with a separate English `snake_case` tag. New resources, taxa and forms have allocated IDs; legacy candidate/technology IDs are retained.
 - A runnable research example, structural validation and bilingual documentation.
 
-Gameplay identities use general categories such as foxes, bears, oaks and pines when scientific subdivisions add no gameplay value. Crop identities and useful wild/domestic differences remain separate. All original source occurrences are preserved. Scientific catalogs remain optional background; they do not create mandatory entity subdivisions. Guide catalogs remain runtime-disabled while operational rules, yields and formulas are deferred. No full engine or graphics is included.
+Gameplay identities use general categories such as foxes, bears, oaks and pines when scientific subdivisions add no gameplay value. Crop identities and useful wild/domestic differences remain separate. All original source occurrences are preserved. Scientific catalogs remain optional background; they do not create mandatory entity subdivisions. Guide catalogs remain runtime-disabled while operational rules, yields and formulas are deferred. No complete game engine is included.
 
 ## Run the checks and example
 
