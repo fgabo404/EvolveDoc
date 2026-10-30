@@ -30,7 +30,7 @@ La configuración actual contiene 23 tecnologías al mismo nivel en una lista pl
 
 ## 2. Dirección arquitectónica acordada
 
-Primero se desarrollará una simulación por turnos sin depender de gráficos. Se validará el funcionamiento del juego antes de trabajar en la presentación y la interfaz. El motor gráfico y el lenguaje de implementación siguen pendientes.
+Mantener las reglas de simulación separadas de la presentación, para que ambas evolucionen de forma independiente.
 
 Existen dos categorías de datos:
 
@@ -48,7 +48,6 @@ Cada categoría puede repartirse entre varios archivos; su cantidad no cambia es
 - Los IDs son estables. Nunca se usan traducciones como identidad o dependencia.
 - La documentación se mantiene en inglés y español.
 - Respaldo de idioma: idioma solicitado, después `defaultLanguage` y finalmente el ID.
-- Los gráficos y las coordenadas de diseño no forman parte del progreso tecnológico.
 
 ## 4. Investigación y especies
 
@@ -79,7 +78,7 @@ Conocer una técnica, disponer de materiales y operar una instalación son compr
 - Código del simulador, guardado/carga y migraciones.
 - Cálculos de suelo, reproducción, domesticación y producción.
 - Orden exacto de resolución de cada turno.
-- Motor gráfico, lenguaje de programación e interfaz.
+- Lenguaje de programación y decisiones técnicas de integración pendientes.
 
 La configuración propone un contrato de funcionamiento. No significa que el evaluador o la simulación ya estén implementados.
 
@@ -104,7 +103,7 @@ El repositorio Git EvolveDoc es ahora la referencia principal. Los archivos de D
 
 ## 9. Siguiente hito propuesto
 
-Validar un escenario pequeño sin gráficos con dos civilizaciones y conocimiento de trigo/maíz:
+Validar un escenario pequeño con dos civilizaciones y conocimiento de trigo/maíz:
 
 1. Cargar las definiciones y resolver sus dependencias.
 2. Inicializar estados independientes por civilización y especie.
