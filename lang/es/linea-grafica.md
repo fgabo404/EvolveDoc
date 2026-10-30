@@ -52,7 +52,7 @@ Esta reserva **no afecta la propuesta de representación visual de ejércitos**:
 - Conservar una lectura clara de biomas, construcciones y recursos tanto al acercar como al alejar la cámara.
 - Evaluar niveles de detalle (LOD) visual y semántico: simplificar o sustituir la forma de representación según el zoom.
 - Procurar que las capas visuales no obliguen a representar todos los objetos con máximo detalle al mismo tiempo.
-- Investigar resolución interna, tamaño de tiles y sprites, paleta, iluminación, animaciones, escala entre ciudades y terrenos, y rendimiento; **ninguno está definido todavía**.
+- Investigar resolución interna, tamaño de tiles, paleta, iluminación, animaciones, escala entre ciudades y terrenos, y rendimiento; **solo existe una propuesta de canvas 32×48 px y pivote (16,46) para el humano base, no un estándar global definitivo**.
 - Validar cómo se integra con los biomas, subtipos y rangos de altura ya documentados **sin alterarlos**.
 - Mantener la distinción entre **datos simulados** y **elementos dibujados** para evitar confundir una representación resumida con el estado real.
 
@@ -63,26 +63,34 @@ Se documentan **preferencias expresadas e ideas exploratorias** en la conversaci
 **Próximo trabajo posible:** comparar referencias visuales y elaborar bocetos de un mismo elemento (mercado, bosque y ejército) visto a distintas distancias, antes de tomar decisiones técnicas.
 
 
-## 7. Personaje humano base — referencia visual seleccionada (29/10/2026)
+## 7. Historial de exploración del personaje humano base (no vigente)
 
-**Estado: diseño visual base aceptado por el usuario para seguir trabajando, aún no asset de producción.**
+En la conversación del 29/10/2026 se estudiaron figuras con camisa, pantalón y mejillas rosadas. Estas versiones ayudaron a explorar la apariencia chibi y la legibilidad, pero **han sido reemplazadas**. No deben usarse como plantilla para nuevos sprites.
 
-Tras comparar varios bocetos, el usuario seleccionó expresamente el personaje de la imagen de referencia que compartió (figura humana pequeña sobre una playa, con cabello castaño oscuro, ojos verticales negros, mejillas rosadas, camisa gris clara y pantalón oscuro). Aprobó el boceto posterior de **un solo personaje en cinco orientaciones** (frente, espalda, perfil izquierdo, perfil derecho y una vista frontal ampliada) como base deseada para G-Evolve.
+También se exploraron personajes de distintas profesiones. Los bocetos de cazador-recolector, agricultor y legionario son **estudios de vestuario sin aprobación como assets definitivos**.
 
-Rasgos visuales que se deben preservar en próximas iteraciones:
-- **Pixel art cenital de apariencia chibi**, con cabeza cuadrada y grande en relación con el cuerpo.
-- Ojos oscuros de forma vertical, mejillas levemente rosadas, rostro de pocos píxeles y sin detalle innecesario.
-- Cuerpo muy compacto, brazos simples pegados a los costados, piernas cortas y contorno oscuro nítido.
-- Proporciones, rostro y silueta compartidos entre todas las profesiones; la vestimenta, los accesorios y el equipo cambiarán sin rediseñar el cuerpo base.
-- **Primero trabajar únicamente el personaje base**, separado de terreno y hexágonos; después explorar aldeano, explorador, soldado, etc.
+## 8. Referencia maestra vigente: humano con taparrabo
 
-La referencia de estilo sigue siendo **The Escapists 2**, pero los recursos finales deben ser propios de G-Evolve. No confundir este diseño aceptado con las láminas previas de variantes, que no fueron aprobadas como plantilla definitiva.
+**Estado:** identidad visual del humano base aprobada y cotejada de nuevo con la lámina «Taparrabo» compartida por el usuario el 29/10/2026. La lámina contiene **cuatro orientaciones (frente, espalda, izquierda y derecha) y una vista frontal ampliada**, no cinco direcciones.
 
-**Referencia visual:** imagen aportada por el usuario en la conversación del 29/10/2026 y boceto de cinco vistas generado y aprobado en esa misma conversación. Este registro describe el diseño; la imagen binaria no se incorpora aquí todavía.
+El personaje maestro tiene:
 
+- Silueta **chibi muy compacta** y cabeza grande, casi cuadrada, con esquinas escalonadas.
+- Cabello oscuro castaño con matices violáceos, dibujado como **una masa sencilla**, no en mechones finos ni con textura ruidosa. Flequillo de escalones claros.
+- Cara ancha y plana, ojos verticales negros; **sin rubor, boca, nariz dibujada ni cejas separadas** en el sprite base.
+- Torso descubierto y pequeño, brazos cortos y rectos junto al cuerpo, piernas y pies diminutos.
+- **Taparrabo marrón como única prenda**, con cintura oscura y caída frontal pequeña y angular.
+- Contorno casi negro con leve matiz púrpura; colores planos y sombreado por grupos deliberados de píxeles.
+- Cuatro vistas con proporciones coherentes, centro de pies común y sin alterar la anatomía entre oficios.
 
-## 8. Modelo humano base — referencia maestra actualizada
+**Referencia técnica:** [Diseño del personaje humano base](diseno-personaje-humano-base.md), que distingue el **aspecto aprobado** de la **malla provisional de prototipado (32×48 px y pivote 16,46)**. Estas medidas no son un conteo extraído del boceto ilustrado.
 
-El personaje base aprobado más reciente es **humano con taparrabo marrón, torso descubierto y rostro SIN mejillas rosadas**, con vistas frente/espalda/izquierda/derecha. Sustituye como referencia maestra la versión anterior con rubor. Las variantes de cazador-recolector, agricultor y legionario siguen siendo exploraciones de indumentaria.
+El archivo binario original de la lámina compartida en la conversación todavía **no ha sido verificado dentro de este repositorio**. La descripción no sustituye el archivo maestro y no debe confundirse con un spritesheet nativo.
 
-**Ficha gráfica y técnica completa:** [Diseño del personaje humano base](diseno-personaje-humano-base.md). Los tamaños nativos, paletas HEX y animaciones siguen pendientes de definición. La imagen del boceto aprobado continúa en la conversación de diseño; el binario todavía no está incorporado a este repositorio.
+## 9. Consistencia al producir nuevas láminas
+
+1. Priorizar la **lámina «Taparrabo»** sobre bocetos antiguos o reinterpretaciones posteriores; una ficha técnica nueva es una adaptación, no reemplaza la fuente aprobada.
+2. En fichas de diseño, separar los personajes de presentación ampliados de los sprites nativos 32×48 px.
+3. Mantener iguales cabeza, ojos, cabello, tronco, extremidades y anclaje en todas las orientaciones; cambiar vestuario/equipo solo para oficios futuros.
+4. No añadir mejillas rosas, pelo excesivamente detallado, ropa adicional, botas, expresiones o accesorios a la versión base.
+5. Conservar pendiente la paleta HEX exacta, sprites transparentes verificables, animaciones, integración con hexágonos y parámetros definitivos del motor.

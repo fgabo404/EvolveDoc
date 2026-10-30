@@ -1,9 +1,9 @@
 # G-Evolve — Especificación artística del personaje humano base
 
 **Fecha:** 29 de octubre de 2026  
-**Estado:** REFERENCIA VISUAL APROBADA — contrato dimensional v0.1 fijado para prototipado (medidas propuestas, ajustables tras prueba en motor).  
+**Estado:** REFERENCIA VISUAL APROBADA Y COTEJADA CON LA LÁMINA ORIGINAL RECOMPARTIDA — contrato dimensional v0.1 provisional para prototipado (medidas diseñadas, no extraídas de píxeles del boceto).  
 **Alcance:** personaje humano base sin clase, sin armas ni profesión, vestido **únicamente con taparrabo**.  
-**Referencia maestra:** última lámina de la conversación del 29/10/2026, denominada *Taparrabo*, **versión sin mejillas rosadas**. Imagen de frente ampliada en el centro y vistas frente, espalda, izquierda y derecha alrededor. Esta imagen es la referencia visual aprobada; el archivo binario aún requiere incorporación al repositorio.
+**Referencia maestra:** última lámina de la conversación del 29/10/2026, denominada *Taparrabo*, **versión sin mejillas rosadas**. Imagen de frente ampliada en el centro y vistas frente, espalda, izquierda y derecha alrededor. Esta imagen es la referencia artística maestra. La lámina se volvió a compartir en la conversación el 29/10/2026; **no hay verificación de un archivo binario correspondiente en este repositorio**.
 
 ## 1. Identidad del diseño
 
@@ -17,14 +17,14 @@ Inspiración visual declarada: *The Escapists 2*. Es una **referencia estética*
 
 ### 2.1 Silueta
 
-- **Cabeza:** gran volumen predominantemente cuadrado con esquinas suavizadas por escalones de píxeles; debe seguir siendo el punto focal.
-- **Cabello:** masa oscura castaño-violeta que envuelve parte superior y laterales del cráneo; mechones representados como escalones de bloques, sin hebras finas.
-- **Rostro:** plano amplio, limpio, tono piel cálido; ojos verticales oscuros, sin boca ni nariz explícitas en el tamaño base.
+- **Cabeza:** gran volumen casi cuadrado, visualmente dominante, con coronilla relativamente plana y esquinas escalonadas; evitar estrecharla, redondearla excesivamente o alargar el rostro.
+- **Cabello:** bloque compacto castaño-violáceo oscuro con parte superior bastante limpia y flequillo frontal de pocos escalones anchos; preferir 2–3 masas tonales claras antes que mechones, motas o brillo excesivo.
+- **Rostro:** plano amplio y despejado de piel cálida, dos ojos negros verticales sencillos con separación amplia; sin boca, nariz, cejas separadas, reflejos o rubor en el tamaño base.
 - **Cuello:** prácticamente omitido; la cabeza se conecta visualmente al torso mediante una banda corta de sombra.
 - **Tronco:** corto y estrecho, pecho descubierto, sombreado muy discreto con unos pocos píxeles cálidos.
-- **Brazos:** cortos, colocados a cada lado; las manos se sugieren como bloques claros, sin dedos definidos.
-- **Piernas:** muy cortas y separadas por un pequeño hueco oscuro; pies simplificados y alineados con la base del sprite.
-- **Taparrabo:** prenda marrón de fibras/piel/tela tosca, ceñida a la cintura, con caída frontal pequeña e irregular; es la **única prenda** en la versión base. No añadir pantalones largos, camisa, sandalias ni accesorios.
+- **Brazos:** cortos, casi rectos y pegados a los lados del torso; manos como bloques simples, sin dedos ni articulaciones detalladas.
+- **Piernas:** muy cortas, de pocos bloques, separadas por un hueco oscuro; pies descalzos cuadrados o ligeramente rectangulares, sin botas ni calzado.
+- **Taparrabo:** banda de cintura marrón oscura con faldón corto central, irregular y angular (lectura aproximada de pequeño triángulo escalonado); es la **única prenda**. No añadir pantalones, camisa, sandalias ni accesorios.
 - **Contorno:** línea exterior oscura continua de grosor aparente uniforme, escalonada en la cuadrícula de píxeles.
 
 ### 2.2 Relaciones de escala
@@ -53,11 +53,11 @@ El rostro debe conservar su lectura a escala de mapa. Evitar añadir gradientes,
 
 ## 4. Paleta, luz y sombreado
 
-La referencia aprobada utiliza:
-- **Cabello:** castaño oscuro con sombras violáceas y reflejos marrón-vino.
-- **Piel:** melocotón cálido, luces crema/anaranjadas y sombras ocre suaves.
-- **Taparrabo:** marrones medios y oscuros; ligera diferencia entre cintura, pliegue central y borde.
-- **Contorno:** casi negro con matiz púrpura.
+La referencia aprobada, verificada visualmente contra la lámina «Taparrabo», utiliza:
+- **Cabello:** castaño oscuro con sombra violeta/casi negra y una zona de luz marrón-vino discreta; masas amplias, sin punteado decorativo.
+- **Piel:** melocotón cálido bastante uniforme, con sombra ocre mínima en cuello, torso y extremidades; rostro especialmente limpio.
+- **Taparrabo:** marrones medios y oscuros; cinturilla contrastada, pequeña caída angular y solo los pliegues necesarios para reconocerla.
+- **Contorno:** casi negro con matiz púrpura, continuo y nítido, sin grosor aparente excesivo.
 - **Fondo de la lámina:** blanco marfil, **solo para exhibición**, no integra el sprite.
 
 ### Propuesta técnica de producción (NO aprobada)
@@ -144,7 +144,7 @@ Ejemplos de variantes exploradas previamente: cazador-recolector, agricultor pri
 
 ### 11.1 Naturaleza de las medidas
 
-**Esta sección es una especificación de dibujo implementable**, derivada visualmente del boceto final sin rubor. No es un conteo exacto de sus píxeles: el PNG compartido es una lámina ampliada con texto, escala editorial y suavizados propios de la generación de imagen. Para poder producir un atlas consistente se adopta **una resolución nativa de trabajo** y regiones explícitas. La validación posterior puede dar lugar a v0.2, pero toda variante v0.1 debe reutilizar esta misma malla.
+**Esta sección es una especificación de dibujo implementable**, construida como aproximación al boceto final sin rubor y contrastada visualmente con la lámina que volvió a compartir el usuario. No es un conteo exacto de sus píxeles: el PNG compartido es una lámina ampliada con texto, escala editorial y suavizados propios de la generación de imagen. Para poder producir un atlas consistente se adopta **una resolución nativa de trabajo** y regiones explícitas. La validación posterior puede dar lugar a v0.2, pero toda variante v0.1 debe reutilizar esta misma malla.
 
 - **Canvas lógico por pose:** 32 px de ancho × 48 px de alto, RGBA con transparencia exterior.
 - **Sistema de coordenadas:** (0,0) arriba a la izquierda; X crece a la derecha, Y hacia abajo; intervalos indicados **inclusivos**.
@@ -202,7 +202,34 @@ Los porcentajes de alturas **no se suman**: hay solapamiento entre capas, cuello
 2. Comprobar dimensiones exactas, pivot común (16,46), ausencia de píxeles de rubor y contorno coherente.
 3. Comprobar que las regiones de cara, prenda y cabello se reconocen a escala ×1 y ×2.
 4. Probar cuatro fondos contrastados, especialmente playa/pasto/bosque/nieve, antes de cerrar los colores.
-5. Exportar una hoja 4×1 de **128×48 px** sin padding solo para revisión técnica; una hoja de presentación con rótulos se genera aparte.
+5. Exportar una hoja 4×1 de **128×48 px** sin padding solo para revisión técnica; una hoja de presentación con rótulos, ilustraciones ampliadas y anotaciones se genera aparte, **sin presentarla como atlas pixel-perfect**.
 6. Evaluar el tamaño visual sobre hexágonos con uno y varios personajes representativos; **no** fijar aquí aforo, tamaño de hex ni reglas de simulación.
 
 **Advertencia de trazabilidad:** «medidas de producción propuestas» ≠ «pixelado exacto de la lámina aprobada». El usuario aprobó la **apariencia** del personaje; esta sección materializa dimensiones iniciales razonadas para diseñar sprites reproducibles y podrá cambiar tras inspección visual del primer asset nativo.
+
+## 12. Comprobación con la lámina original «Taparrabo» (29/10/2026)
+
+La imagen original se volvió a compartir en la conversación y confirma **una vista frontal central ampliada y cuatro vistas pequeñas**: frente (arriba izquierda), espalda (arriba derecha), izquierda (abajo izquierda) y derecha (abajo derecha). La vista central **no constituye una quinta orientación**.
+
+### 12.1 Correcciones sobre la primera ficha técnica ilustrativa
+
+| Rasgo | Ajuste para las próximas fichas |
+| --- | --- |
+| Cabeza | Más cuadrada y dominante; coronilla y mejillas angulares, no cráneo redondeado o estrecho |
+| Cabello | Silueta compacta y simple, flequillo de pocos escalones, brillo mucho más reducido |
+| Ojos | Dos rectángulos negros verticales sin brillos, centrados en un rostro amplio, despejado y neutro |
+| Cuerpo | Torso más bajo y corto; brazos rectos pegados a los costados, piernas y pies mínimos |
+| Vestimenta | Únicamente taparrabo marrón pequeño, con banda de cintura y faldón angular; pies descalzos |
+| Color y contorno | Tonos planos, sombra moderada y borde casi negro/púrpura; nada de texturas minuciosas ni rubor |
+| Espalda y perfiles | Mismo tamaño y volumen; espalda sin rostro y perfiles con solo un ojo visible |
+
+**Prioridad de referencias:** (1) lámina original aprobada «Taparrabo» → (2) reglas artísticas descritas aquí → (3) contrato dimensional v0.1 sujeto a validación. Si una ficha nueva difiere del boceto original, se corrige la ficha, no la identidad aprobada.
+
+### 12.2 Qué no se debe afirmar todavía
+
+- La ficha ilustrada o generada no es un spritesheet producido a escala nativa.
+- Las coordenadas y cajas de la sección 11 **siguen siendo propuestas**: no se deben anunciar como mediciones pixel-perfect de la lámina original.
+- No están fijados los códigos HEX exactos, la paleta maestra, las animaciones ni los oficios.
+- El documento refleja una **imagen visualizada en la conversación**; el PNG maestro aún requiere incorporación verificable a `EvolveDoc`.
+
+**Siguiente validación:** dibujar los cuatro PNG RGBA nativos 32×48 con el pivote común, compararlos uno a uno con la lámina original y ajustar el contrato a v0.2 únicamente después de validar el resultado.
