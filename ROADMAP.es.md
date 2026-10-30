@@ -35,12 +35,11 @@ El usuario puede elegir entre opciones o delegar el llenado según la realidad. 
 - [ ] Definir cantidades, unidades, tiempos, regeneración, consumo y balance después del diseño inicial de entidades y recursos.
 - [ ] Completar GameState, fases del turno, guardado/carga y compatibilidad.
 - [ ] Implementar condiciones tecnológicas, eurekas, efectos y progreso por especie/entidad; la demostración actual solo es un ejemplo.
-- [ ] Emular un mundo inicial pequeño sin gráficos, con escenarios reproducibles para comprobar generación y evolución de recursos.
+- [ ] Emular un mundo inicial pequeño con escenarios reproducibles para comprobar generación y evolución de recursos.
 - [ ] Elegir lenguaje y enfoque del motor cuando estén claros los requisitos de simulación.
 
 ## Ideas pospuestas — Visibles, fuera del enfoque actual
 
-- [ ] Gráficos, representación del mapa e interfaz, después de la base de simulación.
 - [ ] Tiempo atmosférico dinámico, estaciones y desastres climáticos; posible expansión posterior. Las condiciones estáticas del hábitat siguen en el diseño del mundo.
 - [ ] Pueblos nómadas, migración y sus relaciones diplomáticas/comerciales; funcionamiento detallado pendiente.
 - [ ] Sistemas más amplios de ciudades, economía, diplomacia y guerra; mantener la dirección de simulador histórico con formato 4X.
@@ -55,7 +54,7 @@ El usuario puede elegir entre opciones o delegar el llenado según la realidad. 
 - [x] Generalizar 33 casos vegetales/animales con 86 alias de IDs retirados; conservar diferencias útiles para jugar. Hay 109 entidades vegetales, 101 animales y 21 grupos agrícolas.
 - [x] Crear la base de recursos, vínculos de origen y guías de transformación. La cobertura vigente está en [recursos](lang/es/resources.md); recetas y reglas operativas siguen pendientes.
 - [x] Añadir referencias de todos los campos JSON actuales, ejemplos, diagramas de catálogos y comprobaciones de consistencia.
-- [x] Añadir una pequeña demostración de progreso de investigación sin gráficos; no hay un motor de simulación completo.
+- [x] Añadir una pequeña demostración de progreso de investigación; no hay un motor de simulación completo.
 - [x] Crear esta lista compartida y enlazar ambos idiomas desde el README.
 
 ## Acuerdo de mantenimiento
