@@ -1,7 +1,7 @@
 # G-Evolve — Especificación artística del personaje humano base
 
 **Fecha:** 29 de octubre de 2026  
-**Estado:** REFERENCIA VISUAL APROBADA — especificaciones de producción propuestas, sujetas a validación.  
+**Estado:** REFERENCIA VISUAL APROBADA — contrato dimensional v0.1 fijado para prototipado (medidas propuestas, ajustables tras prueba en motor).  
 **Alcance:** personaje humano base sin clase, sin armas ni profesión, vestido **únicamente con taparrabo**.  
 **Referencia maestra:** última lámina de la conversación del 29/10/2026, denominada *Taparrabo*, **versión sin mejillas rosadas**. Imagen de frente ampliada en el centro y vistas frente, espalda, izquierda y derecha alrededor. Esta imagen es la referencia visual aprobada; el archivo binario aún requiere incorporación al repositorio.
 
@@ -35,7 +35,7 @@ Relaciones cualitativas observadas en la lámina aprobada:
 - Brazos sin prolongarse mucho por debajo de la cadera.
 - Pies cortos con sombra inferior compacta.
 
-**No son medidas cerradas:** la lámina actual es una ilustración conceptual escalada, **no** un sprite sheet con celdas verificadas. No se asignan dimensiones nominales 16×16/24×32/32×32 ni coordenadas de píxel como si ya estuvieran aprobadas.
+**Actualización:** se establece una cuadrícula de trabajo **32×48 px** para prototipado, detallada en la sección 11. Estas son especificaciones **diseñadas a partir de la referencia**, no mediciones exactas del PNG conceptual.
 
 ## 3. Rasgos faciales
 
@@ -122,7 +122,8 @@ Ejemplos de variantes exploradas previamente: cazador-recolector, agricultor pri
 - [x] Única indumentaria: taparrabo marrón.
 - [x] Presentación conceptual en frente, espalda, izquierda y derecha.
 - [x] Referencia visual seleccionada por el usuario.
-- [ ] Sprite nativo editable, con transparencia, tamaño/celda definidos.
+- [x] Tamaño y distribución de píxeles propuestos y documentados para prototipado (32×48 px).
+- [ ] Sprite nativo editable y transparente dibujado conforme a dichas medidas.
 - [ ] Paleta HEX normalizada.
 - [ ] Sprites animados verificables por frames.
 - [ ] Incorporación del archivo PNG original dentro de EvolveDoc.
@@ -137,3 +138,71 @@ Ejemplos de variantes exploradas previamente: cazador-recolector, agricultor pri
 - **29/10/2026:** se redacta esta ficha técnica para consulta y futuras iteraciones.
 
 > **Nota de alcance:** «aprobada» se refiere a la dirección visual de este boceto, no a medidas pixel-perfect, spritesheets finales, animaciones o código de render.
+
+
+## 11. Contrato dimensional v0.1 — pixel art de producción (29/10/2026)
+
+### 11.1 Naturaleza de las medidas
+
+**Esta sección es una especificación de dibujo implementable**, derivada visualmente del boceto final sin rubor. No es un conteo exacto de sus píxeles: el PNG compartido es una lámina ampliada con texto, escala editorial y suavizados propios de la generación de imagen. Para poder producir un atlas consistente se adopta **una resolución nativa de trabajo** y regiones explícitas. La validación posterior puede dar lugar a v0.2, pero toda variante v0.1 debe reutilizar esta misma malla.
+
+- **Canvas lógico por pose:** 32 px de ancho × 48 px de alto, RGBA con transparencia exterior.
+- **Sistema de coordenadas:** (0,0) arriba a la izquierda; X crece a la derecha, Y hacia abajo; intervalos indicados **inclusivos**.
+- **Bounding box máximo visible:** X=2..29 (28 px), Y=1..46 (46 px); 2 px mínimos de aire lateral antes de accesorios externos, 1 px arriba y abajo.
+- **Pivot de suelo:** (16,46), centro horizontal de los pies; las cuatro orientaciones deben compartirlo.
+- **Posición de los ojos en la pose frontal:** centros aproximados X=12 y X=20, Y=19–21. Cada ojo: 2×4 px negros, sin reflejos ni rosado.
+- **Contorno:** grosor básico 1 píxel nativo; reforzar a 2 solo si una masa o superposición lo requiere, sin dar aspecto de línea gruesa uniforme.
+- **Escalado de visualización:** ×2, ×3 o ×4 por vecino más cercano, sin antialiasing. La vista ampliada **no cambia los píxeles nativos**.
+
+### 11.2 Mapa anatómico nominal — frente
+
+| Zona | Rango X (inclusive) | Rango Y (inclusive) | Dimensión de referencia | Observación |
+| --- | --- | --- | --- | --- |
+| Cabello y cabeza total | 3..28 | 1..26 | 26×26 px | Silueta cuadrada con esquinas escalonadas; incluye cabello y cara |
+| Área facial visible | 6..25 | 10..25 | 20×16 px | Plano cálido, limpio; sin mejillas rosadas |
+| Torso (sin brazos) | 9..22 | 27..38 | 14×12 px | Pecho desnudo, hombros compactos |
+| Brazo izquierdo visual | 4..8 | 29..37 | 5×9 px | Referencia de postura neutra, mano incluida |
+| Brazo derecho visual | 23..27 | 29..37 | 5×9 px | Espejado funcional de la pose base |
+| Taparrabo | 9..22 | 36..42 | 14×7 px | Bordes marrones escalonados, caída frontal |
+| Pierna/pie izquierdo visual | 10..15 | 41..46 | 6×6 px | Diferenciar del taparrabo por tono/sombra |
+| Pierna/pie derecho visual | 17..22 | 41..46 | 6×6 px | Hueco central de aproximadamente 1 px |
+
+**Nota:** Las regiones son *cajas de diseño* y se solapan deliberadamente (cabello/cara; torso/taparrabo; taparrabo/piernas). No son rectángulos macizos ni máscaras de colisión. Las formas definitivas se dibujan dentro de esos rangos, sin bloquear el contenido de otras capas.
+
+### 11.3 Proporciones paramétricas de referencia
+
+Se expresan en relación con la **altura visible nominal de 46 px** (Y=1..46) y el ancho visible máximo de 28 px:
+
+| Relación | Cálculo | Valor aproximado |
+| --- | --- | --- |
+| Altura de cabeza / altura visible | 26/46 | **56.5 %** |
+| Altura de torso / altura visible | 12/46 | **26.1 %** |
+| Altura de piernas/pies visibles / altura visible | 6/46 | **13.0 %** |
+| Ancho cabeza / ancho máximo visible | 26/28 | **92.9 %** |
+| Ancho torso / ancho cabeza | 14/26 | **53.8 %** |
+| Ancho taparrabo / ancho cabeza | 14/26 | **53.8 %** |
+| Ancho de cada brazo / ancho cabeza | 5/26 | **19.2 %** |
+| Altura taparrabo / altura visible | 7/46 | **15.2 %** |
+
+Los porcentajes de alturas **no se suman**: hay solapamiento entre capas, cuello implícito y regiones separadas por contornos. La cabeza debe seguir dominando visualmente la silueta.
+
+### 11.4 Reglas de alineación, direcciones y compatibilidad
+
+- **Frente:** ojos visibles, rostro frontal simétrico, taparrabo frontal.
+- **Espalda:** misma altura, ancho y pivot; sustituir plano facial por cabello posterior; caída posterior de taparrabo.
+- **Izquierda y derecha:** cabeza de altura equiparable, **un** ojo visible, perfil simplificado; mantener el centro de masa y el pie en el mismo pivot. Proporciones X exactas del perfil se ajustarán al dibujar; no escalar el cuerpo arbitrariamente.
+- **Variantes de vestuario:** todas parten del *mismo canvas* 32×48 y del mismo pivot; casco, escudo, lanza o mochila pueden requerir una **capa/atlas de equipo con margen extra**, sin redimensionar el cuerpo base.
+- **Orden de capas propuesto:** cuerpo → taparrabo/prendas → cabello/casco → accesorios según la dirección; decidir occlusión por escena.
+- **Animaciones:** cada fotograma mantiene el canvas 32×48 y pivot (16,46). Si un movimiento exige sobresalir, conservar la referencia de pies y usar atlas de efectos separado.
+- **Hexágono:** el hex es una entidad/visualización independiente. El tamaño del hex mundial **no queda definido** por los 32×48 del personaje; para evitar saturación, ajustar zoom/representación de unidades sin deformar sprite.
+
+### 11.5 Criterios verificables del primer sprite real
+
+1. Crear cuatro PNG RGBA (frente, espalda, izquierda, derecha), **32×48 px cada uno**, con canal alfa exterior.
+2. Comprobar dimensiones exactas, pivot común (16,46), ausencia de píxeles de rubor y contorno coherente.
+3. Comprobar que las regiones de cara, prenda y cabello se reconocen a escala ×1 y ×2.
+4. Probar cuatro fondos contrastados, especialmente playa/pasto/bosque/nieve, antes de cerrar los colores.
+5. Exportar una hoja 4×1 de **128×48 px** sin padding solo para revisión técnica; una hoja de presentación con rótulos se genera aparte.
+6. Evaluar el tamaño visual sobre hexágonos con uno y varios personajes representativos; **no** fijar aquí aforo, tamaño de hex ni reglas de simulación.
+
+**Advertencia de trazabilidad:** «medidas de producción propuestas» ≠ «pixelado exacto de la lámina aprobada». El usuario aprobó la **apariencia** del personaje; esta sección materializa dimensiones iniciales razonadas para diseñar sprites reproducibles y podrá cambiar tras inspección visual del primer asset nativo.
