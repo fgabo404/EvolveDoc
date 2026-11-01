@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import heapq
 import math
+import secrets
 import struct
 from collections import Counter, deque
 
@@ -164,33 +165,50 @@ def validate(topo,owner):
     return counts
 
 def render(topo,owner,path):
+    """Renderizar hexágonos flat-top reales, no una matriz de píxeles cuadrados."""
     try:
         import matplotlib
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
-        from matplotlib.colors import ListedColormap
-        import numpy as np
+        from matplotlib.collections import PolyCollection
     except ImportError as exc:
-        raise SystemExit("Para generar PNG: pip install numpy matplotlib") from exc
-    data=np.frombuffer(owner,dtype=np.uint8).reshape(topo.rows,topo.columns)
+        raise SystemExit("Para generar PNG: pip install matplotlib") from exc
     palette=plt.get_cmap("tab20").colors[:PLATES]
+    root3=math.sqrt(3)
+    # Flat-top odd-q: centros x=1+1.5*c, y=sqrt(3)*(r+.5*(c&1)+.5).
+    # Vértices apuntan al este y oeste; radio circunscrito 1.
+    offsets=[(math.cos(i*math.pi/3),math.sin(i*math.pi/3)) for i in range(6)]
+    vertices=[]
+    colors=[]
+    for r in range(topo.rows):
+        for c in range(topo.columns):
+            cx=1+1.5*c
+            cy=root3*(r+.5*(c&1)+.5)
+            vertices.append([(cx+dx,cy+dy) for dx,dy in offsets])
+            colors.append(palette[owner[r*topo.columns+c]])
     fig,ax=plt.subplots(figsize=(14,8))
-    ax.imshow(data,interpolation="nearest",cmap=ListedColormap(palette),vmin=-.5,vmax=15.5,aspect="auto")
-    ax.set(title="WordGeneration2 | 16 placas iniciales",xlabel="Columna",ylabel="Fila")
+    ax.add_collection(PolyCollection(vertices,facecolors=colors,
+                      edgecolors="none",linewidths=0))
+    ax.set_xlim(0,1.5*topo.columns+.5)
+    ax.set_ylim(root3*(topo.rows+.5),0)
+    ax.set_aspect("equal")
+    ax.set(title="WordGeneration2 | 16 placas en cuadrícula hexagonal",
+           xlabel="Posición horizontal",ylabel="Posición vertical")
     fig.tight_layout();fig.savefig(path,dpi=160);plt.close(fig)
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument("--seed",type=int,default=2026)
+    ap.add_argument("--seed",type=int,default=None,help="Semilla fija opcional; omitida = aleatoria")
     ap.add_argument("--columns",type=int,default=200)
     ap.add_argument("--rows",type=int,default=133)
     ap.add_argument("--png",default=None)
     args=ap.parse_args()
-    topo,owner,origins=generate(args.columns,args.rows,args.seed)
+    seed=args.seed if args.seed is not None else secrets.randbelow(1 << 32) - (1 << 31)
+    topo,owner,origins=generate(args.columns,args.rows,seed)
     counts=validate(topo,owner)
     digest=hashlib.sha256(owner).hexdigest()
     print("Versión base: tectonic-plates-2")
-    print(f"Seed={args.seed} celdas={topo.count} placas={PLATES}")
+    print(f"Seed={seed} celdas={topo.count} placas={PLATES}")
     print(f"SHA256 Python (no validado contra C#): {digest}")
     print("Áreas:",dict(sorted(counts.items())))
     print("Orígenes:",origins)
