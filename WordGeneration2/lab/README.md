@@ -33,3 +33,9 @@ Tres ejecuciones locales de la variante, en la malla hexagonal 400×267, dieron 
 ## Proporción de visualización 3:2
 
 El lienzo PNG usa una proporción exacta 3:2. Se mantienen 400×267 celdas hexagonales y la topología original; el dibujo utiliza una proyección con estiramiento horizontal ligero (~15,5 %) para llenar el formato. Esto afecta la forma visual, no la generación ni los vecinos de los hexágonos.
+
+## Calibración de superficies (experimental)
+
+Las semillas seleccionan 10–14 placas, 6–10 principales y al menos 3 secundarias. Las placas reciben objetivos relativos de área: principales 8–18 %, secundarias 2–6 %, con meta conjunta de principales cercana al 78–86 % cuando es factible. Durante Dijkstra se aplica una penalización progresiva según área ocupada / objetivo. **Estas cotas son metas suaves, no garantías**: imponiendo topes rígidos pueden quedar regiones de la malla sin asignar. Se conserva cobertura completa y conectividad, y las estadísticas reales deben revisarse por semilla. La variante deja de ser idéntica al código C# de 16 placas.
+
+Se ejecutaron tres mapas experimentales 400×267 con semillas 356282175, -1538977225 y -198629695; las tres ejecuciones comprobaron conectividad. Los mapas están disponibles en la conversación de trabajo, no agregados al repositorio.
