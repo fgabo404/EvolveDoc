@@ -196,16 +196,21 @@ def render(topo,owner,path,kinds=None):
             cy=root3*(r+.5*(c&1)+.5)
             vertices.append([(cx+dx,cy+dy) for dx,dy in offsets])
             colors.append(palette[owner[r*topo.columns+c]])
-    fig,ax=plt.subplots(figsize=(14,8))
-    ax.add_collection(PolyCollection(vertices,facecolors=colors,
+    # Proyección visual 3:2 de la malla 400x267. La topología no cambia.
+    # Los hexágonos se escalan ligeramente en X para llenar 3:2.
+    physical_width=1.5*topo.columns+.5
+    physical_height=root3*(topo.rows+.5)
+    x_scale=1.5*physical_height/physical_width
+    projected=[[(x*x_scale,y) for x,y in polygon] for polygon in vertices]
+    fig,ax=plt.subplots(figsize=(15,10))
+    ax.add_collection(PolyCollection(projected,facecolors=colors,
                       edgecolors="none",linewidths=0))
-    ax.set_xlim(0,1.5*topo.columns+.5)
-    ax.set_ylim(root3*(topo.rows+.5),0)
+    ax.set_xlim(0,physical_width*x_scale)
+    ax.set_ylim(physical_height,0)
     ax.set_aspect("equal")
-    main=sum(k=="principal" for k in kinds) if kinds else "?"
-    ax.set(title=f"WordGeneration2 | {len(set(owner))} placas ({main} principales) | grid hexagonal",
-           xlabel="Posición horizontal",ylabel="Posición vertical")
-    fig.tight_layout();fig.savefig(path,dpi=160);plt.close(fig)
+    ax.set_axis_off()
+    fig.subplots_adjust(left=0,right=1,bottom=0,top=1)
+    fig.savefig(path,dpi=140,pad_inches=0);plt.close(fig)
 
 def main():
     ap=argparse.ArgumentParser()
