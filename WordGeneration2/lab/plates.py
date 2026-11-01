@@ -93,7 +93,7 @@ class HexTopology:
         return out
     def neighbors(self,idx): return self._neighbors[idx]
 
-def generate(columns=200, rows=133, seed=2026):
+def generate(columns=400, rows=267, seed=2026):
     topology=HexTopology(columns,rows)
     count=topology.count
     if count<PLATES: raise ValueError("La malla tiene menos celdas que placas")
@@ -199,8 +199,8 @@ def render(topo,owner,path):
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--seed",type=int,default=None,help="Semilla fija opcional; omitida = aleatoria")
-    ap.add_argument("--columns",type=int,default=200)
-    ap.add_argument("--rows",type=int,default=133)
+    ap.add_argument("--columns",type=int,default=400)
+    ap.add_argument("--rows",type=int,default=267)
     ap.add_argument("--png",default=None)
     args=ap.parse_args()
     seed=args.seed if args.seed is not None else secrets.randbelow(1 << 32) - (1 << 31)
