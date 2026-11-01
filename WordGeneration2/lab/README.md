@@ -23,3 +23,9 @@ No se ha modificado el repositorio de código Evolve.
 ## Resolución predeterminada
 
 El laboratorio utiliza el tamaño **Enorme** del juego: **400 columnas × 267 filas = 106 800 hexágonos**. La semilla sigue siendo aleatoria si se omite `--seed`. Es posible cambiar el tamaño con `--columns` y `--rows`.
+
+## Distribución experimental de placas
+
+Cada semilla elige **10–14 placas** y **6–10 principales** (siempre con al menos una secundaria); las restantes son **secundarias**. La geometría se genera usando costos de crecimiento menores para parte de los perfiles y mayores para los demás. Para asegurar que la etiqueta describa el tamaño final, las categorías se asignan después del crecimiento ordenando las placas por superficie. **No existe todavía un límite mínimo garantizado de área ni una simulación de microplacas.** Esta variante ya no reproduce exactamente el generador fijo de 16 placas de C#.
+
+Tres ejecuciones locales de la variante, en la malla hexagonal 400×267, dieron semillas 248532757 (11 placas, 8 principales), -1358301726 (13, 7) y -1226344462 (10, 6). Son pruebas de una copia local equivalente; la validación de paridad de archivo de GitHub contra esa copia está pendiente.
