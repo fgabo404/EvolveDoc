@@ -5,12 +5,12 @@ Primera réplica experimental de `TectonicPlateGenerator` (`tectonic-plates-2`) 
 ## Ejecutar
 
 ```bash
-python WordGeneration2/lab/plates.py --seed 2026 --columns 200 --rows 133
-pip install numpy matplotlib
+python WordGeneration2/lab/plates.py --columns 200 --rows 133
+pip install matplotlib
 python WordGeneration2/lab/plates.py --seed 2026 --columns 200 --rows 133 --png placas.png
 ```
 
-La lógica de `SplitMix64`, el ruido periódico, las 16 semillas, los costos, las seis bandas y el crecimiento Dijkstra procede del código C# consultado. Se usa la geometría axial odd-q con cierre este-oeste.
+Sin `--seed`, cada ejecución utiliza una semilla aleatoria de 32 bits con signo y la imprime para reproducir el mapa. Para repetir una generación, añade `--seed 2026`. El PNG muestra polígonos hexagonales flat-top reales, no píxeles cuadrados.\n\nLa lógica de `SplitMix64`, el ruido periódico, las 16 semillas, los costos, las seis bandas y el crecimiento Dijkstra procede del código C# consultado. Se usa la geometría axial odd-q con cierre este-oeste.
 
 ## Estado de fidelidad
 
