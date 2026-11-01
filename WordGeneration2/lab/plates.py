@@ -15,7 +15,10 @@ MASK = (1 << 64) - 1
 UINT = (1 << 32) - 1
 COSTS = [.58,.64,.72,.79,.88,.97,1.05,1.14,1.24,1.35,1.48,1.62,1.79,1.97,2.17,2.40]
 STREAM = 0x54454331
-PLATES = 16
+MIN_PLATES = 10
+MAX_PLATES = 14
+MIN_MAIN = 6
+MAX_MAIN = 10
 BORDER_IRREGULARITY = 1.90
 
 def i32(v):
@@ -96,10 +99,12 @@ class HexTopology:
 def generate(columns=400, rows=267, seed=2026):
     topology=HexTopology(columns,rows)
     count=topology.count
-    if count<PLATES: raise ValueError("La malla tiene menos celdas que placas")
     rng=SplitMix64(seed)
+    number_of_plates=MIN_PLATES+rng.integer(MAX_PLATES-MIN_PLATES+1)
+    number_main=MIN_MAIN+rng.integer(min(MAX_MAIN,number_of_plates-1)-MIN_MAIN+1)
+    if count<number_of_plates: raise ValueError("La malla tiene menos celdas que placas")
     origins=[rng.integer(count)]
-    for plate in range(1,PLATES):
+    for plate in range(1,number_of_plates):
         best,best_dist=-1,-1
         for _ in range(160):
             candidate=rng.integer(count)
@@ -107,7 +112,9 @@ def generate(columns=400, rows=267, seed=2026):
             if separation>best_dist or (separation==best_dist and candidate<best):
                 best,best_dist=candidate,separation
         origins.append(best)
-    costs=COSTS.copy()
+    # Las principales reciben menores costes y las secundarias mayores.
+    # Identidades aleatorias para no vincular categoria al ID.
+    costs=[.50+i*.55/max(1,number_main-1) for i in range(number_main)] + [1.65+i*1.05/max(1,number_of_plates-number_main-1) for i in range(number_of_plates-number_main)]
     for i in range(len(costs)-1,0,-1):
         swap=rng.integer(i+1)
         costs[i],costs[swap]=costs[swap],costs[i]
@@ -122,7 +129,7 @@ def generate(columns=400, rows=267, seed=2026):
         for band,(frequency,salt) in enumerate(specs):
             fields[band][cell]=f32(noise(wx,wy,columns,rows,frequency,i32(seed^salt)))
     profiles=[]
-    for plate in range(PLATES):
+    for plate in range(number_of_plates):
         a,b,c=(rng.real()*2*math.pi for _ in range(3))
         profiles.append((costs[plate],math.cos(a),math.sin(a),
                          math.cos(b),math.sin(b),math.cos(c),math.sin(c)))
@@ -147,13 +154,16 @@ def generate(columns=400, rows=267, seed=2026):
             heapq.heappush(frontier,(priority+cost*resistance,serial,neighbor,plate))
             serial+=1
     if 255 in owner: raise AssertionError("Celdas sin placa")
-    return topology,owner,origins
+    counts=Counter(owner)
+    main_ids=set(sorted(range(number_of_plates),key=lambda p:(-counts[p],p))[:number_main])
+    kinds=["principal" if p in main_ids else "secundaria" for p in range(number_of_plates)]
+    return topology,owner,origins,kinds
 
 def validate(topo,owner):
     counts=Counter(owner)
-    assert sorted(counts)==list(range(PLATES))
+    assert sorted(counts)==list(range(len(counts)))
     assert sum(counts.values())==topo.count
-    for plate in range(PLATES):
+    for plate in range(len(counts)):
         start=owner.index(plate)
         seen={start}
         queue=deque([start])
@@ -164,7 +174,7 @@ def validate(topo,owner):
         assert len(seen)==counts[plate],f"Placa desconectada: {plate}"
     return counts
 
-def render(topo,owner,path):
+def render(topo,owner,path,kinds=None):
     """Renderizar hexágonos flat-top reales, no una matriz de píxeles cuadrados."""
     try:
         import matplotlib
@@ -173,7 +183,7 @@ def render(topo,owner,path):
         from matplotlib.collections import PolyCollection
     except ImportError as exc:
         raise SystemExit("Para generar PNG: pip install matplotlib") from exc
-    palette=plt.get_cmap("tab20").colors[:PLATES]
+    palette=plt.get_cmap("tab20").colors[:len(set(owner))]
     root3=math.sqrt(3)
     # Flat-top odd-q: centros x=1+1.5*c, y=sqrt(3)*(r+.5*(c&1)+.5).
     # Vértices apuntan al este y oeste; radio circunscrito 1.
@@ -192,7 +202,8 @@ def render(topo,owner,path):
     ax.set_xlim(0,1.5*topo.columns+.5)
     ax.set_ylim(root3*(topo.rows+.5),0)
     ax.set_aspect("equal")
-    ax.set(title="WordGeneration2 | 16 placas en cuadrícula hexagonal",
+    main=sum(k=="principal" for k in kinds) if kinds else "?"
+    ax.set(title=f"WordGeneration2 | {len(set(owner))} placas ({main} principales) | grid hexagonal",
            xlabel="Posición horizontal",ylabel="Posición vertical")
     fig.tight_layout();fig.savefig(path,dpi=160);plt.close(fig)
 
@@ -204,16 +215,17 @@ def main():
     ap.add_argument("--png",default=None)
     args=ap.parse_args()
     seed=args.seed if args.seed is not None else secrets.randbelow(1 << 32) - (1 << 31)
-    topo,owner,origins=generate(args.columns,args.rows,seed)
+    topo,owner,origins,kinds=generate(args.columns,args.rows,seed)
     counts=validate(topo,owner)
     digest=hashlib.sha256(owner).hexdigest()
     print("Versión base: tectonic-plates-2")
-    print(f"Seed={seed} celdas={topo.count} placas={PLATES}")
+    print(f"Seed={seed} celdas={topo.count} placas={len(kinds)} principales={kinds.count('principal')} secundarias={kinds.count('secundaria')}")
+    print("Categorias:", {p:kind for p,kind in enumerate(kinds)})
     print(f"SHA256 Python (no validado contra C#): {digest}")
     print("Áreas:",dict(sorted(counts.items())))
     print("Orígenes:",origins)
     if args.png:
-        render(topo,owner,args.png)
+        render(topo,owner,args.png,kinds)
         print("Imagen:",args.png)
 
 if __name__=="__main__": main()
