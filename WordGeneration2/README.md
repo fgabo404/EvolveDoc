@@ -4,6 +4,7 @@ Investigación por capas, separada del generador actual de Evolve. Este director
 
 ## Índice por capas
 
+- [02 — Elevaciones y accidentes geológicos](02-elevaciones-accidentes.md): prototipo de relieve potencial, cordilleras, rifts y centros volcánicos candidatos.
 - [Laboratorio Python](lab/README.md): réplica experimental de las placas de Evolve, pruebas y visualización.
 - [01 — Placas tectónicas](01-placas-tectonicas.md): análisis y propuestas iniciales. **Pendiente de revisión conjunta**, no decisión final de implementar cada punto.
 
