@@ -4,6 +4,7 @@ Investigación por capas, separada del generador actual de Evolve. Este director
 
 ## Índice por capas
 
+- [Laboratorio Python](lab/README.md): réplica experimental de las placas de Evolve, pruebas y visualización.
 - [01 — Placas tectónicas](01-placas-tectonicas.md): análisis y propuestas iniciales. **Pendiente de revisión conjunta**, no decisión final de implementar cada punto.
 
 ## Acuerdos de trabajo
